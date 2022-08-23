@@ -23,7 +23,6 @@ const nameStyle = css`
   display: inline-block;
   white-space: normal;
   word-break: break-word;
-  padding: 2px;
   background-color: ${hexToRgba(tokens.colors.blue, tokens.opacity.low)};
 `;
 
