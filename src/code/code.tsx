@@ -6,9 +6,9 @@ type CodeProps = {
   /* The element used to render this component. */
   /* @default code */
   as?: 'code' | 'pre';
-  /* Defines the font size of the inline code sample. */
-  /* @default medium */
-  size?: 'medium' | 'large';
+  /* Defines the font size of the code sample. In general should be specified only when used as a stand-alone element. */
+  /* @default inherit */
+  size?: 'small' | 'medium' | 'large' | 'inherit';
   /* Sets the style of the inline code sample suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
@@ -16,7 +16,7 @@ type CodeProps = {
 
 function Code({
   as,
-  size = 'medium',
+  size = 'inherit',
   inverted = false,
   ...restProps
 }: CodeProps) {

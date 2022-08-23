@@ -6,18 +6,24 @@ import { hexToRgba } from '../helpers';
 import Code from './code';
 
 const sizeMap = {
+  small: {
+    fontSize: tokens.fontSizes.xsmall,
+  },
   medium: {
     fontSize: tokens.fontSizes.small,
   },
   large: {
     fontSize: tokens.fontSizes.medium,
   },
+  inherit: {
+    fontSize: '86%',
+  },
 };
 
 const baseCodeStyle = css`
   font-family: ${tokens.fontFamilies.mono};
   font-weight: ${tokens.fontWeights.regular};
-  line-height: ${tokens.lineHeights.relaxed};
+  line-height: inherit;
   border-radius: ${tokens.borderRadius.medium};
   margin: 0 2px;
   padding: 2px 4px;
