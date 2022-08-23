@@ -38,6 +38,7 @@ const defaultValueWrapperStyle = css`
 const defaultValueBadgeStyle = css`
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  opacity: ${tokens.opacity.medium};
 `;
 
 const defaultValueStyle = css`
@@ -113,7 +114,7 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
                   )}
                   {singleProp.defaultValue && (
                     <div css={defaultValueWrapperStyle}>
-                      <Badge css={defaultValueBadgeStyle} variant="grey">
+                      <Badge css={defaultValueBadgeStyle} variant="navy">
                         Default
                       </Badge>
                       <Code css={defaultValueStyle}>
