@@ -9,9 +9,10 @@ import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 type CardBaseProps = {
   /* The content of the card. */
   children: React.ReactNode;
-  /* Content positioned along the top of the card. Could be [Avatar](/components/avatar) from Waffles (use default `medium` size) or a custom component. */
+  /* Content positioned along the top of the card. Could be [Avatar](/components/avatar) from Waffles (use default size) or a custom component. */
   headstone?: React.ReactNode;
   /* Disables on hover shadow effect. */
+  /* @default false */
   disableHoverEffect?: boolean;
 };
 

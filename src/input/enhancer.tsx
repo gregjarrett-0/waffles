@@ -7,7 +7,7 @@ import { Button } from '../button';
 import { enhancerStyle } from './styles';
 
 type EnhancerProps = {
-  /* The content of the enhancer. In general, an [icon](/components/icon) from Waffles (of the default `medium` size) should be used.  */
+  /* The content of the enhancer. In general, an [icon](/components/icon) from Waffles (of the default size) should be used.  */
   children: JSX.Element;
   /* [skip docs] */
   size?: NonNullable<React.ComponentProps<typeof Button>['size']>;

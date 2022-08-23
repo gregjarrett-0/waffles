@@ -11,17 +11,23 @@ import Description from './description';
 type FormFieldProps = {
   /* The label displayed above the input. */
   label: string;
-  /* Input component to be enhanced. In general pass Waffles [Input](/components/input), [TextArea](/components/text-area) or [Select](/components/select). Must be single element. */
+  /* Input component to be enhanced. In general, pass Waffles [Input](/components/input), [TextArea](/components/text-area) or [Select](/components/select). Must be a single element. */
   children: JSX.Element;
-  /* Defines the size of the form field. In most cases default `medium` size should be used. Children of the form field will inherit the size by default. */
+  /* Optional input identifier. Pass it when component is rendered on the server to avoid client-server attribute mismatch. */
+  id?: string;
+  /* Defines the size of the form field. In most cases, the default size should be used. Children of the form field will inherit the size by default. */
+  /* @default medium */
   size?: 'small' | 'medium' | 'large';
   /* Optional description shown above the input. */
   description?: React.ReactNode;
   /* Sets `required` attribute on the enhanced input. Depending on the selected `requiredIndicator` option, shows or hides appropriate indicator next to the label. */
+  /* @default false */
   required?: boolean;
   /* Type of required indicator to display. Depending on selected option show either *Optional* when input is not required, *Required* when input is marked as required or disable it completely.  */
+  /* @default showOptional */
   requiredIndicator?: 'showOptional' | 'showRequired' | 'none';
   /* Sets the style of the input field suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
   /* Error message displayed below the input. */
   error?: string;

@@ -6,16 +6,21 @@ import Label from './label';
 
 type ProgressBaseProps = {
   /* The size of the progress. */
+  /* @default medium */
   size?: 'small' | 'medium';
   /* The current value of the progress, which can also be a decimal. This is in relation to the `max` property. */
+  /* @default 0 */
   value?: number;
-  /* The maximum value of the progress. Must be greater than `value`. The default is 100. */
+  /* The maximum value of the progress. Must be greater than `value`. */
+  /* @default 100 */
   max?: number;
-  /* The mode in which the progress will display. In default `continuous` mode one single bar will be shown. In `steps` mode multiple segments will be rendered and `max` and `value` are treated as the total and current steps respectively. */
+  /* The mode in which the progress will display. In `continuous` mode, one single bar will be shown. In `steps` mode, multiple segments will be rendered and `max` and `value` are treated as the total and current steps respectively. */
+  /* @default continuous */
   mode?: 'continuous' | 'steps';
   /* Custom label content to be shown instead of the original. */
   customLabel?: React.ReactNode | string;
   /* Whether the progress is inverted in color or not. */
+  /* @default false */
   inverted?: boolean;
   /* [skip docs] */
   hideLabel?: boolean;
@@ -25,6 +30,7 @@ type ProgressBaseProps = {
 
 type ProgressNoLabelProps = {
   /* Whether to hide the default label or not. */
+  /* @default false */
   hideLabel: boolean;
   'aria-label': string;
 } & ProgressBaseProps;
@@ -46,7 +52,7 @@ function Progress({
   value = 0,
   max = 100,
   customLabel,
-  hideLabel,
+  hideLabel = false,
   'aria-label': ariaLabel,
   ...restProps
 }: ProgressProps) {

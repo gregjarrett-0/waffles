@@ -12,6 +12,7 @@ type ToastProps = {
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
   /* Defines the type of notification. */
+  /* @default default */
   variant?: 'default' | 'success' | 'warning' | 'error';
   /* [skip docs] */
   autoHideDuration: number;

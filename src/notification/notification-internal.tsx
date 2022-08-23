@@ -10,14 +10,17 @@ type NotificationProps = {
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
   /* Defines the type of notification. */
+  /* @default default */
   variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';
   /* Sets the style of the notification suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
   /* Shows a close button, and the notification can be dismissed by a user. */
+  /* @default false */
   closable?: boolean;
   /* Handler called when the notification will close. */
   onClose?: () => void;
-  /* Custom notification action. Use `Notifcation.ActionButton` subcomponent. Must be single element. */
+  /* Custom notification action. Use `Notification.ActionButton` subcomponent. Must be a single element. */
   action?: JSX.Element;
 } & React.HTMLAttributes<HTMLDivElement>;
 

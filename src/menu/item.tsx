@@ -18,18 +18,21 @@ type ItemBaseProps = {
   /* The content of the item. Most of the time should be a plain text. */
   label: React.ReactNode;
   /* Defines the variant of the item. */
+  /* @default primary */
   variant?: 'primary' | 'destructive';
   /* [skip docs] */
   index?: number;
   /* Optional description shown below the label. */
   description?: React.ReactNode;
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
+  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
+  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconRight?: JSX.Element;
   /* Displays small notification dot next to the label. Useful for highlighting important items. */
+  /* @default false */
   showNotificationDot?: boolean;
   /* Indicates that the item is currently active. */
+  /* @default false */
   isActive?: boolean;
 };
 

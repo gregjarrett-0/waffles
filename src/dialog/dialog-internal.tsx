@@ -13,6 +13,7 @@ type DialogProps = {
   /* Handler called when the dialog will close. */
   onClose: () => void;
   /* Defines the dialog role. */
+  /* @default dialog */
   role?: 'dialog' | 'alertdialog';
   /* Content of the dialog. In general, dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
   children: React.ReactNode;

@@ -13,6 +13,7 @@ type DrawerProps = {
   /* Handler called when the drawer will close. */
   onClose: () => void;
   /* Side from which the drawer originates from. */
+  /* @default left */
   placement?: 'left' | 'right';
   /* Content of the drawer. In general, drawer's own subcomponents should be used: `Drawer.Header`, `Drawer.Body`, and `Drawer.Footer`. */
   children: React.ReactNode;

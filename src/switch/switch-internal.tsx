@@ -11,8 +11,10 @@ type SwitchProps = {
   /* The description displayed next to the switch. */
   children: React.ReactNode;
   /* Sets the style of the switch suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
   /* Sets appropriate error styling, and `aria-invalid` attribute. */
+  /* @default false */
   error?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 

@@ -8,10 +8,13 @@ type SelectProps = {
   /* Options to be displayed in the dropdown. To show a placeholder provide an `option` with an empty value, and both `disabled` and `hidden` attributes set. */
   children?: React.ReactNode;
   /* Sets appropriate error style and `aria-invalid` attribute. */
+  /* @default false */
   error?: boolean;
-  /* Defines the size of the select. In most cases default `medium` size should be used. */
+  /* Defines the size of the select. In most cases, the default size should be used. */
+  /* @default medium */
   size?: 'small' | 'medium' | 'large';
   /* Sets the style of the select suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
 } & Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size' | 'multiple'>;
 

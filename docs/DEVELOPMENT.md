@@ -62,11 +62,12 @@ Components used internally by the documentation can be found in the `doc-site/co
 
 ### Component Props
 
-Each prop of each component should be documented by putting appropriate comment above it. Afterwards preview of available props (via `PropsTable`) could be auto-generated.
+Each prop of each component should be documented by an appropriate comment above it. If the prop has a default value, then an additional comment with a prefix can be added below the first to indicate this value. Afterwards, a preview of the available props (via `PropsTable`) can be auto-generated.
 
 ```ts
 type ButtonProps = {
-  /* Defines the size of the button. In most cases default `medium` size should be used. */
+  /* Defines the size of the button. In most cases the default should be used. */
+  /* @default medium */
   size?: 'small' | 'medium' | 'large';
   /* [skip docs] */
   children: React.ReactNode;

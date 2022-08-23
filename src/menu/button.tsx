@@ -9,10 +9,11 @@ import type { PolymorphicComponentProps } from '../helpers';
 
 type MenuButtonBaseProps = {
   /* Defines the variant of the button. */
+  /* @default primary */
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive' | 'upgrade';
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
+  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default `medium` size) or a custom component. */
+  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconRight?: JSX.Element;
   /* The content inside the button. Most of the time should be a plain text. */
   children: React.ReactNode;

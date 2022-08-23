@@ -10,6 +10,7 @@ type LinkBaseProps = {
   /* The content of the link.  */
   children: React.ReactNode;
   /* Sets the style of the link suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
   /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (for smaller text sizes use `small` size) or a custom component. */
   iconLeft?: JSX.Element;

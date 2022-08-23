@@ -42,14 +42,18 @@ type ResizableProps = {
   /* The elements to render in separate panels, divided by separator. Must provide at least _two_ elements. */
   children: JSX.Element[];
   /* The layout of the panels. */
+  /* @default column */
   layout?: 'column' | 'row';
-  /* An array of proportions, e.g. `[2, 1, 1]`, which determine the default relative size of each panel. Must have the same length as the number of provided elements. When not provided the panels will default to equal sizes. */
+  /* An array of proportions, e.g. `[2, 1, 1]`, which determines the default relative size of each panel. Must have the same length as the number of provided elements. When not provided, the panels will default to equal sizes. */
   defaultProportions?: number[];
-  /* The minimum size of the panel in pixels. When resizing, panel can't be collapsed below this value. Default is `100px`. */
+  /* The minimum size of the panel in pixels. When resizing, panel can't be collapsed below this value. */
+  /* @default 100px */
   minSize?: string;
   /* If enabled, dividers between panels are visible. */
+  /* @default false */
   showDividers?: boolean;
   /* Sets the style of dividers suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
   /* Called when divider begins to move. */
   onResizeStart?: () => void;

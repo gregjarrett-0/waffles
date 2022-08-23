@@ -4,6 +4,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Code } from '@datacamp/waffles/code';
+import { Badge } from '@datacamp/waffles/badge';
 
 import convertedProps from '../helpers/converted-props';
 import markdownElements from '../components/props-table-markdown-elements';
@@ -18,16 +19,34 @@ const POLYMORPHIC_METADATA = {
   isOptional: true,
 };
 
-const descriptionStyle = css`
-  width: 50%;
-`;
-
 const nameStyle = css`
   display: inline-block;
   white-space: normal;
   word-break: break-word;
-  padding: 2px ${tokens.spacing.xsmall};
+  padding: 2px;
   background-color: ${hexToRgba(tokens.colors.blue, tokens.opacity.low)};
+`;
+
+const descriptionStyle = css`
+  width: 50%;
+`;
+
+const defaultValueWrapperStyle = css`
+  display: flex;
+  padding-top: ${tokens.spacing.small};
+`;
+
+const defaultValueBadgeStyle = css`
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+`;
+
+const defaultValueStyle = css`
+  margin-left: 0;
+  padding: 0 ${tokens.spacing.xsmall};
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 18px;
 `;
 
 const propTypeStyle = css`
@@ -92,6 +111,16 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
                     </ReactMarkdown>
                   ) : (
                     '—'
+                  )}
+                  {singleProp.defaultValue && (
+                    <div css={defaultValueWrapperStyle}>
+                      <Badge css={defaultValueBadgeStyle} variant="grey">
+                        Default
+                      </Badge>
+                      <Code css={defaultValueStyle}>
+                        {singleProp.defaultValue}
+                      </Code>
+                    </div>
                   )}
                 </Table.Cell>
               </tr>

@@ -4,7 +4,8 @@ import React from 'react';
 import { avatarContentStyle, avatarStyle } from './styles';
 
 type AvatarProps = {
-  /* Defines the size of the avatar. In general use default `medium` size. */
+  /* Defines the size of the avatar. In general, use default size. */
+  /* @default medium */
   size?:
     | 'xxsmall'
     | 'xsmall'
@@ -15,6 +16,7 @@ type AvatarProps = {
     | 'xxlarge'
     | 'huge';
   /* Determines the variant of the avatar, based on the set of predefined background colors. */
+  /* @default navy */
   variant?:
     | 'green'
     | 'navy'
@@ -27,9 +29,10 @@ type AvatarProps = {
     | 'pink'
     | 'grey'
     | 'greySubtle';
-  /* Content of the avatar component. In general pass Waffles [Asset](/components/asset), [Icon](/components/icon), regular image or a string containing only one character. Must be single element or string. */
+  /* Content of the avatar component. In general, pass Waffles [Asset](/components/asset), [Icon](/components/icon), regular image or a string containing only one character. Must be a single element or string. */
   content: JSX.Element | string;
   /* Whether the content should fill the whole avatar space or be restricted to the default avatar sizing values.  */
+  /* @default false */
   contentFill?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 

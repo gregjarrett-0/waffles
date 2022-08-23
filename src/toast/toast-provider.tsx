@@ -15,10 +15,13 @@ type ToastsDataset = Record<
 
 type ToastProviderProps = {
   /* Turns off toasts auto-hide functionality. When flag is passed, notifications persist and must be dismissed manually. */
+  /* @default false */
   disableAutoHide?: boolean;
-  /* The number of milliseconds to wait before automatically dismissing a notification. By default it is 6000 milliseconds. */
+  /* The number of milliseconds to wait before automatically dismissing a notification. */
+  /* @default 6000 */
   autoHideDuration?: number;
-  /* Sets the distance from the top of the page to the toasts container. By default `54px` is used, which is the most common app header height. */
+  /* Sets the distance from the top of the page to the toasts container. */
+  /* @default 54px */
   offset?: string;
   /* Content of an app. Generally, it is enough to wrap the whole app close to its root with a single `ToastProvider`. */
   children: React.ReactNode;

@@ -11,17 +11,20 @@ import {
 } from './styles';
 
 type EmptyStateBaseProps = {
-  /* Image next to or above content, depending on `orientation`. In general pass Waffles [Asset](/components/asset). */
+  /* Image next to or above content, depending on `orientation`. In general, pass Waffles [Asset](/components/asset). */
   image?: JSX.Element;
   /* Content of the component, can include `EmptyState.List` and any Waffles or custom component. */
   children?: React.ReactNode;
   /* Title for the content. */
   title?: React.ReactNode;
-  /* Specifies in which layout the component is organised. If no value is provided, `horizontal` will be used. Note: Small screen sizes will always show as vertical.  */
+  /* Specifies in which layout the component is organised. Note: Small screen sizes will always show as vertical.  */
+  /* @default horizontal */
   orientation?: 'horizontal' | 'vertical';
   /* Whether the content should be center aligned. **Note**: Can only be true when `orientation` is set to `vertical`. */
+  /* @default false */
   isCentered?: boolean;
   /* Sets the color of all internal child elements to be suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -40,8 +43,8 @@ function EmptyStateInternal({
   image,
   children,
   title,
-  orientation,
-  isCentered,
+  orientation = 'horizontal',
+  isCentered = false,
   inverted = false,
   ...restProps
 }: EmptyStateBaseProps & EmptyStateDirectionCenteredProps) {
@@ -52,7 +55,7 @@ function EmptyStateInternal({
     <div
       ref={wrapperRef}
       css={emptyStateStyle({
-        orientation: hasSmallWidth ? 'vertical' : orientation || 'horizontal',
+        orientation: hasSmallWidth ? 'vertical' : orientation,
         isCentered: !!isCentered,
         inverted,
       })}

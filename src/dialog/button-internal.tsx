@@ -20,6 +20,7 @@ type ButtonProps = {
   /* [skip docs] */
   fullWidth?: boolean;
   /* Focus this particular button when dialog is opened. */
+  /* @default false */
   autoFocus?: boolean;
 } & Omit<
   React.ButtonHTMLAttributes<HTMLButtonElement>,

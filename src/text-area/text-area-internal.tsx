@@ -8,17 +8,22 @@ import AutoGrow from './auto-grow';
 
 type TextAreaBaseProps = {
   /* Sets appropriate error style and `aria-invalid` attribute. */
+  /* @default false */
   error?: boolean;
   /* Sets the style of the text area suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
   /* Allows height to expand as much as it needs to in order to contain the current value. */
+  /* @default false */
   autoGrow?: boolean;
-  /* Defines the size of the text area. In most cases default `medium` size should be used. */
+  /* Defines the size of the text area. In most cases, the default size should be used. */
+  /* @default medium */
   size?: 'small' | 'medium' | 'large';
 };
 
 type TextAreaNoCouter = {
-  /* Indicates whether or not the character count should be displayed. In addition set a character limit with `maxLength`. */
+  /* Indicates whether or not the character count should be displayed. In addition, set a character limit with `maxLength`. */
+  /* @default false */
   showCharacterCount?: boolean;
 } & TextAreaBaseProps &
   React.TextareaHTMLAttributes<HTMLTextAreaElement>;
