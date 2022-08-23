@@ -13,8 +13,6 @@ type FormFieldProps = {
   label: string;
   /* Input component to be enhanced. In general, pass Waffles [Input](/components/input), [TextArea](/components/text-area) or [Select](/components/select). Must be a single element. */
   children: JSX.Element;
-  /* Optional input identifier. Pass it when component is rendered on the server to avoid client-server attribute mismatch. */
-  id?: string;
   /* Defines the size of the form field. In most cases, the default size should be used. Children of the form field will inherit the size by default. */
   /* @default medium */
   size?: 'small' | 'medium' | 'large';
