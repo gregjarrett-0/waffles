@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { cloneElement, useRef } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
+import { useMergeRefs } from '../hooks';
+
+import useIconSize from './use-icon-size';
 import { linkStyle, innerContentStyle } from './styles';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
@@ -9,6 +12,9 @@ import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 type LinkBaseProps = {
   /* The content of the link.  */
   children: React.ReactNode;
+  /* Defines the font size of the link. In general should be specified only when used as a stand-alone element. */
+  /* @default inherit */
+  size?: 'small' | 'medium' | 'large' | 'inherit';
   /* Sets the style of the link suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
@@ -24,6 +30,7 @@ export type LinkProps<T extends React.ElementType = 'a'> =
 function LinkInternal<T extends React.ElementType = 'a'>(
   {
     as,
+    size = 'inherit',
     inverted = false,
     iconLeft,
     iconRight,
@@ -33,22 +40,34 @@ function LinkInternal<T extends React.ElementType = 'a'>(
   ref?: PolymorphicRef<T>,
 ) {
   const Element = as || 'a';
-
   const { focusProps, isFocusVisible } = useFocusRing();
+  const linkRef = useRef<HTMLAnchorElement>(null);
+  const iconSize = useIconSize(linkRef);
+  const mergedRef = useMergeRefs(linkRef, ref);
+
+  function renderIcon(originalIcon: JSX.Element) {
+    return originalIcon.props.size
+      ? originalIcon
+      : cloneElement(originalIcon, {
+          size: iconSize,
+        });
+  }
 
   return (
     <Element
       {...mergeProps(focusProps, restProps)}
-      ref={ref}
+      ref={mergedRef}
       css={linkStyle({
+        size,
         inverted,
         isFocusVisible,
       })}
     >
-      {iconLeft}
+      {iconLeft && renderIcon(iconLeft)}
       {
         <span
           css={innerContentStyle({
+            iconSize,
             hasLeftIcon: !!iconLeft,
             hasRightIcon: !!iconRight,
           })}
@@ -56,7 +75,7 @@ function LinkInternal<T extends React.ElementType = 'a'>(
           {children}
         </span>
       }
-      {iconRight}
+      {iconRight && renderIcon(iconRight)}
     </Element>
   );
 }
