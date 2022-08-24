@@ -1,6 +1,8 @@
 import * as LinkExports from '@datacamp/waffles/link';
+
 import Code from '@datacamp/waffles/code';
 import Text from '@datacamp/waffles/text';
+import { Notification } from '@datacamp/waffles/notification';
 
 import Layout from '../../components/content-layout';
 import Example from '../../components/example';
@@ -10,14 +12,24 @@ import Imports from '../../components/imports';
 
 import playgroundConfig from '../../examples/link/playground-config';
 import BasicUsage from '../../examples/link/basic-usage';
-import Inverted from '../../examples/link/inverted';
 import WithIcons from '../../examples/link/with-icons';
+import Sizes from '../../examples/link/sizes';
+import Inverted from '../../examples/link/inverted';
 
 <Layout title="Link" description="Used for navigational actions that appear within or directly following a sentence.">
 
 ## Usage Guidance
 
 For standalone navigation actions use plain `Button` instead.
+
+<Notification
+  title="Default Size"
+  description={
+    <>
+      In general just let the link inherit font size from the surrounding text.
+    </>
+  }
+/>
 
 ## Examples
 
@@ -27,6 +39,10 @@ For standalone navigation actions use plain `Button` instead.
 
 <Example title="With Icons" path="link/with-icons">
   <WithIcons />
+</Example>
+
+<Example title="Szies" path="link/sizes">
+  <Sizes />
 </Example>
 
 <Example title="Inverted" path="link/inverted" darkPreview>
