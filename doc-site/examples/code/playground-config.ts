@@ -9,7 +9,7 @@ import { Paragraph } from '@datacamp/waffles/paragraph';
 
 function Playground() {
   return (
-    <Paragraph>
+    <Paragraph size="medium">
       You can use regular <Code>Button</Code> component as a link by{' '}
       passing <Code>a</Code> via <Code>as</Code> prop.
     </Paragraph>

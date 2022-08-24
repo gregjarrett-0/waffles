@@ -22,6 +22,12 @@ function Example() {
 --with-zopfli
 --layout-features="kern,liga,clig,ccmp"
 --unicodes="*"`}</CodeBlock>
+      <CodeBlock size="small">{`pyftsubset JetBrainsMono.ttf
+--output-file="JetBrainsMono.woff"
+--flavor=woff
+--with-zopfli
+--layout-features="kern,liga,clig,ccmp"
+--unicodes="*"`}</CodeBlock>
     </div>
   );
 }
