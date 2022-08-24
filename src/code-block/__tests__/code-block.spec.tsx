@@ -2,9 +2,9 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { CodeBlock } from '../index';
 
-const sizes = ['medium', 'large'] as const;
+const sizes = ['small', 'medium', 'large'] as const;
 
-describe('Code', () => {
+describe('CodeBlock', () => {
   it('renders pre and code elements containing the text', () => {
     const { container } = render(
       <CodeBlock>{`pyftsubset JetBrainsMono.ttf
