@@ -10,7 +10,7 @@ const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
 `;
 
-const sizes = ['medium', 'large'] as const;
+const sizes = ['small', 'medium', 'large'] as const;
 
 const preformattedCodeExample = `pyftsubset JetBrainsMono.ttf
  --output-file="JetBrainsMono.woff"
@@ -26,7 +26,7 @@ function Story() {
       <div css={wrapperStyle}>
         {sizes.map((size) => {
           return (
-            <CodeBlock key={size} size={size}>
+            <CodeBlock key={`code-block-${size}`} size={size}>
               {preformattedCodeExample}
             </CodeBlock>
           );
@@ -41,7 +41,7 @@ function Story() {
       >
         {sizes.map((size) => {
           return (
-            <CodeBlock key={size} inverted size={size}>
+            <CodeBlock key={`code-block-inverted-${size}`} inverted size={size}>
               {preformattedCodeExample}
             </CodeBlock>
           );
