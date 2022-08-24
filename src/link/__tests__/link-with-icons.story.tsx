@@ -16,6 +16,39 @@ function Story() {
     <>
       {/* Regular */}
       <div css={wrapperStyle}>
+        <Paragraph size="small">
+          Ut enim ad minim veniam,{' '}
+          <Link
+            iconLeft={<AddCircle />}
+            iconRight={<ExternalLink />}
+            href="https://datacamp.com"
+          >
+            Go to DataCamp website
+          </Link>{' '}
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Paragraph>
+        <Paragraph size="medium">
+          Ut enim ad minim veniam,{' '}
+          <Link
+            iconLeft={<AddCircle />}
+            iconRight={<ExternalLink />}
+            href="https://datacamp.com"
+          >
+            Go to DataCamp website
+          </Link>{' '}
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Paragraph>
+        <Paragraph size="large">
+          Ut enim ad minim veniam,{' '}
+          <Link
+            iconLeft={<AddCircle />}
+            iconRight={<ExternalLink />}
+            href="https://datacamp.com"
+          >
+            Go to DataCamp website
+          </Link>{' '}
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Paragraph>
         <Paragraph>
           Ut enim ad minim veniam,{' '}
           <Link iconLeft={<AddCircle />} href="https://datacamp.com">
@@ -30,17 +63,6 @@ function Story() {
           </Link>{' '}
           ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </Paragraph>
-        <Paragraph>
-          Ut enim ad minim veniam,{' '}
-          <Link
-            iconLeft={<AddCircle />}
-            iconRight={<ExternalLink />}
-            href="https://datacamp.com"
-          >
-            Go to DataCamp website
-          </Link>{' '}
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </Paragraph>
       </div>
       {/* Inverted */}
       <div
@@ -49,6 +71,42 @@ function Story() {
           background-color: ${tokens.colors.navy};
         `}
       >
+        <Paragraph inverted size="small">
+          Ut enim ad minim veniam,{' '}
+          <Link
+            inverted
+            iconLeft={<AddCircle />}
+            iconRight={<ExternalLink />}
+            href="https://datacamp.com"
+          >
+            Go to DataCamp website
+          </Link>{' '}
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Paragraph>
+        <Paragraph inverted size="medium">
+          Ut enim ad minim veniam,{' '}
+          <Link
+            inverted
+            iconLeft={<AddCircle />}
+            iconRight={<ExternalLink />}
+            href="https://datacamp.com"
+          >
+            Go to DataCamp website
+          </Link>{' '}
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Paragraph>
+        <Paragraph inverted size="large">
+          Ut enim ad minim veniam,{' '}
+          <Link
+            inverted
+            iconLeft={<AddCircle />}
+            iconRight={<ExternalLink />}
+            href="https://datacamp.com"
+          >
+            Go to DataCamp website
+          </Link>{' '}
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </Paragraph>
         <Paragraph inverted>
           Ut enim ad minim veniam,{' '}
           <Link inverted iconLeft={<AddCircle />} href="https://datacamp.com">
@@ -60,18 +118,6 @@ function Story() {
           Ut enim ad minim veniam,{' '}
           <Link
             inverted
-            iconRight={<ExternalLink />}
-            href="https://datacamp.com"
-          >
-            Go to DataCamp website
-          </Link>{' '}
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </Paragraph>
-        <Paragraph inverted>
-          Ut enim ad minim veniam,{' '}
-          <Link
-            inverted
-            iconLeft={<AddCircle />}
             iconRight={<ExternalLink />}
             href="https://datacamp.com"
           >
