@@ -11,7 +11,7 @@ type CodeBlockProps = {
   children: React.ReactNode;
   /* Defines the font size of the code block. */
   /* @default medium */
-  size?: 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
   /* Sets the style of the code block suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
