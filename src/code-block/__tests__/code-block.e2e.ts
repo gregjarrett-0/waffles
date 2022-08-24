@@ -11,6 +11,6 @@ describe('CodeBlock', () => {
 
   it('render all sizes', () => {
     cy.loadStory('code-block-sizes');
-    cy.get('main').find('pre').should('have.length', 4);
+    cy.get('main').find('pre').should('have.length', 6);
   });
 });
