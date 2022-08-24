@@ -216,6 +216,7 @@ Object {
   "Visible": [Function],
   "VisibleInverted": [Function],
   "Waypoint": [Function],
+  "Website": [Function],
   "YoutubeBrand": [Function],
 }
 `;

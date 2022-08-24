@@ -212,4 +212,5 @@ export { default as VideoCamera } from './generated/video-camera';
 export { default as Video } from './generated/video';
 export { default as Visible } from './generated/visible';
 export { default as Waypoint } from './generated/waypoint';
+export { default as Website } from './generated/website';
 export { default as YoutubeBrand } from './generated/youtube-brand';
