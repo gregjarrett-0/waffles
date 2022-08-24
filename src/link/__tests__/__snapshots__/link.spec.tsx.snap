@@ -2,86 +2,26 @@
 
 exports[` 1`] = `
 .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  vertical-align: bottom;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: inherit;
+  display: inline;
   line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
   border-radius: 4px;
-  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
-  transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
-  color: #0075AD;
-}
-
-.emotion-0 svg {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin-top: -1px;
-}
-
-.emotion-0:hover {
-  background-color: rgba(5, 25, 45, 0.1);
-}
-
-.emotion-0:hover {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
-}
-
-<a
-  class="emotion-0"
-  href="https://taylor-swift-fanclub.com"
->
-  <span
-    class="emotion-1"
-  >
-    Join Taylor Swift Fanclub
-  </span>
-</a>
-`;
-
-exports[` 2`] = `
-.emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  vertical-align: bottom;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: inherit;
-  line-height: inherit;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-weight: 800;
-  outline: 0;
-  border-radius: 4px;
-  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
-  transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
+  text-decoration-color: transparent;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #06BDFC;
+  font-size: inherit;
 }
 
 .emotion-0 svg {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin-top: -1px;
+  vertical-align: middle;
+  margin-top: -2px;
 }
 
 .emotion-0:hover {
@@ -89,8 +29,7 @@ exports[` 2`] = `
 }
 
 .emotion-0:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+  text-decoration-color: #06BDFC;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
@@ -108,34 +47,27 @@ exports[` 2`] = `
 
 exports[`Link renders snapshot of focused state 1`] = `
 .emotion-0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  vertical-align: bottom;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: inherit;
+  display: inline;
   line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
   border-radius: 4px;
-  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
-  transition: box-shadow 125ms ease-out,background-color 125ms ease-out;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #0075AD;
+  font-size: inherit;
   box-shadow: 0 0 0 2px #009BD8;
 }
 
 .emotion-0 svg {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin-top: -1px;
+  vertical-align: middle;
+  margin-top: -2px;
 }
 
 .emotion-0:hover {
@@ -151,5 +83,305 @@ exports[`Link renders snapshot of focused state 1`] = `
   >
     Test
   </span>
+</a>
+`;
+
+exports[`Link renders snapshot with icons of  inherit size 1`] = `
+.emotion-0 {
+  display: inline;
+  line-height: inherit;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  outline: 0;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  color: #0075AD;
+  font-size: inherit;
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.emotion-0:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-0:hover {
+  text-decoration-color: #0075AD;
+  box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+<a
+  class="emotion-0"
+>
+  <svg
+    aria-hidden="true"
+    height="16"
+    viewBox="0 0 18 18"
+    width="16"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+  <span
+    class="emotion-1"
+  >
+    Join Ariana Grande Fanclub
+  </span>
+  <svg
+    aria-hidden="true"
+    height="16"
+    viewBox="0 0 18 18"
+    width="16"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+</a>
+`;
+
+exports[`Link renders snapshot with icons of  large size 1`] = `
+.emotion-0 {
+  display: inline;
+  line-height: inherit;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  outline: 0;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  color: #0075AD;
+  font-size: 16px;
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.emotion-0:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-0:hover {
+  text-decoration-color: #0075AD;
+  box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+<a
+  class="emotion-0"
+>
+  <svg
+    aria-hidden="true"
+    height="16"
+    viewBox="0 0 18 18"
+    width="16"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+  <span
+    class="emotion-1"
+  >
+    Join Ariana Grande Fanclub
+  </span>
+  <svg
+    aria-hidden="true"
+    height="16"
+    viewBox="0 0 18 18"
+    width="16"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+</a>
+`;
+
+exports[`Link renders snapshot with icons of  medium size 1`] = `
+.emotion-0 {
+  display: inline;
+  line-height: inherit;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  outline: 0;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  color: #0075AD;
+  font-size: 14px;
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.emotion-0:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-0:hover {
+  text-decoration-color: #0075AD;
+  box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+<a
+  class="emotion-0"
+>
+  <svg
+    aria-hidden="true"
+    height="16"
+    viewBox="0 0 18 18"
+    width="16"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+  <span
+    class="emotion-1"
+  >
+    Join Ariana Grande Fanclub
+  </span>
+  <svg
+    aria-hidden="true"
+    height="16"
+    viewBox="0 0 18 18"
+    width="16"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+</a>
+`;
+
+exports[`Link renders snapshot with icons of  small size 1`] = `
+.emotion-0 {
+  display: inline;
+  line-height: inherit;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  outline: 0;
+  border-radius: 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
+  color: #0075AD;
+  font-size: 12px;
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.emotion-0:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-0:hover {
+  text-decoration-color: #0075AD;
+  box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1 {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+<a
+  class="emotion-0"
+>
+  <svg
+    aria-hidden="true"
+    height="14"
+    viewBox="0 0 18 18"
+    width="14"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
+  <span
+    class="emotion-1"
+  >
+    Join Ariana Grande Fanclub
+  </span>
+  <svg
+    aria-hidden="true"
+    height="14"
+    viewBox="0 0 18 18"
+    width="14"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M9 3c-.6 0-1 .5-1 1.2V8H4.2C3.5 8 3 8.4 3 9s.5 1 1.2 1H8v3.8c0 .7.4 1.2 1 1.2s1-.5 1-1.2V10h3.8c.7 0 1.2-.4 1.2-1s-.5-1-1.2-1H10V4.2C10 3.5 9.6 3 9 3z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
 </a>
 `;
