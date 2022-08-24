@@ -5,14 +5,32 @@ import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
+import { Notification } from '@datacamp/waffles/notification';
 
 import playgroundConfig from '../../examples/code/playground-config';
+import BasicUsage from '../../examples/code/basic-usage';
 import Sizes from '../../examples/code/sizes';
 import Inverted from '../../examples/code/inverted';
 
 <Layout title="Code" description="🚧 This page is under construction">
 
+## Usage Guidance
+
+<Notification
+  title="Default Size"
+  description={
+    <>
+      In general just let the code sample inherit font size from the surrounding
+      text.
+    </>
+  }
+/>
+
 ## Examples
+
+<Example title="Basic Usage" path="code/basic-usage">
+  <BasicUsage />
+</Example>
 
 <Example title="Sizes" path="code/sizes">
   <Sizes />
