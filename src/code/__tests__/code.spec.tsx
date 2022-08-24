@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import { Code } from '../index';
 
-const sizes = ['medium', 'large'] as const;
+const sizes = ['small', 'medium', 'large'] as const;
 
 describe('Code', () => {
   it('renders a code element containing the text by default', () => {
