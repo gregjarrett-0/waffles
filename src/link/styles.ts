@@ -3,31 +3,53 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
+import Link from './link';
+
+const sizeMap = {
+  small: {
+    fontSize: tokens.fontSizes.small,
+  },
+  medium: {
+    fontSize: tokens.fontSizes.medium,
+  },
+  large: {
+    fontSize: tokens.fontSizes.large,
+  },
+  inherit: {
+    fontSize: 'inherit',
+  },
+};
+
 const linkBaseStyle = css`
-  display: inline-flex;
-  align-items: baseline;
-  vertical-align: bottom;
-  text-decoration: none;
-  font-size: inherit;
+  display: inline;
   line-height: inherit;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
   outline: 0;
   border-radius: ${tokens.borderRadius.medium};
-  transition: box-shadow 125ms ease-out, background-color 125ms ease-out;
+  box-decoration-break: clone; // Nicely rounded background even between lines
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: box-shadow 125ms ease-out, background-color 125ms ease-out,
+    text-decoration-color 200ms ease-out;
 
   & svg {
-    align-self: center;
-    margin-top: -1px;
+    vertical-align: middle;
+    margin-top: -2px;
   }
 `;
 
 type LinkStyleOptions = {
+  size: NonNullable<React.ComponentProps<typeof Link>['size']>;
   inverted: boolean;
   isFocusVisible: boolean;
 };
 
-export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
+export function linkStyle({
+  size,
+  inverted,
+  isFocusVisible,
+}: LinkStyleOptions) {
   const mainColor = inverted ? tokens.colors.blue : tokens.colors.blueDarkText;
 
   const highlightColor = hexToRgba(
@@ -38,6 +60,7 @@ export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
   return css`
     ${linkBaseStyle}
     color: ${mainColor};
+    font-size: ${sizeMap[size].fontSize};
 
     &:hover {
       background-color: ${highlightColor};
@@ -49,7 +72,7 @@ export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
         `
       : css`
           &:hover {
-            text-decoration: underline;
+            text-decoration-color: ${mainColor};
             box-shadow: 0 0 0 2px ${highlightColor};
           }
         `}
@@ -57,16 +80,20 @@ export function linkStyle({ inverted, isFocusVisible }: LinkStyleOptions) {
 }
 
 type InnerContentStyleOptions = {
+  iconSize: 'small' | 'medium' | 'large';
   hasLeftIcon: boolean;
   hasRightIcon: boolean;
 };
 
 export function innerContentStyle({
+  iconSize,
   hasLeftIcon,
   hasRightIcon,
 }: InnerContentStyleOptions) {
+  const gap = iconSize === 'small' ? '2px' : tokens.spacing.xsmall;
+
   return css`
-    ${hasLeftIcon && `padding-left: ${tokens.spacing.xsmall};`}
-    ${hasRightIcon && `padding-right: ${tokens.spacing.xsmall};`}
+    ${hasLeftIcon && `padding-left: ${gap};`}
+    ${hasRightIcon && `padding-right: ${gap};`}
   `;
 }
