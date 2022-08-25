@@ -10,6 +10,8 @@ type ButtonProps = {
   /* [skip docs] */
   size?: React.ComponentProps<typeof Button>['size'];
   /* [skip docs] */
+  isLoading?: boolean;
+  /* [skip docs] */
   iconLeft?: JSX.Element;
   /* [skip docs] */
   iconRight?: JSX.Element;
