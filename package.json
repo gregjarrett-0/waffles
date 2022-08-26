@@ -116,6 +116,7 @@
     "@react-aria/focus": "^3.7.0",
     "@react-aria/utils": "^3.13.2",
     "nanoid": "^3.3.4",
-    "react-focus-on": "^3.6.0"
+    "react-focus-on": "^3.6.0",
+    "react-range": "^1.8.14"
   }
 }
