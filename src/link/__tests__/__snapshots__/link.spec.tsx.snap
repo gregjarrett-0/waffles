@@ -3,7 +3,6 @@
 exports[` 1`] = `
 .emotion-0 {
   display: inline;
-  line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
@@ -17,6 +16,7 @@ exports[` 1`] = `
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #06BDFC;
   font-size: inherit;
+  line-height: inherit;
 }
 
 .emotion-0 svg {
@@ -48,7 +48,6 @@ exports[` 1`] = `
 exports[`Link renders snapshot of focused state 1`] = `
 .emotion-0 {
   display: inline;
-  line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
@@ -62,6 +61,7 @@ exports[`Link renders snapshot of focused state 1`] = `
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #0075AD;
   font-size: inherit;
+  line-height: inherit;
   box-shadow: 0 0 0 2px #009BD8;
 }
 
@@ -89,7 +89,6 @@ exports[`Link renders snapshot of focused state 1`] = `
 exports[`Link renders snapshot with icons of  inherit size 1`] = `
 .emotion-0 {
   display: inline;
-  line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
@@ -103,6 +102,7 @@ exports[`Link renders snapshot with icons of  inherit size 1`] = `
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #0075AD;
   font-size: inherit;
+  line-height: inherit;
 }
 
 .emotion-0 svg {
@@ -164,7 +164,6 @@ exports[`Link renders snapshot with icons of  inherit size 1`] = `
 exports[`Link renders snapshot with icons of  large size 1`] = `
 .emotion-0 {
   display: inline;
-  line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
@@ -178,6 +177,7 @@ exports[`Link renders snapshot with icons of  large size 1`] = `
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #0075AD;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 .emotion-0 svg {
@@ -239,7 +239,6 @@ exports[`Link renders snapshot with icons of  large size 1`] = `
 exports[`Link renders snapshot with icons of  medium size 1`] = `
 .emotion-0 {
   display: inline;
-  line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
@@ -253,6 +252,7 @@ exports[`Link renders snapshot with icons of  medium size 1`] = `
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #0075AD;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 .emotion-0 svg {
@@ -314,7 +314,6 @@ exports[`Link renders snapshot with icons of  medium size 1`] = `
 exports[`Link renders snapshot with icons of  small size 1`] = `
 .emotion-0 {
   display: inline;
-  line-height: inherit;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 800;
   outline: 0;
@@ -328,6 +327,7 @@ exports[`Link renders snapshot with icons of  small size 1`] = `
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 200ms ease-out;
   color: #0075AD;
   font-size: 12px;
+  line-height: 1.5;
 }
 
 .emotion-0 svg {

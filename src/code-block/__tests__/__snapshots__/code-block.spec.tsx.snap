@@ -4,13 +4,13 @@ exports[`CodeBlock renders snapshot of focused state 1`] = `
 .emotion-0 {
   font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
   font-weight: 400;
-  line-height: inherit;
   border-radius: 4px;
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
   mix-blend-mode: multiply;
   font-size: 12px;
+  line-height: 1.5;
   color: #05192D;
   background-color: #EFEBE4;
   padding: 8px;
@@ -37,13 +37,13 @@ exports[`CodeBlock renders snapshot of inverted size large 1`] = `
 .emotion-0 {
   font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
   font-weight: 400;
-  line-height: inherit;
   border-radius: 4px;
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
   mix-blend-mode: regular;
   font-size: 14px;
+  line-height: 1.5;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 8px;
@@ -68,13 +68,13 @@ exports[`CodeBlock renders snapshot of inverted size medium 1`] = `
 .emotion-0 {
   font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
   font-weight: 400;
-  line-height: inherit;
   border-radius: 4px;
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
   mix-blend-mode: regular;
   font-size: 12px;
+  line-height: 1.5;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 8px;
@@ -99,13 +99,13 @@ exports[`CodeBlock renders snapshot of inverted size small 1`] = `
 .emotion-0 {
   font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
   font-weight: 400;
-  line-height: inherit;
   border-radius: 4px;
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
   mix-blend-mode: regular;
   font-size: 10px;
+  line-height: 1.5;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 8px;
@@ -130,13 +130,13 @@ exports[`CodeBlock renders snapshot of size large 1`] = `
 .emotion-0 {
   font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
   font-weight: 400;
-  line-height: inherit;
   border-radius: 4px;
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
   mix-blend-mode: multiply;
   font-size: 14px;
+  line-height: 1.5;
   color: #05192D;
   background-color: #EFEBE4;
   padding: 8px;
@@ -161,13 +161,13 @@ exports[`CodeBlock renders snapshot of size medium 1`] = `
 .emotion-0 {
   font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
   font-weight: 400;
-  line-height: inherit;
   border-radius: 4px;
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
   mix-blend-mode: multiply;
   font-size: 12px;
+  line-height: 1.5;
   color: #05192D;
   background-color: #EFEBE4;
   padding: 8px;
@@ -192,13 +192,13 @@ exports[`CodeBlock renders snapshot of size small 1`] = `
 .emotion-0 {
   font-family: JetBrainsMonoNL,Menlo,Monaco,'Courier New',monospace;
   font-weight: 400;
-  line-height: inherit;
   border-radius: 4px;
   margin: 0 2px;
   padding: 2px 4px;
   white-space: nowrap;
   mix-blend-mode: multiply;
   font-size: 10px;
+  line-height: 1.5;
   color: #05192D;
   background-color: #EFEBE4;
   padding: 8px;
