@@ -17,13 +17,18 @@ type CodeBlockProps = {
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLPreElement>;
 
-function CodeBlock({ children, ...restProps }: CodeBlockProps) {
+function CodeBlock({
+  children,
+  size = 'medium',
+  ...restProps
+}: CodeBlockProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
     <Code
       as="pre"
       {...mergeProps(focusProps, restProps)}
+      size={size}
       css={codeBlockStyle({ isFocusVisible })}
       tabIndex={0}
     >
