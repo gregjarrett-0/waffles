@@ -23,7 +23,6 @@ const sizeMap = {
 const baseCodeStyle = css`
   font-family: ${tokens.fontFamilies.mono};
   font-weight: ${tokens.fontWeights.regular};
-  line-height: inherit;
   border-radius: ${tokens.borderRadius.medium};
   margin: 0 2px;
   padding: 2px 4px;
@@ -40,6 +39,7 @@ export function codeStyle({ size, inverted }: CodeStyleOptions) {
     ${baseCodeStyle}
     mix-blend-mode: ${inverted ? 'regular' : 'multiply'};
     font-size: ${sizeMap[size].fontSize};
+    line-height: ${size === 'inherit' ? 'inherit' : tokens.lineHeights.relaxed};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted
       ? hexToRgba(tokens.colors.white, 0.3)

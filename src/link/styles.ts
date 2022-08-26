@@ -22,7 +22,6 @@ const sizeMap = {
 
 const linkBaseStyle = css`
   display: inline;
-  line-height: inherit;
   font-family: ${tokens.fontFamilies.sansSerif};
   font-weight: ${tokens.fontWeights.bold};
   outline: 0;
@@ -61,6 +60,7 @@ export function linkStyle({
     ${linkBaseStyle}
     color: ${mainColor};
     font-size: ${sizeMap[size].fontSize};
+    line-height: ${size === 'inherit' ? 'inherit' : tokens.lineHeights.relaxed};
 
     &:hover {
       background-color: ${highlightColor};
