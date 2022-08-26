@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { CodeBlock } from '@datacamp/waffles/code-block';
 
 function Example() {
@@ -7,7 +8,12 @@ function Example() {
     <div
       css={css`
         display: flex;
+        flex-direction: column;
         gap: ${tokens.spacing.small};
+
+        ${mediaQuery.aboveMedium} {
+          flex-direction: row;
+        }
       `}
     >
       <CodeBlock inverted size="large">{`pyftsubset JetBrainsMono.ttf

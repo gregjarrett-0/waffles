@@ -7,7 +7,7 @@ import { CodeBlock } from '@datacamp/waffles/code-block';
 
 function Playground() {
   return (
-    <CodeBlock size="large">{\`pyftsubset JetBrainsMono.ttf
+    <CodeBlock size="medium">{\`pyftsubset JetBrainsMono.ttf
 --output-file="JetBrainsMono.woff"
 --flavor=woff
 --with-zopfli
