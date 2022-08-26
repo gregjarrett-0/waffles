@@ -12,7 +12,7 @@ import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 type LinkBaseProps = {
   /* The content of the link.  */
   children: React.ReactNode;
-  /* Defines the font size of the link. In general should be specified only when used as a stand-alone element. */
+  /* Defines the font size of the link. In general should be specified only when used as a standalone element. */
   /* @default inherit */
   size?: 'small' | 'medium' | 'large' | 'inherit';
   /* Sets the style of the link suitable for dark backgrounds. */
