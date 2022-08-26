@@ -18,9 +18,9 @@ type LinkBaseProps = {
   /* Sets the style of the link suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (for smaller text sizes use `small` size) or a custom component. */
+  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles or a custom component. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (for smaller text sizes use `small` size) or a custom component. */
+  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles or a custom component. */
   iconRight?: JSX.Element;
 };
 
