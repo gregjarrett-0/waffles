@@ -4,12 +4,17 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
-export function trackStyle() {
+type TrackStyleOptions = {
+  disabled: boolean;
+};
+
+export function trackStyle({ disabled }: TrackStyleOptions) {
   return css`
     display: flex;
     align-items: center;
     width: 100%;
     height: ${tokens.sizing.small};
+    opacity: ${disabled ? tokens.opacity.high : 1};
   `;
 }
 
@@ -38,7 +43,11 @@ export function trackLineStyle({ value }: TrackLineStyleOptions) {
   `;
 }
 
-export function thumbStyle() {
+type ThubmStyleOptions = {
+  disabled: boolean;
+};
+
+export function thumbStyle({ disabled }: ThubmStyleOptions) {
   return css`
     display: flex;
     align-items: center;
@@ -46,10 +55,12 @@ export function thumbStyle() {
     width: ${tokens.sizing.small};
     height: ${tokens.sizing.small};
     outline: 0;
-
-    &:hover > div {
-      box-shadow: 0 0 0 3px ${tokens.colors.blueDark};
-    }
+    ${!disabled &&
+    css`
+      &:hover > div {
+        box-shadow: 0 0 0 3px ${tokens.colors.blueDark};
+      }
+    `}
   `;
 }
 

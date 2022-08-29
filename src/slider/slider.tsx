@@ -5,24 +5,31 @@ import Thumb from './thumb';
 
 type SliderProps = {
   value: number[];
+  min?: number;
+  max?: number;
+  step?: number;
   onChange: (value: number[]) => void;
+  disabled?: boolean;
 };
 
-function Slider({ value, onChange }: SliderProps) {
+function Slider({
+  value,
+  min = 0,
+  max = 100,
+  step = 1,
+  onChange,
+  disabled = false,
+}: SliderProps) {
   return (
     <Range
-      step={1}
-      min={0}
-      max={100}
-      values={value}
-      onChange={onChange}
+      {...{ values: value, min, max, step, onChange, disabled }}
       renderTrack={({ props, children }) => (
-        <Track {...props} value={value}>
+        <Track {...props} value={value} disabled={disabled}>
           {children}
         </Track>
       )}
       renderThumb={({ props, isDragged }) => (
-        <Thumb {...props} isDragged={isDragged} />
+        <Thumb {...props} isDragged={isDragged} disabled={disabled} />
       )}
     />
   );

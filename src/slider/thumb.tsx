@@ -6,16 +6,21 @@ import { thumbStyle, thumbDotStyle } from './styles';
 
 type ThumbProps = {
   isDragged: boolean;
+  disabled: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function ThumbInternal(
-  { isDragged, ...restProps }: ThumbProps,
+  { isDragged, disabled, ...restProps }: ThumbProps,
   ref: React.Ref<HTMLDivElement>,
 ) {
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
-    <div {...mergeProps(focusProps, restProps)} ref={ref} css={thumbStyle()}>
+    <div
+      {...mergeProps(focusProps, restProps)}
+      ref={ref}
+      css={thumbStyle({ disabled })}
+    >
       <div css={thumbDotStyle({ isDragged, isFocusVisible })} />
     </div>
   );
