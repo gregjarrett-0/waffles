@@ -5,13 +5,14 @@ import { limitLabelsWrapperStyle, limitLabelStyle } from './styles';
 type LimitLabelsProps = {
   min: number;
   max: number;
+  inverted: boolean;
 };
 
-function LimitLabels({ min, max }: LimitLabelsProps) {
+function LimitLabels({ min, max, inverted }: LimitLabelsProps) {
   return (
     <div css={limitLabelsWrapperStyle()}>
-      <Text css={limitLabelStyle()}>{min}</Text>
-      <Text css={limitLabelStyle()}>{max}</Text>
+      <Text css={limitLabelStyle({ inverted })}>{min}</Text>
+      <Text css={limitLabelStyle({ inverted })}>{max}</Text>
     </div>
   );
 }

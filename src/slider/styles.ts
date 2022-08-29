@@ -26,9 +26,21 @@ type TrackLineStyleOptions = {
   value: number[];
   min: number;
   max: number;
+  inverted: boolean;
 };
 
-export function trackLineStyle({ value, min, max }: TrackLineStyleOptions) {
+export function trackLineStyle({
+  value,
+  min,
+  max,
+  inverted,
+}: TrackLineStyleOptions) {
+  const filledColor = inverted ? tokens.colors.blue : tokens.colors.blueDark;
+  const backgroundColor = hexToRgba(
+    inverted ? tokens.colors.white : tokens.colors.navy,
+    0.15,
+  );
+
   return css`
     // Shift track line slightly so thumb aligns with labels nicer
     width: calc(100% + ${THUMB_DOT_RADIUS}px);
@@ -42,21 +54,18 @@ export function trackLineStyle({ value, min, max }: TrackLineStyleOptions) {
       max,
       colors:
         value.length == 1
-          ? [tokens.colors.blueDark, hexToRgba(tokens.colors.navy, 0.15)]
-          : [
-              hexToRgba(tokens.colors.navy, 0.15),
-              tokens.colors.blueDark,
-              hexToRgba(tokens.colors.navy, 0.15),
-            ],
+          ? [filledColor, backgroundColor]
+          : [backgroundColor, filledColor, backgroundColor],
     })};
   `;
 }
 
 type ThubmStyleOptions = {
   disabled: boolean;
+  inverted: boolean;
 };
 
-export function thumbStyle({ disabled }: ThubmStyleOptions) {
+export function thumbStyle({ disabled, inverted }: ThubmStyleOptions) {
   return css`
     display: flex;
     align-items: center;
@@ -67,7 +76,8 @@ export function thumbStyle({ disabled }: ThubmStyleOptions) {
     ${!disabled &&
     css`
       &:hover > div {
-        box-shadow: 0 0 0 3px ${tokens.colors.blueDark};
+        box-shadow: 0 0 0 3px
+          ${inverted ? tokens.colors.blue : tokens.colors.blueDark};
       }
     `}
   `;
@@ -75,21 +85,29 @@ export function thumbStyle({ disabled }: ThubmStyleOptions) {
 
 type ThumbDotStyleOptions = {
   isDragged: boolean;
+  inverted: boolean;
   isFocusVisible: boolean;
 };
 
 export function thumbDotStyle({
   isDragged,
+  inverted,
   isFocusVisible,
 }: ThumbDotStyleOptions) {
+  const backgroundColor = inverted
+    ? tokens.colors.blue
+    : tokens.colors.blueDark;
+
   return css`
     width: ${THUMB_DOT_RADIUS}px;
     height: ${THUMB_DOT_RADIUS}px;
-    ${isDragged && `box-shadow: 0 0 0 4px ${tokens.colors.blueDark};`}
+    ${isDragged && `box-shadow: 0 0 0 4px ${backgroundColor};`}
     ${isFocusVisible &&
-    `box-shadow: 0 0 0 2px ${tokens.colors.white}, 0 0 0 4px ${tokens.colors.blueDark};`}
+    `box-shadow: 0 0 0 2px ${
+      inverted ? tokens.colors.navyLight : tokens.colors.white
+    }, 0 0 0 4px ${backgroundColor};`}
     border-radius: ${tokens.borderRadius.circle};
-    background-color: ${tokens.colors.blueDark};
+    background-color: ${backgroundColor};
     transition: box-shadow 200ms ease-out;
   `;
 }
@@ -107,13 +125,6 @@ export function valueLabelsWrapperStyle({
   `;
 }
 
-export function valueLabelStyle() {
-  return css`
-    font-size: ${tokens.fontSizes.xxlarge};
-    font-weight: ${tokens.fontWeights.bold};
-  `;
-}
-
 export function limitLabelsWrapperStyle() {
   return css`
     display: flex;
@@ -122,9 +133,23 @@ export function limitLabelsWrapperStyle() {
   `;
 }
 
-export function limitLabelStyle() {
+type LabelStyleOptions = {
+  inverted: boolean;
+};
+
+export function valueLabelStyle({ inverted }: LabelStyleOptions) {
   return css`
-    color: ${tokens.colors.navySubtleTextOnLight};
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+    font-size: ${tokens.fontSizes.xxlarge};
+    font-weight: ${tokens.fontWeights.bold};
+  `;
+}
+
+export function limitLabelStyle({ inverted }: LabelStyleOptions) {
+  return css`
+    color: ${inverted
+      ? tokens.colors.navySubtleTextOnDark
+      : tokens.colors.navySubtleTextOnLight};
     font-size: ${tokens.fontSizes.small};
   `;
 }

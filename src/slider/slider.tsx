@@ -13,6 +13,7 @@ type SliderProps = {
   step?: number;
   disabled?: boolean;
   hideLabels?: boolean;
+  inverted?: boolean;
   'aria-label': string;
 };
 
@@ -24,6 +25,7 @@ function Slider({
   step = 1,
   disabled = false,
   hideLabels = false,
+  inverted = false,
   'aria-label': ariaLabel,
 }: SliderProps) {
   if (value.length > 2 || value.length === 0) {
@@ -32,24 +34,22 @@ function Slider({
 
   return (
     <div>
-      {!hideLabels && <ValueLabels value={value} />}
+      {!hideLabels && <ValueLabels value={value} inverted={inverted} />}
       <Range
         {...{ values: value, min, max, step, onChange, disabled }}
         renderTrack={({ props, children }) => (
-          <Track {...props} {...{ value, min, max, disabled }}>
+          <Track {...props} {...{ value, min, max, disabled, inverted }}>
             {children}
           </Track>
         )}
         renderThumb={({ props, isDragged }) => (
           <Thumb
             {...props}
-            isDragged={isDragged}
-            disabled={disabled}
-            aria-label={ariaLabel}
+            {...{ isDragged, disabled, inverted, 'aria-label': ariaLabel }}
           />
         )}
       />
-      {!hideLabels && <LimitLabels min={min} max={max} />}
+      {!hideLabels && <LimitLabels min={min} max={max} inverted={inverted} />}
     </div>
   );
 }
