@@ -7,22 +7,24 @@ import LimitLabels from './limit-labels';
 
 type SliderProps = {
   value: number[];
+  onChange: (value: number[]) => void;
   min?: number;
   max?: number;
   step?: number;
-  onChange: (value: number[]) => void;
   disabled?: boolean;
   hideLabels?: boolean;
+  'aria-label': string;
 };
 
 function Slider({
   value,
+  onChange,
   min = 0,
   max = 100,
   step = 1,
-  onChange,
   disabled = false,
   hideLabels = false,
+  'aria-label': ariaLabel,
 }: SliderProps) {
   if (value.length > 2 || value.length === 0) {
     throw new Error('Array of only one or two Slider values is supported.');
@@ -39,7 +41,12 @@ function Slider({
           </Track>
         )}
         renderThumb={({ props, isDragged }) => (
-          <Thumb {...props} isDragged={isDragged} disabled={disabled} />
+          <Thumb
+            {...props}
+            isDragged={isDragged}
+            disabled={disabled}
+            aria-label={ariaLabel}
+          />
         )}
       />
       {!hideLabels && <LimitLabels min={min} max={max} />}
