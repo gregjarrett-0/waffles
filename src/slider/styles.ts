@@ -4,6 +4,8 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
+const THUMB_DOT_RADIUS = 12;
+
 type TrackStyleOptions = {
   disabled: boolean;
 };
@@ -12,7 +14,9 @@ export function trackStyle({ disabled }: TrackStyleOptions) {
   return css`
     display: flex;
     align-items: center;
-    width: 100%;
+    // Shift track slightly so thumb aligns with labels nicer
+    width: calc(100% - ${THUMB_DOT_RADIUS}px);
+    margin-left: ${THUMB_DOT_RADIUS / 2}px;
     height: ${tokens.sizing.small};
     opacity: ${disabled ? tokens.opacity.high : 1};
   `;
@@ -26,7 +30,10 @@ type TrackLineStyleOptions = {
 
 export function trackLineStyle({ value, min, max }: TrackLineStyleOptions) {
   return css`
-    width: 100%;
+    // Shift track line slightly so thumb aligns with labels nicer
+    width: calc(100% + ${THUMB_DOT_RADIUS}px);
+    margin-left: -${THUMB_DOT_RADIUS / 2}px;
+    margin-right: -${THUMB_DOT_RADIUS / 2}px;
     height: 4px;
     border-radius: 2px;
     background: ${getTrackBackground({
@@ -76,13 +83,48 @@ export function thumbDotStyle({
   isFocusVisible,
 }: ThumbDotStyleOptions) {
   return css`
-    width: 12px;
-    height: 12px;
+    width: ${THUMB_DOT_RADIUS}px;
+    height: ${THUMB_DOT_RADIUS}px;
     ${isDragged && `box-shadow: 0 0 0 4px ${tokens.colors.blueDark};`}
     ${isFocusVisible &&
     `box-shadow: 0 0 0 2px ${tokens.colors.white}, 0 0 0 4px ${tokens.colors.blueDark};`}
     border-radius: ${tokens.borderRadius.circle};
     background-color: ${tokens.colors.blueDark};
     transition: box-shadow 200ms ease-out;
+  `;
+}
+
+type ValueLabelsWrapperStyleOptions = {
+  isSingleValue: boolean;
+};
+
+export function valueLabelsWrapperStyle({
+  isSingleValue,
+}: ValueLabelsWrapperStyleOptions) {
+  return css`
+    display: flex;
+    justify-content: ${isSingleValue ? 'flex-end' : 'space-between'};
+  `;
+}
+
+export function valueLabelStyle() {
+  return css`
+    font-size: ${tokens.fontSizes.xxlarge};
+    font-weight: ${tokens.fontWeights.bold};
+  `;
+}
+
+export function limitLabelsWrapperStyle() {
+  return css`
+    display: flex;
+    justify-content: space-between;
+    margin-top: -${tokens.spacing.xsmall};
+  `;
+}
+
+export function limitLabelStyle() {
+  return css`
+    color: ${tokens.colors.navySubtleTextOnLight};
+    font-size: ${tokens.fontSizes.small};
   `;
 }
