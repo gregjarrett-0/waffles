@@ -20,17 +20,19 @@ export function trackStyle({ disabled }: TrackStyleOptions) {
 
 type TrackLineStyleOptions = {
   value: number[];
+  min: number;
+  max: number;
 };
 
-export function trackLineStyle({ value }: TrackLineStyleOptions) {
+export function trackLineStyle({ value, min, max }: TrackLineStyleOptions) {
   return css`
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background: ${getTrackBackground({
       values: value,
-      min: 0,
-      max: 100,
+      min,
+      max,
       colors:
         value.length == 1
           ? [tokens.colors.blueDark, hexToRgba(tokens.colors.navy, 0.15)]

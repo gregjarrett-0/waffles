@@ -24,7 +24,7 @@ function Slider({
     <Range
       {...{ values: value, min, max, step, onChange, disabled }}
       renderTrack={({ props, children }) => (
-        <Track {...props} value={value} disabled={disabled}>
+        <Track {...props} {...{ value, min, max, disabled }}>
           {children}
         </Track>
       )}
