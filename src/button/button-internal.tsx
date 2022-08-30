@@ -2,6 +2,8 @@ import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
+import { useTitleCase } from '../hooks';
+
 import { buttonStyle, innerContentStyle } from './styles';
 import ButtonLoader from './loader';
 
@@ -69,6 +71,9 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
 ) {
   const Element = as || 'button';
   const { focusProps, isFocusVisible } = useFocusRing();
+  const titleCaseChildren = useTitleCase(
+    typeof children === 'string' ? (children as string) : '',
+  );
 
   function renderIcon(originalIcon: JSX.Element) {
     // Check if the icon has a provided custom size prop already
@@ -108,7 +113,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
           })}
         >
           {iconLeft && renderIcon(iconLeft)}
-          {children}
+          {titleCaseChildren ? titleCaseChildren : children}
           {iconRight && renderIcon(iconRight)}
         </span>
       )}
