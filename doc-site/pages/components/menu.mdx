@@ -28,7 +28,7 @@ To keep the underlying menu structure _semantically correct_ and _accessible_, p
     <>
       Currently <em>Menu</em> provides <em>Menu.Item</em>, and{' '}
       <em>Menu.Button</em> accessible subcomponents for optimal keyboard
-      navigation experience. Other optimized subcompnents such as{' '}
+      navigation experience. Other optimized subcomponents such as{' '}
       <em>Menu.Checkbox</em> and <em>Menu.Radio</em> are coming soon!
     </>
   }
@@ -85,12 +85,7 @@ In addition to all custom props listed below, `Menu.Item` accepts all props regu
 
 ### Menu.Button
 
-In addition to all custom props listed below, `Menu.Button` accepts all props regular `HTMLButton` would, such as `onClick`, `disabled`, and `data-` attributes.
-
-<PropsTable
-  metadata={require('!!extract-react-types-loader!../../../src/menu/button')}
-  isPolymorphic
-/>
+`Menu.Button` accepts all props Waffles [Button](/components/button/#props) would, except: `size`, `isLoading`, `icon` and `fullWidth`.
 
 ### useMenu
 
