@@ -19,7 +19,7 @@ exports[`Heading renders snapshot of inverted size large 1`] = `
 <h3
   class="emotion-0"
 >
-  Test
+   Test
 </h3>
 `;
 
@@ -42,7 +42,7 @@ exports[`Heading renders snapshot of inverted size medium 1`] = `
 <h4
   class="emotion-0"
 >
-  Test
+   Test
 </h4>
 `;
 
@@ -65,7 +65,7 @@ exports[`Heading renders snapshot of inverted size xlarge 1`] = `
 <h2
   class="emotion-0"
 >
-  Test
+   Test
 </h2>
 `;
 
@@ -88,7 +88,7 @@ exports[`Heading renders snapshot of inverted size xxlarge 1`] = `
 <h1
   class="emotion-0"
 >
-  Test
+   Test
 </h1>
 `;
 
@@ -111,7 +111,7 @@ exports[`Heading renders snapshot of size large 1`] = `
 <h3
   class="emotion-0"
 >
-  Test
+   Test
 </h3>
 `;
 
@@ -134,7 +134,7 @@ exports[`Heading renders snapshot of size medium 1`] = `
 <h4
   class="emotion-0"
 >
-  Test
+   Test
 </h4>
 `;
 
@@ -157,7 +157,7 @@ exports[`Heading renders snapshot of size xlarge 1`] = `
 <h2
   class="emotion-0"
 >
-  Test
+   Test
 </h2>
 `;
 
@@ -180,6 +180,6 @@ exports[`Heading renders snapshot of size xxlarge 1`] = `
 <h1
   class="emotion-0"
 >
-  Test
+   Test
 </h1>
 `;

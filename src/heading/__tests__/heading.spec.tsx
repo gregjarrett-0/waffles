@@ -7,21 +7,21 @@ const sizes = ['xxlarge', 'xlarge', 'large', 'medium'] as const;
 describe('Heading', () => {
   it('renders a h2 element by default containing the text', () => {
     const { container } = render(
-      <Heading>Remarkable Taylor Swift live performance</Heading>,
+      <Heading>Remarkable Taylor Swift Live Performance</Heading>,
     );
 
     const heading = container.querySelector('h2');
 
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent(
-      'Remarkable Taylor Swift live performance',
+      'Remarkable Taylor Swift Live Performance',
     );
   });
 
   it('sets the data attribute on the heading', () => {
     const { getByTestId } = render(
       <Heading data-testid="custom-heading">
-        Remarkable Taylor Swift live performance
+        Remarkable Taylor Swift Live Performance
       </Heading>,
     );
 
@@ -33,7 +33,7 @@ describe('Heading', () => {
   it('default heading level associated with size could be overwrited', () => {
     const { container } = render(
       <Heading size="xxlarge" as="h6">
-        Remarkable Taylor Swift live performance
+        Remarkable Taylor Swift Live Performance
       </Heading>,
     );
 
@@ -41,7 +41,7 @@ describe('Heading', () => {
 
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent(
-      'Remarkable Taylor Swift live performance',
+      'Remarkable Taylor Swift Live Performance',
     );
   });
 
