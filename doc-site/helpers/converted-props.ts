@@ -111,8 +111,8 @@ function filteredRawProps(
     });
 
     // At the end remove props with name 'never'
-    const filteredMembers = adjustedMembers.filter((memeber) => {
-      return memeber.value?.name !== 'never';
+    const filteredMembers = adjustedMembers.filter((member) => {
+      return member.value?.name !== 'never';
     });
 
     return rawProps.concat(filteredMembers);
