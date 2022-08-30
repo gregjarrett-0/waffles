@@ -6,10 +6,12 @@ function useTitleCase(content: string) {
   const [titleCasedContent, setTitleCasedContent] = useState<string>();
 
   useEffect(() => {
-    //
+    if (!content) return;
+
     setTitleCasedContent(
       content
         .toLowerCase()
+        .trim()
         .split(' ')
         .reduce((output, segment, index) => {
           // Always capitalise the first letter of the first word, or if it's not included in our stop words
