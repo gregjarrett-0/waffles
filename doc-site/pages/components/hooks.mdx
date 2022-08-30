@@ -7,6 +7,7 @@ import Imports from '../../components/imports';
 import UseIdBasicUsage from '../../examples/hooks/use-id-basic-usage';
 import UseMediaQueryBasicUsage from '../../examples/hooks/use-media-query-basic-usage';
 import UseAnimateTransitionBasicUsage from '../../examples/hooks/use-animate-transition-basic-usage';
+import UseTitleCaseBasicUsage from '../../examples/hooks/use-title-case-basic-usage';
 
 <Layout title="Hooks" description="🚧 This page is under construction">
 
@@ -49,6 +50,14 @@ Persists any function and prevents it from being invalidated between renders. Al
 ## useMergeRefs
 
 Merge two React refs into single one in a stable way.
+
+## useTitleCase
+
+Converts the provided string to match the required title case. Waffles [Button](/components/button) and [Heading](/components/heading) automatically use this for string content.
+
+<Example title="Basic Usage" path="hooks/use-title-case-basic-usage">
+  <UseTitleCaseBasicUsage />
+</Example>
 
 ## Imports
 
