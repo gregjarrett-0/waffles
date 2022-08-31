@@ -13,16 +13,12 @@ function useTitleCase(content: string) {
         .toLowerCase()
         .trim()
         .split(' ')
-        .reduce((output, segment, index) => {
+        .reduce((output, word, index) => {
           // Always capitalise the first letter of the first word, or if it's not included in our stop words
-          if (TITLE_CASE_STOP_WORDS.includes(segment) && index) {
-            return output.concat(' ', segment);
+          if (TITLE_CASE_STOP_WORDS.includes(word) && index) {
+            return output.concat(' ', word);
           } else {
-            return output.concat(
-              ' ',
-              segment[0].toUpperCase(),
-              segment.substring(1),
-            );
+            return output.concat(' ', word[0].toUpperCase(), word.substring(1));
           }
         }, ''),
     );
