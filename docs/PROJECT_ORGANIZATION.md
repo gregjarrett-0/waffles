@@ -1,6 +1,6 @@
-# Waffles Project Organization
+# Waffles project organization
 
-## 💻 Available Commands
+## 💻 Available fommands
 
 A list of all relevant scripts in the project with a short description. Starting with the scripts most important for _local development_.
 

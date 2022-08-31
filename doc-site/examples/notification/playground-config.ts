@@ -8,7 +8,7 @@ import { Notification } from '@datacamp/waffles/notification';
 function Playground() {
   return (
     <Notification
-      title="Short Notification Title"
+      title="Short notification title"
       description="Keep the title and description as short as possible."
       variant="default"
       closable

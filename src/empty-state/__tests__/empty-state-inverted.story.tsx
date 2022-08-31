@@ -15,7 +15,7 @@ function Story() {
       `}
     >
       <EmptyState
-        title="Title Heading"
+        title="Title heading"
         image={<Rocket3d />}
         inverted
         data-testid="empty-state"

@@ -15,7 +15,7 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <Card headstone={<Avatar content="A" data-testid="card-headstone" />}>
-        <Heading size="large">Card with Headstone</Heading>
+        <Heading size="large">Card with headstone</Heading>
         <Paragraph
           css={css`
             margin-bottom: 0;

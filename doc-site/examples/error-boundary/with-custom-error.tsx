@@ -9,7 +9,6 @@ import { Button } from '@datacamp/waffles/button';
 
 function ThrowErrorComponent() {
   throw new Error('Very serious error!');
-  return null;
 }
 
 function CustomError() {
@@ -30,7 +29,7 @@ function CustomError() {
         max-width: 300px;
       `}
     >
-      <Heading size="xlarge">Oops, somethig happened!</Heading>
+      <Heading size="xlarge">Oops, something happened!</Heading>
       {error.message && (
         <Paragraph
           css={css`

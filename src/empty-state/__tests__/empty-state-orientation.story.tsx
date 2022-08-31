@@ -17,7 +17,7 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <EmptyState
-        title="Direction: Row"
+        title="Direction: row"
         image={<Rocket3d />}
         orientation="horizontal"
         data-testid="empty-state"
@@ -37,7 +37,7 @@ function Story() {
         <Button>Button</Button>
       </EmptyState>
       <EmptyState
-        title="Direction: Column"
+        title="Direction: column"
         image={<Rocket3d />}
         orientation="vertical"
         data-testid="empty-state"

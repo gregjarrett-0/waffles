@@ -11,7 +11,7 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <Notification
-        title="Basic Notification Title"
+        title="Basic notification title"
         description="Basic notification description."
         closable
       />

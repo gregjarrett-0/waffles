@@ -23,7 +23,7 @@ jest.mock('../../asset', () => {
 describe('Dialog', () => {
   it('renders snapshot', async () => {
     const { container } = render(
-      <EmptyState title="Title Heading" image={<Rocket3d />}>
+      <EmptyState title="Title heading" image={<Rocket3d />}>
         <Paragraph>Lorem ipsum dolor sit amet.</Paragraph>
         <EmptyState.List>
           <EmptyState.ListItem icon={<Group />}>
@@ -46,7 +46,7 @@ describe('Dialog', () => {
   it('renders snapshot in vertical orientation', async () => {
     const { container } = render(
       <EmptyState
-        title="Title Heading"
+        title="Title heading"
         image={<Rocket3d />}
         orientation="vertical"
       >
@@ -71,7 +71,7 @@ describe('Dialog', () => {
 
   it('renders snapshot in inverted', async () => {
     const { container } = render(
-      <EmptyState title="Title Heading" image={<Rocket3d />} inverted>
+      <EmptyState title="Title heading" image={<Rocket3d />} inverted>
         <Paragraph inverted>Lorem ipsum dolor sit amet.</Paragraph>
         <EmptyState.List>
           <EmptyState.ListItem icon={<Group />}>
@@ -94,7 +94,7 @@ describe('Dialog', () => {
   it('renders snapshot in vertical orientation and inverted', async () => {
     const { container } = render(
       <EmptyState
-        title="Title Heading"
+        title="Title heading"
         image={<Rocket3d />}
         orientation="vertical"
         inverted

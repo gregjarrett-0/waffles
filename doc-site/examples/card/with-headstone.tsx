@@ -23,7 +23,7 @@ function Example() {
         margin-top: 20px;
       `}
     >
-      <Heading size="large">Introduction to DataCamp Projects</Heading>
+      <Heading size="large">Introduction to DataCamp projects</Heading>
       <Paragraph
         css={css`
           margin-bottom: 0;

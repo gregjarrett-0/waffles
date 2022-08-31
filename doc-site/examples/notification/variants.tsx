@@ -14,14 +14,14 @@ function Example() {
     >
       <Notification
         variant="default"
-        title="We Don't Share Your Personal Information"
+        title="We don't share your personal information"
         description="Your info is only shared with an employer when you
           apply for a job or accept their request."
         closable
       />
       <Notification
         variant="success"
-        title="Course Completed"
+        title="Course completed"
         action={
           <Notification.ActionButton iconRight={<ArrowRight />}>
             Take Assessment
@@ -30,19 +30,19 @@ function Example() {
       />
       <Notification
         variant="warning"
-        title="Some Personal Details Are Missing"
+        title="Some personal details are missing"
         description="To discover jobs tailored exclusively for you, we need
           a bit more information about you."
       />
       <Notification
         variant="error"
-        title="Do Not Close This Window"
+        title="Do not close this window"
         description="The recording will immediately stop if you close
           this window."
       />
       <Notification
         variant="upgrade"
-        title="Upgrade To Premium!"
+        title="Upgrade to premium!"
         description="Publish jobs, view full profiles, and contact
           candidates directly."
         action={<Notification.ActionButton>Upgrade</Notification.ActionButton>}

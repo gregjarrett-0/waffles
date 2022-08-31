@@ -116,10 +116,10 @@ export default function Home() {
       </section>
       <ContentContainer css={containerStyle}>
         <article>
-          <Heading size="xlarge">Core Principles</Heading>
+          <Heading size="xlarge">Core principles</Heading>
           <div css={cardsLayoutStyle}>
             <LandingPageCard imageUrl="images/waffles-components-mini.svg">
-              <Heading size="large">Component for Every Occassion</Heading>
+              <Heading size="large">Components for every occassion</Heading>
               <Paragraph css={cardParagraphStyle}>
                 Waffles offers a wide range of React and Figma components, to
                 help developers and designers build DataCamp experiences

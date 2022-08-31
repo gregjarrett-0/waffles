@@ -14,7 +14,7 @@ const wrapperStyle = css`
 function Example() {
   return (
     <>
-      <Heading size="medium">Asset Content</Heading>
+      <Heading size="medium">Asset content</Heading>
       <div css={wrapperStyle}>
         <Avatar
           size="xxsmall"
@@ -57,7 +57,7 @@ function Example() {
           content={<AvatarPlaceholderColored />}
         />
       </div>
-      <Heading size="medium">Image Content</Heading>
+      <Heading size="medium">Image content</Heading>
       <div
         css={css`
           ${wrapperStyle}
