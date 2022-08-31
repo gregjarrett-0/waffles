@@ -262,7 +262,7 @@ exports[`Dialog renders snapshot 1`] = `
         <span
           class="emotion-10"
         >
-           Button
+          Button
         </span>
       </button>
     </div>
@@ -532,7 +532,7 @@ exports[`Dialog renders snapshot in inverted 1`] = `
         <span
           class="emotion-10"
         >
-           Button
+          Button
         </span>
       </button>
     </div>
@@ -802,7 +802,7 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
         <span
           class="emotion-10"
         >
-           Button
+          Button
         </span>
       </button>
     </div>
@@ -1072,7 +1072,7 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
         <span
           class="emotion-10"
         >
-           Button
+          Button
         </span>
       </button>
     </div>

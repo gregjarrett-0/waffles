@@ -4,4 +4,3 @@ export { default as useAnimateTransition } from './use-animate-transition';
 export { default as useIsomorphicLayoutEffect } from './use-isomorphic-layout-effect';
 export { default as useCallbackRef } from './use-callback-ref';
 export { default as useMergeRefs } from './use-merge-refs';
-export { default as useTitleCase } from './use-title-case';
