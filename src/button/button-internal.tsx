@@ -2,7 +2,7 @@ import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { useTitleCase } from '../hooks';
+import { setTitleCase } from '../helpers';
 
 import { buttonStyle, innerContentStyle } from './styles';
 import ButtonLoader from './loader';
@@ -76,13 +76,6 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   const Element = as || 'button';
   const { focusProps, isFocusVisible } = useFocusRing();
 
-  // Convert the provided content into title case, if it's of type string
-  const titleCaseChildren = useTitleCase(
-    typeof children === 'string' && !disableTitleCase
-      ? (children as string)
-      : '',
-  );
-
   function renderIcon(originalIcon: JSX.Element) {
     // Check if the icon has a provided custom size prop already
     return originalIcon.props.size
@@ -121,7 +114,9 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
           })}
         >
           {iconLeft && renderIcon(iconLeft)}
-          {titleCaseChildren ? titleCaseChildren : children}
+          {typeof children === 'string' && !disableTitleCase
+            ? setTitleCase(children as string)
+            : children}
           {iconRight && renderIcon(iconRight)}
         </span>
       )}
