@@ -7,7 +7,7 @@ const screenSizes: Record<string, [number, number]> = {
 describe('Notification', () => {
   it('render a notification', () => {
     cy.loadStory('notification-basic');
-    cy.findByText('Basic Notification Title').should('exist');
+    cy.findByText('Basic notification title').should('exist');
     cy.findByText('Basic notification description.').should('exist');
     cy.findByLabelText('Close notification').should('exist');
   });
@@ -16,7 +16,7 @@ describe('Notification', () => {
     cy.loadStory('notification-basic');
     cy.findByLabelText('Close notification').click();
     cy.wait(1000);
-    cy.findByText('Basic Notification Title').should('not.exist');
+    cy.findByText('Basic notification title').should('not.exist');
   });
 
   describe('render all variants', () => {
