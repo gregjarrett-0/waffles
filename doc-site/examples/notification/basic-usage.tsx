@@ -4,7 +4,7 @@ import { Link } from '@datacamp/waffles/link';
 function Example() {
   return (
     <Notification
-      title="Course Updated"
+      title="Course updated"
       description={
         <>
           The{' '}

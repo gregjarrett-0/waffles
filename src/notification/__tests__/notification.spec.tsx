@@ -6,14 +6,14 @@ describe('Notification', () => {
   it('renders title and description', async () => {
     const { getByText } = render(
       <Notification
-        title="Taylor Swift Tour Announced"
+        title="Taylor Swift tour announced"
         description="The World Tour is going to start this summer."
       />,
     );
 
     let title;
     await waitFor(() => {
-      title = getByText('Taylor Swift Tour Announced');
+      title = getByText('Taylor Swift tour announced');
     });
     const description = getByText(/the world tour/i);
 
@@ -23,7 +23,7 @@ describe('Notification', () => {
 
   it('renders close button when closable flag is passed', async () => {
     const { getByLabelText } = render(
-      <Notification title="Taylor Swift Tour Announced" closable />,
+      <Notification title="Taylor Swift tour announced" closable />,
     );
 
     let button;
@@ -37,7 +37,7 @@ describe('Notification', () => {
   it('renders action button', async () => {
     const { getByText } = render(
       <Notification
-        title="Taylor Swift Tour Announced"
+        title="Taylor Swift tour announced"
         action={
           <Notification.ActionButton>Check Details</Notification.ActionButton>
         }
@@ -58,7 +58,7 @@ describe('Notification', () => {
     const handleClick = jest.fn();
     const { queryByText, getByLabelText } = render(
       <Notification
-        title="Taylor Swift Tour Announced"
+        title="Taylor Swift tour announced"
         closable
         onClose={handleClick}
       />,
@@ -75,7 +75,7 @@ describe('Notification', () => {
       jest.advanceTimersByTime(1000);
     });
 
-    const title = queryByText('Taylor Swift Tour Announced');
+    const title = queryByText('Taylor Swift tour announced');
 
     expect(handleClick).toHaveBeenCalledTimes(1);
     expect(title).not.toBeInTheDocument();
@@ -99,7 +99,7 @@ describe('Notification', () => {
   describe('accessible announcement', () => {
     it('should be rendered by success notification', async () => {
       const { getByText } = render(
-        <Notification title="Notification Title" variant="success" />,
+        <Notification title="Notification title" variant="success" />,
       );
 
       let announcement;
@@ -112,7 +112,7 @@ describe('Notification', () => {
 
     it('should be rendered by warning notification', async () => {
       const { getByText } = render(
-        <Notification title="Notification Title" variant="warning" />,
+        <Notification title="Notification title" variant="warning" />,
       );
 
       let announcement;
@@ -125,7 +125,7 @@ describe('Notification', () => {
 
     it('should be rendered by error notification', async () => {
       const { getByText } = render(
-        <Notification title="Notification Title" variant="error" />,
+        <Notification title="Notification title" variant="error" />,
       );
 
       let announcement;
@@ -140,7 +140,7 @@ describe('Notification', () => {
   it('renders snapshot of regular notification with all optional content', async () => {
     const { container, getByText } = render(
       <Notification
-        title="Notification Title"
+        title="Notification title"
         description={
           <>
             Notification <strong>description</strong>.
@@ -153,7 +153,7 @@ describe('Notification', () => {
 
     let title;
     await waitFor(() => {
-      title = getByText('Notification Title');
+      title = getByText('Notification title');
     });
     const notification = container.querySelector('section');
 
@@ -165,7 +165,7 @@ describe('Notification', () => {
     const { container, getByText } = render(
       <Notification
         inverted
-        title="Inverted Notification Title"
+        title="Inverted notification title"
         description={
           <>
             Inverted notification <strong>description</strong>.
@@ -178,7 +178,7 @@ describe('Notification', () => {
 
     let title;
     await waitFor(() => {
-      title = getByText('Inverted Notification Title');
+      title = getByText('Inverted notification title');
     });
     const notification = container.querySelector('section');
 

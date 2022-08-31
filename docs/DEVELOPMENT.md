@@ -1,8 +1,8 @@
-# Waffles Local Development Guide
+# Waffles local development guide
 
 All **Waffles** components and their tests exist in the `src` directory with matching official documentation in the `doc-site` folder. All npm scripts are run from the root — there is no need to navigate to sub-directories.
 
-## 🏆 Core Principles
+## 🏆 Core principles
 
 1. Release process is fully **automated**, including publishing to npm, version bumps, and changelog generation
 2. Has a lightweight isolated **component development environment** — Workbench
@@ -10,13 +10,13 @@ All **Waffles** components and their tests exist in the `src` directory with mat
 4. All tests are **co-located** with components, both unit and e2e stories
 5. Local development and production environments are **identical** — you can execute all commands locally
 
-## 💻 Before You Start
+## 💻 Before you start
 
 - Make sure you have a compatible version of **node** installed: **16+**
 - Install the latest version of **yarn** package manager: **1.22+**
 - Run **yarn** in the root directory to install all dependencies
 
-## 🎨 Coding Style Guidelines
+## 🎨 Coding style guidelines
 
 Please see the [Coding Style Guidelines](https://github.com/datacamp/waffles/blob/master/docs/CODING_STYLE.md) overview.
 
@@ -26,7 +26,7 @@ Please see the [Coding Style Guidelines](https://github.com/datacamp/waffles/blo
 
 To start **Workbench** run `yarn workbench` npm script and navigate to `http://localhost:4040`. You will be presented with an empty canvas.
 
-### Adding Components to Workbench
+### Adding components to workbench
 
 To add a component to **Workbench**: navigate to `workbench/workbench.tsx` and import the component as you would in a regular application. Let's use `button` as an example:
 
@@ -44,7 +44,7 @@ Now when you modify the imported component in `src/button` the changes will be a
 
 ℹ️ When you're finished **DO NOT commit** `workbench/workbench.tsx` file. Please leave it pristine for other developers.
 
-### Useful Commands for Local Component Development
+### Useful commands for local component development
 
 - To run unit tests with Jest run `yarn test:unit`
 - To run e2e Cypress stories test suites run `yarn test:stories`
@@ -52,7 +52,7 @@ Now when you modify the imported component in `src/button` the changes will be a
 - To format code with prettier run `yarn format`
 - To verify commits messages run `yarn lint:commits`
 
-## 📄 Docs Website
+## 📄 Docs website
 
 To update the official **Waffles** documentation run `yarn doc:dev` then navigate to `http://localhost:3000`.
 
@@ -60,7 +60,7 @@ All documentation is built using the [NextJS](https://nextjs.org/docs) framework
 
 Components used internally by the documentation can be found in the `doc-site/components` folder.
 
-### Component Props
+### Component props
 
 Each prop of each component should be documented by an appropriate comment above it. If the prop has a default value, then an additional comment with a prefix can be added below the first to indicate this value. Afterwards, a preview of the available props (via `PropsTable`) can be auto-generated.
 
@@ -82,7 +82,7 @@ In the comments regular markdown can be used. If for whatever reason you don't w
 
 In **Waffles** there are two kinds of tests to keep the codebase healthy and of high quality.
 
-### Unit Tests
+### Unit tests
 
 To run unit tests run `yarn test:unit` npm script.
 

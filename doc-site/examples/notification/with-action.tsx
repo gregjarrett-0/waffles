@@ -3,7 +3,7 @@ import { Notification } from '@datacamp/waffles/notification';
 function Example() {
   return (
     <Notification
-      title="Terms Of Use Has Been Updated"
+      title="Terms of use have been updated"
       action={
         <Notification.ActionButton
           as="a"

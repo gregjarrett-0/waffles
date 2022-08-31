@@ -18,7 +18,7 @@ function Playground() {
 
   return (
     <Card>
-      <Heading size="large">Card Title</Heading>
+      <Heading size="large">Card title</Heading>
       <Paragraph style={{ marginBottom: 0 }}>
         Custom content of the card.
       </Paragraph>

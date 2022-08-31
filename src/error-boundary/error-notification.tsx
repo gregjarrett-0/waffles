@@ -11,7 +11,7 @@ type ErrorNotificationProps = {
 function ErrorNotification({ error, onReset }: ErrorNotificationProps) {
   return (
     <Notification
-      title="Something Went Wrong"
+      title="Something went wrong"
       description={error?.message}
       variant="error"
       action={

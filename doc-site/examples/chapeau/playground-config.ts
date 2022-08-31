@@ -11,7 +11,7 @@ function Playground() {
   return (
     <header>
       <Chapeau>Certification</Chapeau>
-      <Heading size="xxlarge">Get Certified in Data Science</Heading>
+      <Heading size="xxlarge">Get certified in data science</Heading>
     </header>
   );
 }

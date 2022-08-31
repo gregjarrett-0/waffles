@@ -10,7 +10,7 @@ export default function PageNotFound() {
   return (
     <>
       <Head>
-        <title>Waffles - Page not Found</title>
+        <title>Waffles - Page not found</title>
         <meta
           name="description"
           content="Unfortunately this page could not be found."
@@ -18,13 +18,13 @@ export default function PageNotFound() {
       </Head>
       <ContentContainer>
         <Display>404</Display>
-        <Heading size="xxlarge">Page not Found</Heading>
+        <Heading size="xxlarge">Page not found</Heading>
         <Paragraph>
           Unfortunately, we couldn&apos;t find the page you are looking for.
         </Paragraph>
         <Link href="/" passHref>
           <Button variant="secondary" as="a">
-            Go to Home Page
+            Go to home page
           </Button>
         </Link>
       </ContentContainer>

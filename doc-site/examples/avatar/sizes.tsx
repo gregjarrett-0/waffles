@@ -15,7 +15,7 @@ const wrapperStyle = css`
 function Example() {
   return (
     <>
-      <Heading size="medium">Text Content</Heading>
+      <Heading size="medium">Text content</Heading>
       <div css={wrapperStyle}>
         <Avatar size="xxsmall" content="D" />
         <Avatar size="xsmall" content="D" />
@@ -26,7 +26,7 @@ function Example() {
         <Avatar size="xxlarge" content="D" />
         <Avatar size="huge" content="D" />
       </div>
-      <Heading size="medium">Icon Content</Heading>
+      <Heading size="medium">Icon content</Heading>
       <div css={wrapperStyle}>
         <Avatar size="xxsmall" content={<DataCampBrand />} />
         <Avatar size="xsmall" content={<DataCampBrand />} />
@@ -37,7 +37,7 @@ function Example() {
         <Avatar size="xxlarge" content={<DataCampBrand />} />
         <Avatar size="huge" content={<DataCampBrand />} />
       </div>
-      <Heading size="medium">Asset Content</Heading>
+      <Heading size="medium">Asset content</Heading>
       <div
         css={css`
           ${wrapperStyle}

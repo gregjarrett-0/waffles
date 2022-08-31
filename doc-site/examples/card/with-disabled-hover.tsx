@@ -6,7 +6,7 @@ import { Card } from '@datacamp/waffles/card';
 function Example() {
   return (
     <Card disableHoverEffect>
-      <Heading size="large">Card with Hover Effect Disabled</Heading>
+      <Heading size="large">Card with hover effect disabled</Heading>
       <Paragraph
         css={css`
           margin-bottom: 0;

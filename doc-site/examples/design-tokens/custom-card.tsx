@@ -10,7 +10,7 @@ const cardStyle = css`
   max-width: 340px;
 `;
 
-const highlighStyle = css`
+const highlightStyle = css`
   color: ${tokens.colors.green};
 `;
 
@@ -22,7 +22,7 @@ function Example() {
   return (
     <section css={cardStyle}>
       <Heading inverted>
-        Your <span css={highlighStyle}>Certification</span> Journey
+        Your <span css={highlightStyle}>Certification</span> journey
       </Heading>
       <Paragraph inverted css={textStyle}>
         To get certified by DataCamp, we&apos;ll be testing your skills in SQL

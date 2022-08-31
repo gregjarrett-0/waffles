@@ -7,7 +7,7 @@ import { Rocket3d } from '../../asset';
 function Story() {
   return (
     <EmptyState
-      title="Title Heading"
+      title="Title heading"
       image={<Rocket3d />}
       data-testid="empty-state"
     >

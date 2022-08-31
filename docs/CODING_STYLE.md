@@ -1,4 +1,4 @@
-# Waffles Coding Style Guidelines
+# Waffles coding style guidelines
 
 ℹ️ Below are a handful of simple rules to adhere to when developing for **Waffles**, for those that ESLint / Prettier won't handle.
 
