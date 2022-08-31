@@ -9,7 +9,7 @@ describe('Card', () => {
   it('renders headstone, and content', () => {
     cy.loadStory('card-with-headstone');
     cy.findByTestId('card-headstone').should('exist');
-    cy.findByText('Card with Headstone').should('exist');
+    cy.findByText('Card with headstone').should('exist');
     cy.findByText(/lorem ipsum/i).should('exist');
   });
 
