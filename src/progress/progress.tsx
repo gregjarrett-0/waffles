@@ -22,15 +22,14 @@ type ProgressBaseProps = {
   /* Whether the progress is inverted in color or not. */
   /* @default false */
   inverted?: boolean;
-  /* [skip docs] */
+  /* Whether to hide the default label or not. */
+  /* @default false */
   hideLabel?: boolean;
   /* Should always be provided with context of the progress, e.g. "Course Progress". */
   'aria-label': string;
 } & React.HTMLAttributes<HTMLProgressElement>;
 
 type ProgressNoLabelProps = {
-  /* Whether to hide the default label or not. */
-  /* @default false */
   hideLabel: boolean;
   'aria-label': string;
 } & ProgressBaseProps;
