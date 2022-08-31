@@ -326,7 +326,7 @@ exports[`AlertDialogTest renders snapshot 1`] = `
     class="emotion-2"
     id="alert-dialog-title"
   >
-     Warning!
+    Warning!
   </h2>
   <div
     class="emotion-3"

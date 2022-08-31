@@ -472,7 +472,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
     class="emotion-2"
     id="drawer-title"
   >
-     Fabulous Marillion Concert
+    Fabulous Marillion Concert
   </h2>
   <div
     class="emotion-3"
@@ -979,7 +979,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
     class="emotion-2"
     id="drawer-title"
   >
-     Fabulous Marillion Concert
+    Fabulous Marillion Concert
   </h2>
   <div
     class="emotion-3"

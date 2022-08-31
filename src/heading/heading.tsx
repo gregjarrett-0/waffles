@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Text } from '../text';
-import { useTitleCase } from '../hooks';
 
 import { headingStyle, sizeToElement } from './styles';
 
@@ -20,23 +19,16 @@ type HeadingProps = {
 
 function Heading({
   as,
-  children,
   size = 'xlarge',
   inverted = false,
   ...restProps
 }: HeadingProps) {
-  const titleCaseChildren = useTitleCase(
-    typeof children === 'string' ? (children as string) : '',
-  );
-
   return (
     <Text
       as={as ? as : sizeToElement({ size })}
       css={headingStyle({ size, inverted })}
       {...restProps}
-    >
-      {titleCaseChildren ? titleCaseChildren : children}
-    </Text>
+    />
   );
 }
 
