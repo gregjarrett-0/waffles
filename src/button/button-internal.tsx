@@ -25,6 +25,9 @@ type ButtonBaseProps = {
   /* Sets the style of the button suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
+  /* Disables the default title casing for type `string` children. Use only in rare situations. */
+  /* @default false */
+  disableTitleCase?: boolean;
 };
 
 type ButtonIconOnlyProps = {
@@ -59,6 +62,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
     isLoading = false,
     inverted = false,
     fullWidth = false,
+    disableTitleCase = false,
     icon,
     iconLeft,
     iconRight,
@@ -71,8 +75,12 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
 ) {
   const Element = as || 'button';
   const { focusProps, isFocusVisible } = useFocusRing();
+
+  // Convert the provided content into title case, if it's of type string
   const titleCaseChildren = useTitleCase(
-    typeof children === 'string' ? (children as string) : '',
+    typeof children === 'string' && !disableTitleCase
+      ? (children as string)
+      : '',
   );
 
   function renderIcon(originalIcon: JSX.Element) {

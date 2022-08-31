@@ -57,7 +57,13 @@ function Entry({ name, isActive }: EntryProps) {
   return (
     <li css={listItemStyle({ isActive })}>
       <Link href={`#${slugify(name)}`} passHref>
-        <Button css={linkStyle} as="a" variant="plain" size="small">
+        <Button
+          css={linkStyle}
+          as="a"
+          variant="plain"
+          size="small"
+          disableTitleCase
+        >
           {name}
         </Button>
       </Link>
