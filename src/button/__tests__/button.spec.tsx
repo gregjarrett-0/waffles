@@ -45,6 +45,30 @@ describe('Button', () => {
     expect(button).toHaveTextContent('Follow Taylor Swift');
   });
 
+  it('renders a button containing the text and in title case', () => {
+    const { container } = render(
+      <Button>view all of taylor swift&apos;s concerts</Button>,
+    );
+
+    const button = container.querySelector('button');
+
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent("View All of Taylor Swift's Concerts");
+  });
+
+  it('renders a button with text without title case', () => {
+    const { container } = render(
+      <Button disableTitleCase>
+        view all of taylor swift&apos;s concerts
+      </Button>,
+    );
+
+    const button = container.querySelector('button');
+
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveTextContent("view all of taylor swift's concerts");
+  });
+
   it('handles click event correctly', () => {
     const handleClick = jest.fn();
     const { getByText } = render(
