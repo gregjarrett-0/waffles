@@ -22,7 +22,7 @@ function Example() {
   return (
     <section css={cardStyle}>
       <Heading inverted>
-        Your <span css={highlightStyle}>Certification</span> journey
+        Your <span css={highlightStyle}>certification</span> journey
       </Heading>
       <Paragraph inverted css={textStyle}>
         To get certified by DataCamp, we&apos;ll be testing your skills in SQL
