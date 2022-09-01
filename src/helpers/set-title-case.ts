@@ -38,13 +38,19 @@ export const TITLE_CASE_STOP_WORDS = [
   'of',
 ];
 
+/**
+ * Convert string content into Title Case
+ *
+ * @param content string, the content to be converted into Title Case
+ * @returns content in Title Case
+ */
 function setTitleCase(content: string) {
   return content
     .toLowerCase()
     .trim()
     .split(' ')
     .reduce((output, word, index) => {
-      // Always capitalise the first letter of the first word, or if it's not included in our stop words
+      // Always capitalize the first letter of the first word, or if it's not included in our stop words
       if (TITLE_CASE_STOP_WORDS.includes(word) && index) {
         return output.concat(' ', word);
       } else {

@@ -2,7 +2,7 @@
 
 DataCamp's Design System and React component library.
 
-## Using React Components
+## Using React components
 
 ### Installation
 
@@ -34,11 +34,11 @@ Simply import the appropriate components directly in your React project:
 import { Button } from '@datacamp/waffles/button';
 ```
 
-## Developing Components
+## Developing components
 
 Learn how to develop new **Waffles** components locally in the [Development](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md) guide.
 
-## Project Organization
+## Project organization
 
 Learn more about the project structure and available commands in the [Project Organization](https://github.com/datacamp/waffles/blob/master/docs/PROJECT_ORGANIZATION.md) overview.
 
