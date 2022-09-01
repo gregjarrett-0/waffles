@@ -21,7 +21,7 @@ type TextAreaBaseProps = {
   size?: 'small' | 'medium' | 'large';
 };
 
-type TextAreaNoCouter = {
+type TextAreaNoCounter = {
   /* Indicates whether or not the character count should be displayed. In addition, set a character limit with `maxLength`. */
   /* @default false */
   showCharacterCount?: boolean;
@@ -42,7 +42,7 @@ type TextAreaWithCounter = {
     'value' | 'onChange' | 'maxLength'
   >;
 
-type TextAreaProps = TextAreaNoCouter | TextAreaWithCounter;
+type TextAreaProps = TextAreaNoCounter | TextAreaWithCounter;
 
 function TextAreaInternal(
   {

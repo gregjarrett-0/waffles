@@ -96,7 +96,7 @@ function MenuInternal({
     ],
   );
 
-  // Enchance trigger with a11y aria attributes
+  // Enhance trigger with a11y aria attributes
   const element = cloneElement(
     trigger,
     getReferenceProps({

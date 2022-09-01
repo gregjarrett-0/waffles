@@ -13,7 +13,7 @@ describe('hexColorShade', () => {
     expect(hexColorShade('#4B3A3F', -1)).toEqual('#000000');
   });
 
-  it('throws an error when icorrect HEX value is provided', () => {
+  it('throws an error when an incorrect HEX value is provided', () => {
     const ERROR_MESSAGE =
       "Couldn't parse the color string. Please provide the color as a string in HEX notation.";
 

@@ -17,7 +17,7 @@ describe('hexToRgba', () => {
     expect(hexToRgba('#03ef62', 0)).toEqual('rgba(3, 239, 98, 0)');
   });
 
-  it('throws an error when icorrect HEX value is provided', () => {
+  it('throws an error when an incorrect HEX value is provided', () => {
     const ERROR_MESSAGE =
       "Couldn't parse the color string. Please provide the color as a string in HEX notation.";
 

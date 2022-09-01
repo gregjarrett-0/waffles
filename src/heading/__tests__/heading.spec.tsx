@@ -30,7 +30,7 @@ describe('Heading', () => {
     expect(heading).toBeInTheDocument();
   });
 
-  it('default heading level associated with size could be overwrited', () => {
+  it('default heading level associated with size can be overwritten', () => {
     const { container } = render(
       <Heading size="xxlarge" as="h6">
         Remarkable Taylor Swift live performance

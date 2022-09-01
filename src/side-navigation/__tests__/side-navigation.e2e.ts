@@ -1,5 +1,5 @@
 // Behavior on the large screen devices is different
-// SideNavigation is alwyas visible there, no need to test open / close cases
+// SideNavigation is always visible there, no need to test open / close cases
 const screenSizes: Record<string, [number, number]> = {
   small: [375, 800],
   medium: [768, 1024],

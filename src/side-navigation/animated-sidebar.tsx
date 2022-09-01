@@ -26,7 +26,7 @@ function AnimatedSidebar({ children, ...restProps }: AnimatedSidebarProps) {
             {...restProps}
             css={animatedSidebarStyle({ isVisible: isOpen })}
           />
-          {/* Content only wrapper animated separetely */}
+          {/* Content only wrapper animated separately */}
           <div css={animatedSidebarContentStyle({ isVisible: isOpen })}>
             {children}
           </div>

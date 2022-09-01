@@ -17,7 +17,7 @@ type EmptyStateBaseProps = {
   children?: React.ReactNode;
   /* Title for the content. */
   title?: React.ReactNode;
-  /* Specifies in which layout the component is organised. Note: Small screen sizes will always show as vertical.  */
+  /* Specifies in which layout the component is organized. Note: Small screen sizes will always show as vertical.  */
   /* @default horizontal */
   orientation?: 'horizontal' | 'vertical';
   /* Whether the content should be center aligned. **Note**: Can only be true when `orientation` is set to `vertical`. */

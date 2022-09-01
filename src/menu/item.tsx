@@ -24,9 +24,9 @@ type ItemBaseProps = {
   index?: number;
   /* Optional description shown below the label. */
   description?: React.ReactNode;
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
+  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
+  /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconRight?: JSX.Element;
   /* Displays small notification dot next to the label. Useful for highlighting important items. */
   /* @default false */

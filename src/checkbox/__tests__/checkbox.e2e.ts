@@ -29,12 +29,12 @@ describe('Checkbox', () => {
       .should('exist');
   });
 
-  it('changes to ticked when label is clicked', () => {
+  it('changes to checked when label is clicked', () => {
     cy.loadStory('checkbox-basic');
     cy.get('main').findByText('Basic checkbox').click();
   });
 
-  it('changes to unticked, when already ticked checkbox label is clicked', () => {
+  it('changes to unchecked, when checked checkbox label is clicked', () => {
     cy.loadStory('checkbox-basic');
     cy.get('main').findByText('Basic checkbox').click();
     cy.get('main').findByText('Basic checkbox').click();

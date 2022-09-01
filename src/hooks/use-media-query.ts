@@ -20,7 +20,7 @@ const breakpointsToResultsMap = {
 
 type MediaMatchResults = Record<keyof typeof breakpointsToResultsMap, boolean>;
 
-function initalMatchResults() {
+function initialMatchResults() {
   const keys = Object.keys(breakpointsToResultsMap);
 
   return keys.reduce((results, resultKey) => {
@@ -39,7 +39,7 @@ function initalMatchResults() {
  * @returns Object of boolean values with `isAboveSmall`, `isAboveMedium`, and `isAboveLarge` entries
  */
 function useMediaQuery() {
-  const [matchResults, setMatchResults] = useState(initalMatchResults());
+  const [matchResults, setMatchResults] = useState(initialMatchResults());
 
   useIsomorphicLayoutEffect(() => {
     function handleMediaChange() {

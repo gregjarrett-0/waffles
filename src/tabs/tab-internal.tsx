@@ -38,7 +38,7 @@ function TabInternal<T extends React.ElementType = 'button'>(
   const { focusProps, isFocusVisible } = useFocusRing();
 
   function renderIcon(originalIcon: JSX.Element) {
-    // Check if the icon has a provided custom size prop already, or set it as 'xsmall'
+    // Check if the Icon has a provided custom size prop already, or set it as 'xsmall'
     return originalIcon.props.size
       ? originalIcon
       : cloneElement(originalIcon, {

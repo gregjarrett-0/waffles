@@ -115,7 +115,7 @@ export function progressStyle({
       ${progressIndicatorStyle}
     }
 
-    /* Cannot use comma separated list due to common issue with these psuedo selectors */
+    /* Cannot use comma separated list due to common issue with these pseudo-selectors */
     &::-webkit-progress-value {
       ${progressIndicatorStyle}
     }

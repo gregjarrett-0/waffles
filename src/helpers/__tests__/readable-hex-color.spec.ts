@@ -26,7 +26,7 @@ describe('readableHexColor', () => {
     expect(readableHexColor('#001b33', '#222', '#E3E3E5')).toEqual('#E3E3E5');
   });
 
-  it('throws an error when icorrect HEX value is provided', () => {
+  it('throws an error when an incorrect HEX value is provided', () => {
     const ERROR_MESSAGE =
       "Couldn't parse the color string. Please provide the color as a string in HEX notation.";
 

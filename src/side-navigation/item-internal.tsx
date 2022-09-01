@@ -13,9 +13,9 @@ import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 type ItemBaseProps = {
   /* The content of navigation item. Most of the time should be a plain text. */
   children: React.ReactNode;
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles or a custom component. Depending on the `Item` size, use default or `xsmall` icon. */
+  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the `Item` size, use default or `xsmall` icon. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles or a custom component. Depending on the `Item` size, use default or `xsmall` icon. */
+  /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the `Item` size, use default or `xsmall` icon. */
   iconRight?: JSX.Element;
   /* Defines the size of the item element. In most cases, the default size should be used. */
   /* @default medium */

@@ -1,10 +1,10 @@
 import {
   combinePanelsDimensions,
-  calculateProportianalDimensions,
+  calculateProportionalDimensions,
   splitDimensionEqually,
   areDefaultProportionsEqual,
   round,
-  recalculateDimensionsProportinally,
+  recalculateDimensionsProportionally,
   calculateProportionsFromDimensions,
 } from '../utils';
 
@@ -29,15 +29,15 @@ describe('combinePanelsDimensions', () => {
   });
 });
 
-describe('calculateProportianalDimensions', () => {
+describe('calculateProportionalDimensions', () => {
   it('calculate proportions taking divider size into account', () => {
-    expect(calculateProportianalDimensions(612, [1, 1, 2], 100)).toEqual([
+    expect(calculateProportionalDimensions(612, [1, 1, 2], 100)).toEqual([
       149.5, 146, 302.5,
     ]);
   });
 
   it('each panel should have at least minimal width', () => {
-    expect(calculateProportianalDimensions(388, [30, 30, 60], 100)).toEqual([
+    expect(calculateProportionalDimensions(388, [30, 30, 60], 100)).toEqual([
       100, 100, 190.5,
     ]);
   });
@@ -81,19 +81,19 @@ describe('round', () => {
   });
 });
 
-describe('recalculateDimensionsProportinally', () => {
-  it('update each dimansion based on provided multiplier', () => {
-    expect(recalculateDimensionsProportinally([100, 200, 300], 1.2)).toEqual([
+describe('recalculateDimensionsProportionally', () => {
+  it('update each dimension based on provided multiplier', () => {
+    expect(recalculateDimensionsProportionally([100, 200, 300], 1.2)).toEqual([
       120, 240, 360,
     ]);
     expect(
-      recalculateDimensionsProportinally([120.6, 80, 600, 120.4], 2.5),
+      recalculateDimensionsProportionally([120.6, 80, 600, 120.4], 2.5),
     ).toEqual([301.5, 200, 1500, 301]);
-    expect(recalculateDimensionsProportinally([100, 200, 300], 0.8)).toEqual([
+    expect(recalculateDimensionsProportionally([100, 200, 300], 0.8)).toEqual([
       80, 160, 240,
     ]);
     expect(
-      recalculateDimensionsProportinally([120.6, 80, 600, 120.8], 0.4),
+      recalculateDimensionsProportionally([120.6, 80, 600, 120.8], 0.4),
     ).toEqual([48.24, 32, 240, 48.32]);
   });
 });

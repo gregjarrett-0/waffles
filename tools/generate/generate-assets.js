@@ -76,7 +76,7 @@ function generateAssets() {
 function generateAssetBundle(directory) {
   const archive = archiver('zip');
 
-  // Initialise output file for asset bundle and archiver
+  // Initialize output file for asset bundle and archiver
   const assetOutputBundle = fs.createWriteStream(
     path.join(assetBundleExportPath, `waffles-${directory}-asset-bundle.zip`),
   );
@@ -89,7 +89,7 @@ function generateAssetBundle(directory) {
 
 function generateBrandBundle() {
   const archive = archiver('zip');
-  // Initialise output file for asset bundle and archiver
+  // Initialize output file for asset bundle and archiver
   const assetOutputBundle = fs.createWriteStream(
     path.join(assetBundleExportPath, 'waffles-brand-bundle.zip'),
   );

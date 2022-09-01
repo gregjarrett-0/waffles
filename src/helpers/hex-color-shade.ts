@@ -1,6 +1,6 @@
 import isHexColor from './is-hex-color';
 
-// Make sure color channel value fints in range between 0 and 255
+// Make sure color channel value fits in range between 0 and 255
 function clampColorChannel(value: number) {
   return Math.max(Math.min(255, value), 0).toString(16);
 }
