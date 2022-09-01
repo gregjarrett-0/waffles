@@ -8,7 +8,7 @@ describe('isHexColor', () => {
     expect(isHexColor('#FFF')).toEqual(true);
   });
 
-  it('returns false if the color is provaided in different notation than HEX', () => {
+  it('returns false if the color is provided in different notation than HEX', () => {
     expect(isHexColor('#00334')).toEqual(false);
     expect(isHexColor('#03')).toEqual(false);
     expect(isHexColor('rgba(255, 167, 1, 0.1)')).toEqual(false);

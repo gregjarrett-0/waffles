@@ -117,7 +117,7 @@ describe('Tabs', () => {
     expect(tabContent).toBeInTheDocument();
   });
 
-  it('tabs and tab panels have approriate a11y attributes', () => {
+  it('tabs and tab panels have appropriate a11y attributes', () => {
     const { getByTestId, getByText } = render(<ControlledTabs />);
 
     const inactiveTab = getByTestId('taylor-tab');

@@ -22,7 +22,7 @@ function contentWithUpdatedImports(storyContent, componentDirectoryName) {
     .replace('../index', `@datacamp/waffles/${componentDirectoryName}`);
 }
 
-// Copy and enchance all stories found within src to workbench/pages/stories to run cypress tests agains them
+// Copy and enhance all stories found within src to workbench/pages/stories to run cypress tests against them
 function prepareWorkbenchStories() {
   const workbenchStoriesPath = path.resolve(
     __dirname,

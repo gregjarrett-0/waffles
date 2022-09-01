@@ -88,7 +88,7 @@ describe('ErrorBoundary', () => {
     expect(content).toBeInTheDocument();
   });
 
-  it('renders error notificaiton if error occured', async () => {
+  it('renders error notification if error occurred', async () => {
     const { getByRole, getByText } = render(
       <ErrorBoundary>
         <ThrowErrorComponent />
@@ -137,7 +137,7 @@ describe('ErrorBoundary', () => {
     expect(console.error).toHaveBeenCalledTimes(2);
   });
 
-  it('renders custom error fallback component if error occured', async () => {
+  it('renders custom error fallback component if error occurred', async () => {
     const { getByText, getByTestId } = render(<TestComponentWithCustomError />);
 
     const crashButton = getByText('Crash');

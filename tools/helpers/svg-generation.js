@@ -65,7 +65,7 @@ function optimizeSvg(svg) {
   }).data;
 }
 
-// Retrieve optimised svg with the correct the color fill
+// Retrieve optimized svg with the correct the color fill
 function getOptimizedSvg(filename, svg) {
   return optimizeSvg(getSvgWithCurrentColorFill(filename, svg));
 }

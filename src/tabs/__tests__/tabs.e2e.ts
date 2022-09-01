@@ -55,21 +55,21 @@ describe('Tabs', () => {
     cy.get('main').findAllByRole('tab').should('have.length', 3);
   });
 
-  it('when autoActivete is enabled, after tab is focused with arrow key appropriate panel is shown', () => {
+  it('when autoActivate is enabled, after tab is focused with arrow key appropriate panel is shown', () => {
     cy.loadStory('tabs-auto-activate');
     cy.get('main').findByTestId('first-tab').focus();
     cy.get('body').type('{rightarrow}');
     cy.get('main').findByText('Second Tab Content').should('exist');
   });
 
-  it('when first tab is selected, after pressign left arrow key the last tab got activated', () => {
+  it('when first tab is selected, after pressing left arrow key the last tab got activated', () => {
     cy.loadStory('tabs-auto-activate');
     cy.get('main').findByTestId('first-tab').focus();
     cy.get('body').type('{leftarrow}');
     cy.get('main').findByText('Fourth Tab Content').should('exist');
   });
 
-  it('when last tab is selected, after pressign right arrow key the first tab got activated', () => {
+  it('when last tab is selected, after pressing right arrow key the first tab got activated', () => {
     cy.loadStory('tabs-auto-activate');
     cy.get('main').findByTestId('fourth-tab').focus();
     cy.get('body').type('{rightarrow}');

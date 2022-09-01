@@ -10,11 +10,11 @@ import { useCallbackRef } from '../hooks';
 
 import {
   combinePanelsDimensions,
-  calculateProportianalDimensions,
+  calculateProportionalDimensions,
   splitDimensionEqually,
   calculateProportionsFromDimensions,
   areDefaultProportionsEqual,
-  recalculateDimensionsProportinally,
+  recalculateDimensionsProportionally,
 } from './utils';
 import Panel from './panel';
 import Divider from './divider';
@@ -91,7 +91,7 @@ function Resizable({
 
   // Utility states
 
-  // Used to improve visual behavior of cursor and divider higlighting
+  // Used to improve visual behavior of cursor and divider highlighting
   // Prevents jittering when they are being dragged
   const [draggedDividerIndex, setDraggedDividerIndex] = useState<number | null>(
     null,
@@ -234,7 +234,7 @@ function Resizable({
 
     if (defaultProportions && defaultProportions.length !== panelCount) {
       throw new Error(
-        'The lenght of defaultProportions array must be the same as the number of panels.',
+        'The length of defaultProportions array must be the same as the number of panels.',
       );
     }
 
@@ -253,7 +253,7 @@ function Resizable({
             defaultProportions,
           )
         ) {
-          const updatedDimensions = calculateProportianalDimensions(
+          const updatedDimensions = calculateProportionalDimensions(
             containerSize,
             defaultProportions,
             minPanelSize,
@@ -277,7 +277,7 @@ function Resizable({
     minPanelSize,
   ]);
 
-  // Handle browser window resizing, recalculate each panel size proportinally
+  // Handle browser window resizing, recalculate each panel size proportionally
   useEffect(() => {
     let previousContainerSize = 0;
 
@@ -299,7 +299,7 @@ function Resizable({
           const multiplier = containerSize / previousContainerSize;
 
           setPanelsDimensions((previousDimensions) => {
-            return recalculateDimensionsProportinally(
+            return recalculateDimensionsProportionally(
               previousDimensions,
               multiplier,
             );
@@ -327,7 +327,7 @@ function Resizable({
     };
   }, [handleDrag, handleStopDrag]);
 
-  // To eleminate all kinds of rounding errors, last panel always takes the remaining space
+  // To eliminate all kinds of rounding errors, last panel always takes the remaining space
   // Therefore its size doesn't have to be set explicitly
   return (
     <Container ref={containerRef} layout={layout}>

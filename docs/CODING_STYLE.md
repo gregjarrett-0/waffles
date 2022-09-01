@@ -7,8 +7,8 @@
 ## Guidelines
 
 1. Use kebab-case for file names.
-2. Use regular fuction declaration (`function() {}`), including for functional components
+2. Use regular function declaration (`function() {}`), including for functional components
 3. Use arrow function declaration (`() => {}`) for anonymous functions.
-4. For targetting components in tests directly (both e2e and unit), use the `data-testid` property. E.g. `<Button data-testid="example-button" ... >Example Button</Button>`
+4. For targeting components in tests directly (both e2e and unit), use the `data-testid` property. E.g. `<Button data-testid="example-button" ... >Example Button</Button>`
 5. If using `TODO` comments, add your GitHub handle alongside the `@` prefix. E.g. `// TODO Implement important feature @handle`
 6. Where appropriate, the remaining consumer-provided properties can be referenced as `restProps` and added to a component. E.g. `<Button {...restProps}>`

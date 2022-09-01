@@ -294,8 +294,8 @@ describe('renders snapshot of', () => {
         </FormField>,
       );
 
-      const formfield = container.firstChild;
-      expect(formfield).toMatchSnapshot();
+      const formField = container.firstChild;
+      expect(formField).toMatchSnapshot();
     });
   });
 });

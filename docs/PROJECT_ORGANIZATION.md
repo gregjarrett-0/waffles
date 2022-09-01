@@ -45,7 +45,7 @@ workbench/                            // Component dev environment, also used to
 doc-site/                             // Official Waffles documentation (NextJS app)
 docs/                                 // Internal documentation
 tools/                                // Internal tools used during build process
-  |--add-package-json-files.js        // Put package.json with treeshaking hint in each CommonJS component directory
+  |--add-package-json-files.js        // Put package.json with tree shaking hint in each CommonJS component directory
   |--generate-design-tokens.js        // Generate design tokens based on tokens.json compatible with Figma
   |--generate-icons.js                // Generate optimized React icon components based on raw SVG files
   |--prepare-workbench-stories.js     // Copy stories from each component to Workbench to run e2e tests

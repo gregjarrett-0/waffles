@@ -31,7 +31,7 @@ type ButtonBaseProps = {
 };
 
 type ButtonIconOnlyProps = {
-  /* An icon displayed as the only content of the button. Because of that `aria-label` attribute must be specified. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
+  /* An icon displayed as the only content of the button. Because of that `aria-label` attribute must be specified. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   icon: JSX.Element;
   children?: never;
   iconLeft?: never;
@@ -43,9 +43,9 @@ type ButtonNoIconProps = {
   icon?: never;
   /* The content inside the button. Most of the time should be a plain text. */
   children: React.ReactNode;
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
+  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
+  /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconRight?: JSX.Element;
   /* [skip docs] */
   'aria-label'?: string;
@@ -77,11 +77,11 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   const { focusProps, isFocusVisible } = useFocusRing();
 
   function renderIcon(originalIcon: JSX.Element) {
-    // Check if the icon has a provided custom size prop already
+    // Check if the Icon has a provided custom size prop already
     return originalIcon.props.size
       ? originalIcon
       : cloneElement(originalIcon, {
-          // Handle large buttons having medium sized icons by default, and small / medium as defined
+          // Handle large buttons having medium sized Icons by default, and small / medium as defined
           size: size === 'large' ? 'medium' : size,
         });
   }

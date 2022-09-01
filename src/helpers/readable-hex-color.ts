@@ -8,7 +8,7 @@ import hexColorLuminance from './hex-color-luminance';
  * It is possible to specify custom colors.
  *
  * @param hexColor HEX color code, starts with hash followed by either 3 or 6 digits
- * @param returnIfLight Optional color returned if provided color is ligth
+ * @param returnIfLight Optional color returned if provided color is light
  * @param returnIfDark Optional color returned if provided color is dark
  * @returns White or navy from design tokens, or one of optional passed HEX colors
  */

@@ -1,5 +1,5 @@
 // Generate new design tokens .ts file based on JSON file with Figma Tokens definitions
-// Figma Tokens requires tokens to placed in a single group (global in this case), so internal aliasing works correcty
+// Figma Tokens requires tokens to placed in a single group (global in this case), so internal aliasing works correctly
 
 // fontWeights, fontFamilies, and boxShadow have non-standard values which are required to work with Figma Tokens plugin
 // whole typography and paragraphSpacing are defined for convenience, because Figma doesn't support text components, and are removed
@@ -17,7 +17,7 @@ const transformedTokensPath = path.join(tokensDirPath, 'tokens.ts');
 
 const baseTokens = require(baseTokensPath); // Already parsed to JS
 
-// Mappings from Figma Tokens values to valid CSS couterparts
+// Mappings from Figma Tokens values to valid CSS counterparts
 
 const fontWeightsMap = {
   Bold: 800,
@@ -73,10 +73,10 @@ function transformFontFamilies(baseFontFamilies) {
 function transformPercentages(basePercentages) {
   return Object.fromEntries(
     Object.entries(basePercentages).map((entry) => {
-      const [key, basePercantege] = entry;
+      const [key, basePercentage] = entry;
       // Convert percentages to unitless
       // Useful for line heights and opacity
-      const unitless = parseFloat(basePercantege.value) / 100;
+      const unitless = parseFloat(basePercentage.value) / 100;
       return [key, { value: unitless }];
     }),
   );

@@ -226,10 +226,10 @@ describe('Input', () => {
       const enhancer = getByLabelText('Show password text');
       fireEvent.click(enhancer);
       const input = getByTestId('password-input');
-      const toggledEnahancer = getByLabelText('Hide password text');
+      const toggledEnhancer = getByLabelText('Hide password text');
 
       expect(input).toHaveAttribute('type', 'text');
-      expect(toggledEnahancer).toBeInTheDocument();
+      expect(toggledEnhancer).toBeInTheDocument();
     });
   });
 

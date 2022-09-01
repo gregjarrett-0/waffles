@@ -36,7 +36,7 @@ describe('useAnimateTransition', () => {
     expect(initialElement).toBeInTheDocument();
   });
 
-  it('show correct element when visiblity is toggled on', async () => {
+  it('show correct element when visibility is toggled on', async () => {
     const { queryByText, getByText } = render(<TestComponent />);
 
     const button = getByText('Toggle Animation');
@@ -56,7 +56,7 @@ describe('useAnimateTransition', () => {
     expect(initialElement).not.toBeInTheDocument();
   });
 
-  it("show correct element when visiblity is toggled off, but the time set in timeout hasn't passed yet", async () => {
+  it("show correct element when visibility is toggled off, but the time set in timeout hasn't passed yet", async () => {
     const { queryByText, getByText } = render(<TestComponent />);
 
     const button = getByText('Toggle Animation');
@@ -83,7 +83,7 @@ describe('useAnimateTransition', () => {
     expect(initialElement).not.toBeInTheDocument();
   });
 
-  it('show correct element when visiblity is toggled off, and the time set in timeout passed', async () => {
+  it('show correct element when visibility is toggled off, and the time set in timeout passed', async () => {
     const { queryByText, getByText } = render(<TestComponent />);
 
     const button = getByText('Toggle Animation');

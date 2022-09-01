@@ -20,7 +20,7 @@ function Story() {
       <TextArea
         css={customTextAreaStyle}
         aria-label="Text area with custom style"
-        value="Texarea value"
+        value="Text area value"
         onChange={() => {}}
         rows={3}
       />

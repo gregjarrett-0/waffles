@@ -22,9 +22,9 @@ function Panel({
 }: PanelProps) {
   return (
     <>
-      {/* Background panel which spans whole device heigh */}
+      {/* Background panel which spans whole device height */}
       <div css={panelStyle({ isVisible, placement })} />
-      {/* Content only wrapper allows buttons to be fixed at the bottom and be always visible at once */}
+      {/* Content-only wrapper allows buttons to be fixed at the bottom and be always visible at once */}
       <section
         {...restProps}
         aria-modal

@@ -20,7 +20,7 @@ describe('Resizable', () => {
     expect(dividers).toHaveLength(3);
   });
 
-  it('call onResizeStart callback when divider has started beign dragged', () => {
+  it('call onResizeStart callback when divider has started being dragged', () => {
     const handleResizeStart = jest.fn();
     const { getAllByRole } = render(
       <Resizable onResizeStart={handleResizeStart}>
@@ -36,7 +36,7 @@ describe('Resizable', () => {
     expect(handleResizeStart).toHaveBeenCalled();
   });
 
-  it('call onResizeEnd callback when divider has stopped beign dragged', () => {
+  it('call onResizeEnd callback when divider has stopped being dragged', () => {
     const handleResizeEnd = jest.fn();
     const { getAllByRole } = render(
       <Resizable onResizeEnd={handleResizeEnd}>

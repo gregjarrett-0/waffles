@@ -80,7 +80,7 @@ function IconPreview({
 function AllIconsGrid() {
   const { regular, inverted } = groupedIcons(allIcons);
 
-  const [allLabelsVisible, setLabelsVisiblity] = useState(false);
+  const [allLabelsVisible, setLabelsVisibility] = useState(false);
 
   return (
     <ErrorBoundary>
@@ -116,7 +116,7 @@ function AllIconsGrid() {
           variant="plain"
           size="small"
           iconLeft={allLabelsVisible ? <Hidden /> : <Visible />}
-          onClick={() => setLabelsVisiblity(!allLabelsVisible)}
+          onClick={() => setLabelsVisibility(!allLabelsVisible)}
         >
           <div css={buttonContentStyle}>
             {allLabelsVisible ? 'Hide' : 'Show'} Names

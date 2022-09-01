@@ -49,7 +49,7 @@ describe('TextArea', () => {
     cy.get('main').find('input').should('have.length', 3);
   });
 
-  it('if max lenght limit is specified, show only that many characters', () => {
+  it('if max length limit is specified, show only that many characters', () => {
     cy.loadStory('text-area-character-count');
     cy.get('main')
       .find('textarea')

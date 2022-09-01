@@ -11,7 +11,7 @@ export function combinePanelsDimensions(
 }
 
 // Update each panel size proportionally
-export function recalculateDimensionsProportinally(
+export function recalculateDimensionsProportionally(
   panelsDimensions: number[],
   multiplier: number,
 ) {
@@ -21,7 +21,7 @@ export function recalculateDimensionsProportinally(
 }
 
 // Calculate size of each panel based on provided proportions
-export function calculateProportianalDimensions(
+export function calculateProportionalDimensions(
   containerSize: number,
   defaultProportions: number[],
   minSize: number,

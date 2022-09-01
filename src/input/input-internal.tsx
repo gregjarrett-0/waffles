@@ -17,9 +17,9 @@ type InputProps = {
   /* Sets appropriate error style and `aria-invalid` attribute. */
   /* @default false */
   error?: boolean;
-  /* An icon displayed to the left. Could be any [icon](/components/icon) from Waffles (use default size) or a custom component. */
+  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconLeft?: JSX.Element;
-  /* An enhancer displayed to the right. Could be `Input.Enhancer` or any [icon](/components/icon) from Waffles (use default size). */
+  /* An enhancer displayed to the right. Could be `Input.Enhancer` or any [Icon](/components/icon) from Waffles (use default size). */
   enhancerRight?: JSX.Element;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>;
 
@@ -60,13 +60,13 @@ function InputInternal(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     props?: Partial<any> & React.Attributes,
   ) {
-    // Check if the icon has a provided custom size prop already
+    // Check if the Icon has a provided custom size prop already
     return originalIcon.props.size
       ? cloneElement(originalIcon, {
           ...props,
         })
       : cloneElement(originalIcon, {
-          // Handle large buttons having medium sized icons by default, and small / medium as defined
+          // Handle large buttons having medium sized Icons by default, and small / medium as defined
           size: size === 'large' ? 'medium' : size,
           ...props,
         });
