@@ -13,13 +13,13 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <Tabs activeTab={0}>
-        <Tabs.Tab icon={<Heart size="xsmall" />} label="First">
+        <Tabs.Tab icon={<Heart />} label="First">
           <Paragraph>First Tab Content</Paragraph>
         </Tabs.Tab>
-        <Tabs.Tab icon={<Clock size="xsmall" />} label="Second">
+        <Tabs.Tab icon={<Clock />} label="Second">
           <Paragraph>Second Tab Content</Paragraph>
         </Tabs.Tab>
-        <Tabs.Tab icon={<Bell size="xsmall" />} label="Third">
+        <Tabs.Tab icon={<Bell />} label="Third">
           <Paragraph>Third Tab Content</Paragraph>
         </Tabs.Tab>
       </Tabs>

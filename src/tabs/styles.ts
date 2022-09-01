@@ -141,7 +141,7 @@ export function tabInnerContentStyle({ hasIcon }: InnerContentStyleOptions) {
 }
 
 // Prevent content shifts caused by font weight change between active and regular state
-export function tabFauxContenStyle() {
+export function tabFauxContentStyle() {
   return css`
     display: block;
     font-weight: ${tokens.fontWeights.bold};

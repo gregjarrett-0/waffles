@@ -180,7 +180,7 @@ describe('Tabs', () => {
     const { container, getByTestId } = render(
       <Tabs activeTab={0}>
         <Tabs.Tab
-          icon={<AddCircle size="xsmall" />}
+          icon={<AddCircle />}
           label="Taylor Tab"
           data-testid="taylor-tab"
         >
