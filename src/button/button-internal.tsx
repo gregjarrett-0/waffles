@@ -25,7 +25,7 @@ type ButtonBaseProps = {
   /* Sets the style of the button suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-  /* Disables the default title casing for type `string` children. Use only in rare situations. */
+  /* Disables the default _Title Casing_ when text button content is provided. Use only in rare situations. */
   /* @default false */
   disableTitleCase?: boolean;
 };
