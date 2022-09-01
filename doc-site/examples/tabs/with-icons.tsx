@@ -14,15 +14,15 @@ function Example() {
         setActiveTabIndex(activeTab);
       }}
     >
-      <Tabs.Tab icon={<Heart size="xsmall" />} label="First">
+      <Tabs.Tab icon={<Heart />} label="First">
         <Paragraph>
-          Use <Code>xsmall</Code> icon size.
+          Default Icon size is set to <Code>xsmall</Code> automatically.
         </Paragraph>
       </Tabs.Tab>
-      <Tabs.Tab icon={<Clock size="xsmall" />} label="Second">
+      <Tabs.Tab icon={<Clock />} label="Second">
         <Paragraph>Second tab content.</Paragraph>
       </Tabs.Tab>
-      <Tabs.Tab icon={<Bell size="xsmall" />} label="Third">
+      <Tabs.Tab icon={<Bell />} label="Third">
         <Paragraph>Third tab content.</Paragraph>
       </Tabs.Tab>
     </Tabs>

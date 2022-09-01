@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { tabStyle, tabInnerContentStyle, tabFauxContenStyle } from './styles';
+import { tabStyle, tabInnerContentStyle, tabFauxContentStyle } from './styles';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
@@ -12,7 +12,7 @@ type TabBaseProps = {
   /* Content of a tab panel displayed below corresponding tab. */
   children?: React.ReactNode;
   /* An icon displayed to the left of the label. Could be any [icon](/components/icon) from Waffles (use `xsmall` size) or a custom component. */
-  icon?: React.ReactNode;
+  icon?: JSX.Element;
   /* [skip docs] */
   isActive?: boolean;
   /* [skip docs] */
@@ -35,8 +35,16 @@ function TabInternal<T extends React.ElementType = 'button'>(
   ref?: PolymorphicRef<T>,
 ) {
   const Element = as || 'button';
-
   const { focusProps, isFocusVisible } = useFocusRing();
+
+  function renderIcon(originalIcon: JSX.Element) {
+    // Check if the icon has a provided custom size prop already, or set it as 'xsmall'
+    return originalIcon.props.size
+      ? originalIcon
+      : cloneElement(originalIcon, {
+          size: 'xsmall',
+        });
+  }
 
   return (
     <Element
@@ -46,10 +54,10 @@ function TabInternal<T extends React.ElementType = 'button'>(
       role="tab"
       css={tabStyle({ isActive, isFocusVisible, inverted })}
     >
-      {icon}
+      {icon && renderIcon(icon)}
       <span css={tabInnerContentStyle({ hasIcon: !!icon })}>
         {label}
-        <span css={tabFauxContenStyle()} aria-hidden="true">
+        <span css={tabFauxContentStyle()} aria-hidden="true">
           {label}
         </span>
       </span>
