@@ -30,51 +30,51 @@ function TestSliderWithInputs() {
 }
 
 describe('Slider', () => {
-  it('renders with one thumb, all labels, and accessible aria attributes', () => {
+  it('renders with one handle, all labels, and accessible aria attributes', () => {
     const { getByTestId, getByRole, getByText } = render(
       <Slider value={[50]} onChange={jest.fn()} aria-label="Test slider" />,
     );
 
     const track = getByTestId('slider-track');
-    const thumb = getByRole('slider');
+    const handle = getByRole('slider');
     const currentValueLabel = getByText('50');
     const minLabel = getByText('0');
     const maxLabel = getByText('100');
 
     expect(track).toBeInTheDocument();
-    expect(thumb).toBeInTheDocument();
-    expect(thumb).toHaveAttribute('aria-valuenow', '50');
-    expect(thumb).toHaveAttribute('aria-valuemin', '0');
-    expect(thumb).toHaveAttribute('aria-valuemax', '100');
-    expect(thumb).toHaveAttribute('aria-label', 'Test slider');
+    expect(handle).toBeInTheDocument();
+    expect(handle).toHaveAttribute('aria-valuenow', '50');
+    expect(handle).toHaveAttribute('aria-valuemin', '0');
+    expect(handle).toHaveAttribute('aria-valuemax', '100');
+    expect(handle).toHaveAttribute('aria-label', 'Test slider');
     expect(currentValueLabel).toBeInTheDocument();
     expect(minLabel).toBeInTheDocument();
     expect(maxLabel).toBeInTheDocument();
   });
 
-  it('renders with two thumbs, and all labels', () => {
+  it('renders with two handles, and all labels', () => {
     const { getByTestId, getAllByRole, getByText } = render(
       <Slider value={[20, 50]} onChange={jest.fn()} aria-label="Test slider" />,
     );
 
     const track = getByTestId('slider-track');
-    const thumbs = getAllByRole('slider');
+    const handles = getAllByRole('slider');
     const firstValueLabel = getByText('20');
     const secondValueLabel = getByText('50');
     const minLabel = getByText('0');
     const maxLabel = getByText('100');
 
     expect(track).toBeInTheDocument();
-    expect(thumbs).toHaveLength(2);
-    expect(thumbs[0]).toHaveAttribute('aria-valuenow', '20');
-    expect(thumbs[1]).toHaveAttribute('aria-valuenow', '50');
+    expect(handles).toHaveLength(2);
+    expect(handles[0]).toHaveAttribute('aria-valuenow', '20');
+    expect(handles[1]).toHaveAttribute('aria-valuenow', '50');
     expect(firstValueLabel).toBeInTheDocument();
     expect(secondValueLabel).toBeInTheDocument();
     expect(minLabel).toBeInTheDocument();
     expect(maxLabel).toBeInTheDocument();
   });
 
-  it('renders with custom limits', () => {
+  it('renders with custom min and max', () => {
     const { getByText } = render(
       <Slider
         min={-100}
@@ -107,12 +107,12 @@ describe('Slider', () => {
     const minLabel = getByText('0 $');
     const maxLabel = getByText('100 $');
     const valueLabel = getByText('50 $');
-    const thumb = getByRole('slider');
+    const handle = getByRole('slider');
 
     expect(minLabel).toBeInTheDocument();
     expect(maxLabel).toBeInTheDocument();
     expect(valueLabel).toBeInTheDocument();
-    expect(thumb).toHaveAttribute('aria-valuetext', '50 $');
+    expect(handle).toHaveAttribute('aria-valuetext', '50 $');
   });
 
   describe('when optional inputs are displayed', () => {
@@ -173,10 +173,10 @@ describe('Slider', () => {
       const input = container.querySelector('input');
       input && fireEvent.change(input, { target: { value: '42' } });
 
-      const thumb = getByRole('slider');
+      const handle = getByRole('slider');
 
       expect(input).toBeInTheDocument();
-      expect(thumb).toHaveAttribute('aria-valuenow', '42');
+      expect(handle).toHaveAttribute('aria-valuenow', '42');
     });
 
     it("for single input when it's value is less than slider min value, show error", () => {
@@ -244,7 +244,7 @@ describe('Slider', () => {
   });
 
   describe('renders snapshot', () => {
-    it('with one thumb', () => {
+    it('with one handle', () => {
       const { container } = render(
         <Slider
           inverted
@@ -258,7 +258,7 @@ describe('Slider', () => {
       expect(slider).toMatchSnapshot();
     });
 
-    it('with two thumbs', () => {
+    it('with two handles', () => {
       const { container } = render(
         <Slider
           inverted

@@ -5,6 +5,7 @@ type SliderContextValue = {
   value: number[];
   min: number;
   max: number;
+  step: number;
   disabled: boolean;
   inverted: boolean;
 };

@@ -13,7 +13,7 @@ export function trackStyle({ disabled }: TrackStyleOptions) {
   return css`
     display: flex;
     align-items: center;
-    // Shift track slightly so thumb aligns with labels nicer
+    // Shift track slightly so handle aligns with labels nicer
     width: calc(100% - ${THUMB_DOT_RADIUS}px);
     margin-left: ${THUMB_DOT_RADIUS / 2}px;
     height: ${tokens.sizing.small};
@@ -23,7 +23,7 @@ export function trackStyle({ disabled }: TrackStyleOptions) {
 
 export function trackLineStyle() {
   return css`
-    // Shift track line slightly so thumb aligns with labels nicer
+    // Shift track line slightly so handle aligns with labels nicer
     width: calc(100% + ${THUMB_DOT_RADIUS}px);
     margin-left: -${THUMB_DOT_RADIUS / 2}px;
     margin-right: -${THUMB_DOT_RADIUS / 2}px;
@@ -37,7 +37,7 @@ type ThumbStyleOptions = {
   inverted: boolean;
 };
 
-export function thumbStyle({ disabled, inverted }: ThumbStyleOptions) {
+export function handleStyle({ disabled, inverted }: ThumbStyleOptions) {
   return css`
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@ type ThumbDotStyleOptions = {
   isFocusVisible: boolean;
 };
 
-export function thumbDotStyle({
+export function handleDotStyle({
   isDragged,
   inverted,
   isFocusVisible,
@@ -118,7 +118,7 @@ export function inputsWrapperStyle({
   `;
 }
 
-export function limitLabelsWrapperStyle() {
+export function rangeLabelsWrapperStyle() {
   return css`
     display: flex;
     justify-content: space-between;
@@ -138,7 +138,7 @@ export function valueLabelStyle({ inverted }: BaseLabelStyleOptions) {
   `;
 }
 
-export function limitLabelStyle({ inverted }: BaseLabelStyleOptions) {
+export function rangeLabelStyle({ inverted }: BaseLabelStyleOptions) {
   return css`
     color: ${inverted
       ? tokens.colors.navySubtleTextOnDark

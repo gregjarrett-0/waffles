@@ -660,7 +660,7 @@ exports[`Slider renders snapshot with inputs instead of labels 1`] = `
 </div>
 `;
 
-exports[`Slider renders snapshot with one thumb 1`] = `
+exports[`Slider renders snapshot with one handle 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -814,7 +814,7 @@ exports[`Slider renders snapshot with one thumb 1`] = `
 </div>
 `;
 
-exports[`Slider renders snapshot with two thumbs 1`] = `
+exports[`Slider renders snapshot with two handles 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;

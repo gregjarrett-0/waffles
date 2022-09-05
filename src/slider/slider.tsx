@@ -1,10 +1,7 @@
-import { Range } from 'react-range';
-
 import ValueLabels from './value-labels';
-import Track from './track';
-import Thumb from './thumb';
 import { SliderProvider } from './slider-context';
-import LimitLabels from './limit-labels';
+import RangeLabels from './range-labels';
+import Range from './range';
 import Inputs from './inputs';
 
 type SliderProps = {
@@ -39,32 +36,18 @@ function Slider({
   }
 
   return (
-    <SliderProvider {...{ value, min, max, disabled, inverted }}>
+    <SliderProvider {...{ value, min, max, step, disabled, inverted }}>
       <div>
-        {showInputs && (
-          <Inputs onChange={onChange} step={step} label={ariaLabel} />
-        )}
+        {showInputs && <Inputs onChange={onChange} label={ariaLabel} />}
         {!hideLabels && !showInputs && (
           <ValueLabels formatLabel={formatLabel} />
         )}
         <Range
-          {...{ values: value, min, max, step, onChange, disabled }}
-          renderTrack={({ props, children }) => (
-            <Track {...props}>{children}</Track>
-          )}
-          renderThumb={({ props, value, isDragged }) => (
-            <Thumb
-              {...props}
-              {...{
-                value,
-                isDragged,
-                'aria-label': ariaLabel,
-                formatLabel,
-              }}
-            />
-          )}
+          onChange={onChange}
+          label={ariaLabel}
+          formatLabel={formatLabel}
         />
-        {!hideLabels && <LimitLabels formatLabel={formatLabel} />}
+        {!hideLabels && <RangeLabels formatLabel={formatLabel} />}
       </div>
     </SliderProvider>
   );

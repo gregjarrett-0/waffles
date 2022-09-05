@@ -2,22 +2,22 @@ import React, { forwardRef } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { thumbStyle, thumbDotStyle } from './styles';
+import { handleStyle, handleDotStyle } from './styles';
 import { useSlider } from './slider-context';
 
-type ThumbProps = {
+type HandleProps = {
   value: number;
   isDragged: boolean;
   formatLabel: (value: number) => number | string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-function ThumbInternal(
+function HandleInternal(
   {
     value, // Just a single value passed via render prop, not global array one
     isDragged,
     formatLabel,
     ...restProps
-  }: ThumbProps,
+  }: HandleProps,
   ref: React.Ref<HTMLDivElement>,
 ) {
   const { disabled, inverted } = useSlider();
@@ -28,13 +28,13 @@ function ThumbInternal(
       {...mergeProps(focusProps, restProps)}
       aria-valuetext={`${formatLabel(value)}`}
       ref={ref}
-      css={thumbStyle({ disabled, inverted })}
+      css={handleStyle({ disabled, inverted })}
     >
-      <div css={thumbDotStyle({ isDragged, inverted, isFocusVisible })} />
+      <div css={handleDotStyle({ isDragged, inverted, isFocusVisible })} />
     </div>
   );
 }
 
-const Thumb = forwardRef(ThumbInternal);
+const Handle = forwardRef(HandleInternal);
 
-export default Thumb;
+export default Handle;

@@ -8,12 +8,11 @@ import { useSlider } from './slider-context';
 
 type InputsProps = {
   onChange: (value: number[]) => void;
-  step: number;
   label: string;
 };
 
-function Inputs({ onChange, step, label }: InputsProps) {
-  const { value, min, max, disabled, inverted } = useSlider();
+function Inputs({ onChange, label }: InputsProps) {
+  const { value, min, max, step, disabled, inverted } = useSlider();
   const isSingleInput = value.length === 1;
 
   // Keep separate state for inputs, because some characters other than numeric must be supported
