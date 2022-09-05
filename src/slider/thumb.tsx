@@ -13,7 +13,7 @@ type ThumbProps = {
 
 function ThumbInternal(
   {
-    value, // Just a single value passed via rander prop, not global array one
+    value, // Just a single value passed via render prop, not global array one
     isDragged,
     formatLabel,
     ...restProps

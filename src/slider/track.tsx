@@ -22,7 +22,12 @@ function TrackInternal(
   );
 
   return (
-    <div {...restProps} ref={ref} css={trackStyle({ disabled })}>
+    <div
+      {...restProps}
+      ref={ref}
+      data-testid="slider-track"
+      css={trackStyle({ disabled })}
+    >
       <div
         css={trackLineStyle()}
         style={{

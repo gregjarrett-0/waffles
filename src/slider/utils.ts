@@ -1,4 +1,4 @@
-export function initalError(isSingleInput: boolean) {
+export function initialError(isSingleInput: boolean) {
   return isSingleInput ? [false] : [false, false];
 }
 
@@ -7,8 +7,8 @@ export function isDecimal(value: string) {
   return value.match(/^-?([0-9]{1,})?(\.)?([0-9]{1,})?$/);
 }
 
-// Check if value could safely set on slider
-export function isCompatible(value: string, step: number) {
+// Check if value could be safely set on slider
+export function isValidValue(value: string, step: number) {
   return (
     !Number.isNaN(parseFloat(value)) &&
     parseFloat(value) % step === 0 &&

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Input } from '../input';
 
-import { initalError, isDecimal, isCompatible, isWhitelisted } from './utils';
+import { initialError, isDecimal, isValidValue, isWhitelisted } from './utils';
 import { inputsWrapperStyle } from './styles';
 import { useSlider } from './slider-context';
 
@@ -16,19 +16,19 @@ function Inputs({ onChange, step, label }: InputsProps) {
   const { value, min, max, disabled, inverted } = useSlider();
   const isSingleInput = value.length === 1;
 
-  // Keep separate state for inputs, because some characters other than numeric must be covered
+  // Keep separate state for inputs, because some characters other than numeric must be supported
   // Both input and error state is an array of one or two items, to mimic structure of Slider value
   const [inputValue, setInputValue] = useState<Array<string | number>>(value);
-  const [hasError, setHasError] = useState(initalError(isSingleInput));
+  const [hasError, setHasError] = useState(initialError(isSingleInput));
 
   // Sync value from props and inputs
   // Clear all inputs errors when Slider is dragged
   useEffect(() => {
     setInputValue(value);
-    setHasError(initalError(isSingleInput));
+    setHasError(initialError(isSingleInput));
   }, [value, isSingleInput]);
 
-  // Separate each input handler for readibility
+  // Separate each input handler for readability
 
   function handleSingleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const inputValue = event.target.value;
@@ -39,7 +39,7 @@ function Inputs({ onChange, step, label }: InputsProps) {
     }
 
     if (
-      isCompatible(inputValue, step) &&
+      isValidValue(inputValue, step) &&
       parsedValue >= min &&
       parsedValue <= max
     ) {
@@ -59,7 +59,7 @@ function Inputs({ onChange, step, label }: InputsProps) {
     }
 
     if (
-      isCompatible(inputValue, step) &&
+      isValidValue(inputValue, step) &&
       parsedValue >= min &&
       parsedValue <= value[1]
     ) {
@@ -79,7 +79,7 @@ function Inputs({ onChange, step, label }: InputsProps) {
     }
 
     if (
-      isCompatible(inputValue, step) &&
+      isValidValue(inputValue, step) &&
       parsedValue >= value[0] &&
       parsedValue <= max
     ) {

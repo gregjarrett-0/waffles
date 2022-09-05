@@ -32,12 +32,12 @@ export function trackLineStyle() {
   `;
 }
 
-type ThubmStyleOptions = {
+type ThumbStyleOptions = {
   disabled: boolean;
   inverted: boolean;
 };
 
-export function thumbStyle({ disabled, inverted }: ThubmStyleOptions) {
+export function thumbStyle({ disabled, inverted }: ThumbStyleOptions) {
   return css`
     display: flex;
     align-items: center;
@@ -126,11 +126,11 @@ export function limitLabelsWrapperStyle() {
   `;
 }
 
-type LabelStyleOptions = {
+type BaseLabelStyleOptions = {
   inverted: boolean;
 };
 
-export function valueLabelStyle({ inverted }: LabelStyleOptions) {
+export function valueLabelStyle({ inverted }: BaseLabelStyleOptions) {
   return css`
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     font-size: ${tokens.fontSizes.xxlarge};
@@ -138,7 +138,7 @@ export function valueLabelStyle({ inverted }: LabelStyleOptions) {
   `;
 }
 
-export function limitLabelStyle({ inverted }: LabelStyleOptions) {
+export function limitLabelStyle({ inverted }: BaseLabelStyleOptions) {
   return css`
     color: ${inverted
       ? tokens.colors.navySubtleTextOnDark
