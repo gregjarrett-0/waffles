@@ -45,6 +45,7 @@ export function handleStyle({ disabled, inverted }: ThumbStyleOptions) {
     width: ${tokens.sizing.small};
     height: ${tokens.sizing.small};
     outline: 0;
+
     ${!disabled &&
     css`
       &:hover > div {
@@ -73,14 +74,16 @@ export function handleDotStyle({
   return css`
     width: ${THUMB_DOT_RADIUS}px;
     height: ${THUMB_DOT_RADIUS}px;
+    border-radius: ${tokens.borderRadius.circle};
+    background-color: ${backgroundColor};
+    transition: box-shadow 200ms ease-out;
+
     ${isDragged && `box-shadow: 0 0 0 4px ${backgroundColor};`}
+
     ${isFocusVisible &&
     `box-shadow: 0 0 0 2px ${
       inverted ? tokens.colors.navyLight : tokens.colors.white
     }, 0 0 0 4px ${backgroundColor};`}
-    border-radius: ${tokens.borderRadius.circle};
-    background-color: ${backgroundColor};
-    transition: box-shadow 200ms ease-out;
   `;
 }
 
