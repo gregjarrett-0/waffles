@@ -4,7 +4,7 @@ export function initialError(isSingleInput: boolean) {
 
 // Determine allowed value for input
 export function isDecimal(value: string) {
-  return value.match(/^-?([0-9]{1,})?(\.)?([0-9]{1,})?$/);
+  return /^-?([0-9]{1,})?(\.)?([0-9]{1,})?$/.test(value);
 }
 
 // Check if value could be safely set on slider
@@ -17,6 +17,6 @@ export function isValidValue(value: string, step: number) {
 }
 
 // For better UX don't show error when input is empty or contains minus or dot
-export function isWhitelisted(value: string) {
+export function isNotWhitelisted(value: string) {
   return value !== '' && value !== '-' && value !== '.';
 }

@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import { Input } from '../input';
 
-import { initialError, isDecimal, isValidValue, isWhitelisted } from './utils';
+import {
+  initialError,
+  isDecimal,
+  isValidValue,
+  isNotWhitelisted,
+} from './utils';
 import { inputsWrapperStyle } from './styles';
 import { useSlider } from './slider-context';
 
@@ -45,7 +50,7 @@ function Inputs({ onChange, label }: InputsProps) {
       onChange([parsedValue]);
       setHasError([false]);
     } else {
-      isWhitelisted(inputValue) && setHasError([true]);
+      isNotWhitelisted(inputValue) && setHasError([true]);
     }
   }
 
@@ -65,7 +70,7 @@ function Inputs({ onChange, label }: InputsProps) {
       onChange([parsedValue, value[1]]);
       setHasError([true, hasError[1]]);
     } else {
-      isWhitelisted(inputValue) && setHasError([true, hasError[1]]);
+      isNotWhitelisted(inputValue) && setHasError([true, hasError[1]]);
     }
   }
 
@@ -85,7 +90,7 @@ function Inputs({ onChange, label }: InputsProps) {
       onChange([value[0], parsedValue]);
       setHasError([hasError[0], true]);
     } else {
-      isWhitelisted(inputValue) && setHasError([hasError[0], true]);
+      isNotWhitelisted(inputValue) && setHasError([hasError[0], true]);
     }
   }
 
