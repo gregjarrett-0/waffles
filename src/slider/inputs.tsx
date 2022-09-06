@@ -13,10 +13,11 @@ import { useSlider } from './slider-context';
 
 type InputsProps = {
   onChange: (value: number[]) => void;
+  onChangeEnd?: (value: number[]) => void;
   label: string;
 };
 
-function Inputs({ onChange, label }: InputsProps) {
+function Inputs({ onChange, onChangeEnd, label }: InputsProps) {
   const { value, min, max, step, disabled, inverted } = useSlider();
   const isSingleInput = value.length === 1;
 
@@ -48,6 +49,7 @@ function Inputs({ onChange, label }: InputsProps) {
       parsedValue <= max
     ) {
       onChange([parsedValue]);
+      onChangeEnd?.([parsedValue]);
       setHasError([false]);
     } else {
       isNotWhitelisted(inputValue) && setHasError([true]);
@@ -68,6 +70,7 @@ function Inputs({ onChange, label }: InputsProps) {
       parsedValue <= value[1]
     ) {
       onChange([parsedValue, value[1]]);
+      onChangeEnd?.([parsedValue, value[1]]);
       setHasError([true, hasError[1]]);
     } else {
       isNotWhitelisted(inputValue) && setHasError([true, hasError[1]]);
@@ -88,6 +91,7 @@ function Inputs({ onChange, label }: InputsProps) {
       parsedValue <= max
     ) {
       onChange([value[0], parsedValue]);
+      onChangeEnd?.([value[0], parsedValue]);
       setHasError([hasError[0], true]);
     } else {
       isNotWhitelisted(inputValue) && setHasError([hasError[0], true]);

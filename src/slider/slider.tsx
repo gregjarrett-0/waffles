@@ -7,6 +7,7 @@ import Inputs from './inputs';
 type SliderProps = {
   value: number[];
   onChange: (value: number[]) => void;
+  onChangeEnd?: (value: number[]) => void;
   min?: number;
   max?: number;
   step?: number;
@@ -21,6 +22,7 @@ type SliderProps = {
 function Slider({
   value,
   onChange,
+  onChangeEnd,
   min = 0,
   max = 100,
   step = 1,
@@ -38,12 +40,19 @@ function Slider({
   return (
     <SliderProvider {...{ value, min, max, step, disabled, inverted }}>
       <div>
-        {showInputs && <Inputs onChange={onChange} label={ariaLabel} />}
+        {showInputs && (
+          <Inputs
+            onChange={onChange}
+            onChangeEnd={onChangeEnd}
+            label={ariaLabel}
+          />
+        )}
         {!hideLabels && !showInputs && (
           <ValueLabels formatLabel={formatLabel} />
         )}
         <Range
           onChange={onChange}
+          onChangeEnd={onChangeEnd}
           label={ariaLabel}
           formatLabel={formatLabel}
         />
