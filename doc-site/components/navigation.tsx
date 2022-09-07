@@ -78,6 +78,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/input">Input</Item>
               <Item href="/components/radio">Radio</Item>
               <Item href="/components/select">Select</Item>
+              <Item href="/components/slider" isNew>
+                Slider
+              </Item>
               <Item href="/components/switch">Switch</Item>
               <Item href="/components/text-area">Text Area</Item>
             </SideNav.Subcategory>
@@ -108,9 +111,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/hooks">Hooks</Item>
               <Item href="/components/loader">Loader</Item>
               <Item href="/components/portal">Portal</Item>
-              <Item href="/components/resizable" isNew>
-                Resizable
-              </Item>
+              <Item href="/components/resizable">Resizable</Item>
               <Item href="/components/screen-reader-only">
                 Screen Reader Only
               </Item>

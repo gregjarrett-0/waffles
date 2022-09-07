@@ -1,0 +1,68 @@
+import * as SliderExports from '@datacamp/waffles/slider';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/slider/playground-config';
+import BasicUsage from '../../examples/slider/basic-usage';
+import Range from '../../examples/slider/range';
+import NoLabels from '../../examples/slider/no-labels';
+import WithInputs from '../../examples/slider/with-inputs';
+import CustomLabels from '../../examples/slider/custom-labels';
+import Disabled from '../../examples/slider/disabled';
+import Inverted from '../../examples/slider/inverted';
+
+<Layout title="Slider" description="🚧 This page is under construction">
+
+## Examples
+
+<Example title="Basic Usage" path="slider/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Range" path="slider/range">
+  <Range />
+</Example>
+
+<Example title="No labels" path="slider/no-labels">
+  <NoLabels />
+</Example>
+
+<Example title="With inputs" path="slider/with-inputs">
+  <WithInputs />
+</Example>
+
+<Example title="Custom labels and step" path="slider/custom-labels">
+  <CustomLabels />
+</Example>
+
+<Example title="Disabled" path="slider/disabled">
+  <Disabled />
+</Example>
+
+<Example title="Inverted" path="slider/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Slider
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/slider/slider')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={SliderExports} path="@datacamp/waffles/slider" />
+
+</Layout>
