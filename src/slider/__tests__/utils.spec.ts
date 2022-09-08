@@ -3,6 +3,7 @@ import {
   isDecimal,
   isValidValue,
   isNotWhitelisted,
+  calculateInputWidth,
 } from '../utils';
 
 describe('initialError', () => {
@@ -85,5 +86,19 @@ describe('isWhitelisted', () => {
     expect(isNotWhitelisted('..')).toBe(true);
     expect(isNotWhitelisted('11')).toBe(true);
     expect(isNotWhitelisted('0xA')).toBe(true);
+  });
+});
+
+describe('calculateInputWidth', () => {
+  it('return minimal input width if calculated value is smaller', () => {
+    expect(calculateInputWidth(-9999, 999999, 100)).toBe(87);
+    expect(calculateInputWidth(-200, 1000, 0.25)).toBe(87);
+    expect(calculateInputWidth(-500, 500, 0.5)).toBe(69);
+  });
+
+  it('return width of the input based on min, max, and step', () => {
+    expect(calculateInputWidth(0, 100, 1)).toBe(60);
+    expect(calculateInputWidth(-10, 10, 0.5)).toBe(60);
+    expect(calculateInputWidth(0, 50, 0.25)).toBe(60);
   });
 });

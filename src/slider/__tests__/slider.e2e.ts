@@ -24,6 +24,11 @@ describe('Slider', () => {
     cy.get('main').findByText('51');
   });
 
+  it('width of the inputs is adjusted automatically', () => {
+    cy.loadStory('slider-long-inputs');
+    cy.get('main').findAllByTestId('slider-track').should('have.length', 2);
+  });
+
   describe('with input enabled', () => {
     it('change the value via input field', () => {
       cy.loadStory('slider-input');
