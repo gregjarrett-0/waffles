@@ -20,3 +20,22 @@ export function isValidValue(value: string, step: number) {
 export function isNotWhitelisted(value: string) {
   return value !== '' && value !== '-' && value !== '.';
 }
+
+const SINGLE_CHAR_WIDTH = 9;
+const INPUT_SPACING = 24;
+const MIN_INPUT_WIDTH = 60;
+
+export function calculateInputWidth(min: number, max: number, step: number) {
+  const isNegative = min < 0 || max < 0 ? 1 : 0;
+  const numberOfRangeChars = Math.max(Math.abs(min), Math.abs(max)).toString()
+    .length;
+  const numberOfStepFractionalChars =
+    step.toString().match(/\.([0-9]+)$/)?.[1].length || 0; // Don't take dot into account
+
+  const width =
+    (isNegative + numberOfRangeChars + numberOfStepFractionalChars) *
+      SINGLE_CHAR_WIDTH +
+    INPUT_SPACING;
+
+  return width < MIN_INPUT_WIDTH ? MIN_INPUT_WIDTH : width;
+}

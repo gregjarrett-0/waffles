@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 import { Input } from '../input';
 
@@ -7,6 +7,7 @@ import {
   isDecimal,
   isValidValue,
   isNotWhitelisted,
+  calculateInputWidth,
 } from './utils';
 import { inputsWrapperStyle } from './styles';
 import { useSlider } from './slider-context';
@@ -19,6 +20,10 @@ type InputsProps = {
 
 function Inputs({ onChange, onChangeEnd, label }: InputsProps) {
   const { value, min, max, step, disabled, inverted } = useSlider();
+  const inputWidth = useMemo(
+    () => calculateInputWidth(min, max, step),
+    [min, max, step],
+  );
   const isSingleInput = value.length === 1;
 
   // Keep separate state for inputs, because some characters other than numeric must be supported
@@ -111,7 +116,7 @@ function Inputs({ onChange, onChangeEnd, label }: InputsProps) {
   }
 
   return (
-    <div css={inputsWrapperStyle({ isSingleInput })}>
+    <div css={inputsWrapperStyle({ isSingleInput, inputWidth })}>
       {isSingleInput ? (
         renderInput(inputValue[0], handleSingleInputChange, hasError[0])
       ) : (
