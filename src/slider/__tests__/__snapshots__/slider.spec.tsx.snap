@@ -410,6 +410,10 @@ exports[`Slider renders snapshot with inputs instead of labels 1`] = `
   gap: calc(100% - 120px);
 }
 
+.emotion-0 div:last-of-type input {
+  text-align: right;
+}
+
 .emotion-1 {
   position: relative;
   width: 100%;
