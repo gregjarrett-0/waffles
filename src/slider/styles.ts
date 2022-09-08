@@ -109,6 +109,10 @@ export function inputsWrapperStyle({
   inputWidth,
 }: InputsWrapperStyleOptions) {
   return css`
+    & div:last-of-type input {
+      text-align: right;
+    }
+
     ${isSingleInput
       ? css`
           width: ${inputWidth}px;
