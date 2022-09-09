@@ -46,6 +46,8 @@ exports[`Slider renders snapshot of disabled 1`] = `
   margin-right: -6px;
   height: 4px;
   border-radius: 2px;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
 }
 
 .emotion-4 {
@@ -71,8 +73,8 @@ exports[`Slider renders snapshot of disabled 1`] = `
   height: 12px;
   border-radius: 50%;
   background-color: #009BD8;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
 }
 
 .emotion-6 {
@@ -195,6 +197,8 @@ exports[`Slider renders snapshot of inverted 1`] = `
   margin-right: -6px;
   height: 4px;
   border-radius: 2px;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
 }
 
 .emotion-4 {
@@ -224,8 +228,8 @@ exports[`Slider renders snapshot of inverted 1`] = `
   height: 12px;
   border-radius: 50%;
   background-color: #06BDFC;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
 }
 
 .emotion-6 {
@@ -325,6 +329,8 @@ exports[`Slider renders snapshot with all labels hidden 1`] = `
   margin-right: -6px;
   height: 4px;
   border-radius: 2px;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
 }
 
 .emotion-2 {
@@ -354,8 +360,8 @@ exports[`Slider renders snapshot with all labels hidden 1`] = `
   height: 12px;
   border-radius: 50%;
   background-color: #009BD8;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
 }
 
 <div>
@@ -525,6 +531,8 @@ exports[`Slider renders snapshot with inputs instead of labels 1`] = `
   margin-right: -6px;
   height: 4px;
   border-radius: 2px;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
 }
 
 .emotion-7 {
@@ -554,8 +562,8 @@ exports[`Slider renders snapshot with inputs instead of labels 1`] = `
   height: 12px;
   border-radius: 50%;
   background-color: #009BD8;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
 }
 
 .emotion-11 {
@@ -710,6 +718,8 @@ exports[`Slider renders snapshot with one handle 1`] = `
   margin-right: -6px;
   height: 4px;
   border-radius: 2px;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
 }
 
 .emotion-4 {
@@ -739,8 +749,8 @@ exports[`Slider renders snapshot with one handle 1`] = `
   height: 12px;
   border-radius: 50%;
   background-color: #06BDFC;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
 }
 
 .emotion-6 {
@@ -863,6 +873,8 @@ exports[`Slider renders snapshot with two handles 1`] = `
   margin-right: -6px;
   height: 4px;
   border-radius: 2px;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
 }
 
 .emotion-5 {
@@ -892,8 +904,8 @@ exports[`Slider renders snapshot with two handles 1`] = `
   height: 12px;
   border-radius: 50%;
   background-color: #06BDFC;
-  -webkit-transition: box-shadow 200ms ease-out;
-  transition: box-shadow 200ms ease-out;
+  -webkit-transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
 }
 
 .emotion-9 {

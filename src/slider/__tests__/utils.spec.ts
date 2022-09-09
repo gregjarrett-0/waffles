@@ -90,15 +90,14 @@ describe('isWhitelisted', () => {
 });
 
 describe('calculateInputWidth', () => {
-  it('return minimal input width if calculated value is smaller', () => {
+  it('return width of the input based on min, max, and step', () => {
     expect(calculateInputWidth(-9999, 999999, 100)).toBe(87);
-    expect(calculateInputWidth(-200, 1000, 0.25)).toBe(87);
-    expect(calculateInputWidth(-500, 500, 0.5)).toBe(69);
+    expect(calculateInputWidth(-200, 1000, 0.25)).toBe(96);
+    expect(calculateInputWidth(-500, 500, 0.5)).toBe(78);
   });
 
-  it('return width of the input based on min, max, and step', () => {
+  it('return minimal input width if calculated value is smaller', () => {
     expect(calculateInputWidth(0, 100, 1)).toBe(60);
-    expect(calculateInputWidth(-10, 10, 0.5)).toBe(60);
-    expect(calculateInputWidth(0, 50, 0.25)).toBe(60);
+    expect(calculateInputWidth(-100, 50, 10)).toBe(60);
   });
 });

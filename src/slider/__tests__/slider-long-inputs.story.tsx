@@ -27,8 +27,8 @@ function Story() {
       <Slider
         showInputs
         value={[-65.75, 55.25]}
-        min={-100}
-        max={100}
+        min={-99}
+        max={99}
         step={0.25}
         onChange={() => {}}
         aria-label="Slider with inputs and decimal step"
