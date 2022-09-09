@@ -20,7 +20,7 @@ function HandleInternal(
   }: HandleProps,
   ref: React.Ref<HTMLDivElement>,
 ) {
-  const { disabled, inverted } = useSlider();
+  const { hasError, disabled, inverted } = useSlider();
   const { focusProps, isFocusVisible } = useFocusRing();
 
   return (
@@ -28,9 +28,11 @@ function HandleInternal(
       {...mergeProps(focusProps, restProps)}
       aria-valuetext={`${formatLabel(value)}`}
       ref={ref}
-      css={handleStyle({ disabled, inverted })}
+      css={handleStyle({ hasError, disabled, inverted })}
     >
-      <div css={handleDotStyle({ isDragged, inverted, isFocusVisible })} />
+      <div
+        css={handleDotStyle({ isDragged, hasError, inverted, isFocusVisible })}
+      />
     </div>
   );
 }

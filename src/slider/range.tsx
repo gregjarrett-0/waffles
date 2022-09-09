@@ -5,24 +5,23 @@ import { useSlider } from './slider-context';
 import Handle from './handle';
 
 type RangeProps = {
-  onChange: (value: number[]) => void;
   onChangeEnd?: (value: number[]) => void;
   label: string;
   formatLabel: (value: number) => number | string;
 };
 
-function Range({ onChange, onChangeEnd, label, formatLabel }: RangeProps) {
-  const { value, min, max, step, disabled } = useSlider();
+function Range({ onChangeEnd, label, formatLabel }: RangeProps) {
+  const { value, onChange, min, max, step, disabled } = useSlider();
 
   return (
     <RangeBase
       {...{
         values: value,
+        onChange,
         min,
         max,
         step,
         disabled,
-        onChange,
         onFinalChange: onChangeEnd,
       }}
       renderTrack={({ props, children }) => (

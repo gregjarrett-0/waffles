@@ -3,9 +3,11 @@ import { createContext, useContext } from 'react';
 
 type SliderContextValue = {
   value: number[];
+  onChange: (value: number[]) => void;
   min: number;
   max: number;
   step: number;
+  hasError: boolean;
   disabled: boolean;
   inverted: boolean;
 };

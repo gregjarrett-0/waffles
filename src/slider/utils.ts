@@ -21,6 +21,8 @@ export function isNotWhitelisted(value: string) {
   return value !== '' && value !== '-' && value !== '.';
 }
 
+// For simplicity these values are hardcoded
+// Takes a lot of extra effort to calculate them
 const SINGLE_CHAR_WIDTH = 9;
 const INPUT_SPACING = 24;
 const MIN_INPUT_WIDTH = 60;
@@ -30,7 +32,7 @@ export function calculateInputWidth(min: number, max: number, step: number) {
   const numberOfRangeChars = Math.max(Math.abs(min), Math.abs(max)).toString()
     .length;
   const numberOfStepFractionalChars =
-    step.toString().match(/\.([0-9]+)$/)?.[1].length || 0; // Don't take dot into account
+    step.toString().match(/\.[0-9]+$/)?.[0].length || 0;
 
   const width =
     (isNegative + numberOfRangeChars + numberOfStepFractionalChars) *

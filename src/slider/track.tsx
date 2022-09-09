@@ -1,10 +1,12 @@
 import { getTrackBackground } from 'react-range';
 import React, { forwardRef } from 'react';
 
-import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
-
-import { trackStyle, trackLineStyle } from './styles';
+import {
+  trackStyle,
+  trackLineStyle,
+  getBackgroundColor,
+  getFilledColor,
+} from './styles';
 import { useSlider } from './slider-context';
 
 type TrackProps = React.HTMLAttributes<HTMLDivElement>;
@@ -13,13 +15,9 @@ function TrackInternal(
   { children, ...restProps }: TrackProps,
   ref: React.Ref<HTMLDivElement>,
 ) {
-  const { value, min, max, disabled, inverted } = useSlider();
-
-  const filledColor = inverted ? tokens.colors.blue : tokens.colors.blueDark;
-  const backgroundColor = hexToRgba(
-    inverted ? tokens.colors.white : tokens.colors.navy,
-    0.15,
-  );
+  const { value, min, max, hasError, disabled, inverted } = useSlider();
+  const filledColor = getFilledColor(inverted, hasError);
+  const backgroundColor = getBackgroundColor(inverted);
 
   return (
     <div
