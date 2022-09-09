@@ -1,8 +1,31 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
+import { hexToRgba } from '../helpers';
 
 const THUMB_DOT_RADIUS = 12;
+
+const regularVariantMap = {
+  regularFilledColor: tokens.colors.blueDark,
+  errorFilledColor: tokens.colors.redDark,
+  backgroundColor: hexToRgba(tokens.colors.navy, 0.15),
+};
+
+const invertedVariantMap = {
+  regularFilledColor: tokens.colors.blue,
+  errorFilledColor: tokens.colors.redDark,
+  backgroundColor: hexToRgba(tokens.colors.white, 0.15),
+};
+
+export function getFilledColor(inverted: boolean, hasError: boolean) {
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
+  return hasError ? variantMap.errorFilledColor : variantMap.regularFilledColor;
+}
+
+export function getBackgroundColor(inverted: boolean) {
+  const variantMap = inverted ? invertedVariantMap : regularVariantMap;
+  return variantMap.backgroundColor;
+}
 
 type TrackStyleOptions = {
   disabled: boolean;
@@ -28,15 +51,21 @@ export function trackLineStyle() {
     margin-right: -${THUMB_DOT_RADIUS / 2}px;
     height: 4px;
     border-radius: 2px;
+    transition: background-color 125ms ease-out;
   `;
 }
 
 type ThumbStyleOptions = {
+  hasError: boolean;
   disabled: boolean;
   inverted: boolean;
 };
 
-export function handleStyle({ disabled, inverted }: ThumbStyleOptions) {
+export function handleStyle({
+  hasError,
+  disabled,
+  inverted,
+}: ThumbStyleOptions) {
   return css`
     display: flex;
     align-items: center;
@@ -48,41 +77,39 @@ export function handleStyle({ disabled, inverted }: ThumbStyleOptions) {
     ${!disabled &&
     css`
       &:hover > div {
-        box-shadow: 0 0 0 3px
-          ${inverted ? tokens.colors.blue : tokens.colors.blueDark};
+        box-shadow: 0 0 0 3px ${getFilledColor(inverted, hasError)};
       }
     `}
   `;
 }
 
-type ThumbDotStyleOptions = {
+type HandleDotStyleOptions = {
   isDragged: boolean;
+  hasError: boolean;
   inverted: boolean;
   isFocusVisible: boolean;
 };
 
 export function handleDotStyle({
   isDragged,
+  hasError,
   inverted,
   isFocusVisible,
-}: ThumbDotStyleOptions) {
-  const backgroundColor = inverted
-    ? tokens.colors.blue
-    : tokens.colors.blueDark;
-
+}: HandleDotStyleOptions) {
   return css`
     width: ${THUMB_DOT_RADIUS}px;
     height: ${THUMB_DOT_RADIUS}px;
     border-radius: ${tokens.borderRadius.circle};
-    background-color: ${backgroundColor};
-    transition: box-shadow 200ms ease-out;
+    background-color: ${getFilledColor(inverted, hasError)};
+    transition: box-shadow 200ms ease-out, background-color 125ms ease-out;
 
-    ${isDragged && `box-shadow: 0 0 0 4px ${backgroundColor};`}
+    ${isDragged &&
+    `box-shadow: 0 0 0 4px ${getFilledColor(inverted, hasError)};`}
 
     ${isFocusVisible &&
     `box-shadow: 0 0 0 2px ${
       inverted ? tokens.colors.navyLight : tokens.colors.white
-    }, 0 0 0 4px ${backgroundColor};`}
+    }, 0 0 0 4px ${getFilledColor(inverted, hasError)};`}
   `;
 }
 
@@ -100,12 +127,12 @@ export function valueLabelsWrapperStyle({
 }
 
 type InputsWrapperStyleOptions = {
-  isSingleInput: boolean;
+  isSingle: boolean;
   inputWidth: number;
 };
 
 export function inputsWrapperStyle({
-  isSingleInput,
+  isSingle,
   inputWidth,
 }: InputsWrapperStyleOptions) {
   return css`
@@ -113,7 +140,7 @@ export function inputsWrapperStyle({
       text-align: right;
     }
 
-    ${isSingleInput
+    ${isSingle
       ? css`
           width: ${inputWidth}px;
           margin-left: calc(100% - ${inputWidth}px);
