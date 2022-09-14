@@ -6,7 +6,7 @@ import type { PlaygroundConfig } from '../../types';
 const initialCode = `
 import { useState } from 'react';
 
-import { Progress } from '@datacamp/waffles/progress';
+import { Slider } from '@datacamp/waffles/slider';
 
 function Playground() {
   const [value, setValue] = useState([50]);

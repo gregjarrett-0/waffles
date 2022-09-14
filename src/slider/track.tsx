@@ -18,6 +18,15 @@ function TrackInternal(
   const { value, min, max, hasError, disabled, inverted } = useSlider();
   const filledColor = getFilledColor(inverted, hasError);
   const backgroundColor = getBackgroundColor(inverted);
+  const trackBackground = getTrackBackground({
+    values: value,
+    min,
+    max,
+    colors:
+      value.length == 1
+        ? [filledColor, backgroundColor]
+        : [backgroundColor, filledColor, backgroundColor],
+  });
 
   return (
     <div
@@ -26,20 +35,7 @@ function TrackInternal(
       data-testid="slider-track"
       css={trackStyle({ disabled })}
     >
-      <div
-        css={trackLineStyle()}
-        style={{
-          background: getTrackBackground({
-            values: value,
-            min,
-            max,
-            colors:
-              value.length == 1
-                ? [filledColor, backgroundColor]
-                : [backgroundColor, filledColor, backgroundColor],
-          }),
-        }}
-      />
+      <div css={trackLineStyle()} style={{ background: trackBackground }} />
       {children}
     </div>
   );

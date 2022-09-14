@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
-const THUMB_DOT_RADIUS = 12;
+const HANDLE_DOT_RADIUS = 12;
 
 const regularVariantMap = {
   regularFilledColor: tokens.colors.blueDark,
@@ -36,8 +36,8 @@ export function trackStyle({ disabled }: TrackStyleOptions) {
     display: flex;
     align-items: center;
     // Shift track slightly so handle aligns with labels nicer
-    width: calc(100% - ${THUMB_DOT_RADIUS}px);
-    margin-left: ${THUMB_DOT_RADIUS / 2}px;
+    width: calc(100% - ${HANDLE_DOT_RADIUS}px);
+    margin-left: ${HANDLE_DOT_RADIUS / 2}px;
     height: ${tokens.sizing.small};
     opacity: ${disabled ? tokens.opacity.high : 1};
   `;
@@ -46,16 +46,16 @@ export function trackStyle({ disabled }: TrackStyleOptions) {
 export function trackLineStyle() {
   return css`
     // Shift track line slightly so handle aligns with labels nicer
-    width: calc(100% + ${THUMB_DOT_RADIUS}px);
-    margin-left: -${THUMB_DOT_RADIUS / 2}px;
-    margin-right: -${THUMB_DOT_RADIUS / 2}px;
+    width: calc(100% + ${HANDLE_DOT_RADIUS}px);
+    margin-left: -${HANDLE_DOT_RADIUS / 2}px;
+    margin-right: -${HANDLE_DOT_RADIUS / 2}px;
     height: 4px;
     border-radius: 2px;
     transition: background-color 125ms ease-out;
   `;
 }
 
-type ThumbStyleOptions = {
+type HandleStyleOptions = {
   hasError: boolean;
   disabled: boolean;
   inverted: boolean;
@@ -65,7 +65,7 @@ export function handleStyle({
   hasError,
   disabled,
   inverted,
-}: ThumbStyleOptions) {
+}: HandleStyleOptions) {
   return css`
     display: flex;
     align-items: center;
@@ -97,8 +97,8 @@ export function handleDotStyle({
   isFocusVisible,
 }: HandleDotStyleOptions) {
   return css`
-    width: ${THUMB_DOT_RADIUS}px;
-    height: ${THUMB_DOT_RADIUS}px;
+    width: ${HANDLE_DOT_RADIUS}px;
+    height: ${HANDLE_DOT_RADIUS}px;
     border-radius: ${tokens.borderRadius.circle};
     background-color: ${getFilledColor(inverted, hasError)};
     transition: box-shadow 200ms ease-out, background-color 125ms ease-out;

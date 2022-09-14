@@ -9,7 +9,7 @@ function Example() {
       disabled
       value={value}
       onChange={(value) => setValue(value)}
-      aria-label="Basic slider"
+      aria-label="Disabled slider"
     />
   );
 }

@@ -31,7 +31,7 @@ describe('Slider', () => {
 
   describe('with input enabled', () => {
     it('change the value via input field', () => {
-      cy.loadStory('slider-input');
+      cy.loadStory('slider-with-input');
       cy.get('main').find('input').clear().type('85');
       cy.get('main')
         .findByRole('slider')
@@ -40,7 +40,7 @@ describe('Slider', () => {
     });
 
     it('show input error if provided value is less than min', () => {
-      cy.loadStory('slider-input');
+      cy.loadStory('slider-with-input');
       cy.get('main').find('input').clear().type('-10');
       cy.get('main')
         .find('input')
@@ -49,7 +49,7 @@ describe('Slider', () => {
     });
 
     it('show input error if provided value is greater than max', () => {
-      cy.loadStory('slider-input');
+      cy.loadStory('slider-with-input');
       cy.get('main').find('input').clear().type('200');
       cy.get('main')
         .find('input')

@@ -17,7 +17,7 @@ function Story() {
         showInputs
         value={value}
         onChange={(value) => setValue(value)}
-        aria-label="Basic slider"
+        aria-label="Slider with input"
       />
     </div>
   );
