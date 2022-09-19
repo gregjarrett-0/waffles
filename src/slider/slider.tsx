@@ -17,8 +17,6 @@ type SliderProps = {
   value: number[];
   /* Handler called when handle is moved. */
   onChange: (value: number[]) => void;
-  /* Handler called when handle stops moving, and change is finished. Useful when the current value must be sent to the server. */
-  onChangeEnd?: (value: number[]) => void;
   /* The minimum allowed value of the slider. Can be decimal or negative. */
   /* @default 0 */
   min?: number;
@@ -49,7 +47,6 @@ type SliderProps = {
 function Slider({
   value,
   onChange,
-  onChangeEnd,
   min = 0,
   max = 100,
   step = 1,
@@ -96,7 +93,6 @@ function Slider({
       parsedValue <= max
     ) {
       onChange([parsedValue]);
-      onChangeEnd?.([parsedValue]);
       setHasError([false]);
     } else {
       isNotWhitelisted(inputValue) && setHasError([true]);
@@ -117,7 +113,6 @@ function Slider({
       parsedValue <= value[1]
     ) {
       onChange([parsedValue, value[1]]);
-      onChangeEnd?.([parsedValue, value[1]]);
       setHasError([true, hasError[1]]);
     } else {
       isNotWhitelisted(inputValue) && setHasError([true, hasError[1]]);
@@ -138,7 +133,6 @@ function Slider({
       parsedValue <= max
     ) {
       onChange([value[0], parsedValue]);
-      onChangeEnd?.([value[0], parsedValue]);
       setHasError([hasError[0], true]);
     } else {
       isNotWhitelisted(inputValue) && setHasError([hasError[0], true]);
@@ -173,11 +167,7 @@ function Slider({
         {!hideLabels && !showInputs && (
           <ValueLabels formatLabel={formatLabel} />
         )}
-        <Range
-          onChangeEnd={onChangeEnd}
-          label={ariaLabel}
-          formatLabel={formatLabel}
-        />
+        <Range label={ariaLabel} formatLabel={formatLabel} />
         {!hideLabels && <RangeLabels formatLabel={formatLabel} />}
       </div>
     </SliderProvider>
