@@ -12,7 +12,7 @@ export function isValidValue(value: string, step: number) {
   return (
     !Number.isNaN(parseFloat(value)) &&
     parseFloat(value) % step === 0 &&
-    !value.endsWith('.')
+    !/.+\.0*$/.test(value) // Don't immediately parse dot followed by zero(s)
   );
 }
 
@@ -32,7 +32,7 @@ export function calculateInputWidth(min: number, max: number, step: number) {
   const numberOfRangeChars = Math.max(Math.abs(min), Math.abs(max)).toString()
     .length;
   const numberOfStepFractionalChars =
-    step.toString().match(/\.[0-9]+$/)?.[0].length || 0;
+    step.toString().match(/\.[0-9]+$/)?.[0].length || 0; // Dot is included
 
   const width =
     (isNegative + numberOfRangeChars + numberOfStepFractionalChars) *
