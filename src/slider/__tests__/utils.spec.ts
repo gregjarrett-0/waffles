@@ -1,5 +1,6 @@
 import {
   initialError,
+  hasError,
   isDecimal,
   isValidValue,
   isNotWhitelisted,
@@ -7,12 +8,26 @@ import {
 } from '../utils';
 
 describe('initialError', () => {
-  it('return array with single false value when true is passed', () => {
-    expect(initialError(true)).toEqual([false]);
+  it('return array with single empty string when true is passed', () => {
+    expect(initialError(true)).toEqual(['']);
   });
 
-  it('return tuple with false values when false is passed', () => {
-    expect(initialError(false)).toEqual([false, false]);
+  it('return tuple with empty strings when false is passed', () => {
+    expect(initialError(false)).toEqual(['', '']);
+  });
+});
+
+describe('hasError', () => {
+  it('return true when array contains at least one error', () => {
+    expect(hasError(['Some error'])).toEqual(true);
+    expect(hasError(['', 'Some error'])).toEqual(true);
+    expect(hasError(['', '', 'Some error', 'Some error'])).toEqual(true);
+  });
+
+  it('return false when array contains no errors', () => {
+    expect(hasError([''])).toEqual(false);
+    expect(hasError(['', ''])).toEqual(false);
+    expect(hasError(['', '', ''])).toEqual(false);
   });
 });
 
@@ -72,18 +87,17 @@ describe('isValidValue', () => {
   });
 });
 
-describe('isWhitelisted', () => {
-  it('return false if it is precisely one of the whitelisted values', () => {
+describe('isNotWhitelisted', () => {
+  it('return false if it is one of specified values', () => {
     expect(isNotWhitelisted('-')).toBe(false);
     expect(isNotWhitelisted('.')).toBe(false);
     expect(isNotWhitelisted('')).toBe(false);
   });
 
-  it('return true if it is NOT one of the whitelisted values', () => {
+  it('return true if it is one of not specified values', () => {
     expect(isNotWhitelisted('-0')).toBe(true);
     expect(isNotWhitelisted('--')).toBe(true);
     expect(isNotWhitelisted('.42')).toBe(true);
-    expect(isNotWhitelisted('..')).toBe(true);
     expect(isNotWhitelisted('11')).toBe(true);
     expect(isNotWhitelisted('0xA')).toBe(true);
   });

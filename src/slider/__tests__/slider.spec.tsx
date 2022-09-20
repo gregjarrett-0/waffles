@@ -180,66 +180,99 @@ describe('Slider', () => {
     });
 
     it("for single input when it's value is less than slider min value, show error", () => {
-      const { container } = render(<TestSliderWithSingleInput />);
+      const { container, getByText } = render(<TestSliderWithSingleInput />);
 
       const input = container.querySelector('input');
       input && fireEvent.change(input, { target: { value: '-10' } });
+      const error = getByText('Input value is out of allowed range.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
+      expect(error).toBeInTheDocument();
     });
 
     it("for single input when it's value is greater than slider max value, show error", () => {
-      const { container } = render(<TestSliderWithSingleInput />);
+      const { container, getByText } = render(<TestSliderWithSingleInput />);
 
       const input = container.querySelector('input');
       input && fireEvent.change(input, { target: { value: '200' } });
+      const error = getByText('Input value is out of allowed range.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
+      expect(error).toBeInTheDocument();
     });
 
     it("for single input when it's value doesn't overlap with step, show error", () => {
-      const { container } = render(<TestSliderWithSingleInput />);
+      const { container, getByText } = render(<TestSliderWithSingleInput />);
 
       const input = container.querySelector('input');
       input && fireEvent.change(input, { target: { value: '10.5' } });
+      const error = getByText('Input value is not overlapping with step.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
+      expect(error).toBeInTheDocument();
     });
 
     it("for two inputs when first one's value is less than slider min value, show error", () => {
-      const { container } = render(<TestSliderWithInputs />);
+      const { container, getByText } = render(<TestSliderWithInputs />);
 
       const inputs = container.querySelectorAll('input');
       inputs[0] && fireEvent.change(inputs[0], { target: { value: '-10' } });
+      const error = getByText('First input value is out of allowed range.');
 
       expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');
+      expect(error).toBeInTheDocument();
     });
 
     it("for two inputs when first one's value is greater than second one, show error", () => {
-      const { container } = render(<TestSliderWithInputs />);
+      const { container, getByText } = render(<TestSliderWithInputs />);
 
       const inputs = container.querySelectorAll('input');
       inputs[0] && fireEvent.change(inputs[0], { target: { value: '70' } });
+      const error = getByText('First input value is out of allowed range.');
 
       expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');
+      expect(error).toBeInTheDocument();
     });
 
     it("for two inputs when second one's value is less than first one, show error", () => {
-      const { container } = render(<TestSliderWithInputs />);
+      const { container, getByText } = render(<TestSliderWithInputs />);
 
       const inputs = container.querySelectorAll('input');
       inputs[1] && fireEvent.change(inputs[1], { target: { value: '10' } });
+      const error = getByText('Second input value is out of allowed range.');
 
       expect(inputs[1]).toHaveAttribute('aria-invalid', 'true');
+      expect(error).toBeInTheDocument();
     });
 
     it("for two inputs when second one's value is greater than slider max value, show error", () => {
-      const { container } = render(<TestSliderWithInputs />);
+      const { container, getByText } = render(<TestSliderWithInputs />);
 
       const inputs = container.querySelectorAll('input');
       inputs[1] && fireEvent.change(inputs[1], { target: { value: '200' } });
+      const error = getByText('Second input value is out of allowed range.');
 
       expect(inputs[1]).toHaveAttribute('aria-invalid', 'true');
+      expect(error).toBeInTheDocument();
+    });
+
+    it('for two inputs when both of their values are out of range, show errors', () => {
+      const { container, getByText } = render(<TestSliderWithInputs />);
+
+      const inputs = container.querySelectorAll('input');
+      inputs[1] && fireEvent.change(inputs[1], { target: { value: '200' } });
+      inputs[0] && fireEvent.change(inputs[0], { target: { value: '-200' } });
+      const firstError = getByText(
+        'First input value is out of allowed range.',
+      );
+      const secondError = getByText(
+        'Second input value is out of allowed range.',
+      );
+
+      expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');
+      expect(inputs[1]).toHaveAttribute('aria-invalid', 'true');
+      expect(firstError).toBeInTheDocument();
+      expect(secondError).toBeInTheDocument();
     });
   });
 
@@ -295,6 +328,23 @@ describe('Slider', () => {
           aria-label="Test slider"
         />,
       );
+
+      const slider = container.firstChild;
+      expect(slider).toMatchSnapshot();
+    });
+
+    it('with error', () => {
+      const { container } = render(
+        <Slider
+          showInputs
+          value={[20]}
+          onChange={jest.fn()}
+          aria-label="Test slider"
+        />,
+      );
+
+      const input = container.querySelector('input');
+      input && fireEvent.change(input, { target: { value: '-10' } });
 
       const slider = container.firstChild;
       expect(slider).toMatchSnapshot();

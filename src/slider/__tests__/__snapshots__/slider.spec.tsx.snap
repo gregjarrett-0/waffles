@@ -409,6 +409,277 @@ exports[`Slider renders snapshot with all labels hidden 1`] = `
 </div>
 `;
 
+exports[`Slider renders snapshot with error 1`] = `
+.emotion-0 {
+  width: 60px;
+  margin-left: calc(100% - 60px);
+}
+
+.emotion-0 div:last-of-type input {
+  text-align: right;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  opacity: 1;
+}
+
+.emotion-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -2px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid #848C92;
+  border-radius: 4px;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  cursor: text;
+  font-size: 14px;
+  color: #05192D;
+  background-color: #FFFFFF;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-color: #DD3400;
+  box-shadow: 0 0 0 1px #DD3400;
+}
+
+.emotion-2:disabled {
+  cursor: default;
+}
+
+.emotion-2:-webkit-autofill {
+  box-shadow: 0 0 0 36px white inset;
+}
+
+.emotion-2::-webkit-search-decoration,
+.emotion-2::-webkit-search-cancel-button,
+.emotion-2::-webkit-search-results-button,
+.emotion-2::-webkit-search-results-decoration {
+  display: none;
+}
+
+.emotion-2::-ms-clear,
+.emotion-2::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-2::-moz-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-2:-ms-input-placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-2::placeholder {
+  opacity: 1;
+  color: #65707C;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(100% - 12px);
+  margin-left: 6px;
+  height: 28px;
+  opacity: 1;
+}
+
+.emotion-4 {
+  width: calc(100% + 12px);
+  margin-left: -6px;
+  margin-right: -6px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  outline: 0;
+}
+
+.emotion-5:hover>div {
+  box-shadow: 0 0 0 3px #DD3400;
+}
+
+.emotion-6 {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #DD3400;
+  -webkit-transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+  transition: box-shadow 200ms ease-out,background-color 125ms ease-out;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-top: -4px;
+}
+
+.emotion-8 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #65707C;
+  font-size: 12px;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.emotion-11 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #C01100;
+  line-height: 1.25;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <input
+        aria-describedby="slider-input-error-ZAqIxW-0"
+        aria-errormessage="slider-input-error-ZAqIxW-0"
+        aria-invalid="true"
+        aria-label="Test slider"
+        class="emotion-2"
+        value="-10"
+      />
+    </div>
+  </div>
+  <div
+    class="emotion-3"
+    data-testid="slider-track"
+    style="transform: scale(1); cursor: pointer;"
+  >
+    <div
+      class="emotion-4"
+    />
+    <div
+      aria-label="Test slider"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20"
+      class="emotion-5"
+      draggable="false"
+      role="slider"
+      style="position: absolute; z-index: 0; cursor: grab; user-select: none; transform: translate(NaNpx, NaNpx);"
+      tabindex="0"
+    >
+      <div
+        class="emotion-6"
+      />
+    </div>
+  </div>
+  <div
+    class="emotion-7"
+  >
+    <span
+      class="emotion-8"
+    >
+      0
+    </span>
+    <span
+      class="emotion-8"
+    >
+      100
+    </span>
+  </div>
+  <div
+    class="emotion-10"
+  >
+    <p
+      class="emotion-11"
+      id="slider-input-error-ZAqIxW-0"
+    >
+      Input value is out of allowed range.
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Slider renders snapshot with inputs instead of labels 1`] = `
 .emotion-0 {
   display: grid;
