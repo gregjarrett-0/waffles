@@ -3,13 +3,7 @@ import { useState, useEffect } from 'react';
 import { useId } from '../hooks';
 
 import ValueLabels from './value-labels';
-import {
-  initialError,
-  hasError,
-  isDecimal,
-  isValidValue,
-  isNotWhitelisted,
-} from './utils';
+import { initialError, hasError } from './utils';
 import { SliderProvider } from './slider-context';
 import RangeLabels from './range-labels';
 import Range from './range';
@@ -71,6 +65,7 @@ function Slider({
   // Because inputs errors are shown for Slider too, state and handlers for them have to be here
   // Separate state for inputs is required, because some characters other than numeric must be supported
   // Both input and error state is an array of one or two items, to mimic structure of Slider value
+  // If there is no error, empty string is provided
   const [inputValue, setInputValue] = useState<Array<string | number>>(value);
   const [error, setError] = useState(initialError(isSingleInput));
 
@@ -80,83 +75,6 @@ function Slider({
     setInputValue(value);
     setError(initialError(isSingleInput));
   }, [value, isSingleInput]);
-
-  // Separate each input handler for readability
-
-  function handleSingleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const inputValue = event.target.value;
-    const parsedValue = parseFloat(event.target.value);
-
-    if (isDecimal(inputValue)) {
-      setInputValue([inputValue]);
-      setError(['']);
-    }
-
-    if (
-      isValidValue(inputValue, step) &&
-      parsedValue >= min &&
-      parsedValue <= max
-    ) {
-      onChange([parsedValue]);
-    } else if (isNotWhitelisted(inputValue)) {
-      if (parsedValue < min || parsedValue > max) {
-        setError(['Input value is out of allowed range.']);
-      } else {
-        setError(['Input value is not overlapping with step.']);
-      }
-    }
-  }
-
-  function handleFirstInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const inputValue = event.target.value;
-    const parsedValue = parseFloat(event.target.value);
-
-    if (isDecimal(inputValue)) {
-      setInputValue([inputValue, value[1]]);
-      setError(['', error[1]]);
-    }
-
-    if (
-      isValidValue(inputValue, step) &&
-      parsedValue >= min &&
-      parsedValue <= value[1]
-    ) {
-      onChange([parsedValue, value[1]]);
-    } else if (isNotWhitelisted(inputValue)) {
-      if (parsedValue < min || parsedValue > value[1]) {
-        setError(['First input value is out of allowed range.', error[1]]);
-      } else {
-        setError(['First input value is not overlapping with step.', error[1]]);
-      }
-    }
-  }
-
-  function handleSecondInputChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const inputValue = event.target.value;
-    const parsedValue = parseFloat(event.target.value);
-
-    if (isDecimal(inputValue)) {
-      setInputValue([value[0], inputValue]);
-      setError([error[0], '']);
-    }
-
-    if (
-      isValidValue(inputValue, step) &&
-      parsedValue >= value[0] &&
-      parsedValue <= max
-    ) {
-      onChange([value[0], parsedValue]);
-    } else if (isNotWhitelisted(inputValue)) {
-      if (parsedValue < value[0] || parsedValue > max) {
-        setError([error[0], 'Second input value is out of allowed range.']);
-      } else {
-        setError([
-          error[0],
-          'Second input value is not overlapping with step.',
-        ]);
-      }
-    }
-  }
 
   return (
     <SliderProvider
@@ -175,12 +93,11 @@ function Slider({
         {showInputs && (
           <Inputs
             id={errorId}
-            value={inputValue}
+            inputValue={inputValue}
+            setInputValue={setInputValue}
             error={error}
+            setError={setError}
             isSingle={isSingleInput}
-            handleSingleInputChange={handleSingleInputChange}
-            handleFirstInputChange={handleFirstInputChange}
-            handleSecondInputChange={handleSecondInputChange}
             label={ariaLabel}
           />
         )}
@@ -189,7 +106,7 @@ function Slider({
         )}
         <Range label={ariaLabel} formatLabel={formatLabel} />
         {!hideLabels && <RangeLabels formatLabel={formatLabel} />}
-        {hasError(error) && (
+        {showInputs && hasError(error) && (
           <Errors error={error} id={errorId} inverted={inverted} />
         )}
       </div>
