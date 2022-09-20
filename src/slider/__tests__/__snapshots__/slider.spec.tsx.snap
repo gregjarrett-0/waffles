@@ -619,8 +619,8 @@ exports[`Slider renders snapshot with error 1`] = `
       class="emotion-1"
     >
       <input
-        aria-describedby="slider-input-error-ZAqIxW-0"
-        aria-errormessage="slider-input-error-ZAqIxW-0"
+        aria-describedby="slider-input-error-123abC-0"
+        aria-errormessage="slider-input-error-123abC-0"
         aria-invalid="true"
         aria-label="Test slider"
         class="emotion-2"
@@ -672,7 +672,7 @@ exports[`Slider renders snapshot with error 1`] = `
   >
     <p
       class="emotion-11"
-      id="slider-input-error-ZAqIxW-0"
+      id="slider-input-error-123abC-0"
     >
       Input value is out of allowed range.
     </p>

@@ -3,6 +3,14 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Slider } from '../index';
 
+const MOCKED_ID = '123abC';
+
+jest.mock('nanoid', () => {
+  return {
+    nanoid: () => MOCKED_ID,
+  };
+});
+
 function TestSliderWithSingleInput() {
   const [value, setValue] = useState([30]);
 
@@ -198,7 +206,12 @@ describe('Slider', () => {
       const error = getByText('Input value is out of allowed range.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
+      expect(input).toHaveAttribute(
+        'aria-errormessage',
+        `slider-input-error-${MOCKED_ID}-0`,
+      );
       expect(error).toBeInTheDocument();
+      expect(error).toHaveAttribute('id', `slider-input-error-${MOCKED_ID}-0`);
     });
 
     it("for single input when it's value doesn't overlap with step, show error", () => {
@@ -209,7 +222,12 @@ describe('Slider', () => {
       const error = getByText('Input value is not overlapping with step.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
+      expect(input).toHaveAttribute(
+        'aria-errormessage',
+        `slider-input-error-${MOCKED_ID}-0`,
+      );
       expect(error).toBeInTheDocument();
+      expect(error).toHaveAttribute('id', `slider-input-error-${MOCKED_ID}-0`);
     });
 
     it("for two inputs when first one's value is less than slider min value, show error", () => {
@@ -220,7 +238,12 @@ describe('Slider', () => {
       const error = getByText('First input value is out of allowed range.');
 
       expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');
+      expect(inputs[0]).toHaveAttribute(
+        'aria-errormessage',
+        `slider-input-error-${MOCKED_ID}-0`,
+      );
       expect(error).toBeInTheDocument();
+      expect(error).toHaveAttribute('id', `slider-input-error-${MOCKED_ID}-0`);
     });
 
     it("for two inputs when first one's value is greater than second one, show error", () => {
@@ -231,7 +254,12 @@ describe('Slider', () => {
       const error = getByText('First input value is out of allowed range.');
 
       expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');
+      expect(inputs[0]).toHaveAttribute(
+        'aria-errormessage',
+        `slider-input-error-${MOCKED_ID}-0`,
+      );
       expect(error).toBeInTheDocument();
+      expect(error).toHaveAttribute('id', `slider-input-error-${MOCKED_ID}-0`);
     });
 
     it("for two inputs when second one's value is less than first one, show error", () => {
@@ -242,7 +270,12 @@ describe('Slider', () => {
       const error = getByText('Second input value is out of allowed range.');
 
       expect(inputs[1]).toHaveAttribute('aria-invalid', 'true');
+      expect(inputs[1]).toHaveAttribute(
+        'aria-errormessage',
+        `slider-input-error-${MOCKED_ID}-1`,
+      );
       expect(error).toBeInTheDocument();
+      expect(error).toHaveAttribute('id', `slider-input-error-${MOCKED_ID}-1`);
     });
 
     it("for two inputs when second one's value is greater than slider max value, show error", () => {
@@ -253,7 +286,12 @@ describe('Slider', () => {
       const error = getByText('Second input value is out of allowed range.');
 
       expect(inputs[1]).toHaveAttribute('aria-invalid', 'true');
+      expect(inputs[1]).toHaveAttribute(
+        'aria-errormessage',
+        `slider-input-error-${MOCKED_ID}-1`,
+      );
       expect(error).toBeInTheDocument();
+      expect(error).toHaveAttribute('id', `slider-input-error-${MOCKED_ID}-1`);
     });
 
     it('for two inputs when both of their values are out of range, show errors', () => {
