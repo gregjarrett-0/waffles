@@ -181,3 +181,22 @@ export function rangeLabelStyle({ inverted }: BaseLabelStyleOptions) {
     font-size: ${tokens.fontSizes.small};
   `;
 }
+
+export function errorsWrapperStyle() {
+  return css`
+    display: flex;
+    gap: ${tokens.spacing.xsmall};
+    margin-top: ${tokens.spacing.small};
+  `;
+}
+
+type ErrorStyleOptions = {
+  inverted: boolean;
+};
+
+export function errorStyle({ inverted }: ErrorStyleOptions) {
+  return css`
+    color: ${inverted ? tokens.colors.red : tokens.colors.redDarkText};
+    line-height: ${tokens.lineHeights.default};
+  `;
+}

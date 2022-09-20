@@ -7,8 +7,9 @@ import { inputsWrapperStyle } from './styles';
 import { useSlider } from './slider-context';
 
 type InputsProps = {
+  id: string;
   value: Array<string | number>;
-  error: boolean[];
+  error: string[];
   isSingle: boolean;
   handleSingleInputChange: React.ChangeEventHandler<HTMLInputElement>;
   handleFirstInputChange: React.ChangeEventHandler<HTMLInputElement>;
@@ -17,6 +18,7 @@ type InputsProps = {
 };
 
 function Inputs({
+  id,
   value,
   error,
   isSingle,
@@ -32,13 +34,25 @@ function Inputs({
   );
 
   function renderInput(
-    value: string | number,
+    index: number,
     onChange: React.ChangeEventHandler<HTMLInputElement>,
-    error: boolean,
   ) {
+    const errorId = `${id}-${index}`;
+
     return (
       <Input
-        {...{ value, onChange, error, disabled, inverted, 'aria-label': label }}
+        {...{
+          value: value[index],
+          onChange,
+          disabled,
+          inverted,
+          'aria-label': label,
+          ...(!!error[index] && {
+            error: true,
+            'aria-errormessage': errorId,
+            'aria-describedby': errorId,
+          }),
+        }}
       />
     );
   }
@@ -46,11 +60,11 @@ function Inputs({
   return (
     <div css={inputsWrapperStyle({ isSingle, inputWidth })}>
       {isSingle ? (
-        renderInput(value[0], handleSingleInputChange, error[0])
+        renderInput(0, handleSingleInputChange)
       ) : (
         <>
-          {renderInput(value[0], handleFirstInputChange, error[0])}
-          {renderInput(value[1], handleSecondInputChange, error[1])}
+          {renderInput(0, handleFirstInputChange)}
+          {renderInput(1, handleSecondInputChange)}
         </>
       )}
     </div>

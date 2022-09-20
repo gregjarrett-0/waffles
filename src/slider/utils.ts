@@ -1,5 +1,11 @@
 export function initialError(isSingleInput: boolean) {
-  return isSingleInput ? [false] : [false, false];
+  return isSingleInput ? [''] : ['', ''];
+}
+
+export function hasError(error: string[]) {
+  return !!error.find((message) => {
+    return message !== '';
+  });
 }
 
 // Determine allowed value for input
@@ -18,7 +24,7 @@ export function isValidValue(value: string, step: number) {
 
 // For better UX don't show error when input is empty or contains minus or dot
 export function isNotWhitelisted(value: string) {
-  return value !== '' && value !== '-' && value !== '.';
+  return value !== '' && value !== '-' && !value.endsWith('.');
 }
 
 // For simplicity these values are hardcoded
