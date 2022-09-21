@@ -1,5 +1,75 @@
 
 
+## [1.14.0](https://github.com/datacamp/waffles/compare/v1.13.0...v1.14.0) (2022-09-21)
+
+
+### Bug Fixes
+
+* **asset:** propagate currentColor correctly ([d3365bc](https://github.com/datacamp/waffles/commit/d3365bc3abb4709605f608b1f965a7c22d9c6926))
+* **code-block:** properly set default size after Code change to inherit ([f29f861](https://github.com/datacamp/waffles/commit/f29f861798cd974a170a41d366d74f8de227a7c5))
+* **icon:** add missing currentColor to LinkedInBrand ([8ee082e](https://github.com/datacamp/waffles/commit/8ee082e250c25513c2f45d90f24f1f6668f2680c))
+* **slider:** input accept dot followed by zeroes ([c881577](https://github.com/datacamp/waffles/commit/c881577839f74253b1a417a1b34d5f0592402f1e))
+* **slider:** properly set filled style ([1e7fe27](https://github.com/datacamp/waffles/commit/1e7fe27b8918a96d0bb7ace828eab20db904bff7))
+
+
+### Performance Improvements
+
+* **slider:** move track style from emotion to inline style ([c405e81](https://github.com/datacamp/waffles/commit/c405e81c893c545dfa7107aa25c2291156f7d781))
+
+
+### Core Changes
+
+* add new `useTitleCase` custom hook helper ([5ed06c4](https://github.com/datacamp/waffles/commit/5ed06c4dee6b045247aecdd8e10b1a27c96c6b66))
+* **button:** add `disableTitleCase` prop for overriding default behaviour ([4060552](https://github.com/datacamp/waffles/commit/4060552ba4b06f49b8c25f28031f8c497a2b398a))
+* **code-block:** add small size ([cf8489a](https://github.com/datacamp/waffles/commit/cf8489a3f3abb96d55c203c109c6ab1b7474bdd8))
+* **code:** inherit font size by default ([99df0bd](https://github.com/datacamp/waffles/commit/99df0bd1751775547fe1ff041884076978f686ba))
+* **dialog:** add support for `isLoading` on internal button ([84baa80](https://github.com/datacamp/waffles/commit/84baa8062b62b32f418f0a8e661b4e120947f2b3))
+* for Code and Link set relaxed line height when size is passed ([94eec4c](https://github.com/datacamp/waffles/commit/94eec4c3c4a5910ed07c70e2b3b6c68b6c522e8c))
+* **icon:** add new Website icon ([a22e791](https://github.com/datacamp/waffles/commit/a22e7910303875838ca066f78d7095e654af3ac9))
+* **link:** add utility hook to calculate icon size based on font size ([17ca22d](https://github.com/datacamp/waffles/commit/17ca22d77f960d3006e88ce945b50063cb009d7f))
+* **link:** allow to set size and adjust icon size automatically ([0d798d1](https://github.com/datacamp/waffles/commit/0d798d16d77bd67c742c482115c0d71e8323251a))
+* **link:** animate underline ([0be6f84](https://github.com/datacamp/waffles/commit/0be6f84f09f23755d8c9dad2421d950f7b7d644b))
+* **slider:** add basic component ([0e40b11](https://github.com/datacamp/waffles/commit/0e40b11e9cf072a1d08b39abb445ddeea274d600))
+* **slider:** add disabled state ([52ad8d3](https://github.com/datacamp/waffles/commit/52ad8d3905ec112838e846d8370c1f755eb8cbe6))
+* **slider:** add function prop to customize labels formatting ([b424719](https://github.com/datacamp/waffles/commit/b42471977471554c32265bb9c87e7011932a5c61))
+* **slider:** add inverted style ([2bff313](https://github.com/datacamp/waffles/commit/2bff313e97ceb7cb0dc9904a4acb58c79bdfc24a))
+* **slider:** add optional inputs to enter values directly ([098ebf0](https://github.com/datacamp/waffles/commit/098ebf0b531b5c45f348e68a0b4e477dd99aad77))
+* **slider:** add value and limit labels ([8815a27](https://github.com/datacamp/waffles/commit/8815a2755fcd5df7880f5903e8e8521f6c240072))
+* **slider:** added onChangeEnd handler ([a3147cd](https://github.com/datacamp/waffles/commit/a3147cde76fe618e583462386f8fbff45db8d81b))
+* **slider:** adjust width of inputs automatically ([05b7756](https://github.com/datacamp/waffles/commit/05b7756eaae5a4ebb5d259a8b3ca49be87da65a9))
+* **slider:** align right input text ([568ee37](https://github.com/datacamp/waffles/commit/568ee37b998ed7802ae33650a81ce7a37aa5c371))
+* **slider:** create basic styles ([7faef50](https://github.com/datacamp/waffles/commit/7faef50353d6dd74075202e2b188fbc33a18a30b))
+* **slider:** create context to clean up commonly shared props ([448f050](https://github.com/datacamp/waffles/commit/448f05019dd03b02ef97b2858d260f2123716a0a))
+* **slider:** for input error set error style on track ([c80370c](https://github.com/datacamp/waffles/commit/c80370c320a7433c46a92bf01b311637a9de474b))
+* **slider:** handle input errors ([b1a0fef](https://github.com/datacamp/waffles/commit/b1a0fef0035e3e2558fc35d4b8e9be31119a69bc))
+* **slider:** improve the way inputs are handled ([48d17c5](https://github.com/datacamp/waffles/commit/48d17c50831314b65badf70e7dfe18b4a4ea0559))
+* **slider:** make aria-label required ([c3c0153](https://github.com/datacamp/waffles/commit/c3c0153c958df285a2b7b3728b36fb1e74bb9fff))
+* **slider:** pass disabled to inputs ([d667ac3](https://github.com/datacamp/waffles/commit/d667ac3c591f6e68150ff1d9334c0c61fb05f5f3))
+* **slider:** remove onChangeEnd handler ([43d2041](https://github.com/datacamp/waffles/commit/43d204171a9706f6f2e29c3fd92a56583794d663))
+* **slider:** show error messages for inputs ([f3de2e2](https://github.com/datacamp/waffles/commit/f3de2e27031a50f7c8bb367b5a08f7d7e2d04b6b))
+
+
+### Documentation Changes
+
+* add default value to prop table ([0e43fd7](https://github.com/datacamp/waffles/commit/0e43fd799d9985c8a67e5869724ccf252cb2e493))
+* **code-block:** add basic usage example ([20095af](https://github.com/datacamp/waffles/commit/20095afbc6eab6392883eadb30eab5150d2484ad))
+* **code-block:** update examples ([9991809](https://github.com/datacamp/waffles/commit/99918092d423dbf8e8b99ae981eb67d68d312108))
+* fix missing prop for progress ([a01da69](https://github.com/datacamp/waffles/commit/a01da69b1b985b92de73454950171b568d2e4297))
+* **helpers:** fix typo in example import ([d42825a](https://github.com/datacamp/waffles/commit/d42825ada60797530656674c3e13c49619f88fe7))
+* **hooks:** add `useTitleCase` doc example ([5a0d6f3](https://github.com/datacamp/waffles/commit/5a0d6f30e1e8f7c6fd089ccb93b52ab9085d4f9b))
+* **link:** remove size advices in props docs ([63a43e4](https://github.com/datacamp/waffles/commit/63a43e4fa983d6e406f599eedc47d07a161aacbc))
+* **link:** update documentation and examples ([801f2e8](https://github.com/datacamp/waffles/commit/801f2e878627272715cb6b608f47d22247d4ac31))
+* simplified basic usage examples for Code and Link ([a68c231](https://github.com/datacamp/waffles/commit/a68c2315249d0dfd9356deb7826cfd783034f4a3))
+* **slider:** add inline props docs ([f654592](https://github.com/datacamp/waffles/commit/f6545921a4a5c1f463273045af5ff058f03ae990))
+* **slider:** add main page with examples ([485f5d7](https://github.com/datacamp/waffles/commit/485f5d794aedfd3f7471e5056a47cfb0bd9262a6))
+* **tabs:** update docs for tab icon ([6a5d6e0](https://github.com/datacamp/waffles/commit/6a5d6e045b6d855045a6a84818ca9d378d4798c4))
+* update Code and CodeBlock documentation ([3ecf378](https://github.com/datacamp/waffles/commit/3ecf378f6d5b740594804763d4491716660aecda))
+* update docs for `useTitleCase` hook ([3074f99](https://github.com/datacamp/waffles/commit/3074f9941724b5fe7d73443d2dfafcc39fd82b92))
+* update docs for title case helper ([abd6224](https://github.com/datacamp/waffles/commit/abd62240a650db999bb1fd284c6fc8dae7a892e1))
+* update roadmap ([cb0d89f](https://github.com/datacamp/waffles/commit/cb0d89f5f973c6a1f7583910e8f38c03692ef9f0))
+* update roadmap ([82944df](https://github.com/datacamp/waffles/commit/82944df24aa438a05d84b0bdbf40cd94d18fd853))
+* update styling of props table default value ([2e5d336](https://github.com/datacamp/waffles/commit/2e5d336f0ab4359eb58b63f558d1631b7e9631c7))
+
 ## [1.13.0](https://github.com/datacamp/waffles/compare/v1.12.0...v1.13.0) (2022-08-19)
 
 
