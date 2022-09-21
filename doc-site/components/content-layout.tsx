@@ -28,6 +28,11 @@ const containerStyle = css`
     grid-template-columns: 3fr 1fr;
     gap: 0 ${tokens.spacing.xlarge};
   }
+
+  // Handle cases where a Notification component is at the top of the page content
+  article > section[role='status'] {
+    margin-top: ${tokens.spacing.large};
+  }
 `;
 
 const footerStyle = css`

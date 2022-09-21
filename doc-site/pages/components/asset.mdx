@@ -10,13 +10,7 @@ import { Link } from '@datacamp/waffles/link';
 import BasicUsage from '../../examples/asset/basic-usage';
 import CustomSizeColor from '../../examples/asset/custom-size-color';
 
-<Layout title="Asset" description="🚧 This page is under construction">
-
-## Usage guidance
-
-Assets are **responsive** by default and will fit into their parent container if no `width` or `height` is provided (whilst still adhering to the `viewBox` aspect ratio).
-
-They will also inherit the `color` of their container by default too.
+<Layout title="Asset" description="Asset components are a collection of responsive DataCamp assets, for example a large icon or company logo.">
 
 <Notification
   title="DataCamp Brand"
@@ -27,6 +21,31 @@ They will also inherit the `color` of their container by default too.
     </>
   }
 />
+
+## Usage guidance
+
+Assets are **responsive** by default and will fit to their parent container if no `width` or `height` is provided (whilst still adhering to their `viewBox` aspect ratio).
+
+They will also inherit the `color` of their parent container by default too.
+
+For implementations which are not React-based, we provide a download link for each Asset type below their examples, but otherwise the React components should be used.
+
+## Best practices
+
+Assets should be used in content to provide visual context or expand upon a written point. In most cases, they should not be used as a identifying marks and instead [Icons](/components/icon) should be used.
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use [Icons](/components/icon) instead of certain Assets for small sizes
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use an Asset with too small a size, e.g. < 24px
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Assignment Assets
 
