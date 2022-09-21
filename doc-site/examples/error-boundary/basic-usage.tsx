@@ -4,7 +4,7 @@ import { Button } from '@datacamp/waffles/button';
 
 function ThrowErrorComponent() {
   throw new Error('Very serious error!');
-  return null;
+  return <div>Very serious error!</div>;
 }
 
 function Example() {

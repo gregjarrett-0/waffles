@@ -19,7 +19,7 @@ afterAll(() => {
 
 function ThrowErrorComponent() {
   throw new Error('Very serious error!');
-  return null;
+  return <div>Very serious error!</div>;
 }
 
 function CustomError() {

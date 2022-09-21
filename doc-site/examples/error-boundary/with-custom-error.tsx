@@ -9,6 +9,7 @@ import { Button } from '@datacamp/waffles/button';
 
 function ThrowErrorComponent() {
   throw new Error('Very serious error!');
+  return <div>Very serious error!</div>;
 }
 
 function CustomError() {
