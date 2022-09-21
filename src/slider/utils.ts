@@ -13,7 +13,7 @@ export function isDecimal(value: string) {
   return /^-?([0-9]{1,})?(\.)?([0-9]{1,})?$/.test(value);
 }
 
-// Check if value could be safely set on slider
+// Check if value can be safely set on slider
 export function isValidValue(value: string, step: number) {
   return (
     !Number.isNaN(parseFloat(value)) &&

@@ -11,17 +11,17 @@ import Inputs from './inputs';
 import Errors from './errors';
 
 type SliderProps = {
-  /* Current slider value. Array of values. For single handle provide single value e.g. `[20]`, and for range provide two values, e.g. `[20, 50]`. */
+  /* Current slider value(s) as an array. For a _single-value_ slider, provide a single value array, e.g. `[20]`. For a _range slider_ provide two values, e.g. `[20, 50]`. */
   value: number[];
   /* Handler called when handle is moved. */
   onChange: (value: number[]) => void;
-  /* The minimum allowed value of the slider. Can be decimal or negative. */
+  /* The minimum allowed value of the slider. Can be a decimal or negative. */
   /* @default 0 */
   min?: number;
-  /* The maximum allowed value of the slider. Can be decimal or negative. */
+  /* The maximum allowed value of the slider. Can be a decimal or negative. */
   /* @default 100 */
   max?: number;
-  /* The minimal distance between values. Can be decimal. */
+  /* The minimal distance between values. Can be a decimal. */
   /* @default 1 */
   step?: number;
   /* Whether slider is disabled or not. */

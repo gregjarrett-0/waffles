@@ -11,6 +11,9 @@ import {
 import { inputsWrapperStyle } from './styles';
 import { useSlider } from './slider-context';
 
+const ERROR_OUT_OF_RANGE = 'value is outside of allowed range.';
+const ERROR_INVALID_STEP = 'value must be a valid step increment.';
+
 type InputsProps = {
   id: string;
   inputValue: Array<string | number>;
@@ -40,10 +43,10 @@ function Inputs({
 
   // Short overview of how each handler works:
   // 1. Only numeric values are allowed
-  // 2. When user starts typing error for the Input is cleared
-  // 3. For better UX, before setting final value on Slider some additional checks are performed, so sometimes Slider and Input values are out of sync, e.g. value ending with dot
-  // 4. If Input value passes checks parsed value is set on slider
-  // 5. Otherwise appropriate error is displayed
+  // 2. When user starts typing, any error for the Input is cleared
+  // 3. For better UX, some additional checks are performed before setting final value on Slider. So sometimes Slider and Input values are out of sync, e.g. value ending with dot
+  // 4. If Input value passes checks, parsed value is set on slider
+  // 5. Otherwise an appropriate error is displayed
 
   function handleSingleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const targetValue = event.target.value;
@@ -62,9 +65,9 @@ function Inputs({
       onChange([parsedValue]);
     } else if (isNotWhitelisted(targetValue)) {
       if (parsedValue < min || parsedValue > max) {
-        setError(['Input value is out of allowed range.']);
+        setError([`Input ${ERROR_OUT_OF_RANGE}`]);
       } else {
-        setError(['Input value is not overlapping with step.']);
+        setError([`Input ${ERROR_INVALID_STEP}`]);
       }
     }
   }
@@ -86,9 +89,9 @@ function Inputs({
       onChange([parsedValue, value[1]]);
     } else if (isNotWhitelisted(targetValue)) {
       if (parsedValue < min || parsedValue > value[1]) {
-        setError(['First input value is out of allowed range.', error[1]]);
+        setError([`First input ${ERROR_OUT_OF_RANGE}`, error[1]]);
       } else {
-        setError(['First input value is not overlapping with step.', error[1]]);
+        setError([`First input ${ERROR_INVALID_STEP}`, error[1]]);
       }
     }
   }
@@ -110,12 +113,9 @@ function Inputs({
       onChange([value[0], parsedValue]);
     } else if (isNotWhitelisted(targetValue)) {
       if (parsedValue < value[0] || parsedValue > max) {
-        setError([error[0], 'Second input value is out of allowed range.']);
+        setError([error[0], `Second input ${ERROR_OUT_OF_RANGE}`]);
       } else {
-        setError([
-          error[0],
-          'Second input value is not overlapping with step.',
-        ]);
+        setError([error[0], `Second input ${ERROR_INVALID_STEP}`]);
       }
     }
   }
