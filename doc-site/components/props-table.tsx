@@ -4,7 +4,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Code } from '@datacamp/waffles/code';
-import { Badge } from '@datacamp/waffles/badge';
+import { Chapeau } from '@datacamp/waffles/chapeau';
 
 import convertedProps from '../helpers/converted-props';
 import markdownElements from '../components/props-table-markdown-elements';
@@ -32,20 +32,12 @@ const descriptionStyle = css`
 
 const defaultValueWrapperStyle = css`
   display: flex;
+  align-items: baseline;
   padding-top: ${tokens.spacing.small};
 `;
 
-const defaultValueBadgeStyle = css`
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  opacity: ${tokens.opacity.medium};
-`;
-
 const defaultValueStyle = css`
-  margin-left: 0;
   padding: 0 ${tokens.spacing.xsmall};
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
   height: 18px;
 `;
 
@@ -114,9 +106,7 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
                   )}
                   {singleProp.defaultValue && (
                     <div css={defaultValueWrapperStyle}>
-                      <Badge css={defaultValueBadgeStyle} variant="navy">
-                        Default
-                      </Badge>
+                      <Chapeau>Default:</Chapeau>
                       <Code css={defaultValueStyle}>
                         {singleProp.defaultValue}
                       </Code>
