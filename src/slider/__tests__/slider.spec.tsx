@@ -192,7 +192,7 @@ describe('Slider', () => {
 
       const input = container.querySelector('input');
       input && fireEvent.change(input, { target: { value: '-10' } });
-      const error = getByText('Input value is out of allowed range.');
+      const error = getByText('Input value is outside of allowed range.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
       expect(error).toBeInTheDocument();
@@ -203,7 +203,7 @@ describe('Slider', () => {
 
       const input = container.querySelector('input');
       input && fireEvent.change(input, { target: { value: '200' } });
-      const error = getByText('Input value is out of allowed range.');
+      const error = getByText('Input value is outside of allowed range.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
       expect(input).toHaveAttribute(
@@ -219,7 +219,7 @@ describe('Slider', () => {
 
       const input = container.querySelector('input');
       input && fireEvent.change(input, { target: { value: '10.5' } });
-      const error = getByText('Input value is not overlapping with step.');
+      const error = getByText('Input value must be a valid step increment.');
 
       expect(input).toHaveAttribute('aria-invalid', 'true');
       expect(input).toHaveAttribute(
@@ -235,7 +235,7 @@ describe('Slider', () => {
 
       const inputs = container.querySelectorAll('input');
       inputs[0] && fireEvent.change(inputs[0], { target: { value: '-10' } });
-      const error = getByText('First input value is out of allowed range.');
+      const error = getByText('First input value is outside of allowed range.');
 
       expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');
       expect(inputs[0]).toHaveAttribute(
@@ -251,7 +251,7 @@ describe('Slider', () => {
 
       const inputs = container.querySelectorAll('input');
       inputs[0] && fireEvent.change(inputs[0], { target: { value: '70' } });
-      const error = getByText('First input value is out of allowed range.');
+      const error = getByText('First input value is outside of allowed range.');
 
       expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');
       expect(inputs[0]).toHaveAttribute(
@@ -267,7 +267,9 @@ describe('Slider', () => {
 
       const inputs = container.querySelectorAll('input');
       inputs[1] && fireEvent.change(inputs[1], { target: { value: '10' } });
-      const error = getByText('Second input value is out of allowed range.');
+      const error = getByText(
+        'Second input value is outside of allowed range.',
+      );
 
       expect(inputs[1]).toHaveAttribute('aria-invalid', 'true');
       expect(inputs[1]).toHaveAttribute(
@@ -283,7 +285,9 @@ describe('Slider', () => {
 
       const inputs = container.querySelectorAll('input');
       inputs[1] && fireEvent.change(inputs[1], { target: { value: '200' } });
-      const error = getByText('Second input value is out of allowed range.');
+      const error = getByText(
+        'Second input value is outside of allowed range.',
+      );
 
       expect(inputs[1]).toHaveAttribute('aria-invalid', 'true');
       expect(inputs[1]).toHaveAttribute(
@@ -294,17 +298,17 @@ describe('Slider', () => {
       expect(error).toHaveAttribute('id', `slider-input-error-${MOCKED_ID}-1`);
     });
 
-    it('for two inputs when both of their values are out of range, show errors', () => {
+    it('for two inputs when both of their values are outside of range, show errors', () => {
       const { container, getByText } = render(<TestSliderWithInputs />);
 
       const inputs = container.querySelectorAll('input');
       inputs[1] && fireEvent.change(inputs[1], { target: { value: '200' } });
       inputs[0] && fireEvent.change(inputs[0], { target: { value: '-200' } });
       const firstError = getByText(
-        'First input value is out of allowed range.',
+        'First input value is outside of allowed range.',
       );
       const secondError = getByText(
-        'Second input value is out of allowed range.',
+        'Second input value is outside of allowed range.',
       );
 
       expect(inputs[0]).toHaveAttribute('aria-invalid', 'true');

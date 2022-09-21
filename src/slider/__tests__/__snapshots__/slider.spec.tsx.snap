@@ -674,7 +674,7 @@ exports[`Slider renders snapshot with error 1`] = `
       class="emotion-11"
       id="slider-input-error-123abC-0"
     >
-      Input value is out of allowed range.
+      Input value is outside of allowed range.
     </p>
   </div>
 </div>
