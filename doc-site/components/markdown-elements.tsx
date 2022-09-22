@@ -104,6 +104,7 @@ const codeBlockStyle = css`
     margin: 0;
     padding: 0;
     background-color: transparent;
+    font-size: inherit;
   }
 `;
 
