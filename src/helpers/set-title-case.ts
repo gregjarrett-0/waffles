@@ -45,22 +45,24 @@ export const TITLE_CASE_STOP_WORDS = [
  * @returns content in Title Case
  */
 function setTitleCase(content: string) {
-  return content
-    .toLowerCase()
-    .trim()
-    .split(' ')
-    .reduce((output, word, index) => {
-      // Always capitalize the first letter of the first word, or if it's not included in our stop words
-      if (TITLE_CASE_STOP_WORDS.includes(word) && index) {
-        return output.concat(' ', word);
-      } else {
-        return output.concat(
-          !index ? '' : ' ',
-          word[0].toUpperCase(),
-          word.substring(1),
-        );
-      }
-    }, '');
+  return content.length === 0
+    ? content
+    : content
+        .toLowerCase()
+        .trim()
+        .split(' ')
+        .reduce((output, word, index) => {
+          // Always capitalize the first letter of the first word, or if it's not included in our stop words
+          if (TITLE_CASE_STOP_WORDS.includes(word) && index) {
+            return output.concat(' ', word);
+          } else {
+            return output.concat(
+              !index ? '' : ' ',
+              word[0].toUpperCase(),
+              word.substring(1),
+            );
+          }
+        }, '');
 }
 
 export default setTitleCase;

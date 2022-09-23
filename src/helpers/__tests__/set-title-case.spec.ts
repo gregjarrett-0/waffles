@@ -19,4 +19,8 @@ describe('setTitleCase', () => {
 
     expect(allLowerCase).toBeTruthy;
   });
+
+  it('should work with an empty string', () => {
+    expect(setTitleCase('')).toMatch('');
+  });
 });
