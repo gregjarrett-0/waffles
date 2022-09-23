@@ -1,6 +1,7 @@
 import * as AvatarExports from '@datacamp/waffles/avatar';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -12,7 +13,34 @@ import Sizes from '../../examples/avatar/sizes';
 import BasicUsage from '../../examples/avatar/basic-usage';
 import ContentFill from '../../examples/avatar/content-fill';
 
-<Layout title="Avatar" description="🚧 This page is under construction">
+<Layout title="Avatar" description="Avatars are used to visually represent the identity of a user, group or entity.">
+
+## Usage guidance
+
+Use Avatars to help identify a user, entity or group within a page, alongside additional information about what the avatar represents. Visual-based `content` should be prioritized over text.
+
+If an Avatar is used with an image of a user or individual, it should fallback to a placeholder image (for example the `AvatarPlaceholderColored` [Asset](http://localhost:3000/components/asset/#other-assets)) or the initial of the name when this image is unavailable. For smaller `size` variants too, text-based `content` should always be used.where the image is harder to identify.
+
+Similarly, if an Avatar is used with an [Asset](/components/asset) for `content`, the related [Icon](/components/icon) should be used in smaller use cases instead.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - Choose an appropriate content type for the specific Avatar size
+    - Prioritize visual-based `content`, where available
+    - Use `contentFill` when you have content that does not have a transparent background
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - Use images or assets for very small Avatars&mdash;use single character or icons instead
+    - Use text for `content`, where a visual element is available&mdash;except for smaller sizes
+    - Use `contentFill` when using [Icons](/components/icon) as content
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
