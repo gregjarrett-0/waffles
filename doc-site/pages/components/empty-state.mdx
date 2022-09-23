@@ -2,6 +2,7 @@ import * as EmptyStateImports from '@datacamp/waffles/empty-state';
 import Text from '@datacamp/waffles/text';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -13,7 +14,36 @@ import CenteredVertical from '../../examples/empty-state/centered-vertical';
 import Orientation from '../../examples/empty-state/orientation';
 import Inverted from '../../examples/empty-state/inverted';
 
-<Layout title="Empty State" description="🚧 This page is under construction">
+<Layout title="Empty State" description="Empty States are used when an area of a page has no content to show the user">
+
+## Usage guidance
+
+Empty States are useful in scenarios where there is a need to show container even when there is no content. An example of this would be in the Groups app, if no groups currently exist. They have the benefit of helping the application not feel lifeless or unnecessary, as well as promoting required action in some cases.
+
+An Empty State should replace the content that would show under normal circumstances and should be clear in telling users what it's for / why they're seeing it. It's recommended they also provide an action for what the user should do next.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - Use when a container has no content or data to show
+    - Tell the user what the area is and why it's empty in a meaningful way
+    - Provide an action, where appropriate, as a solution or next step
+    - Provide a suitable image or illustration, where appropriate
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - Use as a way of communicating errors
+    - Use to highlight content&mdash;use [Card](/components/card) instead
+    - Use vague content such as _"This area is empty"_
+    - Provide no explanation as to why they are seeing the Empty State
+    - Overuse multiple Empty State components within the same space
+    - Provide unnecessarily long descriptions
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
