@@ -41,7 +41,7 @@ type ButtonIconOnlyProps = {
 
 type ButtonNoIconProps = {
   icon?: never;
-  /* The content inside the button. Most of the time should be a plain text. */
+  /* The content inside the button. Most of the time should be a plain text. Should never be an empty string. */
   children: React.ReactNode;
   /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconLeft?: JSX.Element;
@@ -73,6 +73,13 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   }: ButtonProps<T>,
   ref?: PolymorphicRef<T>,
 ) {
+  // Handle cases where incorrect syntax is used
+  if (typeof children === 'string' && children.length === 0) {
+    throw new Error(
+      'Button cannot have an empty string for children. Use `<Button ... />` syntax instead.',
+    );
+  }
+
   const Element = as || 'button';
   const { focusProps, isFocusVisible } = useFocusRing();
 
