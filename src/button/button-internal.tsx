@@ -73,10 +73,10 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   }: ButtonProps<T>,
   ref?: PolymorphicRef<T>,
 ) {
-  // Handle cases where incorrect syntax is used
+  // Handle cases when empty string is passed incorrectly
   if (typeof children === 'string' && children.length === 0) {
     throw new Error(
-      'Button cannot have an empty string for children. Use `<Button ... />` syntax instead.',
+      'Button cannot have an empty string for children. Use `<Button aria-label="button label" ... />` syntax instead.',
     );
   }
 
