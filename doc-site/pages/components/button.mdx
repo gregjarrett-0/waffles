@@ -17,36 +17,36 @@ import FullWidth from '../../examples/button/full-width';
 import AsALink from '../../examples/button/as-a-link';
 import Inverted from '../../examples/button/inverted';
 
-<Layout title="Button" description="A button triggers an event or action. It lets users know what will happen next. Use actionable copy, don’t be vague.">
+<Layout title="Button" description="A Button triggers an event or action. It lets users know what will happen next. Use actionable copy, don’t be vague.">
 
 ## Best practices
 
 ### General
 
-The button comes in four different variants: `primary`, `secondary`, `plain`, `destructive`, and `upgrade`.
+The Button comes in four different variants: `primary`, `secondary`, `plain`, `destructive`, and `upgrade`.
 
-**Primary** button ideally is used only once on a page to display the most important action we want the user to take. Usually, the default size is sufficient, but to draw more attention `large` size can be used. Use `small` size sparingly—in tight spaces or more complex user interfaces.
+**Primary** Button is ideally used only once on a page to display the most important action we want the user to take. Usually, the default size is sufficient, but to draw more attention `large` size can be used. Use `small` size sparingly—in tight spaces or more complex user interfaces.
 
-**Secondary** button can be used multiple times on a page, in a combination with primary or plain buttons to create the actions hierarchy.
+**Secondary** Button can be used multiple times on a page, in a combination with primary or plain Buttons to create an action hierarchy.
 
-**Plain** button should be used for supportive, less important actions.
+**Plain** Button should be used for supportive, less important actions.
 
-**Destructive** button expresses the actions user can't take back.
+**Destructive** Button expresses an action a user can't take back.
 
-**Upgrade** button should be used only in context of upgrading to different DataCamp's pricing plan.
+**Upgrade** Button should be used only in context of upgrading to different DataCamp's pricing plan.
 
 <BestPractices>
   <BestPractices.Recommended>
 
     - when a long explanation is needed, add it above or below the button as a text
-    - in general use default size, and other sizes as an exception
-    - use `inverted` button on a dark background
-    - separate multiple buttons placed next to each other by `spacing.small` from [design tokens](/foundation/design-tokens)
+    - in general use the default size, and other sizes as an exception
+    - use an `inverted` button on a dark background
+    - separate multiple buttons placed next to each other by `tokens.spacing.small` from [Design Tokens](/foundation/design-tokens)
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
 
-    - use a lot of buttons&mdash;too many calls to action cause user's confusion
+    - use a lot of buttons&mdash;too many calls to action cause users confusion
     - use multiple `primary` buttons when you have many actions at once
     - use `primary` button to manipulate user
     - use `upgrade` button for actions other than upgrading to different plan
@@ -56,44 +56,44 @@ The button comes in four different variants: `primary`, `secondary`, `plain`, `d
 
 ### Label
 
-A label should be short, clear, and actionable, such as _Get Certified Now_. Text content of button is automatically _Title Cased_.
+A label should be short, clear, and actionable, such as _Get Certified Now_. The text content of a button is automatically _Title Cased_.
 
 <BestPractices>
   <BestPractices.Recommended>
 
     - should lead with a strong verb that encourages action
-    - for common actions such as _Done_ or _Close_ it is enough to provide verb only
-    - capitalize the first letter of each word
+    - for common actions such as _Done_ or _Close_, it is enough to provide the verb only
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
 
+    - use an empty string as content&mdash;use self-closing syntax tags instead
     - provide long explanations as a button label
     - use unnecessary words, such as _a_, _an_, _the_ in a label
 
   </BestPractices.Discouraged>
 </BestPractices>
 
-### Button with Icon
+### Button with an Icon
 
-Icons add additional context and make buttons easier to scan. Button with icon also draws more attention.
+Icons add additional context and make Buttons easier to scan. A Button with an Icon also draws more attention.
 
 <BestPractices>
   <BestPractices.Recommended>
 
-    - it's great idea to use an icon, when button needs to draw more attention to the action
+    - it's a great idea to use an [Icon](/components/icon), when a button needs to draw more attention to the action
     - most of the time default size [Icon](/components/icon) from Waffles is preferred, regardless of the button
     size
-    - always provide `aria-label` with icon-only button to make sure it's accessible
+    - always provide `aria-label` with an icon-only button to make sure it's accessible
     - usually `rightIcon` should be directional, such as `ChevronRight` Waffles [Icon](/components/icon)
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
 
-    - overuse button with icon
+    - overuse Buttons with icon
     - provide both `leftIcon` and `rightIcon` at once&mdash;only allowed in rare circumstances
-    - provide both button label and `aria-label`&mdash;do it only in rare cases when additional information must be provided for users with disabilities
-    - for icon-only button specify `aria-label` for both button and icon components
+    - provide both button label and `aria-label`&mdash;do it only in rare cases when additional information must be provided for accessibility
+    - for an icon-only button, provide `aria-label` for both button and icon components
 
   </BestPractices.Discouraged>
 </BestPractices>
@@ -102,7 +102,7 @@ Icons add additional context and make buttons easier to scan. Button with icon a
 
 For navigational actions that appear within or directly following a sentence, use the [Link](/components/link) component.
 
-For standalone navigational actions, it is fine to use button&mdash;just set component type to `a` via `as` prop. Custom components, such as react router `Link` could be passed that way as well.
+For standalone navigational actions, it is fine to use Button&mdash;just set component type to `a` via `as` prop. Custom components, such as react router `Link` could be passed that way as well.
 
 ## Examples
 
