@@ -2200,25 +2200,37 @@ exports[`Button renders snapshot of inverted variant upgrade and size small 1`] 
 exports[`Button renders snapshot of isLoading variants variant destructive and size large 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -2347,24 +2359,28 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #05192D;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -2392,19 +2408,23 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -2417,25 +2437,37 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
 exports[`Button renders snapshot of isLoading variants variant destructive and size medium 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -2564,24 +2596,28 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #05192D;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -2609,19 +2645,23 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -2634,25 +2674,37 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
 exports[`Button renders snapshot of isLoading variants variant destructive and size small 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -2781,24 +2833,28 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 12px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #05192D;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -2826,19 +2882,23 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="12"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="12"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -2851,25 +2911,37 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
 exports[`Button renders snapshot of isLoading variants variant plain and size large 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -2998,24 +3070,28 @@ exports[`Button renders snapshot of isLoading variants variant plain and size la
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #06BDFC;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -3043,19 +3119,23 @@ exports[`Button renders snapshot of isLoading variants variant plain and size la
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -3068,25 +3148,37 @@ exports[`Button renders snapshot of isLoading variants variant plain and size la
 exports[`Button renders snapshot of isLoading variants variant plain and size medium 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -3215,24 +3307,28 @@ exports[`Button renders snapshot of isLoading variants variant plain and size me
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #06BDFC;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -3260,19 +3356,23 @@ exports[`Button renders snapshot of isLoading variants variant plain and size me
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -3285,25 +3385,37 @@ exports[`Button renders snapshot of isLoading variants variant plain and size me
 exports[`Button renders snapshot of isLoading variants variant plain and size small 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -3432,24 +3544,28 @@ exports[`Button renders snapshot of isLoading variants variant plain and size sm
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 12px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #06BDFC;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -3477,19 +3593,23 @@ exports[`Button renders snapshot of isLoading variants variant plain and size sm
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="12"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="12"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -3502,25 +3622,37 @@ exports[`Button renders snapshot of isLoading variants variant plain and size sm
 exports[`Button renders snapshot of isLoading variants variant primary and size large 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -3649,24 +3781,28 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #05192D;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -3694,19 +3830,23 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -3719,25 +3859,37 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
 exports[`Button renders snapshot of isLoading variants variant primary and size medium 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -3866,24 +4018,28 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #05192D;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -3911,19 +4067,23 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -3936,25 +4096,37 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
 exports[`Button renders snapshot of isLoading variants variant primary and size small 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -4083,24 +4255,28 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 12px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #05192D;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -4128,19 +4304,23 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="12"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="12"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -4153,25 +4333,37 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
 exports[`Button renders snapshot of isLoading variants variant secondary and size large 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -4300,24 +4492,28 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #FFFFFF;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -4345,19 +4541,23 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -4370,25 +4570,37 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
 exports[`Button renders snapshot of isLoading variants variant secondary and size medium 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -4517,24 +4729,28 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #FFFFFF;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -4562,19 +4778,23 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -4587,25 +4807,37 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
 exports[`Button renders snapshot of isLoading variants variant secondary and size small 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -4734,24 +4966,28 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 12px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #FFFFFF;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -4779,19 +5015,23 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="12"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="12"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -4804,25 +5044,37 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
 exports[`Button renders snapshot of isLoading variants variant upgrade and size large 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -4951,24 +5203,28 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #FFFFFF;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -4996,19 +5252,23 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -5021,25 +5281,37 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
 exports[`Button renders snapshot of isLoading variants variant upgrade and size medium 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -5168,24 +5440,28 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 16px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #FFFFFF;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -5213,19 +5489,23 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="16"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="16"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>
@@ -5238,25 +5518,37 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
 exports[`Button renders snapshot of isLoading variants variant upgrade and size small 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+  }
+}
+
+@keyframes animation-0 {
+  0%, 6% {
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+  }
+
+  100% {
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -5385,24 +5677,28 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
   -webkit-animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-0 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   will-change: clip-path;
+  width: 12px;
 }
 
 .emotion-4 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-5 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-6 {
   display: block;
   stroke: #000820;
   overflow: visible;
   stroke: #FFFFFF;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -5430,19 +5726,23 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
       <div
         class="emotion-4"
       >
-        <svg
+        <div
           class="emotion-5"
-          viewBox="0 0 2569 3403"
-          width="12"
         >
-          <path
+          <svg
             class="emotion-6"
-            d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-            fill="none"
-            stroke-linejoin="round"
-            stroke-width="300"
-          />
-        </svg>
+            viewBox="0 0 2640 3444"
+            width="12"
+          >
+            <path
+              class="emotion-7"
+              d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+              fill="none"
+              stroke-linejoin="round"
+              stroke-width="300"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span>

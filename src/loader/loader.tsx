@@ -34,7 +34,7 @@ function Loader({ inverted = false, ...restProps }: LoaderProps) {
               fill="none"
               strokeLinejoin="round"
               strokeWidth="300"
-            ></path>
+            />
           </svg>
         </div>
       </div>

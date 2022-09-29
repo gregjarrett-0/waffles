@@ -3,25 +3,25 @@
 exports[`Loader renders a loader 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -38,20 +38,23 @@ exports[`Loader renders a loader 1`] = `
 }
 
 .emotion-1 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-3 {
   display: block;
   stroke: #000820;
   overflow: visible;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -66,18 +69,22 @@ exports[`Loader renders a loader 1`] = `
   <div
     class="emotion-1"
   >
-    <svg
+    <div
       class="emotion-2"
-      viewBox="0 0 2569 3403"
     >
-      <path
+      <svg
         class="emotion-3"
-        d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-        fill="none"
-        stroke-linejoin="round"
-        stroke-width="300"
-      />
-    </svg>
+        viewBox="0 0 2640 3444"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
@@ -85,25 +92,25 @@ exports[`Loader renders a loader 1`] = `
 exports[`Loader renders snapshot of inverted 1`] = `
 @keyframes animation-0 {
   0%, 6% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 178%, 188% 106%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% -12%, 169% 63%, 169% 63%);
   }
 
   100% {
-    -webkit-clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
-    clip-path: polygon(-5% -5%, 0% 197%, 188% 300%, 178% 69%);
+    -webkit-clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
+    clip-path: polygon(0% -12%, 0% 308%, 169% 383%, 169% 63%);
   }
 }
 
 @keyframes animation-1 {
   0%, 71% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
-    clip-path: polygon(-5% 0%, 0% 88.5%, 100% 38.5%, 100% -54%);
+    -webkit-clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 78.5%, 100% 34.5%, 100% -44%);
   }
 
   96%, 100% {
-    -webkit-clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
-    clip-path: polygon(-5% 0%, 0% 150%, 100% 94%, 100% -84%);
+    -webkit-clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
+    clip-path: polygon(0% 0%, 0% 140%, 100% 96%, 100% -44%);
   }
 }
 
@@ -120,20 +127,23 @@ exports[`Loader renders snapshot of inverted 1`] = `
 }
 
 .emotion-1 {
-  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
   -webkit-animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   animation: animation-1 cubic-bezier(0, 0, 0.85, 1) 2s infinite alternate;
   will-change: clip-path;
 }
 
 .emotion-2 {
+  -webkit-clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+}
+
+.emotion-3 {
   display: block;
   stroke: #FFFFFF;
   overflow: visible;
 }
 
-.emotion-3 {
+.emotion-4 {
   -webkit-animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   animation: animation-2 cubic-bezier(0.65, 0, 0.55, 1) 2s infinite alternate;
   stroke-dasharray: 9800;
@@ -148,18 +158,22 @@ exports[`Loader renders snapshot of inverted 1`] = `
   <div
     class="emotion-1"
   >
-    <svg
+    <div
       class="emotion-2"
-      viewBox="0 0 2569 3403"
     >
-      <path
+      <svg
         class="emotion-3"
-        d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
-        fill="none"
-        stroke-linejoin="round"
-        stroke-width="300"
-      />
-    </svg>
+        viewBox="0 0 2640 3444"
+      >
+        <path
+          class="emotion-4"
+          d="M0 0 M2569 1056L143 2447V149l1175 673v1867l1248 715"
+          fill="none"
+          stroke-linejoin="round"
+          stroke-width="300"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
