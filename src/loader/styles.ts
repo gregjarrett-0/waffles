@@ -8,8 +8,8 @@ import { loaderEndMask, loaderStartMask, stroke } from './keyframes';
 const animationSettings = '2s infinite alternate';
 
 type WrapperStyleOptions = {
-  width: string;
-  height: string;
+  width?: string | number;
+  height?: string | number;
 };
 
 export function wrapperStyle({ width, height }: WrapperStyleOptions) {
@@ -22,14 +22,18 @@ export function wrapperStyle({ width, height }: WrapperStyleOptions) {
   `;
 }
 
-export const containerStyle = css`
-  animation: ${loaderEndMask} cubic-bezier(0, 0, 0.85, 1) ${animationSettings};
-  will-change: clip-path;
-`;
+export function containerStyle() {
+  return css`
+    animation: ${loaderEndMask} cubic-bezier(0, 0, 0.85, 1) ${animationSettings};
+    will-change: clip-path;
+  `;
+}
 
-export const svgWrapperStyle = css`
-  clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
-`;
+export function svgWrapperStyle() {
+  return css`
+    clip-path: polygon(-0.1% -10%, 169% 65%, -0.1% 139%);
+  `;
+}
 
 type LoaderSvgStyleOptions = {
   inverted: NonNullable<React.ComponentProps<typeof Loader>['inverted']>;
@@ -43,9 +47,11 @@ export function loaderSvgStyle({ inverted }: LoaderSvgStyleOptions) {
   `;
 }
 
-export const loaderPathStyle = css`
-  animation: ${stroke} cubic-bezier(0.65, 0, 0.55, 1) ${animationSettings};
-  stroke-dasharray: 9800;
-  stroke-dashoffset: 9800;
-  will-change: stroke-dashoffset;
-`;
+export function loaderPathStyle() {
+  return css`
+    animation: ${stroke} cubic-bezier(0.65, 0, 0.55, 1) ${animationSettings};
+    stroke-dasharray: 9800;
+    stroke-dashoffset: 9800;
+    will-change: stroke-dashoffset;
+  `;
+}
