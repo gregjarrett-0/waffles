@@ -45,9 +45,9 @@ type ComponentCountData = {
   [key: string]: number;
 };
 
-async function wait() {
+async function wait(ms: number) {
   return new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), 10000);
+    setTimeout(() => resolve(), ms);
   });
 }
 
@@ -67,7 +67,7 @@ async function getRepos(page = 0): Promise<RawRepoData[]> {
   console.log(chalk.grey(`${items.length} items found on page ${page}`));
 
   if (data.items.length > 0) {
-    await wait();
+    await wait(10000);
     return items.concat(await getRepos(page + 1));
   }
 
@@ -212,7 +212,7 @@ function prepareBasicReport(repos: CleanWafflesReposData) {
   return status;
 }
 
-// Can't crawl all components because of rate limiting of
+// Can't crawl all components because of rate limiting
 const newWafflesCoreComponents = [
   'button',
   'link',
@@ -231,41 +231,9 @@ async function getWafflesComponentsStats(repos: CleanWafflesReposData) {
     Object.entries(repos).map(async (entry) => {
       const [repoName, dependencies] = entry;
 
-      // New Waffles components
-
-      // TODO: Search ignores slash character, so actual results must be checked
-
-      let newWafflesStats: ComponentCountData[] = [];
-
-      if (
-        Object.keys(dependencies).find((dependencyName) => {
-          return dependencyName === '@datacamp/waffles';
-        })
-      ) {
-        const importsCount = await Promise.all(
-          newWafflesCoreComponents.map(async (componentName) => {
-            const { data } = await octokit.search.code({
-              q: `datacamp/waffles/${componentName} repo:datacamp-engineering/${repoName} in:file`,
-              page: 0, // Due to limits just checking 1 page of results
-              per_page: 100,
-            });
-
-            if (data.total_count) {
-              return { [componentName]: data.total_count };
-            } else {
-              return {};
-            }
-          }),
-        );
-
-        newWafflesStats = importsCount;
-      }
-
       // Old Waffles components
 
-      await wait();
-
-      let oldWafflesStats: ComponentCountData[] = [];
+      let oldWafflesStats: ComponentCountData = {};
 
       const oldWafflesDependencies = Object.keys(dependencies).filter(
         (dependencyName) => {
@@ -290,25 +258,80 @@ async function getWafflesComponentsStats(repos: CleanWafflesReposData) {
           }),
         );
 
-        oldWafflesStats = importsCount;
+        const importsCountsByComponent = importsCount.reduce(
+          (components, component) => {
+            return {
+              ...components,
+              ...component,
+            };
+          },
+          {},
+        );
+
+        oldWafflesStats = importsCountsByComponent;
+      }
+
+      // New Waffles components
+
+      await wait(20000);
+
+      let newWafflesStats: ComponentCountData = {};
+
+      if (
+        Object.keys(dependencies).find((dependencyName) => {
+          return dependencyName === '@datacamp/waffles';
+        })
+      ) {
+        const importsCount = await Promise.all(
+          newWafflesCoreComponents.map(async (componentName) => {
+            const { data: newWafflesData } = await octokit.search.code({
+              q: `datacamp/waffles/${componentName} repo:datacamp-engineering/${repoName} in:file`,
+              page: 0, // Due to limits just checking 1 page of results
+              per_page: 100,
+            });
+
+            // Because Octokit search does not accept special characters (slash in this case)
+            // Search will catch Old Waffles imports too
+            // Therefore Old Waffles imports count is subtracted from the results of this query
+
+            // Search for more specific Old Waffles imports to get actual count
+            const oldWafflesCount = oldWafflesStats[componentName] || 0;
+
+            const actualCount = newWafflesData.total_count - oldWafflesCount;
+
+            if (actualCount > 0) {
+              return { [componentName]: actualCount };
+            } else {
+              return {};
+            }
+          }),
+        );
+
+        const importsCountsByComponent = importsCount.reduce(
+          (components, component) => {
+            return {
+              ...components,
+              ...component,
+            };
+          },
+          {},
+        );
+
+        newWafflesStats = importsCountsByComponent;
       }
 
       // Combine Old and New Waffles component stats for repo
 
       const componentsStats = {
-        oldWaffles: oldWafflesStats.reduce((acc, item) => {
-          return {
-            ...acc,
-            ...item,
-          };
-        }, {}),
-        newWaffles: newWafflesStats.reduce((acc, item) => {
-          return {
-            ...acc,
-            ...item,
-          };
-        }, {}),
+        oldWaffles: {
+          ...oldWafflesStats,
+        },
+        newWaffles: {
+          ...newWafflesStats,
+        },
       };
+
+      await wait(10000);
 
       return [repoName, componentsStats];
     }),
@@ -327,7 +350,7 @@ async function run() {
   const repos = await getRepos();
   const cleanRepos = cleanRawReposData(repos);
 
-  await wait();
+  await wait(10000);
 
   // Get package.json for each repo to analyze dependencies
 
@@ -390,7 +413,7 @@ async function run() {
     JSON.stringify(basicReport),
   );
 
-  await wait();
+  await wait(10000);
 
   // Gather stats about components usage
 
