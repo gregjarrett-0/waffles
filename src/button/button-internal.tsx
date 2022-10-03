@@ -19,7 +19,7 @@ type ButtonBaseProps = {
   /* Whether the Button is in it's loading state. The Button will maintain the minimum width of it's child content. */
   /* @default false */
   isLoading?: boolean;
-  /* Allows the button to grow to the width of its container. */
+  /* Allows the Button to grow to the width of its container. */
   /* @default false */
   fullWidth?: boolean;
   /* Sets the style of the Button suitable for dark backgrounds. */
@@ -41,7 +41,7 @@ type ButtonIconOnlyProps = {
 
 type ButtonNoIconProps = {
   icon?: never;
-  /* The content inside the button. Most of the time should be a plain text. Should never be an empty string. */
+  /* The content inside the Button. Most of the time should be a plain text. Should never be an empty string. */
   children: React.ReactNode;
   /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconLeft?: JSX.Element;
