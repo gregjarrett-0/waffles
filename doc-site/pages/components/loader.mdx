@@ -1,6 +1,7 @@
 import * as LoaderExports from '@datacamp/waffles/loader';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -12,13 +13,13 @@ import Inverted from '../../examples/loader/inverted';
 import { Notification } from '@datacamp/waffles/notification';
 import { Link } from '@datacamp/waffles/link';
 
-<Layout title="Loader" description="An animated component to represent loading.">
+<Layout title="Loader" description="An animated component to represent loading, where an action can take an extended amount of time to complete.">
 
 <Notification
   title="Loading Button"
   description={
     <>
-      If you're looking for a loading button variant, see our{' '}
+      If you're looking for a loading Button variant, see our{' '}
       <Link href="../button">Button</Link> component.
     </>
   }
@@ -26,7 +27,31 @@ import { Link } from '@datacamp/waffles/link';
 
 ## Usage guidance
 
-Ideally, only one `Loader` should be visible on a single page at a time.
+Ideally, no more than one `Loader` should be visible on a single page at a time. For contexts where multiple areas have loading content (such as on page load), a form of skeleton loading should be used and the `Loader` as an overlay for the page/container.
+
+The `Loader` will behave responsively to its' parent container, but a custom size can also be provided using the `height` and/or `width` properties. The size of the `Loader` should not fill the container.
+
+For accessibility, `aria-label` should be provided for screen reader context and `aria-live`/`aria-busy` on the component that is dynamically modified as a result of the _loading_ task or that triggered the loading state.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - Use when an action will take more than a few seconds to complete
+    - Provide a simple but descriptive `aria-label` as context for screen readers&mdash;such as 'Loading user profile'
+    - Use `aria-live` on the associated parent container, to allow for screen reader updates
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - Use more than one `Loader` onscreen at once
+    - Use to show progress&mdash;use [Progress](/components/progress) instead
+    - Use as content within a [Button](/components/button)&mdash;use the `isLoading` Button property
+    - Use when there is no content to show&mdash;use [Empty State](/components/empty-state)
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
