@@ -1,6 +1,7 @@
 import * as ProgressExports from '@datacamp/waffles/progress';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -15,7 +16,42 @@ import CustomLabel from '../../examples/progress/custom-label';
 import NoLabel from '../../examples/progress/no-label';
 import Inverted from '../../examples/progress/inverted';
 
-<Layout title="Progress" description="🚧 This page is under construction">
+<Layout title="Progress" description="Provides feedback to the user about the progression of a process or task.">
+
+## Usage guidance
+
+The Progress component can be used in a variety of uses; from showing the completion percentage of a task, to individual steps in a process. The Progress should be used when a process is a direct result of a user action&mdash;e.g. courses being completed or form progress.
+
+When using the default `mode`, any values for `min` and `max` can be provided and a percentage is calculated internally. This includes values that would result in a percentage over `100%`. This percentage is also always **rounded down**.
+
+If the context of a Progress cannot be determined visually (but can from accessibility content such as `aria-label`), then additional text should be placed alongside the Progress to solve this. A custom label can be provided (via the `customLabel` prop), to replace the default label. This should continue to communicate the `value` of the Progress to maintain accessibility, but can be otherwise customized.
+
+For additional accessibility, an `aria-label` should always be provided with context of the progress bar, e.g. "Course progress".
+
+### Steps mode
+
+When the Progress component has the `mode="steps"` configuration, it is rendered as separate segments to represent individual steps.
+
+This `mode` should be used when a process consists of multiple complex tasks, with distinct milestones. It's recommended **not** to use this mode with fewer than two (2) steps, or greater than seven (7)&mdash;consider restructuring the flow instead.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - Use to show the status of an ongoing task or process
+    - Provide an accessible `aria-label` with the context of the progress
+    - Use `steps` mode when a user has a series of tasks to complete
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - Use to show loading progress or state&mdash;use [Loader](/components/loader) instead
+    - Use `steps` mode when the task or process has no logical steps
+    - Use too many or too few steps when in `steps` mode
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
