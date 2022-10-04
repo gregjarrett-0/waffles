@@ -34,8 +34,8 @@ function Icon({ variant, inverted }: IconProps) {
 
   return (
     <div css={iconWrapperStyle()}>
-      <div css={iconStyle({ variant, inverted })}>{renderIcon()}</div>
       <div css={iconBackgroundStyle({ variant, inverted })} />
+      <div css={iconStyle({ variant, inverted })}>{renderIcon()}</div>
     </div>
   );
 }

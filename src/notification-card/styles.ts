@@ -105,6 +105,7 @@ const invertedIconVariantMap = {
 export function iconWrapperStyle() {
   return css`
     position: relative;
+    z-index: ${tokens.zIndex.default};
     width: ${tokens.sizing.small};
     height: ${tokens.sizing.small};
     flex-shrink: 0;
@@ -130,7 +131,6 @@ export function iconStyle({ variant, inverted }: IconStyleOptions) {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: ${tokens.zIndex.default};
     color: ${variantMap[variant].color};
   `;
 }
@@ -150,7 +150,6 @@ export function iconBackgroundStyle({
 
   return css`
     position: absolute;
-    z-index: 0;
     top: 7px;
     left: 7px;
 
