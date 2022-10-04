@@ -34,6 +34,7 @@ exports[`Notification renders snapshot of inverted notification with all optiona
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -42,6 +43,16 @@ exports[`Notification renders snapshot of inverted notification with all optiona
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -59,19 +70,7 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #009BD8;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -334,6 +333,9 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -347,9 +349,6 @@ exports[`Notification renders snapshot of inverted notification with all optiona
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -445,6 +444,7 @@ exports[`Notification renders snapshot of regular notification with all optional
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -453,6 +453,16 @@ exports[`Notification renders snapshot of regular notification with all optional
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -470,19 +480,7 @@ exports[`Notification renders snapshot of regular notification with all optional
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #009BD8;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -745,6 +743,9 @@ exports[`Notification renders snapshot of regular notification with all optional
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -758,9 +759,6 @@ exports[`Notification renders snapshot of regular notification with all optional
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"

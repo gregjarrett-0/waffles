@@ -27,6 +27,7 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -35,6 +36,16 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,19 +63,7 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #009BD8;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -172,6 +171,9 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -185,9 +187,6 @@ exports[`NotificationCard renders snapshot of inverted variant default 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -241,6 +240,7 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -249,6 +249,16 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -266,19 +276,7 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #FF5400;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -386,6 +384,9 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -399,9 +400,6 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -455,6 +453,7 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -463,6 +462,16 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #05192D;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,19 +489,7 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #03EF62;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #05192D;
 }
 
 .emotion-5 {
@@ -600,6 +597,9 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -613,9 +613,6 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -669,6 +666,7 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -677,6 +675,16 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -694,19 +702,7 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #7933FF;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: transparent;
 }
 
 .emotion-5 {
@@ -814,6 +810,9 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -829,9 +828,6 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -885,6 +881,7 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -893,6 +890,17 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 14px solid #05192D;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -910,20 +918,7 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #FFBC4B;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
 }
 
 .emotion-5 {
@@ -1031,6 +1026,9 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -1046,9 +1044,6 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -1102,6 +1097,7 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -1110,6 +1106,16 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1127,19 +1133,7 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #009BD8;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -1247,6 +1241,9 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -1260,9 +1257,6 @@ exports[`NotificationCard renders snapshot of variant default 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -1316,6 +1310,7 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -1324,6 +1319,16 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1341,19 +1346,7 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #FF5400;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -1461,6 +1454,9 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -1474,9 +1470,6 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -1530,6 +1523,7 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -1538,6 +1532,16 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #05192D;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1555,19 +1559,7 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #03EF62;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #05192D;
 }
 
 .emotion-5 {
@@ -1675,6 +1667,9 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -1688,9 +1683,6 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -1744,6 +1736,7 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -1752,6 +1745,16 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1769,19 +1772,7 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #7933FF;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: transparent;
 }
 
 .emotion-5 {
@@ -1889,6 +1880,9 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -1904,9 +1898,6 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
@@ -1960,6 +1951,7 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
 
 .emotion-2 {
   position: relative;
+  z-index: 1;
   width: 28px;
   height: 28px;
   -webkit-flex-shrink: 0;
@@ -1968,6 +1960,17 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
 }
 
 .emotion-3 {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 14px solid #05192D;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1985,20 +1988,7 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   color: #FFBC4B;
-}
-
-.emotion-4 {
-  position: absolute;
-  z-index: 0;
-  top: 7px;
-  left: 7px;
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
 }
 
 .emotion-5 {
@@ -2106,6 +2096,9 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   >
     <div
       class="emotion-3"
+    />
+    <div
+      class="emotion-4"
     >
       <svg
         aria-hidden="true"
@@ -2121,9 +2114,6 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
         />
       </svg>
     </div>
-    <div
-      class="emotion-4"
-    />
   </div>
   <div
     class="emotion-5"
