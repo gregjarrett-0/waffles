@@ -130,7 +130,7 @@ export function iconStyle({ variant, inverted }: IconStyleOptions) {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 10;
+    z-index: ${tokens.zIndex.default};
     color: ${variantMap[variant].color};
   `;
 }
@@ -150,7 +150,7 @@ export function iconBackgroundStyle({
 
   return css`
     position: absolute;
-    z-index: 5;
+    z-index: 0;
     top: 7px;
     left: 7px;
 
