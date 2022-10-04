@@ -2,10 +2,11 @@ import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { setTitleCase } from '../helpers';
+import { logWafflesDebug, setTitleCase } from '../helpers';
 
 import { buttonStyle, innerContentStyle } from './styles';
 import ButtonLoader from './loader';
+import { MESSAGES } from './debug-messages';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
@@ -73,17 +74,23 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   }: ButtonProps<T>,
   ref?: PolymorphicRef<T>,
 ) {
-  // Handle cases when empty string is passed incorrectly
+  // Log console.error when an empty string is passed as incorrect syntax
   if (typeof children === 'string' && children.length === 0) {
-    throw new Error(
-      'Button cannot have an empty string for children. Use `<Button aria-label="button label" ... />` syntax instead.',
-    );
+    logWafflesDebug(MESSAGES.EMPTY_CHILDREN, true);
   }
 
   const Element = as || 'button';
   const { focusProps, isFocusVisible } = useFocusRing();
 
   function renderIcon(originalIcon: JSX.Element, key: string) {
+    // Log warning if Icon size is set unnecessarily to associated default
+    if (
+      (originalIcon.props.size === 'medium' && size === 'medium') ||
+      (originalIcon.props.size === 'small' && size === 'small')
+    ) {
+      logWafflesDebug(MESSAGES.REDUNDANT_ICON_SIZE);
+    }
+
     // Check if the Icon has a provided custom size prop already
     return originalIcon.props.size
       ? originalIcon

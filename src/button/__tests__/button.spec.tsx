@@ -1,8 +1,17 @@
 import React, { useRef, useEffect } from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 
 import { Button } from '../index';
 import { AddCircle, ChevronRight } from '../../icon';
+
+// These can probably be moved into a global location for all tests at a later date
+const consoleErrorMock = jest.spyOn(console, 'error').mockImplementation();
+const consoleWarnMock = jest.spyOn(console, 'warn').mockImplementation();
+
+afterEach(() => {
+  consoleErrorMock.mockReset();
+  consoleWarnMock.mockReset();
+});
 
 const variants = [
   'primary',
@@ -36,6 +45,12 @@ function TestRefButton() {
 }
 
 describe('Button', () => {
+  // Ensure no warnings or errors have been logged to the console
+  afterAll(() => {
+    expect(consoleErrorMock).not.toBeCalled();
+    expect(consoleWarnMock).not.toBeCalled();
+  });
+
   it('renders a button containing the text', () => {
     const { container } = render(<Button>Follow Taylor Swift</Button>);
 
@@ -344,5 +359,38 @@ describe('Button', () => {
         expect(button).toMatchSnapshot();
       });
     });
+  });
+});
+
+describe('Button errors and warnings', () => {
+  it('empty string children should log a console.error', async () => {
+    const { container } = render(<Button>{''}</Button>);
+
+    let button;
+    await waitFor(() => {
+      button = container.querySelector('button');
+    });
+
+    expect(button).toBeInTheDocument();
+    expect(consoleErrorMock).toHaveBeenCalledTimes(1);
+    expect(consoleWarnMock).not.toBeCalled();
+  });
+
+  it('assigning redundant icon size should log a console.warn', async () => {
+    const { container } = render(
+      <Button
+        icon={<AddCircle size="medium" />}
+        aria-label="Button with icon"
+      />,
+    );
+
+    let button;
+    await waitFor(() => {
+      button = container.querySelector('button');
+    });
+
+    expect(button).toBeInTheDocument();
+    expect(consoleErrorMock).not.toBeCalled();
+    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 });
