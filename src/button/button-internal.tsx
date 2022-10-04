@@ -83,11 +83,12 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   const Element = as || 'button';
   const { focusProps, isFocusVisible } = useFocusRing();
 
-  function renderIcon(originalIcon: JSX.Element) {
+  function renderIcon(originalIcon: JSX.Element, key: string) {
     // Check if the Icon has a provided custom size prop already
     return originalIcon.props.size
       ? originalIcon
       : cloneElement(originalIcon, {
+          key,
           // Handle large buttons having medium sized Icons by default, and small / medium as defined
           size: size === 'large' ? 'medium' : size,
         });
@@ -113,22 +114,25 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
       })}
     >
       {icon ? (
-        renderIcon(icon)
+        renderIcon(icon, 'button-icon-only')
       ) : (
         <span
           css={innerContentStyle({
             size,
           })}
         >
-          {iconLeft && renderIcon(iconLeft)}
+          {iconLeft && renderIcon(iconLeft, 'button-left-icon')}
           {typeof children === 'string' && !disableTitleCase
             ? setTitleCase(children as string)
             : children}
-          {iconRight && renderIcon(iconRight)}
+          {iconRight && renderIcon(iconRight, 'button-right-icon')}
         </span>
       )}
       {isLoading && (
-        <ButtonLoader {...{ size, variant, inverted, isIconOnly: !!icon }} />
+        <ButtonLoader
+          key="button-loader"
+          {...{ size, variant, inverted, isIconOnly: !!icon }}
+        />
       )}
     </Element>
   );
