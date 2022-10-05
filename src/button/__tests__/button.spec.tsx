@@ -45,8 +45,8 @@ function TestRefButton() {
 }
 
 describe('Button', () => {
-  // Ensure no warnings or errors have been logged to the console
-  afterAll(() => {
+  // Ensure no warnings or errors have been logged to the console after each test
+  afterEach(() => {
     expect(consoleErrorMock).not.toBeCalled();
     expect(consoleWarnMock).not.toBeCalled();
   });
