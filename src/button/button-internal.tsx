@@ -2,7 +2,7 @@ import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { logWafflesDebug, setTitleCase } from '../helpers';
+import { logsWafflesError, logWafflesWarning, setTitleCase } from '../helpers';
 
 import { buttonStyle, innerContentStyle } from './styles';
 import ButtonLoader from './loader';
@@ -76,7 +76,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
 ) {
   // Log console.error when an empty string is passed as incorrect syntax
   if (typeof children === 'string' && children.length === 0) {
-    logWafflesDebug(MESSAGES.EMPTY_CHILDREN, true);
+    logsWafflesError(MESSAGES.EMPTY_CHILDREN);
   }
 
   const Element = as || 'button';
@@ -88,7 +88,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
       (originalIcon.props.size === 'medium' && size === 'medium') ||
       (originalIcon.props.size === 'small' && size === 'small')
     ) {
-      logWafflesDebug(MESSAGES.REDUNDANT_ICON_SIZE);
+      logWafflesWarning(MESSAGES.REDUNDANT_ICON_SIZE);
     }
 
     // Check if the Icon has a provided custom size prop already
