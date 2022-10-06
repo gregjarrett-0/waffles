@@ -362,7 +362,7 @@ describe('Button', () => {
   });
 });
 
-describe('Button errors and warnings', () => {
+describe('Button errors', () => {
   it('empty string children should log a console.error', async () => {
     const { container } = render(<Button>{''}</Button>);
 
@@ -374,23 +374,5 @@ describe('Button errors and warnings', () => {
     expect(button).toBeInTheDocument();
     expect(consoleErrorMock).toHaveBeenCalledTimes(1);
     expect(consoleWarnMock).not.toBeCalled();
-  });
-
-  it('assigning redundant icon size should log a console.warn', async () => {
-    const { container } = render(
-      <Button
-        icon={<AddCircle size="medium" />}
-        aria-label="Button with icon"
-      />,
-    );
-
-    let button;
-    await waitFor(() => {
-      button = container.querySelector('button');
-    });
-
-    expect(button).toBeInTheDocument();
-    expect(consoleErrorMock).not.toBeCalled();
-    expect(consoleWarnMock).toHaveBeenCalledTimes(1);
   });
 });

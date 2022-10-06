@@ -2,7 +2,7 @@ import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { logsWafflesError, logWafflesWarning, setTitleCase } from '../helpers';
+import { logsWafflesError, setTitleCase } from '../helpers';
 
 import { buttonStyle, innerContentStyle } from './styles';
 import ButtonLoader from './loader';
@@ -83,14 +83,6 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   const { focusProps, isFocusVisible } = useFocusRing();
 
   function renderIcon(originalIcon: JSX.Element, key: string) {
-    // Log warning if Icon size is set unnecessarily to associated default
-    if (
-      (originalIcon.props.size === 'medium' && size === 'medium') ||
-      (originalIcon.props.size === 'small' && size === 'small')
-    ) {
-      logWafflesWarning(MESSAGES.REDUNDANT_ICON_SIZE);
-    }
-
     // Check if the Icon has a provided custom size prop already
     return originalIcon.props.size
       ? originalIcon
