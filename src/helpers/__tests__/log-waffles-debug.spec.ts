@@ -1,14 +1,14 @@
 import {
-  logWafflesError,
-  logWafflesWarning,
+  logError,
+  logWarning,
   WAFFLES_ERROR_PREFIX,
   WAFFLES_WARN_PREFIX,
 } from '../log-waffles-debug';
 
 describe('Waffles errors and warnings', () => {
-  it('logWafflesError should log a console.error', async () => {
+  it('logError util should log a console.error', async () => {
     const consoleErrorMock = jest.spyOn(console, 'error').mockImplementation();
-    logWafflesError('Test error message');
+    logError('Test error message');
 
     expect(consoleErrorMock).toHaveBeenCalledTimes(1);
     expect(consoleErrorMock).toHaveBeenCalledWith(
@@ -18,9 +18,9 @@ describe('Waffles errors and warnings', () => {
     consoleErrorMock.mockReset();
   });
 
-  it('logWafflesError should log a console.warn', async () => {
+  it('logWarn util should log a console.warn', async () => {
     const consoleWarnMock = jest.spyOn(console, 'warn').mockImplementation();
-    logWafflesWarning('Test warning message');
+    logWarning('Test warning message');
 
     expect(consoleWarnMock).toHaveBeenCalledTimes(1);
     expect(consoleWarnMock).toHaveBeenCalledWith(

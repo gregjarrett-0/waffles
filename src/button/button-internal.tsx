@@ -2,7 +2,7 @@ import React, { cloneElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
-import { logsWafflesError, setTitleCase } from '../helpers';
+import { logError, setTitleCase } from '../helpers';
 
 import { buttonStyle, innerContentStyle } from './styles';
 import ButtonLoader from './loader';
@@ -76,7 +76,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
 ) {
   // Log console.error when an empty string is passed as incorrect syntax
   if (typeof children === 'string' && children.length === 0) {
-    logsWafflesError(MESSAGES.EMPTY_CHILDREN);
+    logError(MESSAGES.EMPTY_CHILDREN);
   }
 
   const Element = as || 'button';

@@ -10,7 +10,7 @@ export const WAFFLES_WARN_PREFIX = 'WAFFLES Warning: ';
  *
  * @param message The message to provide alongside the error
  */
-export function logWafflesError(message: string) {
+export function logError(message: string) {
   console.error(WAFFLES_ERROR_PREFIX.concat(message));
 }
 
@@ -19,6 +19,6 @@ export function logWafflesError(message: string) {
  *
  * @param message The message to provide alongside the warning
  */
-export function logWafflesWarning(message: string) {
+export function logWarning(message: string) {
   console.warn(WAFFLES_WARN_PREFIX.concat(message));
 }

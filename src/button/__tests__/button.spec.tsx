@@ -4,7 +4,7 @@ import { render, fireEvent, waitFor } from '@testing-library/react';
 import { Button } from '../index';
 import { AddCircle, ChevronRight } from '../../icon';
 
-// These can probably be moved into a global location for all tests at a later date
+// TODO: These can probably be moved into a global location for all tests at a later date - ixTec
 const consoleErrorMock = jest.spyOn(console, 'error').mockImplementation();
 const consoleWarnMock = jest.spyOn(console, 'warn').mockImplementation();
 
