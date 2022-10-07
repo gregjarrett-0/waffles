@@ -15,6 +15,11 @@ const wrapperStyle = css`
     grid-template-columns: 1fr 1fr;
     grid-gap: ${tokens.spacing.medium};
   }
+
+  // Add margin-top if a h3 precedes it
+  h3 ~ & {
+    margin-top: ${tokens.spacing.medium};
+  }
 `;
 
 type BestPracticesProps = {
