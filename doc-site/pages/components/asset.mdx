@@ -10,7 +10,7 @@ import { Link } from '@datacamp/waffles/link';
 import BasicUsage from '../../examples/asset/basic-usage';
 import CustomSizeColor from '../../examples/asset/custom-size-color';
 
-<Layout title="Asset" description="Asset components are a collection of responsive DataCamp assets, such as a large icon or company logo.">
+<Layout title="Asset" description="A collection of responsive DataCamp assets, such as large icons or partner logos.">
 
 <Notification
   title="DataCamp Brand"
@@ -24,17 +24,17 @@ import CustomSizeColor from '../../examples/asset/custom-size-color';
 
 ## Usage guidance
 
-Assets are used to help enhance content on a page or in a container. They will often help catch the user's attention.
+An `Asset` is used to help enhance content on a page or in a container, often with the intention of catching the user's attention.
 
-They are **responsive** by default and will fit to their parent container if no `width` or `height` is provided (whilst still adhering to their `viewBox` aspect ratio). Assets will also inherit the `color` of their parent container by default too.
+All `Assets` are **responsive** by default and will fit to their parent container if no `width` or `height` is provided (whilst still adhering to their `viewBox` aspect ratio). `Assets` will also inherit the `color` of their parent container by default too.
 
-Excluding Assets that have the `Colored` suffix in their names, the color of an Asset is inherited but can also be set on the `svg` element itself.
+Excluding `Assets` that have the `Colored` suffix in their names, the color of an `Asset` is inherited by default but can also be overwritten on the `svg` element itself.
 
-For use-cases which are not React-based, we provide a download link for each Asset type below their examples, but otherwise the React components should be used.
+For use-cases which are not React-based, we provide a download link for each `Asset` type below their examples, but otherwise the React components should be used.
 
 ## Best practices
 
-Assets should be used to provide visual context or expand upon a written point. In most cases, they should **not** be used as an identifying mark and instead an [Icon](/components/icon) should be used.
+An `Asset` should be used to provide visual context or expand upon a written point. In most cases, it should **not** be used as an identifying mark and instead an [Icon](/components/icon) should be used.
 
 <BestPractices>
   <BestPractices.Recommended>
