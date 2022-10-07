@@ -3,25 +3,40 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
+type TableWrapperStyleOptions = {
+  isFocusVisible: boolean;
+};
+
+export function tableWrapperStyle({
+  isFocusVisible,
+}: TableWrapperStyleOptions) {
+  return css`
+    outline: 0;
+    border-radius: ${tokens.borderRadius.medium};
+    overflow: auto;
+    transition: box-shadow 125ms ease-out;
+
+    ${isFocusVisible && `box-shadow: 0 0 0 2px ${tokens.colors.blueDark};`}
+  `;
+}
+
 export function tableStyle() {
   return css`
+    border: 0;
     border-collapse: separate;
-    table-layout: fixed;
     border-spacing: 0;
-    width: 100%;
+    margin: 0;
   `;
 }
 
 const cellBaseStyle = css`
   font-family: ${tokens.fontFamilies.sansSerif};
   text-align: left;
-  word-wrap: break-word;
-  vertical-align: top;
+  vertical-align: text-top;
   padding: ${tokens.spacing.medium};
-  overflow: hidden;
 `;
 
-export function columnStyle() {
+export function headCellStyle() {
   return css`
     ${cellBaseStyle}
     font-size: ${tokens.fontSizes.small};
@@ -30,6 +45,8 @@ export function columnStyle() {
     letter-spacing: ${tokens.letterSpacing.relaxed};
     text-transform: uppercase;
     border-top: 0;
+    min-width: 120px;
+    max-width: 90vw;
   `;
 }
 
@@ -40,6 +57,7 @@ export function cellStyle() {
     font-weight: ${tokens.fontWeights.regular};
     line-height: ${tokens.lineHeights.relaxed};
     background-color: ${tokens.colors.white};
+
     border-top: ${tokens.borderWidth.thin} solid
       ${hexToRgba(tokens.colors.navy, 0.15)};
 
