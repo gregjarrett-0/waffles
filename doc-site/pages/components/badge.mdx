@@ -1,6 +1,7 @@
 import * as BadgeExports from '@datacamp/waffles/badge';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,7 +11,38 @@ import playgroundConfig from '../../examples/badge/playground-config';
 import Variants from '../../examples/badge/variants';
 import Sizes from '../../examples/badge/sizes';
 
-<Layout title="Badge" description="🚧 This page is under construction">
+<Layout title="Badge" description="Small descriptive tags for indicating the status of an element or action.">
+
+## Usage guidance
+
+A Badge holds a very small amount of information and should be positioned in close proximity to other components to help draw attention and provide context, e.g. a "New" tag for new options in a [Menu](/components/menu).
+
+The content of a Badge will always be show as uppercase and is available in three different sizes: `small`, `medium` and `large`. In most cases, the default value should be used.
+
+The colors of a Badge should never be overwritten, as they are chosen for suitable accessibility and brand requirements.
+
+Badges should **never** be interactive and instead a [Button](/components/button) or the future `Tag` component used if interaction is desired.
+
+## Best practices
+
+Assets should be used to provide visual context or expand upon a written point. They should **not** contain icons or anything besides text.
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use to give a status update&mdash;such as 'NEW'
+    - use text that is both succinct and unambiguous
+    - use at most two short words as Badge content
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - provide interaction with the Badge component
+    - use too many different colored Badges together
+    - use a different `size` to surrounding text
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
