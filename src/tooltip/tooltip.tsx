@@ -46,7 +46,7 @@ type TooltipProps = {
     | 'bottomRight'
     | 'topLeft'
     | 'topRight';
-  /* Sets the distance between tooltip and it's trigger. See [design tokens](/foundation/design-tokens/) for value of default. */
+  /* Sets the distance between tooltip and it's trigger. See [Design Tokens](/foundation/design-tokens/) for value of default. */
   /* @default tokens.spacing.small */
   offset?: string;
   /* Sets the style of the tooltip suitable for dark backgrounds. */

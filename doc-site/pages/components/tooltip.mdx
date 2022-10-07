@@ -1,6 +1,7 @@
 import * as TooltipExports from '@datacamp/waffles/tooltip';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -12,7 +13,54 @@ import WithComplexContent from '../../examples/tooltip/with-complex-content';
 import WithinInlineText from '../../examples/tooltip/within-inline-text';
 import Inverted from '../../examples/tooltip/inverted';
 
-<Layout title="Tooltip" description="🚧 This page is under construction">
+<Layout title="Tooltip" description="A floating element that provides helpful, but non-essential information for another element on hover or focus.">
+
+## Usage guidelines
+
+The content of a `Tooltip` should be non-critical information but instead provide _additional_ information within the context, meaning it should be _nice-to-have_ and not _essential_. This is largely due to some common accessibility concerns and mobile interaction difficulties with tooltips in general. As a result of this, `Tooltips` should be used sparingly and if you find yourself using requiring a lot then consider clarifying the language and experience of the design.
+
+Additional non-interactive elements can also be used within the content of a `Tooltip`, such as custom styling or [Icons](/components/icon). If interaction is desired, then a [Dialog](/components/dialog) should be used instead.
+
+A `Tooltip` will appear on hover or focus of the trigger, and remain visible until the focus or cursor is moved away. The `placement` of a `Tooltip` should be chosen based on the positioning of the trigger element on a page. It may be necessary to adjust the `placement` value at different breakpoints to accommodate any layout changes.
+
+## Best practices
+
+### General
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use to provide appropriate additional information
+    - use short and succinct content
+    - use to describe an [Icon](/components/icon) or UI element
+    - choose a suitable `placement` value so that the Tooltip does not overflow the parent container
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - provide **critical** information as content which could be overlooked
+    - use interactive elements within a Tooltip&mdash;such as [Link](/components/link)
+
+  </BestPractices.Discouraged>
+</BestPractices>
+
+### Trigger
+
+A `Tooltip` trigger can be almost any element; however when you wish to provide supporting information, or in cases where it does not make sense to have it on a specific element, you should use the `Help`/`HelpCircle` [Icon](/components/icon) as the trigger instead. A similar approach should be taken when using a `Tooltip` inline with text.
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use with icon-only [Buttons](/components/button)
+    - use `Help`/`HelpCircle` [Icon](/components/icon) where trigger is not related
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use a Tooltip with **any** `disabled` element as a trigger, such as [Button](/components/button)&mdash;place alongside instead
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
