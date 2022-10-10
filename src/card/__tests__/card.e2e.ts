@@ -27,4 +27,10 @@ describe('Card', () => {
     cy.get('a').focus();
     cy.findByText('Card as Link').should('exist');
   });
+
+  it('renders hover effect when element inside is focused', () => {
+    cy.loadStory('card-basic');
+    cy.get('button').focus();
+    cy.findByText('Action').should('exist');
+  });
 });
