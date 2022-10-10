@@ -26,7 +26,7 @@ import CustomSizeColor from '../../examples/asset/custom-size-color';
 
 An `Asset` is used to help enhance content on a page or in a container, often with the intention of catching the user's attention.
 
-All `Assets` are **responsive** by default and will fit to their parent container if no `width` or `height` is provided (whilst still adhering to their `viewBox` aspect ratio). `Assets` will also inherit the `color` of their parent container by default too.
+All `Assets` are **responsive** by default and will fit to their parent container if no `width` or `height` is provided (whilst still adhering to their `viewBox` aspect ratio). Please note, both properties should not be provided together as this will break the responsive scaling behavior. `Assets` will also inherit the `color` of their parent container by default too.
 
 Excluding `Assets` that have the `Colored` suffix in their names, the color of an `Asset` is inherited by default but can also be overwritten on the `svg` element itself.
 
