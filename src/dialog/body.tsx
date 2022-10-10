@@ -17,8 +17,8 @@ function Body({ children, ...restProps }: BodyProps) {
       {...restProps}
       ref={wrapperRef}
       css={bodyStyle({
-        showShadowTop: !isAtTop,
-        showShadowBottom: !isAtBottom,
+        hasShadowTop: !isAtTop,
+        hasShadowBottom: !isAtBottom,
       })}
     >
       {children}
