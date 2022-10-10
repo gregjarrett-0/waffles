@@ -42,9 +42,18 @@ export function cardStyle({
     css`
       &:hover {
         box-shadow: ${tokens.boxShadow.thick};
+        transform: translateY(-1px);
+
         ${isFocusVisible &&
         `box-shadow: 0 0 0 2px ${tokens.colors.blueDark}, ${tokens.boxShadow.thick};`}
-        transform: translateY(-1px);
+      }
+
+      &:focus-within {
+        ${!isFocusVisible &&
+        css`
+          box-shadow: ${tokens.boxShadow.thick};
+          transform: translateY(-1px);
+        `}
       }
     `}
   `;
