@@ -76,13 +76,13 @@ exports[`Notification renders snapshot of inverted notification with all optiona
 .emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .emotion-6 {
@@ -290,6 +290,7 @@ exports[`Notification renders snapshot of inverted notification with all optiona
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .emotion-13::after {
@@ -486,13 +487,13 @@ exports[`Notification renders snapshot of regular notification with all optional
 .emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .emotion-6 {
@@ -700,6 +701,7 @@ exports[`Notification renders snapshot of regular notification with all optional
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .emotion-13::after {

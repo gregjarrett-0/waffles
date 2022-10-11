@@ -83,13 +83,13 @@ exports[`Toast render snapshot of default toast 1`] = `
 .emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .emotion-6 {
@@ -176,6 +176,7 @@ exports[`Toast render snapshot of default toast 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .emotion-8::after {
@@ -353,13 +354,13 @@ exports[`Toast render snapshot of error toast 1`] = `
 .emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .emotion-6 {
@@ -459,6 +460,7 @@ exports[`Toast render snapshot of error toast 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .emotion-9::after {
@@ -641,13 +643,13 @@ exports[`Toast render snapshot of success toast 1`] = `
 .emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .emotion-6 {
@@ -731,6 +733,7 @@ exports[`Toast render snapshot of success toast 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .emotion-8::after {
@@ -909,13 +912,13 @@ exports[`Toast render snapshot of warning toast 1`] = `
 .emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 .emotion-6 {
@@ -999,6 +1002,7 @@ exports[`Toast render snapshot of warning toast 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .emotion-8::after {
