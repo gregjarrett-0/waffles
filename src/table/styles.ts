@@ -6,23 +6,38 @@ import { hexToRgba } from '../helpers';
 // Explicit height for head cells must be set to offset shadows from top
 const HEAD_CELL_HEIGHT = 48;
 
-// Simple wrapper required for shadows to render properly
-export function outerWrapperStyle() {
-  return css`
-    position: relative;
-  `;
-}
-
 type WithShadows = {
   hasShadowLeft: boolean;
   hasShadowRight: boolean;
 };
 
+// Simple wrapper required for shadows to render properly
+export function outerWrapperStyle({
+  hasShadowLeft,
+  hasShadowRight,
+}: WithShadows) {
+  return css`
+    position: relative;
+    mask-image: linear-gradient(
+        90deg,
+        ${hasShadowLeft && 'rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%'}
+          ${hasShadowRight && hasShadowLeft && ','}
+          ${hasShadowRight && 'rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%'}
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) ${HEAD_CELL_HEIGHT}px,
+        rgba(0, 0, 0, 1) ${HEAD_CELL_HEIGHT + 1}px,
+        rgba(0, 0, 0, 1) 100%
+      );
+  `;
+}
+
 type TableWrapperStyleOptions = {
   isFocusVisible: boolean;
 } & WithShadows;
 
-// When shadows are visible corners are not rounded
+// When shadows are visible corners of focus outline are not rounded
 export function tableWrapperStyle({
   isFocusVisible,
   hasShadowLeft,
@@ -49,9 +64,10 @@ export function tableWrapperStyle({
   `;
 }
 
-type ShadowsStyleOptions = WithShadows;
+type ShadowsStyleOptions = { inverted: boolean } & WithShadows;
 
 export function shadowsStyle({
+  inverted,
   hasShadowLeft,
   hasShadowRight,
 }: ShadowsStyleOptions) {
@@ -63,36 +79,70 @@ export function shadowsStyle({
     height: calc(100% - ${HEAD_CELL_HEIGHT}px);
     width: 100%;
     pointer-events: none;
+
     ${hasShadowLeft &&
     `border-left: ${tokens.borderWidth.thin} solid ${hexToRgba(
-      tokens.colors.navy,
-      0.15,
+      inverted ? tokens.colors.white : tokens.colors.navy,
+      0.25,
     )};`}
+
     ${hasShadowRight &&
     `border-right: ${tokens.borderWidth.thin} solid ${hexToRgba(
-      tokens.colors.navy,
-      0.15,
+      inverted ? tokens.colors.white : tokens.colors.navy,
+      0.25,
     )};`}
-    box-shadow: ${hasShadowLeft &&
-    'inset 12px 0 12px -12px rgba(5, 25, 45, 0.3)'}${hasShadowLeft &&
-    hasShadowRight &&
-    ','}${hasShadowRight && 'inset -12px 0 12px -12px rgba(5, 25, 45, 0.3)'};
+
+    ${inverted
+      ? css`
+          box-shadow: ${hasShadowLeft &&
+            `inset 24px 0 24px -24px rgba(0, 0, 0, 0.6)`}${hasShadowLeft &&
+            hasShadowRight &&
+            ','}${hasShadowRight &&
+            `inset -24px 0 24px -24px rgba(0, 0, 0, 0.6)`};
+        `
+      : css`
+          box-shadow: ${hasShadowLeft &&
+            `inset 12px 0 12px -12px ${hexToRgba(
+              tokens.colors.navy,
+              0.3,
+            )}`}${hasShadowLeft && hasShadowRight && ','}${hasShadowRight &&
+            `inset -12px 0 12px -12px ${hexToRgba(tokens.colors.navy, 0.3)}`};
+        `}
   `;
 }
 
-type TableStyleOptions = WithShadows;
+type TableStyleOptions = { inverted: boolean } & WithShadows;
 
 // Basic table styles with round corners applied to corner cells
 // When shadows are visible corners are not rounded
 export function tableStyle({
+  inverted,
   hasShadowLeft,
   hasShadowRight,
 }: TableStyleOptions) {
+  const borderColor = hexToRgba(
+    inverted ? tokens.colors.white : tokens.colors.navy,
+    0.15,
+  );
+
   return css`
     border: 0;
     border-collapse: separate;
     border-spacing: 0;
     margin: 0;
+
+    & tr td {
+      background-color: ${inverted
+        ? tokens.colors.navyLight
+        : tokens.colors.white};
+    }
+
+    & tr td,
+    & tr th {
+      color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+    }
+
+    // Round corners
 
     ${!hasShadowLeft &&
     css`
@@ -115,6 +165,24 @@ export function tableStyle({
         border-bottom-right-radius: ${tokens.borderRadius.medium};
       }
     `}
+
+    // Borders
+
+    tr td {
+      border-top: ${tokens.borderWidth.thin} solid ${borderColor};
+
+      &:first-of-type {
+        border-left: ${tokens.borderWidth.thin} solid ${borderColor};
+      }
+
+      &:last-of-type {
+        border-right: ${tokens.borderWidth.thin} solid ${borderColor};
+      }
+    }
+
+    tr:last-of-type td {
+      border-bottom: ${tokens.borderWidth.thin} solid ${borderColor};
+    }
   `;
 }
 
@@ -146,24 +214,5 @@ export function cellStyle() {
     font-size: ${tokens.fontSizes.medium};
     font-weight: ${tokens.fontWeights.regular};
     line-height: ${tokens.lineHeights.relaxed};
-    background-color: ${tokens.colors.white};
-
-    border-top: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.navy, 0.15)};
-
-    &:first-of-type {
-      border-left: ${tokens.borderWidth.thin} solid
-        ${hexToRgba(tokens.colors.navy, 0.15)};
-    }
-
-    &:last-of-type {
-      border-right: ${tokens.borderWidth.thin} solid
-        ${hexToRgba(tokens.colors.navy, 0.15)};
-    }
-
-    tr:last-of-type & {
-      border-bottom: ${tokens.borderWidth.thin} solid
-        ${hexToRgba(tokens.colors.navy, 0.15)};
-    }
   `;
 }

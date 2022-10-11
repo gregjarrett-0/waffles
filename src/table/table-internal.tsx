@@ -9,9 +9,11 @@ import {
   shadowsStyle,
 } from './styles';
 
-type TableProps = React.HTMLAttributes<HTMLTableElement>;
+type TableProps = {
+  inverted: boolean;
+} & React.HTMLAttributes<HTMLTableElement>;
 
-function TableInternal(props: TableProps) {
+function TableInternal({ inverted, ...restProps }: TableProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const { isAtLeft, isAtRight } = useScrollPosition(wrapperRef);
@@ -19,9 +21,10 @@ function TableInternal(props: TableProps) {
   const hasShadowRight = !isAtRight;
 
   return (
-    <div css={outerWrapperStyle()}>
+    <div css={outerWrapperStyle({ hasShadowLeft, hasShadowRight })}>
       <div
         css={shadowsStyle({
+          inverted,
           hasShadowLeft,
           hasShadowRight,
         })}
@@ -38,7 +41,10 @@ function TableInternal(props: TableProps) {
           hasShadowRight,
         })}
       >
-        <table {...props} css={tableStyle({ hasShadowLeft, hasShadowRight })} />
+        <table
+          {...restProps}
+          css={tableStyle({ inverted, hasShadowLeft, hasShadowRight })}
+        />
       </div>
     </div>
   );
