@@ -53,6 +53,7 @@ export { default as ExcelLogo } from './generated/excel-logo';
 export { default as GitLogo } from './generated/git-logo';
 export { default as GoogleLogo } from './generated/google-logo';
 export { default as HsbcLogo } from './generated/hsbc-logo';
+export { default as JuliaLogo } from './generated/julia-logo';
 export { default as MercedesBenzLogo } from './generated/mercedes-benz-logo';
 export { default as MicrosoftLogo } from './generated/microsoft-logo';
 export { default as OracleLogo } from './generated/oracle-logo';
@@ -72,6 +73,7 @@ export { default as WafflesColoredLogo } from './generated/waffles-colored-logo'
 export { default as WafflesLogo } from './generated/waffles-logo';
 export { default as ExcelLogomark } from './generated/excel-logomark';
 export { default as GitLogomark } from './generated/git-logomark';
+export { default as JuliaLogomark } from './generated/julia-logomark';
 export { default as PowerBiLogomark } from './generated/power-bi-logomark';
 export { default as PythonLogomark } from './generated/python-logomark';
 export { default as RLogomark } from './generated/r-logomark';
