@@ -6,6 +6,8 @@ import CloseButton from './close-button';
 
 type NotificationCardProps = {
   variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';
+  hideLeftDecor?: boolean;
+  isContentCentered?: boolean;
   inverted?: boolean;
   closable?: boolean;
   onClose?: () => void;
@@ -15,6 +17,8 @@ type NotificationCardProps = {
 function NotificationCardInternal(
   {
     variant = 'default',
+    hideLeftDecor = false,
+    isContentCentered = false,
     inverted = false,
     closable = false,
     onClose,
@@ -23,6 +27,8 @@ function NotificationCardInternal(
   }: NotificationCardProps,
   ref?: React.Ref<HTMLDivElement>,
 ) {
+  const isIconCentered = closable && isContentCentered;
+
   return (
     <section
       {...restProps}
@@ -30,9 +36,9 @@ function NotificationCardInternal(
       role="status"
       css={notificationStyle({ inverted })}
     >
-      <div css={decorStyle({ variant, inverted })} />
-      <Icon {...{ variant, inverted }} />
-      <div css={contentStyle({ closable })}>{children}</div>
+      {!hideLeftDecor && <div css={decorStyle({ variant, inverted })} />}
+      <Icon {...{ variant, inverted, isIconCentered }} />
+      <div css={contentStyle({ closable, isContentCentered })}>{children}</div>
       {closable && <CloseButton inverted={inverted} onClick={onClose} />}
     </section>
   );

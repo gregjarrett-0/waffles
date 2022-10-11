@@ -55,12 +55,14 @@ const invertedVariantMap = {
 
 type NotificationStyleStyleOptions = {
   variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
+  isBannerMode: boolean;
   inverted: boolean;
   isVisible: boolean;
 };
 
 export function notificationStyle({
   variant,
+  isBannerMode,
   inverted,
   isVisible,
 }: NotificationStyleStyleOptions) {
@@ -80,6 +82,16 @@ export function notificationStyle({
     width: 100%;
     // Animation
     opacity: 1;
+
+    // Overrides for styling the notification card as a banner
+    ${isBannerMode &&
+    css`
+      flex-grow: 0;
+      justify-content: center;
+      border-width: 0 0 ${tokens.borderWidth.thin};
+      border-radius: 0;
+    `}
+
     ${!isVisible &&
     css`
       animation: ${notificationExit()} 300ms ease-out forwards;

@@ -102,13 +102,22 @@ const invertedIconVariantMap = {
   },
 };
 
-export function iconWrapperStyle() {
+type IconWrapperStyleOptions = {
+  isIconCentered: boolean;
+};
+
+export function iconWrapperStyle({ isIconCentered }: IconWrapperStyleOptions) {
   return css`
     position: relative;
     z-index: ${tokens.zIndex.default};
     width: ${tokens.sizing.small};
     height: ${tokens.sizing.small};
     flex-shrink: 0;
+
+    ${isIconCentered &&
+    css`
+      margin-left: auto;
+    `}
   `;
 }
 
@@ -173,14 +182,22 @@ export function iconBackgroundStyle({
 
 type ContentStyleOptions = {
   closable: boolean;
+  isContentCentered: boolean;
 };
 
-export function contentStyle({ closable }: ContentStyleOptions) {
+export function contentStyle({
+  closable,
+  isContentCentered: isContentCentered,
+}: ContentStyleOptions) {
   return css`
     ${closable && `padding-right: ${tokens.spacing.small};`}
     padding-left: ${tokens.spacing.small};
-    flex-grow: 1;
     align-self: center;
+
+    ${!isContentCentered &&
+    css`
+      flex-grow: 1;
+    `}
   `;
 }
 
@@ -192,5 +209,6 @@ export function closeButtonStyle({ inverted }: CloseButtonStyleOptions) {
   return css`
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     flex-shrink: 0;
+    margin-left: auto;
   `;
 }

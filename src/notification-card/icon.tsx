@@ -14,9 +14,10 @@ type IconProps = {
     React.ComponentProps<typeof NotificationCard>['variant']
   >;
   inverted: boolean;
+  isIconCentered: boolean;
 };
 
-function Icon({ variant, inverted }: IconProps) {
+function Icon({ variant, inverted, isIconCentered }: IconProps) {
   function renderIcon() {
     switch (variant) {
       case 'success':
@@ -33,7 +34,7 @@ function Icon({ variant, inverted }: IconProps) {
   }
 
   return (
-    <div css={iconWrapperStyle()}>
+    <div css={iconWrapperStyle({ isIconCentered })}>
       <div css={iconBackgroundStyle({ variant, inverted })} />
       <div css={iconStyle({ variant, inverted })}>{renderIcon()}</div>
     </div>

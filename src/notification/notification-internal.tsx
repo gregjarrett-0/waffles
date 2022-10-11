@@ -9,6 +9,9 @@ type NotificationProps = {
   title: string;
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
+  /* Whether to display the notification as a banner or inline mode. */
+  /* @default inline */
+  mode?: 'inline' | 'banner';
   /* Defines the type of notification. */
   /* @default default */
   variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';
@@ -27,6 +30,7 @@ type NotificationProps = {
 function NotificationInternal({
   title,
   description,
+  mode = 'inline',
   variant = 'default',
   inverted = false,
   closable = false,
@@ -44,7 +48,7 @@ function NotificationInternal({
 
   return isAnimating ? (
     <Card
-      {...{ title, description, variant, inverted, closable, action }}
+      {...{ title, description, variant, mode, inverted, closable, action }}
       {...restProps}
       isVisible={isOpen}
       onClose={handleClose}

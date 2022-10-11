@@ -20,6 +20,7 @@ type CardProps = {
   isVisible: boolean;
   title: string;
   description: React.ReactNode;
+  mode: NonNullable<React.ComponentProps<typeof Notification>['mode']>;
   variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
   inverted: boolean;
   closable: boolean;
@@ -31,6 +32,7 @@ function Card({
   isVisible,
   title,
   description,
+  mode,
   variant,
   inverted,
   closable,
@@ -40,6 +42,7 @@ function Card({
 }: CardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const layout = useInternalLayout(cardRef);
+  const isBannerMode = mode === 'banner';
 
   function renderAnnouncement() {
     switch (variant) {
@@ -74,10 +77,17 @@ function Card({
 
   return (
     <NotificationCard
-      {...{ variant, inverted, closable, onClose }}
+      {...{
+        variant,
+        hideLeftDecor: isBannerMode,
+        isContentCentered: isBannerMode && layout === 'horizontal',
+        inverted,
+        closable,
+        onClose,
+      }}
       {...restProps}
       ref={cardRef}
-      css={notificationStyle({ variant, inverted, isVisible })}
+      css={notificationStyle({ isBannerMode, variant, inverted, isVisible })}
     >
       <div css={contentStyle({ layout })}>
         <div css={textContentStyle({ layout })}>
