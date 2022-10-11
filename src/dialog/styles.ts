@@ -80,9 +80,11 @@ export function bodyStyle({ hasShadowTop, hasShadowBottom }: BodyStyleOptions) {
     overflow-x: hidden;
     overflow-y: auto;
     box-shadow: ${hasShadowTop &&
-      'inset 0 12px 12px -12px rgba(5, 25, 45, 0.3)'}${hasShadowTop &&
-      hasShadowBottom &&
-      ','}${hasShadowBottom && 'inset 0 -12px 12px -12px rgba(5, 25, 45, 0.3)'};
+      `inset 0 12px 12px -12px ${hexToRgba(
+        tokens.colors.navy,
+        0.3,
+      )}`}${hasShadowTop && hasShadowBottom && ','}${hasShadowBottom &&
+      `inset 0 -12px 12px -12px ${hexToRgba(tokens.colors.navy, 0.3)}`};
   `;
 }
 
