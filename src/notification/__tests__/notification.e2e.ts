@@ -12,6 +12,13 @@ describe('Notification', () => {
     cy.findByLabelText('Close notification').should('exist');
   });
 
+  it('render a banner notification', () => {
+    cy.loadStory('notification-banner');
+    cy.findByText('Banner notification title').should('exist');
+    cy.findByText('Banner notification description.').should('exist');
+    cy.findByLabelText('Close notification').should('exist');
+  });
+
   it('notification could be hidden by clicking a close button', () => {
     cy.loadStory('notification-basic');
     cy.findByLabelText('Close notification').click();
