@@ -4,9 +4,10 @@ import { useFocusRing } from '@react-aria/focus';
 import useScrollPosition from './use-scroll-position';
 import {
   outerWrapperStyle,
+  maskStyle,
+  shadowsStyle,
   tableWrapperStyle,
   tableStyle,
-  shadowsStyle,
 } from './styles';
 
 type TableProps = {
@@ -26,30 +27,30 @@ function TableInternal({
   const hasShadowRight = !isAtRight;
 
   return (
-    <div css={outerWrapperStyle({ hasShadowLeft, hasShadowRight })}>
-      <div
-        css={shadowsStyle({
-          inverted,
-          hasShadowLeft,
-          hasShadowRight,
-        })}
-      />
-      <div
-        {...focusProps}
-        ref={wrapperRef}
-        role="region"
-        aria-label={ariaLabel}
-        tabIndex={0}
-        css={tableWrapperStyle({
-          isFocusVisible,
-          hasShadowLeft,
-          hasShadowRight,
-        })}
-      >
-        <table
-          {...restProps}
-          css={tableStyle({ inverted, hasShadowLeft, hasShadowRight })}
+    <div
+      css={outerWrapperStyle({ isFocusVisible, hasShadowLeft, hasShadowRight })}
+    >
+      <div css={maskStyle({ hasShadowLeft, hasShadowRight })}>
+        <div
+          css={shadowsStyle({
+            inverted,
+            hasShadowLeft,
+            hasShadowRight,
+          })}
         />
+        <div
+          {...focusProps}
+          ref={wrapperRef}
+          role="region"
+          aria-label={ariaLabel}
+          tabIndex={0}
+          css={tableWrapperStyle()}
+        >
+          <table
+            {...restProps}
+            css={tableStyle({ inverted, hasShadowLeft, hasShadowRight })}
+          />
+        </div>
       </div>
     </div>
   );

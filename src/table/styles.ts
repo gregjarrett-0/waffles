@@ -12,43 +12,22 @@ type WithShadows = {
   hasShadowRight: boolean;
 };
 
-// Wrapper required for shadows to render properly
-// Also masking table column labels
-export function outerWrapperStyle({
-  hasShadowLeft,
-  hasShadowRight,
-}: WithShadows) {
-  return css`
-    position: relative;
-    mask-image: linear-gradient(
-        90deg,
-        ${hasShadowLeft && 'rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%'}
-          ${hasShadowRight && hasShadowLeft && ','}
-          ${hasShadowRight && 'rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%'}
-      ),
-      linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) ${HEAD_CELL_HEIGHT}px,
-        rgba(0, 0, 0, 1) ${HEAD_CELL_HEIGHT + 1}px,
-        rgba(0, 0, 0, 1) 100%
-      );
-  `;
-}
-
-type TableWrapperStyleOptions = {
+type OuterWrapperStyleOptions = {
   isFocusVisible: boolean;
 } & WithShadows;
 
-// When shadows are visible corners of focus outline are not rounded
-export function tableWrapperStyle({
+// Wrapper required for shadows and focus outline to render properly
+// When table's content is scrolling, corners of focus outline are straight
+export function outerWrapperStyle({
   isFocusVisible,
   hasShadowLeft,
   hasShadowRight,
-}: TableWrapperStyleOptions) {
+}: OuterWrapperStyleOptions) {
   return css`
-    outline: 0;
-    overflow: auto;
+    position: relative;
     transition: box-shadow 125ms ease-out;
+
+    ${isFocusVisible && `box-shadow: 0 0 0 2px ${tokens.colors.blueDark};`}
 
     ${!hasShadowLeft &&
     css`
@@ -61,13 +40,40 @@ export function tableWrapperStyle({
       border-top-right-radius: ${tokens.borderRadius.medium};
       border-bottom-right-radius: ${tokens.borderRadius.medium};
     `}
+  `;
+}
 
-    ${isFocusVisible && `box-shadow: 0 0 0 2px ${tokens.colors.blueDark};`}
+// Mask column labels when content is being scrolled
+export function maskStyle({ hasShadowLeft, hasShadowRight }: WithShadows) {
+  return css`
+    mask-image: linear-gradient(
+        90deg,
+        ${hasShadowLeft &&
+          `rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) ${tokens.spacing.xxlarge}`}
+          ${hasShadowRight && hasShadowLeft && ','}
+          ${hasShadowRight &&
+          `rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0) 100%`}
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) ${HEAD_CELL_HEIGHT}px,
+        rgba(0, 0, 0, 1) ${HEAD_CELL_HEIGHT + 1}px,
+        rgba(0, 0, 0, 1) 100%
+      );
+  `;
+}
+
+// Allow content to be scrollable
+export function tableWrapperStyle() {
+  return css`
+    outline: 0;
+    overflow: auto;
   `;
 }
 
 type ShadowsStyleOptions = { inverted: boolean } & WithShadows;
 
+// Show shadows to the sides when content is being scrolled
 export function shadowsStyle({
   inverted,
   hasShadowLeft,
@@ -105,7 +111,7 @@ export function shadowsStyle({
 type TableStyleOptions = { inverted: boolean } & WithShadows;
 
 // Basic table styles with round corners applied to corner cells
-// When shadows are visible corners are not rounded
+// When content is being scrolled, corners are straight
 export function tableStyle({
   inverted,
   hasShadowLeft,
