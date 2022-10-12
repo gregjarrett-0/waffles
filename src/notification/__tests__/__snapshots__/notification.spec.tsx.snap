@@ -95,6 +95,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  max-width: 1200px;
 }
 
 .emotion-6 {
@@ -503,6 +504,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  max-width: 1200px;
 }
 
 .emotion-7 {
@@ -912,6 +914,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  max-width: 1200px;
 }
 
 .emotion-6 {
@@ -1320,6 +1323,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  max-width: 1200px;
 }
 
 .emotion-7 {

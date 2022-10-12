@@ -108,6 +108,7 @@ export function contentStyle({ layout }: ContentStyleOptions) {
     display: flex;
     flex-direction: ${layout === 'horizontal' ? 'row' : 'column'};
     flex-grow: 1;
+    max-width: 1200px;
   `;
 }
 
