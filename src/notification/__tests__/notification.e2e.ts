@@ -26,14 +26,14 @@ describe('Notification', () => {
     cy.findByText('Basic notification title').should('not.exist');
   });
 
-  describe('render all variants', () => {
+  describe('render all variants in both modes', () => {
     Object.keys(screenSizes).forEach((size) => {
       const [width, height] = screenSizes[size];
 
       it(`on ${size} screen device`, () => {
         cy.viewport(width, height);
         cy.loadStory('notification-variants');
-        cy.get('section').should('have.length', 10);
+        cy.get('section').should('have.length', 20);
       });
     });
   });

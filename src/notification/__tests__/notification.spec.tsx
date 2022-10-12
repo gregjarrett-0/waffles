@@ -137,7 +137,7 @@ describe('Notification', () => {
     });
   });
 
-  it('renders snapshot of regular notification with all optional content', async () => {
+  it('renders snapshot of regular inline notification with all optional content', async () => {
     const { container, getByText } = render(
       <Notification
         title="Notification title"
@@ -161,7 +161,7 @@ describe('Notification', () => {
     expect(notification).toMatchSnapshot();
   });
 
-  it('renders snapshot of inverted notification with all optional content', async () => {
+  it('renders snapshot of inverted inline notification with all optional content', async () => {
     const { container, getByText } = render(
       <Notification
         inverted
@@ -179,6 +179,57 @@ describe('Notification', () => {
     let title;
     await waitFor(() => {
       title = getByText('Inverted notification title');
+    });
+    const notification = container.querySelector('section');
+
+    expect(title).toBeInTheDocument();
+    expect(notification).toMatchSnapshot();
+  });
+
+  it('renders snapshot of regular banner notification with all optional content', async () => {
+    const { container, getByText } = render(
+      <Notification
+        title="Banner notification title"
+        description={
+          <>
+            Banner notification <strong>description</strong>.
+          </>
+        }
+        mode="banner"
+        closable
+        action={<Notification.ActionButton>Action</Notification.ActionButton>}
+      />,
+    );
+
+    let title;
+    await waitFor(() => {
+      title = getByText('Banner notification title');
+    });
+    const notification = container.querySelector('section');
+
+    expect(title).toBeInTheDocument();
+    expect(notification).toMatchSnapshot();
+  });
+
+  it('renders snapshot of inverted banner notification with all optional content', async () => {
+    const { container, getByText } = render(
+      <Notification
+        inverted
+        title="Banner notification title"
+        description={
+          <>
+            Banner notification <strong>description</strong>.
+          </>
+        }
+        mode="banner"
+        closable
+        action={<Notification.ActionButton>Action</Notification.ActionButton>}
+      />,
+    );
+
+    let title;
+    await waitFor(() => {
+      title = getByText('Banner notification title');
     });
     const notification = container.querySelector('section');
 

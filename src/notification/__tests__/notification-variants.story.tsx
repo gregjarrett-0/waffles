@@ -19,16 +19,31 @@ function Story() {
       <div css={wrapperStyle}>
         {variants.map((variant) => {
           return (
-            <Notification
-              key={`${variant}-notification`}
-              title={`Long ${variant} notification title`}
-              description="Long optional regular notification description."
-              variant={variant}
-              action={
-                <Notification.ActionButton>Action</Notification.ActionButton>
-              }
-              closable
-            />
+            <>
+              {/* Inline */}
+              <Notification
+                key={`${variant}-notification-inline`}
+                title={`Long ${variant} inline notification title`}
+                description="Long optional regular inline notification description."
+                variant={variant}
+                action={
+                  <Notification.ActionButton>Action</Notification.ActionButton>
+                }
+                closable
+              />
+              {/* Banner */}
+              <Notification
+                key={`${variant}-notification-banner`}
+                title={`Long ${variant} banner notification title`}
+                description="Long optional regular banner notification description."
+                variant={variant}
+                mode="banner"
+                action={
+                  <Notification.ActionButton>Action</Notification.ActionButton>
+                }
+                closable
+              />
+            </>
           );
         })}
       </div>
@@ -41,17 +56,33 @@ function Story() {
       >
         {variants.map((variant) => {
           return (
-            <Notification
-              key={`${variant}-notification`}
-              title={`Inverted ${variant} notification title`}
-              description="Long optional inverted notification description."
-              variant={variant}
-              action={
-                <Notification.ActionButton>Action</Notification.ActionButton>
-              }
-              closable
-              inverted
-            />
+            <>
+              {/* Inline */}
+              <Notification
+                key={`${variant}-notification-inline`}
+                title={`Inverted ${variant} inline notification title`}
+                description="Long optional inverted inline notification description."
+                variant={variant}
+                action={
+                  <Notification.ActionButton>Action</Notification.ActionButton>
+                }
+                closable
+                inverted
+              />
+              {/* Banner */}
+              <Notification
+                key={`${variant}-notification-banner`}
+                title={`Inverted ${variant} banner notification title`}
+                description="Long optional inverted banner notification description."
+                variant={variant}
+                mode="banner"
+                action={
+                  <Notification.ActionButton>Action</Notification.ActionButton>
+                }
+                closable
+                inverted
+              />
+            </>
           );
         })}
       </div>
