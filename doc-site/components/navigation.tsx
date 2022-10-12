@@ -59,18 +59,14 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/avatar">Avatar</Item>
               <Item href="/components/badge">Badge</Item>
               <Item href="/components/brand">Brand</Item>
-              <Item href="/components/card" isNew>
-                Card
-              </Item>
+              <Item href="/components/card">Card</Item>
               <Item href="/components/content-container">
                 Content Container
               </Item>
               <Item href="/components/empty-state">Empty State</Item>
               <Item href="/components/icon">Icon</Item>
               <Item href="/components/notification">Notification</Item>
-              <Item href="/components/progress" isNew>
-                Progress
-              </Item>
+              <Item href="/components/progress">Progress</Item>
             </SideNav.Subcategory>
             <SideNav.Subcategory label="Form">
               <Item href="/components/checkbox">Checkbox</Item>
