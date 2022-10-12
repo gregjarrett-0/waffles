@@ -9,7 +9,7 @@ type NotificationProps = {
   title: string;
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
-  /* Whether to display the notification as a banner or inline mode. */
+  /* Whether to display the notification as a banner or as an inline content. */
   /* @default inline */
   mode?: 'inline' | 'banner';
   /* Defines the type of notification. */
