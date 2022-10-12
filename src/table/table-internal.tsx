@@ -10,10 +10,15 @@ import {
 } from './styles';
 
 type TableProps = {
-  inverted: boolean;
+  inverted?: boolean;
+  'aria-label': string;
 } & React.HTMLAttributes<HTMLTableElement>;
 
-function TableInternal({ inverted, ...restProps }: TableProps) {
+function TableInternal({
+  inverted = false,
+  'aria-label': ariaLabel,
+  ...restProps
+}: TableProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const { isAtLeft, isAtRight } = useScrollPosition(wrapperRef);
@@ -33,7 +38,7 @@ function TableInternal({ inverted, ...restProps }: TableProps) {
         {...focusProps}
         ref={wrapperRef}
         role="region"
-        aria-label="Some table"
+        aria-label={ariaLabel}
         tabIndex={0}
         css={tableWrapperStyle({
           isFocusVisible,

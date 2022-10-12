@@ -3,7 +3,8 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
-// Explicit height for head cells must be set to offset shadows from top
+// Explicit height for head cells
+// Must be set to offset shadows from top and enable mask for thead
 const HEAD_CELL_HEIGHT = 48;
 
 type WithShadows = {
@@ -11,7 +12,8 @@ type WithShadows = {
   hasShadowRight: boolean;
 };
 
-// Simple wrapper required for shadows to render properly
+// Wrapper required for shadows to render properly
+// Also masking table column labels
 export function outerWrapperStyle({
   hasShadowLeft,
   hasShadowRight,
@@ -79,26 +81,15 @@ export function shadowsStyle({
     height: calc(100% - ${HEAD_CELL_HEIGHT}px);
     width: 100%;
     pointer-events: none;
-
-    ${hasShadowLeft &&
-    `border-left: ${tokens.borderWidth.thin} solid ${hexToRgba(
-      inverted ? tokens.colors.white : tokens.colors.navy,
-      0.25,
-    )};`}
-
-    ${hasShadowRight &&
-    `border-right: ${tokens.borderWidth.thin} solid ${hexToRgba(
-      inverted ? tokens.colors.white : tokens.colors.navy,
-      0.25,
-    )};`}
+    mix-blend-mode: multiply;
 
     ${inverted
       ? css`
           box-shadow: ${hasShadowLeft &&
-            `inset 24px 0 24px -24px rgba(0, 0, 0, 0.6)`}${hasShadowLeft &&
+            `inset 24px 0 24px -24px ${tokens.colors.navy}`}${hasShadowLeft &&
             hasShadowRight &&
             ','}${hasShadowRight &&
-            `inset -24px 0 24px -24px rgba(0, 0, 0, 0.6)`};
+            `inset -24px 0 24px -24px ${tokens.colors.navy}`};
         `
       : css`
           box-shadow: ${hasShadowLeft &&
