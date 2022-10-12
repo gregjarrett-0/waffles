@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
 import useScrollPosition from './use-scroll-position';
+import useIsScrollable from './use-is-scrollable';
 import {
   outerWrapperStyle,
   maskStyle,
@@ -22,13 +23,19 @@ function TableInternal({
 }: TableProps) {
   const { focusProps, isFocusVisible } = useFocusRing();
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const tableRef = useRef<HTMLTableElement>(null);
+  const isScrollable = useIsScrollable(wrapperRef, tableRef);
   const { isAtLeft, isAtRight } = useScrollPosition(wrapperRef);
   const hasShadowLeft = !isAtLeft;
   const hasShadowRight = !isAtRight;
 
   return (
     <div
-      css={outerWrapperStyle({ isFocusVisible, hasShadowLeft, hasShadowRight })}
+      css={outerWrapperStyle({
+        isFocusVisible: isFocusVisible && isScrollable,
+        hasShadowLeft,
+        hasShadowRight,
+      })}
     >
       <div css={maskStyle({ hasShadowLeft, hasShadowRight })}>
         <div
@@ -40,14 +47,15 @@ function TableInternal({
         />
         <div
           {...focusProps}
+          tabIndex={isScrollable ? 0 : -1}
           ref={wrapperRef}
           role="region"
           aria-label={ariaLabel}
-          tabIndex={0}
           css={tableWrapperStyle()}
         >
           <table
             {...restProps}
+            ref={tableRef}
             css={tableStyle({ inverted, hasShadowLeft, hasShadowRight })}
           />
         </div>
