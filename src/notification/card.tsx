@@ -1,5 +1,4 @@
 import React, { useRef, cloneElement } from 'react';
-import { css } from '@emotion/react';
 
 import { ScreenReaderOnly } from '../screen-reader-only';
 import { Paragraph } from '../paragraph';

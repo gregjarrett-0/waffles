@@ -26,7 +26,7 @@ describe('Notification', () => {
     cy.findByText('Basic notification title').should('not.exist');
   });
 
-  describe('render all variants in both modes', () => {
+  describe('render all variants in inline and banner mode', () => {
     Object.keys(screenSizes).forEach((size) => {
       const [width, height] = screenSizes[size];
 
