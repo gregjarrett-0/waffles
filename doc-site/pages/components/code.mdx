@@ -1,6 +1,7 @@
 import * as CodeExports from '@datacamp/waffles/code';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -12,6 +13,32 @@ import Sizes from '../../examples/code/sizes';
 import Inverted from '../../examples/code/inverted';
 
 <Layout title="Code" description="🚧 This page is under construction">
+
+## Usage guidelines
+
+The `Code` component can be used to highlight small snippets of code within other text. They are often used to share code with other developers, in a distinct and easily copyable state.
+
+There are three (3) `sizes` for `Code`, but by default it will inherit the `font-size` of it's parent. If you wish to use the component as a standalone element, without surrounding text, then you must specify the `size` as one of the other available values: `small`, `medium` or `large`.
+
+`Code` also has an `inverted` option for use with darker backgrounds. For both `inverted` and regular versions, the `Code` component has the style `mix-blend-mode: multiply` to help improve visibility on different colored backgrounds.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use for inline code snippets
+    - use for highlighting short strings within other text
+    - use shorter content, with several words at most
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use for multi-line code snippets&mdash;use [Code Block](/components/code-block) instead
+    - use for editing code
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
