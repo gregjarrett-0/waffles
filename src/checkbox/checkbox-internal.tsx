@@ -7,9 +7,7 @@ import { Text } from '../text';
 import { labelStyle, inputStyle, contentStyle } from './styles';
 import Checkmark from './checkmark';
 
-type CheckboxProps = {
-  /* The description displayed next to the Checkbox. */
-  children: React.ReactNode;
+type CheckboxBaseProps = {
   /* Sets the style of the Checkbox suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
@@ -18,6 +16,20 @@ type CheckboxProps = {
   error?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 
+type CheckboxWithDescription = {
+  /* The description displayed next to the Checkbox. */
+  children: React.ReactNode;
+  'aria-label'?: string;
+} & CheckboxBaseProps;
+
+type CheckboxNoDescription = {
+  children?: never;
+  /* [skip docs] */
+  'aria-label': string;
+} & CheckboxBaseProps;
+
+type CheckboxProps = CheckboxWithDescription | CheckboxNoDescription;
+
 function CheckboxInternal(
   {
     inverted = false,
@@ -25,6 +37,7 @@ function CheckboxInternal(
     disabled = false,
     error = false,
     children,
+    'aria-label': ariaLabel,
     ...restProps
   }: CheckboxProps,
   ref?: React.Ref<HTMLInputElement>,
@@ -39,13 +52,16 @@ function CheckboxInternal(
         type="checkbox"
         disabled={disabled}
         checked={checked}
-        css={inputStyle()}
         aria-invalid={error}
+        aria-label={ariaLabel}
+        css={inputStyle()}
       />
       <Checkmark {...{ inverted, checked, error, isFocusVisible }} />
-      <Text as="div" css={contentStyle({ inverted })}>
-        {children}
-      </Text>
+      {children && (
+        <Text as="div" css={contentStyle({ inverted })}>
+          {children}
+        </Text>
+      )}
     </label>
   );
 }
