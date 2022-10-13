@@ -128,10 +128,23 @@ export function tableStyle({
     border-spacing: 0;
     margin: 0;
 
-    & tr td {
+    // Colors
+
+    & tbody {
       background-color: ${inverted
         ? tokens.colors.navyLight
         : tokens.colors.white};
+    }
+
+    & tbody tr {
+      transition: background-color 125ms ease-out;
+
+      &:hover {
+        background-color: ${hexToRgba(
+          inverted ? tokens.colors.white : tokens.colors.navy,
+          0.05,
+        )};
+      }
     }
 
     & tr td,
@@ -186,7 +199,7 @@ export function tableStyle({
 const cellBaseStyle = css`
   font-family: ${tokens.fontFamilies.sansSerif};
   text-align: left;
-  vertical-align: text-top;
+  vertical-align: middle;
   padding: ${tokens.spacing.medium};
 `;
 
