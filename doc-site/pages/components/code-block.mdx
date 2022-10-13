@@ -1,6 +1,7 @@
 import * as CodeBlockExports from '@datacamp/waffles/code-block';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -11,7 +12,32 @@ import BasicUsage from '../../examples/code-block/basic-usage';
 import Sizes from '../../examples/code-block/sizes';
 import Inverted from '../../examples/code-block/inverted';
 
-<Layout title="Code Block" description="🚧 This page is under construction">
+<Layout title="Code Block" description="For presenting larger, single or multi-line, code snippets">
+
+## Usage guidance
+
+A `CodeBlock` can highlight a large amount of code on a page, including single lines, whilst maintaining formatting. They are used share code with other developers, in a distinct and easily copyable manner.
+
+There are three (3) `sizes` for `CodeBlock`, but in most cases the default value should be used. `CodeBlock` also has an `inverted` option for use with darker backgrounds.
+
+It should never be placed inline and instead the [Code](/components/code) component should be used.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use to display code snippets for copy or as read-only
+    - use for single or multi-line code snippets
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use for inline code snippets&mdash;use [Code](/components/code) instead
+    - use for editing code
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
