@@ -101,14 +101,19 @@ export function notificationStyle({
 
 type ContentStyleOptions = {
   layout: LayoutType;
+  isBannerMode: boolean;
 };
 
-export function contentStyle({ layout }: ContentStyleOptions) {
+export function contentStyle({ layout, isBannerMode }: ContentStyleOptions) {
   return css`
     display: flex;
     flex-direction: ${layout === 'horizontal' ? 'row' : 'column'};
     flex-grow: 1;
-    max-width: 1200px;
+
+    ${isBannerMode &&
+    css`
+      max-width: 1200px;
+    `}
   `;
 }
 

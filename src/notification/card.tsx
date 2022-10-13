@@ -1,4 +1,5 @@
 import React, { useRef, cloneElement } from 'react';
+import { css } from '@emotion/react';
 
 import { ScreenReaderOnly } from '../screen-reader-only';
 import { Paragraph } from '../paragraph';
@@ -89,7 +90,7 @@ function Card({
       ref={cardRef}
       css={notificationStyle({ isBannerMode, variant, inverted, isVisible })}
     >
-      <div css={contentStyle({ layout })}>
+      <div css={contentStyle({ layout, isBannerMode })}>
         <div css={textContentStyle({ layout })}>
           <Heading as="h2" size="medium" inverted={inverted} css={titleStyle()}>
             {renderAnnouncement()}
