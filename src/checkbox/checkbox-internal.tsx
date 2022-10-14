@@ -3,8 +3,9 @@ import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
 import { Text } from '../text';
+import { useId } from '../hooks';
 
-import { labelStyle, inputStyle, contentStyle } from './styles';
+import { wrapperStyle, inputStyle, labelStyle } from './styles';
 import Checkmark from './checkmark';
 
 type CheckboxBaseProps = {
@@ -22,13 +23,13 @@ type CheckboxWithDescription = {
   'aria-label'?: string;
 } & CheckboxBaseProps;
 
-type CheckboxNoDescription = {
+type CheckmarkOnly = {
   children?: never;
   /* [skip docs] */
   'aria-label': string;
 } & CheckboxBaseProps;
 
-type CheckboxProps = CheckboxWithDescription | CheckboxNoDescription;
+type CheckboxProps = CheckboxWithDescription | CheckmarkOnly;
 
 function CheckboxInternal(
   {
@@ -43,26 +44,32 @@ function CheckboxInternal(
   ref?: React.Ref<HTMLInputElement>,
 ) {
   const { isFocusVisible, focusProps } = useFocusRing();
+  const checkboxId = `checkbox-${useId()}`;
 
   return (
-    <label css={labelStyle({ disabled })}>
+    <div css={wrapperStyle({ disabled })}>
       <input
         {...mergeProps(focusProps, restProps)}
         ref={ref}
+        {...(children && { id: checkboxId })}
         type="checkbox"
         disabled={disabled}
         checked={checked}
         aria-invalid={error}
         aria-label={ariaLabel}
-        css={inputStyle()}
+        css={inputStyle({ disabled })}
       />
       <Checkmark {...{ inverted, checked, error, isFocusVisible }} />
       {children && (
-        <Text as="div" css={contentStyle({ inverted })}>
+        <Text
+          as="label"
+          htmlFor={checkboxId}
+          css={labelStyle({ disabled, inverted })}
+        >
           {children}
         </Text>
       )}
-    </label>
+    </div>
   );
 }
 
