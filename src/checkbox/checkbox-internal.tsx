@@ -12,6 +12,9 @@ type CheckboxBaseProps = {
   /* Sets the style of the Checkbox suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
+  /* Indicates indeterminate state, while `checked` property is ignored. */
+  /* @default false */
+  isIndeterminate?: boolean;
   /* Sets appropriate error styling, and `aria-invalid` attribute. */
   /* @default false */
   error?: boolean;
@@ -20,12 +23,12 @@ type CheckboxBaseProps = {
 type CheckboxWithDescription = {
   /* The description displayed next to the Checkbox. */
   children: React.ReactNode;
+  /* [skip docs] */
   'aria-label'?: string;
 } & CheckboxBaseProps;
 
 type CheckmarkOnly = {
   children?: never;
-  /* [skip docs] */
   'aria-label': string;
 } & CheckboxBaseProps;
 
@@ -36,6 +39,7 @@ function CheckboxInternal(
     inverted = false,
     checked = false,
     disabled = false,
+    isIndeterminate = false,
     error = false,
     children,
     'aria-label': ariaLabel,
@@ -55,11 +59,14 @@ function CheckboxInternal(
         type="checkbox"
         disabled={disabled}
         checked={checked}
+        aria-checked={isIndeterminate ? 'mixed' : checked}
         aria-invalid={error}
         aria-label={ariaLabel}
         css={inputStyle({ disabled })}
       />
-      <Checkmark {...{ inverted, checked, error, isFocusVisible }} />
+      <Checkmark
+        {...{ inverted, checked, isIndeterminate, error, isFocusVisible }}
+      />
       {children && (
         <Text
           as="label"
