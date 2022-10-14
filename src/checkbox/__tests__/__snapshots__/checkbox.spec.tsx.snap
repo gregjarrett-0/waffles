@@ -89,6 +89,7 @@ exports[`Checkbox renders snapshot of checked state 1`] = `
   class="emotion-0"
 >
   <input
+    aria-checked="true"
     aria-invalid="false"
     checked=""
     class="emotion-1"
@@ -208,6 +209,7 @@ exports[`Checkbox renders snapshot of disabled 1`] = `
   class="emotion-0"
 >
   <input
+    aria-checked="false"
     aria-invalid="false"
     class="emotion-1"
     disabled=""
@@ -319,6 +321,7 @@ exports[`Checkbox renders snapshot of focused 1`] = `
   class="emotion-0"
 >
   <input
+    aria-checked="false"
     aria-invalid="false"
     class="emotion-1"
     id="checkbox-123abC"
@@ -327,6 +330,125 @@ exports[`Checkbox renders snapshot of focused 1`] = `
   <div
     class="emotion-2"
   />
+  <label
+    class="emotion-3"
+    for="checkbox-123abC"
+  >
+    Taylor Swift
+  </label>
+</div>
+`;
+
+exports[`Checkbox renders snapshot of indeterminate 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
+  color: #FFFFFF;
+  background-color: #009BD8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #009BD8;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+  cursor: pointer;
+}
+
+<div
+  class="emotion-0"
+>
+  <input
+    aria-checked="mixed"
+    aria-invalid="false"
+    class="emotion-1"
+    id="checkbox-123abC"
+    type="checkbox"
+  />
+  <div
+    class="emotion-2"
+  >
+    <svg
+      aria-hidden="true"
+      height="14"
+      viewBox="0 0 18 18"
+      width="14"
+    >
+      <path
+        d="M13.8 8c.663 0 1.2.448 1.2 1s-.537 1-1.2 1H4.2C3.537 10 3 9.552 3 9s.537-1 1.2-1h9.6z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
   <label
     class="emotion-3"
     for="checkbox-123abC"
@@ -425,6 +547,7 @@ exports[`Checkbox renders snapshot of inverted 1`] = `
   class="emotion-0"
 >
   <input
+    aria-checked="false"
     aria-invalid="false"
     class="emotion-1"
     id="checkbox-123abC"
@@ -533,6 +656,7 @@ exports[`Checkbox renders snapshot with error 1`] = `
   class="emotion-0"
 >
   <input
+    aria-checked="false"
     aria-invalid="true"
     class="emotion-1"
     id="checkbox-123abC"
@@ -620,6 +744,7 @@ exports[`Checkbox renders snapshot with input only 1`] = `
   class="emotion-0"
 >
   <input
+    aria-checked="false"
     aria-invalid="false"
     aria-label="Taylor Swift"
     class="emotion-1"
@@ -720,6 +845,7 @@ exports[`Checkbox renders snapshot with label and input 1`] = `
   class="emotion-0"
 >
   <input
+    aria-checked="false"
     aria-invalid="false"
     class="emotion-1"
     id="checkbox-123abC"

@@ -28,6 +28,12 @@ function Story() {
         <Checkbox disabled checked={true} onChange={() => {}}>
           Regular disabled ticked checkbox
         </Checkbox>
+        <Checkbox isIndeterminate onChange={() => {}}>
+          Regular indeterminate checkbox
+        </Checkbox>
+        <Checkbox isIndeterminate disabled onChange={() => {}}>
+          Regular disabled indeterminate checkbox
+        </Checkbox>
       </div>
       {/* Inverted */}
       <div
@@ -47,6 +53,12 @@ function Story() {
         </Checkbox>
         <Checkbox inverted disabled checked={true} onChange={() => {}}>
           Inverted disabled ticked checkbox
+        </Checkbox>
+        <Checkbox inverted isIndeterminate onChange={() => {}}>
+          Inverted indeterminate checkbox
+        </Checkbox>
+        <Checkbox inverted isIndeterminate disabled onChange={() => {}}>
+          Inverted disabled indeterminate checkbox
         </Checkbox>
       </div>
     </>

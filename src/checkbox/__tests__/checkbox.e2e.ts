@@ -4,6 +4,15 @@ describe('Checkbox', () => {
     cy.get('main').find('input[type=checkbox]').should('have.length', 1);
   });
 
+  it('renders an indeterminate checkbox', () => {
+    cy.loadStory('checkbox-indeterminate');
+    cy.get('main')
+      .find('input[type=checkbox]')
+      .should('have.length', 1)
+      .and('have.attr', 'aria-checked')
+      .and('eq', 'mixed');
+  });
+
   it('renders proper focus state', () => {
     cy.loadStory('checkbox-basic');
     cy.get('main').find('input[type=checkbox]').focus();
@@ -16,7 +25,7 @@ describe('Checkbox', () => {
 
   it('render inverted and disabled', () => {
     cy.loadStory('checkbox-inverted-disabled');
-    cy.get('main').find('input[type=checkbox]').should('have.length', 8);
+    cy.get('main').find('input[type=checkbox]').should('have.length', 12);
   });
 
   it('allows custom content in label', () => {
@@ -38,5 +47,10 @@ describe('Checkbox', () => {
     cy.loadStory('checkbox-basic');
     cy.get('main').findByText('Basic checkbox').click();
     cy.get('main').findByText('Basic checkbox').click();
+  });
+
+  it("if indeterminate, when label is clicked doesn't change to checked", () => {
+    cy.loadStory('checkbox-indeterminate');
+    cy.get('main').findByText('Indeterminate checkbox').click();
   });
 });

@@ -124,6 +124,30 @@ describe('Checkbox', () => {
     expect(input).toBeDisabled();
   });
 
+  it("renders indeterminate checkbox, even when it's checked", () => {
+    const { getByLabelText } = render(
+      <Checkbox isIndeterminate checked onChange={jest.fn()}>
+        Taylor Swift
+      </Checkbox>,
+    );
+
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+
+    expect(input).toHaveAttribute('aria-checked', 'mixed');
+  });
+
+  it("renders indeterminate checkbox, even when it's unchecked", () => {
+    const { getByLabelText } = render(
+      <Checkbox isIndeterminate checked={false} onChange={jest.fn()}>
+        Taylor Swift
+      </Checkbox>,
+    );
+
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+
+    expect(input).toHaveAttribute('aria-checked', 'mixed');
+  });
+
   it('accepts ref and could be focused programmatically', () => {
     const { container } = render(<TestRefCheckbox />);
 
@@ -192,6 +216,18 @@ describe('Checkbox', () => {
     it('of disabled', () => {
       const { container } = render(
         <Checkbox disabled onChange={jest.fn()}>
+          Taylor Swift
+        </Checkbox>,
+      );
+
+      const checkbox = container.firstChild;
+
+      expect(checkbox).toMatchSnapshot();
+    });
+
+    it('of indeterminate', () => {
+      const { container } = render(
+        <Checkbox isIndeterminate onChange={jest.fn()}>
           Taylor Swift
         </Checkbox>,
       );
