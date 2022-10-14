@@ -1,6 +1,7 @@
 import * as HeadingExports from '@datacamp/waffles/heading';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,8 +11,34 @@ import playgroundConfig from '../../examples/heading/playground-config';
 import Sizes from '../../examples/heading/sizes';
 import Inverted from '../../examples/heading/inverted';
 
-<Layout title="Heading" description="🚧 This page is under construction">
+<Layout title="Heading" description="Titles for the main sections or areas of a page, using DataCamp's styling.">
 
+## Usage guidelines
+
+The `Heading` component offers several different `size` values to choose from: `medium`, `large`, `xlarge` and `xxlarge`, which dictate the default heading level associated with it. In rare cases, such as to preserve proper semantic heading order, the heading level can be overwritten whilst keeping the styling from `size`, by using the `as` property.
+
+In all cases, `Heading` content should be _Sentence cased_ in order to adhere to DataCamp language and design requirements.
+
+There is also an `inverted` property for cases where the `Heading` component is used on a darker background.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - when you need to provide a title or heading for a section or area of a page
+    - follow the required semantic heading order of a page&mdash;this is **critical** for accessibility
+    - keep headings clear and short where possible
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use for general text on a page&mdash;use a [Paragraph](/components/paragraph) in most cases
+    - use for style purposes only, such as emphasizing text
+    - skip heading levels within a page
+
+  </BestPractices.Discouraged>
+</BestPractices>
 ## Examples
 
 <Example title="Sizes" path="heading/sizes">
