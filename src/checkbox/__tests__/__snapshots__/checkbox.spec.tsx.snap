@@ -1,125 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox renders basic snapshot 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.emotion-1 {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  position: relative;
-  height: 18px;
-  width: 18px;
-  border-radius: 4px;
-  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
-  transition: background-color 75ms ease-out,border-color 75ms ease-out;
-  color: #FFFFFF;
-  background-color: #FFFFFF;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #848C92;
-}
-
-.emotion-2::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: -3px;
-  border-radius: 6px;
-  pointer-events: none;
-  -webkit-transition: box-shadow 125ms ease-out;
-  transition: box-shadow 125ms ease-out;
-}
-
-.emotion-3 {
-  color: #05192D;
-  font-family: Studio-Feixen-Sans,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  line-height: 1.25;
-  padding-top: 1px;
-  padding-left: 8px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #05192D;
-}
-
-<label
-  class="emotion-0"
->
-  <input
-    aria-invalid="false"
-    class="emotion-1"
-    type="checkbox"
-  />
-  <div
-    class="emotion-2"
-  />
-  <div
-    class="emotion-3"
-  >
-    Taylor Swift
-  </div>
-</label>
-`;
-
 exports[`Checkbox renders snapshot of checked state 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -139,11 +37,12 @@ exports[`Checkbox renders snapshot of checked state 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 4px;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   color: #FFFFFF;
   background-color: #009BD8;
   border-width: 1px;
@@ -183,15 +82,17 @@ exports[`Checkbox renders snapshot of checked state 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     checked=""
     class="emotion-1"
+    id="checkbox-123abC"
     type="checkbox"
   />
   <div
@@ -209,32 +110,33 @@ exports[`Checkbox renders snapshot of checked state 1`] = `
       />
     </svg>
   </div>
-  <div
+  <label
     class="emotion-3"
+    for="checkbox-123abC"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
-exports[`Checkbox renders snapshot of disabled state 1`] = `
+exports[`Checkbox renders snapshot of disabled 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: default;
   opacity: 0.6;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: default;
 }
 
 .emotion-2 {
@@ -254,11 +156,12 @@ exports[`Checkbox renders snapshot of disabled state 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 4px;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   color: #FFFFFF;
   background-color: #FFFFFF;
   border-width: 1px;
@@ -298,46 +201,49 @@ exports[`Checkbox renders snapshot of disabled state 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: default;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     class="emotion-1"
     disabled=""
+    id="checkbox-123abC"
     type="checkbox"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="checkbox-123abC"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
-exports[`Checkbox renders snapshot of focused state 1`] = `
+exports[`Checkbox renders snapshot of focused 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -357,11 +263,12 @@ exports[`Checkbox renders snapshot of focused state 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 4px;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   color: #FFFFFF;
   background-color: #FFFFFF;
   border-width: 1px;
@@ -405,25 +312,28 @@ exports[`Checkbox renders snapshot of focused state 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     class="emotion-1"
+    id="checkbox-123abC"
     type="checkbox"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="checkbox-123abC"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Checkbox renders snapshot of inverted 1`] = `
@@ -432,18 +342,18 @@ exports[`Checkbox renders snapshot of inverted 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -463,11 +373,12 @@ exports[`Checkbox renders snapshot of inverted 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 4px;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   color: #05192D;
   background-color: #213147;
   border-width: 1px;
@@ -507,25 +418,28 @@ exports[`Checkbox renders snapshot of inverted 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     class="emotion-1"
+    id="checkbox-123abC"
     type="checkbox"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="checkbox-123abC"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Checkbox renders snapshot with error 1`] = `
@@ -534,18 +448,18 @@ exports[`Checkbox renders snapshot with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -565,11 +479,12 @@ exports[`Checkbox renders snapshot with error 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 4px;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   color: #FFFFFF;
   background-color: #FFFFFF;
   border-width: 1px;
@@ -611,23 +526,213 @@ exports[`Checkbox renders snapshot with error 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="true"
+    class="emotion-1"
+    id="checkbox-123abC"
+    type="checkbox"
+  />
+  <div
+    class="emotion-2"
+  />
+  <label
+    class="emotion-3"
+    for="checkbox-123abC"
+  >
+    Taylor Swift
+  </label>
+</div>
+`;
+
+exports[`Checkbox renders snapshot with input only 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+<div
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    aria-label="Taylor Swift"
     class="emotion-1"
     type="checkbox"
   />
   <div
     class="emotion-2"
   />
+</div>
+`;
+
+exports[`Checkbox renders snapshot with label and input 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+  cursor: pointer;
+}
+
+<div
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    class="emotion-1"
+    id="checkbox-123abC"
+    type="checkbox"
+  />
   <div
+    class="emotion-2"
+  />
+  <label
     class="emotion-3"
+    for="checkbox-123abC"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;

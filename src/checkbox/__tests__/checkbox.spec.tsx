@@ -3,6 +3,14 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Checkbox } from '../index';
 
+const MOCKED_ID = '123abC';
+
+jest.mock('nanoid', () => {
+  return {
+    nanoid: () => MOCKED_ID,
+  };
+});
+
 function TestRefCheckbox() {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -28,6 +36,18 @@ describe('Checkbox', () => {
 
     expect(input).toBeInTheDocument();
     expect(label).toBeInTheDocument();
+  });
+
+  it('renders input only with and aria-label provided', () => {
+    const { container } = render(
+      <Checkbox aria-label="Taylor Swift" onChange={jest.fn()} />,
+    );
+
+    const input = container.querySelector('input');
+
+    expect(input).toBeInTheDocument();
+    expect(input).toHaveAttribute('aria-label', 'Taylor Swift');
+    expect(input).not.toHaveAttribute('id');
   });
 
   it('handles click event correctly', () => {
@@ -68,6 +88,18 @@ describe('Checkbox', () => {
     expect(input).toBeInTheDocument();
   });
 
+  it('label and input are associated by the same ID', () => {
+    const { getByLabelText, getByText } = render(
+      <Checkbox onChange={jest.fn()}>Taylor Swift</Checkbox>,
+    );
+
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+    const label = getByText('Taylor Swift');
+
+    expect(input).toHaveAttribute('id', `checkbox-${MOCKED_ID}`);
+    expect(label).toHaveAttribute('for', `checkbox-${MOCKED_ID}`);
+  });
+
   it('sets correct aria attributes when has error', () => {
     const { getByLabelText } = render(
       <Checkbox error onChange={jest.fn()}>
@@ -100,73 +132,85 @@ describe('Checkbox', () => {
     expect(input).toHaveFocus();
   });
 
-  it('renders basic snapshot', () => {
-    const { container } = render(
-      <Checkbox onChange={jest.fn()}>Taylor Swift</Checkbox>,
-    );
+  describe('renders snapshot', () => {
+    it('with label and input', () => {
+      const { container } = render(
+        <Checkbox onChange={jest.fn()}>Taylor Swift</Checkbox>,
+      );
 
-    const checkbox = container.firstChild;
+      const checkbox = container.firstChild;
 
-    expect(checkbox).toMatchSnapshot();
-  });
+      expect(checkbox).toMatchSnapshot();
+    });
 
-  it('renders snapshot of checked state', () => {
-    const { container } = render(
-      <Checkbox checked onChange={jest.fn()}>
-        Taylor Swift
-      </Checkbox>,
-    );
+    it('with input only', () => {
+      const { container } = render(
+        <Checkbox aria-label="Taylor Swift" onChange={jest.fn()} />,
+      );
 
-    const checkbox = container.firstChild;
+      const checkbox = container.firstChild;
 
-    expect(checkbox).toMatchSnapshot();
-  });
+      expect(checkbox).toMatchSnapshot();
+    });
 
-  it('renders snapshot with error', () => {
-    const { container } = render(
-      <Checkbox error onChange={jest.fn()}>
-        Taylor Swift
-      </Checkbox>,
-    );
+    it('of checked state', () => {
+      const { container } = render(
+        <Checkbox checked onChange={jest.fn()}>
+          Taylor Swift
+        </Checkbox>,
+      );
 
-    const checkbox = container.firstChild;
+      const checkbox = container.firstChild;
 
-    expect(checkbox).toMatchSnapshot();
-  });
+      expect(checkbox).toMatchSnapshot();
+    });
 
-  it('renders snapshot of inverted', () => {
-    const { container } = render(
-      <Checkbox inverted onChange={jest.fn()}>
-        Taylor Swift
-      </Checkbox>,
-    );
+    it('with error', () => {
+      const { container } = render(
+        <Checkbox error onChange={jest.fn()}>
+          Taylor Swift
+        </Checkbox>,
+      );
 
-    const checkbox = container.firstChild;
+      const checkbox = container.firstChild;
 
-    expect(checkbox).toMatchSnapshot();
-  });
+      expect(checkbox).toMatchSnapshot();
+    });
 
-  it('renders snapshot of disabled state', () => {
-    const { container } = render(
-      <Checkbox disabled onChange={jest.fn()}>
-        Taylor Swift
-      </Checkbox>,
-    );
+    it('of inverted', () => {
+      const { container } = render(
+        <Checkbox inverted onChange={jest.fn()}>
+          Taylor Swift
+        </Checkbox>,
+      );
 
-    const checkbox = container.firstChild;
+      const checkbox = container.firstChild;
 
-    expect(checkbox).toMatchSnapshot();
-  });
+      expect(checkbox).toMatchSnapshot();
+    });
 
-  it('renders snapshot of focused state', () => {
-    const { container, getByLabelText } = render(
-      <Checkbox onChange={jest.fn()}>Taylor Swift</Checkbox>,
-    );
+    it('of disabled', () => {
+      const { container } = render(
+        <Checkbox disabled onChange={jest.fn()}>
+          Taylor Swift
+        </Checkbox>,
+      );
 
-    const input = getByLabelText('Taylor Swift', { selector: 'input' });
-    fireEvent.focus(input);
-    const checkbox = container.firstChild;
+      const checkbox = container.firstChild;
 
-    expect(checkbox).toMatchSnapshot();
+      expect(checkbox).toMatchSnapshot();
+    });
+
+    it('of focused', () => {
+      const { container, getByLabelText } = render(
+        <Checkbox onChange={jest.fn()}>Taylor Swift</Checkbox>,
+      );
+
+      const input = getByLabelText('Taylor Swift', { selector: 'input' });
+      fireEvent.focus(input);
+      const checkbox = container.firstChild;
+
+      expect(checkbox).toMatchSnapshot();
+    });
   });
 });
