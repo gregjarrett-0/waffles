@@ -12,6 +12,9 @@ function Example() {
         gap: ${tokens.spacing.large};
       `}
     >
+      <Checkbox isIndeterminate onChange={() => {}}>
+        Indeterminate checkbox
+      </Checkbox>
       <Checkbox disabled checked={false} onChange={() => {}}>
         Disabled checkbox
       </Checkbox>
