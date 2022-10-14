@@ -9,62 +9,53 @@ import Sizes from '../../examples/icon/sizes';
 import InAButton from '../../examples/icon/in-a-button';
 import InALink from '../../examples/icon/in-a-link';
 
-<Layout title="Icon" description="An icon visually indicates available action or option. Icons help the user more easily understand common interaction patterns.">
+<Layout title="Icon" description="Visually indicates an available action or option and helps users more easily understand common interaction patterns.">
+
+## Usage guidelines
+
+The main purpose of an `Icon` is to clarify the content by providing a visual cue and improve the scannability of the user interface. They can also help save screen real-estate in tight user interfaces. The `Icon` should _never_ be used to replace a name of a product or feature. An `Icon` can frequently help enhance a [Button's](/components/button) message or action.
+
+`Icons` are available in five different sizes: `xlarge`, `large`, `medium`, `small`, and `xsmall`. In general though, the default size should be used.
+
+On rare occasions there may be a need to use different sizes:
+
+- use `xsmall` or `small` together with smaller text sizes
+- use `xlarge` or `large` as standalone or decorative element
+- for use cases where a larger than available size is required, use one of the available [Assets](/components/asset)
+
+An `Icon` is an image only, therefore by default it doesn't have any label or title and is hidden from assistive technologies, such as screen readers, by default. If a description for assistive technologies is necessary, use the `aria-label` attribute.
+
+Most `Icons` will inherit their color by default but can also be overwritten on the component level. The exception to this are `Icons` that have `Colored` in their names, such as `GoogleColoredBrand`
 
 ## Best practices
 
 ### General
 
-The main purpose of an icon is to clarify the content by providing a visual cue and improve the scannability of the user interface. The icon should _never_ be used to replace a name of a product or feature. Very often icon helps enhance the button's message.
-
-Icons are available in five different sizes: `xlarge`, `large`, `medium`, `small`, and `xsmall`. In general, the default size should be used.
-
-On rare occasions there may be the need to use different sizes:
-
-- use `xsmall` or `small` icon together with smaller text sizes
-- use `xlarge` or `large` icon as standalone or decorative element
-
-Icons can also help save screen real-estate in tight user interfaces.
-
 <BestPractices>
   <BestPractices.Recommended>
 
-    - in general, an icon should be placed near a label or title
-    - give the icon a text equivalent if its purpose isn't conveyed in any other way
-    - the label should be short and match the meaning of the icon
-    - use an icon to draw attention to important action or section of an app
+    - in most cases, pair an Icon with a label or title
+    - provide the Icon with a text equivalent if it's purpose isn't otherwise clear
+    - a label should be short and match the meaning of the Icon
+    - use an Icon to draw attention to important action or section of an app
+    - use an Icon where space is limited
+    - stick to commonly used and recognizable Icons for common use cases
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
 
-    - overuse icons&mdash;they draw a lot of attention, which quickly results in a user interface that is visually overwhelming and distracting
+    - overuse Icons, as they draw a lot of attention and can be overwhelming and distracting
+    - directly provide event handlers such as `onClick`&mdash;use a [Button](/components/button) with an Icon instead
+    - use Icons commonly associated with actions, such as `AddCircle` or `Cross`, outside of a [Button](/components/button) or [Link](/components/link)
+    - use Icons without labels unless associated with common actions, such as `Search` or `Cross`&mdash;always provide an `aria-label` in these cases
+    - describe what the Icon is with `aria-label`&mdash;describe the action instead
 
   </BestPractices.Discouraged>
 </BestPractices>
 
-### Icon is not a Button
+### Icon within a Button
 
-An icon is an image only, therefore by default it doesn't have any label or title, and is hidden from assistive technologies, such as screen readers. If for some reason a description for assistive technologies must be provided explicitly use the `aria-label` attribute.
-
-An icon usually is used together with a button. In that case use [Button](/components/button) component and provided icon via `icon`, `iconLeft` or `iconRight` props. In similar fashion, it could enhance [Link](/components/link) component.
-
-<BestPractices>
-  <BestPractices.Recommended>
-
-    - be free to use the icon-only button for universally understood actions, like a `Trash` icon representing deletion
-    - for icon-only Waffles button provide icon via `icon` prop and specify the accessible description with `aria-label` attribute
-    - to enhance Waffles button or link with an icon provide it via `iconLeft` or `iconRight` prop
-    - in general use default icon size with a button
-    - in rare cases it is allowed to use `large` or `xlarge` size with an icon-only button
-
-  </BestPractices.Recommended>
-  <BestPractices.Discouraged>
-
-    - use icons commonly associated with actions, such as `AddCircle` or `Cross`, in places where the user can't interact with them, which can lead to frustration when nothing happens
-    - directly provide event handlers such as `onClick`&mdash;use button with icon instead
-
-  </BestPractices.Discouraged>
-</BestPractices>
+An `Icon` can be used together with a [Button](/components/button). In that case provide an `Icon` via the [Button's](/components/button) `icon`, `iconLeft` or `iconRight` properties. In a similar fashion, it can also enhance the [Link](/components/link) component.
 
 ## All available Icons
 
@@ -88,7 +79,7 @@ An icon usually is used together with a button. In that case use [Button](/compo
 
 ### Icon
 
-In addition to `size` prop listed below, icons accept all props regular `SVGElement` would, such as `aria-` and `data-` attributes.
+In addition to `size` prop listed below, Icons accept all props regular `SVGElement` would, such as `aria-` and `data-` attributes.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/icon/icon-internal')}
@@ -96,7 +87,7 @@ In addition to `size` prop listed below, icons accept all props regular `SVGElem
 
 ## Imports
 
-You can import any existing icon as a separate component. For example to import `AddCircle` icon use:
+You can import any existing Icon as a separate component. For example to import `AddCircle` Icon use:
 
 <Imports module={['AddCircle']} path="@datacamp/waffles/icon" />
 
