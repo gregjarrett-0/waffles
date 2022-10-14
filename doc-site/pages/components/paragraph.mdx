@@ -1,6 +1,7 @@
 import * as ParagraphExports from '@datacamp/waffles/paragraph';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -11,11 +12,32 @@ import Variants from '../../examples/paragraph/variants';
 import Sizes from '../../examples/paragraph/sizes';
 import Inverted from '../../examples/paragraph/inverted';
 
-<Layout title="Paragraph" description="🚧 This page is under construction">
+<Layout title="Paragraph" description="Used for styling blocks of text using DataCamp's styling.">
 
 ## Usage guidance
 
-To highlight the content of importance, use regular `strong` or `em` elements.
+he `Paragraph` component offers three (3) different `size` values to choose from: `small`, `medium` and `large`. In most cases, the default `size` should be used.
+
+To highlight the content of importance, use regular `strong` or `em` elements. `Paragraph` also offers a more subtle `secondary` `variant` for use with less important or supportive content. On top of this, others components such as [Code](/components/code) and [Link](/components/link) can be used within the content.
+
+There is also an `inverted` property for cases where `Paragraph` is used on a darker background.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use to improve accessibility&mdash;splitting content into Paragraphs helps screen readers
+    - underline content within Paragraph for emphasis&mdash;could be confused with links
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - when you need to provide a title or heading&mdash;use a [Heading](/components/heading) instead
+    - mix too many different styles within Paragraph
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
