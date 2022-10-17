@@ -37,7 +37,12 @@ const invertedIconsPreview = css`
 const iconWrapperStyle = css`
   display: flex;
   align-items: center;
-  padding: ${tokens.spacing.small};
+  margin: ${tokens.spacing.small};
+
+  // Fix issue where Icon would shrink if label is too long
+  & svg {
+    flex-shrink: 0;
+  }
 `;
 
 const labelStyle = css`
