@@ -1,11 +1,11 @@
 import React from 'react';
+import getBrandGroup from 'helpers/brand-group';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Download } from '@datacamp/waffles/icon';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
-import * as allBrands from '@datacamp/waffles/brand';
 
 import PreviewControls from './preview-controls';
 
@@ -43,29 +43,33 @@ const labelStyle = css`
 
 type BrandPreviewType = {
   name: string;
-  asset: React.ReactNode;
+  brand: React.ReactNode;
 };
 
-function BrandAssetPreview({ name, asset }: BrandPreviewType) {
+function BrandPreview({ name, brand }: BrandPreviewType) {
   return (
     <div css={brandWrapperStyle}>
-      {asset}
+      {brand}
       <Text css={labelStyle}>{name}</Text>
     </div>
   );
 }
 
-function AllBrandGrid() {
+type BrandGridProps = {
+  brandType: string;
+};
+
+function BrandGrid({ brandType }: BrandGridProps) {
   return (
     <>
       <section css={wrapperStyle}>
         <div css={brandPreview}>
-          {Object.entries(allBrands).map(([name, BrandAsset]) => {
+          {Object.entries(getBrandGroup(brandType)).map(([name, Brand]) => {
             return (
-              <BrandAssetPreview
+              <BrandPreview
                 key={name}
                 name={name}
-                asset={<BrandAsset height={'100px'} />}
+                brand={<Brand height="100px" />}
               />
             );
           })}
@@ -80,11 +84,11 @@ function AllBrandGrid() {
           download
           iconLeft={<Download />}
         >
-          Download DataCamp Logos and Logomarks
+          Download {brandType} Logos and Logomarks
         </Button>
       </PreviewControls>
     </>
   );
 }
 
-export default AllBrandGrid;
+export default BrandGrid;
