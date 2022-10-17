@@ -2,12 +2,15 @@
 
 import Icon from '../icon-internal';
 
-type DataCampWorkspaceProps = Omit<
+type DataCampWorkspaceBrandProps = Omit<
   React.ComponentProps<typeof Icon>,
   'children'
 >;
 
-function DataCampWorkspace({ size, ...restProps }: DataCampWorkspaceProps) {
+function DataCampWorkspaceBrand({
+  size,
+  ...restProps
+}: DataCampWorkspaceBrandProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -20,4 +23,4 @@ function DataCampWorkspace({ size, ...restProps }: DataCampWorkspaceProps) {
   );
 }
 
-export default DataCampWorkspace;
+export default DataCampWorkspaceBrand;

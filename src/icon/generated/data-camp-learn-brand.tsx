@@ -2,9 +2,12 @@
 
 import Icon from '../icon-internal';
 
-type DataCampLearnProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
+type DataCampLearnBrandProps = Omit<
+  React.ComponentProps<typeof Icon>,
+  'children'
+>;
 
-function DataCampLearn({ size, ...restProps }: DataCampLearnProps) {
+function DataCampLearnBrand({ size, ...restProps }: DataCampLearnBrandProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -15,4 +18,4 @@ function DataCampLearn({ size, ...restProps }: DataCampLearnProps) {
   );
 }
 
-export default DataCampLearn;
+export default DataCampLearnBrand;

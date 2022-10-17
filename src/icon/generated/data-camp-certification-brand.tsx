@@ -2,15 +2,15 @@
 
 import Icon from '../icon-internal';
 
-type DataCampCertificationProps = Omit<
+type DataCampCertificationBrandProps = Omit<
   React.ComponentProps<typeof Icon>,
   'children'
 >;
 
-function DataCampCertification({
+function DataCampCertificationBrand({
   size,
   ...restProps
-}: DataCampCertificationProps) {
+}: DataCampCertificationBrandProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -23,4 +23,4 @@ function DataCampCertification({
   );
 }
 
-export default DataCampCertification;
+export default DataCampCertificationBrand;
