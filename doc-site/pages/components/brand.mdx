@@ -1,3 +1,5 @@
+import * as BrandExports from '@datacamp/waffles/brand';
+
 import Layout from '../../components/content-layout';
 import BestPractices from '../../components/best-practices';
 import AllBrandGrid from '../../components/all-brand-grid';
@@ -50,21 +52,13 @@ import Monochrome from '../../examples/brand/monochrome';
 In addition to `inverted` and `monochrome` listed below, Brand components accept all props a regular `SVGElement` would, such as `width`, `height`, `aria-` and `data-` attributes.
 
 <PropsTable
-  metadata={require('!!extract-react-types-loader!../../../src/brand/data-camp-logo')}
+  metadata={require('!!extract-react-types-loader!../../../src/brand/datacamp/data-camp-logo')}
 />
 
 ## Imports
 
 You can import the following components from this module:
 
-<Imports
-  module={[
-    'DataCampLogo',
-    'DataCampLogomark',
-    'DataCampLogoTagline',
-    'DataCampLogomarkTagline',
-  ]}
-  path="@datacamp/waffles/brand"
-/>
+<Imports module={BrandExports} path="@datacamp/waffles/brand" />
 
 </Layout>

@@ -1,6 +1,5 @@
-import { tokens } from '../tokens';
-
-import { BrandProps } from './types';
+import { BrandProps } from '../types';
+import { tokens } from '../../tokens';
 
 function DataCampLogo({
   inverted = false,
