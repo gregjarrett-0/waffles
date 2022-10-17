@@ -5,7 +5,7 @@ import { hexToRgba } from '../helpers';
 
 // Explicit height for head cells
 // Must be set to offset shadows from top and enable mask for thead
-const HEAD_CELL_HEIGHT = 48;
+const HEAD_CELL_HEIGHT = 50;
 
 type WithShadows = {
   hasShadowLeft: boolean;
@@ -110,7 +110,7 @@ export function shadowsStyle({
 
 type TableStyleOptions = { inverted: boolean } & WithShadows;
 
-// Basic table styles with round corners applied to corner cells
+// Basic table styles with: round corners applied to corner cells, and row highlighting
 // When content is being scrolled, corners are straight
 export function tableStyle({
   inverted,
@@ -156,11 +156,11 @@ export function tableStyle({
 
     ${!hasShadowLeft &&
     css`
-      tr:first-of-type td:first-of-type {
+      & tr:first-of-type td:first-of-type {
         border-top-left-radius: ${tokens.borderRadius.medium};
       }
 
-      tr:last-of-type td:first-of-type {
+      & tr:last-of-type td:first-of-type {
         border-bottom-left-radius: ${tokens.borderRadius.medium};
       }
     `}
@@ -178,7 +178,7 @@ export function tableStyle({
 
     // Borders
 
-    tr td {
+    & tr td {
       border-top: ${tokens.borderWidth.thin} solid ${borderColor};
 
       &:first-of-type {
@@ -190,31 +190,66 @@ export function tableStyle({
       }
     }
 
-    tr:last-of-type td {
+    & tr:last-of-type td {
       border-bottom: ${tokens.borderWidth.thin} solid ${borderColor};
+    }
+
+    & th:first-of-type {
+      border-left: ${tokens.borderWidth.thin} solid transparent;
     }
   `;
 }
 
-const cellBaseStyle = css`
-  font-family: ${tokens.fontFamilies.sansSerif};
-  text-align: left;
-  vertical-align: middle;
-  padding: ${tokens.spacing.medium};
-`;
+type HeadCellStyleOptions = {
+  isSortable: boolean;
+};
 
-export function headCellStyle() {
+export function headCellStyle({ isSortable }: HeadCellStyleOptions) {
   return css`
-    ${cellBaseStyle}
+    padding: ${isSortable ? tokens.spacing.xsmall : tokens.spacing.medium};
     height: ${HEAD_CELL_HEIGHT}px;
+    border-top: 0;
+    min-width: 200px;
+    max-width: 90vw;
+    font-family: ${tokens.fontFamilies.sansSerif};
     font-size: ${tokens.fontSizes.small};
     font-weight: ${tokens.fontWeights.bold};
     line-height: ${tokens.lineHeights.default};
     letter-spacing: ${tokens.letterSpacing.relaxed};
+    text-align: left;
     text-transform: uppercase;
-    border-top: 0;
-    min-width: 200px;
-    max-width: 90vw;
+  `;
+}
+
+type HeadCellSortButtonStyleOptions = {
+  isFocusVisible: boolean;
+};
+
+export function headCellSortButtonStyle({
+  isFocusVisible,
+}: HeadCellSortButtonStyleOptions) {
+  return css`
+    display: flex;
+    align-items: center;
+    gap: ${tokens.spacing.xsmall};
+    padding: 0 12px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: ${tokens.borderRadius.medium};
+    transition: box-shadow 125ms ease-out;
+
+    ${isFocusVisible &&
+    `box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};`}
   `;
 }
 
@@ -229,9 +264,12 @@ export function headCellCheckboxStyle() {
 
 export function cellStyle() {
   return css`
-    ${cellBaseStyle}
+    padding: ${tokens.spacing.medium};
+    vertical-align: middle;
+    font-family: ${tokens.fontFamilies.sansSerif};
     font-size: ${tokens.fontSizes.medium};
     font-weight: ${tokens.fontWeights.regular};
     line-height: ${tokens.lineHeights.relaxed};
+    text-align: left;
   `;
 }
