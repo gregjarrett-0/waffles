@@ -218,6 +218,15 @@ export function headCellStyle() {
   `;
 }
 
+export function headCellCheckboxStyle() {
+  return css`
+    vertical-align: middle;
+    width: ${HEAD_CELL_HEIGHT}px;
+    min-width: ${HEAD_CELL_HEIGHT}px;
+    padding: ${tokens.spacing.medium};
+  `;
+}
+
 export function cellStyle() {
   return css`
     ${cellBaseStyle}
