@@ -6,6 +6,8 @@ import { hexToRgba } from '../helpers';
 // Explicit height for head cells
 // Must be set to offset shadows from top and enable mask for thead
 const HEAD_CELL_HEIGHT = 50;
+const ROW_HOVER_COLOR = '#f2f3f4';
+const ROW_HOVER_COLOR_INVERTED = '#2f3b4f';
 
 type WithShadows = {
   hasShadowLeft: boolean;
@@ -130,21 +132,17 @@ export function tableStyle({
 
     // Colors
 
-    & tbody {
+    & td {
       background-color: ${inverted
         ? tokens.colors.navyLight
         : tokens.colors.white};
+      transition: background-color 125ms ease-out;
     }
 
-    & tbody tr {
-      transition: background-color 125ms ease-out;
-
-      &:hover {
-        background-color: ${hexToRgba(
-          inverted ? tokens.colors.white : tokens.colors.navy,
-          0.05,
-        )};
-      }
+    & tr:hover td {
+      background-color: ${inverted
+        ? ROW_HOVER_COLOR_INVERTED
+        : ROW_HOVER_COLOR};
     }
 
     & tr td,
