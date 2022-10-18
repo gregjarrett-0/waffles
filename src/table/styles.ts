@@ -198,6 +198,26 @@ export function tableStyle({
   `;
 }
 
+const cellButtonBaseStyle = css`
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: ${tokens.spacing.xsmall};
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: ${tokens.borderRadius.medium};
+  transition: box-shadow 125ms ease-out;
+`;
+
 type HeadCellStyleOptions = {
   isSortable: boolean;
 };
@@ -227,24 +247,10 @@ export function headCellSortButtonStyle({
   isFocusVisible,
 }: HeadCellSortButtonStyleOptions) {
   return css`
-    display: flex;
-    align-items: center;
-    gap: ${tokens.spacing.xsmall};
+    ${cellButtonBaseStyle}
     padding: 0 12px;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-    text-transform: inherit;
     width: 100%;
     height: 100%;
-    border: 0;
-    outline: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border-radius: ${tokens.borderRadius.medium};
-    transition: box-shadow 125ms ease-out;
 
     ${isFocusVisible &&
     `box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};`}
@@ -269,5 +275,24 @@ export function cellStyle() {
     font-weight: ${tokens.fontWeights.regular};
     line-height: ${tokens.lineHeights.relaxed};
     text-align: left;
+  `;
+}
+
+type CellMenuTriggerStyleOptions = {
+  isFocusVisible: boolean;
+};
+
+export function cellMenuTriggerStyle({
+  isFocusVisible,
+}: CellMenuTriggerStyleOptions) {
+  return css`
+    ${cellButtonBaseStyle}
+    justify-content: center;
+    padding: 0 ${tokens.spacing.small};
+    height: ${tokens.sizing.small};
+    min-width: ${tokens.sizing.small};
+    margin-left: -${tokens.spacing.small};
+
+    ${isFocusVisible && `box-shadow: 0 0 0 2px ${tokens.colors.blueDark};`}
   `;
 }
