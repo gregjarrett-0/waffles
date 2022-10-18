@@ -11,21 +11,19 @@ import playgroundConfig from '../../examples/badge/playground-config';
 import Variants from '../../examples/badge/variants';
 import Sizes from '../../examples/badge/sizes';
 
-<Layout title="Badge" description="Small descriptive tags for indicating the status of an element or action.">
+<Layout title="Badge" description="Small descriptive tag for indicating the status of an element or action.">
 
 ## Usage guidance
 
-A `Badge` holds a very small amount of information and should be positioned in close proximity to other components to help draw attention and provide context, e.g. a "New" tag for new options in a [Menu](/components/menu).
+A `Badge` holds a very small amount of information and should be positioned in close proximity to other components to help draw attention and provide context, e.g. a "NEW" tag for new options in a [Menu](/components/menu).
 
-The content of a `Badge` will always be show as uppercase and is available in three different sizes: `small`, `medium` and `large`. In most cases, the default value should be used.
+The content of a `Badge` will always be shown as uppercase and is available in three different sizes: `small`, `medium` and `large`. In most cases, the default value should be used.
 
 The colors of a `Badge` should never be overwritten, as they are chosen for suitable accessibility and brand requirements.
 
-They should **never** be interactive and instead a [Button](/components/button) or the future `Tag` component used if interaction is desired.
+They should **never** be interactive and instead a [Button](/components/button) should be used if interaction is desired.
 
 ## Best practices
-
-Content should **not** contain icons or anything besides text.
 
 <BestPractices>
   <BestPractices.Recommended>
@@ -40,6 +38,7 @@ Content should **not** contain icons or anything besides text.
     - provide interaction with the Badge component
     - use too many different colored Badges together
     - use a different `size` to surrounding text
+    - content should not contain anything besides text
 
   </BestPractices.Discouraged>
 </BestPractices>

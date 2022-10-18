@@ -22,17 +22,17 @@ import Inverted from '../../examples/progress/inverted';
 
 The `Progress` component can be used in a variety of uses; from showing the completion percentage of a task, to individual steps in a process. The `Progress` should be used when a process is a direct result of a user action&mdash;e.g. courses being completed or form progress.
 
-When using the default `mode`, any values for `min` and `max` can be provided and a percentage is calculated internally. This includes values that would result in a percentage over `100%`. This percentage is also always **rounded down**.
-
 If the context of a `Progress` cannot be determined visually (but can from accessibility content such as `aria-label`), then additional text should be placed alongside the `Progress` to solve this. A custom label can also be provided (via the `customLabel` prop), to replace the default label. This should continue to communicate the `value` of the `Progress` to maintain accessibility, but can be otherwise customized.
 
 For additional accessibility, an `aria-label` should always be provided with context of the `Progress`, e.g. "Course progress".
 
-### Steps mode
+### Mode
+
+When using the default `mode` of `continuous`, any values for `min` and `max` can be provided and a percentage is calculated internally. This includes both decimals and values that would result in a percentage over `100%`&mdash;e.g 110/100 will show as 110%. This percentage is also always _rounded down_.
 
 When the `Progress` component has the `mode="steps"` configuration, it is rendered as separate segments to represent individual steps.
 
-This `mode` should be used when a process consists of multiple complex tasks, with distinct milestones. It is **not** recommended to use this mode with fewer than two (2) steps, or greater than seven (7)&mdash;consider restructuring the flow of the task instead.
+This `mode` should be used when a process consists of multiple complex tasks, with distinct milestones. It is **not** recommended to use this mode with fewer than two or greater than seven steps,&mdash;consider restructuring the flow of the task instead.
 
 ## Best practices
 

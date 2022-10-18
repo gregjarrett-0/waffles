@@ -26,11 +26,11 @@ import CustomSizeColor from '../../examples/asset/custom-size-color';
 
 An `Asset` is used to help enhance content on a page or in a container, often with the intention of catching the user's attention.
 
-All `Assets` are **responsive** by default and will fit to their parent container if no `width` or `height` is provided (whilst still adhering to their `viewBox` aspect ratio). Please note, both properties should not be provided together as this will break the responsive scaling behavior.
+All `Assets` are _responsive_ by default and will fit to their parent container if no `width` or `height` is provided (whilst still adhering to their `viewBox` aspect ratio). A custom size can be provided by specifying either `width` or `height`. Please note, both properties should not be provided together as this will break the responsive scaling behavior.
 
 Excluding `Assets` that have the `Colored` suffix in their names, the color of an `Asset` is inherited by default but can also be overwritten on the `svg` element itself.
 
-For use-cases which are not React-based, we provide a download link for each `Asset` type below their examples, but otherwise the React components should be used.
+For use-cases which are not React-based, we provide a download link for each `Asset` type below their examples.
 
 ## Best practices
 
@@ -39,12 +39,12 @@ An `Asset` should be used to provide visual context or expand upon a written poi
 <BestPractices>
   <BestPractices.Recommended>
 
-    - use [Icons](/components/icon) instead of certain Assets for small sizes
+    - use [Icons](/components/icon) instead of Assets for sizes below `48px`, where possible
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
 
-    - use an Asset with too small a size, e.g. < 24px
+    - use an Asset with too small a size, e.g. < `24px`
 
   </BestPractices.Discouraged>
 </BestPractices>

@@ -25,7 +25,13 @@ On rare occasions there may be a need to use different sizes:
 
 An `Icon` is an image only, therefore by default it doesn't have any label or title and is hidden from assistive technologies, such as screen readers, by default. If a description for assistive technologies is necessary, use the `aria-label` attribute.
 
-Most `Icons` will inherit their color by default but can also be overwritten on the component level. The exception to this are `Icons` that have `Colored` in their names, such as `GoogleColoredBrand`
+Most `Icons` will inherit their color by default but can also be overwritten on the component level. The exception to this are `Icons` that have `Colored` in their names, such as `GoogleColoredBrand`.
+
+### Icon within a Button
+
+An `Icon` can be used together with a [Button](/components/button), but it's important to note that an `Icon` is not a button outside of this and so direct interactions should be avoided.
+
+When used within a [Button](/components/button), provide the `Icon` via the [Button's](/components/button) `icon`, `iconLeft` or `iconRight` properties. In a similar fashion to this, it can also enhance the [Link](/components/link) component.
 
 ## Best practices
 
@@ -52,10 +58,6 @@ Most `Icons` will inherit their color by default but can also be overwritten on 
 
   </BestPractices.Discouraged>
 </BestPractices>
-
-### Icon within a Button
-
-An `Icon` can be used together with a [Button](/components/button). In that case provide an `Icon` via the [Button's](/components/button) `icon`, `iconLeft` or `iconRight` properties. In a similar fashion, it can also enhance the [Link](/components/link) component.
 
 ## All available Icons
 
