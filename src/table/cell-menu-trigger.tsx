@@ -9,10 +9,11 @@ import { cellMenuTriggerStyle } from './styles';
 
 type CellMenuTriggerProps = {
   label: string;
+  inverted: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 function CellMenuTriggerInternal(
-  { label, ...restProps }: CellMenuTriggerProps,
+  { label, inverted, ...restProps }: CellMenuTriggerProps,
   ref: React.Ref<HTMLButtonElement>,
 ) {
   const { focusProps, isFocusVisible } = useFocusRing();
@@ -22,7 +23,7 @@ function CellMenuTriggerInternal(
     <button
       {...mergeProps(focusProps, restProps)}
       ref={ref}
-      css={cellMenuTriggerStyle({ isFocusVisible })}
+      css={cellMenuTriggerStyle({ inverted, isFocusVisible })}
     >
       {label}
       {isOpen ? <ChevronUp /> : <ChevronDown />}

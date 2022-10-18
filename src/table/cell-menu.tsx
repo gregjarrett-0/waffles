@@ -3,6 +3,7 @@ import React from 'react';
 import { tokens } from '../tokens';
 import { Menu } from '../menu';
 
+import { useTable } from './table-context';
 import { cellStyle } from './styles';
 import MenuTrigger from './cell-menu-trigger';
 
@@ -12,11 +13,14 @@ type CellProps = {
 } & React.HTMLAttributes<HTMLTableCellElement>;
 
 function CellMenu({ label, children, ...restProps }: CellProps) {
+  const { inverted } = useTable();
+
   return (
     <td {...restProps} css={cellStyle()}>
       <Menu
-        trigger={<MenuTrigger label={label} />}
+        trigger={<MenuTrigger label={label} inverted={inverted} />}
         offset={tokens.spacing.xsmall}
+        inverted={inverted}
       >
         {children}
       </Menu>

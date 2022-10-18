@@ -3,6 +3,7 @@ import { useFocusRing } from '@react-aria/focus';
 
 import useScrollPosition from './use-scroll-position';
 import useIsScrollable from './use-is-scrollable';
+import { TableProvider } from './table-context';
 import {
   outerWrapperStyle,
   maskStyle,
@@ -30,37 +31,39 @@ function TableInternal({
   const hasShadowRight = !isAtRight;
 
   return (
-    <div
-      css={outerWrapperStyle({
-        isFocusVisible: isFocusVisible && isScrollable,
-        hasShadowLeft,
-        hasShadowRight,
-      })}
-    >
-      <div css={maskStyle({ hasShadowLeft, hasShadowRight })}>
-        <div
-          css={shadowsStyle({
-            inverted,
-            hasShadowLeft,
-            hasShadowRight,
-          })}
-        />
-        <div
-          {...focusProps}
-          tabIndex={isScrollable ? 0 : -1}
-          ref={wrapperRef}
-          role="region"
-          aria-label={ariaLabel}
-          css={tableWrapperStyle()}
-        >
-          <table
-            {...restProps}
-            ref={tableRef}
-            css={tableStyle({ inverted, hasShadowLeft, hasShadowRight })}
+    <TableProvider inverted={inverted}>
+      <div
+        css={outerWrapperStyle({
+          isFocusVisible: isFocusVisible && isScrollable,
+          hasShadowLeft,
+          hasShadowRight,
+        })}
+      >
+        <div css={maskStyle({ hasShadowLeft, hasShadowRight })}>
+          <div
+            css={shadowsStyle({
+              inverted,
+              hasShadowLeft,
+              hasShadowRight,
+            })}
           />
+          <div
+            {...focusProps}
+            tabIndex={isScrollable ? 0 : -1}
+            ref={wrapperRef}
+            role="region"
+            aria-label={ariaLabel}
+            css={tableWrapperStyle()}
+          >
+            <table
+              {...restProps}
+              ref={tableRef}
+              css={tableStyle({ inverted, hasShadowLeft, hasShadowRight })}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </TableProvider>
   );
 }
 

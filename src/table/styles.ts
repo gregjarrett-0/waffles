@@ -279,14 +279,17 @@ export function cellStyle() {
 }
 
 type CellMenuTriggerStyleOptions = {
+  inverted: boolean;
   isFocusVisible: boolean;
 };
 
 export function cellMenuTriggerStyle({
+  inverted,
   isFocusVisible,
 }: CellMenuTriggerStyleOptions) {
   return css`
     ${cellButtonBaseStyle}
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     justify-content: center;
     padding: 0 ${tokens.spacing.small};
     height: ${tokens.sizing.small};
