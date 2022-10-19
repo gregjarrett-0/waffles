@@ -12,13 +12,23 @@ type LoaderProps = {
   /* Whether the Loader is inverted in color or not. */
   /* @default false */
   inverted?: boolean;
+  /* Should always be provided with context of the Loader. */
+  'aria-label': string;
 } & React.SVGAttributes<SVGElement>;
 
-function Loader({ inverted = false, ...restProps }: LoaderProps) {
+function Loader({
+  inverted = false,
+  'aria-label': ariaLabel,
+  ...restProps
+}: LoaderProps) {
   const { width, height } = restProps;
 
   return (
-    <div css={wrapperStyle({ height, width })} data-testid="loader-wrapper">
+    <div
+      data-testid="loader-wrapper"
+      css={wrapperStyle({ height, width })}
+      aria-label={ariaLabel}
+    >
       <div css={containerStyle()}>
         <div css={svgWrapperStyle()}>
           <svg
