@@ -19,7 +19,8 @@ const brandPreview = css`
   background-color: ${tokens.colors.white};
   border: ${tokens.borderWidth.thin} solid
     ${hexToRgba(tokens.colors.navy, 0.15)};
-  border-radius: ${tokens.borderRadius.medium};
+  border-top-right-radius: ${tokens.borderRadius.medium};
+  border-top-left-radius: ${tokens.borderRadius.medium};
 `;
 
 const brandWrapperStyle = css`
