@@ -1,0 +1,1487 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders snapshot of basic inverted table 1`] = `
+.emotion-0 {
+  position: relative;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-1 {
+  -webkit-mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+  mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+}
+
+.emotion-2 {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  height: calc(100% - 50px);
+  width: 100%;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.emotion-3 {
+  outline: 0;
+  overflow: auto;
+}
+
+.emotion-4 {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.emotion-4 td {
+  background-color: #213147;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+}
+
+.emotion-4 tr:hover td {
+  background-color: #2f3b4f;
+}
+
+.emotion-4 tr td,
+.emotion-4 tr th {
+  color: #FFFFFF;
+}
+
+.emotion-4 tr:first-of-type td:first-of-type {
+  border-top-left-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-4 tr:first-of-type td:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-4 tr td {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.emotion-4 tr td:first-of-type {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.emotion-4 tr td:last-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.emotion-4 tr:last-of-type td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.emotion-4 th:first-of-type {
+  border-left: 1px solid transparent;
+}
+
+.emotion-5 {
+  padding: 16px;
+  height: 50px;
+  border-top: 0;
+  min-width: 200px;
+  max-width: 90vw;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.emotion-7 {
+  padding: 16px;
+  vertical-align: middle;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    />
+    <div
+      aria-label="Inverted table"
+      class="emotion-3"
+      role="region"
+      tabindex="-1"
+    >
+      <table
+        class="emotion-4"
+      >
+        <thead>
+          <tr>
+            <th
+              class="emotion-5"
+            >
+              Name
+            </th>
+            <th
+              class="emotion-5"
+            >
+              Genre
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="emotion-7"
+            >
+              Taylor Swift
+            </td>
+            <td
+              class="emotion-7"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-7"
+            >
+              Ariana Grande
+            </td>
+            <td
+              class="emotion-7"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-7"
+            >
+              Roger Waters
+            </td>
+            <td
+              class="emotion-7"
+            >
+              Rock
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table renders snapshot of basic table 1`] = `
+.emotion-0 {
+  position: relative;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-1 {
+  -webkit-mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+  mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+}
+
+.emotion-2 {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  height: calc(100% - 50px);
+  width: 100%;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.emotion-3 {
+  outline: 0;
+  overflow: auto;
+}
+
+.emotion-4 {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.emotion-4 td {
+  background-color: #FFFFFF;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+}
+
+.emotion-4 tr:hover td {
+  background-color: #f2f3f4;
+}
+
+.emotion-4 tr td,
+.emotion-4 tr th {
+  color: #05192D;
+}
+
+.emotion-4 tr:first-of-type td:first-of-type {
+  border-top-left-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-4 tr:first-of-type td:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-4 tr td {
+  border-top: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:first-of-type {
+  border-left: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:last-of-type {
+  border-right: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr:last-of-type td {
+  border-bottom: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 th:first-of-type {
+  border-left: 1px solid transparent;
+}
+
+.emotion-5 {
+  padding: 16px;
+  height: 50px;
+  border-top: 0;
+  min-width: 200px;
+  max-width: 90vw;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.emotion-7 {
+  padding: 16px;
+  vertical-align: middle;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    />
+    <div
+      aria-label="Basic table"
+      class="emotion-3"
+      role="region"
+      tabindex="-1"
+    >
+      <table
+        class="emotion-4"
+      >
+        <thead>
+          <tr>
+            <th
+              class="emotion-5"
+            >
+              Name
+            </th>
+            <th
+              class="emotion-5"
+            >
+              Genre
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="emotion-7"
+            >
+              Taylor Swift
+            </td>
+            <td
+              class="emotion-7"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-7"
+            >
+              Ariana Grande
+            </td>
+            <td
+              class="emotion-7"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-7"
+            >
+              Roger Waters
+            </td>
+            <td
+              class="emotion-7"
+            >
+              Rock
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table renders snapshot of table with checkboxes column 1`] = `
+.emotion-0 {
+  position: relative;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-1 {
+  -webkit-mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+  mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+}
+
+.emotion-2 {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  height: calc(100% - 50px);
+  width: 100%;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.emotion-3 {
+  outline: 0;
+  overflow: auto;
+}
+
+.emotion-4 {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.emotion-4 td {
+  background-color: #FFFFFF;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+}
+
+.emotion-4 tr:hover td {
+  background-color: #f2f3f4;
+}
+
+.emotion-4 tr td,
+.emotion-4 tr th {
+  color: #05192D;
+}
+
+.emotion-4 tr:first-of-type td:first-of-type {
+  border-top-left-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-4 tr:first-of-type td:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-4 tr td {
+  border-top: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:first-of-type {
+  border-left: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:last-of-type {
+  border-right: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr:last-of-type td {
+  border-bottom: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 th:first-of-type {
+  border-left: 1px solid transparent;
+}
+
+.emotion-5 {
+  vertical-align: middle;
+  width: 50px;
+  min-width: 50px;
+  padding: 16px;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.emotion-7 {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
+  color: #FFFFFF;
+  background-color: #009BD8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #009BD8;
+}
+
+.emotion-8::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-9 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  padding-top: 1px;
+  padding-left: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #05192D;
+  cursor: pointer;
+}
+
+.emotion-10 {
+  padding: 16px;
+  height: 50px;
+  border-top: 0;
+  min-width: 200px;
+  max-width: 90vw;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.emotion-12 {
+  vertical-align: middle;
+  width: 50px;
+  min-width: 50px;
+  padding: 16px;
+}
+
+.emotion-17 {
+  padding: 16px;
+  vertical-align: middle;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.emotion-29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-29::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    />
+    <div
+      aria-label="Table with checkboxes"
+      class="emotion-3"
+      role="region"
+      tabindex="-1"
+    >
+      <table
+        class="emotion-4"
+      >
+        <thead>
+          <tr>
+            <th
+              class="emotion-5"
+            >
+              <div
+                class="emotion-6"
+              >
+                <input
+                  aria-checked="mixed"
+                  aria-invalid="false"
+                  aria-label="Select all"
+                  class="emotion-7"
+                  id="checkbox-123abC"
+                  type="checkbox"
+                />
+                <div
+                  class="emotion-8"
+                >
+                  <svg
+                    aria-hidden="true"
+                    height="14"
+                    viewBox="0 0 18 18"
+                    width="14"
+                  >
+                    <path
+                      d="M13.8 8c.663 0 1.2.448 1.2 1s-.537 1-1.2 1H4.2C3.537 10 3 9.552 3 9s.537-1 1.2-1h9.6z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <label
+                  class="emotion-9"
+                  for="checkbox-123abC"
+                >
+                  Name
+                </label>
+              </div>
+            </th>
+            <th
+              class="emotion-10"
+            >
+              Name
+            </th>
+            <th
+              class="emotion-10"
+            >
+              Genre
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="emotion-12"
+            >
+              <div
+                class="emotion-6"
+              >
+                <input
+                  aria-checked="true"
+                  aria-invalid="false"
+                  aria-label="Select"
+                  checked=""
+                  class="emotion-7"
+                  id="checkbox-123abC"
+                  type="checkbox"
+                />
+                <div
+                  class="emotion-8"
+                >
+                  <svg
+                    aria-hidden="true"
+                    height="14"
+                    viewBox="0 0 18 18"
+                    width="14"
+                  >
+                    <path
+                      d="M13.746 4.337a1.015 1.015 0 0 1 1.409-.099c.417.354.462.97.101 1.378l-7.13 8.047a1.015 1.015 0 0 1-1.483.03L2.771 9.67a.961.961 0 0 1 .044-1.38 1.015 1.015 0 0 1 1.412.041l3.113 3.235 6.406-7.229Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <label
+                  class="emotion-9"
+                  for="checkbox-123abC"
+                >
+                  Name
+                </label>
+              </div>
+            </td>
+            <td
+              class="emotion-17"
+            >
+              Taylor Swift
+            </td>
+            <td
+              class="emotion-17"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-12"
+            >
+              <div
+                class="emotion-6"
+              >
+                <input
+                  aria-checked="true"
+                  aria-invalid="false"
+                  aria-label="Select"
+                  checked=""
+                  class="emotion-7"
+                  id="checkbox-123abC"
+                  type="checkbox"
+                />
+                <div
+                  class="emotion-8"
+                >
+                  <svg
+                    aria-hidden="true"
+                    height="14"
+                    viewBox="0 0 18 18"
+                    width="14"
+                  >
+                    <path
+                      d="M13.746 4.337a1.015 1.015 0 0 1 1.409-.099c.417.354.462.97.101 1.378l-7.13 8.047a1.015 1.015 0 0 1-1.483.03L2.771 9.67a.961.961 0 0 1 .044-1.38 1.015 1.015 0 0 1 1.412.041l3.113 3.235 6.406-7.229Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <label
+                  class="emotion-9"
+                  for="checkbox-123abC"
+                >
+                  Name
+                </label>
+              </div>
+            </td>
+            <td
+              class="emotion-17"
+            >
+              Ariana Grande
+            </td>
+            <td
+              class="emotion-17"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-12"
+            >
+              <div
+                class="emotion-6"
+              >
+                <input
+                  aria-checked="false"
+                  aria-invalid="false"
+                  aria-label="Select"
+                  class="emotion-7"
+                  id="checkbox-123abC"
+                  type="checkbox"
+                />
+                <div
+                  class="emotion-29"
+                />
+                <label
+                  class="emotion-9"
+                  for="checkbox-123abC"
+                >
+                  Name
+                </label>
+              </div>
+            </td>
+            <td
+              class="emotion-17"
+            >
+              Roger Waters
+            </td>
+            <td
+              class="emotion-17"
+            >
+              Rock
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table renders snapshot of table with menu cell 1`] = `
+.emotion-0 {
+  position: relative;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-1 {
+  -webkit-mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+  mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+}
+
+.emotion-2 {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  height: calc(100% - 50px);
+  width: 100%;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.emotion-3 {
+  outline: 0;
+  overflow: auto;
+}
+
+.emotion-4 {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.emotion-4 td {
+  background-color: #FFFFFF;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+}
+
+.emotion-4 tr:hover td {
+  background-color: #f2f3f4;
+}
+
+.emotion-4 tr td,
+.emotion-4 tr th {
+  color: #05192D;
+}
+
+.emotion-4 tr:first-of-type td:first-of-type {
+  border-top-left-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-4 tr:first-of-type td:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-4 tr td {
+  border-top: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:first-of-type {
+  border-left: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:last-of-type {
+  border-right: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr:last-of-type td {
+  border-bottom: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 th:first-of-type {
+  border-left: 1px solid transparent;
+}
+
+.emotion-5 {
+  padding: 4px;
+  height: 50px;
+  border-top: 0;
+  min-width: 200px;
+  max-width: 90vw;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: 4px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  padding: 0 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-7 {
+  padding: 16px;
+  height: 50px;
+  border-top: 0;
+  min-width: 200px;
+  max-width: 90vw;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.emotion-8 {
+  padding: 16px;
+  vertical-align: middle;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.emotion-11 {
+  padding: 16px;
+  vertical-align: middle;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: 4px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  color: #05192D;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0 8px;
+  height: 28px;
+  min-width: 28px;
+  margin-left: -8px;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    />
+    <div
+      aria-label="Table with menu"
+      class="emotion-3"
+      role="region"
+      tabindex="-1"
+    >
+      <table
+        class="emotion-4"
+      >
+        <thead>
+          <tr>
+            <th
+              class="emotion-5"
+            >
+              <button
+                class="emotion-6"
+              >
+                Name
+                <svg
+                  aria-hidden="true"
+                  height="16"
+                  viewBox="0 0 18 18"
+                  width="16"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5 12a1 1 0 0 1-1-1V5.414L2.707 6.707a.999.999 0 1 1-1.414-1.414l3-3a.997.997 0 0 1 1.414 0l3 3a.999.999 0 1 1-1.414 1.414L6 5.414V11a1 1 0 0 1-1 1zm8-6a1 1 0 0 0-1 1v5.586l-1.293-1.293a.999.999 0 1 0-1.414 1.414l3 3a.997.997 0 0 0 1.414 0l3-3a.999.999 0 1 0-1.414-1.414L14 12.586V7a1 1 0 0 0-1-1z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </th>
+            <th
+              class="emotion-7"
+            >
+              Genre
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="emotion-8"
+            >
+              Taylor Swift
+            </td>
+            <td
+              class="emotion-8"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-8"
+            >
+              Roger Waters
+            </td>
+            <td
+              class="emotion-11"
+            >
+              <button
+                aria-haspopup="menu"
+                class="emotion-12"
+                id="menu-trigger-123abC"
+              >
+                Rock
+                <svg
+                  aria-hidden="true"
+                  height="16"
+                  viewBox="0 0 18 18"
+                  width="16"
+                >
+                  <path
+                    d="m8.244 12.155-4.95-4.947a1 1 0 1 1 1.415-1.415l4.294 4.291 4.293-4.279a.998.998 0 0 1 1.413.003c.39.392.388 1.025-.003 1.415l-5.002 4.986a.998.998 0 0 1-1.46-.054Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Table renders snapshot of table with sortable column 1`] = `
+.emotion-0 {
+  position: relative;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-1 {
+  -webkit-mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+  mask-image: linear-gradient(
+          90deg,
+
+        ),linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 50px,
+          rgba(0, 0, 0, 1) 51px,
+          rgba(0, 0, 0, 1) 100%
+        );
+}
+
+.emotion-2 {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  height: calc(100% - 50px);
+  width: 100%;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.emotion-3 {
+  outline: 0;
+  overflow: auto;
+}
+
+.emotion-4 {
+  border: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.emotion-4 td {
+  background-color: #FFFFFF;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+}
+
+.emotion-4 tr:hover td {
+  background-color: #f2f3f4;
+}
+
+.emotion-4 tr td,
+.emotion-4 tr th {
+  color: #05192D;
+}
+
+.emotion-4 tr:first-of-type td:first-of-type {
+  border-top-left-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 4px;
+}
+
+.emotion-4 tr:first-of-type td:last-of-type {
+  border-top-right-radius: 4px;
+}
+
+.emotion-4 tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-4 tr td {
+  border-top: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:first-of-type {
+  border-left: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr td:last-of-type {
+  border-right: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 tr:last-of-type td {
+  border-bottom: 1px solid rgba(5, 25, 45, 0.15);
+}
+
+.emotion-4 th:first-of-type {
+  border-left: 1px solid transparent;
+}
+
+.emotion-5 {
+  padding: 4px;
+  height: 50px;
+  border-top: 0;
+  min-width: 200px;
+  max-width: 90vw;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  gap: 4px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+  padding: 0 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-7 {
+  padding: 16px;
+  height: 50px;
+  border-top: 0;
+  min-width: 200px;
+  max-width: 90vw;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.emotion-8 {
+  padding: 16px;
+  vertical-align: middle;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    />
+    <div
+      aria-label="Sortable table"
+      class="emotion-3"
+      role="region"
+      tabindex="-1"
+    >
+      <table
+        class="emotion-4"
+      >
+        <thead>
+          <tr>
+            <th
+              class="emotion-5"
+            >
+              <button
+                class="emotion-6"
+              >
+                Name
+                <svg
+                  aria-hidden="true"
+                  height="16"
+                  viewBox="0 0 18 18"
+                  width="16"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M5 12a1 1 0 0 1-1-1V5.414L2.707 6.707a.999.999 0 1 1-1.414-1.414l3-3a.997.997 0 0 1 1.414 0l3 3a.999.999 0 1 1-1.414 1.414L6 5.414V11a1 1 0 0 1-1 1zm8-6a1 1 0 0 0-1 1v5.586l-1.293-1.293a.999.999 0 1 0-1.414 1.414l3 3a.997.997 0 0 0 1.414 0l3-3a.999.999 0 1 0-1.414-1.414L14 12.586V7a1 1 0 0 0-1-1z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </th>
+            <th
+              class="emotion-7"
+            >
+              Genre
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="emotion-8"
+            >
+              Taylor Swift
+            </td>
+            <td
+              class="emotion-8"
+            >
+              Pop
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="emotion-8"
+            >
+              Roger Waters
+            </td>
+            <td
+              class="emotion-8"
+            >
+              Rock
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
