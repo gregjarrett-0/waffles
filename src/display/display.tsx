@@ -5,7 +5,7 @@ import { displayStyle } from './styles';
 type DisplayProps = {
   /* Text content to display. */
   children: React.ReactNode;
-  /* Sets the style of the display suitable for dark backgrounds. */
+  /* Sets the style of the Display suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLParagraphElement>;

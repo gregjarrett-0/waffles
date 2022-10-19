@@ -10,10 +10,10 @@ type SelectProps = {
   /* Sets appropriate error style and `aria-invalid` attribute. */
   /* @default false */
   error?: boolean;
-  /* Defines the size of the select. In most cases, the default size should be used. */
+  /* Defines the size of the Select. In most cases, the default size should be used. */
   /* @default medium */
   size?: 'small' | 'medium' | 'large';
-  /* Sets the style of the select suitable for dark backgrounds. */
+  /* Sets the style of the Select suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
 } & Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size' | 'multiple'>;

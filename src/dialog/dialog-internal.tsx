@@ -8,14 +8,14 @@ import { useAnimateTransition } from '../hooks';
 import Panel from './panel';
 
 type DialogProps = {
-  /* Determines if the dialog is open. */
+  /* Determines if the Dialog is open. */
   isOpen: boolean;
-  /* Handler called when the dialog will close. */
+  /* Handler called when the Dialog will close. */
   onClose: () => void;
-  /* Defines the dialog role. */
+  /* Defines the Dialog role. */
   /* @default dialog */
   role?: 'dialog' | 'alertdialog';
-  /* Content of the dialog. In general, dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
+  /* Content of the Dialog. In general, Dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 

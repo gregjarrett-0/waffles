@@ -15,9 +15,9 @@ import { useMenu } from './menu-context';
 import type { PolymorphicComponentProps } from '../helpers';
 
 type ItemBaseProps = {
-  /* The content of the item. Most of the time should be a plain text. */
+  /* The content of the Item. Most of the time should be a plain text. */
   label: React.ReactNode;
-  /* Defines the variant of the item. */
+  /* Defines the variant of the Item. */
   /* @default primary */
   variant?: 'primary' | 'destructive';
   /* [skip docs] */
@@ -28,10 +28,10 @@ type ItemBaseProps = {
   iconLeft?: JSX.Element;
   /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconRight?: JSX.Element;
-  /* Displays small notification dot next to the label. Useful for highlighting important items. */
+  /* Displays small notification dot next to the label. Useful for highlighting important Items. */
   /* @default false */
   showNotificationDot?: boolean;
-  /* Indicates that the item is currently active. */
+  /* Indicates that the Item is currently active. */
   /* @default false */
   isActive?: boolean;
 };

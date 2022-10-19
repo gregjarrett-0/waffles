@@ -9,7 +9,7 @@ import {
 } from './styles';
 
 type LoaderProps = {
-  /* Whether the loader is inverted in color or not. */
+  /* Whether the Loader is inverted in color or not. */
   /* @default false */
   inverted?: boolean;
 } & React.SVGAttributes<SVGElement>;

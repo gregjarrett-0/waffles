@@ -3,9 +3,9 @@ import { Text } from '../text';
 import { chapeauStyle } from './styles';
 
 type ChapeauProps = {
-  /* Text content of the chapeau. */
+  /* Text content of the Chapeau. */
   children: React.ReactNode;
-  /* Sets the style of the chapeau suitable for dark backgrounds. */
+  /* Sets the style of the Chapeau suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLParagraphElement>;

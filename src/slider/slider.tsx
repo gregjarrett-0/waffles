@@ -11,20 +11,20 @@ import Inputs from './inputs';
 import Errors from './errors';
 
 type SliderProps = {
-  /* Current slider value(s) as an array. For a _single-value_ slider, provide a single value array, e.g. `[20]`. For a _range slider_ provide two values, e.g. `[20, 50]`. */
+  /* Current Slider value(s) as an array. For a _single-value_ Slider, provide a single value array, e.g. `[20]`. For a _range_ Slider provide two values, e.g. `[20, 50]`. */
   value: number[];
   /* Handler called when handle is moved. */
   onChange: (value: number[]) => void;
-  /* The minimum allowed value of the slider. Can be a decimal or negative. */
+  /* The minimum allowed value of the Slider. Can be a decimal or negative. */
   /* @default 0 */
   min?: number;
-  /* The maximum allowed value of the slider. Can be a decimal or negative. */
+  /* The maximum allowed value of the Slider. Can be a decimal or negative. */
   /* @default 100 */
   max?: number;
   /* The minimal distance between values. Can be a decimal. */
   /* @default 1 */
   step?: number;
-  /* Whether slider is disabled or not. */
+  /* Whether Slider is disabled or not. */
   /* @default false */
   disabled?: boolean;
   /* Hides all labels: min, max, and value. */
@@ -33,12 +33,12 @@ type SliderProps = {
   /* Shows text inputs instead of value labels. */
   /* @default false */
   showInputs?: boolean;
-  /* Transforms the formatting of all labels. Useful for currency sliders. */
+  /* Transforms the formatting of all labels. Useful for currency Sliders. */
   formatLabel?: (value: number) => number | string;
-  /* Sets the style of the slider suitable for dark backgrounds. */
+  /* Sets the style of the Slider suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-  /* Accessible label, should always be provided with context of the slider, e.g. "Number of seats".*/
+  /* Accessible label, should always be provided with context of the Slider, e.g. "Number of seats".*/
   'aria-label': string;
 };
 

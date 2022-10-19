@@ -7,9 +7,9 @@ import { tabStyle, tabInnerContentStyle, tabFauxContentStyle } from './styles';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 type TabBaseProps = {
-  /* The label displayed on the tab. */
+  /* The label displayed on the Tab. */
   label: string;
-  /* Content of a tab panel displayed below corresponding tab. */
+  /* Content of a Tab panel displayed below corresponding Tab. */
   children?: React.ReactNode;
   /* An icon displayed to the left of the label. Could be any [Icon](/components/icon) from Waffles or a custom component. */
   icon?: JSX.Element;

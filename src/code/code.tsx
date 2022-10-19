@@ -1,15 +1,15 @@
 import { codeStyle } from './styles';
 
 type CodeProps = {
-  /* The content of the inline code sample. */
+  /* The content of the inline Code sample. */
   children: React.ReactNode;
   /* The element used to render this component. */
   /* @default code */
   as?: 'code' | 'pre';
-  /* Defines the font size of the code sample. In general should be specified only when used as a standalone element. */
+  /* Defines the font size of the Code sample. In general should be specified only when used as a standalone element. */
   /* @default inherit */
   size?: 'small' | 'medium' | 'large' | 'inherit';
-  /* Sets the style of the inline code sample suitable for dark backgrounds. */
+  /* Sets the style of the inline Code sample suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLElement>;

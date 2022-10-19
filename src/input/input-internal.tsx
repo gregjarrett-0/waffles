@@ -8,10 +8,10 @@ import EnhancerRight from './enhancer-right';
 import Enhancer from './enhancer';
 
 type InputProps = {
-  /* Defines the size of the input. In most cases, the default size should be used. */
+  /* Defines the size of the Input. In most cases, the default size should be used. */
   /* @default medium */
   size?: 'small' | 'medium' | 'large';
-  /* Sets the style of the input suitable for dark backgrounds. */
+  /* Sets the style of the Input suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
   /* Sets appropriate error style and `aria-invalid` attribute. */

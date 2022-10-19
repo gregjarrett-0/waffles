@@ -3,7 +3,7 @@ import React from 'react';
 import { badgeStyle, innerContentStyle } from './styles';
 
 type BadgeProps = {
-  /* Determines the variant of the badge, based on the set of predefined background colors. */
+  /* Determines the variant of the Badge, based on the set of predefined background colors. */
   /* @default navy */
   variant?:
     | 'green'
@@ -17,9 +17,9 @@ type BadgeProps = {
     | 'pink'
     | 'grey'
     | 'greySubtle';
-  /* The text content of the badge. */
+  /* The text content of the Badge. */
   children: React.ReactNode;
-  /* Defines the size of the badge. In general, default size should be used. */
+  /* Defines the size of the Badge. In general, default size should be used. */
   /* @default medium */
   size?: 'small' | 'medium' | 'large';
 } & React.HTMLAttributes<HTMLSpanElement>;

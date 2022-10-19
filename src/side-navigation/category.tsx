@@ -7,7 +7,7 @@ import { categoryDividerStyle, categoryLabelStyle, listStyle } from './styles';
 type CategoryProps = {
   /* Category section caption. */
   label?: React.ReactNode;
-  /* Determines if a subtle horizontal divider is shown above the category label. */
+  /* Determines if a subtle horizontal divider is shown above the Category label. */
   /* @default false */
   noDivider?: boolean;
   /* A list of `SideNavigation.Item` or `SideNavigation.Subcategory` components. */

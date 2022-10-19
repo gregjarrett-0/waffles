@@ -15,14 +15,14 @@ type SubcategoryBaseProps = {
   label: string;
   /* A list of `SideNavigation.Item` components. */
   children: React.ReactNode;
-  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the size use default or `xsmall` icon. */
+  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the size, use default or `xsmall` icon. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the size use default or `xsmall` icon. */
+  /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the size, use default or `xsmall` icon. */
   iconRight?: JSX.Element;
-  /* Defines the size of the subcategory header element. In most cases, the default size should be used. */
+  /* Defines the size of the Subcategory header element. In most cases, the default size should be used. */
   /* @default medium */
   size?: 'small' | 'medium';
-  /* Indicates that subcategory is currently active. */
+  /* Indicates that Subcategory is currently active. */
   /* @default false */
   isActive?: boolean;
 };

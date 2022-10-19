@@ -31,11 +31,11 @@ const placementMap = {
 } as const;
 
 type TooltipProps = {
-  /* The content that will trigger the tooltip. Must be a single element. */
+  /* The content that will trigger the Tooltip. Must be a single element. */
   children: JSX.Element;
-  /* The content of the tooltip. */
+  /* The content of the Tooltip. */
   content: React.ReactNode;
-  /* Sets the tooltip's position relative to the trigger. */
+  /* Sets the Tooltip's position relative to the trigger. */
   /* @default bottom */
   placement?:
     | 'bottom'
@@ -46,10 +46,10 @@ type TooltipProps = {
     | 'bottomRight'
     | 'topLeft'
     | 'topRight';
-  /* Sets the distance between tooltip and it's trigger. See [Design Tokens](/foundation/design-tokens/) for value of default. */
+  /* Sets the distance between Tooltip and it's trigger. See [Design Tokens](/foundation/design-tokens/) for value of default. */
   /* @default tokens.spacing.small */
   offset?: string;
-  /* Sets the style of the tooltip suitable for dark backgrounds. */
+  /* Sets the style of the Tooltip suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;

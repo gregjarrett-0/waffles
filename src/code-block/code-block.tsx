@@ -7,12 +7,12 @@ import { Code } from '../code';
 import { codeBlockStyle } from './styles';
 
 type CodeBlockProps = {
-  /* The content of the code block. */
+  /* The content of the Code Block. */
   children: React.ReactNode;
-  /* Defines the font size of the code block. */
+  /* Defines the font size of the Code Block. */
   /* @default medium */
   size?: 'small' | 'medium' | 'large';
-  /* Sets the style of the code block suitable for dark backgrounds. */
+  /* Sets the style of the Code Block suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLPreElement>;

@@ -9,10 +9,10 @@ import { useMenu } from './menu-context';
 type CategoryProps = {
   /* Category section caption. */
   label?: React.ReactNode;
-  /* Determines if a subtle horizontal divider is shown above the category label. */
+  /* Determines if a subtle horizontal divider is shown above the Category label. */
   /* @default false */
   noDivider?: boolean;
-  /* A list of `Menu` subcomponents, such as `Menu.Item` or `Menu.Button`. */
+  /* A list of Menu subcomponents, such as `Menu.Item` or `Menu.Button`. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 

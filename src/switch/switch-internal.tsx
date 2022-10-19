@@ -8,9 +8,9 @@ import Toggle from './toggle';
 import { labelStyle, inputStyle, contentStyle } from './styles';
 
 type SwitchProps = {
-  /* The description displayed next to the switch. */
+  /* The description displayed next to the Switch. */
   children: React.ReactNode;
-  /* Sets the style of the switch suitable for dark backgrounds. */
+  /* Sets the style of the Switch suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
   /* Sets appropriate error styling, and `aria-invalid` attribute. */

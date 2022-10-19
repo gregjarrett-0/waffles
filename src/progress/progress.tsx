@@ -5,27 +5,27 @@ import Steps from './steps';
 import Label from './label';
 
 type ProgressBaseProps = {
-  /* The size of the progress. */
+  /* The size of the Progress. */
   /* @default medium */
   size?: 'small' | 'medium';
-  /* The current value of the progress, which can also be a decimal. This is in relation to the `max` property. */
+  /* The current value of the Progress, which can also be a decimal. This is in relation to the `max` property. */
   /* @default 0 */
   value?: number;
-  /* The maximum value of the progress. Must be greater than `value`. */
+  /* The maximum value of the Progress. Must be greater than `value`. */
   /* @default 100 */
   max?: number;
-  /* The mode in which the progress will display. In `continuous` mode, one single bar will be shown. In `steps` mode, multiple segments will be rendered and `max` and `value` are treated as the total and current steps respectively. */
+  /* The mode in which the Progress will display. In `continuous` mode, one single bar will be shown. In `steps` mode, multiple segments will be rendered and `max` and `value` are treated as the total and current steps respectively. */
   /* @default continuous */
   mode?: 'continuous' | 'steps';
   /* Custom label content to be shown instead of the original. */
   customLabel?: React.ReactNode | string;
-  /* Whether the progress is inverted in color or not. */
+  /* Whether the Progress is inverted in color or not. */
   /* @default false */
   inverted?: boolean;
   /* Whether to hide the default label or not. */
   /* @default false */
   hideLabel?: boolean;
-  /* Should always be provided with context of the progress, e.g. "Course Progress". */
+  /* Should always be provided with context of the Progress, e.g. "Course Progress". */
   'aria-label': string;
 } & React.HTMLAttributes<HTMLProgressElement>;
 

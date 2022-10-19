@@ -8,7 +8,7 @@ const DEFAULT_ID = 'waffles-portal-root';
 type PortalProps = {
   /* If the node with this `id` doesn't exist, it will be created, and appended to the end of the `body`. */
   id?: string;
-  /* The content to render into the portal. */
+  /* The content to render into the Portal. */
   children: React.ReactNode;
 };
 

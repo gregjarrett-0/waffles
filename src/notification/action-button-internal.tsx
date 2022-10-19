@@ -9,7 +9,7 @@ type ActionButtonBaseProps = {
   iconLeft?: JSX.Element;
   /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles (use default size) or a custom component. */
   iconRight?: JSX.Element;
-  /* The content inside the button. Most of the time should be a plain text. */
+  /* The content inside the Button. Most of the time should be a plain text. */
   children: React.ReactNode;
   /* [skip docs] */
   inverted?: boolean;

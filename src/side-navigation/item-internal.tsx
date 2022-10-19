@@ -11,22 +11,22 @@ import { useSidebar } from './sidebar-context';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 type ItemBaseProps = {
-  /* The content of navigation item. Most of the time should be a plain text. */
+  /* The content of navigation Item. Most of the time should be a plain text. */
   children: React.ReactNode;
-  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the `Item` size, use default or `xsmall` icon. */
+  /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the Item size, use default or `xsmall` icon. */
   iconLeft?: JSX.Element;
-  /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the `Item` size, use default or `xsmall` icon. */
+  /* An icon displayed to the right. Could be any [Icon](/components/icon) from Waffles or a custom component. Depending on the Item size, use default or `xsmall` icon. */
   iconRight?: JSX.Element;
   /* Defines the size of the item element. In most cases, the default size should be used. */
   /* @default medium */
   size?: 'small' | 'medium';
-  /* Indicates that the item is currently active. */
+  /* Indicates that the Item is currently active. */
   /* @default false */
   isActive?: boolean;
   /* Useful for highlighting new important positions. */
   /* @default false */
   isNew?: boolean;
-  /* Determines if an item is rendered as a part of the subcategory. In general, it's passed automatically. */
+  /* Determines if an Item is rendered as a part of the subcategory. In general, it's passed automatically. */
   /* @default false */
   isSubcategoryItem?: boolean;
 };

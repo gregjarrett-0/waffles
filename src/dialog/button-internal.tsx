@@ -21,7 +21,7 @@ type ButtonProps = {
   inverted?: boolean;
   /* [skip docs] */
   fullWidth?: boolean;
-  /* Focus this particular button when dialog is opened. */
+  /* Focus this particular Button when Dialog is opened. */
   /* @default false */
   autoFocus?: boolean;
 } & Omit<

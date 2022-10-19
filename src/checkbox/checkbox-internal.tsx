@@ -8,9 +8,9 @@ import { labelStyle, inputStyle, contentStyle } from './styles';
 import Checkmark from './checkmark';
 
 type CheckboxProps = {
-  /* The description displayed next to the checkbox. */
+  /* The description displayed next to the Checkbox. */
   children: React.ReactNode;
-  /* Sets the style of the checkbox suitable for dark backgrounds. */
+  /* Sets the style of the Checkbox suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
   /* Sets appropriate error styling, and `aria-invalid` attribute. */

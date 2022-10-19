@@ -5,25 +5,25 @@ import { useAnimateTransition } from '../hooks';
 import Card from './card';
 
 type NotificationProps = {
-  /* The main content of the notification. */
+  /* The main content of the Notification. */
   title: string;
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
-  /* Whether to display the notification as a banner or as an inline content. */
+  /* Whether to display the Notification as a banner or as an inline content. */
   /* @default inline */
   mode?: 'inline' | 'banner';
-  /* Defines the type of notification. */
+  /* Defines the type of Notification. */
   /* @default default */
   variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';
-  /* Sets the style of the notification suitable for dark backgrounds. */
+  /* Sets the style of the Notification suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-  /* Shows a close button, and the notification can be dismissed by a user. */
+  /* Shows a close button, and the Notification can be dismissed by a user. */
   /* @default false */
   closable?: boolean;
-  /* Handler called when the notification will close. */
+  /* Handler called when the Notification will close. */
   onClose?: () => void;
-  /* Custom notification action. Use `Notification.ActionButton` subcomponent. Must be a single element. */
+  /* Custom Notification action. Use `Notification.ActionButton` subcomponent. Must be a single element. */
   action?: JSX.Element;
 } & React.HTMLAttributes<HTMLDivElement>;
 

@@ -10,12 +10,12 @@ import { linkStyle, innerContentStyle } from './styles';
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 type LinkBaseProps = {
-  /* The content of the link.  */
+  /* The content of the Link.  */
   children: React.ReactNode;
-  /* Defines the font size of the link. In general should be specified only when used as a standalone element. */
+  /* Defines the font size of the Link. In general should be specified only when used as a standalone element. */
   /* @default inherit */
   size?: 'small' | 'medium' | 'large' | 'inherit';
-  /* Sets the style of the link suitable for dark backgrounds. */
+  /* Sets the style of the Link suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
   /* An icon displayed to the left. Could be any [Icon](/components/icon) from Waffles or a custom component. */

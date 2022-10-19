@@ -9,7 +9,7 @@ const sizeMap = {
 };
 
 type IconInternalProps = {
-  /* Defines the size of the icon. In general, use default size. */
+  /* Defines the size of the Icon. In general, use default size. */
   /* @default medium */
   size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
   /* [skip docs] */
