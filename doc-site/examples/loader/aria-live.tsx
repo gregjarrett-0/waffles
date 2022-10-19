@@ -6,14 +6,16 @@ import { Loader } from '@datacamp/waffles/loader';
 import { Code } from '@datacamp/waffles/code';
 import { Button } from '@datacamp/waffles/button';
 
-const initialContent = (
+type ContentStatus = 'initial' | 'loading' | 'final';
+
+const INITIAL_CONTENT = (
   <Paragraph>
     Click the button below to load new content and notify the screen reader of
     these changes, using <Code>aria-live</Code>.
   </Paragraph>
 );
-const loader = <Loader width="50" aria-label="Loading new content" />;
-const newContent = (
+const LOADER_CONTENT = <Loader width="50" aria-label="Loading new content" />;
+const FINAL_CONTENT = (
   <Paragraph>
     This content will be announced by the screen reader now the loading has
     finished.
@@ -21,46 +23,66 @@ const newContent = (
 );
 
 function Example() {
-  const [content, setContent] = useState(initialContent);
-  const [isResetButton, setIsResetButton] = useState(false);
-  const [isDisabled, setIsDisabled] = useState(false);
+  const [status, setStatus] = useState<ContentStatus>('initial');
 
   function updateContent() {
-    if (content === initialContent) {
-      setIsDisabled(true);
-      setContent(loader);
+    if (status === 'initial') {
+      setStatus('loading');
 
       // Timeout before updating content again
       setTimeout(() => {
-        setIsDisabled(false);
-        setIsResetButton(true);
-        setContent(newContent);
+        setStatus('final');
       }, 3000);
     } else {
-      setIsDisabled(false);
-      setIsResetButton(false);
-      setContent(initialContent);
+      setStatus('initial');
+    }
+  }
+
+  function renderContent() {
+    switch (status) {
+      case 'initial':
+        return INITIAL_CONTENT;
+      case 'loading':
+        return LOADER_CONTENT;
+      case 'final':
+        return FINAL_CONTENT;
     }
   }
 
   return (
-    <>
+    <div
+      css={css`
+        display: flex;
+        flex-wrap: wrap;
+        gap: ${tokens.spacing.small};
+        padding: ${tokens.spacing.small};
+        background-color: ${tokens.colors.beigeLight};
+        border-radius: ${tokens.borderRadius.medium};
+      `}
+    >
       <div
-        aria-live="polite"
         css={css`
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: ${tokens.spacing.small};
           height: 150px;
+          width: 100%;
         `}
+        aria-live="polite"
       >
-        {content}
+        {renderContent()}
       </div>
-      <Button onClick={updateContent} disabled={isDisabled}>
-        {isResetButton ? 'Reset Example' : 'Update Content'}
+      <Button
+        css={css`
+          margin-left: auto;
+          width: 150px;
+        `}
+        onClick={updateContent}
+        disabled={status === 'loading'}
+      >
+        {status === 'final' ? 'Reset Example' : 'Update Content'}
       </Button>
-    </>
+    </div>
   );
 }
 
