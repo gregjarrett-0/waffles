@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Checkbox } from '../checkbox';
 
+import { useTable } from './table-context';
 import { headCellCheckboxStyle } from './styles';
 
 type HeadCellCheckboxProps = {
@@ -9,9 +10,11 @@ type HeadCellCheckboxProps = {
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
 function HeadCellCheckbox(props: HeadCellCheckboxProps) {
+  const { inverted } = useTable();
+
   return (
     <th css={headCellCheckboxStyle()}>
-      <Checkbox {...props} aria-label="Select all" />
+      <Checkbox {...props} inverted={inverted} aria-label="Select all" />
     </th>
   );
 }
