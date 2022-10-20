@@ -56,8 +56,6 @@ function Example() {
         flex-wrap: wrap;
         gap: ${tokens.spacing.small};
         padding: ${tokens.spacing.small};
-        background-color: ${tokens.colors.beigeLight};
-        border-radius: ${tokens.borderRadius.medium};
       `}
     >
       <div
@@ -65,6 +63,9 @@ function Example() {
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: ${tokens.colors.beigeLight};
+          border-radius: ${tokens.borderRadius.medium};
+          padding: ${tokens.spacing.medium};
           height: 150px;
           width: 100%;
         `}
