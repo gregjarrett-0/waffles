@@ -75,7 +75,6 @@ function Example() {
       </div>
       <Button
         css={css`
-          margin-left: auto;
           width: 150px;
         `}
         onClick={updateContent}
