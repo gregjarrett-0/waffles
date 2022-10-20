@@ -100,7 +100,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
         disabled: true,
       })}
       type={!type && Element === 'button' ? 'button' : type}
-      aria-label={isLoading ? ariaLabel?.concat(' ', 'Loading') : ariaLabel}
+      aria-label={ariaLabel}
       ref={ref}
       css={buttonStyle({
         variant,
@@ -130,7 +130,13 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
       {isLoading && (
         <ButtonLoader
           key="button-loader"
-          {...{ size, variant, inverted, isIconOnly: !!icon }}
+          {...{
+            size,
+            variant,
+            inverted,
+            ariaLabel,
+            isIconOnly: !!icon,
+          }}
         />
       )}
     </Element>
