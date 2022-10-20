@@ -18,10 +18,22 @@ function Story() {
             <Table.HeadCell sort="indeterminate" onSort={() => {}}>
               Technology
             </Table.HeadCell>
-            <Table.HeadCell sort="ascending" onSort={() => {}}>
+            <Table.HeadCell
+              sort="ascending"
+              onSort={() => {}}
+              css={css`
+                min-width: 160px;
+              `}
+            >
               Complexity
             </Table.HeadCell>
-            <Table.HeadCell sort="descending" onSort={() => {}}>
+            <Table.HeadCell
+              sort="descending"
+              onSort={() => {}}
+              css={css`
+                min-width: 160px;
+              `}
+            >
               Invented at
             </Table.HeadCell>
             <Table.HeadCell>Description</Table.HeadCell>

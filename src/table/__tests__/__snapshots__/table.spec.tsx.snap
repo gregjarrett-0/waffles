@@ -3,6 +3,7 @@
 exports[`Table renders snapshot of basic inverted table 1`] = `
 .emotion-0 {
   position: relative;
+  width: 100%;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
   border-top-left-radius: 4px;
@@ -46,13 +47,15 @@ exports[`Table renders snapshot of basic inverted table 1`] = `
 .emotion-3 {
   outline: 0;
   overflow: auto;
+  width: 100%;
 }
 
 .emotion-4 {
-  border: 0;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0;
+  border: 0;
+  width: 100%;
 }
 
 .emotion-4 td {
@@ -210,6 +213,7 @@ exports[`Table renders snapshot of basic inverted table 1`] = `
 exports[`Table renders snapshot of basic table 1`] = `
 .emotion-0 {
   position: relative;
+  width: 100%;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
   border-top-left-radius: 4px;
@@ -253,13 +257,15 @@ exports[`Table renders snapshot of basic table 1`] = `
 .emotion-3 {
   outline: 0;
   overflow: auto;
+  width: 100%;
 }
 
 .emotion-4 {
-  border: 0;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0;
+  border: 0;
+  width: 100%;
 }
 
 .emotion-4 td {
@@ -417,6 +423,7 @@ exports[`Table renders snapshot of basic table 1`] = `
 exports[`Table renders snapshot of table with checkboxes column 1`] = `
 .emotion-0 {
   position: relative;
+  width: 100%;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
   border-top-left-radius: 4px;
@@ -460,13 +467,15 @@ exports[`Table renders snapshot of table with checkboxes column 1`] = `
 .emotion-3 {
   outline: 0;
   overflow: auto;
+  width: 100%;
 }
 
 .emotion-4 {
-  border: 0;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0;
+  border: 0;
+  width: 100%;
 }
 
 .emotion-4 td {
@@ -906,6 +915,7 @@ exports[`Table renders snapshot of table with checkboxes column 1`] = `
 exports[`Table renders snapshot of table with menu cell 1`] = `
 .emotion-0 {
   position: relative;
+  width: 100%;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
   border-top-left-radius: 4px;
@@ -949,13 +959,15 @@ exports[`Table renders snapshot of table with menu cell 1`] = `
 .emotion-3 {
   outline: 0;
   overflow: auto;
+  width: 100%;
 }
 
 .emotion-4 {
-  border: 0;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0;
+  border: 0;
+  width: 100%;
 }
 
 .emotion-4 td {
@@ -1230,6 +1242,7 @@ exports[`Table renders snapshot of table with menu cell 1`] = `
 exports[`Table renders snapshot of table with sortable column 1`] = `
 .emotion-0 {
   position: relative;
+  width: 100%;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
   border-top-left-radius: 4px;
@@ -1273,13 +1286,15 @@ exports[`Table renders snapshot of table with sortable column 1`] = `
 .emotion-3 {
   outline: 0;
   overflow: auto;
+  width: 100%;
 }
 
 .emotion-4 {
-  border: 0;
   border-collapse: separate;
   border-spacing: 0;
   margin: 0;
+  border: 0;
+  width: 100%;
 }
 
 .emotion-4 td {
