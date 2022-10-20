@@ -23,42 +23,42 @@ describe('Table', () => {
 
     it('show shadow scroll hint on both sides, when it was scrolled to the middle', () => {
       cy.loadStory('table-regular');
-      cy.get('main').findByLabelText('Regular table').focus().scrollTo(100, 0);
+      cy.get('main').findByLabelText('Regular table').focus().scrollTo(50, 0);
       cy.get('table').should('exist');
     });
 
     it('show shadow scroll hint to the left, when it was scrolled to the end', () => {
       cy.loadStory('table-regular');
-      cy.get('main').findByLabelText('Regular table').focus().scrollTo(200, 0);
+      cy.get('main').findByLabelText('Regular table').focus().scrollTo('right');
       cy.get('table').should('exist');
     });
   });
 
-  describe('render regular table with all cell types', () => {
-    Object.keys(screenSizes).forEach((size) => {
-      const [width, height] = screenSizes[size];
+  // describe('render regular table with all cell types', () => {
+  //   Object.keys(screenSizes).forEach((size) => {
+  //     const [width, height] = screenSizes[size];
 
-      it(`on ${size} screen device`, () => {
-        cy.viewport(width, height);
-        cy.loadStory('table-regular');
-        cy.findByText('Hard').click(); // Open menu
-        cy.get('table').should('exist');
-      });
-    });
-  });
+  //     it(`on ${size} screen device`, () => {
+  //       cy.viewport(width, height);
+  //       cy.loadStory('table-regular');
+  //       cy.findByText('Hard').click(); // Open menu
+  //       cy.get('table').should('exist');
+  //     });
+  //   });
+  // });
 
-  describe('render inverted table with all cell types', () => {
-    Object.keys(screenSizes).forEach((size) => {
-      const [width, height] = screenSizes[size];
+  // describe('render inverted table with all cell types', () => {
+  //   Object.keys(screenSizes).forEach((size) => {
+  //     const [width, height] = screenSizes[size];
 
-      it(`on ${size} screen device`, () => {
-        cy.viewport(width, height);
-        cy.loadStory('table-inverted');
-        cy.findByText('Hard').click(); // Open menu
-        cy.get('table').should('exist');
-      });
-    });
-  });
+  //     it(`on ${size} screen device`, () => {
+  //       cy.viewport(width, height);
+  //       cy.loadStory('table-inverted');
+  //       cy.findByText('Hard').click(); // Open menu
+  //       cy.get('table').should('exist');
+  //     });
+  //   });
+  // });
 });
 
 export {};
