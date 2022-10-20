@@ -1,0 +1,63 @@
+import * as TableExports from '@datacamp/waffles/table';
+import { Notification } from '@datacamp/waffles/notification';
+import { Code } from '@datacamp/waffles/code';
+
+import Layout from '../../components/content-layout';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/table/playground-config';
+import BasicUsage from '../../examples/table/basic-usage';
+import AdvancedUsage from '../../examples/table/advanced-usage';
+import Inverted from '../../examples/table/inverted';
+
+<Layout title="Table" description="🚧 This page is under construction">
+
+## Usage guidance
+
+<Notification
+  title="Customizing column width"
+  description={
+    <>
+      It is possible to fine tune column width by setting <Code>min-width</Code>{' '}
+      or <Code>max-width</Code> on the appropriate <em>Table.HeadCell</em>{' '}
+      element.
+    </>
+  }
+/>
+
+## Examples
+
+<Example title="Basic usage" path="table/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Advanced usage" path="table/advanced-usage">
+  <AdvancedUsage />
+</Example>
+
+<Example title="Inverted" path="table/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Table
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/table/table-internal')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={TableExports} path="@datacamp/waffles/table" />
+
+</Layout>
