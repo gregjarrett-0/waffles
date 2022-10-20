@@ -27,6 +27,7 @@ export function outerWrapperStyle({
 }: OuterWrapperStyleOptions) {
   return css`
     position: relative;
+    width: 100%;
     transition: box-shadow 125ms ease-out;
 
     ${isFocusVisible && `box-shadow: 0 0 0 2px ${tokens.colors.blueDark};`}
@@ -70,6 +71,7 @@ export function tableWrapperStyle() {
   return css`
     outline: 0;
     overflow: auto;
+    width: 100%;
   `;
 }
 
@@ -125,10 +127,11 @@ export function tableStyle({
   );
 
   return css`
-    border: 0;
     border-collapse: separate;
     border-spacing: 0;
     margin: 0;
+    border: 0;
+    width: 100%;
 
     // Colors
 
