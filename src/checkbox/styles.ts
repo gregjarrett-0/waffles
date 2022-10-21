@@ -32,12 +32,12 @@ export function inputStyle({ disabled }: InputStyleOptions) {
   `;
 }
 
-type ContentStyleOptions = {
+type LabelStyleOptions = {
   inverted: boolean;
   disabled: boolean;
 };
 
-export function labelStyle({ inverted, disabled }: ContentStyleOptions) {
+export function labelStyle({ inverted, disabled }: LabelStyleOptions) {
   return css`
     line-height: ${tokens.lineHeights.default};
     padding-top: 1px;
@@ -94,6 +94,7 @@ function checkmarkBackgroundColor(
       ? tokens.colors.blue
       : tokens.colors.navyLight;
   }
+
   return checked || isIndeterminate
     ? tokens.colors.blueDark
     : tokens.colors.white;

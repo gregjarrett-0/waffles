@@ -20,7 +20,7 @@ type CheckboxBaseProps = {
   error?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 
-type CheckboxWithDescription = {
+type CheckboxWithLabel = {
   /* The description displayed next to the Checkbox. */
   children: React.ReactNode;
   /* [skip docs] */
@@ -32,7 +32,7 @@ type CheckmarkOnly = {
   'aria-label': string;
 } & CheckboxBaseProps;
 
-type CheckboxProps = CheckboxWithDescription | CheckmarkOnly;
+type CheckboxProps = CheckboxWithLabel | CheckmarkOnly;
 
 function CheckboxInternal(
   {
