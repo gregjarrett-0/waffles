@@ -76,14 +76,6 @@ const checkmarkBaseStyle = css`
   }
 `;
 
-type CheckmarkStyleOptions = {
-  inverted: boolean;
-  checked: boolean;
-  isIndeterminate: boolean;
-  isFocusVisible: boolean;
-  hasError: boolean;
-};
-
 function checkmarkBackgroundColor(
   inverted: boolean,
   checked: boolean,
@@ -99,6 +91,14 @@ function checkmarkBackgroundColor(
     ? tokens.colors.blueDark
     : tokens.colors.white;
 }
+
+type CheckmarkStyleOptions = {
+  inverted: boolean;
+  checked: boolean;
+  isIndeterminate: boolean;
+  isFocusVisible: boolean;
+  hasError: boolean;
+};
 
 export function checkmarkStyle({
   inverted,

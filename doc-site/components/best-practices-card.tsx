@@ -9,34 +9,31 @@ import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Chapeau } from '@datacamp/waffles/chapeau';
 
-type WithRecommendedStyleOptions = {
+type BestPracticesStyleOptions = {
   isRecommended: boolean;
 };
 
-function cardStyle({ isRecommended }: WithRecommendedStyleOptions) {
+function cardStyle({ isRecommended }: BestPracticesStyleOptions) {
   const color = isRecommended ? tokens.colors.green : tokens.colors.red;
+  const opacity = isRecommended ? 0.2 : 0.15;
 
   return css`
     position: relative;
     background: linear-gradient(
         0deg,
-        ${hexToRgba(color, isRecommended ? 0.2 : 0.15)},
-        ${hexToRgba(color, isRecommended ? 0.2 : 0.15)}
+        ${hexToRgba(color, opacity)},
+        ${hexToRgba(color, opacity)}
       ),
       ${tokens.colors.white};
-    border-width: ${tokens.borderWidth.thin};
-    border-style: solid;
-    border-color: ${hexToRgba(
-      color,
-      isRecommended ? 0.8 : tokens.opacity.high,
-    )};
+    border: ${tokens.borderWidth.thin} solid
+      ${hexToRgba(color, isRecommended ? 0.8 : tokens.opacity.high)};
     border-radius: ${tokens.borderRadius.medium};
     padding: ${tokens.spacing.medium};
     padding-top: 20px;
   `;
 }
 
-function decorStyle({ isRecommended }: WithRecommendedStyleOptions) {
+function decorStyle({ isRecommended }: BestPracticesStyleOptions) {
   return css`
     position: absolute;
     z-index: ${tokens.zIndex.default};
@@ -52,7 +49,7 @@ function decorStyle({ isRecommended }: WithRecommendedStyleOptions) {
   `;
 }
 
-function iconStyle({ isRecommended }: WithRecommendedStyleOptions) {
+function iconStyle({ isRecommended }: BestPracticesStyleOptions) {
   return css`
     display: inline-flex;
     align-items: center;

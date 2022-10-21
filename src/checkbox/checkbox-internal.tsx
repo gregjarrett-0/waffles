@@ -21,7 +21,7 @@ type CheckboxBaseProps = {
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'>;
 
 type CheckboxWithLabel = {
-  /* The description displayed next to the Checkbox. */
+  /* The label displayed next to the Checkbox. */
   children: React.ReactNode;
   /* [skip docs] */
   'aria-label'?: string;
