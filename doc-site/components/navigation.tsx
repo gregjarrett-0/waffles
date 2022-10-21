@@ -66,9 +66,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
               <Item href="/components/empty-state">Empty State</Item>
               <Item href="/components/icon">Icon</Item>
               <Item href="/components/notification">Notification</Item>
-              <Item href="/components/progress">
-                Progress
-              </Item>
+              <Item href="/components/progress">Progress</Item>
               <Item href="/components/table" isNew>
                 Table
               </Item>
