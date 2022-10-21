@@ -1060,6 +1060,10 @@ exports[`Table renders snapshot of table with menu cell 1`] = `
   outline: 0;
   background-color: transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
@@ -1127,6 +1131,10 @@ exports[`Table renders snapshot of table with menu cell 1`] = `
   outline: 0;
   background-color: transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;
@@ -1387,6 +1395,10 @@ exports[`Table renders snapshot of table with sortable column 1`] = `
   outline: 0;
   background-color: transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border-radius: 4px;
   -webkit-transition: box-shadow 125ms ease-out;
   transition: box-shadow 125ms ease-out;

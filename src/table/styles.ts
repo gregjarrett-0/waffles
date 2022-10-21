@@ -217,6 +217,7 @@ const cellButtonBaseStyle = css`
   outline: 0;
   background-color: transparent;
   cursor: pointer;
+  user-select: none;
   border-radius: ${tokens.borderRadius.medium};
   transition: box-shadow 125ms ease-out;
 `;
