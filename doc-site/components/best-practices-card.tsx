@@ -40,13 +40,15 @@ function decorStyle({ isRecommended }: WithRecommendedStyleOptions) {
   return css`
     position: absolute;
     z-index: ${tokens.zIndex.default};
-    left: 0;
-    top: 0;
-    width: 100%;
+    top: -1px;
+    right: -1px;
+    left: -1px;
     height: 4px;
     background-color: ${isRecommended
       ? tokens.colors.green
       : tokens.colors.red};
+    border-top-right-radius: ${tokens.borderRadius.medium};
+    border-top-left-radius: ${tokens.borderRadius.medium};
   `;
 }
 
