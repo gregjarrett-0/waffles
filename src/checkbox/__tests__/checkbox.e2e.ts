@@ -60,6 +60,10 @@ describe('Checkbox', () => {
 
   it("if indeterminate, when label is clicked doesn't change to checked", () => {
     cy.loadStory('checkbox-indeterminate');
+    cy.get('main')
+      .find('input[type=checkbox]')
+      .should('have.attr', 'aria-checked')
+      .and('eq', 'mixed');
     cy.get('main').findByText('Indeterminate checkbox').click();
     cy.get('main')
       .find('input[type=checkbox]')
