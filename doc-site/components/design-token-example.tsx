@@ -1,12 +1,11 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { Table } from '@datacamp/waffles/table';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 
-import Table from './table';
-
 const exampleCellStyle = css`
-  height: 38px;
+  height: 54px;
   padding: 0;
 `;
 

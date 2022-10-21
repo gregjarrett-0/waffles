@@ -1,19 +1,13 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
+import { Table } from '@datacamp/waffles/table';
 import { ScreenReaderOnly } from '@datacamp/waffles/screen-reader-only';
 import { ExternalLink } from '@datacamp/waffles/icon';
 import { Button } from '@datacamp/waffles/button';
 
-import Table from './table';
-
-const nameCellStyle = css`
-  padding: ${tokens.spacing.small} ${tokens.spacing.medium};
-  vertical-align: middle;
-`;
-
-const tableCellStyle = css`
-  padding: ${tokens.spacing.small};
+const buttonStyle = css`
+  margin-left: -10px;
 `;
 
 const textStyle = css`
@@ -21,7 +15,6 @@ const textStyle = css`
   height: ${tokens.sizing.small};
   font-size: ${tokens.fontSizes.small};
   align-items: center;
-  padding-left: 10px;
   color: ${tokens.colors.navySubtleTextOnLight};
   user-select: none;
 `;
@@ -59,6 +52,7 @@ function AvailableStatus({ href, external = false }: AvailableStatusProps) {
         target: '_blank',
         rel: 'noopener',
       })}
+      css={buttonStyle}
     >
       Available
       {external && <ScreenReaderOnly> (opens in a new tab)</ScreenReaderOnly>}
@@ -87,23 +81,23 @@ function ComponentStatus({
   figmaComponentUrl,
 }: ComponentStatusProps) {
   return (
-    <tr>
-      <Table.Cell css={nameCellStyle}>{name}</Table.Cell>
-      <Table.Cell css={tableCellStyle}>
+    <Table.Row>
+      <Table.Cell>{name}</Table.Cell>
+      <Table.Cell>
         {reactComponentUrl ? (
           <AvailableStatus href={reactComponentUrl} />
         ) : (
           <UnavailableStatus />
         )}
       </Table.Cell>
-      <Table.Cell css={tableCellStyle}>
+      <Table.Cell>
         {figmaComponentUrl ? (
           <AvailableStatus href={figmaComponentUrl} external />
         ) : (
           <UnavailableStatus />
         )}
       </Table.Cell>
-    </tr>
+    </Table.Row>
   );
 }
 

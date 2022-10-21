@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { Table } from '@datacamp/waffles/table';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Code } from '@datacamp/waffles/code';
@@ -8,8 +9,6 @@ import { Chapeau } from '@datacamp/waffles/chapeau';
 
 import convertedProps from '../helpers/converted-props';
 import markdownElements from '../components/props-table-markdown-elements';
-
-import Table from './table';
 
 const POLYMORPHIC_METADATA = {
   name: 'as',
@@ -26,8 +25,13 @@ const nameStyle = css`
   background-color: ${hexToRgba(tokens.colors.blue, tokens.opacity.low)};
 `;
 
-const descriptionStyle = css`
+const descriptionCellStyle = css`
   width: 50%;
+  min-width: 300px;
+`;
+
+const cellStyle = css`
+  vertical-align: text-top;
 `;
 
 const defaultValueWrapperStyle = css`
@@ -71,32 +75,34 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
 
   return (
     <ErrorBoundary>
-      <Table>
-        <thead>
-          <tr>
+      <Table aria-label="Props overview">
+        <Table.Head>
+          <Table.Row>
             <Table.HeadCell>Name</Table.HeadCell>
             <Table.HeadCell>Type</Table.HeadCell>
-            <Table.HeadCell css={descriptionStyle}>Description</Table.HeadCell>
-          </tr>
-        </thead>
-        <tbody>
+            <Table.HeadCell css={descriptionCellStyle}>
+              Description
+            </Table.HeadCell>
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
           {propsMetadata.map((singleProp) => {
             return (
-              <tr key={`prop-${singleProp.name}`}>
-                <Table.Cell>
+              <Table.Row key={`prop-${singleProp.name}`}>
+                <Table.Cell css={cellStyle}>
                   <Code css={nameStyle}>{singleProp.name}</Code>
                   {!singleProp.isOptional && (
                     <span aria-label="Is required" css={requiredMarkerStyle} />
                   )}
                 </Table.Cell>
-                <Table.Cell>
+                <Table.Cell css={cellStyle}>
                   <div css={propTypeStyle}>
                     {singleProp.type.split(' | ').map((type) => {
                       return <Code key={type}>{type}</Code>;
                     })}
                   </div>
                 </Table.Cell>
-                <Table.Cell>
+                <Table.Cell css={cellStyle}>
                   {singleProp.description ? (
                     <ReactMarkdown components={markdownElements}>
                       {singleProp.description}
@@ -113,10 +119,10 @@ function PropsTable({ metadata, isPolymorphic = false }: PropsTableProps) {
                     </div>
                   )}
                 </Table.Cell>
-              </tr>
+              </Table.Row>
             );
           })}
-        </tbody>
+        </Table.Body>
       </Table>
     </ErrorBoundary>
   );

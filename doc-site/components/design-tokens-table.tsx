@@ -1,12 +1,8 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { Table } from '@datacamp/waffles/table';
 
-import Table from './table';
 import DesignTokenExample from './design-token-example';
-
-const cellStyle = css`
-  padding: ${tokens.spacing.small} ${tokens.spacing.medium};
-`;
 
 const nameStyle = css`
   width: 40%;
@@ -18,27 +14,27 @@ type DesignTokensTableProps = {
 
 function DesignTokensTable({ tokensGroup }: DesignTokensTableProps) {
   return (
-    <Table>
-      <thead>
-        <tr>
+    <Table aria-label="Design tokens examples">
+      <Table.Head>
+        <Table.Row>
           <Table.HeadCell css={nameStyle}>Name</Table.HeadCell>
           <Table.HeadCell>Value</Table.HeadCell>
           <Table.HeadCell>Example</Table.HeadCell>
-        </tr>
-      </thead>
-      <tbody>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body>
         {Object.entries(tokens[tokensGroup]).map((entry) => {
           const [name, value] = entry;
 
           return (
-            <tr key={`color-${name}`}>
-              <Table.Cell css={cellStyle}>{name}</Table.Cell>
-              <Table.Cell css={cellStyle}>{value}</Table.Cell>
+            <Table.Row key={`color-${name}`}>
+              <Table.Cell>{name}</Table.Cell>
+              <Table.Cell>{value}</Table.Cell>
               <DesignTokenExample tokensGroup={tokensGroup} value={value} />
-            </tr>
+            </Table.Row>
           );
         })}
-      </tbody>
+      </Table.Body>
     </Table>
   );
 }

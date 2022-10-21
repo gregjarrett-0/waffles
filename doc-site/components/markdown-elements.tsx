@@ -4,6 +4,7 @@ import useOnScreen from 'hooks/use-on-screen';
 import useContentsTable from 'hooks/use-contents-table';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { Table as TableBase } from '@datacamp/waffles/table';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
 import { hexToRgba } from '@datacamp/waffles/helpers';
@@ -14,7 +15,6 @@ import { Code as CodeBase } from '@datacamp/waffles/code';
 import textFromChildren from '../helpers/text-from-children';
 import slugify from '../helpers/slugify';
 
-import TableBase from './table';
 import List from './list';
 import Bookmark from './bookmark';
 
@@ -113,11 +113,26 @@ function CodeBlock({ children }: ContentProps) {
 }
 
 const tableStyle = css`
-  width: auto;
+  & th:last-of-type,
+  & td:last-of-type {
+    text-align: right;
+  }
+`;
+
+const tableCellStyle = css`
+  vertical-align: text-top;
 `;
 
 function Table({ children }: ContentProps) {
-  return <TableBase css={tableStyle}>{children}</TableBase>;
+  return (
+    <TableBase aria-label="Overview" css={tableStyle}>
+      {children}
+    </TableBase>
+  );
+}
+
+function TableCell({ children }: ContentProps) {
+  return <TableBase.Cell css={tableCellStyle}>{children}</TableBase.Cell>;
 }
 
 const hrStyle = css`
@@ -173,7 +188,7 @@ const markdownElements = {
   li: List.Item,
   table: Table,
   th: TableBase.HeadCell,
-  td: TableBase.Cell,
+  td: TableCell,
   section: Section,
 };
 

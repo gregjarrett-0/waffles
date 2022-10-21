@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Table from './table';
+import { Table } from '@datacamp/waffles/table';
 
 type ComponentStatusTableProps = {
   children: React.ReactNode;
@@ -8,15 +7,15 @@ type ComponentStatusTableProps = {
 
 function ComponentStatusTable({ children }: ComponentStatusTableProps) {
   return (
-    <Table>
-      <thead>
-        <tr>
+    <Table aria-label="Components overview">
+      <Table.Head>
+        <Table.Row>
           <Table.HeadCell>Name</Table.HeadCell>
           <Table.HeadCell>React</Table.HeadCell>
           <Table.HeadCell>Figma</Table.HeadCell>
-        </tr>
-      </thead>
-      <tbody>{children}</tbody>
+        </Table.Row>
+      </Table.Head>
+      <Table.Body>{children}</Table.Body>
     </Table>
   );
 }
