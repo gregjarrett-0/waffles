@@ -8,30 +8,49 @@ import {
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Chapeau } from '@datacamp/waffles/chapeau';
-import { Card } from '@datacamp/waffles/card';
 
-type BestPracticesCardStyleOptions = {
+type WithRecommendedStyleOptions = {
   isRecommended: boolean;
 };
 
-function cardStyle({ isRecommended }: BestPracticesCardStyleOptions) {
+function cardStyle({ isRecommended }: WithRecommendedStyleOptions) {
   const color = isRecommended ? tokens.colors.green : tokens.colors.red;
 
   return css`
+    position: relative;
     background: linear-gradient(
         0deg,
-        ${hexToRgba(color, tokens.opacity.low)},
-        ${hexToRgba(color, tokens.opacity.low)}
+        ${hexToRgba(color, isRecommended ? 0.2 : 0.15)},
+        ${hexToRgba(color, isRecommended ? 0.2 : 0.15)}
       ),
       ${tokens.colors.white};
-    border-width: ${`${tokens.borderWidth.xthick} ${tokens.borderWidth.thin}
-      ${tokens.borderWidth.thin}`};
-    border-color: ${hexToRgba(color, tokens.opacity.high)};
-    border-top-color: ${color};
+    border-width: ${tokens.borderWidth.thin};
+    border-style: solid;
+    border-color: ${hexToRgba(
+      color,
+      isRecommended ? 0.8 : tokens.opacity.high,
+    )};
+    border-radius: ${tokens.borderRadius.medium};
+    padding: ${tokens.spacing.medium};
+    padding-top: 20px;
   `;
 }
 
-function iconStyle({ isRecommended }: BestPracticesCardStyleOptions) {
+function decorStyle({ isRecommended }: WithRecommendedStyleOptions) {
+  return css`
+    position: absolute;
+    z-index: ${tokens.zIndex.default};
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background-color: ${isRecommended
+      ? tokens.colors.green
+      : tokens.colors.red};
+  `;
+}
+
+function iconStyle({ isRecommended }: WithRecommendedStyleOptions) {
   return css`
     display: inline-flex;
     align-items: center;
@@ -73,7 +92,8 @@ function BestPracticesCard({ children, variant }: BestPracticesCardProps) {
   const isRecommended = variant === 'recommended';
 
   return (
-    <Card disableHoverEffect css={cardStyle({ isRecommended })}>
+    <section css={cardStyle({ isRecommended })}>
+      <div css={decorStyle({ isRecommended })} />
       <Heading size="large" css={headingStyle}>
         <span css={iconStyle({ isRecommended })}>
           {isRecommended ? (
@@ -85,7 +105,7 @@ function BestPracticesCard({ children, variant }: BestPracticesCardProps) {
         <Chapeau>{isRecommended ? 'Do' : "Don't"}</Chapeau>
       </Heading>
       {children}
-    </Card>
+    </section>
   );
 }
 
