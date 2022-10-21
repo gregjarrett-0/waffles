@@ -18,6 +18,8 @@ const exampleWrapperStyle = css`
   margin-left: 12px;
   overflow: hidden;
   position: relative;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
 `;
 
 const sizeBarStyle = css`
