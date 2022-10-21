@@ -8,7 +8,9 @@ import { cellStyle } from './styles';
 import MenuTrigger from './cell-menu-trigger';
 
 type CellProps = {
+  /* Menu trigger label. */
   label: string;
+  /* Content of the Menu, either `Table.CellMenuCategory` or custom components. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLTableCellElement>;
 

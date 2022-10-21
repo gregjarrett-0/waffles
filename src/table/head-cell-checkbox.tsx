@@ -6,6 +6,7 @@ import { useTable } from './table-context';
 import { headCellCheckboxStyle } from './styles';
 
 type HeadCellCheckboxProps = {
+  /* [skip-docs] */
   isIndeterminate?: boolean;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 

@@ -50,9 +50,59 @@ import Inverted from '../../examples/table/inverted';
 
 ### Table
 
+In addition to all custom props listed below, Table accepts all props regular `HTMLTable` would, such as `data-` attributes.
+
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/table/table-internal')}
 />
+
+### Table.Head
+
+`Table.Head` accepts all props regular `HTMLTableSection` would, such as `data-` attributes.
+
+### Table.Body
+
+`Table.Body` accepts all props regular `HTMLTableSection` would, such as `data-` attributes.
+
+### Table.Row
+
+`Table.Row` accepts all props regular `HTMLTableRow` would, such as `data-` attributes.
+
+### Table.HeadCell
+
+In addition to all custom props listed below, `Table.HeadCell` accepts all props regular `HTMLTableCell` would, such as `data-` attributes. To customize column width it's possible to provide it via CSS `max-width`, `min-width`, or `width` (in this case percantages are recommended).
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/table/head-cell')}
+/>
+
+### Table.HeadCellCheckbox
+
+`Table.HeadCellCheckbox` accepts all props Waffles [Checkbox](/components/checkbox/#props) would, except `error`.
+
+### Table.Cell
+
+`Table.Cell` accepts all props regular `HTMLTableCell` would, such as `data-` attributes.
+
+### Table.CellCheckbox
+
+`Table.CellCheckbox` accepts all props Waffles [Checkbox](/components/checkbox/#props) would, except `error` and `isIndeterminate`.
+
+### Table.CellMenu
+
+In addition to all custom props listed below, `Table.CellMenu` accepts all props regular `HTMLTableCell` would, such as `data-` attributes. When building `Table.CellMenu` exactly the same rules apply as outlined in [Menu usage guidance](/components/menu/#usage-guidance).
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/table/cell-menu')}
+/>
+
+### Table.CellMenuCategory
+
+`Table.CellMenuCategory` accepts all props Waffles [Menu.Category](/components/menu/#props) would.
+
+### Table.CellMenuItem
+
+`Table.CellMenuItem` accepts all props Waffles [Menu.Item](/components/menu/#props) would.
 
 ## Imports
 

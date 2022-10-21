@@ -13,7 +13,10 @@ import {
 } from './styles';
 
 type TableProps = {
+  /* Sets the style of the Table and all subcomponents suitable for dark backgrounds. */
+  /* @default false */
   inverted?: boolean;
+  /* Accessible label, should always be provided with context of the Table, e.g. "Available technologies". */
   'aria-label': string;
 } & React.HTMLAttributes<HTMLTableElement>;
 

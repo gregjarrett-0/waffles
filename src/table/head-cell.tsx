@@ -6,7 +6,9 @@ import { Sort, SortAscending, SortDescending } from '../icon';
 import { headCellStyle, headCellSortButtonStyle } from './styles';
 
 type HeadCellProps = {
+  /* Show appropriate sort icon, and sets `aria-sort` attribute. */
   sort?: 'ascending' | 'descending' | 'indeterminate' | 'none';
+  /* Handler called when cell is clicked. */
   onSort?: React.MouseEventHandler<HTMLButtonElement>;
 } & React.HTMLAttributes<HTMLTableCellElement>;
 
