@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 import { Table } from '../index';
 import { tokens } from '../../tokens';
+import { Heart } from '../../icon';
 
 const wrapperStyle = css`
   padding: ${tokens.spacing.medium};
@@ -15,12 +16,12 @@ function Story() {
         <Table.Head>
           <Table.Row>
             <Table.HeadCellCheckbox isIndeterminate onChange={() => {}} />
-            <Table.HeadCell sort="indeterminate" onSort={() => {}}>
+            <Table.HeadCell sort="indeterminate" onClick={() => {}}>
               Technology
             </Table.HeadCell>
             <Table.HeadCell
               sort="ascending"
-              onSort={() => {}}
+              onClick={() => {}}
               css={css`
                 min-width: 160px;
               `}
@@ -29,12 +30,20 @@ function Story() {
             </Table.HeadCell>
             <Table.HeadCell
               sort="descending"
-              onSort={() => {}}
+              onClick={() => {}}
               css={css`
                 min-width: 160px;
               `}
             >
               Invented at
+            </Table.HeadCell>
+            <Table.HeadCell
+              icon={<Heart />}
+              css={css`
+                min-width: 100px;
+              `}
+            >
+              Likes
             </Table.HeadCell>
             <Table.HeadCell>Description</Table.HeadCell>
           </Table.Row>
@@ -51,6 +60,7 @@ function Story() {
               </Table.CellMenuCategory>
             </Table.CellMenu>
             <Table.Cell>1991</Table.Cell>
+            <Table.Cell>42</Table.Cell>
             <Table.Cell>
               A programming language that lets you work quickly and integrate
               systems more effectively.
@@ -67,6 +77,7 @@ function Story() {
               </Table.CellMenuCategory>
             </Table.CellMenu>
             <Table.Cell>1995</Table.Cell>
+            <Table.Cell>142</Table.Cell>
             <Table.Cell>
               A programming language that is one of the core technologies of the
               World Wide Web, alongside HTML and CSS.
@@ -83,6 +94,7 @@ function Story() {
               </Table.CellMenuCategory>
             </Table.CellMenu>
             <Table.Cell>2014</Table.Cell>
+            <Table.Cell>6</Table.Cell>
             <Table.Cell>
               Rust is blazingly fast and memory-efficient: with no runtime or
               garbage collector.

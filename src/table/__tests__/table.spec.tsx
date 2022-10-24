@@ -11,6 +11,14 @@ jest.mock('nanoid', () => {
   };
 });
 
+function DummyIcon() {
+  return (
+    <svg viewBox="0 0 100 100" data-testid="dummy-icon">
+      <circle cx="50" cy="50" r="50" />
+    </svg>
+  );
+}
+
 describe('Table', () => {
   describe('HeadCellCheckbox', () => {
     it('when clicked, appropriate handler is fired', () => {
@@ -29,6 +37,41 @@ describe('Table', () => {
       checkbox && fireEvent.click(checkbox);
 
       expect(handleChange).toHaveBeenCalled();
+    });
+
+    it("has 'Select all' aria-label by default", () => {
+      const { container } = render(
+        <Table aria-label="Dummy table">
+          <Table.Head>
+            <Table.Row>
+              <Table.HeadCellCheckbox onChange={() => {}} />
+            </Table.Row>
+          </Table.Head>
+        </Table>,
+      );
+
+      const checkbox = container.querySelector('input');
+
+      expect(checkbox).toHaveAttribute('aria-label', 'Select all');
+    });
+
+    it('aria-label could be customized', () => {
+      const { container } = render(
+        <Table aria-label="Dummy table">
+          <Table.Head>
+            <Table.Row>
+              <Table.HeadCellCheckbox
+                aria-label="Custom accessible label"
+                onChange={() => {}}
+              />
+            </Table.Row>
+          </Table.Head>
+        </Table>,
+      );
+
+      const checkbox = container.querySelector('input');
+
+      expect(checkbox).toHaveAttribute('aria-label', 'Custom accessible label');
     });
   });
 
@@ -49,6 +92,41 @@ describe('Table', () => {
       checkbox && fireEvent.click(checkbox);
 
       expect(handleChange).toHaveBeenCalled();
+    });
+
+    it("has 'Select' aria-label by default", () => {
+      const { container } = render(
+        <Table aria-label="Dummy table">
+          <Table.Head>
+            <Table.Row>
+              <Table.CellCheckbox onChange={() => {}} />
+            </Table.Row>
+          </Table.Head>
+        </Table>,
+      );
+
+      const checkbox = container.querySelector('input');
+
+      expect(checkbox).toHaveAttribute('aria-label', 'Select');
+    });
+
+    it('aria-label could be customized', () => {
+      const { container } = render(
+        <Table aria-label="Dummy table">
+          <Table.Head>
+            <Table.Row>
+              <Table.CellCheckbox
+                aria-label="Custom accessible label"
+                onChange={() => {}}
+              />
+            </Table.Row>
+          </Table.Head>
+        </Table>,
+      );
+
+      const checkbox = container.querySelector('input');
+
+      expect(checkbox).toHaveAttribute('aria-label', 'Custom accessible label');
     });
   });
 
@@ -101,12 +179,12 @@ describe('Table', () => {
 
   describe('HeadCell', () => {
     it('when sort is specified, and cell is clicked, appropriate handler is fired', () => {
-      const handleSort = jest.fn();
-      const { getByText } = render(
+      const handleClick = jest.fn();
+      const { container } = render(
         <Table aria-label="Dummy table">
           <Table.Head>
             <Table.Row>
-              <Table.HeadCell sort="descending" onSort={handleSort}>
+              <Table.HeadCell sort="descending" onClick={handleClick}>
                 Name
               </Table.HeadCell>
             </Table.Row>
@@ -114,14 +192,32 @@ describe('Table', () => {
         </Table>,
       );
 
-      const cell = getByText('Name');
-      fireEvent.click(cell);
+      const button = container.querySelector('button');
+      button && fireEvent.click(button);
 
-      expect(handleSort).toHaveBeenCalled();
+      expect(handleClick).toHaveBeenCalled();
+    });
+
+    it('when sort is not specified, and cell is clicked, appropriate handler is fired', () => {
+      const handleClick = jest.fn();
+      const { container } = render(
+        <Table aria-label="Dummy table">
+          <Table.Head>
+            <Table.Row>
+              <Table.HeadCell onClick={handleClick}>Name</Table.HeadCell>
+            </Table.Row>
+          </Table.Head>
+        </Table>,
+      );
+
+      const cell = container.querySelector('th');
+      cell && fireEvent.click(cell);
+
+      expect(handleClick).toHaveBeenCalled();
     });
 
     it("when sort is set to 'descending', appropriate aria attribute and icon are present", () => {
-      const { container } = render(
+      const { container, getByTestId } = render(
         <Table aria-label="Dummy table">
           <Table.Head>
             <Table.Row>
@@ -132,14 +228,14 @@ describe('Table', () => {
       );
 
       const cell = container.querySelector('th');
-      const icon = container.querySelector('svg');
+      const icon = getByTestId('sort-descending-icon');
 
       expect(cell).toHaveAttribute('aria-sort', 'descending');
       expect(cell).toContainElement(icon);
     });
 
     it("when sort is set to 'ascending', appropriate aria attribute and icon are present", () => {
-      const { container } = render(
+      const { container, getByTestId } = render(
         <Table aria-label="Dummy table">
           <Table.Head>
             <Table.Row>
@@ -150,7 +246,7 @@ describe('Table', () => {
       );
 
       const cell = container.querySelector('th');
-      const icon = container.querySelector('svg');
+      const icon = getByTestId('sort-ascending-icon');
 
       expect(cell).toHaveAttribute('aria-sort', 'ascending');
       expect(cell).toContainElement(icon);
@@ -175,7 +271,7 @@ describe('Table', () => {
     });
 
     it("when sort is set to 'indeterminate', show icon but don't provide aria-sort attribute", () => {
-      const { container } = render(
+      const { container, getByTestId } = render(
         <Table aria-label="Dummy table">
           <Table.Head>
             <Table.Row>
@@ -186,10 +282,47 @@ describe('Table', () => {
       );
 
       const cell = container.querySelector('th');
-      const icon = container.querySelector('svg');
+      const icon = getByTestId('sort-icon');
 
       expect(cell).not.toHaveAttribute('aria-sort');
       expect(cell).toContainElement(icon);
+    });
+
+    it('when icon is provided, show it next to label', () => {
+      const { container, getByTestId } = render(
+        <Table aria-label="Dummy table">
+          <Table.Head>
+            <Table.Row>
+              <Table.HeadCell icon={<DummyIcon />}>Name</Table.HeadCell>
+            </Table.Row>
+          </Table.Head>
+        </Table>,
+      );
+
+      const cell = container.querySelector('th');
+      const icon = getByTestId('dummy-icon');
+
+      expect(cell).toContainElement(icon);
+    });
+
+    it('when both icon and sort are specified, sort icon takes precedence', () => {
+      const { getByTestId, queryByTestId } = render(
+        <Table aria-label="Dummy table">
+          <Table.Head>
+            <Table.Row>
+              <Table.HeadCell sort="ascending" icon={<DummyIcon />}>
+                Name
+              </Table.HeadCell>
+            </Table.Row>
+          </Table.Head>
+        </Table>,
+      );
+
+      const sortIcon = getByTestId('sort-ascending-icon');
+      const icon = queryByTestId('dummy-icon');
+
+      expect(sortIcon).toBeInTheDocument();
+      expect(icon).not.toBeInTheDocument();
     });
   });
 
@@ -259,30 +392,24 @@ describe('Table', () => {
         <Table aria-label="Table with checkboxes">
           <Table.Head>
             <Table.Row>
-              <Table.HeadCellCheckbox isIndeterminate onChange={() => {}}>
-                Name
-              </Table.HeadCellCheckbox>
+              <Table.HeadCellCheckbox isIndeterminate onChange={() => {}} />
               <Table.HeadCell>Name</Table.HeadCell>
               <Table.HeadCell>Genre</Table.HeadCell>
             </Table.Row>
           </Table.Head>
           <Table.Body>
             <Table.Row>
-              <Table.CellCheckbox checked onChange={() => {}}>
-                Name
-              </Table.CellCheckbox>
+              <Table.CellCheckbox checked onChange={() => {}} />
               <Table.Cell>Taylor Swift</Table.Cell>
               <Table.Cell>Pop</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.CellCheckbox checked onChange={() => {}}>
-                Name
-              </Table.CellCheckbox>
+              <Table.CellCheckbox checked onChange={() => {}} />
               <Table.Cell>Ariana Grande</Table.Cell>
               <Table.Cell>Pop</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.CellCheckbox onChange={() => {}}>Name</Table.CellCheckbox>
+              <Table.CellCheckbox onChange={() => {}} />
               <Table.Cell>Roger Waters</Table.Cell>
               <Table.Cell>Rock</Table.Cell>
             </Table.Row>
@@ -299,10 +426,42 @@ describe('Table', () => {
         <Table aria-label="Sortable table">
           <Table.Head>
             <Table.Row>
-              <Table.HeadCell sort="indeterminate" onSort={() => {}}>
+              <Table.HeadCell sort="indeterminate" onClick={() => {}}>
                 Name
               </Table.HeadCell>
               <Table.HeadCell>Genre</Table.HeadCell>
+            </Table.Row>
+          </Table.Head>
+          <Table.Body>
+            <Table.Row>
+              <Table.Cell>Taylor Swift</Table.Cell>
+              <Table.Cell>Pop</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>Roger Waters</Table.Cell>
+              <Table.Cell>Rock</Table.Cell>
+            </Table.Row>
+          </Table.Body>
+        </Table>,
+      );
+
+      const table = container.firstChild;
+      expect(table).toMatchSnapshot();
+    });
+
+    it('of table with custom column icon', () => {
+      const { container } = render(
+        <Table aria-label="Sortable table">
+          <Table.Head>
+            <Table.Row>
+              <Table.HeadCell
+                sort="descending"
+                icon={<DummyIcon />}
+                onClick={() => {}}
+              >
+                Name
+              </Table.HeadCell>
+              <Table.HeadCell icon={<DummyIcon />}>Genre</Table.HeadCell>
             </Table.Row>
           </Table.Head>
           <Table.Body>
@@ -327,7 +486,7 @@ describe('Table', () => {
         <Table aria-label="Table with menu">
           <Table.Head>
             <Table.Row>
-              <Table.HeadCell sort="indeterminate" onSort={() => {}}>
+              <Table.HeadCell sort="indeterminate" onClick={() => {}}>
                 Name
               </Table.HeadCell>
               <Table.HeadCell>Genre</Table.HeadCell>
