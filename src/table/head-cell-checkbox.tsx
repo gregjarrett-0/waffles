@@ -8,14 +8,17 @@ import { headCellCheckboxStyle } from './styles';
 type HeadCellCheckboxProps = {
   /* [skip-docs] */
   isIndeterminate?: boolean;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+} & Omit<React.InputHTMLAttributes<HTMLInputElement>, 'children'>;
 
-function HeadCellCheckbox(props: HeadCellCheckboxProps) {
+function HeadCellCheckbox({
+  'aria-label': ariaLabel = 'Select all',
+  ...restProps
+}: HeadCellCheckboxProps) {
   const { inverted } = useTable();
 
   return (
     <th css={headCellCheckboxStyle()}>
-      <Checkbox {...props} inverted={inverted} aria-label="Select all" />
+      <Checkbox {...restProps} inverted={inverted} aria-label={ariaLabel} />
     </th>
   );
 }

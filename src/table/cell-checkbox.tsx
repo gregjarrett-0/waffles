@@ -5,14 +5,20 @@ import { Checkbox } from '../checkbox';
 import { useTable } from './table-context';
 import { headCellCheckboxStyle } from './styles';
 
-type CellCheckboxProps = React.InputHTMLAttributes<HTMLInputElement>;
+type CellCheckboxProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'children'
+>;
 
-function CellCheckbox(props: CellCheckboxProps) {
+function CellCheckbox({
+  'aria-label': ariaLabel = 'Select',
+  ...restProps
+}: CellCheckboxProps) {
   const { inverted } = useTable();
 
   return (
     <td css={headCellCheckboxStyle()}>
-      <Checkbox {...props} inverted={inverted} aria-label="Select" />
+      <Checkbox {...restProps} inverted={inverted} aria-label={ariaLabel} />
     </td>
   );
 }
