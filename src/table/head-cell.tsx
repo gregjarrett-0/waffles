@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
 import { Sort, SortAscending, SortDescending } from '../icon';
@@ -30,16 +30,23 @@ function HeadCell({
   const isSortable = sort !== 'none';
 
   function renderIcon() {
-    switch (sort) {
-      case 'ascending':
-        return <SortAscending data-testid="sort-ascending-icon" />;
-      case 'descending':
-        return <SortDescending data-testid="sort-descending-icon" />;
-      case 'indeterminate':
-        return <Sort data-testid="sort-icon" />;
-      default:
-        return icon;
+    if (sort === 'ascending') {
+      return <SortAscending data-testid="sort-ascending-icon" />;
     }
+
+    if (sort === 'descending') {
+      return <SortDescending data-testid="sort-descending-icon" />;
+    }
+
+    if (sort === 'indeterminate') {
+      return <Sort data-testid="sort-icon" />;
+    }
+
+    if (icon) {
+      return icon.props.size ? icon : cloneElement(icon, { size: 'xsmall' });
+    }
+
+    return null;
   }
 
   function renderContent() {
