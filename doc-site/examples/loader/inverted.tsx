@@ -8,7 +8,7 @@ function Example() {
         width: 150px;
       `}
     >
-      <Loader inverted />
+      <Loader inverted aria-label="Inverted Loader example" />
     </div>
   );
 }

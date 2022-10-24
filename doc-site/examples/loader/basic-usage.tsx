@@ -8,7 +8,7 @@ function Example() {
         width: 150px;
       `}
     >
-      <Loader />
+      <Loader aria-label="Basic Loader example" />
     </div>
   );
 }
