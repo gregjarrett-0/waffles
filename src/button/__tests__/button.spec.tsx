@@ -243,7 +243,9 @@ describe('Button', () => {
 
   it('renders loader with isLoading prop', () => {
     const { getByText, getByTestId } = render(
-      <Button isLoading>Add to Fanpage</Button>,
+      <Button isLoading aria-label="Adding to fanpage">
+        Add to Fanpage
+      </Button>,
     );
 
     const button = getByText('Loading…').closest('button');
@@ -334,7 +336,12 @@ describe('Button', () => {
       sizes.forEach((size) => {
         it(`variant ${variant} and size ${size}`, () => {
           const { container } = render(
-            <Button inverted variant={variant} size={size} isLoading>
+            <Button
+              variant={variant}
+              size={size}
+              isLoading
+              aria-label={`Loading ${variant} ${size}`}
+            >
               Test
             </Button>,
           );

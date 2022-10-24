@@ -24,17 +24,14 @@ function Loader({
   const { width, height } = restProps;
 
   return (
-    <div
-      data-testid="loader-wrapper"
-      css={wrapperStyle({ height, width })}
-      aria-label={ariaLabel}
-    >
+    <div data-testid="loader-wrapper" css={wrapperStyle({ height, width })}>
       <div css={containerStyle()}>
         <div css={svgWrapperStyle()}>
           <svg
             viewBox="0 0 2640 3444"
             css={loaderSvgStyle({ inverted })}
             {...restProps}
+            aria-label={ariaLabel}
           >
             <path
               css={loaderPathStyle()}

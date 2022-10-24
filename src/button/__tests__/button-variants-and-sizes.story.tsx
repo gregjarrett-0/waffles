@@ -73,6 +73,7 @@ function Story() {
                 return (
                   <Button
                     isLoading
+                    aria-label={`Loading ${variant} ${size}`}
                     key={`loading-${variant}-${size}`}
                     variant={variant}
                     size={size}
@@ -150,6 +151,7 @@ function Story() {
                   <Button
                     isLoading
                     inverted
+                    aria-label={`Inverted loading ${variant} ${size}`}
                     key={`inverted-loading-${variant}-${size}`}
                     variant={variant}
                     size={size}
