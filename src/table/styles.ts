@@ -19,7 +19,7 @@ type OuterWrapperStyleOptions = {
 } & WithShadows;
 
 // Wrapper required for shadows and focus outline to render properly
-// When table's content is scrolling, corners of focus outline are straight
+// When Table's content is scrolling, corners of focus outline are straight
 export function outerWrapperStyle({
   isFocusVisible,
   hasShadowLeft,
@@ -34,14 +34,14 @@ export function outerWrapperStyle({
 
     ${!hasShadowLeft &&
     css`
-      border-top-left-radius: ${tokens.borderRadius.medium};
-      border-bottom-left-radius: ${tokens.borderRadius.medium};
+      border-radius: ${tokens.borderRadius.medium} 0 0
+        ${tokens.borderRadius.medium};
     `}
 
     ${!hasShadowRight &&
     css`
-      border-top-right-radius: ${tokens.borderRadius.medium};
-      border-bottom-right-radius: ${tokens.borderRadius.medium};
+      border-radius: 0 ${tokens.borderRadius.medium}
+        ${tokens.borderRadius.medium} 0;
     `}
   `;
 }
@@ -228,9 +228,10 @@ type HeadCellStyleOptions = {
 
 export function headCellStyle({ isSortable }: HeadCellStyleOptions) {
   return css`
-    padding: ${isSortable ? tokens.spacing.xsmall : tokens.spacing.medium};
+    padding: ${isSortable
+      ? tokens.spacing.xsmall
+      : `0 ${tokens.spacing.medium}`};
     height: ${HEAD_CELL_HEIGHT}px;
-    border-top: 0;
     min-width: 200px;
     max-width: 90vw;
     font-family: ${tokens.fontFamilies.sansSerif};
@@ -258,6 +259,14 @@ export function headCellSortButtonStyle({
 
     ${isFocusVisible &&
     `box-shadow: inset 0 0 0 2px ${tokens.colors.blueDark};`}
+  `;
+}
+
+export function headCellWithIconStyle() {
+  return css`
+    display: flex;
+    align-items: center;
+    gap: ${tokens.spacing.xsmall};
   `;
 }
 

@@ -3,17 +3,25 @@ import { useFocusRing } from '@react-aria/focus';
 
 import { Sort, SortAscending, SortDescending } from '../icon';
 
-import { headCellStyle, headCellSortButtonStyle } from './styles';
+import {
+  headCellStyle,
+  headCellSortButtonStyle,
+  headCellWithIconStyle,
+} from './styles';
 
 type HeadCellProps = {
   /* Show appropriate sort icon, and sets `aria-sort` attribute. Actual sorting action should be handled via regular `onClick`. */
+  /* @default none */
   sort?: 'ascending' | 'descending' | 'indeterminate' | 'none';
+  /* An icon displayed to the right of the label. Could be any [Icon](/components/icon) from Waffles or a custom component. */
+  icon?: JSX.Element;
   /* [skip docs] */
   onClick?: React.MouseEventHandler<HTMLElement>;
 } & Omit<React.HTMLAttributes<HTMLTableCellElement>, 'onClick'>;
 
 function HeadCell({
   sort = 'none',
+  icon,
   onClick,
   children,
   ...restProps
@@ -24,17 +32,26 @@ function HeadCell({
   function renderIcon() {
     switch (sort) {
       case 'ascending':
-        return <SortAscending />;
+        return <SortAscending data-testid="sort-ascending-icon" />;
       case 'descending':
-        return <SortDescending />;
+        return <SortDescending data-testid="sort-descending-icon" />;
       case 'indeterminate':
-        return <Sort />;
+        return <Sort data-testid="sort-icon" />;
       default:
-        return null;
+        return icon;
     }
   }
 
-  // Depending on whether cell is sortable or not, to avoid firing onClick handler twice, pass it only to button or table cell
+  function renderContent() {
+    return (
+      <>
+        {children}
+        {renderIcon()}
+      </>
+    );
+  }
+
+  // Depending on whether column is sortable or not, to avoid firing onClick handler twice, pass it only to button or table cell
   return (
     <th
       {...restProps}
@@ -49,11 +66,12 @@ function HeadCell({
           onClick={onClick}
           css={headCellSortButtonStyle({ isFocusVisible })}
         >
-          {children}
-          {renderIcon()}
+          {renderContent()}
         </button>
+      ) : icon ? (
+        <span css={headCellWithIconStyle()}>{renderContent()}</span>
       ) : (
-        children
+        renderContent()
       )}
     </th>
   );

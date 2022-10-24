@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-// Determine if scroll is at the left or at the end of the container
+// Determine if scroll is at the left or right of the container
 function useScrollPosition(targetRef: React.RefObject<HTMLElement>) {
   const [isAtLeft, setIsAtLeft] = useState(false);
   const [isAtRight, setIsAtRight] = useState(false);
