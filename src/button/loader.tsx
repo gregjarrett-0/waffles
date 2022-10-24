@@ -18,7 +18,7 @@ function ButtonLoader({
   variant,
   inverted,
   isIconOnly,
-  ariaLabel = 'Loading',
+  ariaLabel = 'Loading', // Fallback aria-label to always meet Loader type requirements
 }: ButtonLoaderProps) {
   return (
     <span css={loaderWrapperStyle({ size, hasLoadingLabel: !isIconOnly })}>
