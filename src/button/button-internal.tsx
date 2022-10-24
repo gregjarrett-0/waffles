@@ -80,7 +80,7 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
   }
 
   // Log console.error when no `aria-label` is provided whilst `isLoading=true`
-  if (isLoading && !!ariaLabel) {
+  if (isLoading && !ariaLabel?.length) {
     logError(MESSAGES.MISSING_ARIA_LABEL);
   }
 

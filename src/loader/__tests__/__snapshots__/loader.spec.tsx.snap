@@ -63,6 +63,7 @@ exports[`Loader renders a loader 1`] = `
 }
 
 <div
+  aria-label="Basic Loader example"
   class="emotion-0"
   data-testid="loader-wrapper"
 >
@@ -152,6 +153,7 @@ exports[`Loader renders snapshot of inverted 1`] = `
 }
 
 <div
+  aria-label="Inverted Loader example"
   class="emotion-0"
   data-testid="loader-wrapper"
 >

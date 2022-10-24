@@ -12,7 +12,7 @@ const wrapperStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Loader inverted />
+      <Loader inverted aria-label="Inverted Loader example" />
     </div>
   );
 }

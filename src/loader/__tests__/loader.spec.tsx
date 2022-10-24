@@ -4,7 +4,9 @@ import { Loader } from '../index';
 
 describe('Loader', () => {
   it('renders a loader', () => {
-    const { getByTestId } = render(<Loader />);
+    const { getByTestId } = render(
+      <Loader aria-label="Basic Loader example" />,
+    );
     const loader = getByTestId('loader-wrapper');
 
     expect(loader).toBeInTheDocument();
@@ -12,7 +14,9 @@ describe('Loader', () => {
   });
 
   it('renders snapshot of inverted', () => {
-    const { getByTestId } = render(<Loader inverted />);
+    const { getByTestId } = render(
+      <Loader inverted aria-label="Inverted Loader example" />,
+    );
     const loader = getByTestId('loader-wrapper');
 
     expect(loader).toBeInTheDocument();

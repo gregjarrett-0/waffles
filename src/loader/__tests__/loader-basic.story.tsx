@@ -11,7 +11,7 @@ const wrapperStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Loader />
+      <Loader aria-label="Basic Loader example" />
     </div>
   );
 }
