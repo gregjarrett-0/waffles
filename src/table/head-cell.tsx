@@ -6,15 +6,15 @@ import { Sort, SortAscending, SortDescending } from '../icon';
 import { headCellStyle, headCellSortButtonStyle } from './styles';
 
 type HeadCellProps = {
-  /* Show appropriate sort icon, and sets `aria-sort` attribute. */
+  /* Show appropriate sort icon, and sets `aria-sort` attribute. Actual sorting action should be handled via regular `onClick`. */
   sort?: 'ascending' | 'descending' | 'indeterminate' | 'none';
-  /* Handler called when cell is clicked. */
-  onSort?: React.MouseEventHandler<HTMLButtonElement>;
-} & React.HTMLAttributes<HTMLTableCellElement>;
+  /* [skip docs] */
+  onClick?: React.MouseEventHandler<HTMLElement>;
+} & Omit<React.HTMLAttributes<HTMLTableCellElement>, 'onClick'>;
 
 function HeadCell({
   sort = 'none',
-  onSort,
+  onClick,
   children,
   ...restProps
 }: HeadCellProps) {
@@ -34,17 +34,19 @@ function HeadCell({
     }
   }
 
+  // Depending on whether cell is sortable or not, to avoid firing onClick handler twice, pass it only to button or table cell
   return (
     <th
       {...restProps}
       {...(sort !== 'none' &&
         sort !== 'indeterminate' && { 'aria-sort': sort })}
+      {...(!isSortable && { onClick })}
       css={headCellStyle({ isSortable })}
     >
       {isSortable ? (
         <button
           {...focusProps}
-          onClick={onSort}
+          onClick={onClick}
           css={headCellSortButtonStyle({ isFocusVisible })}
         >
           {children}
