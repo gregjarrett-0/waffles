@@ -1,8 +1,7 @@
 import * as TableExports from '@datacamp/waffles/table';
-import { Notification } from '@datacamp/waffles/notification';
-import { Code } from '@datacamp/waffles/code';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -16,20 +15,47 @@ import WithIcon from '../../examples/table/with-icon';
 import WithMenu from '../../examples/table/with-menu';
 import Inverted from '../../examples/table/inverted';
 
-<Layout title="Table" description="🚧 This page is under construction">
+<Layout title="Table" description="Display and organize information from a data set.">
 
 ## Usage guidance
 
-<Notification
-  title="Customizing column width"
-  description={
-    <>
-      It is possible to fine tune column width by setting <Code>min-width</Code>{' '}
-      or <Code>max-width</Code> on the appropriate <em>Table.HeadCell</em>{' '}
-      element.
-    </>
-  }
-/>
+`Table` helps greatly with comparing, and analyzing data. It help users make informed decsisions. It should be used to present information with a clear, repeating structure.
+
+`Table` which is based on native HTML `table` and it's subcomponents provide a lot of structural information to screen reader users. People who relay on assistive technologies can easily navigate `Table` and identify relationships between data cells and columns. For that reason all of the `Table` components and subcomponents implement HTML `table` elements such as: `table`, `th` or `tr`.
+
+### Build
+
+Using the `Table` in a project involves putting together following components and subcomponents:
+
+- `Table` is _responsive_ container, and `aria-label` must be provided to properly support scrolling the content with keybaord.
+- `Table.Head` and `Table.Body` are section elements which should contain only `Table.Row` subcomponents.
+- `Table.Row` is a single table row, and should wrap various cell subcomponents.
+- `Table.HeadCell` is used to label columns. Optionally provides sorting functionality. To customize column width it's possible to provide it via CSS `max-width`, `min-width`, or `width` (in this case percantages are recommended).
+- `Table.Cell` is regular data cell.
+
+There are also a few more advanced subcompnents which could be used in some niche situations:
+
+- `Table.HeadCellCheckbox` and `Table.CellCheckbox` when items in the table must be selected.
+- `Table.Menu` offers dropdown menu similar to standalone Waffles [Menu](/components/menu).
+
+Keep in mind all components are _presentational_, and there is no built-in sorting.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use to present tabular data, with a clear, repeating structure
+    - provide `aria-label` for Table
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use for layout
+    - when there are fewer sections and each should be ephasized (use a [Card](/components/card))
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
@@ -85,7 +111,7 @@ In addition to all custom props listed below, Table accepts all props regular `H
 
 ### Table.HeadCell
 
-In addition to all custom props listed below, `Table.HeadCell` accepts all props regular `HTMLTableCell` would, such as `data-` attributes. To customize column width it's possible to provide it via CSS `max-width`, `min-width`, or `width` (in this case percantages are recommended).
+In addition to all custom props listed below, `Table.HeadCell` accepts all props regular `HTMLTableCell` would, such as `data-` attributes.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/table/head-cell')}
