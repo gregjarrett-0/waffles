@@ -50,71 +50,57 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/foundation/design-tokens">Design Tokens</Item>
           </SideNav.Category>
           <SideNav.Category label="Components">
-            <SideNav.Subcategory label="Action">
-              <Item href="/components/button">Button</Item>
-              <Item href="/components/link">Link</Item>
-            </SideNav.Subcategory>
-            <SideNav.Subcategory label="Content">
-              <Item href="/components/asset">Asset</Item>
-              <Item href="/components/avatar">Avatar</Item>
-              <Item href="/components/badge">Badge</Item>
-              <Item href="/components/brand">Brand</Item>
-              <Item href="/components/card">Card</Item>
-              <Item href="/components/content-container">
-                Content Container
-              </Item>
-              <Item href="/components/empty-state">Empty State</Item>
-              <Item href="/components/icon">Icon</Item>
-              <Item href="/components/notification">Notification</Item>
-              <Item href="/components/progress">Progress</Item>
-              <Item href="/components/table" isNew>
-                Table
-              </Item>
-            </SideNav.Subcategory>
-            <SideNav.Subcategory label="Form">
-              <Item href="/components/checkbox">Checkbox</Item>
-              <Item href="/components/form-field">Form Field</Item>
-              <Item href="/components/input">Input</Item>
-              <Item href="/components/radio">Radio</Item>
-              <Item href="/components/select">Select</Item>
-              <Item href="/components/slider" isNew>
-                Slider
-              </Item>
-              <Item href="/components/switch">Switch</Item>
-              <Item href="/components/text-area">Text Area</Item>
-            </SideNav.Subcategory>
-            <SideNav.Subcategory label="Navigation">
-              <Item href="/components/side-navigation">Side Navigation</Item>
-              <Item href="/components/tabs">Tabs</Item>
-            </SideNav.Subcategory>
-            <SideNav.Subcategory label="Overlay">
-              <Item href="/components/alert-dialog">Alert Dialog</Item>
-              <Item href="/components/dialog">Dialog</Item>
-              <Item href="/components/drawer">Drawer</Item>
-              <Item href="/components/menu">Menu</Item>
-              <Item href="/components/tooltip">Tooltip</Item>
-              <Item href="/components/toast">Toast</Item>
-            </SideNav.Subcategory>
-            <SideNav.Subcategory label="Typography">
-              <Item href="/components/chapeau">Chapeau</Item>
-              <Item href="/components/code">Code</Item>
-              <Item href="/components/code-block">Code Block</Item>
-              <Item href="/components/display">Display</Item>
-              <Item href="/components/heading">Heading</Item>
-              <Item href="/components/paragraph">Paragraph</Item>
-              <Item href="/components/text">Text</Item>
-            </SideNav.Subcategory>
-            <SideNav.Subcategory label="Utility">
-              <Item href="/components/error-boundary">Error Boundary</Item>
-              <Item href="/components/helpers">Helpers</Item>
-              <Item href="/components/hooks">Hooks</Item>
-              <Item href="/components/loader">Loader</Item>
-              <Item href="/components/portal">Portal</Item>
-              <Item href="/components/resizable">Resizable</Item>
-              <Item href="/components/screen-reader-only">
-                Screen Reader Only
-              </Item>
-            </SideNav.Subcategory>
+            <Item href="/components/alert-dialog">Alert Dialog</Item>
+            <Item href="/components/asset">Asset</Item>
+            <Item href="/components/avatar">Avatar</Item>
+            <Item href="/components/badge">Badge</Item>
+            <Item href="/components/brand">Brand</Item>
+            <Item href="/components/button">Button</Item>
+            <Item href="/components/card">Card</Item>
+            <Item href="/components/chapeau">Chapeau</Item>
+            <Item href="/components/checkbox">Checkbox</Item>
+            <Item href="/components/code">Code</Item>
+            <Item href="/components/code-block">Code Block</Item>
+            <Item href="/components/content-container">Content Container</Item>
+            <Item href="/components/dialog">Dialog</Item>
+            <Item href="/components/display">Display</Item>
+            <Item href="/components/drawer">Drawer</Item>
+            <Item href="/components/empty-state">Empty State</Item>
+            <Item href="/components/error-boundary">Error Boundary</Item>
+            <Item href="/components/form-field">Form Field</Item>
+            <Item href="/components/heading">Heading</Item>
+            <Item href="/components/icon">Icon</Item>
+            <Item href="/components/input">Input</Item>
+            <Item href="/components/link">Link</Item>
+            <Item href="/components/loader">Loader</Item>
+            <Item href="/components/menu">Menu</Item>
+            <Item href="/components/notification">Notification</Item>
+            <Item href="/components/paragraph">Paragraph</Item>
+            <Item href="/components/portal">Portal</Item>
+            <Item href="/components/progress">Progress</Item>
+            <Item href="/components/radio">Radio</Item>
+            <Item href="/components/resizable">Resizable</Item>
+            <Item href="/components/screen-reader-only">
+              Screen Reader Only
+            </Item>
+            <Item href="/components/select">Select</Item>
+            <Item href="/components/side-navigation">Side Navigation</Item>
+            <Item href="/components/slider" isNew>
+              Slider
+            </Item>
+            <Item href="/components/switch">Switch</Item>
+            <Item href="/components/table" isNew>
+              Table
+            </Item>
+            <Item href="/components/tabs">Tabs</Item>
+            <Item href="/components/text">Text</Item>
+            <Item href="/components/text-area">Text Area</Item>
+            <Item href="/components/toast">Toast</Item>
+            <Item href="/components/tooltip">Tooltip</Item>
+          </SideNav.Category>
+          <SideNav.Category label="Utilities">
+            <Item href="/components/helpers">Helpers</Item>
+            <Item href="/components/hooks">Hooks</Item>
           </SideNav.Category>
         </SideNav.Nav>
         <Text as="small" css={copyrightStyle}>
