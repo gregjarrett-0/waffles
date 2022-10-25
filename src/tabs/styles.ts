@@ -15,13 +15,11 @@ export function tabListStyle({
   return css`
     width: 100%;
     margin-bottom: ${tokens.spacing.medium};
-
-    /* Make tabs scrollable, while hiding scroll, and showing appropriate gradient mask  */
-    mask-image: ${isRightGradientMaskVisible
-      ? isLeftGradientMaskVisible
-        ? `linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) ${tokens.spacing.xxlarge}, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
-        : `linear-gradient(90deg, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`
-      : 'none'};
+    mask-image: ${isLeftGradientMaskVisible &&
+      `linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) ${tokens.spacing.xxlarge}, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0))`}${isLeftGradientMaskVisible &&
+      isRightGradientMaskVisible &&
+      ','}${isRightGradientMaskVisible &&
+      `linear-gradient(90deg, rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0) 100%)`};
     overflow-y: hidden;
     overflow-x: auto;
     scrollbar-width: none;

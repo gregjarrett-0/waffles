@@ -4,8 +4,6 @@ exports[`Tabs renders snapshot 1`] = `
 .emotion-0 {
   width: 100%;
   margin-bottom: 16px;
-  -webkit-mask-image: none;
-  mask-image: none;
   overflow-y: hidden;
   overflow-x: auto;
   scrollbar-width: none;
@@ -200,8 +198,6 @@ exports[`Tabs renders snapshot of inverted 1`] = `
 .emotion-0 {
   width: 100%;
   margin-bottom: 16px;
-  -webkit-mask-image: none;
-  mask-image: none;
   overflow-y: hidden;
   overflow-x: auto;
   scrollbar-width: none;
