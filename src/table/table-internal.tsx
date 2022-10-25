@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { useFocusRing } from '@react-aria/focus';
 
-import useScrollPosition from './use-scroll-position';
-import useIsScrollable from './use-is-scrollable';
+import { useShowScrollHint } from '../hooks';
+
 import { TableProvider } from './table-context';
 import {
   outerWrapperStyle,
@@ -28,26 +28,27 @@ function TableInternal({
   const { focusProps, isFocusVisible } = useFocusRing();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const tableRef = useRef<HTMLTableElement>(null);
-  const isScrollable = useIsScrollable(wrapperRef, tableRef);
-  const { isAtLeft, isAtRight } = useScrollPosition(wrapperRef);
-  const hasShadowLeft = !isAtLeft;
-  const hasShadowRight = !isAtRight;
+  const {
+    showStartHint: isShadowLeftVisible,
+    showEndHint: isShadowRightVisible,
+  } = useShowScrollHint(wrapperRef);
+  const isScrollable = isShadowLeftVisible || isShadowRightVisible;
 
   return (
     <TableProvider inverted={inverted}>
       <div
         css={outerWrapperStyle({
           isFocusVisible: isFocusVisible && isScrollable,
-          hasShadowLeft,
-          hasShadowRight,
+          isShadowLeftVisible,
+          isShadowRightVisible,
         })}
       >
-        <div css={maskStyle({ hasShadowLeft, hasShadowRight })}>
+        <div css={maskStyle({ isShadowLeftVisible, isShadowRightVisible })}>
           <div
             css={shadowsStyle({
               inverted,
-              hasShadowLeft,
-              hasShadowRight,
+              isShadowLeftVisible,
+              isShadowRightVisible,
             })}
           />
           <div
@@ -61,7 +62,11 @@ function TableInternal({
             <table
               {...restProps}
               ref={tableRef}
-              css={tableStyle({ inverted, hasShadowLeft, hasShadowRight })}
+              css={tableStyle({
+                inverted,
+                isShadowLeftVisible,
+                isShadowRightVisible,
+              })}
             />
           </div>
         </div>

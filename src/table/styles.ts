@@ -9,21 +9,21 @@ const HEAD_CELL_HEIGHT = 50;
 const ROW_HOVER_COLOR = '#f2f3f4';
 const ROW_HOVER_COLOR_INVERTED = '#2f3b4f';
 
-type WithShadows = {
-  hasShadowLeft: boolean;
-  hasShadowRight: boolean;
+type ScrollableWrapperStyleOptions = {
+  isShadowLeftVisible: boolean;
+  isShadowRightVisible: boolean;
 };
 
 type OuterWrapperStyleOptions = {
   isFocusVisible: boolean;
-} & WithShadows;
+} & ScrollableWrapperStyleOptions;
 
 // Wrapper required for shadows and focus outline to render properly
 // When Table's content is scrolling, corners of focus outline are straight
 export function outerWrapperStyle({
   isFocusVisible,
-  hasShadowLeft,
-  hasShadowRight,
+  isShadowLeftVisible,
+  isShadowRightVisible,
 }: OuterWrapperStyleOptions) {
   return css`
     position: relative;
@@ -32,13 +32,13 @@ export function outerWrapperStyle({
 
     ${isFocusVisible && `box-shadow: 0 0 0 2px ${tokens.colors.blueDark};`}
 
-    ${!hasShadowLeft &&
+    ${!isShadowLeftVisible &&
     css`
       border-radius: ${tokens.borderRadius.medium} 0 0
         ${tokens.borderRadius.medium};
     `}
 
-    ${!hasShadowRight &&
+    ${!isShadowRightVisible &&
     css`
       border-radius: 0 ${tokens.borderRadius.medium}
         ${tokens.borderRadius.medium} 0;
@@ -47,14 +47,17 @@ export function outerWrapperStyle({
 }
 
 // Mask column labels when content is being scrolled
-export function maskStyle({ hasShadowLeft, hasShadowRight }: WithShadows) {
+export function maskStyle({
+  isShadowLeftVisible,
+  isShadowRightVisible,
+}: ScrollableWrapperStyleOptions) {
   return css`
     mask-image: linear-gradient(
         90deg,
-        ${hasShadowLeft &&
+        ${isShadowLeftVisible &&
           `rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) ${tokens.spacing.xxlarge}`}
-          ${hasShadowRight && hasShadowLeft && ','}
-          ${hasShadowRight &&
+          ${isShadowRightVisible && isShadowLeftVisible && ','}
+          ${isShadowRightVisible &&
           `rgba(0, 0, 0, 1) calc(100% - ${tokens.spacing.xxlarge}), rgba(0, 0, 0, 0) 100%`}
       ),
       linear-gradient(
@@ -75,13 +78,15 @@ export function tableWrapperStyle() {
   `;
 }
 
-type ShadowsStyleOptions = { inverted: boolean } & WithShadows;
+type ShadowsStyleOptions = {
+  inverted: boolean;
+} & ScrollableWrapperStyleOptions;
 
 // Show shadows to the sides when content is being scrolled
 export function shadowsStyle({
   inverted,
-  hasShadowLeft,
-  hasShadowRight,
+  isShadowLeftVisible,
+  isShadowRightVisible,
 }: ShadowsStyleOptions) {
   return css`
     position: absolute;
@@ -95,31 +100,33 @@ export function shadowsStyle({
 
     ${inverted
       ? css`
-          box-shadow: ${hasShadowLeft &&
-            `inset 24px 0 24px -24px ${tokens.colors.navy}`}${hasShadowLeft &&
-            hasShadowRight &&
-            ','}${hasShadowRight &&
+          box-shadow: ${isShadowLeftVisible &&
+            `inset 24px 0 24px -24px ${tokens.colors.navy}`}${isShadowLeftVisible &&
+            isShadowRightVisible &&
+            ','}${isShadowRightVisible &&
             `inset -24px 0 24px -24px ${tokens.colors.navy}`};
         `
       : css`
-          box-shadow: ${hasShadowLeft &&
+          box-shadow: ${isShadowLeftVisible &&
             `inset 12px 0 12px -12px ${hexToRgba(
               tokens.colors.navy,
               0.3,
-            )}`}${hasShadowLeft && hasShadowRight && ','}${hasShadowRight &&
+            )}`}${isShadowLeftVisible &&
+            isShadowRightVisible &&
+            ','}${isShadowRightVisible &&
             `inset -12px 0 12px -12px ${hexToRgba(tokens.colors.navy, 0.3)}`};
         `}
   `;
 }
 
-type TableStyleOptions = { inverted: boolean } & WithShadows;
+type TableStyleOptions = { inverted: boolean } & ScrollableWrapperStyleOptions;
 
 // Basic table styles with: round corners applied to corner cells, and row highlighting
 // When content is being scrolled, corners are straight
 export function tableStyle({
   inverted,
-  hasShadowLeft,
-  hasShadowRight,
+  isShadowLeftVisible,
+  isShadowRightVisible,
 }: TableStyleOptions) {
   const borderColor = hexToRgba(
     inverted ? tokens.colors.white : tokens.colors.navy,
@@ -155,7 +162,7 @@ export function tableStyle({
 
     // Round corners
 
-    ${!hasShadowLeft &&
+    ${!isShadowLeftVisible &&
     css`
       & tr:first-of-type td:first-of-type {
         border-top-left-radius: ${tokens.borderRadius.medium};
@@ -166,7 +173,7 @@ export function tableStyle({
       }
     `}
 
-    ${!hasShadowRight &&
+    ${!isShadowRightVisible &&
     css`
       tr:first-of-type td:last-of-type {
         border-top-right-radius: ${tokens.borderRadius.medium};
