@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 
-import useScrollPosition from './use-scroll-position';
+import { useShowScrollHint } from '../hooks';
+
 import { bodyStyle } from './styles';
 
 type BodyProps = {
@@ -10,15 +11,18 @@ type BodyProps = {
 
 function Body({ children, ...restProps }: BodyProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const { isAtTop, isAtBottom } = useScrollPosition(wrapperRef);
+  const {
+    showStartHint: isShadowTopVisible,
+    showEndHint: isShadowBottomVisible,
+  } = useShowScrollHint(wrapperRef, 'vertical');
 
   return (
     <div
       {...restProps}
       ref={wrapperRef}
       css={bodyStyle({
-        hasShadowTop: !isAtTop,
-        hasShadowBottom: !isAtBottom,
+        isShadowTopVisible,
+        isShadowBottomVisible,
       })}
     >
       {children}
