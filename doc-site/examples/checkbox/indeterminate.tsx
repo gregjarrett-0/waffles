@@ -24,7 +24,7 @@ function Example() {
           setChecked(Array(2).fill(event.target.checked));
         }}
       >
-        Check all
+        Select all technologies
       </Checkbox>
       <div
         css={css`

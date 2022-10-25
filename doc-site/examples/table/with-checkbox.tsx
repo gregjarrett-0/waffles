@@ -9,7 +9,7 @@ const enhancedInitialData = [
     complexity: 'Easy',
   },
   {
-    isChecked: false,
+    isChecked: true,
     name: 'JavaScript',
     inventedAt: 1995,
     complexity: 'Easy',
