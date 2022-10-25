@@ -25,7 +25,7 @@ const containerStyle = css`
   ${mediaQuery.aboveMedium} {
     padding-top: 0;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: minmax(400px, 3fr) 1fr;
     gap: 0 ${tokens.spacing.xlarge};
   }
 
