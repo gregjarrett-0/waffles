@@ -12,7 +12,7 @@ type LoaderProps = {
   /* Whether the Loader is inverted in color or not. */
   /* @default false */
   inverted?: boolean;
-  /* Should always be provided with context of the Loader. */
+  /* Accessible label describing the context in which the Loader is used. */
   'aria-label': string;
 } & React.SVGAttributes<SVGElement>;
 
