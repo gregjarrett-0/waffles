@@ -51,11 +51,11 @@ function Example() {
     setData(updatedData);
   }
 
-  const areChecked = data.map((lang) => {
+  const checkedMap = data.map((lang) => {
     return lang.isChecked;
   });
-  const allChecked = areChecked.every(Boolean);
-  const isIndeterminate = areChecked.some(Boolean) && !allChecked;
+  const allChecked = checkedMap.every(Boolean);
+  const isIndeterminate = checkedMap.some(Boolean) && !allChecked;
 
   return (
     <Table aria-label="Programming languages complexity">

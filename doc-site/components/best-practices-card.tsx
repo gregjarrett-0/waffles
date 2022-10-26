@@ -28,8 +28,7 @@ function cardStyle({ isRecommended }: BestPracticesStyleOptions) {
     border: ${tokens.borderWidth.thin} solid
       ${hexToRgba(color, isRecommended ? 0.8 : tokens.opacity.high)};
     border-radius: ${tokens.borderRadius.medium};
-    padding: ${tokens.spacing.medium};
-    padding-top: 20px;
+    padding: 20px ${tokens.spacing.medium} ${tokens.spacing.medium};
   `;
 }
 

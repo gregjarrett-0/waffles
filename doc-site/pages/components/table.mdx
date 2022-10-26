@@ -21,7 +21,7 @@ import Inverted from '../../examples/table/inverted';
 
 `Table` helps greatly with comparing, and analyzing data. It help users make informed decsisions. It should be used to present information with a clear, repeating structure.
 
-`Table` which is based on native HTML `table` and it's subcomponents provide a lot of structural information to screen reader users. People who relay on assistive technologies can easily navigate `Table` and identify relationships between data cells and columns. For that reason all of the `Table` components and subcomponents implement HTML `table` elements such as: `table`, `th` or `tr`.
+`Table` which is based on native HTML `table` and it's subcomponents provide a lot of structural information for screen reader users. People who rely on assistive technologies can easily navigate `Table` and identify relationships between data cells and columns. For that reason all of the `Table` components and subcomponents implement HTML `table` elements such as: `table`, `th` or `tr`.
 
 ### Build
 
@@ -33,7 +33,7 @@ Using the `Table` in a project involves putting together following components an
 - `Table.HeadCell` is used to label columns. Optionally provides sorting functionality. To customize column width it's possible to provide it via CSS `max-width`, `min-width`, or `width` (in this case percantages are recommended).
 - `Table.Cell` is regular data cell.
 
-There are also a few more advanced subcompnents which could be used in some niche situations:
+There are also a few more advanced subcomponents which could be used in niche situations:
 
 - `Table.HeadCellCheckbox` and `Table.CellCheckbox` when items in the table must be selected.
 - `Table.Menu` offers dropdown menu similar to standalone Waffles [Menu](/components/menu).
@@ -46,13 +46,13 @@ Keep in mind all components are _presentational_, and there is no built-in sorti
   <BestPractices.Recommended>
 
     - use to present tabular data, with a clear, repeating structure
-    - provide `aria-label` for Table
+    - provide `aria-label` for context of Table
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
 
     - use for layout
-    - when there are fewer sections and each should be ephasized (use a [Card](/components/card))
+    - when there are fewer sections and each should be emphasized (use a [Card](/components/card))
 
   </BestPractices.Discouraged>
 </BestPractices>

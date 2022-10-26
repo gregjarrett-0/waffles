@@ -23,6 +23,7 @@ describe('Table', () => {
   describe('HeadCellCheckbox', () => {
     it('when clicked, appropriate handler is fired', () => {
       const handleChange = jest.fn();
+
       const { container } = render(
         <Table aria-label="Dummy table">
           <Table.Head>
@@ -78,6 +79,7 @@ describe('Table', () => {
   describe('CellCheckbox', () => {
     it('when clicked, appropriate handler is fired', () => {
       const handleChange = jest.fn();
+
       const { container } = render(
         <Table aria-label="Dummy table">
           <Table.Body>
@@ -180,6 +182,7 @@ describe('Table', () => {
   describe('HeadCell', () => {
     it('when sort is specified, and cell is clicked, appropriate handler is fired', () => {
       const handleClick = jest.fn();
+
       const { container } = render(
         <Table aria-label="Dummy table">
           <Table.Head>
@@ -200,6 +203,7 @@ describe('Table', () => {
 
     it('when sort is not specified, and cell is clicked, appropriate handler is fired', () => {
       const handleClick = jest.fn();
+
       const { container } = render(
         <Table aria-label="Dummy table">
           <Table.Head>
