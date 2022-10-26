@@ -10,7 +10,6 @@ type ButtonLoaderProps = {
   variant: NonNullable<React.ComponentProps<typeof Button>['variant']>;
   inverted: NonNullable<React.ComponentProps<typeof Button>['inverted']>;
   isIconOnly: boolean;
-  ariaLabel?: string;
 };
 
 function ButtonLoader({
@@ -18,13 +17,12 @@ function ButtonLoader({
   variant,
   inverted,
   isIconOnly,
-  ariaLabel = 'Loading', // Fallback aria-label to always meet Loader type requirements
 }: ButtonLoaderProps) {
   return (
     <span css={loaderWrapperStyle({ size, hasLoadingLabel: !isIconOnly })}>
       <Loader
         css={loaderStyle({ variant, inverted })}
-        aria-label={ariaLabel}
+        aria-label="Loading"
         width={size === 'small' ? '12' : '16'} // Setting width prop here so that it gets passed to the loader as restProps for the svg element
       />
       {!isIconOnly && <span aria-hidden="true">Loading…</span>}

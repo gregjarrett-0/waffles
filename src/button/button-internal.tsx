@@ -79,11 +79,6 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
     logError(MESSAGES.EMPTY_CHILDREN);
   }
 
-  // Log console.error when no `aria-label` is provided whilst `isLoading=true`
-  if (isLoading && !ariaLabel?.length) {
-    logError(MESSAGES.MISSING_ARIA_LABEL);
-  }
-
   const Element = as || 'button';
   const { focusProps, isFocusVisible } = useFocusRing();
 
@@ -139,7 +134,6 @@ function ButtonInternal<T extends React.ElementType = 'button'>(
             size,
             variant,
             inverted,
-            ariaLabel,
             isIconOnly: !!icon,
           }}
         />

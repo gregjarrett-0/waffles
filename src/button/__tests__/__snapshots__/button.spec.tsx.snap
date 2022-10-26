@@ -2403,7 +2403,7 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
     class="emotion-2"
   >
     <div
-      aria-label="Loading destructive large"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -2645,7 +2645,7 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
     class="emotion-2"
   >
     <div
-      aria-label="Loading destructive medium"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -2887,7 +2887,7 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
     class="emotion-2"
   >
     <div
-      aria-label="Loading destructive small"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -3129,7 +3129,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size la
     class="emotion-2"
   >
     <div
-      aria-label="Loading plain large"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -3371,7 +3371,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size me
     class="emotion-2"
   >
     <div
-      aria-label="Loading plain medium"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -3613,7 +3613,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size sm
     class="emotion-2"
   >
     <div
-      aria-label="Loading plain small"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -3855,7 +3855,7 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
     class="emotion-2"
   >
     <div
-      aria-label="Loading primary large"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -4097,7 +4097,7 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
     class="emotion-2"
   >
     <div
-      aria-label="Loading primary medium"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -4339,7 +4339,7 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
     class="emotion-2"
   >
     <div
-      aria-label="Loading primary small"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -4581,7 +4581,7 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
     class="emotion-2"
   >
     <div
-      aria-label="Loading secondary large"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -4823,7 +4823,7 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
     class="emotion-2"
   >
     <div
-      aria-label="Loading secondary medium"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -5065,7 +5065,7 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
     class="emotion-2"
   >
     <div
-      aria-label="Loading secondary small"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -5307,7 +5307,7 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
     class="emotion-2"
   >
     <div
-      aria-label="Loading upgrade large"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -5549,7 +5549,7 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
     class="emotion-2"
   >
     <div
-      aria-label="Loading upgrade medium"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
@@ -5791,7 +5791,7 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
     class="emotion-2"
   >
     <div
-      aria-label="Loading upgrade small"
+      aria-label="Loading"
       class="emotion-3"
       data-testid="loader-wrapper"
       role="alert"
