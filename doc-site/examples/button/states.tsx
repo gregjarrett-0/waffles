@@ -13,9 +13,7 @@ function Example() {
     >
       <Button>No State</Button>
       <Button disabled>Disabled</Button>
-      <Button isLoading aria-label="Loading Button">
-        Original Label
-      </Button>
+      <Button isLoading>Original Label</Button>
       <Button isLoading icon={<AddCircle />} aria-label="Icon-only Button" />
     </div>
   );

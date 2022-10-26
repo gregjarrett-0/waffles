@@ -2389,7 +2389,6 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
 }
 
 <button
-  aria-label="Loading destructive large"
   class="emotion-0"
   disabled=""
   type="button"
@@ -2631,7 +2630,6 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
 }
 
 <button
-  aria-label="Loading destructive medium"
   class="emotion-0"
   disabled=""
   type="button"
@@ -2873,7 +2871,6 @@ exports[`Button renders snapshot of isLoading variants variant destructive and s
 }
 
 <button
-  aria-label="Loading destructive small"
   class="emotion-0"
   disabled=""
   type="button"
@@ -3115,7 +3112,6 @@ exports[`Button renders snapshot of isLoading variants variant plain and size la
 }
 
 <button
-  aria-label="Loading plain large"
   class="emotion-0"
   disabled=""
   type="button"
@@ -3357,7 +3353,6 @@ exports[`Button renders snapshot of isLoading variants variant plain and size me
 }
 
 <button
-  aria-label="Loading plain medium"
   class="emotion-0"
   disabled=""
   type="button"
@@ -3599,7 +3594,6 @@ exports[`Button renders snapshot of isLoading variants variant plain and size sm
 }
 
 <button
-  aria-label="Loading plain small"
   class="emotion-0"
   disabled=""
   type="button"
@@ -3841,7 +3835,6 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
 }
 
 <button
-  aria-label="Loading primary large"
   class="emotion-0"
   disabled=""
   type="button"
@@ -4083,7 +4076,6 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
 }
 
 <button
-  aria-label="Loading primary medium"
   class="emotion-0"
   disabled=""
   type="button"
@@ -4325,7 +4317,6 @@ exports[`Button renders snapshot of isLoading variants variant primary and size 
 }
 
 <button
-  aria-label="Loading primary small"
   class="emotion-0"
   disabled=""
   type="button"
@@ -4567,7 +4558,6 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
 }
 
 <button
-  aria-label="Loading secondary large"
   class="emotion-0"
   disabled=""
   type="button"
@@ -4809,7 +4799,6 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
 }
 
 <button
-  aria-label="Loading secondary medium"
   class="emotion-0"
   disabled=""
   type="button"
@@ -5051,7 +5040,6 @@ exports[`Button renders snapshot of isLoading variants variant secondary and siz
 }
 
 <button
-  aria-label="Loading secondary small"
   class="emotion-0"
   disabled=""
   type="button"
@@ -5293,7 +5281,6 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
 }
 
 <button
-  aria-label="Loading upgrade large"
   class="emotion-0"
   disabled=""
   type="button"
@@ -5535,7 +5522,6 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
 }
 
 <button
-  aria-label="Loading upgrade medium"
   class="emotion-0"
   disabled=""
   type="button"
@@ -5777,7 +5763,6 @@ exports[`Button renders snapshot of isLoading variants variant upgrade and size 
 }
 
 <button
-  aria-label="Loading upgrade small"
   class="emotion-0"
   disabled=""
   type="button"
