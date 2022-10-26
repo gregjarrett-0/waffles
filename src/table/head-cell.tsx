@@ -10,7 +10,7 @@ import {
 } from './styles';
 
 type HeadCellProps = {
-  /* Show appropriate sort icon, and sets `aria-sort` attribute. Actual sorting action should be handled via regular `onClick`. */
+  /* Show appropriate sort Icon, and sets `aria-sort` attribute. Actual sorting action should be handled via regular `onClick`. */
   /* @default none */
   sort?: 'ascending' | 'descending' | 'indeterminate' | 'none';
   /* An icon displayed to the right of the label. Could be any [Icon](/components/icon) from Waffles or a custom component. */
@@ -29,24 +29,25 @@ function HeadCell({
   const { focusProps, isFocusVisible } = useFocusRing();
   const isSortable = sort !== 'none';
 
-  function renderIcon() {
-    if (sort === 'ascending') {
-      return <SortAscending data-testid="sort-ascending-icon" />;
-    }
-
-    if (sort === 'descending') {
-      return <SortDescending data-testid="sort-descending-icon" />;
-    }
-
-    if (sort === 'indeterminate') {
-      return <Sort data-testid="sort-icon" />;
-    }
-
+  function renderEnhancedIcon() {
     if (icon) {
       return icon.props.size ? icon : cloneElement(icon, { size: 'xsmall' });
     }
 
     return null;
+  }
+
+  function renderIcon() {
+    switch (sort) {
+      case 'ascending':
+        return <SortAscending data-testid="sort-ascending-icon" />;
+      case 'descending':
+        return <SortDescending data-testid="sort-descending-icon" />;
+      case 'indeterminate':
+        return <Sort data-testid="sort-icon" />;
+      default:
+        return renderEnhancedIcon();
+    }
   }
 
   function renderContent() {
