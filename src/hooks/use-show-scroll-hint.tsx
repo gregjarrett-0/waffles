@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+// TODO: Explore how it could be tested in jest, for now e2e tests for Dialog and Table are covering it's functionality - blurbyte
+
 const orientationMap = {
   horizontal: {
     dimension: 'offsetWidth',
