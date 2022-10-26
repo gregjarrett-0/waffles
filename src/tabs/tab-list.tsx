@@ -11,18 +11,15 @@ type TabListProps = {
 
 function TabList({ inverted, children, ...restProps }: TabListProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const {
-    showStartHint: isLeftGradientMaskVisible,
-    showEndHint: isRightGradientMaskVisible,
-  } = useShowScrollHint(wrapperRef);
+  const { showStartHint, showEndHint } = useShowScrollHint(wrapperRef);
 
   return (
     <div
       role="tablist"
       aria-orientation="horizontal"
       css={tabListStyle({
-        isLeftGradientMaskVisible,
-        isRightGradientMaskVisible,
+        isLeftGradientMaskVisible: showStartHint,
+        isRightGradientMaskVisible: showStartHint || showEndHint,
       })}
       ref={wrapperRef}
     >
