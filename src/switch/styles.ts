@@ -2,35 +2,43 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 
-export function inputStyle() {
-  return css`
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  `;
-}
+const TOGGLE_HEIGHT = 22;
+const TOGGLE_WIDTH = 36;
 
-type LabelStyleOptions = {
+type WrapperStyleOptions = {
   disabled: boolean;
 };
 
-export function labelStyle({ disabled }: LabelStyleOptions) {
+export function wrapperStyle({ disabled }: WrapperStyleOptions) {
   return css`
     display: flex;
-    cursor: ${disabled ? 'default' : 'pointer'};
     opacity: ${disabled ? tokens.opacity.high : 1};
   `;
 }
 
-type ContentStyleOptions = {
-  inverted: boolean;
+type InputStyleOptions = {
+  disabled: boolean;
 };
 
-export function contentStyle({ inverted }: ContentStyleOptions) {
+export function inputStyle({ disabled }: InputStyleOptions) {
+  return css`
+    position: absolute;
+    opacity: 0;
+    height: ${TOGGLE_HEIGHT}px;
+    width: ${TOGGLE_WIDTH}px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: ${disabled ? 'default' : 'pointer'};
+  `;
+}
+
+type LabelStyleOptions = {
+  inverted: boolean;
+  disabled: boolean;
+};
+
+export function labelStyle({ inverted, disabled }: LabelStyleOptions) {
   return css`
     line-height: ${tokens.lineHeights.default};
     padding-top: 3px;
@@ -38,6 +46,7 @@ export function contentStyle({ inverted }: ContentStyleOptions) {
     flex-grow: 1;
     user-select: none;
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+    cursor: ${disabled ? 'default' : 'pointer'};
   `;
 }
 
@@ -47,8 +56,8 @@ const toggleBaseStyle = css`
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
-  height: 22px;
-  width: 36px;
+  height: ${TOGGLE_HEIGHT}px;
+  width: ${TOGGLE_WIDTH}px;
   padding: 2px;
   border-radius: 12px;
   transition: background-color 75ms ease-out;

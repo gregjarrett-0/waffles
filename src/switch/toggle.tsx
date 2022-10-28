@@ -7,9 +7,16 @@ type ToggleProps = {
   checked: boolean;
   error: boolean;
   isFocusVisible: boolean;
+  children: React.ReactNode;
 };
 
-function Toggle({ inverted, checked, error, isFocusVisible }: ToggleProps) {
+function Toggle({
+  inverted,
+  checked,
+  error,
+  isFocusVisible,
+  children,
+}: ToggleProps) {
   return (
     <div
       css={toggleStyle({
@@ -22,6 +29,7 @@ function Toggle({ inverted, checked, error, isFocusVisible }: ToggleProps) {
       <span css={handleStyle({ inverted, checked })}>
         {checked && <Icon size="small" />}
       </span>
+      {children}
     </div>
   );
 }
