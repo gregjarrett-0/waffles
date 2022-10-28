@@ -110,6 +110,16 @@ describe('Radio', () => {
     expect(radio).toMatchSnapshot();
   });
 
+  it('renders snapshot of radio without label', () => {
+    const { container } = render(
+      <Radio aria-label="Taylor Swift" onChange={jest.fn()} />,
+    );
+
+    const radio = container.firstChild;
+
+    expect(radio).toMatchSnapshot();
+  });
+
   it('renders snapshot of checked state', () => {
     const { container } = render(
       <Radio checked onChange={jest.fn()}>

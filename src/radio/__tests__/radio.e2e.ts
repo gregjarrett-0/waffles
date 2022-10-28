@@ -4,6 +4,11 @@ describe('Radio', () => {
     cy.get('main').find('input[type=radio]').should('have.length', 2);
   });
 
+  it('renders a radio with no label', () => {
+    cy.loadStory('radio-no-label');
+    cy.get('main').find('input[type=radio]').should('have.length', 2);
+  });
+
   it('renders proper focus state', () => {
     cy.loadStory('radio-basic');
     cy.get('main').find('input[value=radio1]').focus();

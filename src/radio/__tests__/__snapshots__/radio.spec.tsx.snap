@@ -6,18 +6,18 @@ exports[`Radio renders basic snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -37,11 +37,12 @@ exports[`Radio renders basic snapshot 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 50%;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
@@ -80,25 +81,28 @@ exports[`Radio renders basic snapshot 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     class="emotion-1"
+    id="radio-m-Elq0"
     type="radio"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="radio-m-Elq0"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Radio renders snapshot of checked state 1`] = `
@@ -107,18 +111,18 @@ exports[`Radio renders snapshot of checked state 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -138,11 +142,12 @@ exports[`Radio renders snapshot of checked state 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 50%;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
@@ -189,15 +194,17 @@ exports[`Radio renders snapshot of checked state 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     checked=""
     class="emotion-1"
+    id="radio-Q1jj_A"
     type="radio"
   />
   <div
@@ -207,12 +214,13 @@ exports[`Radio renders snapshot of checked state 1`] = `
       class="emotion-3"
     />
   </div>
-  <div
+  <label
     class="emotion-4"
+    for="radio-Q1jj_A"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Radio renders snapshot of disabled state 1`] = `
@@ -221,18 +229,18 @@ exports[`Radio renders snapshot of disabled state 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: default;
   opacity: 0.6;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: default;
 }
 
 .emotion-2 {
@@ -252,11 +260,12 @@ exports[`Radio renders snapshot of disabled state 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 50%;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
@@ -295,26 +304,29 @@ exports[`Radio renders snapshot of disabled state 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: default;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     class="emotion-1"
     disabled=""
+    id="radio-DhY8OG"
     type="radio"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="radio-DhY8OG"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Radio renders snapshot of focused state 1`] = `
@@ -323,18 +335,18 @@ exports[`Radio renders snapshot of focused state 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -354,11 +366,12 @@ exports[`Radio renders snapshot of focused state 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 50%;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
@@ -401,25 +414,28 @@ exports[`Radio renders snapshot of focused state 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     class="emotion-1"
+    id="radio-flp-0p"
     type="radio"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="radio-flp-0p"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
 exports[`Radio renders snapshot of inverted 1`] = `
@@ -428,18 +444,18 @@ exports[`Radio renders snapshot of inverted 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -459,11 +475,12 @@ exports[`Radio renders snapshot of inverted 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 50%;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   background-color: #213147;
   border-width: 1px;
   border-style: solid;
@@ -502,45 +519,48 @@ exports[`Radio renders snapshot of inverted 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="false"
     class="emotion-1"
+    id="radio-R495UN"
     type="radio"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="radio-R495UN"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
 
-exports[`Radio renders snapshot with error 1`] = `
+exports[`Radio renders snapshot of radio without label 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
   opacity: 1;
 }
 
 .emotion-1 {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -560,11 +580,92 @@ exports[`Radio renders snapshot with error 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
   width: 18px;
+  height: 18px;
   border-radius: 50%;
   -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
   transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #848C92;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -3px;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+<div
+  class="emotion-0"
+>
+  <input
+    aria-invalid="false"
+    aria-label="Taylor Swift"
+    class="emotion-1"
+    type="radio"
+  />
+  <div
+    class="emotion-2"
+  />
+</div>
+`;
+
+exports[`Radio renders snapshot with error 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.emotion-1 {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  transition: background-color 75ms ease-out,border-color 75ms ease-out;
+  pointer-events: none;
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
@@ -605,23 +706,26 @@ exports[`Radio renders snapshot with error 1`] = `
   -ms-user-select: none;
   user-select: none;
   color: #05192D;
+  cursor: pointer;
 }
 
-<label
+<div
   class="emotion-0"
 >
   <input
     aria-invalid="true"
     class="emotion-1"
+    id="radio-vkDMHd"
     type="radio"
   />
   <div
     class="emotion-2"
   />
-  <div
+  <label
     class="emotion-3"
+    for="radio-vkDMHd"
   >
     Taylor Swift
-  </div>
-</label>
+  </label>
+</div>
 `;
