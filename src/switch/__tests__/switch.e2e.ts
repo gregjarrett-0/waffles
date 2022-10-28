@@ -4,6 +4,11 @@ describe('Switch', () => {
     cy.get('main').findByRole('switch').should('have.length', 1);
   });
 
+  it('renders a switch with no label', () => {
+    cy.loadStory('switch-no-label');
+    cy.get('main').findByRole('switch').should('have.length', 1);
+  });
+
   it('renders proper focus state', () => {
     cy.loadStory('switch-basic');
     cy.get('main').findByRole('switch').focus();

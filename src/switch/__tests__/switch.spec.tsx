@@ -124,6 +124,16 @@ describe('Switch', () => {
     expect(switchComponent).toMatchSnapshot();
   });
 
+  it('renders snapshot of switch without label', () => {
+    const { container } = render(
+      <Switch aria-label="Switch no label" onChange={jest.fn()} />,
+    );
+
+    const switchComponent = container.firstChild;
+
+    expect(switchComponent).toMatchSnapshot();
+  });
+
   it('renders snapshot of toggled state', () => {
     const { container } = render(
       <Switch checked onChange={jest.fn()}>
