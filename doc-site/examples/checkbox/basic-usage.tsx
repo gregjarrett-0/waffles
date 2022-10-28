@@ -6,11 +6,7 @@ function Example() {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Checkbox
-      checked={checked}
-      onChange={() => setChecked(!checked)}
-      placeholder="Welcome"
-    >
+    <Checkbox checked={checked} onChange={() => setChecked(!checked)}>
       I accept{' '}
       <Link href="https://www.datacamp.com/terms-of-use">Terms of Use</Link> and
       also{' '}
