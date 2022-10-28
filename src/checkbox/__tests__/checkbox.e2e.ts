@@ -4,6 +4,11 @@ describe('Checkbox', () => {
     cy.get('main').find('input[type=checkbox]').should('exist');
   });
 
+  it('renders a checkbox without a label', () => {
+    cy.loadStory('checkbox-no-label');
+    cy.get('main').find('input[type=checkbox]').should('exist');
+  });
+
   it('renders an indeterminate checkbox', () => {
     cy.loadStory('checkbox-indeterminate');
     cy.get('main')

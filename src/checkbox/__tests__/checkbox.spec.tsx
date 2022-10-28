@@ -167,6 +167,16 @@ describe('Checkbox', () => {
       expect(checkbox).toMatchSnapshot();
     });
 
+    it('without label', () => {
+      const { container } = render(
+        <Checkbox aria-label="Taylor Swift" onChange={jest.fn()} />,
+      );
+
+      const checkbox = container.firstChild;
+
+      expect(checkbox).toMatchSnapshot();
+    });
+
     it('with input only', () => {
       const { container } = render(
         <Checkbox aria-label="Taylor Swift" onChange={jest.fn()} />,
