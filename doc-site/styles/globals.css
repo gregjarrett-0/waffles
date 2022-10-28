@@ -17,8 +17,8 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansRegular-latin.woff2') format('woff2'),
-    url('/fonts/StudioFeixenSansRegular-latin.woff') format('woff');
+  src: url('/fonts/StudioFeixenSansRegular-latin-v2.woff2') format('woff2'),
+    url('/fonts/StudioFeixenSansRegular-latin-v2.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -28,9 +28,9 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansRegular-latin-extended.woff2')
+  src: url('/fonts/StudioFeixenSansRegular-latin-extended-v2.woff2')
       format('woff2'),
-    url('/fonts/StudioFeixenSansRegular-latin-extended.woff') format('woff');
+    url('/fonts/StudioFeixenSansRegular-latin-extended-v2.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -39,8 +39,8 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansRegular-rest.woff2') format('woff2'),
-    url('/fonts/StudioFeixenSansRegular-rest.woff') format('woff');
+  src: url('/fonts/StudioFeixenSansRegular-rest-v2.woff2') format('woff2'),
+    url('/fonts/StudioFeixenSansRegular-rest-v2.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -50,8 +50,8 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansRegular-english.woff2') format('woff2'),
-    url('/fonts/StudioFeixenSansRegular-english.woff') format('woff');
+  src: url('/fonts/StudioFeixenSansRegular-english-v2.woff2') format('woff2'),
+    url('/fonts/StudioFeixenSansRegular-english-v2.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -62,8 +62,8 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansBold-latin.woff2') format('woff2'),
-    url('/fonts/StudioFeixenSansBold-latin.woff') format('woff');
+  src: url('/fonts/StudioFeixenSansBold-latin-v2.woff2') format('woff2'),
+    url('/fonts/StudioFeixenSansBold-latin-v2.woff') format('woff');
   font-display: swap;
   font-weight: 800;
   font-style: normal;
@@ -73,8 +73,9 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansBold-latin-extended.woff2') format('woff2'),
-    url('/fonts/StudioFeixenSansBold-latin-extended.woff') format('woff');
+  src: url('/fonts/StudioFeixenSansBold-latin-extended-v2.woff2')
+      format('woff2'),
+    url('/fonts/StudioFeixenSansBold-latin-extended-v2.woff') format('woff');
   font-display: swap;
   font-weight: 800;
   font-style: normal;
@@ -83,8 +84,8 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansBold-rest.woff2') format('woff2'),
-    url('/fonts/StudioFeixenSansBold-rest.woff') format('woff');
+  src: url('/fonts/StudioFeixenSansBold-rest-v2.woff2') format('woff2'),
+    url('/fonts/StudioFeixenSansBold-rest-v2.woff') format('woff');
   font-display: swap;
   font-weight: 800;
   font-style: normal;
@@ -94,8 +95,8 @@ strong {
 
 @font-face {
   font-family: 'Studio-Feixen-Sans';
-  src: url('/fonts/StudioFeixenSansBold-english.woff2') format('woff2'),
-    url('/fonts/StudioFeixenSansBold-english.woff') format('woff');
+  src: url('/fonts/StudioFeixenSansBold-english-v2.woff2') format('woff2'),
+    url('/fonts/StudioFeixenSansBold-english-v2.woff') format('woff');
   font-display: swap;
   font-weight: 800;
   font-style: normal;

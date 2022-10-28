@@ -23,14 +23,14 @@ class CustomDocument extends Document {
           <link
             as="font"
             crossOrigin="anonymous"
-            href="/fonts/StudioFeixenSansRegular-english.woff2"
+            href="/fonts/StudioFeixenSansRegular-english-v2.woff2"
             rel="preload"
             type="font/woff2"
           />
           <link
             as="font"
             crossOrigin="anonymous"
-            href="/fonts/StudioFeixenSansBold-english.woff2"
+            href="/fonts/StudioFeixenSansBold-english-v2.woff2"
             rel="preload"
             type="font/woff2"
           />
