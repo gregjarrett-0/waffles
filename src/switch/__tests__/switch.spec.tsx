@@ -3,6 +3,14 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Switch } from '../index';
 
+const MOCKED_ID = '123abC';
+
+jest.mock('nanoid', () => {
+  return {
+    nanoid: () => MOCKED_ID,
+  };
+});
+
 function TestRefSwitch() {
   const inputRef = useRef<HTMLInputElement>(null);
 

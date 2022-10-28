@@ -116,7 +116,7 @@ exports[`Switch renders basic snapshot 1`] = `
 >
   <label
     class="emotion-1"
-    for="switch-VuVpV3"
+    for="switch-123abC"
   >
     Dark mode
   </label>
@@ -130,7 +130,7 @@ exports[`Switch renders basic snapshot 1`] = `
       aria-checked="false"
       aria-invalid="false"
       class="emotion-4"
-      id="switch-VuVpV3"
+      id="switch-123abC"
       role="switch"
       type="checkbox"
     />
@@ -254,7 +254,7 @@ exports[`Switch renders snapshot of disabled state 1`] = `
 >
   <label
     class="emotion-1"
-    for="switch-vzzdSB"
+    for="switch-123abC"
   >
     Dark mode
   </label>
@@ -269,7 +269,7 @@ exports[`Switch renders snapshot of disabled state 1`] = `
       aria-invalid="false"
       class="emotion-4"
       disabled=""
-      id="switch-vzzdSB"
+      id="switch-123abC"
       role="switch"
       type="checkbox"
     />
@@ -397,7 +397,7 @@ exports[`Switch renders snapshot of focused state 1`] = `
 >
   <label
     class="emotion-1"
-    for="switch-I_vKDg"
+    for="switch-123abC"
   >
     Dark mode
   </label>
@@ -411,7 +411,7 @@ exports[`Switch renders snapshot of focused state 1`] = `
       aria-checked="false"
       aria-invalid="false"
       class="emotion-4"
-      id="switch-I_vKDg"
+      id="switch-123abC"
       role="switch"
       type="checkbox"
     />
@@ -535,7 +535,7 @@ exports[`Switch renders snapshot of inverted 1`] = `
 >
   <label
     class="emotion-1"
-    for="switch-XMgZVt"
+    for="switch-123abC"
   >
     Dark mode
   </label>
@@ -549,7 +549,7 @@ exports[`Switch renders snapshot of inverted 1`] = `
       aria-checked="false"
       aria-invalid="false"
       class="emotion-4"
-      id="switch-XMgZVt"
+      id="switch-123abC"
       role="switch"
       type="checkbox"
     />
@@ -782,7 +782,7 @@ exports[`Switch renders snapshot of toggled state 1`] = `
 >
   <label
     class="emotion-1"
-    for="switch-4VM1Pp"
+    for="switch-123abC"
   >
     Dark mode
   </label>
@@ -809,7 +809,7 @@ exports[`Switch renders snapshot of toggled state 1`] = `
       aria-invalid="false"
       checked=""
       class="emotion-4"
-      id="switch-4VM1Pp"
+      id="switch-123abC"
       role="switch"
       type="checkbox"
     />
@@ -934,7 +934,7 @@ exports[`Switch renders snapshot with error 1`] = `
 >
   <label
     class="emotion-1"
-    for="switch-sLprYH"
+    for="switch-123abC"
   >
     Dark mode
   </label>
@@ -948,7 +948,7 @@ exports[`Switch renders snapshot with error 1`] = `
       aria-checked="false"
       aria-invalid="true"
       class="emotion-4"
-      id="switch-sLprYH"
+      id="switch-123abC"
       role="switch"
       type="checkbox"
     />

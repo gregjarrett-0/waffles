@@ -3,6 +3,14 @@ import { render, fireEvent } from '@testing-library/react';
 
 import { Radio } from '../index';
 
+const MOCKED_ID = '123abC';
+
+jest.mock('nanoid', () => {
+  return {
+    nanoid: () => MOCKED_ID,
+  };
+});
+
 function TestRefRadio() {
   const inputRef = useRef<HTMLInputElement>(null);
 

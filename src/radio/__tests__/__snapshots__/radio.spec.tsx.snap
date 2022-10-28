@@ -90,7 +90,7 @@ exports[`Radio renders basic snapshot 1`] = `
   <input
     aria-invalid="false"
     class="emotion-1"
-    id="radio-m-Elq0"
+    id="radio-123abC"
     type="radio"
   />
   <div
@@ -98,7 +98,7 @@ exports[`Radio renders basic snapshot 1`] = `
   />
   <label
     class="emotion-3"
-    for="radio-m-Elq0"
+    for="radio-123abC"
   >
     Taylor Swift
   </label>
@@ -204,7 +204,7 @@ exports[`Radio renders snapshot of checked state 1`] = `
     aria-invalid="false"
     checked=""
     class="emotion-1"
-    id="radio-Q1jj_A"
+    id="radio-123abC"
     type="radio"
   />
   <div
@@ -216,7 +216,7 @@ exports[`Radio renders snapshot of checked state 1`] = `
   </div>
   <label
     class="emotion-4"
-    for="radio-Q1jj_A"
+    for="radio-123abC"
   >
     Taylor Swift
   </label>
@@ -314,7 +314,7 @@ exports[`Radio renders snapshot of disabled state 1`] = `
     aria-invalid="false"
     class="emotion-1"
     disabled=""
-    id="radio-DhY8OG"
+    id="radio-123abC"
     type="radio"
   />
   <div
@@ -322,7 +322,7 @@ exports[`Radio renders snapshot of disabled state 1`] = `
   />
   <label
     class="emotion-3"
-    for="radio-DhY8OG"
+    for="radio-123abC"
   >
     Taylor Swift
   </label>
@@ -423,7 +423,7 @@ exports[`Radio renders snapshot of focused state 1`] = `
   <input
     aria-invalid="false"
     class="emotion-1"
-    id="radio-flp-0p"
+    id="radio-123abC"
     type="radio"
   />
   <div
@@ -431,7 +431,7 @@ exports[`Radio renders snapshot of focused state 1`] = `
   />
   <label
     class="emotion-3"
-    for="radio-flp-0p"
+    for="radio-123abC"
   >
     Taylor Swift
   </label>
@@ -528,7 +528,7 @@ exports[`Radio renders snapshot of inverted 1`] = `
   <input
     aria-invalid="false"
     class="emotion-1"
-    id="radio-R495UN"
+    id="radio-123abC"
     type="radio"
   />
   <div
@@ -536,7 +536,7 @@ exports[`Radio renders snapshot of inverted 1`] = `
   />
   <label
     class="emotion-3"
-    for="radio-R495UN"
+    for="radio-123abC"
   >
     Taylor Swift
   </label>
@@ -715,7 +715,7 @@ exports[`Radio renders snapshot with error 1`] = `
   <input
     aria-invalid="true"
     class="emotion-1"
-    id="radio-vkDMHd"
+    id="radio-123abC"
     type="radio"
   />
   <div
@@ -723,7 +723,7 @@ exports[`Radio renders snapshot with error 1`] = `
   />
   <label
     class="emotion-3"
-    for="radio-vkDMHd"
+    for="radio-123abC"
   >
     Taylor Swift
   </label>
