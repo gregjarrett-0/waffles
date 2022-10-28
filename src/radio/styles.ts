@@ -2,41 +2,49 @@ import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
 
-export function inputStyle() {
-  return css`
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  `;
-}
+const RADIOMARK_SIZE = 18;
 
-type LabelStyleOptions = {
+type WrapperStyleOptions = {
   disabled: boolean;
 };
 
-export function labelStyle({ disabled }: LabelStyleOptions) {
+export function wrapperStyle({ disabled }: WrapperStyleOptions) {
   return css`
     display: flex;
-    cursor: ${disabled ? 'default' : 'pointer'};
     opacity: ${disabled ? tokens.opacity.high : 1};
   `;
 }
 
-type ContentStyleOptions = {
-  inverted: boolean;
+type InputStyleOptions = {
+  disabled: boolean;
 };
 
-export function contentStyle({ inverted }: ContentStyleOptions) {
+export function inputStyle({ disabled }: InputStyleOptions) {
+  return css`
+    position: absolute;
+    opacity: 0;
+    width: ${RADIOMARK_SIZE}px;
+    height: ${RADIOMARK_SIZE}px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: ${disabled ? 'default' : 'pointer'};
+  `;
+}
+
+type LabelStyleOptions = {
+  inverted: boolean;
+  disabled: boolean;
+};
+
+export function labelStyle({ inverted, disabled }: LabelStyleOptions) {
   return css`
     line-height: ${tokens.lineHeights.default};
     padding-top: 1px;
     padding-left: ${tokens.spacing.small};
     user-select: none;
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+    cursor: ${disabled ? 'default' : 'pointer'};
   `;
 }
 
@@ -46,10 +54,11 @@ const radiomarkBaseStyle = css`
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  height: 18px;
-  width: 18px;
+  width: ${RADIOMARK_SIZE}px;
+  height: ${RADIOMARK_SIZE}px;
   border-radius: ${tokens.borderRadius.circle};
   transition: background-color 75ms ease-out, border-color 75ms ease-out;
+  pointer-events: none;
 
   &::after {
     content: '';
