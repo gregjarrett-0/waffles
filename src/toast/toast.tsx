@@ -7,7 +7,7 @@ import { animatedWrapperStyle } from './styles';
 import Card from './card';
 
 type ToastProps = {
-  /* The main content of the notification. */
+  /* The main content of the Toast. */
   title: string;
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
@@ -35,17 +35,17 @@ function Toast({
   // For exit animation to work smoothly, height of animated wrapper is required
   const wrapperRef = useRef<HTMLLIElement>(null);
   const height = useHeight(wrapperRef);
-  // Internal timer, a timeout after which the toast is closed automatically
+  // Internal timer, a timeout after which the Toast is closed automatically
   const autoCloseTimer = useRef<ReturnType<typeof setTimeout>>();
 
   const handleClose = useCallbackRef(() => {
     onClose();
   });
 
-  // Close toast after close button is clicked
+  // Close Toast after close button is clicked
   // First it triggers exit animation, after that it clears internal timer
-  // To let exit animation finish before toast unmount, close callback is triggered after a delay
-  // Finally completely remove the toast
+  // To let exit animation finish before Toast unmount, close callback is triggered after a delay
+  // Finally completely remove the Toast
   function forceClose() {
     if (isVisible) {
       setIsVisible(false);

@@ -14,13 +14,13 @@ type ToastsDataset = Record<
 >;
 
 type ToastProviderProps = {
-  /* Turns off toasts auto-hide functionality. When flag is passed, notifications persist and must be dismissed manually. */
+  /* Turns off Toasts auto-hide functionality. When flag is passed, notifications persist and must be dismissed manually. */
   /* @default false */
   disableAutoHide?: boolean;
   /* The number of milliseconds to wait before automatically dismissing a notification. */
   /* @default 6000 */
   autoHideDuration?: number;
-  /* Sets the distance from the top of the page to the toasts container. */
+  /* Sets the distance from the top of the page to the Toast's container. */
   /* @default 54px */
   offset?: string;
   /* Content of an app. Generally, it is enough to wrap the whole app close to its root with a single `ToastProvider`. */
@@ -33,11 +33,11 @@ function ToastProvider({
   offset = '54px',
   children,
 }: ToastProviderProps) {
-  // Keep each new toast in a hash map under unique ID
+  // Keep each new Toast in a hash map under unique ID
   const [toasts, setToasts] = useState<ToastsDataset>({});
   const toastIds = Object.keys(toasts);
 
-  // Create new toast, exposed by hook
+  // Create new Toast, exposed by hook
   const toast = useCallback(
     ({ title, variant = 'default', description }: ToastOptions) => {
       const toastId = nanoid(6);
@@ -58,9 +58,9 @@ function ToastProvider({
     [autoHideDuration, disableAutoHide],
   );
 
-  // Remove toast from hash map by ID
-  // Handler is called by toast after exit animation is finished
-  // It's called either automatically by internal toast timer or after close button is clicked
+  // Remove Toast from hash map by ID
+  // Handler is called by Toast after exit animation is finished
+  // It's called either automatically by internal Toast timer or after close button is clicked
   function handleClose(toastId: string) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { [toastId]: removed, ...restToasts } = toasts;
