@@ -56,6 +56,25 @@ function ToastTest() {
   );
 }
 
+function ToastTestOverrideHide() {
+  const { toast } = useToast();
+
+  return (
+    <button
+      type="button"
+      onClick={() =>
+        toast({
+          title: 'Default Toast Title',
+          description: 'Default toast description.',
+          disableAutoHide: true,
+        })
+      }
+    >
+      Show Default Toast
+    </button>
+  );
+}
+
 describe('Toast', () => {
   beforeEach(() => {
     jest.useFakeTimers();
@@ -153,7 +172,7 @@ describe('Toast', () => {
     expect(title).not.toBeInTheDocument();
   });
 
-  it('when auto hide functionality is disabled do not hide a toast automatically', async () => {
+  it('when auto hide functionality is disabled on provider, do not hide a toast automatically', async () => {
     const { getByText } = render(
       <ToastProvider disableAutoHide>
         <ToastTest />
@@ -170,6 +189,27 @@ describe('Toast', () => {
     });
 
     const title = getByText('Warning Toast Title');
+
+    expect(title).toBeInTheDocument();
+  });
+
+  it('when auto hide functionality is disabled on individual Toast, do not hide the Toast automatically', async () => {
+    const { getByText } = render(
+      <ToastProvider>
+        <ToastTestOverrideHide />
+      </ToastProvider>,
+    );
+
+    const toastTrigger = getByText('Show Default Toast');
+    fireEvent.click(toastTrigger);
+
+    // By default toast would be closed after 6 seconds
+    // Could still be dismissed manually by clicking close button
+    act(() => {
+      jest.advanceTimersByTime(10000);
+    });
+
+    const title = getByText('Show Default Toast');
 
     expect(title).toBeInTheDocument();
   });
