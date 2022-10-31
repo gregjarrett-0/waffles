@@ -5,13 +5,11 @@ function Example() {
   const [checked, setChecked] = useState(false);
 
   return (
-    <form>
-      <Radio
-        checked={checked}
-        aria-label="Radio without a label"
-        onChange={() => setChecked(!checked)}
-      />
-    </form>
+    <Radio
+      checked={checked}
+      aria-label="Radio without a label"
+      onChange={() => setChecked(!checked)}
+    />
   );
 }
 

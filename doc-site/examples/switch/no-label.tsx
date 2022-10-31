@@ -6,17 +6,11 @@ function Example() {
   const [checked, setChecked] = useState(false);
 
   return (
-    <form
-      css={css`
-        width: 300px;
-      `}
-    >
-      <Switch
-        aria-label="Switch without a label"
-        checked={checked}
-        onChange={() => setChecked(!checked)}
-      />
-    </form>
+    <Switch
+      aria-label="Switch without a label"
+      checked={checked}
+      onChange={() => setChecked(!checked)}
+    />
   );
 }
 
