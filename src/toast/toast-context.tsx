@@ -5,11 +5,16 @@ import Toast from './toast';
 
 export type ToastOptions = Omit<
   React.ComponentProps<typeof Toast>,
-  'onClose' | 'disableAutoHide' | 'autoHideDuration'
+  'onClose' | 'autoHideDuration'
 >;
 
 type ToastContextValue = {
-  toast: ({ title, variant, description }: ToastOptions) => void;
+  toast: ({
+    title,
+    variant,
+    description,
+    disableAutoHide,
+  }: ToastOptions) => void;
 };
 
 const ToastContext = createContext<ToastContextValue>(undefined!);

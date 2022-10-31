@@ -14,10 +14,11 @@ type ToastProps = {
   /* Defines the type of notification. */
   /* @default default */
   variant?: 'default' | 'success' | 'warning' | 'error';
+  /* Overrides the `ToastProvider` value and turns off Toast's auto-hide functionality per-Toast. */
+  /* @default false */
+  disableAutoHide?: boolean;
   /* [skip docs] */
   autoHideDuration: number;
-  /* [skip docs] */
-  disableAutoHide: boolean;
   /* [skip docs] */
   onClose: () => void;
 };
@@ -26,8 +27,8 @@ function Toast({
   title,
   description,
   variant = 'default',
-  autoHideDuration,
   disableAutoHide,
+  autoHideDuration,
   onClose,
 }: ToastProps) {
   // A flag to trigger enter / exit animation

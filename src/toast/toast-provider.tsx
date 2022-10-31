@@ -14,7 +14,7 @@ type ToastsDataset = Record<
 >;
 
 type ToastProviderProps = {
-  /* Turns off Toasts auto-hide functionality. When flag is passed, notifications persist and must be dismissed manually. */
+  /* Turns off Toast's auto-hide functionality. When the flag is passed, notifications persist and must be dismissed manually. */
   /* @default false */
   disableAutoHide?: boolean;
   /* The number of milliseconds to wait before automatically dismissing a notification. */
@@ -28,7 +28,7 @@ type ToastProviderProps = {
 };
 
 function ToastProvider({
-  disableAutoHide = false,
+  disableAutoHide: providerDisableAutoHide = false,
   autoHideDuration = 6000,
   offset = '54px',
   children,
@@ -39,7 +39,12 @@ function ToastProvider({
 
   // Create new Toast, exposed by hook
   const toast = useCallback(
-    ({ title, variant = 'default', description }: ToastOptions) => {
+    ({
+      title,
+      variant = 'default',
+      description,
+      disableAutoHide,
+    }: ToastOptions) => {
       const toastId = nanoid(6);
 
       setToasts((toasts) => {
@@ -49,13 +54,16 @@ function ToastProvider({
             title,
             variant,
             description,
-            disableAutoHide,
+            disableAutoHide:
+              disableAutoHide !== undefined // Check for individual Toast override for disableAutoHide
+                ? disableAutoHide
+                : providerDisableAutoHide,
             autoHideDuration,
           },
         };
       });
     },
-    [autoHideDuration, disableAutoHide],
+    [autoHideDuration, providerDisableAutoHide],
   );
 
   // Remove Toast from hash map by ID
