@@ -76,6 +76,18 @@ describe('Radio', () => {
     expect(input).toBeInTheDocument();
   });
 
+  it('label and input are associated by the same ID', () => {
+    const { getByLabelText, getByText } = render(
+      <Radio onChange={jest.fn()}>Taylor Swift</Radio>,
+    );
+
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+    const label = getByText('Taylor Swift');
+
+    expect(input).toHaveAttribute('id', `radio-${MOCKED_ID}`);
+    expect(label).toHaveAttribute('for', `radio-${MOCKED_ID}`);
+  });
+
   it('sets correct aria attributes when has error', () => {
     const { getByLabelText } = render(
       <Radio error onChange={jest.fn()}>

@@ -90,6 +90,18 @@ describe('Switch', () => {
     expect(input).toBeInTheDocument();
   });
 
+  it('label and input are associated by the same ID', () => {
+    const { getByLabelText, getByText } = render(
+      <Switch onChange={jest.fn()}>Taylor Swift</Switch>,
+    );
+
+    const input = getByLabelText('Taylor Swift', { selector: 'input' });
+    const label = getByText('Taylor Swift');
+
+    expect(input).toHaveAttribute('id', `switch-${MOCKED_ID}`);
+    expect(label).toHaveAttribute('for', `switch-${MOCKED_ID}`);
+  });
+
   it('sets correct aria attributes when has error', () => {
     const { getByLabelText } = render(
       <Switch error onChange={jest.fn()}>
