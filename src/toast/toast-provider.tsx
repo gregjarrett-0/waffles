@@ -14,7 +14,7 @@ type ToastsDataset = Record<
 >;
 
 type ToastProviderProps = {
-  /* Turns off Toast's auto-hide functionality. When the flag is passed, notifications persist and must be dismissed manually. */
+  /* Turns off Toasts auto-hide functionality. When the flag is passed, notifications persist and must be dismissed manually. */
   /* @default false */
   disableAutoHide?: boolean;
   /* The number of milliseconds to wait before automatically dismissing a notification. */

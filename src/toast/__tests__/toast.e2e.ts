@@ -31,6 +31,20 @@ describe('Toast', () => {
     cy.findByTestId('toasts-list').should('not.exist');
   });
 
+  it('toast auto close can be overridden per toast', () => {
+    cy.loadStory('toast-persistent');
+    cy.findByText('Show Regular Toast').click();
+    cy.findByText('Show Persistent Toast').click();
+
+    // Wait for regular Toasts to automatically close
+    cy.wait(7000);
+
+    // Regular Toast shouldn't be visible still
+    cy.findByText('Regular Toast Title').should('not.exist');
+    // Persisted Toast should still be visible
+    cy.findByText('Persistent Toast Title').should('exist');
+  });
+
   describe('render all variants', () => {
     Object.keys(screenSizes).forEach((size) => {
       const [width, height] = screenSizes[size];

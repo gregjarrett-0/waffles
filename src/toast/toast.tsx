@@ -14,7 +14,7 @@ type ToastProps = {
   /* Defines the type of notification. */
   /* @default default */
   variant?: 'default' | 'success' | 'warning' | 'error';
-  /* Overrides the `ToastProvider` value and turns off auto-hide functionality for the specific Toast. */
+  /* Turns off auto-hide functionality for the specific Toast. Overrides the `ToastProvider` value. */
   /* @default false */
   disableAutoHide?: boolean;
   /* [skip docs] */
