@@ -11,6 +11,7 @@ import BasicUsage from '../../examples/card/basic-usage';
 import WithHeadstone from '../../examples/card/with-headstone';
 import WithDisabledHover from '../../examples/card/with-disabled-hover';
 import AsALink from '../../examples/card/as-a-link';
+import Inverted from '../../examples/card/inverted';
 
 <Layout title="Card" description="🚧 This page is under construction">
 
@@ -32,6 +33,10 @@ import AsALink from '../../examples/card/as-a-link';
   <AsALink />
 </Example>
 
+<Example title="Inverted" path="card/inverted" darkPreview>
+  <Inverted />
+</Example>
+
 ## Playground
 
 <Playground {...playgroundConfig} />
@@ -45,6 +50,14 @@ In addition to all custom props listed below, `Card` accepts all props regular `
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/card/card-internal')}
   isPolymorphic
+/>
+
+### Card.HeadstoneItem
+
+In addition to all custom props listed below, `Card` accepts all props regular `HTMLDiv` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/card/headstone-item')}
 />
 
 ## Imports

@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Heading } from '@datacamp/waffles/heading';
 import { Card } from '@datacamp/waffles/card';
-import { Avatar } from '@datacamp/waffles/avatar';
 import {
   PythonLogomark,
   SqlLogomark,
@@ -14,9 +13,9 @@ function Example() {
     <Card
       headstone={
         <>
-          <Avatar content={<PythonLogomark />} />
-          <Avatar content={<SqlLogomark />} />
-          <Avatar content={<RLogomark />} />
+          <Card.HeadstoneItem content={<PythonLogomark />} />
+          <Card.HeadstoneItem content={<SqlLogomark />} />
+          <Card.HeadstoneItem content={<RLogomark />} />
         </>
       }
       css={css`
