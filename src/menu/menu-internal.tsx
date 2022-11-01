@@ -127,7 +127,7 @@ function MenuInternal({
             },
           );
 
-          return cloneElement(child, {
+          return cloneElement(child as JSX.Element, {
             children: enhancedChildren,
           });
         }

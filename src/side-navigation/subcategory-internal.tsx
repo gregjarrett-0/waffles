@@ -61,7 +61,7 @@ function Subcategory<T extends React.ElementType = 'div'>(
   function renderChildren() {
     return Children.map(children, (child) => {
       if (isValidElement(child)) {
-        return cloneElement(child, {
+        return cloneElement(child as JSX.Element, {
           size,
           isSubcategoryItem: true,
         });
