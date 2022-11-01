@@ -70,8 +70,8 @@ describe('Card', () => {
       <Card
         headstone={
           <>
-            <span>Headstone 1</span>
-            <span>Headstone 2</span>
+            <Card.HeadstoneItem content="A" />
+            <Card.HeadstoneItem content="B" />
           </>
         }
       >
@@ -93,6 +93,18 @@ describe('Card', () => {
 
     const card = getByText('Taylor Swift Website');
     fireEvent.focus(card);
+
+    expect(card).toMatchSnapshot();
+  });
+
+  it('renders snapshot of inverted', () => {
+    const { container } = render(
+      <Card inverted headstone={<Card.HeadstoneItem content="A" />}>
+        <p>Taylor Swift</p>
+      </Card>,
+    );
+
+    const card = container.querySelector('section');
 
     expect(card).toMatchSnapshot();
   });

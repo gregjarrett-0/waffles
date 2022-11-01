@@ -33,4 +33,10 @@ describe('Card', () => {
     cy.get('button').focus();
     cy.findByText('Action').should('exist');
   });
+
+  it('renders inverted', () => {
+    cy.loadStory('card-inverted');
+    cy.findByText('Inverted card').should('exist');
+    cy.findByText(/lorem ipsum/i).should('exist');
+  });
 });
