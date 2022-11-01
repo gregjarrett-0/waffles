@@ -7,12 +7,14 @@ type CardStyleOptions = {
   isFocusVisible: boolean;
   hasHeadstone: boolean;
   disableHoverEffect: boolean;
+  inverted: boolean;
 };
 
 export function cardStyle({
   isFocusVisible,
   hasHeadstone,
   disableHoverEffect,
+  inverted,
 }: CardStyleOptions) {
   return css`
     display: block;
@@ -22,9 +24,11 @@ export function cardStyle({
     css`
       padding-top: 28px;
     `}
-    background-color: ${tokens.colors.white};
+    background-color: ${inverted
+      ? tokens.colors.navyLight
+      : tokens.colors.white};
     border: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.navy, 0.15)};
+      ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
     border-radius: ${tokens.borderRadius.medium};
     transition: box-shadow 600ms cubic-bezier(0.1, 0.8, 0.2, 1),
       transform 600ms cubic-bezier(0.1, 0.8, 0.2, 1);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children, cloneElement, isValidElement } from 'react';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
 
@@ -9,11 +9,14 @@ import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 type CardBaseProps = {
   /* The content of the Card. */
   children: React.ReactNode;
-  /* Content positioned along the top of the Card. Could be [Avatar](/components/avatar) from Waffles (use default size) or a custom component. */
+  /* Content positioned along the top of the Card. Could be `Card.HeadstoneItem` or a custom component. */
   headstone?: React.ReactNode;
   /* Disables on hover shadow effect. */
   /* @default false */
   disableHoverEffect?: boolean;
+  /* Sets the style of the Card suitable for dark backgrounds. */
+  /* @default false */
+  inverted?: boolean;
 };
 
 export type CardProps<T extends React.ElementType = 'section'> =
@@ -25,12 +28,29 @@ function CardInternal<T extends React.ElementType = 'section'>(
     children,
     headstone,
     disableHoverEffect = false,
+    inverted = false,
     ...restProps
   }: CardProps<T>,
   ref?: PolymorphicRef<T>,
 ) {
   const Element = as || 'section';
   const { focusProps, isFocusVisible } = useFocusRing();
+
+  function renderHeadstone() {
+    return Children.map(headstone, (headstoneItem) => {
+      if (isValidElement(headstoneItem)) {
+        if (inverted) {
+          return cloneElement(headstoneItem as JSX.Element, {
+            inverted,
+          });
+        }
+
+        return headstoneItem;
+      }
+
+      return null;
+    });
+  }
 
   return (
     <Element
@@ -40,9 +60,10 @@ function CardInternal<T extends React.ElementType = 'section'>(
         isFocusVisible,
         hasHeadstone: !!headstone,
         disableHoverEffect,
+        inverted,
       })}
     >
-      {headstone && <div css={headstoneStyle()}>{headstone}</div>}
+      {headstone && <div css={headstoneStyle()}>{renderHeadstone()}</div>}
       {children}
     </Element>
   );

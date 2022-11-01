@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 
+import HeadstoneItem from './headstone-item';
 import CardInternal from './card-internal';
 
 import type { CardProps } from './card-internal';
@@ -10,4 +11,8 @@ type CardComponent = <T extends React.ElementType = 'section'>(
 
 const Card: CardComponent = forwardRef(CardInternal);
 
-export default Card;
+const CardNamespace = Object.assign(Card, {
+  HeadstoneItem,
+});
+
+export default CardNamespace;
