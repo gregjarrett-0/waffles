@@ -15,7 +15,7 @@ function Story() {
     <div css={wrapperStyle}>
       <Card
         headstone={
-          <Card.HeadstoneItem content="A" data-testid="card-headstone" />
+          <Card.HeadstoneAvatar content="A" data-testid="card-headstone" />
         }
       >
         <Heading size="large">Card with headstone</Heading>

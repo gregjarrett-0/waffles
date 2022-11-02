@@ -8,7 +8,7 @@ function Example() {
   return (
     <Card
       inverted
-      headstone={<Card.HeadstoneItem content={<PowerBiLogomark />} />}
+      headstone={<Card.HeadstoneAvatar content={<PowerBiLogomark />} />}
       css={css`
         margin-top: 20px;
       `}

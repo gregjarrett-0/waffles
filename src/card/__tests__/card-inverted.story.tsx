@@ -18,7 +18,7 @@ function Story() {
     <div css={wrapperStyle}>
       <Card
         inverted
-        headstone={<Card.HeadstoneItem content={<PowerBiLogomark />} />}
+        headstone={<Card.HeadstoneAvatar content={<PowerBiLogomark />} />}
         css={css`
           width: 600px;
         `}

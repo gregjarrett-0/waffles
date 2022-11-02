@@ -13,9 +13,9 @@ function Example() {
     <Card
       headstone={
         <>
-          <Card.HeadstoneItem content={<PythonLogomark />} />
-          <Card.HeadstoneItem content={<SqlLogomark />} />
-          <Card.HeadstoneItem content={<RLogomark />} />
+          <Card.HeadstoneAvatar content={<PythonLogomark />} />
+          <Card.HeadstoneAvatar content={<SqlLogomark />} />
+          <Card.HeadstoneAvatar content={<RLogomark />} />
         </>
       }
       css={css`

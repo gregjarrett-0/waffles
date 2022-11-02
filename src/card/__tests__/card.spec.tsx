@@ -70,8 +70,8 @@ describe('Card', () => {
       <Card
         headstone={
           <>
-            <Card.HeadstoneItem content="A" />
-            <Card.HeadstoneItem content="B" />
+            <Card.HeadstoneAvatar content="A" />
+            <Card.HeadstoneAvatar content="B" />
           </>
         }
       >
@@ -99,7 +99,7 @@ describe('Card', () => {
 
   it('renders snapshot of inverted', () => {
     const { container } = render(
-      <Card inverted headstone={<Card.HeadstoneItem content="A" />}>
+      <Card inverted headstone={<Card.HeadstoneAvatar content="A" />}>
         <p>Taylor Swift</p>
       </Card>,
     );
