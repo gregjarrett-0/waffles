@@ -27,9 +27,9 @@ function LevelIndicators({ variant, level, inverted }: LevelIndicatorsProps) {
 
   return (
     <div css={indicatorWrapper()}>
-      {[...Array(getIndicatorCount())].map((x) => (
-        <Indicator key={x} {...{ variant, inverted }} />
-      ))}
+      {[...Array(getIndicatorCount())].map((_x, i) => {
+        return <Indicator key={`indicator-${i}`} {...{ variant, inverted }} />;
+      })}
     </div>
   );
 }
