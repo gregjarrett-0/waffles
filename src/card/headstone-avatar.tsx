@@ -1,17 +1,17 @@
 import { Avatar } from '../avatar';
 
-type HeadstoneItemProps = {
+type HeadstoneAvatarProps = {
   /* Content of the item. In general, pass Waffles [Logomark asset](/components/asset/#logomark-assets) or a string containing only one character. */
   content: JSX.Element | string;
   /* [skip docs] */
   inverted?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-function HeadstoneItem({
+function HeadstoneAvatar({
   content,
   inverted = false,
   ...restProps
-}: HeadstoneItemProps) {
+}: HeadstoneAvatarProps) {
   return (
     <Avatar
       {...restProps}
@@ -22,4 +22,4 @@ function HeadstoneItem({
   );
 }
 
-export default HeadstoneItem;
+export default HeadstoneAvatar;
