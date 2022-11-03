@@ -1,0 +1,69 @@
+import * as BadgeExports from '@datacamp/waffles/badge';
+
+import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
+import Example from '../../components/example';
+import Playground from '../../components/playground';
+import PropsTable from '../../components/props-table';
+import Imports from '../../components/imports';
+
+import playgroundConfig from '../../examples/skill-tag/playground-config';
+import BasicUsage from '../../examples/skill-tag/basic-usage';
+import Variants from '../../examples/skill-tag/variants';
+import Levels from '../../examples/skill-tag/levels';
+import Inverted from '../../examples/skill-tag/inverted';
+
+<Layout title="Skill Tag" description="">
+
+## Usage guidance
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+  </BestPractices.Discouraged>
+</BestPractices>
+
+## Examples
+
+<Example title="Basic" path="skill-tag/basic-usage">
+  <BasicUsage />
+</Example>
+
+<Example title="Variants" path="skill-tag/variants">
+  <Variants />
+</Example>
+
+<Example title="Levels" path="skill-tag/levels">
+  <Levels />
+</Example>
+
+<Example title="Inverted" path="skill-tag/inverted" darkPreview>
+  <Inverted />
+</Example>
+
+## Playground
+
+<Playground {...playgroundConfig} />
+
+## Props
+
+### Skill Tag
+
+In addition to all custom props listed below, `SkillTag` accepts all props regular `HTMLSpan` would, such as `data-` attributes.
+
+<PropsTable
+  metadata={require('!!extract-react-types-loader!../../../src/skill-tag/skill-tag')}
+/>
+
+## Imports
+
+You can import following components or utilities from this module:
+
+<Imports module={BadgeExports} path="@datacamp/waffles/skill-tag" />
+
+</Layout>
