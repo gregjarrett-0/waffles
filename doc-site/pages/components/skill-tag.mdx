@@ -13,17 +13,29 @@ import Variants from '../../examples/skill-tag/variants';
 import Levels from '../../examples/skill-tag/levels';
 import Inverted from '../../examples/skill-tag/inverted';
 
-<Layout title="Skill Tag" description="">
+<Layout title="Skill Tag" description="A small visual label used to show the difficulty level of a course or track.">
 
 ## Usage guidance
+
+A `SkillTag` can be used in course/track description cards & pages to indicate the skill level of those courses / tracks. It should be used to provide more visual information about these things, through supporting content and not on its own.
+
+There are three options for the `level`, indicating the intended difficulty to represent. These are: `beginner`, `intermediate` and `advanced`. Terminology used to describe these difficulties should also follow the same options.
+
+When positioned near the top of a page, or used with the intent of catching the eye, then `variant='primary'` should be used. In contrast, `variant='secondary'` should be used in cases where the `SkillTag` is secondary to the surrounding content and not a focus.
 
 ## Best practices
 
 <BestPractices>
   <BestPractices.Recommended>
 
+    - use as alongside other content
+    - use the correct variant for the use case
+
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
+
+    - use alone, without other content
+    - override the colors of the indicators
 
   </BestPractices.Discouraged>
 </BestPractices>
@@ -54,7 +66,7 @@ import Inverted from '../../examples/skill-tag/inverted';
 
 ### Skill Tag
 
-In addition to all custom props listed below, `SkillTag` accepts all props regular `HTMLSpan` would, such as `data-` attributes.
+In addition to all custom props listed below, `SkillTag` accepts all props regular `HTMLDiv` would, such as `aria-labelledby`, `aria-describedby`, `data-` attributes.
 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/skill-tag/skill-tag')}
