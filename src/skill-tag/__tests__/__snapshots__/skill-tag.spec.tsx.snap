@@ -1,0 +1,769 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skill Tag renders snapshot of inverted inverted variant primary and size advanced 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #03EF62;
+}
+
+.emotion-5 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Advanced
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of inverted inverted variant primary and size beginner 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #03EF62;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-3"
+  >
+    Beginner
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of inverted inverted variant primary and size intermediate 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #03EF62;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-4"
+  >
+    Intermediate
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of inverted inverted variant secondary and size advanced 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #9BA3AB;
+}
+
+.emotion-5 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #9BA3AB;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Advanced
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of inverted inverted variant secondary and size beginner 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #9BA3AB;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #9BA3AB;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-3"
+  >
+    Beginner
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of inverted inverted variant secondary and size intermediate 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #9BA3AB;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #9BA3AB;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-4"
+  >
+    Intermediate
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of variant primary and size advanced 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #00C74E;
+}
+
+.emotion-5 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Advanced
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of variant primary and size beginner 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #00C74E;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-3"
+  >
+    Beginner
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of variant primary and size intermediate 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #00C74E;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #05192D;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-4"
+  >
+    Intermediate
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of variant secondary and size advanced 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #65707C;
+}
+
+.emotion-5 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #65707C;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-5"
+  >
+    Advanced
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of variant secondary and size beginner 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #65707C;
+}
+
+.emotion-3 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #65707C;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-3"
+  >
+    Beginner
+  </span>
+</div>
+`;
+
+exports[`Skill Tag renders snapshot of variant secondary and size intermediate 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #65707C;
+}
+
+.emotion-4 {
+  color: #05192D;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #65707C;
+  line-height: 1.5;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+    <span
+      class="emotion-2"
+      data-testid="skill-tag-indicator"
+    />
+  </div>
+  <span
+    class="emotion-4"
+  >
+    Intermediate
+  </span>
+</div>
+`;

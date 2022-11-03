@@ -7,7 +7,12 @@ type IndicatorProps = {
 };
 
 function Indicator({ variant, inverted }: IndicatorProps) {
-  return <span css={indicatorStyle({ variant, inverted })} />;
+  return (
+    <span
+      css={indicatorStyle({ variant, inverted })}
+      data-testid="skill-tag-indicator"
+    />
+  );
 }
 
 export default Indicator;
