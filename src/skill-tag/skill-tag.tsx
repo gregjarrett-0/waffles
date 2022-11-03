@@ -15,7 +15,7 @@ type SkillTagProps = {
   /* Sets the style of the Skill Tag to be suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-} & React.HTMLAttributes<HTMLSpanElement>;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 function SkillTag({
   variant = 'primary',
