@@ -13,7 +13,7 @@ type LevelIndicatorsProps = {
 };
 
 function LevelIndicators({ variant, level, inverted }: LevelIndicatorsProps) {
-  // Return the required number of indicators, based on the difficulty level
+  // Return the required number of indicators, based on the skill level
   function getIndicatorCount() {
     switch (level) {
       case 'advanced':

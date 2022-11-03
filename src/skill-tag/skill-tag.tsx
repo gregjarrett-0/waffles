@@ -9,7 +9,7 @@ type SkillTagProps = {
   /* Determines the variant of the Skill Tag. */
   /* @default primary */
   variant?: 'primary' | 'secondary';
-  /* Defines the difficulty level of the Skill Tag. */
+  /* Defines the skill level of the Skill Tag. */
   /* @default beginner */
   level?: 'beginner' | 'intermediate' | 'advanced';
   /* Sets the style of the Skill Tag to be suitable for dark backgrounds. */
@@ -23,7 +23,7 @@ function SkillTag({
   inverted = false,
   ...restProps
 }: SkillTagProps) {
-  // Obtain the associated label based on the difficulty level
+  // Obtain the associated label based on the skill level
   function levelLabel() {
     switch (level) {
       case 'beginner':
