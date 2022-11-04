@@ -2,12 +2,12 @@
 
 import Asset from '../asset-internal';
 
-type ApplyColoredAlpaProps = Omit<
+type LearnColoredAlpaLoopProps = Omit<
   React.ComponentProps<typeof Asset>,
   'children'
 >;
 
-function ApplyColoredAlpa({ ...restProps }: ApplyColoredAlpaProps) {
+function LearnColoredAlpaLoop({ ...restProps }: LearnColoredAlpaLoopProps) {
   return (
     <Asset viewBox="0 0 673 673" {...restProps}>
       <g fill="none" fillRule="evenodd">
@@ -39,20 +39,20 @@ function ApplyColoredAlpa({ ...restProps }: ApplyColoredAlpaProps) {
             <path fillRule="nonzero" d="M61 0v56H51V0z" />
           </g>
         </g>
-        <g transform="translate(0 316)">
+        <g opacity=".3" transform="translate(0 316)">
           <path
             d="M38 20c0 152.223 114.907 277.705 262.998 294.973l.001 14.092C145.166 311.725 24 179.97 24 20z"
-            fill="#FF6EA9"
+            fill="#FFF"
           />
           <path
-            fill="#FF6EA9"
+            fill="#FFF"
             fillRule="nonzero"
             d="m61.9 30.95-9.9 9.9-21.05-21.052L9.9 40.85 0 30.95 30.95 0z"
           />
           <ellipse
             stroke="#05192D"
             strokeWidth="14"
-            fill="#FF6EA9"
+            fill="#FFF"
             cx="128"
             cy="232"
             rx="83"
@@ -65,20 +65,20 @@ function ApplyColoredAlpa({ ...restProps }: ApplyColoredAlpaProps) {
             <path d="M133 177v52.361h-10V177z" />
           </g>
         </g>
-        <g opacity=".3" transform="translate(369 26)">
+        <g transform="translate(369 26)">
           <path
             d="M.004.72C156.798 17.151 279 149.346 279 310h-14C265 157.093 149.057 31.167.003 14.8z"
-            fill="#FFF"
+            fill="#03EF62"
           />
           <path
-            fill="#FFF"
+            fill="#03EF62"
             fillRule="nonzero"
             d="m241.575 299.475 9.9-9.9 21.05 21.051 21.05-21.05 9.9 9.899-30.95 30.95z"
           />
           <ellipse
             stroke="#05192D"
             strokeWidth="14"
-            fill="#FFF"
+            fill="#03EF62"
             cx="178.071"
             cy="98"
             rx="83.071"
@@ -120,4 +120,4 @@ function ApplyColoredAlpa({ ...restProps }: ApplyColoredAlpaProps) {
   );
 }
 
-export default ApplyColoredAlpa;
+export default LearnColoredAlpaLoop;

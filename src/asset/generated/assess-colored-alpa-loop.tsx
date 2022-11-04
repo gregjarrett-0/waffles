@@ -2,12 +2,12 @@
 
 import Asset from '../asset-internal';
 
-type AssessColoredAlpaProps = Omit<
+type AssessColoredAlpaLoopProps = Omit<
   React.ComponentProps<typeof Asset>,
   'children'
 >;
 
-function AssessColoredAlpa({ ...restProps }: AssessColoredAlpaProps) {
+function AssessColoredAlpaLoop({ ...restProps }: AssessColoredAlpaLoopProps) {
   return (
     <Asset viewBox="0 0 673 673" {...restProps}>
       <g fill="none" fillRule="evenodd">
@@ -120,4 +120,4 @@ function AssessColoredAlpa({ ...restProps }: AssessColoredAlpaProps) {
   );
 }
 
-export default AssessColoredAlpa;
+export default AssessColoredAlpaLoop;

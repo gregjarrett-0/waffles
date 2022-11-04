@@ -2,12 +2,12 @@
 
 import Asset from '../asset-internal';
 
-type RegularColoredAlpaProps = Omit<
+type RegularColoredAlpaLoopProps = Omit<
   React.ComponentProps<typeof Asset>,
   'children'
 >;
 
-function RegularColoredAlpa({ ...restProps }: RegularColoredAlpaProps) {
+function RegularColoredAlpaLoop({ ...restProps }: RegularColoredAlpaLoopProps) {
   return (
     <Asset viewBox="0 0 673 673" {...restProps}>
       <g fill="none" fillRule="evenodd">
@@ -118,4 +118,4 @@ function RegularColoredAlpa({ ...restProps }: RegularColoredAlpaProps) {
   );
 }
 
-export default RegularColoredAlpa;
+export default RegularColoredAlpaLoop;
