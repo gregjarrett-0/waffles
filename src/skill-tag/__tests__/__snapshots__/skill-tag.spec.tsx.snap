@@ -41,6 +41,19 @@ exports[`Skill Tag renders snapshot of inverted inverted variant primary and siz
   line-height: 1.5;
 }
 
+.emotion-6 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -64,6 +77,11 @@ exports[`Skill Tag renders snapshot of inverted inverted variant primary and siz
     class="emotion-5"
   >
     Advanced
+    <span
+      class="emotion-6"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -109,6 +127,19 @@ exports[`Skill Tag renders snapshot of inverted inverted variant primary and siz
   line-height: 1.5;
 }
 
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -124,6 +155,11 @@ exports[`Skill Tag renders snapshot of inverted inverted variant primary and siz
     class="emotion-3"
   >
     Beginner
+    <span
+      class="emotion-4"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -169,6 +205,19 @@ exports[`Skill Tag renders snapshot of inverted inverted variant primary and siz
   line-height: 1.5;
 }
 
+.emotion-5 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -188,6 +237,11 @@ exports[`Skill Tag renders snapshot of inverted inverted variant primary and siz
     class="emotion-4"
   >
     Intermediate
+    <span
+      class="emotion-5"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -233,6 +287,19 @@ exports[`Skill Tag renders snapshot of inverted inverted variant secondary and s
   line-height: 1.5;
 }
 
+.emotion-6 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -256,6 +323,11 @@ exports[`Skill Tag renders snapshot of inverted inverted variant secondary and s
     class="emotion-5"
   >
     Advanced
+    <span
+      class="emotion-6"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -301,6 +373,19 @@ exports[`Skill Tag renders snapshot of inverted inverted variant secondary and s
   line-height: 1.5;
 }
 
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -316,6 +401,11 @@ exports[`Skill Tag renders snapshot of inverted inverted variant secondary and s
     class="emotion-3"
   >
     Beginner
+    <span
+      class="emotion-4"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -361,6 +451,19 @@ exports[`Skill Tag renders snapshot of inverted inverted variant secondary and s
   line-height: 1.5;
 }
 
+.emotion-5 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -380,6 +483,11 @@ exports[`Skill Tag renders snapshot of inverted inverted variant secondary and s
     class="emotion-4"
   >
     Intermediate
+    <span
+      class="emotion-5"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -425,6 +533,19 @@ exports[`Skill Tag renders snapshot of variant primary and size advanced 1`] = `
   line-height: 1.5;
 }
 
+.emotion-6 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -448,6 +569,11 @@ exports[`Skill Tag renders snapshot of variant primary and size advanced 1`] = `
     class="emotion-5"
   >
     Advanced
+    <span
+      class="emotion-6"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -493,6 +619,19 @@ exports[`Skill Tag renders snapshot of variant primary and size beginner 1`] = `
   line-height: 1.5;
 }
 
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -508,6 +647,11 @@ exports[`Skill Tag renders snapshot of variant primary and size beginner 1`] = `
     class="emotion-3"
   >
     Beginner
+    <span
+      class="emotion-4"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -553,6 +697,19 @@ exports[`Skill Tag renders snapshot of variant primary and size intermediate 1`]
   line-height: 1.5;
 }
 
+.emotion-5 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -572,6 +729,11 @@ exports[`Skill Tag renders snapshot of variant primary and size intermediate 1`]
     class="emotion-4"
   >
     Intermediate
+    <span
+      class="emotion-5"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -617,6 +779,19 @@ exports[`Skill Tag renders snapshot of variant secondary and size advanced 1`] =
   line-height: 1.5;
 }
 
+.emotion-6 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -640,6 +815,11 @@ exports[`Skill Tag renders snapshot of variant secondary and size advanced 1`] =
     class="emotion-5"
   >
     Advanced
+    <span
+      class="emotion-6"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -685,6 +865,19 @@ exports[`Skill Tag renders snapshot of variant secondary and size beginner 1`] =
   line-height: 1.5;
 }
 
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -700,6 +893,11 @@ exports[`Skill Tag renders snapshot of variant secondary and size beginner 1`] =
     class="emotion-3"
   >
     Beginner
+    <span
+      class="emotion-4"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
@@ -745,6 +943,19 @@ exports[`Skill Tag renders snapshot of variant secondary and size intermediate 1
   line-height: 1.5;
 }
 
+.emotion-5 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
 <div
   class="emotion-0"
 >
@@ -764,6 +975,11 @@ exports[`Skill Tag renders snapshot of variant secondary and size intermediate 1
     class="emotion-4"
   >
     Intermediate
+    <span
+      class="emotion-5"
+    >
+      Skill Level
+    </span>
   </span>
 </div>
 `;
