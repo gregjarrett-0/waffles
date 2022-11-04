@@ -2,9 +2,11 @@ import { indicatorWrapper } from './styles';
 import SkillTag from './skill-tag';
 import Indicator from './indicator';
 
-const BEGINNER_COUNT = 1;
-const INTERMEDIATE_COUNT = 2;
-const ADVANCED_COUNT = 3;
+const indicatorsCount = {
+  beginner: 1,
+  intermediate: 2,
+  advanced: 3,
+};
 
 type LevelIndicatorsProps = {
   variant: NonNullable<React.ComponentProps<typeof SkillTag>['variant']>;
@@ -13,22 +15,12 @@ type LevelIndicatorsProps = {
 };
 
 function LevelIndicators({ variant, level, inverted }: LevelIndicatorsProps) {
-  // Return the required number of indicators, based on the skill level
-  function getIndicatorCount() {
-    switch (level) {
-      case 'advanced':
-        return ADVANCED_COUNT;
-      case 'intermediate':
-        return INTERMEDIATE_COUNT;
-      default:
-        return BEGINNER_COUNT;
-    }
-  }
-
   return (
     <div css={indicatorWrapper()}>
-      {[...Array(getIndicatorCount())].map((_x, i) => {
-        return <Indicator key={`indicator-${i}`} {...{ variant, inverted }} />;
+      {Array.from({ length: indicatorsCount[level] }, (_, index) => {
+        return (
+          <Indicator key={`indicator-${index}`} {...{ variant, inverted }} />
+        );
       })}
     </div>
   );
