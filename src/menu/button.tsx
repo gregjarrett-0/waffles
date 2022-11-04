@@ -47,6 +47,7 @@ function MenuButton<T extends React.ElementType = 'button'>({
         onClick: handleClick,
         ...restProps,
       })}
+      tabIndex={-1}
       ref={(node: HTMLButtonElement) => (listRef.current[index] = node)}
       role="menuitem"
       inverted={inverted}

@@ -139,6 +139,15 @@ function MenuInternal({
     });
   }
 
+  // When Tab key is pressed close menu and return focus to trigger element
+  function handleTabOut(event: React.KeyboardEvent) {
+    if (event.key === 'Tab') {
+      setIsOpen(false);
+      // @ts-expect-error: focus() not recognized
+      refs.reference.current?.focus();
+    }
+  }
+
   return (
     <MenuProvider
       {...{
@@ -153,11 +162,12 @@ function MenuInternal({
       {element}
       <Portal>
         {isOpen && (
-          <FloatingFocusManager context={context} preventTabbing>
+          <FloatingFocusManager context={context}>
             <div
               {...getFloatingProps({
                 ref: floating,
                 ...restProps,
+                onKeyDown: handleTabOut,
               })}
               role="menu"
               aria-labelledby={triggerId}

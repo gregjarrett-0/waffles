@@ -72,6 +72,7 @@ function Item<T extends React.ElementType = 'button'>({
         ...focusProps,
         ...restProps,
       })}
+      tabIndex={-1}
       type={!type && Element === 'button' ? 'button' : type}
       ref={(node) => (listRef.current[index] = node)}
       role="menuitem"
