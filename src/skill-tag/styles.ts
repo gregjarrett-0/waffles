@@ -4,7 +4,7 @@ import { tokens } from '../tokens';
 
 import SkillTag from './skill-tag';
 
-export const variantMap = {
+const variantMap = {
   primary: {
     backgroundColor: tokens.colors.greenDark,
     color: tokens.colors.navy,
@@ -15,7 +15,7 @@ export const variantMap = {
   },
 };
 
-export const invertedVariantMap = {
+const invertedVariantMap = {
   primary: {
     backgroundColor: tokens.colors.green,
     color: tokens.colors.white,
