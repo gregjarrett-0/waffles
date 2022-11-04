@@ -1,4 +1,4 @@
-import * as BadgeExports from '@datacamp/waffles/badge';
+import * as SkillTagExports from '@datacamp/waffles/badge';
 
 import Layout from '../../components/content-layout';
 import BestPractices from '../../components/best-practices';
@@ -17,19 +17,16 @@ import Inverted from '../../examples/skill-tag/inverted';
 
 ## Usage guidance
 
-A `SkillTag` can be used in course/track description cards & pages to indicate the skill level of those courses / tracks. It should be used to provide more visual information about these things, through supporting content and not on its own.
+A `SkillTag` can be used in course or track description cards and pages to indicate their skill level. It should **never** be used by itself, but rather to provide more visual information and catch the attention of the user.
 
-There are three options for the `level`, indicating the required skill to represent. These are: `beginner`, `intermediate` and `advanced`. Terminology used to describe these difficulties should also follow the same options.
-
-When positioned near the top of a page, or used with the intent of catching the eye, then `variant='primary'` should be used. In contrast, `variant='secondary'` should be used in cases where the `SkillTag` is secondary to the surrounding content and not a focus.
+Use `variant='primary'` when it's positioned near the top of a page or has the intent of catching the eye. In contrast, `variant='secondary'` should be used in cases where the `SkillTag` provides additional supportive information to the surrounding content.
 
 ## Best practices
 
 <BestPractices>
   <BestPractices.Recommended>
 
-    - use as alongside other content
-    - use the correct variant for the use case
+    - use alongside other content
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
@@ -76,6 +73,6 @@ In addition to all custom props listed below, `SkillTag` accepts all props regul
 
 You can import following components or utilities from this module:
 
-<Imports module={BadgeExports} path="@datacamp/waffles/skill-tag" />
+<Imports module={SkillTagExports} path="@datacamp/waffles/skill-tag" />
 
 </Layout>
