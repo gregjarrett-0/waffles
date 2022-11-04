@@ -438,6 +438,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-2"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <div
@@ -462,6 +463,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-2"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <svg
@@ -499,6 +501,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-10"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span
@@ -515,6 +518,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       class="emotion-2"
       disabled=""
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span
@@ -537,6 +541,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-17"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span
@@ -552,6 +557,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-20"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span
@@ -1002,6 +1008,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-2"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <div
@@ -1026,6 +1033,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-2"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <svg
@@ -1063,6 +1071,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-10"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span
@@ -1079,6 +1088,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
       class="emotion-2"
       disabled=""
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span
@@ -1101,6 +1111,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-17"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span
@@ -1116,6 +1127,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
     <button
       class="emotion-20"
       role="menuitem"
+      tabindex="-1"
       type="button"
     >
       <span

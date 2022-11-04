@@ -34,6 +34,14 @@ describe('Menu', () => {
     cy.findByRole('menu').should('not.exist');
   });
 
+  it('when menu is open, pressing Tab closes it and returns focus to the trigger', () => {
+    cy.loadStory('menu-basic');
+    cy.get('main').find('button').focus();
+    cy.get('body').type('{downarrow}{downarrow}').tab();
+    cy.findByRole('menu').should('not.exist');
+    cy.get('main').find('button').should('have.focus');
+  });
+
   it('render proper focus state of a menu item', () => {
     cy.loadStory('menu-basic');
     cy.get('main').find('button').focus();
