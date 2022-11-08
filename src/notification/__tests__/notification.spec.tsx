@@ -52,6 +52,25 @@ describe('Notification', () => {
     expect(button).toBeInTheDocument();
   });
 
+  it('renders custom close button', async () => {
+    const { getByTestId } = render(
+      <Notification
+        title="Taylor Swift tour announced"
+        closable
+        closeButton={
+          <Notification.CloseButton data-testid="Custom close button" />
+        }
+      />,
+    );
+
+    let closeButton;
+    await waitFor(() => {
+      closeButton = getByTestId('Custom close button');
+    });
+
+    expect(closeButton).toBeInTheDocument();
+  });
+
   it('after close button is clicked, correct handler is triggered, and notification disappears', async () => {
     jest.useFakeTimers();
 

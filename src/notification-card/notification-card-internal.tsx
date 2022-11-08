@@ -11,7 +11,7 @@ type NotificationCardProps = {
   inverted?: boolean;
   closable?: boolean;
   closeButton?: JSX.Element;
-  onClose: () => void;
+  onClose?: () => void;
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -40,7 +40,7 @@ function NotificationCardInternal(
       onClick: closeButton?.props.onClick
         ? () => {
             closeButton?.props.onClick();
-            onClose();
+            onClose?.();
           }
         : onClose,
     });
