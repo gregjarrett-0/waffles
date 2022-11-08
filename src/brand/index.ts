@@ -15,6 +15,10 @@ export { default as LearnLogo } from './product/learn/learn-logo';
 export { default as LearnLogomark } from './product/learn/learn-logomark';
 export { default as LearnLogoTagline } from './product/learn/learn-logo-tagline';
 
+export { default as RecruitLogo } from './product/recruit/recruit-logo';
+export { default as RecruitLogomark } from './product/recruit/recruit-logomark';
+export { default as RecruitLogoTagline } from './product/recruit/recruit-logo-tagline';
+
 export { default as WorkspaceLogo } from './product/workspace/workspace-logo';
 export { default as WorkspaceLogomark } from './product/workspace/workspace-logomark';
 export { default as WorkspaceLogoTagline } from './product/workspace/workspace-logo-tagline';

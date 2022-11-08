@@ -1,7 +1,7 @@
 import { BrandProps } from '../../types';
 import { tokens } from '../../../tokens';
 
-function JobsLogoTagline({
+function RecruitLogoTagline({
   inverted = false,
   monochrome = false,
   ...restProps
@@ -36,4 +36,4 @@ function JobsLogoTagline({
   );
 }
 
-export default JobsLogoTagline;
+export default RecruitLogoTagline;

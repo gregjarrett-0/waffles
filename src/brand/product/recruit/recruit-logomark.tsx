@@ -1,7 +1,7 @@
 import { BrandProps } from '../../types';
 import { tokens } from '../../../tokens';
 
-function JobsLogomark({
+function RecruitLogomark({
   inverted = false,
   monochrome = false,
   ...restProps
@@ -29,4 +29,4 @@ function JobsLogomark({
   );
 }
 
-export default JobsLogomark;
+export default RecruitLogomark;

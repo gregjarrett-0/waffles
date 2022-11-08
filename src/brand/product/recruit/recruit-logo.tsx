@@ -1,7 +1,7 @@
 import { BrandProps } from '../../types';
 import { tokens } from '../../../tokens';
 
-function JobsLogo({
+function RecruitLogo({
   inverted = false,
   monochrome = false,
   ...restProps
@@ -17,7 +17,7 @@ function JobsLogo({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
-      viewBox="0 0 103 36"
+      viewBox="0 0 132 36"
       {...restProps}
     >
       <path
@@ -34,4 +34,4 @@ function JobsLogo({
   );
 }
 
-export default JobsLogo;
+export default RecruitLogo;
