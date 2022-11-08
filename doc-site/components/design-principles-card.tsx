@@ -8,8 +8,8 @@ const cardStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${tokens.spacing.xlarge} ${tokens.spacing.large}
-    ${tokens.spacing.large};
+  padding: ${tokens.spacing.large};
+  padding-top: ${tokens.spacing.xlarge};
 `;
 
 const headingStyle = css`
