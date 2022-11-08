@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import LandingPageCard from 'components/landing-page-card';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Paragraph } from '@datacamp/waffles/paragraph';
@@ -8,6 +7,8 @@ import { mediaQuery, hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { ContentContainer } from '@datacamp/waffles/content-container';
+
+import LandingPageCard from '../components/landing-page-card';
 
 const heroStyle = css`
   height: 480px;

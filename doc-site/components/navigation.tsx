@@ -43,6 +43,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
           <SideNav.Category label="Overview" noDivider>
             <Item href="/">Welcome</Item>
             <Item href="/overview/setup">Setup</Item>
+            <Item href="/overview/design-principles">Design Principles</Item>
             <Item href="/overview/roadmap">Roadmap</Item>
           </SideNav.Category>
           <SideNav.Category label="Foundation">
