@@ -90,6 +90,7 @@ export { default as DataCampBrand } from './generated/data-camp-brand';
 export { default as DataCampCertificationBrand } from './generated/data-camp-certification-brand';
 export { default as DataCampJobsBrand } from './generated/data-camp-jobs-brand';
 export { default as DataCampLearnBrand } from './generated/data-camp-learn-brand';
+export { default as DataCampRecruitBrand } from './generated/data-camp-recruit-brand';
 export { default as DataCampWorkspaceBrand } from './generated/data-camp-workspace-brand';
 export { default as Database } from './generated/database';
 export { default as Desktop } from './generated/desktop';
