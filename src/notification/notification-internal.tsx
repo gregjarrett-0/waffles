@@ -4,7 +4,7 @@ import { useAnimateTransition } from '../hooks';
 
 import Card from './card';
 
-type NotificationProps = {
+type NotificationBaseProps = {
   /* The main content of the Notification. */
   title: string;
   /* Supportive content to display below the title. */
@@ -18,14 +18,26 @@ type NotificationProps = {
   /* Sets the style of the Notification suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-  /* Shows a close button, and the Notification can be dismissed by a user. */
-  /* @default false */
-  closable?: boolean;
   /* Handler called when the Notification will close. */
   onClose?: () => void;
   /* Custom Notification action. Use `Notification.ActionButton` subcomponent. Must be a single element. */
   action?: JSX.Element;
 } & React.HTMLAttributes<HTMLDivElement>;
+
+type NotificationClosable = {
+  /* Shows a close button, and the Notification can be dismissed by a user. */
+  /* @default false */
+  closable: boolean;
+  /* Custom close button override. In most cases, still use `Notification.CloseButton`. */
+  closeButton?: JSX.Element;
+} & NotificationBaseProps;
+
+type NotificationPersistent = {
+  closable?: never;
+  closeButton?: never;
+} & NotificationBaseProps;
+
+type NotificationProps = NotificationClosable | NotificationPersistent;
 
 function NotificationInternal({
   title,
@@ -36,6 +48,7 @@ function NotificationInternal({
   closable = false,
   onClose,
   action,
+  closeButton,
   ...restProps
 }: NotificationProps) {
   const [isOpen, setIsOpen] = useState(true);
@@ -51,6 +64,7 @@ function NotificationInternal({
       {...{ title, description, variant, mode, inverted, closable, action }}
       {...restProps}
       isVisible={isOpen}
+      closeButton={closeButton}
       onClose={handleClose}
     />
   ) : null;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 
 import { notificationStyle, decorStyle, contentStyle } from './styles';
 import Icon from './icon';
@@ -10,7 +10,8 @@ type NotificationCardProps = {
   isContentCentered?: boolean;
   inverted?: boolean;
   closable?: boolean;
-  onClose?: () => void;
+  closeButton?: JSX.Element;
+  onClose: () => void;
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -21,6 +22,7 @@ function NotificationCardInternal(
     isContentCentered = false,
     inverted = false,
     closable = false,
+    closeButton,
     onClose,
     children,
     ...restProps
@@ -28,6 +30,21 @@ function NotificationCardInternal(
   ref?: React.Ref<HTMLDivElement>,
 ) {
   const isIconCentered = closable && isContentCentered;
+
+  function renderCloseButtonOverride(button: JSX.Element) {
+    if (!closeButton) return;
+
+    // Maintain the original onClose behavior, if a custom one is provided
+    return cloneElement(button, {
+      inverted,
+      onClick: closeButton?.props.onClick
+        ? () => {
+            closeButton?.props.onClick();
+            onClose();
+          }
+        : onClose,
+    });
+  }
 
   return (
     <section
@@ -39,7 +56,12 @@ function NotificationCardInternal(
       {!hideLeftDecor && <div css={decorStyle({ variant, inverted })} />}
       <Icon {...{ variant, inverted, isIconCentered }} />
       <div css={contentStyle({ closable, isContentCentered })}>{children}</div>
-      {closable && <CloseButton inverted={inverted} onClick={onClose} />}
+      {closable &&
+        (closeButton ? (
+          renderCloseButtonOverride(closeButton)
+        ) : (
+          <CloseButton inverted={inverted} onClick={onClose} />
+        ))}
     </section>
   );
 }

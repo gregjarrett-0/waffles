@@ -24,7 +24,8 @@ type CardProps = {
   variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;
   inverted: boolean;
   closable: boolean;
-  onClose?: () => void;
+  onClose: () => void;
+  closeButton?: JSX.Element;
   action?: JSX.Element;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -37,6 +38,7 @@ function Card({
   inverted,
   closable,
   onClose,
+  closeButton,
   action,
   ...restProps
 }: CardProps) {
@@ -83,6 +85,7 @@ function Card({
         isContentCentered: isBannerMode && layout === 'horizontal',
         inverted,
         closable,
+        closeButton,
         onClose,
       }}
       {...restProps}
