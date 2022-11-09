@@ -214,6 +214,7 @@ Object {
   "UserInverted": [Function],
   "Verified": [Function],
   "VerifiedInverted": [Function],
+  "VersionHistory": [Function],
   "Video": [Function],
   "VideoCamera": [Function],
   "VideoCameraInverted": [Function],
