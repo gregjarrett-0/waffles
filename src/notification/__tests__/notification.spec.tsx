@@ -52,7 +52,7 @@ describe('Notification', () => {
     expect(button).toBeInTheDocument();
   });
 
-  it('renders custom close button with onClose and onClick handlers working', async () => {
+  it('when custom close button is provided, appropriate onClose and onClick handlers are fired', async () => {
     jest.useFakeTimers();
 
     const handleClick = jest.fn();
@@ -64,7 +64,7 @@ describe('Notification', () => {
         onClose={handleClose}
         closeButtonOverride={
           <Notification.CloseButton
-            data-testid="Custom close button"
+            data-testid="custom-close-button"
             onClick={handleClick}
           />
         }
