@@ -30,7 +30,7 @@
     "lint:commits": "commitlint --to HEAD --verbose",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "track-adoption": "TOKEN=github_token npx ts-node ./tools/track-adoption.ts",
+    "track-adoption": "TOKEN=auth_token node ./tools/track-adoption.js",
     "release": "release-it --VV --ci",
     "prepare": "is-ci || husky install"
   },
