@@ -81,7 +81,7 @@ function BrandGrid({ brandType }: BrandGridProps) {
           as="a"
           size="small"
           variant="plain"
-          href={`../../downloads/waffles-brand-bundle.zip`}
+          href={`../../downloads/waffles-${brandType.toLowerCase()}-brand-bundle.zip`}
           download
           iconLeft={<Download />}
         >

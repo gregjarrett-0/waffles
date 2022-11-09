@@ -88,19 +88,28 @@ function generateAssetBundle(directory) {
 }
 
 function generateBrandBundle() {
-  const archive = archiver('zip');
-  // Initialize output file for asset bundle and archiver
-  const assetOutputBundle = fs.createWriteStream(
-    path.join(assetBundleExportPath, 'waffles-brand-bundle.zip'),
-  );
+  const brandDirs = glob.sync('*', { cwd: 'src/brand/raw/' });
 
-  archive.pipe(assetOutputBundle);
+  // Iterate over each subdirectory for the brand types
+  brandDirs.forEach((directory) => {
+    const archive = archiver('zip');
 
-  // Bundle up the brand svgs into a zip
-  archive.directory(path.join(__dirname, '../../src/brand/raw'), false);
+    // Initialize output file for the brand bundle and archiver
+    const brandOutputBundle = fs.createWriteStream(
+      path.join(assetBundleExportPath, `waffles-${directory}-brand-bundle.zip`),
+    );
 
-  // Finalize the archiving
-  archive.finalize();
+    archive.pipe(brandOutputBundle);
+
+    // Bundle up the brand svgs into a zip
+    archive.directory(
+      path.join(__dirname, '../../src/brand/raw', directory),
+      false,
+    );
+
+    // Finalize the archiving
+    archive.finalize();
+  });
 }
 
 generateAssets();
