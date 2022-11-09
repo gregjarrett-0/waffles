@@ -61,6 +61,7 @@ Object {
   "DataCampCertificationBrand": [Function],
   "DataCampJobsBrand": [Function],
   "DataCampLearnBrand": [Function],
+  "DataCampRecruitBrand": [Function],
   "DataCampWorkspaceBrand": [Function],
   "Database": [Function],
   "Desktop": [Function],
