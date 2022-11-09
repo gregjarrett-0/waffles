@@ -73,7 +73,7 @@ describe('Notification', () => {
 
     let closeButton;
     await waitFor(() => {
-      closeButton = getByTestId('Custom close button');
+      closeButton = getByTestId('custom-close-button');
     });
 
     expect(closeButton).toBeInTheDocument();
