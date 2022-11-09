@@ -42,7 +42,7 @@ function NotificationCardInternal(
   }
 
   function renderCloseButtonOverride() {
-    closeButtonOverride
+    return closeButtonOverride
       ? cloneElement(closeButtonOverride, {
           inverted,
           onClick: handleClick(),

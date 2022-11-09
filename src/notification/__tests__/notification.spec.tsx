@@ -52,13 +52,21 @@ describe('Notification', () => {
     expect(button).toBeInTheDocument();
   });
 
-  it('renders custom close button', async () => {
-    const { getByTestId } = render(
+  it('renders custom close button with onClose and onClick handlers working', async () => {
+    jest.useFakeTimers();
+
+    const handleClick = jest.fn();
+    const handleClose = jest.fn();
+    const { getByTestId, queryByText } = render(
       <Notification
         title="Taylor Swift tour announced"
         closable
-        closeButton={
-          <Notification.CloseButton data-testid="Custom close button" />
+        onClose={handleClose}
+        closeButtonOverride={
+          <Notification.CloseButton
+            data-testid="Custom close button"
+            onClick={handleClick}
+          />
         }
       />,
     );
@@ -69,6 +77,22 @@ describe('Notification', () => {
     });
 
     expect(closeButton).toBeInTheDocument();
+    closeButton && fireEvent.click(closeButton);
+
+    // Component unmount is delayed because of close animation
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
+
+    const title = queryByText('Taylor Swift tour announced');
+
+    // Check default `onClose` behavior still works
+    expect(handleClose).toHaveBeenCalledTimes(1);
+    expect(title).not.toBeInTheDocument();
+    // Check custom close button `onClick` has also been called
+    expect(handleClick).toHaveBeenCalledTimes(1);
+
+    jest.useRealTimers();
   });
 
   it('after close button is clicked, correct handler is triggered, and notification disappears', async () => {
