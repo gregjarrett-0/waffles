@@ -213,6 +213,7 @@ export { default as Upload } from './generated/upload';
 export { default as Upvote } from './generated/upvote';
 export { default as User } from './generated/user';
 export { default as Verified } from './generated/verified';
+export { default as VersionHistory } from './generated/version-history';
 export { default as VideoCamera } from './generated/video-camera';
 export { default as Video } from './generated/video';
 export { default as Visible } from './generated/visible';
