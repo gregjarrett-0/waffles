@@ -31,23 +31,24 @@ function NotificationCardInternal(
 ) {
   const isIconCentered = closable && isContentCentered;
 
-  // Maintain the original onClose behavior, if a custom one is provided
-  function handleClick() {
-    return closeButtonOverride?.props.onClick
-      ? () => {
-          closeButtonOverride?.props.onClick();
-          onClose?.();
-        }
-      : onClose;
-  }
+  function renderCloseButton() {
+    function handleClick() {
+      closeButtonOverride?.props.onClick?.();
+      onClose?.();
+    }
 
-  function renderCloseButtonOverride() {
-    return closeButtonOverride
-      ? cloneElement(closeButtonOverride, {
+    if (closable) {
+      return closeButtonOverride ? (
+        cloneElement(closeButtonOverride, {
           inverted,
-          onClick: handleClick(),
+          onClick: handleClick,
         })
-      : null;
+      ) : (
+        <CloseButton inverted={inverted} onClick={onClose} />
+      );
+    }
+
+    return null;
   }
 
   return (
@@ -60,12 +61,7 @@ function NotificationCardInternal(
       {!hideLeftDecor && <div css={decorStyle({ variant, inverted })} />}
       <Icon {...{ variant, inverted, isIconCentered }} />
       <div css={contentStyle({ closable, isContentCentered })}>{children}</div>
-      {closable &&
-        (closeButtonOverride ? (
-          renderCloseButtonOverride()
-        ) : (
-          <CloseButton inverted={inverted} onClick={onClose} />
-        ))}
+      {renderCloseButton()}
     </section>
   );
 }

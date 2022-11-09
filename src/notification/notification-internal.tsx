@@ -28,7 +28,7 @@ type NotificationClosable = {
   /* Shows a close button, and the Notification can be dismissed by a user. */
   /* @default false */
   closable: boolean;
-  /* Custom close button override. In most cases, still use `Notification.CloseButton`. */
+  /* Custom close button component. In general use Notification.CloseButton subcomponent. */
   closeButtonOverride?: JSX.Element;
 } & NotificationBaseProps;
 
