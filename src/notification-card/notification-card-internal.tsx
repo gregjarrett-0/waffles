@@ -10,7 +10,7 @@ type NotificationCardProps = {
   isContentCentered?: boolean;
   inverted?: boolean;
   closable?: boolean;
-  closeButton?: JSX.Element;
+  closeButtonOverride?: JSX.Element;
   onClose?: () => void;
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
@@ -22,7 +22,7 @@ function NotificationCardInternal(
     isContentCentered = false,
     inverted = false,
     closable = false,
-    closeButton,
+    closeButtonOverride,
     onClose,
     children,
     ...restProps
@@ -31,19 +31,23 @@ function NotificationCardInternal(
 ) {
   const isIconCentered = closable && isContentCentered;
 
-  function renderCloseButtonOverride(button: JSX.Element) {
-    if (!closeButton) return;
+  // Maintain the original onClose behavior, if a custom one is provided
+  function handleClick() {
+    return closeButtonOverride?.props.onClick
+      ? () => {
+          closeButtonOverride?.props.onClick();
+          onClose?.();
+        }
+      : onClose;
+  }
 
-    // Maintain the original onClose behavior, if a custom one is provided
-    return cloneElement(button, {
-      inverted,
-      onClick: closeButton?.props.onClick
-        ? () => {
-            closeButton?.props.onClick();
-            onClose?.();
-          }
-        : onClose,
-    });
+  function renderCloseButtonOverride() {
+    closeButtonOverride
+      ? cloneElement(closeButtonOverride, {
+          inverted,
+          onClick: handleClick(),
+        })
+      : null;
   }
 
   return (
@@ -57,8 +61,8 @@ function NotificationCardInternal(
       <Icon {...{ variant, inverted, isIconCentered }} />
       <div css={contentStyle({ closable, isContentCentered })}>{children}</div>
       {closable &&
-        (closeButton ? (
-          renderCloseButtonOverride(closeButton)
+        (closeButtonOverride ? (
+          renderCloseButtonOverride()
         ) : (
           <CloseButton inverted={inverted} onClick={onClose} />
         ))}

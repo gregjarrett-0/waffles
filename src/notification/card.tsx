@@ -25,7 +25,7 @@ type CardProps = {
   inverted: boolean;
   closable: boolean;
   onClose: () => void;
-  closeButton?: JSX.Element;
+  closeButtonOverride?: JSX.Element;
   action?: JSX.Element;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -38,7 +38,7 @@ function Card({
   inverted,
   closable,
   onClose,
-  closeButton,
+  closeButtonOverride,
   action,
   ...restProps
 }: CardProps) {
@@ -85,7 +85,7 @@ function Card({
         isContentCentered: isBannerMode && layout === 'horizontal',
         inverted,
         closable,
-        closeButton,
+        closeButtonOverride,
         onClose,
       }}
       {...restProps}

@@ -29,12 +29,12 @@ type NotificationClosable = {
   /* @default false */
   closable: boolean;
   /* Custom close button override. In most cases, still use `Notification.CloseButton`. */
-  closeButton?: JSX.Element;
+  closeButtonOverride?: JSX.Element;
 } & NotificationBaseProps;
 
 type NotificationPersistent = {
   closable?: never;
-  closeButton?: never;
+  closeButtonOverride?: never;
 } & NotificationBaseProps;
 
 type NotificationProps = NotificationClosable | NotificationPersistent;
@@ -48,7 +48,7 @@ function NotificationInternal({
   closable = false,
   onClose,
   action,
-  closeButton,
+  closeButtonOverride,
   ...restProps
 }: NotificationProps) {
   const [isOpen, setIsOpen] = useState(true);
@@ -64,7 +64,7 @@ function NotificationInternal({
       {...{ title, description, variant, mode, inverted, closable, action }}
       {...restProps}
       isVisible={isOpen}
-      closeButton={closeButton}
+      closeButtonOverride={closeButtonOverride}
       onClose={handleClose}
     />
   ) : null;

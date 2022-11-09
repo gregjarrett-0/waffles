@@ -7,14 +7,9 @@ import { closeButtonStyle } from './styles';
 
 type CloseButtonProps = {
   inverted?: boolean;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-};
+} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
 
-function CloseButton({
-  inverted = false,
-  onClick,
-  ...restProps
-}: CloseButtonProps) {
+function CloseButton({ inverted = false, ...restProps }: CloseButtonProps) {
   return (
     <Button
       variant="plain"
@@ -22,7 +17,6 @@ function CloseButton({
       icon={<Cross size="xsmall" />}
       aria-label="Close notification"
       inverted={inverted}
-      onClick={onClick}
       css={closeButtonStyle({ inverted })}
       {...restProps}
     />
