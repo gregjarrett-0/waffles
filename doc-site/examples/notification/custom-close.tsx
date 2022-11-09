@@ -5,7 +5,9 @@ function Example() {
     <Notification
       title="This course has been updated recently"
       closable
-      closeButton={<Notification.CloseButton data-trackid="custom track id" />}
+      closeButtonOverride={
+        <Notification.CloseButton data-trackid="custom track id" />
+      }
     />
   );
 }
