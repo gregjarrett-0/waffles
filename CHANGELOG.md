@@ -1,5 +1,53 @@
 
 
+## [1.16.0](https://github.com/datacamp/waffles/compare/v1.15.0...v1.16.0) (2022-11-10)
+
+
+### Bug Fixes
+
+* **skill-tag:** fix unique key issue with indicators ([86dff75](https://github.com/datacamp/waffles/commit/86dff75247acfeab3db9a3f92ea1cebb466f068a))
+
+
+### Core Changes
+
+* **asset:** add new alpa icon assets ([ac64ad1](https://github.com/datacamp/waffles/commit/ac64ad10e10564e90dd568dd07e8ddcb8d6d82b4))
+* **brand:** add new recruit product logos ([38b5cb0](https://github.com/datacamp/waffles/commit/38b5cb02ff58e39c16205fce0884a8852ea32d68))
+* **card:** add inverted variant and HeadstoneItem subcomponent ([9fdcc54](https://github.com/datacamp/waffles/commit/9fdcc5420474bd51fa94e14dbe6ecd41b870bc29))
+* **icon:** add datacamp recruit icon ([dc54cff](https://github.com/datacamp/waffles/commit/dc54cff60f8322ff6d4c86c0e64673cb847656e9))
+* **icon:** add VersionHistory icon ([e5bb07b](https://github.com/datacamp/waffles/commit/e5bb07bc607c4955cc520cf0899f7fc0e1034aa0))
+* **menu:** update tab-out behavior ([00882ac](https://github.com/datacamp/waffles/commit/00882acaca6bda99c25716353ccc8a7ca20e3e86))
+* **notification:** add optional close button override ([325cca5](https://github.com/datacamp/waffles/commit/325cca583eb08d67d5f3901cf9540567d44ef069))
+* **radio:** allow optional children with required aria-label ([7f83686](https://github.com/datacamp/waffles/commit/7f836864aa7fa57ed5c0fbd75dea1760bc7fd251))
+* **skill-tag:** add new `SkillTag` component ([e442ecb](https://github.com/datacamp/waffles/commit/e442ecba4e42a31434b1c9968812b1b106f4c824))
+* **switch:** allow optional children with required aria-label ([7e69aea](https://github.com/datacamp/waffles/commit/7e69aeac52be66937a3adc418dc4003c035f04f2))
+* **toast:** support individual `disableAutoHide` override ([ba6466a](https://github.com/datacamp/waffles/commit/ba6466ab599ff17cb8cdf1c05f23d74b299b724e))
+
+
+### Documentation Changes
+
+* add Design Principles page ([3e1ddc0](https://github.com/datacamp/waffles/commit/3e1ddc06e0497aa397af172399ca4481afaa262e))
+* add DesignPrinciples component ([d2d17a1](https://github.com/datacamp/waffles/commit/d2d17a166d98ed96aa88157ee5fc06f109143cfd))
+* **asset:** add alpa icons grid ([fe22ee2](https://github.com/datacamp/waffles/commit/fe22ee2514272bd4f408b2e7d706803bc337ffc4))
+* **brand:** add recruit product logos to docs ([387b629](https://github.com/datacamp/waffles/commit/387b629ef8ba71fc1795a1ab3afa93a8860c6bbd))
+* **brand:** separate brand download bundle into individual based on type ([0b013c3](https://github.com/datacamp/waffles/commit/0b013c3cbb658e7f8ba9cfeb5bc0bde91575aef6))
+* **card:** add inverted example ([faced4d](https://github.com/datacamp/waffles/commit/faced4de9dee9ad6b7aff5771f2ec2478c32ce13))
+* **checkbox:** add no label example ([9b72daa](https://github.com/datacamp/waffles/commit/9b72daa2bc90fa40bdf143ccd3fd4ca99f3e5d0b))
+* **menu:** update guidelines ([99436c6](https://github.com/datacamp/waffles/commit/99436c6c8e6e1c34d73c6640b85337dd5d96220a))
+* move Design Principles to Foundation section ([7745c02](https://github.com/datacamp/waffles/commit/7745c02c23c347591af42c94d3b53f00413f18de))
+* **notification:** add custom close example ([e9ca967](https://github.com/datacamp/waffles/commit/e9ca967e947b6f7f5e933e54cb9543594e3b3816))
+* **notification:** update custom close button example ([246b196](https://github.com/datacamp/waffles/commit/246b196e44dfcb767f56b3a71376a595f8755dce))
+* **notification:** update docs for close button ([ab5c336](https://github.com/datacamp/waffles/commit/ab5c33624ba7ddbe692f40dca6da9e7aedfa7551))
+* **radio:** add no label example ([9d0b392](https://github.com/datacamp/waffles/commit/9d0b392e8cace42e85c045b7897da7127003902a))
+* remove wrappers from radio and switch no label examples ([f3d576e](https://github.com/datacamp/waffles/commit/f3d576efb24f4cd475b048cfd17dd4a6243a004a))
+* reorder checkbox, radio and switch examples ([b1e6806](https://github.com/datacamp/waffles/commit/b1e6806a813e2fb556d748d3c0e9406a31973a8d))
+* **skill-tag:** add examples to docs ([e5f123a](https://github.com/datacamp/waffles/commit/e5f123a26d336eb68d6c6402cf0a32b5cc443893))
+* **skill-tag:** add navigation entry and component status ([510c133](https://github.com/datacamp/waffles/commit/510c133b7d735a27cc1e91e1b6479dabd61297bd))
+* **skill-tag:** add usage guidance and best practices ([a4e5415](https://github.com/datacamp/waffles/commit/a4e54156a11cf045eb9aa7f8594d8de8d0a94e76))
+* **skill-tag:** update usage guidance and best practices ([7e24455](https://github.com/datacamp/waffles/commit/7e24455fbe9559ad3265b3f9d4d3a17a4e68c56d))
+* **switch:** add no label example ([46e241b](https://github.com/datacamp/waffles/commit/46e241ba1d0f696b72bbad9333a48972e324b11a))
+* **toast:** add individually persistent override example ([c0aa505](https://github.com/datacamp/waffles/commit/c0aa505a34107eeb1a0aaf35423315ad1c516809))
+* update StudioFeixenSans font ([ed5bdfe](https://github.com/datacamp/waffles/commit/ed5bdfe156b05f6ccfdf7777fb3c57cd132b45db))
+
 ## [1.15.0](https://github.com/datacamp/waffles/compare/v1.14.0...v1.15.0) (2022-10-26)
 
 
