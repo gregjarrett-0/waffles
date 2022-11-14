@@ -3,9 +3,10 @@ import React from 'react';
 
 import { Portal } from '../portal';
 import { Overlay } from '../overlay';
-import { useAnimateTransition } from '../hooks';
+import { useAnimateTransition, useId } from '../hooks';
 
 import Panel from './panel';
+import { DialogProvider } from './dialog-context';
 
 type DialogProps = {
   /* Determines if the Dialog is open. */
@@ -27,30 +28,37 @@ function DialogInternal({
   ...restProps
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
+  const id = useId();
+  const headerId = `dialog-header-${id}`;
+  const bodyId = `dialog-body-${id}`;
 
   return (
-    <Portal>
-      {isAnimating && (
-        <>
-          <Overlay isVisible={isOpen} data-testid="dialog-overlay" />
-          <FocusOn
-            onClickOutside={onClose}
-            onEscapeKey={onClose}
-            autoFocus
-            returnFocus
-          >
-            <Panel
-              role={role}
-              isVisible={isOpen}
-              onClose={onClose}
-              {...restProps}
+    <DialogProvider {...{ headerId, bodyId }}>
+      <Portal>
+        {isAnimating && (
+          <>
+            <Overlay isVisible={isOpen} data-testid="dialog-overlay" />
+            <FocusOn
+              onClickOutside={onClose}
+              onEscapeKey={onClose}
+              autoFocus
+              returnFocus
             >
-              {children}
-            </Panel>
-          </FocusOn>
-        </>
-      )}
-    </Portal>
+              <Panel
+                role={role}
+                headerId={headerId}
+                bodyId={bodyId}
+                isVisible={isOpen}
+                onClose={onClose}
+                {...restProps}
+              >
+                {children}
+              </Panel>
+            </FocusOn>
+          </>
+        )}
+      </Portal>
+    </DialogProvider>
   );
 }
 
