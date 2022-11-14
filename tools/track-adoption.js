@@ -39,7 +39,7 @@ async function getRepos(page = 0) {
 
   // Fetch next data page recursively until all pages are fetched
   if (data.items.length > 0) {
-    await wait(10000);
+    await wait(20000);
     return items.concat(await getRepos(page + 1));
   }
 
@@ -92,10 +92,16 @@ function cleanRawReposData(repos) {
 // [
 //   {
 //     name: "repo-name",
-//     versions: {
-//       "@datacamp/waffles": ["1.15.0", "1.13.0"],
-//       "@datacamp/waffles-button": ["7.1.0"]
-//     }
+//     dependencies: [
+//       {
+//         name: "@datacamp/waffles",
+//         versions: ["1.15.0", "1.13.0"]
+//       },
+//       {
+//         name: "@datacamp/waffles-button",
+//         versions: ["7.1.0"]
+//       }
+//     ]
 //   },
 //   ...
 // ]
@@ -118,7 +124,9 @@ async function getWafflesDependencies(repos) {
         }),
       );
 
-      // Array of dependencies object per package.json
+      // Dependencies per package.json
+      // Converted from object to entries
+      // Return empty array if dependencies doesn't exist, e.g. project has only devDependencies
       const allDependencies = packageJsonContent.flatMap((content) => {
         return content.dependencies ? Object.entries(content.dependencies) : [];
       });
@@ -129,39 +137,49 @@ async function getWafflesDependencies(repos) {
         return name.startsWith('@datacamp/waffles');
       });
 
-      // Remove duplicates of the same packages and put multiple versions in the array
-      const noDuplicates = [];
+      // Transform dependencies from standard npm object to an array of object with name and list of versions, removing duplicates:
+      // [
+      //   {
+      //     name: "@datacamp/waffles-button",
+      //     versions: ["7.0.1", "8.2.0"]
+      //   },
+      //   ...
+      // ]
+      const transformedDependencies = [];
 
       wafflesDependencies.forEach((entry) => {
         const [name, version] = entry;
         const normalizedVersion = version.split(/(\d.*)/, 2)[1]; // Strip any special npm specific prefixes
 
-        const existingEntryIndex = noDuplicates.findIndex((entry) => {
-          const [existingName] = entry;
-          return existingName === name;
+        const existingDependencyIndex = noDuplicates.findIndex((dependency) => {
+          return dependency.name === name;
         });
 
-        if (existingEntryIndex >= 0) {
-          const [existingName, existingVersions] =
-            noDuplicates[existingEntryIndex];
+        if (existingDependencyIndex >= 0) {
+          const existingVersions =
+            noDuplicates[existingDependencyIndex].versions;
+
           // Remove same version duplicates
-          noDuplicates[existingEntryIndex] = [
-            existingName,
-            [...new Set(existingVersions).add(normalizedVersion)],
-          ];
+          transformedDependencies[existingDependencyIndex] = {
+            name,
+            versions: [...new Set(existingVersions).add(normalizedVersion)],
+          };
         } else {
           // Convert version to an array so multiple ones could be added
-          noDuplicates.push([name, [normalizedVersion]]);
+          transformedDependencies.push({
+            name,
+            versions: [normalizedVersion],
+          });
         }
       });
 
-      return { name: repo.name, versions: Object.fromEntries(noDuplicates) };
+      return { name: repo.name, dependencies: transformedDependencies };
     }),
   );
 
   // Final cleanup of repos not containing any Waffles dependencies
   return allData.filter((repo) => {
-    return Object.keys(repo.versions).length > 0;
+    return repo.dependencies.length > 0;
   });
 }
 
@@ -173,7 +191,7 @@ async function run() {
   const repos = await getRepos();
   const cleanRepos = cleanRawReposData(repos);
 
-  await wait(10000);
+  await wait(20000);
 
   // Examine each package.json if it contains Waffles package, and list it with all associated versions
   console.log(
