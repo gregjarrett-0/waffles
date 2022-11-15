@@ -4,8 +4,11 @@ const { Octokit } = require('@octokit/rest');
 
 const path = require('path');
 const fs = require('fs');
+const { getPascalCase } = require('./helpers/formatting');
 
 const octokit = new Octokit({ auth: process.env.TOKEN });
+
+// Utils
 
 async function wait(ms) {
   return new Promise((resolve) => {
@@ -13,6 +16,83 @@ async function wait(ms) {
   });
 }
 
+function getComponentsCount(componentNames) {
+  return componentNames.reduce((componentsCounts, componentName) => {
+    const existingComponentIndex = componentsCounts.findIndex((component) => {
+      return component.name === componentName;
+    });
+
+    // Increase count if component already exist
+    if (existingComponentIndex >= 0) {
+      return [
+        ...componentsCounts.slice(0, existingComponentIndex),
+        {
+          name: componentName,
+          count: componentsCounts[existingComponentIndex].count + 1,
+        },
+        ...componentsCounts.slice(
+          existingComponentIndex + 1,
+          componentsCounts.length,
+        ),
+      ];
+    }
+
+    return componentsCounts.concat({
+      name: componentName,
+      count: 1,
+    });
+  }, []);
+}
+
+// Some monorepo project have it's own waffles directories and final import declarations may look similar to New Waffles ones
+const newWafflesComponentsWhitelist = [
+  'AlertDialog',
+  'Asset',
+  'Avatar',
+  'Badge',
+  'Brand',
+  'Button',
+  'Card',
+  'Chapeau',
+  'Checkbox',
+  'Code',
+  'CodeBlock',
+  'ContentContainer',
+  'Dialog',
+  'Display',
+  'Drawer',
+  'EmptyState',
+  'ErrorBoundary',
+  'FormField',
+  'Heading',
+  'Icon',
+  'Input',
+  'Link',
+  'Loader',
+  'Menu',
+  'Notification',
+  'Paragraph',
+  'Pill',
+  'Popover',
+  'Portal',
+  'Progress',
+  'Radio',
+  'Resizable',
+  'ScreenReaderOnly',
+  'Select',
+  'SideNavigation',
+  'SkillTag',
+  'Slider',
+  'Switch',
+  'Table',
+  'Tabs',
+  'Text',
+  'TextArea',
+  'Toast',
+  'Tooltip',
+];
+
+// 1a.
 // Search for repos which contain package.json
 // Return raw data, with lots of redundant information
 // Final data structure (only relevant bits):
@@ -39,14 +119,15 @@ async function getRepos(page = 0) {
 
   // Fetch next data page recursively until all pages are fetched
   if (data.items.length > 0) {
-    await wait(20000);
+    await wait(30000);
     return items.concat(await getRepos(page + 1));
   }
 
   return items;
 }
 
-// Repos names with package.json paths (multiple in case of monorepos)
+// 1b.
+// Leave only repos with package.json, and list all package.json paths (multiple in case of monorepos)
 // Final data structure:
 // [
 //   {
@@ -87,6 +168,7 @@ function cleanRawReposData(repos) {
   }, []);
 }
 
+// 2.
 // Get list of Waffles packages with version (or multiple versions in case of monorepos) used by each repo in datacamp-engineering org
 // Final data structure:
 // [
@@ -151,13 +233,15 @@ async function getWafflesDependencies(repos) {
         const [name, version] = entry;
         const normalizedVersion = version.split(/(\d.*)/, 2)[1]; // Strip any special npm specific prefixes
 
-        const existingDependencyIndex = noDuplicates.findIndex((dependency) => {
-          return dependency.name === name;
-        });
+        const existingDependencyIndex = transformedDependencies.findIndex(
+          (dependency) => {
+            return dependency.name === name;
+          },
+        );
 
         if (existingDependencyIndex >= 0) {
           const existingVersions =
-            noDuplicates[existingDependencyIndex].versions;
+            transformedDependencies[existingDependencyIndex].versions;
 
           // Remove same version duplicates
           transformedDependencies[existingDependencyIndex] = {
@@ -183,29 +267,165 @@ async function getWafflesDependencies(repos) {
   });
 }
 
+// 3.
+// Enhance each repo dependencies data with info about components
+// Final data structure:
+// [
+//   {
+//     name: "repo-name",
+//     dependencies: [
+//       {
+//         name: "@datacamp/waffles",
+//         versions: ["1.15.0", "1.13.0"]
+//       },
+//       ...
+//     ],
+//     components: {
+//       new: [
+//         {
+//           name: 'Button',
+//           count: 15
+//         },
+//         {
+//           name: 'Resizable',
+//           count: 1
+//         },
+//         ...
+//       ],
+//       old: [
+//         {
+//           name: 'Button',
+//           count: 5
+//         },
+//         {
+//           name: 'FormElements',
+//           count: 3
+//         },
+//         ...
+//       ]
+//     }
+//   },
+//   ...
+// ]
+async function getWafflesComponentsStats(reposWithDependencies) {
+  // Fetch data for each repo sequentially so we can bypass rate limiting
+  async function searchRepos() {
+    let componentsData = [];
+
+    for (const repo of reposWithDependencies) {
+      console.log(
+        chalk.grey('Fetching components data for ') +
+          chalk.bold.gray(repo.name) +
+          chalk.grey(' repo...'),
+      );
+
+      // Search for imports
+      const { data } = await octokit.request('GET /search/code', {
+        headers: {
+          accept: 'application/vnd.github.text-match+json', // Get matching results for query
+        },
+        q: `datacamp/waffles repo:datacamp-engineering/${repo.name} in:file`,
+        page: 0, // Just getting first 100 results
+        per_page: 100,
+      });
+
+      await wait(30000);
+
+      // Combine all fragments of multiple text matches into one string to run through regex
+      const combinedTextFragments = data.items
+        .flatMap((item) => {
+          return item.text_matches;
+        })
+        .reduce((fragments, textMatch) => {
+          return fragments.concat(' ', textMatch.fragment);
+        }, '')
+        .replace(/(\/waffles){2,}/gm, '/waffles'); // Merge multiple consecutive waffles occurrences
+
+      // Extract count of New Waffles components
+      const newWafflesImports = combinedTextFragments.match(
+        /@datacamp\/waffles\/[-a-z]+/gm,
+      );
+      let newWafflesComponents = [];
+
+      if (newWafflesImports) {
+        const componentNames = newWafflesImports
+          .map((importDeclaration) => {
+            return getPascalCase(
+              importDeclaration.split('@datacamp/waffles/')[1],
+            );
+          })
+          .filter((name) => {
+            return newWafflesComponentsWhitelist.includes(name);
+          });
+
+        newWafflesComponents = getComponentsCount(componentNames);
+      }
+
+      // Extract count of Old Waffles components
+      const oldWafflesImports = combinedTextFragments.match(
+        /@datacamp\/waffles-[-a-z]+/gm,
+      );
+      let oldWafflesComponents = [];
+
+      if (oldWafflesImports) {
+        const componentNames = oldWafflesImports.map((importDeclaration) => {
+          return getPascalCase(importDeclaration.split('@datacamp/waffles')[1]);
+        });
+
+        oldWafflesComponents = getComponentsCount(componentNames);
+      }
+
+      componentsData.push({
+        ...repo,
+        components: {
+          new: newWafflesComponents,
+          old: oldWafflesComponents,
+        },
+      });
+    }
+
+    return componentsData;
+  }
+
+  const stats = await searchRepos();
+
+  return stats;
+}
+
 const adoptionTrackerPath = path.resolve(__dirname, '../doc-site/adoption');
 
 async function run() {
-  // Get list of all repos with package.json in datacamp-engineering org
+  // 1. Get list of all repos with package.json in datacamp-engineering org
   console.log(chalk.magentaBright('Fetching repositories data...'));
   const repos = await getRepos();
   const cleanRepos = cleanRawReposData(repos);
 
-  await wait(20000);
+  await wait(30000);
 
-  // Examine each package.json if it contains Waffles package, and list it with all associated versions
+  // 2. Examine each package.json if it contains Waffles package, and list it with all associated versions
   console.log(
     chalk.magentaBright('Fetching Waffles packages versions for each repo...'),
   );
   const wafflesVersionsByRepo = await getWafflesDependencies(cleanRepos);
 
+  // 3. Gather components count for each repo
+  console.log(
+    chalk.magentaBright(
+      'Gathering components usage stats (it may take a while)...',
+    ),
+  );
+  const componentsStats = await getWafflesComponentsStats(
+    wafflesVersionsByRepo,
+  );
+
+  // Write results to file
   if (!fs.existsSync(adoptionTrackerPath)) {
     fs.mkdirSync(adoptionTrackerPath);
   }
 
   fs.writeFileSync(
-    path.join(adoptionTrackerPath, 'report.json'),
-    JSON.stringify(wafflesVersionsByRepo),
+    path.join(adoptionTrackerPath, 'adoption-report.json'),
+    JSON.stringify(componentsStats),
   );
 }
 
