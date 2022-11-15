@@ -9,12 +9,8 @@ function Example() {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Alert Dialog</Button>
-      <AlertDialog
-        aria-labelledby="delete-exercise-alert-dialog-header"
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-      >
-        <AlertDialog.Header id="delete-exercise-alert-dialog-header">
+      <AlertDialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <AlertDialog.Header>
           You Are About To Delete An Exercise
         </AlertDialog.Header>
         <AlertDialog.Body>

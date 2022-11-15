@@ -19,11 +19,10 @@ function Playground() {
     <>
       <Button onClick={() => setIsOpen(true)}>Open Dialog</Button>
       <Dialog
-        aria-labelledby="basic-dialog-header"
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
       >
-        <Dialog.Header id="basic-dialog-header">
+        <Dialog.Header>
           Dialog Title
         </Dialog.Header>
         <Dialog.Body>

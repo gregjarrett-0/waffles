@@ -9,14 +9,8 @@ function Example() {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Dialog</Button>
-      <Dialog
-        aria-labelledby="case-study-dialog-header"
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-      >
-        <Dialog.Header id="case-study-dialog-header">
-          Confirm Your Case Study Participation
-        </Dialog.Header>
+      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Dialog.Header>Confirm Your Case Study Participation</Dialog.Header>
         <Dialog.Body>
           <Paragraph>
             To be able to participate in the case study, you will need a
