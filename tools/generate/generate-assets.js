@@ -5,7 +5,7 @@ const archiver = require('archiver');
 
 const { getOptimizedSvg } = require('../helpers/svg-generation');
 const {
-  getPascalFormattedName,
+  getPascalCase,
   formatContentWithPrettier,
 } = require('../helpers/formatting');
 const {
@@ -47,7 +47,7 @@ function generateAssets() {
       const filename = svgFilename
         .split('.')[0]
         .concat(directory !== 'other' ? `-${directory}` : '');
-      const componentName = getPascalFormattedName(filename);
+      const componentName = getPascalCase(filename);
       assetsExports[componentName] = filename;
 
       // Grab the whole content of SVG file

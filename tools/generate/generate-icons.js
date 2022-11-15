@@ -4,7 +4,7 @@ const glob = require('glob');
 
 const { getOptimizedSvg } = require('../helpers/svg-generation');
 const {
-  getPascalFormattedName,
+  getPascalCase,
   formatContentWithPrettier,
 } = require('../helpers/formatting');
 const {
@@ -31,7 +31,7 @@ function generateIcons() {
 
     svgIcons.forEach((svgFilename) => {
       const filename = svgFilename.split('.')[0];
-      const componentName = getPascalFormattedName(filename);
+      const componentName = getPascalCase(filename);
       iconsExports[componentName] = filename;
 
       // Grab the whole content of SVG file
