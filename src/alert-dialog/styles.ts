@@ -15,11 +15,7 @@ export function dialogStyle() {
 
 export function bodyStyle() {
   return css`
-    padding-top: 0;
-    padding-right: ${tokens.spacing.large};
-    padding-bottom: ${tokens.spacing.small};
-    padding-left: ${tokens.spacing.large};
-    flex-grow: 1;
+    box-shadow: none;
     overflow: hidden;
     text-align: center;
   `;
@@ -34,12 +30,9 @@ export function headerStyle() {
 
 export function footerStyle() {
   return css`
-    padding: ${tokens.spacing.large};
-    padding-top: ${tokens.spacing.medium};
-    display: flex;
+    padding-bottom: ${tokens.spacing.large};
+    border-top: 0;
     justify-content: center;
-    align-items: center;
-    gap: ${tokens.spacing.small};
 
     & button:first-of-type {
       margin-right: 0;

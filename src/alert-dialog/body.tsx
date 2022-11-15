@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Dialog } from '../dialog';
+
 import { bodyStyle } from './styles';
 
 type BodyProps = {
@@ -9,9 +11,9 @@ type BodyProps = {
 
 function Body({ children, ...restProps }: BodyProps) {
   return (
-    <div {...restProps} css={bodyStyle()}>
+    <Dialog.Body {...restProps} css={bodyStyle()}>
       {children}
-    </div>
+    </Dialog.Body>
   );
 }
 

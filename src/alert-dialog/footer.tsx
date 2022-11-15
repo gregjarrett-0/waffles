@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Dialog } from '../dialog';
+
 import { footerStyle } from './styles';
 
 type FooterProps = {
@@ -9,9 +11,9 @@ type FooterProps = {
 
 function Footer({ children, ...restProps }: FooterProps) {
   return (
-    <footer {...restProps} css={footerStyle()}>
+    <Dialog.Footer {...restProps} css={footerStyle()}>
       {children}
-    </footer>
+    </Dialog.Footer>
   );
 }
 
