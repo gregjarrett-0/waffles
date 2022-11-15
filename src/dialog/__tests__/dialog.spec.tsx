@@ -3,9 +3,17 @@ import { render, fireEvent, waitFor, act } from '@testing-library/react';
 
 import { Dialog } from '../index';
 
+const MOCKED_ID = '123abC';
+
 jest.mock('../../icon', () => {
   return {
     Cross: () => 'CrossIcon',
+  };
+});
+
+jest.mock('nanoid', () => {
+  return {
+    nanoid: () => MOCKED_ID,
   };
 });
 
@@ -16,9 +24,9 @@ type DialogTestProps = {
 
 function DialogTest({ isOpen, onClose }: DialogTestProps) {
   return (
-    <Dialog isOpen={isOpen} onClose={onClose} aria-labelledby="dialog-title">
-      <Dialog.Header id="dialog-title">Taylor Swift Discography</Dialog.Header>
-      <Dialog.Body>Discover amazing pop songs by Tylor Swift.</Dialog.Body>
+    <Dialog isOpen={isOpen} onClose={onClose}>
+      <Dialog.Header>Taylor Swift Discography</Dialog.Header>
+      <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
       <Dialog.Footer>
         <Dialog.Button onClick={onClose}>Dismiss</Dialog.Button>
         <Dialog.Button autoFocus>Confirm</Dialog.Button>
@@ -51,17 +59,25 @@ describe('Dialog', () => {
       overlay = getByTestId('dialog-overlay');
     });
     const dialog = getByRole('dialog');
-    const title = getByText('Taylor Swift Discography');
+    const header = getByText('Taylor Swift Discography');
     const body = getByText(/amazing pop songs/i);
     const closeButton = getByLabelText('Close');
     const confirmButton = getByText('Confirm');
 
     expect(dialog).toBeInTheDocument();
-    expect(dialog).toHaveAttribute('aria-labelledby', 'dialog-title');
+    expect(dialog).toHaveAttribute(
+      'aria-labelledby',
+      `dialog-header-${MOCKED_ID}`,
+    );
+    expect(dialog).toHaveAttribute(
+      'aria-describedby',
+      `dialog-body-${MOCKED_ID}`,
+    );
     expect(overlay).toBeInTheDocument();
-    expect(title).toBeInTheDocument();
-    expect(title).toHaveAttribute('id', 'dialog-title');
+    expect(header).toBeInTheDocument();
+    expect(header).toHaveAttribute('id', `dialog-header-${MOCKED_ID}`);
     expect(body).toBeInTheDocument();
+    expect(body).toHaveAttribute('id', `dialog-body-${MOCKED_ID}`);
     expect(closeButton).toBeInTheDocument();
     expect(confirmButton).toBeInTheDocument();
   });

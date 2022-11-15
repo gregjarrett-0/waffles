@@ -16,12 +16,8 @@ function Story() {
   return (
     <article css={mainContent}>
       <Button onClick={() => setIsOpen(true)}>Open</Button>
-      <Dialog
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        aria-labelledby="dialog-title"
-      >
-        <Dialog.Header id="dialog-title">Title of a Dialog</Dialog.Header>
+      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Dialog.Header>Title of a Dialog</Dialog.Header>
         <Dialog.Body>
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
