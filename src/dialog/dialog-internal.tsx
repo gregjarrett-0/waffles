@@ -1,12 +1,21 @@
 import { FocusOn } from 'react-focus-on';
-import React from 'react';
+import React, { Children, isValidElement } from 'react';
 
 import { Portal } from '../portal';
 import { Overlay } from '../overlay';
 import { useAnimateTransition, useId } from '../hooks';
+import AlertHeader from '../alert-dialog/header';
+import AlertBody from '../alert-dialog/body';
 
 import Panel from './panel';
+import Header from './header';
 import { DialogProvider } from './dialog-context';
+import Body from './body';
+
+type ChildOptions = {
+  headerId: string;
+  bodyId: string;
+};
 
 type DialogProps = {
   /* Determines if the Dialog is open. */
@@ -29,8 +38,32 @@ function DialogInternal({
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
   const id = useId();
-  const headerId = `dialog-header-${id}`;
-  const bodyId = `dialog-body-${id}`;
+
+  // Determine if `children` contains `Header` and/or `Body` components
+  function getChildTypes() {
+    return Children.toArray(children).reduce(
+      (childOptions: ChildOptions, child) => {
+        if (isValidElement(child)) {
+          if (child.type === Header || child.type === AlertHeader) {
+            return {
+              ...childOptions,
+              headerId: `dialog-header-${id}`,
+            };
+          } else if (child.type === Body || child.type === AlertBody) {
+            return {
+              ...childOptions,
+              bodyId: `dialog-body-${id}`,
+            };
+          }
+        }
+
+        return childOptions as ChildOptions;
+      },
+      {} as ChildOptions,
+    );
+  }
+
+  const { headerId, bodyId } = getChildTypes();
 
   return (
     <DialogProvider {...{ headerId, bodyId }}>

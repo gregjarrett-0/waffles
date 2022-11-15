@@ -1,20 +1,13 @@
-import React, { Children, isValidElement } from 'react';
+import React from 'react';
 
 import { panelWrapperStyle, panelStyle } from './styles';
-import Header from './header';
 import Dialog from './dialog';
 import CloseButton from './close-button';
-import Body from './body';
-
-type ChildOptions = {
-  hasHeader: boolean;
-  hasBody: boolean;
-};
 
 type PanelProps = {
   role: NonNullable<React.ComponentProps<typeof Dialog>['role']>;
-  headerId: string;
-  bodyId: string;
+  headerId?: string;
+  bodyId?: string;
   isVisible: boolean;
   onClose: () => void;
   children: React.ReactNode;
@@ -29,40 +22,14 @@ function Panel({
   children,
   ...restProps
 }: PanelProps) {
-  // Determine if `children` contains `Dialog.Header` and/or `Dialog.Body`
-  function getChildTypes() {
-    return Children.toArray(children).reduce(
-      (childOptions: ChildOptions, child) => {
-        if (isValidElement(child)) {
-          if (child.type === Header) {
-            return {
-              ...childOptions,
-              hasHeader: true,
-            };
-          } else if (child.type === Body) {
-            return {
-              ...childOptions,
-              hasBody: true,
-            };
-          }
-        }
-
-        return childOptions as ChildOptions;
-      },
-      {} as ChildOptions,
-    );
-  }
-
-  const { hasHeader, hasBody } = getChildTypes();
-
   return (
     <div css={panelWrapperStyle()}>
       <section
         {...restProps}
         role={role}
         aria-modal
-        {...(hasHeader && { 'aria-labelledby': headerId })}
-        {...(hasBody && { 'aria-describedby': bodyId })}
+        {...(headerId && { 'aria-labelledby': headerId })}
+        {...(bodyId && { 'aria-describedby': bodyId })}
         tabIndex={-1}
         css={panelStyle({ isVisible })}
       >
