@@ -44,6 +44,28 @@ function getComponentsCount(componentNames) {
   }, []);
 }
 
+function sortByName(repo1, repo2) {
+  if (repo1.name < repo2.name) {
+    return -1;
+  }
+  if (repo1.name > repo2.name) {
+    return 1;
+  }
+
+  return 0;
+}
+
+function sortByCount(component1, component2) {
+  if (component1.count < component2.count) {
+    return 1;
+  }
+  if (component1.count > component2.count) {
+    return -1;
+  }
+
+  return 0;
+}
+
 // Some monorepo project have it's own waffles directories and final import declarations may look similar to New Waffles ones
 const newWafflesComponentsWhitelist = [
   'AlertDialog',
@@ -142,7 +164,7 @@ function cleanRawReposData(repos) {
       return transformedRepo.name === repo.repository.name;
     });
 
-    if (existingRepoIndex > 0) {
+    if (existingRepoIndex >= 0) {
       return [
         ...transformedRepos.slice(0, existingRepoIndex),
         {
@@ -392,6 +414,19 @@ async function getWafflesComponentsStats(reposWithDependencies) {
   return stats;
 }
 
+// 4. Sort results
+function sortResults(reposWithStats) {
+  return reposWithStats.sort(sortByName).map((repo) => {
+    return {
+      ...repo,
+      components: {
+        new: repo.components.new.sort(sortByCount),
+        old: repo.components.old.sort(sortByCount),
+      },
+    };
+  });
+}
+
 const adoptionTrackerPath = path.resolve(__dirname, '../doc-site/adoption');
 
 async function run() {
@@ -418,6 +453,10 @@ async function run() {
     wafflesVersionsByRepo,
   );
 
+  // 4. Sort
+  console.log(chalk.magentaBright('Sorting stats...'));
+  const sortedStats = sortResults(componentsStats);
+
   // Write results to file
   if (!fs.existsSync(adoptionTrackerPath)) {
     fs.mkdirSync(adoptionTrackerPath);
@@ -425,7 +464,7 @@ async function run() {
 
   fs.writeFileSync(
     path.join(adoptionTrackerPath, 'adoption-report.json'),
-    JSON.stringify(componentsStats),
+    JSON.stringify(sortedStats),
   );
 }
 
