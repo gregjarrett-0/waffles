@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  FloatingFocusManager,
+  useDismiss,
+  useFloating,
+  useInteractions,
+} from '@floating-ui/react-dom-interactions';
 
 import { panelWrapperStyle, panelStyle } from './styles';
 import Dialog from './dialog';
@@ -22,21 +28,36 @@ function Panel({
   children,
   ...restProps
 }: PanelProps) {
+  const { floating, context } = useFloating({
+    open: isVisible,
+    onOpenChange: onClose, // Handles closing when clicking outside of the Dialog (dismissing)
+  });
+
+  const { getFloatingProps } = useInteractions([
+    useDismiss(context, {
+      bubbles: false,
+    }),
+  ]);
   return (
-    <div css={panelWrapperStyle()}>
-      <section
-        {...restProps}
-        role={role}
-        aria-modal
-        {...(headerId && { 'aria-labelledby': headerId })}
-        {...(bodyId && { 'aria-describedby': bodyId })}
-        tabIndex={-1}
-        css={panelStyle({ isVisible })}
-      >
-        <CloseButton onClick={onClose} />
-        {children}
-      </section>
-    </div>
+    <FloatingFocusManager context={context} returnFocus>
+      <div css={panelWrapperStyle()}>
+        <section
+          role={role}
+          aria-modal
+          {...(headerId && { 'aria-labelledby': headerId })}
+          {...(bodyId && { 'aria-describedby': bodyId })}
+          tabIndex={-1}
+          css={panelStyle({ isVisible })}
+          {...getFloatingProps({
+            ref: floating,
+            ...restProps,
+          })}
+        >
+          <CloseButton onClick={onClose} />
+          {children}
+        </section>
+      </div>
+    </FloatingFocusManager>
   );
 }
 

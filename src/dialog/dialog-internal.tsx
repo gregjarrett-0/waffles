@@ -1,4 +1,3 @@
-import { FocusOn } from 'react-focus-on';
 import React, { Children, isValidElement } from 'react';
 
 import { Portal } from '../portal';
@@ -39,6 +38,8 @@ function DialogInternal({
   const isAnimating = useAnimateTransition(isOpen, 300);
   const id = useId();
 
+  // TODO: Obtain autoFocus button, if applicable
+
   // Determine if `children` contains `Header` and/or `Body` components
   function getChildTypes() {
     return Children.toArray(children).reduce(
@@ -69,26 +70,20 @@ function DialogInternal({
     <DialogProvider {...{ headerId, bodyId }}>
       <Portal>
         {isAnimating && (
-          <>
-            <Overlay isVisible={isOpen} data-testid="dialog-overlay" />
-            <FocusOn
-              onClickOutside={onClose}
-              onEscapeKey={onClose}
-              autoFocus
-              returnFocus
+          <Overlay isVisible={isOpen} data-testid="dialog-overlay">
+            <Panel
+              {...{
+                role,
+                headerId,
+                bodyId,
+                onClose,
+                isVisible: isOpen,
+                ...restProps,
+              }}
             >
-              <Panel
-                role={role}
-                headerId={headerId}
-                bodyId={bodyId}
-                isVisible={isOpen}
-                onClose={onClose}
-                {...restProps}
-              >
-                {children}
-              </Panel>
-            </FocusOn>
-          </>
+              {children}
+            </Panel>
+          </Overlay>
         )}
       </Portal>
     </DialogProvider>
