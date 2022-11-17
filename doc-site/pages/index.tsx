@@ -93,7 +93,7 @@ const cardParagraphStyle = css`
   margin-bottom: 0;
 `;
 
-export default function Home() {
+function HomePage() {
   return (
     <ErrorBoundary>
       <Head>
@@ -120,7 +120,7 @@ export default function Home() {
           <Heading size="xlarge">Core principles</Heading>
           <div css={cardsLayoutStyle}>
             <LandingPageCard imageUrl="images/waffles-components-mini.svg">
-              <Heading size="large">Components for every occassion</Heading>
+              <Heading size="large">Components for every occasion</Heading>
               <Paragraph css={cardParagraphStyle}>
                 Waffles offers a wide range of React and Figma components, to
                 help developers and designers build DataCamp experiences
@@ -155,3 +155,5 @@ export default function Home() {
     </ErrorBoundary>
   );
 }
+
+export default HomePage;

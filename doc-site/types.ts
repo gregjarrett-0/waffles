@@ -13,11 +13,11 @@ export type AdoptionComponentsStats = Array<{
   count: number;
 }>;
 
-export type AdoptionStats = Array<{
+export type AdoptionProjectStats = {
   name: string;
   dependencies: AdoptionDependenciesStats;
   components: {
     old: AdoptionComponentsStats;
     new: AdoptionComponentsStats;
   };
-}>;
+};
