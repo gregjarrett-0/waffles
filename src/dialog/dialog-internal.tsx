@@ -1,4 +1,4 @@
-import React, { Children, isValidElement } from 'react';
+import React, { Children, createRef, isValidElement } from 'react';
 
 import { Portal } from '../portal';
 import { Overlay } from '../overlay';
@@ -12,8 +12,8 @@ import { DialogProvider } from './dialog-context';
 import Body from './body';
 
 type ChildOptions = {
-  headerId: string;
-  bodyId: string;
+  headerId?: string;
+  bodyId?: string;
 };
 
 type DialogProps = {
@@ -37,8 +37,7 @@ function DialogInternal({
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
   const id = useId();
-
-  // TODO: Obtain autoFocus button, if applicable
+  const autoFocusRef = createRef<HTMLButtonElement>();
 
   // Determine if `children` contains `Header` and/or `Body` components
   function getChildTypes() {
@@ -67,15 +66,13 @@ function DialogInternal({
   const { headerId, bodyId } = getChildTypes();
 
   return (
-    <DialogProvider {...{ headerId, bodyId }}>
+    <DialogProvider {...{ headerId, bodyId, autoFocusRef }}>
       <Portal>
         {isAnimating && (
           <Overlay isVisible={isOpen} data-testid="dialog-overlay">
             <Panel
               {...{
                 role,
-                headerId,
-                bodyId,
                 onClose,
                 isVisible: isOpen,
                 ...restProps,

@@ -2,8 +2,9 @@
 import { createContext, useContext } from 'react';
 
 type DialogContextValue = {
-  headerId: string;
-  bodyId: string;
+  headerId?: string;
+  bodyId?: string;
+  autoFocusRef?: React.RefObject<HTMLButtonElement>;
 };
 
 const DialogContext = createContext<DialogContextValue>(undefined!);

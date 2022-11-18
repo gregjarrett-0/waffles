@@ -7,13 +7,12 @@ import {
 } from '@floating-ui/react-dom-interactions';
 
 import { panelWrapperStyle, panelStyle } from './styles';
+import { useDialog } from './dialog-context';
 import Dialog from './dialog';
 import CloseButton from './close-button';
 
 type PanelProps = {
   role: NonNullable<React.ComponentProps<typeof Dialog>['role']>;
-  headerId?: string;
-  bodyId?: string;
   isVisible: boolean;
   onClose: () => void;
   children: React.ReactNode;
@@ -21,25 +20,28 @@ type PanelProps = {
 
 function Panel({
   role,
-  headerId,
-  bodyId,
   isVisible,
   onClose,
   children,
   ...restProps
 }: PanelProps) {
+  const { headerId, bodyId, autoFocusRef } = useDialog();
   const { floating, context } = useFloating({
     open: isVisible,
     onOpenChange: onClose, // Handles closing when clicking outside of the Dialog (dismissing)
   });
-
   const { getFloatingProps } = useInteractions([
     useDismiss(context, {
       bubbles: false,
     }),
   ]);
+
   return (
-    <FloatingFocusManager context={context} returnFocus>
+    <FloatingFocusManager
+      context={context}
+      initialFocus={autoFocusRef}
+      returnFocus
+    >
       <div css={panelWrapperStyle()}>
         <section
           role={role}

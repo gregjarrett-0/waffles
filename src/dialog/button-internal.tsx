@@ -31,17 +31,10 @@ type ButtonProps = {
 
 // Override autoFocus behavior to play nicely with react-focus-on
 function ButtonInternal(
-  { autoFocus = false, ...restProps }: ButtonProps,
+  { ...restProps }: ButtonProps,
   ref: React.Ref<HTMLButtonElement>,
 ) {
-  return (
-    <Button
-      {...restProps}
-      data-autofocus={autoFocus ? true : null}
-      ref={ref}
-      css={buttonStyle()}
-    />
-  );
+  return <Button {...restProps} ref={ref} css={buttonStyle()} />;
 }
 
 export default ButtonInternal;
