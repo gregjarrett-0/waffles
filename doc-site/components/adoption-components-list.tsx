@@ -10,28 +10,28 @@ import type { AdoptionComponentsStats } from '../types';
 
 const listStyle = css`
   overflow: hidden;
-  margin: 0 auto ${tokens.spacing.xlarge} auto;
+  margin: 0 auto;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: ${tokens.spacing.xsmall} ${tokens.spacing.medium};
-  grid-auto-flow: row;
-  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: ${tokens.spacing.xsmall};
+  max-width: 460px;
 
   ${mediaQuery.aboveLarge} {
-    margin: ${tokens.spacing.xlarge} 0 0 0;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(8, 1fr);
+    margin: 0;
+    max-height: 360px;
+    flex-direction: column;
   }
 `;
 
 const listItemStyle = css`
-  margin-bottom: 2px;
   list-style: none;
+  width: 150px;
 `;
 
 type AdoptionComponentsListProps = {
-  components: AdoptionComponentsStats;
+  components: AdoptionComponentsStats[];
   colorScale: string[];
 };
 

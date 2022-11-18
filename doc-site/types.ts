@@ -3,21 +3,21 @@ export type PlaygroundConfig = {
   scope: Record<string, unknown>;
 };
 
-export type AdoptionDependenciesStats = Array<{
+export type AdoptionDependenciesStats = {
   name: string;
   versions: Array<string>;
-}>;
+};
 
-export type AdoptionComponentsStats = Array<{
+export type AdoptionComponentsStats = {
   name: string;
   count: number;
-}>;
+};
 
 export type AdoptionProjectStats = {
   name: string;
-  dependencies: AdoptionDependenciesStats;
+  dependencies: AdoptionDependenciesStats[];
   components: {
-    old: AdoptionComponentsStats;
-    new: AdoptionComponentsStats;
+    old: AdoptionComponentsStats[];
+    new: AdoptionComponentsStats[];
   };
 };

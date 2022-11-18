@@ -19,14 +19,14 @@ const wrapperStyle = css`
 
 const labelStyle = css`
   position: absolute;
-  font-size: ${tokens.fontSizes.xlarge};
+  font-size: ${tokens.fontSizes.large};
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 `;
 
 // Transform data from adoption report to structure require by victory chart
-function transformComponentsData(componentsData: AdoptionComponentsStats) {
+function transformComponentsData(componentsData: AdoptionComponentsStats[]) {
   let compactData = [];
 
   if (componentsData.length > 10) {
@@ -58,7 +58,7 @@ function transformComponentsData(componentsData: AdoptionComponentsStats) {
 
 type AdoptionComponentsChartProps = {
   label: string;
-  components: AdoptionComponentsStats;
+  components: AdoptionComponentsStats[];
   colorScale: string[];
 };
 
@@ -75,6 +75,7 @@ function AdoptionComponentsChart({
         labels={() => null}
         colorScale={colorScale}
         innerRadius={80}
+        padAngle={0.4}
       />
     </div>
   );
