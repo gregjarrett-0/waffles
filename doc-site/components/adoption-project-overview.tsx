@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { hexToRgba } from '@datacamp/waffles/helpers';
+import { hexToRgba, mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Button } from '@datacamp/waffles/button';
 
+import Badges from './adoption-project-badges';
 import Dependencies from './adoption-dependencies';
 import Components from './adoption-components';
 
@@ -24,9 +25,23 @@ const headerStyle = css`
   align-items: center;
 `;
 
+const headingWrapperStyle = css`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: ${tokens.spacing.xsmall};
+  margin-right: ${tokens.spacing.medium};
+
+  ${mediaQuery.aboveMedium} {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+`;
+
 const nameStyle = css`
   margin: 0;
-  flex-grow: 1;
+  margin-right: ${tokens.spacing.xsmall};
 `;
 
 const sectionStyle = css`
@@ -47,9 +62,15 @@ function AdoptionProjectOverview({
   return (
     <section css={wrapperStyle}>
       <header css={headerStyle}>
-        <Heading size="large" css={nameStyle}>
-          {project.name}
-        </Heading>
+        <div css={headingWrapperStyle}>
+          <Heading size="large" css={nameStyle}>
+            {project.name}
+          </Heading>
+          <Badges
+            dependencies={project.dependencies}
+            currentVersion={currentVersion}
+          />
+        </div>
         <Button
           size="small"
           variant="plain"

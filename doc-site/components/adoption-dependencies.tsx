@@ -3,6 +3,8 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Code } from '@datacamp/waffles/code';
 
+import versionStatus from '../helpers/version-status';
+
 import type { AdoptionDependenciesStats } from '../types';
 
 const listStyle = css`
@@ -21,18 +23,12 @@ const versionsWrapperStyle = css`
   margin-left: ${tokens.spacing.xsmall};
 `;
 
-function parseMinorVersion(version: string) {
-  return parseInt(version.split('.')[1], 10);
-}
-
 function colorCodedVersion(currentVersion: string, version: string) {
-  const currentMinor = parseMinorVersion(currentVersion);
-  const minor = parseMinorVersion(version);
-  const difference = currentMinor - minor;
+  const status = versionStatus(currentVersion, version);
 
-  if (difference >= 6) {
+  if (status === 'outdated') {
     return tokens.colors.red;
-  } else if (difference >= 2) {
+  } else if (status === 'slightlyOutdated') {
     return tokens.colors.yellow;
   }
 
