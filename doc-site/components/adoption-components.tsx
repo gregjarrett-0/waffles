@@ -2,7 +2,6 @@ import colorScale from 'helpers/color-scale';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { mediaQuery } from '@datacamp/waffles/helpers';
-import { Heading } from '@datacamp/waffles/heading';
 
 import ComponentsList from './adoption-components-list';
 import ComponentsChart from './adoption-components-chart';
@@ -20,7 +19,7 @@ const statsLayout = css`
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: ${tokens.spacing.medium};
-    align-items: start;
+    align-items: center;
   }
 `;
 
@@ -35,15 +34,14 @@ const oldWafflesColorScale = colorScale(
 
 type AdoptionComponentsProps = {
   combinedComponents: {
-    new: AdoptionComponentsStats;
-    old: AdoptionComponentsStats;
+    new: AdoptionComponentsStats[];
+    old: AdoptionComponentsStats[];
   };
 };
 
 function AdoptionComponents({ combinedComponents }: AdoptionComponentsProps) {
   return (
-    <section css={sectionStyle}>
-      <Heading size="medium">Components usage</Heading>
+    <>
       {combinedComponents.new.length > 0 && (
         <section css={sectionStyle}>
           <div css={statsLayout}>
@@ -61,12 +59,7 @@ function AdoptionComponents({ combinedComponents }: AdoptionComponentsProps) {
       )}
       {combinedComponents.old.length > 0 && (
         <section css={sectionStyle}>
-          <div
-            css={css`
-              ${statsLayout}
-              margin-top: -${tokens.spacing.xlarge};
-            `}
-          >
+          <div css={statsLayout}>
             <ComponentsChart
               label="Old"
               components={combinedComponents.old}
@@ -79,7 +72,7 @@ function AdoptionComponents({ combinedComponents }: AdoptionComponentsProps) {
           </div>
         </section>
       )}
-    </section>
+    </>
   );
 }
 

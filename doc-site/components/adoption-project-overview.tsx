@@ -29,6 +29,10 @@ const nameStyle = css`
   flex-grow: 1;
 `;
 
+const sectionStyle = css`
+  margin: ${tokens.spacing.medium} 0;
+`;
+
 type AdoptionProjectOverviewProps = {
   project: AdoptionProjectStats;
   currentVersion: string;
@@ -56,11 +60,17 @@ function AdoptionProjectOverview({
       </header>
       {isExpanded && (
         <div>
-          <Dependencies
-            dependencies={project.dependencies}
-            currentVersion={currentVersion}
-          />
-          <Components combinedComponents={project.components} />
+          <section css={sectionStyle}>
+            <Heading size="medium">Dependencies</Heading>
+            <Dependencies
+              dependencies={project.dependencies}
+              currentVersion={currentVersion}
+            />
+          </section>
+          <section css={sectionStyle}>
+            <Heading size="medium">Components stats</Heading>
+            <Components combinedComponents={project.components} />
+          </section>
         </div>
       )}
     </section>
