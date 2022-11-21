@@ -10,11 +10,11 @@ import type { AdoptionDependenciesStats } from '../types';
 const listStyle = css`
   margin: 0;
   padding: 0;
+  list-style: none;
 `;
 
 const listItemStyle = css`
   margin-bottom: 2px;
-  list-style: none;
 `;
 
 const versionsWrapperStyle = css`

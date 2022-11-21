@@ -9,7 +9,7 @@ import Badge from './adoption-badge';
 const wrapperStyle = css`
   display: flex;
   gap: ${tokens.spacing.small};
-  width: 220px;
+  width: 200px;
   flex-shrink: 0;
 `;
 

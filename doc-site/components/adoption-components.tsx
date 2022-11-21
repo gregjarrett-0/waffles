@@ -19,7 +19,7 @@ const statsLayout = css`
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: ${tokens.spacing.medium};
-    align-items: center;
+    justify-items: start;
   }
 `;
 

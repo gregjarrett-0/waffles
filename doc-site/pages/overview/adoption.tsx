@@ -58,12 +58,12 @@ const cardStyle = css`
 const listStyle = css`
   margin: 0;
   padding: 0;
+  list-style: none;
 `;
 
 const listItemStyle = css`
   display: flex;
   gap: ${tokens.spacing.small};
-  list-style: none;
   margin-bottom: ${tokens.spacing.small};
 `;
 
@@ -152,8 +152,8 @@ function AdoptionPage() {
           <li css={listItemStyle}>
             <Badge version="new" upgradeStatus="upToDate" isNewOnly />
             <Text css={listDescriptionStyle}>
-              Project is fully migrated to New Waffles and is running on the
-              newest version
+              Good job! Project is fully migrated to New Waffles and is running
+              on the newest version
             </Text>
           </li>
           <li css={listItemStyle}>

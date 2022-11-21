@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { Text } from '@datacamp/waffles/text';
 import { hexToRgba, mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Button } from '@datacamp/waffles/button';
@@ -90,6 +91,8 @@ function AdoptionProjectOverview({
           </section>
           <section css={sectionStyle}>
             <Heading size="medium">Components stats</Heading>
+            {project.components.old.length === 0 &&
+              project.components.new.length === 0 && <Text>N/A</Text>}
             <Components combinedComponents={project.components} />
           </section>
         </div>
