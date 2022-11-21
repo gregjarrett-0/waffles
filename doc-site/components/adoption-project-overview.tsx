@@ -49,6 +49,10 @@ const sectionStyle = css`
   margin: ${tokens.spacing.medium} 0;
 `;
 
+const detailsButtonStyle = css`
+  width: 100px;
+`;
+
 type AdoptionProjectOverviewProps = {
   project: AdoptionProjectStats;
   currentVersion: string;
@@ -76,8 +80,9 @@ function AdoptionProjectOverview({
           size="small"
           variant="plain"
           onClick={() => setIsExpanded(!isExpanded)}
+          css={detailsButtonStyle}
         >
-          Show details
+          {isExpanded ? 'Hide' : 'Show'} details
         </Button>
       </header>
       {isExpanded && (
