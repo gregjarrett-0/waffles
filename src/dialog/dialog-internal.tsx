@@ -26,6 +26,8 @@ type DialogProps = {
   role?: 'dialog' | 'alertdialog';
   /* Content of the Dialog. In general, Dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
   children: React.ReactNode;
+  /* [skip docs] */
+  idPrefix?: string;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
 function DialogInternal({
@@ -33,26 +35,27 @@ function DialogInternal({
   onClose,
   role = 'dialog',
   children,
+  idPrefix = 'dialog',
   ...restProps
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
-  const id = useId();
+  const id = `${idPrefix}-${useId()}`;
   const autoFocusRef = createRef<HTMLButtonElement>();
 
   // Determine if `children` contains `Header` and/or `Body` components
-  function getChildTypes() {
+  function childIds() {
     return Children.toArray(children).reduce(
       (childOptions: ChildOptions, child) => {
         if (isValidElement(child)) {
           if (child.type === Header || child.type === AlertHeader) {
             return {
               ...childOptions,
-              headerId: `dialog-header-${id}`,
+              headerId: `${id}-header`,
             };
           } else if (child.type === Body || child.type === AlertBody) {
             return {
               ...childOptions,
-              bodyId: `dialog-body-${id}`,
+              bodyId: `${id}-body`,
             };
           }
         }
@@ -63,13 +66,13 @@ function DialogInternal({
     );
   }
 
-  const { headerId, bodyId } = getChildTypes();
+  const { headerId, bodyId } = childIds();
 
   return (
     <DialogProvider {...{ headerId, bodyId, autoFocusRef }}>
       <Portal>
         {isAnimating && (
-          <Overlay isVisible={isOpen} data-testid="dialog-overlay">
+          <Overlay isVisible={isOpen} data-testid={`${idPrefix}-overlay`}>
             <Panel
               {...{
                 role,

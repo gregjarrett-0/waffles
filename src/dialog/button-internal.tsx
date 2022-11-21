@@ -29,7 +29,6 @@ type ButtonProps = {
   'autoFocus' | 'children'
 >;
 
-// Override autoFocus behavior to play nicely with react-focus-on
 function ButtonInternal(
   { ...restProps }: ButtonProps,
   ref: React.Ref<HTMLButtonElement>,
