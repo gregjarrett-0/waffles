@@ -1,22 +1,19 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { Star } from '@datacamp/waffles/icon';
-import { Badge } from '@datacamp/waffles/badge';
 
-import versionStatus from '../helpers/version-status';
+import upgradeStatus from '../helpers/upgrade-status';
 import parseMinorVersion from '../helpers/parse-minor-version';
 
+import Badge from './adoption-badge';
+
+const wrapperStyle = css`
+  display: flex;
+  gap: ${tokens.spacing.small};
+  width: 220px;
+  flex-shrink: 0;
+`;
+
 import type { AdoptionDependenciesStats } from '../types';
-
-const upgradeStatusBadgeStyle = css`
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  margin-right: ${tokens.spacing.small};
-`;
-
-const iconStyle = css`
-  margin-left: ${tokens.spacing.xsmall};
-`;
 
 function lowestVersion(versions: string[]) {
   const parsedLowestMinor = Math.min(
@@ -43,47 +40,24 @@ function AdoptionProjectBadges({
   const oldWafflesDependency = dependencies.find((dependency) => {
     return dependency.name.match(/^@datacamp\/waffles-.+/);
   });
-  const status =
-    newWafflesDependency &&
-    versionStatus(currentVersion, lowestVersion(newWafflesDependency.versions));
 
   return (
-    <span>
+    <span css={wrapperStyle}>
       {/* Show green New Waffles badge if it's in dependencies */}
       {newWafflesDependency && (
         <Badge
-          variant="green"
-          css={css`
-            ${status &&
-            status !== 'upToDate' &&
-            css`
-              border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-            `}
-            ${status &&
-            status === 'upToDate' &&
-            oldWafflesDependency &&
-            `margin-right: ${tokens.spacing.small};`}
-          `}
+          version="new"
+          upgradeStatus={upgradeStatus(
+            currentVersion,
+            lowestVersion(newWafflesDependency.versions),
+          )}
+          isNewOnly={!oldWafflesDependency}
         >
           New Waffles
         </Badge>
       )}
-      {/* Inform whether New Waffles should be upgraded */}
-      {status && status !== 'upToDate' && (
-        <Badge
-          variant={status === 'outdated' ? 'red' : 'yellow'}
-          css={upgradeStatusBadgeStyle}
-        >
-          Upgrade!
-        </Badge>
-      )}
-      {/* Display icon when project is fully migrated to most recent New Waffles */}
-      {status && status === 'upToDate' && !oldWafflesDependency && (
-        <Star aria-label="Everything up to date!" css={iconStyle} />
-      )}
       {/* Show orange Old Waffles badge if it's in dependencies */}
-      {oldWafflesDependency && <Badge variant="orange">Old Waffles</Badge>}
+      {oldWafflesDependency && <Badge version="old">Old Waffles</Badge>}
     </span>
   );
 }

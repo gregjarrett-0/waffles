@@ -3,7 +3,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Code } from '@datacamp/waffles/code';
 
-import versionStatus from '../helpers/version-status';
+import upgradeStatus from '../helpers/upgrade-status';
 
 import type { AdoptionDependenciesStats } from '../types';
 
@@ -24,7 +24,7 @@ const versionsWrapperStyle = css`
 `;
 
 function colorCodedVersion(currentVersion: string, version: string) {
-  const status = versionStatus(currentVersion, version);
+  const status = upgradeStatus(currentVersion, version);
 
   if (status === 'outdated') {
     return tokens.colors.red;

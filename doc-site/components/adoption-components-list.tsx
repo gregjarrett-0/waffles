@@ -40,28 +40,30 @@ function AdoptionComponentsList({
   colorScale,
 }: AdoptionComponentsListProps) {
   return (
-    <ul css={listStyle}>
-      {components.map((component, index) => {
-        return (
-          <li key={`component-${component.name}`} css={listItemStyle}>
-            <Text>{component.name}</Text>
-            <Code
-              size="medium"
-              css={css`
-                margin-left: ${tokens.spacing.xsmall};
-                background-color: ${colorScale[
-                  index > ADOPTION_TOP_COMPONENTS_COUNT
-                    ? ADOPTION_TOP_COMPONENTS_COUNT
-                    : index
-                ]};
-              `}
-            >
-              {component.count}
-            </Code>
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <ul css={listStyle}>
+        {components.map((component, index) => {
+          return (
+            <li key={`component-${component.name}`} css={listItemStyle}>
+              <Text>{component.name}</Text>
+              <Code
+                size="medium"
+                css={css`
+                  margin-left: ${tokens.spacing.xsmall};
+                  background-color: ${colorScale[
+                    index > ADOPTION_TOP_COMPONENTS_COUNT
+                      ? ADOPTION_TOP_COMPONENTS_COUNT
+                      : index
+                  ]};
+                `}
+              >
+                {component.count}
+              </Code>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }
 

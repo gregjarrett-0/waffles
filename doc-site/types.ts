@@ -21,3 +21,8 @@ export type AdoptionProjectStats = {
     new: AdoptionComponentsStats[];
   };
 };
+
+export type AdoptionUpgradeStatus =
+  | 'outdated'
+  | 'slightlyOutdated'
+  | 'upToDate';

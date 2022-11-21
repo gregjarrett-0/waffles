@@ -1,9 +1,14 @@
 import parseMinorVersion from './parse-minor-version';
 
-// TODO: So far we can relay on minor versions when comparing various Waffles release, but will change in future - blurbyte
+import type { AdoptionUpgradeStatus } from '../types';
+
+// TODO: So far we can relay on minor versions when comparing various Waffles releases, but it will change in future - blurbyte
 
 // Determine how old the New Waffles dependency is
-function versionStatus(currentVersion: string, version: string) {
+function upgradeStatus(
+  currentVersion: string,
+  version: string,
+): AdoptionUpgradeStatus {
   const currentMinor = parseMinorVersion(currentVersion);
   const minor = parseMinorVersion(version);
   const difference = currentMinor - minor;
@@ -17,4 +22,4 @@ function versionStatus(currentVersion: string, version: string) {
   return 'upToDate';
 }
 
-export default versionStatus;
+export default upgradeStatus;
