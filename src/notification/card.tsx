@@ -18,7 +18,7 @@ import Notification from './notification';
 
 type CardProps = {
   isVisible: boolean;
-  title: string;
+  title: React.ReactNode;
   description: React.ReactNode;
   mode: NonNullable<React.ComponentProps<typeof Notification>['mode']>;
   variant: NonNullable<React.ComponentProps<typeof Notification>['variant']>;

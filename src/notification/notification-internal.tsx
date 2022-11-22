@@ -6,7 +6,7 @@ import Card from './card';
 
 type NotificationBaseProps = {
   /* The main content of the Notification. */
-  title: string;
+  title: React.ReactNode;
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
   /* Whether to display the Notification as a banner or as an inline content. */
