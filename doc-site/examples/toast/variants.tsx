@@ -23,7 +23,7 @@ function ToastTriggers() {
           })
         }
       >
-        Default Toast
+        Info Toast
       </Button>
       <Button
         variant="secondary"

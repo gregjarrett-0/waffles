@@ -17,7 +17,7 @@ function Playground() {
           toast({
             title: 'Short Toast Title',
             description: 'Keep title and description as short as possible.',
-            variant: 'default'
+            variant: 'info'
           })
         }
       >
