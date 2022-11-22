@@ -6,29 +6,30 @@ A list of all relevant scripts in the project with a short description. Starting
 
 For troubleshooting purposes, all scripts can be run locally as `yarn <script-name>`.
 
-| Script                 | What it does?                                                                                                                                         | Runs on CI |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| workbench              | Start **Workbench**, an isolated component development environment (see [guide](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md)) |            |
-| test:unit              | Run _Jest_ unit tests in watch mode                                                                                                                   |            |
-| test:stories           | Run _Cypress_ **Stories** aka components e2e tests and a11y checks                                                                                    |            |
-| lint                   | Check codebase for common errors with _ESLint_                                                                                                        | ✅         |
-| lint:commits           | Verify commits messages if they stick to _Conventional Commit_ spec                                                                                   | ✅         |
-| format                 | Format whole codebase with _Prettier_                                                                                                                 |            |
-| build                  | Build CommonJS and modern ES Modules library into `/dist` folder                                                                                      | ✅         |
-| build:copy-files       | Copy package.json and readme to `/dist` to be a part of npm package<br >ℹ️ To start it locally run `build` first                                      | ✅         |
-| build:package-json     | Put package.json in each CommonJS component directory created during build step to support tree shaking<br >ℹ️ To start it locally run `build` first  | ✅         |
-| doc:build              | Build optimized production version of documentation into `/build` directory<br >ℹ️ To start it locally run `build` first                              | ✅         |
-| doc:dev                | Start _NextJS_ documentation in dev mode                                                                                                              |            |
-| doc:local-prod         | Build _NextJS_ documentation for production and start locally                                                                                         |            |
-| test:unit:ci           | Run unit tests and generate code coverage report                                                                                                      | ✅         |
-| test:stories:ci        | Run e2e tests in headless browser<br >ℹ️ To start it locally run `build` first                                                                        | ✅         |
-| format:check           | Check if the codebase is properly formatted with _Prettier_                                                                                           | ✅         |
-| generate:all           | Runs all of the `generate:*` scripts listed below                                                                                                     | ✅         |
-| generate:design-tokens | Build design tokens based on definitions compatible with _Figma Tokens_ plugin                                                                        | ✅         |
-| generate:assets        | Build optimized React asset components based on regular SVG assets                                                                                    | ✅         |
-| generate:icons         | Build optimized React icon components based on regular SVG icons                                                                                      | ✅         |
-| release                | Automatically release a library to npm, bump package version based on commit messages, and generate changelog                                         | ✅         |
-| prepare                | Set up git hooks with _Husky_                                                                                                                         |            |
+| Script                 | What it does?                                                                                                                                                                                                                 | Runs on CI |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| workbench              | Start **Workbench**, an isolated component development environment (see [guide](https://github.com/datacamp/waffles/blob/master/docs/DEVELOPMENT.md))                                                                         |            |
+| test:unit              | Run _Jest_ unit tests in watch mode                                                                                                                                                                                           |            |
+| test:stories           | Run _Cypress_ **Stories** aka components e2e tests and a11y checks                                                                                                                                                            |            |
+| lint                   | Check codebase for common errors with _ESLint_                                                                                                                                                                                | ✅         |
+| lint:commits           | Verify commits messages if they stick to _Conventional Commit_ spec                                                                                                                                                           | ✅         |
+| format                 | Format whole codebase with _Prettier_                                                                                                                                                                                         |            |
+| build                  | Build CommonJS and modern ES Modules library into `/dist` folder                                                                                                                                                              | ✅         |
+| build:copy-files       | Copy package.json and readme to `/dist` to be a part of npm package<br >ℹ️ To start it locally run `build` first                                                                                                              | ✅         |
+| build:package-json     | Put package.json in each CommonJS component directory created during build step to support tree shaking<br >ℹ️ To start it locally run `build` first                                                                          | ✅         |
+| doc:build              | Build optimized production version of documentation into `/build` directory<br >ℹ️ To start it locally run `build` first                                                                                                      | ✅         |
+| doc:dev                | Start _NextJS_ documentation in dev mode                                                                                                                                                                                      |            |
+| doc:local-prod         | Build _NextJS_ documentation for production and start locally                                                                                                                                                                 |            |
+| test:unit:ci           | Run unit tests and generate code coverage report                                                                                                                                                                              | ✅         |
+| test:stories:ci        | Run e2e tests in headless browser<br >ℹ️ To start it locally run `build` first                                                                                                                                                | ✅         |
+| format:check           | Check if the codebase is properly formatted with _Prettier_                                                                                                                                                                   | ✅         |
+| generate:all           | Runs all of the `generate:*` scripts listed below                                                                                                                                                                             | ✅         |
+| generate:design-tokens | Build design tokens based on definitions compatible with _Figma Tokens_ plugin                                                                                                                                                | ✅         |
+| generate:assets        | Build optimized React asset components based on regular SVG assets                                                                                                                                                            | ✅         |
+| generate:icons         | Build optimized React icon components based on regular SVG icons                                                                                                                                                              | ✅         |
+| release                | Automatically release a library to npm, bump package version based on commit messages, and generate changelog                                                                                                                 | ✅         |
+| track-adoption         | Crawl all _DataCamp Engineering GitHub_ organization repositories to find projects which are using New and Old Waffles, and prepares versions and components usage report placed in `/doc-site/adoption/adoption-report.json` | ✅         |
+| prepare                | Set up git hooks with _Husky_                                                                                                                                                                                                 |            |
 
 ## 📦 Directories
 
@@ -43,12 +44,15 @@ src/                                  // Most important directory, all core comp
   |  |  |--component.e2e.ts
 workbench/                            // Component dev environment, also used to run e2e tests (NextJS app)
 doc-site/                             // Official Waffles documentation (NextJS app)
+  |--adoption
+  |--|--adoption-report.json          // Waffles adoption report generated by track-adoption script
 docs/                                 // Internal documentation
 tools/                                // Internal tools used during build process
   |--add-package-json-files.js        // Put package.json with tree shaking hint in each CommonJS component directory
   |--generate-design-tokens.js        // Generate design tokens based on tokens.json compatible with Figma
   |--generate-icons.js                // Generate optimized React icon components based on raw SVG files
   |--prepare-workbench-stories.js     // Copy stories from each component to Workbench to run e2e tests
+  |--track-adoption.js                // Track adoption of Waffles usage across DataCamp
 .circleci/                            // CircleCI configuration
 .husky/                               // Git hooks configuration
 cypress/                              // Cypress custom commands and plugins configuration
