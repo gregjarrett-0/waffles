@@ -5,7 +5,7 @@ import Icon from './icon';
 import CloseButton from './close-button';
 
 type NotificationCardProps = {
-  variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';
+  variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
   hideLeftDecor?: boolean;
   isContentCentered?: boolean;
   inverted?: boolean;
@@ -17,7 +17,7 @@ type NotificationCardProps = {
 
 function NotificationCardInternal(
   {
-    variant = 'default',
+    variant = 'info',
     hideLeftDecor = false,
     isContentCentered = false,
     inverted = false,

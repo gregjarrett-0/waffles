@@ -13,8 +13,8 @@ type NotificationBaseProps = {
   /* @default inline */
   mode?: 'inline' | 'banner';
   /* Defines the type of Notification. */
-  /* @default default */
-  variant?: 'default' | 'success' | 'warning' | 'error' | 'upgrade';
+  /* @default info */
+  variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
   /* Sets the style of the Notification suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
@@ -43,7 +43,7 @@ function NotificationInternal({
   title,
   description,
   mode = 'inline',
-  variant = 'default',
+  variant = 'info',
   inverted = false,
   closable = false,
   onClose,

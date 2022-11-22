@@ -22,7 +22,7 @@ export function notificationStyle({ inverted }: NotificationStyleStyleOptions) {
 }
 
 const decorVariantMap = {
-  default: {
+  info: {
     color: tokens.colors.blue,
   },
   success: {
@@ -72,7 +72,7 @@ export function decorStyle({ variant, inverted }: DecorStyleStyleOptions) {
 // Mappings between icon's variants, and design tokens
 
 const regularIconVariantMap = {
-  default: {
+  info: {
     color: tokens.colors.blueDark,
     backgroundColor: tokens.colors.white,
   },
