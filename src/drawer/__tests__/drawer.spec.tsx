@@ -3,9 +3,17 @@ import { render, fireEvent, waitFor, act } from '@testing-library/react';
 
 import { Drawer } from '../index';
 
+const MOCKED_ID = '123abC';
+
 jest.mock('../../icon', () => {
   return {
     Cross: () => 'CrossIcon',
+  };
+});
+
+jest.mock('nanoid', () => {
+  return {
+    nanoid: () => MOCKED_ID,
   };
 });
 
@@ -21,12 +29,9 @@ function DrawerTest({ isOpen, onClose, placement }: DrawerTestProps) {
       isOpen={isOpen}
       onClose={onClose}
       placement={placement}
-      aria-labelledby="drawer-title"
       data-testid="test-drawer"
     >
-      <Drawer.Header id="drawer-title">
-        Fabulous Marillion Concert
-      </Drawer.Header>
+      <Drawer.Header>Fabulous Marillion Concert</Drawer.Header>
       <Drawer.Body>Write a script for a jesters tear yourself.</Drawer.Body>
       <Drawer.Footer>
         <Drawer.Button onClick={onClose}>Dismiss</Drawer.Button>
@@ -60,16 +65,25 @@ describe('Drawer', () => {
       overlay = getByTestId('drawer-overlay');
     });
     const dialog = getByTestId('test-drawer');
-    const title = getByText('Fabulous Marillion Concert');
+    const header = getByText('Fabulous Marillion Concert');
     const body = getByText(/script for a jesters tear/i);
     const closeButton = getByLabelText('Close');
     const confirmButton = getByText('Confirm');
 
     expect(dialog).toBeInTheDocument();
-    expect(dialog).toHaveAttribute('aria-labelledby', 'drawer-title');
+    expect(dialog).toHaveAttribute(
+      'aria-labelledby',
+      `drawer-${MOCKED_ID}-header`,
+    );
+    expect(dialog).toHaveAttribute(
+      'aria-describedby',
+      `drawer-${MOCKED_ID}-body`,
+    );
     expect(overlay).toBeInTheDocument();
-    expect(title).toBeInTheDocument();
-    expect(title).toHaveAttribute('id', 'drawer-title');
+    expect(header).toBeInTheDocument();
+    expect(header).toHaveAttribute('id', `drawer-${MOCKED_ID}-header`);
+    expect(body).toBeInTheDocument();
+    expect(body).toHaveAttribute('id', `drawer-${MOCKED_ID}-body`);
     expect(body).toBeInTheDocument();
     expect(closeButton).toBeInTheDocument();
     expect(confirmButton).toBeInTheDocument();

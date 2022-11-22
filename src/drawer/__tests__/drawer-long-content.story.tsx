@@ -19,14 +19,13 @@ function Story() {
       <Drawer
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        aria-labelledby="drawer-title"
         data-testid="drawer"
       >
-        <Drawer.Header id="drawer-title">
+        <Drawer.Header>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
         </Drawer.Header>
-        <Drawer.Body data-testid="drawer-body">
+        <Drawer.Body>
           <Paragraph>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa

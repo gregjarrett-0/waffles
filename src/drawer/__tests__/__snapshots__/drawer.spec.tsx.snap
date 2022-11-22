@@ -3,6 +3,24 @@
 exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 @keyframes animation-0 {
   from {
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+    -moz-transform: translateY(12px);
+    -ms-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
     -webkit-transform: translateX(-356px);
     -moz-transform: translateX(-356px);
     -ms-transform: translateX(-356px);
@@ -17,39 +35,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  from {
-    -webkit-transform: translateX(-356px);
-    -moz-transform: translateX(-356px);
-    -ms-transform: translateX(-356px);
-    transform: translateX(-356px);
-  }
-
-  to {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes animation-1 {
-  from {
-    -webkit-transform: translateX(-600px);
-    -moz-transform: translateX(-600px);
-    -ms-transform: translateX(-600px);
-    transform: translateX(-600px);
-  }
-
-  to {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes animation-1 {
+@keyframes animation-2 {
   from {
     -webkit-transform: translateX(-600px);
     -moz-transform: translateX(-600px);
@@ -66,12 +52,38 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 }
 
 .emotion-0 {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 180px;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 600px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
   outline: 0;
   overflow: hidden;
   pointer-events: all;
+  opacity: 0;
+  -webkit-transform: translateY(12px);
+  -moz-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  transform: translateY(12px);
+  -webkit-animation: animation-0 200ms cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
+  animation: animation-0 200ms cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 9000;
+  opacity: 1;
   width: calc(100vw - 64px);
   max-width: 356;
   -webkit-transform: translateX(
@@ -86,23 +98,23 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   transform: translateX(
         -356px
       );
-  -webkit-animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
-  animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: 0;
-  z-index: 9010;
+  -webkit-animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+  animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    min-width: 400px;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .emotion-0 {
     width: min(
+            calc(100vw - 64px),
+            600px
+          );
+    max-width: min(
             calc(100vw - 64px),
             600px
           );
@@ -118,8 +130,8 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
     transform: translateX(
             -600px
           );
-    -webkit-animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
-    animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+    -webkit-animation: animation-2 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+    animation: animation-2 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
   }
 }
 
@@ -455,10 +467,12 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 }
 
 <section
-  aria-labelledby="drawer-title"
+  aria-describedby="drawer-123abC-body"
+  aria-labelledby="drawer-123abC-header"
   aria-modal="true"
   class="emotion-0"
   data-testid="test-drawer"
+  role="dialog"
   tabindex="-1"
 >
   <button
@@ -470,12 +484,13 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="drawer-title"
+    id="drawer-123abC-header"
   >
     Fabulous Marillion Concert
   </h2>
   <div
     class="emotion-3"
+    id="drawer-123abC-body"
   >
     Write a script for a jesters tear yourself.
   </div>
@@ -494,7 +509,6 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
     </button>
     <button
       class="emotion-7"
-      data-autofocus="true"
       type="button"
     >
       <span
@@ -510,22 +524,42 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 @keyframes animation-0 {
   from {
-    -webkit-transform: translateX(356px);
-    -moz-transform: translateX(356px);
-    -ms-transform: translateX(356px);
-    transform: translateX(356px);
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+    -moz-transform: translateY(12px);
+    -ms-transform: translateY(12px);
+    transform: translateY(12px);
   }
 
   to {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes animation-0 {
   from {
+    opacity: 0;
+    -webkit-transform: translateY(12px);
+    -moz-transform: translateY(12px);
+    -ms-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
     -webkit-transform: translateX(356px);
     -moz-transform: translateX(356px);
     -ms-transform: translateX(356px);
@@ -540,23 +574,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   }
 }
 
-@keyframes animation-1 {
-  from {
-    -webkit-transform: translateX(600px);
-    -moz-transform: translateX(600px);
-    -ms-transform: translateX(600px);
-    transform: translateX(600px);
-  }
-
-  to {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes animation-1 {
+@keyframes animation-2 {
   from {
     -webkit-transform: translateX(600px);
     -moz-transform: translateX(600px);
@@ -573,12 +591,38 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 }
 
 .emotion-0 {
-  position: fixed;
-  top: 0;
-  right: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 180px;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 600px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
   outline: 0;
   overflow: hidden;
   pointer-events: all;
+  opacity: 0;
+  -webkit-transform: translateY(12px);
+  -moz-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  transform: translateY(12px);
+  -webkit-animation: animation-0 200ms cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
+  animation: animation-0 200ms cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 9000;
+  opacity: 1;
   width: calc(100vw - 64px);
   max-width: 356;
   -webkit-transform: translateX(
@@ -593,23 +637,23 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   transform: translateX(
         356px
       );
-  -webkit-animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
-  animation: animation-0 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  bottom: 0;
-  z-index: 9010;
+  -webkit-animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+  animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-0 {
+    min-width: 400px;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .emotion-0 {
     width: min(
+            calc(100vw - 64px),
+            600px
+          );
+    max-width: min(
             calc(100vw - 64px),
             600px
           );
@@ -625,8 +669,8 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
     transform: translateX(
             600px
           );
-    -webkit-animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
-    animation: animation-1 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+    -webkit-animation: animation-2 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
+    animation: animation-2 200ms cubic-bezier(0, 0, 0.6, 1) forwards;
   }
 }
 
@@ -962,10 +1006,12 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 }
 
 <section
-  aria-labelledby="drawer-title"
+  aria-describedby="drawer-123abC-body"
+  aria-labelledby="drawer-123abC-header"
   aria-modal="true"
   class="emotion-0"
   data-testid="test-drawer"
+  role="dialog"
   tabindex="-1"
 >
   <button
@@ -977,12 +1023,13 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="drawer-title"
+    id="drawer-123abC-header"
   >
     Fabulous Marillion Concert
   </h2>
   <div
     class="emotion-3"
+    id="drawer-123abC-body"
   >
     Write a script for a jesters tear yourself.
   </div>
@@ -1001,7 +1048,6 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
     </button>
     <button
       class="emotion-7"
-      data-autofocus="true"
       type="button"
     >
       <span

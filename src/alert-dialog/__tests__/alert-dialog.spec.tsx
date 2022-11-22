@@ -3,9 +3,17 @@ import { render, fireEvent, waitFor, act } from '@testing-library/react';
 
 import { AlertDialog } from '../index';
 
+const MOCKED_ID = '123abC';
+
 jest.mock('../../icon', () => {
   return {
     Cross: () => 'CrossIcon',
+  };
+});
+
+jest.mock('nanoid', () => {
+  return {
+    nanoid: () => MOCKED_ID,
   };
 });
 
@@ -53,7 +61,7 @@ describe('AlertDialogTest', () => {
 
     let overlay;
     await waitFor(() => {
-      overlay = getByTestId('dialog-overlay');
+      overlay = getByTestId('alert-dialog-overlay');
     });
     const dialog = getByRole('alertdialog');
     const title = getByText('Warning!');

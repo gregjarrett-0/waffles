@@ -26,13 +26,10 @@ function TestDrawer({ isOpen, onClose, placement }: TestDrawerProps) {
     <Drawer
       isOpen={isOpen}
       onClose={onClose}
-      aria-labelledby={`drawer-${placement}-title`}
       placement={placement}
       data-testid={`${placement}-drawer`}
     >
-      <Drawer.Header id={`drawer-${placement}-title`}>
-        Title of a Drawer
-      </Drawer.Header>
+      <Drawer.Header>Title of a Drawer</Drawer.Header>
       <Drawer.Body>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

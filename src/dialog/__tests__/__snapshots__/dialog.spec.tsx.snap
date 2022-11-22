@@ -385,8 +385,8 @@ exports[`Dialog renders snapshot 1`] = `
 }
 
 <section
-  aria-describedby="dialog-body-123abC"
-  aria-labelledby="dialog-header-123abC"
+  aria-describedby="dialog-123abC-body"
+  aria-labelledby="dialog-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -401,13 +401,13 @@ exports[`Dialog renders snapshot 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="dialog-header-123abC"
+    id="dialog-123abC-header"
   >
     Taylor Swift Discography
   </h2>
   <div
     class="emotion-3"
-    id="dialog-body-123abC"
+    id="dialog-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>
@@ -426,7 +426,6 @@ exports[`Dialog renders snapshot 1`] = `
     </button>
     <button
       class="emotion-7"
-      data-autofocus="true"
       type="button"
     >
       <span

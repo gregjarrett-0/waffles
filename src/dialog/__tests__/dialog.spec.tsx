@@ -67,17 +67,17 @@ describe('Dialog', () => {
     expect(dialog).toBeInTheDocument();
     expect(dialog).toHaveAttribute(
       'aria-labelledby',
-      `dialog-header-${MOCKED_ID}`,
+      `dialog-${MOCKED_ID}-header`,
     );
     expect(dialog).toHaveAttribute(
       'aria-describedby',
-      `dialog-body-${MOCKED_ID}`,
+      `dialog-${MOCKED_ID}-body`,
     );
     expect(overlay).toBeInTheDocument();
     expect(header).toBeInTheDocument();
-    expect(header).toHaveAttribute('id', `dialog-header-${MOCKED_ID}`);
+    expect(header).toHaveAttribute('id', `dialog-${MOCKED_ID}-header`);
     expect(body).toBeInTheDocument();
-    expect(body).toHaveAttribute('id', `dialog-body-${MOCKED_ID}`);
+    expect(body).toHaveAttribute('id', `dialog-${MOCKED_ID}-body`);
     expect(closeButton).toBeInTheDocument();
     expect(confirmButton).toBeInTheDocument();
   });
