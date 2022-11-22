@@ -41,7 +41,7 @@ function ToastProvider({
   const toast = useCallback(
     ({
       title,
-      variant = 'default',
+      variant = 'info',
       description,
       disableAutoHide,
     }: ToastOptions) => {

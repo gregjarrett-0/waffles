@@ -12,8 +12,8 @@ type ToastProps = {
   /* Supportive content to display below the title. */
   description?: React.ReactNode;
   /* Defines the type of notification. */
-  /* @default default */
-  variant?: 'default' | 'success' | 'warning' | 'error';
+  /* @default info */
+  variant?: 'info' | 'success' | 'warning' | 'error';
   /* Turns off auto-hide functionality for the specific Toast. Overrides the `ToastProvider` value. */
   /* @default false */
   disableAutoHide?: boolean;
@@ -26,7 +26,7 @@ type ToastProps = {
 function Toast({
   title,
   description,
-  variant = 'default',
+  variant = 'info',
   disableAutoHide,
   autoHideDuration,
   onClose,
