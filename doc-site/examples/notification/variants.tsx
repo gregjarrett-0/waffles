@@ -13,7 +13,7 @@ function Example() {
       `}
     >
       <Notification
-        variant="default"
+        variant="info"
         title="We don't share your personal information"
         description="Your info is only shared with an employer when you
           apply for a job or accept their request."

@@ -9,7 +9,7 @@ import { notificationExit } from './keyframes';
 type LayoutType = 'horizontal' | 'vertical';
 
 const regularVariantMap = {
-  default: {
+  info: {
     backgroundColor: hexToRgba(tokens.colors.blue, 0.15),
     borderColor: hexToRgba(tokens.colors.navy, 0.2),
   },
@@ -32,7 +32,7 @@ const regularVariantMap = {
 };
 
 const invertedVariantMap = {
-  default: {
+  info: {
     backgroundColor: hexToRgba(tokens.colors.blue, 0.25),
     borderColor: hexToRgba(tokens.colors.blue, 0.8),
   },

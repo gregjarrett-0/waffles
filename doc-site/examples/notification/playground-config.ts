@@ -10,7 +10,7 @@ function Playground() {
     <Notification
       title="Short notification title"
       description="Keep the title and description as short as possible."
-      variant="default"
+      variant="info"
       closable
     />
   );
