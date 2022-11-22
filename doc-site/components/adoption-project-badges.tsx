@@ -30,6 +30,7 @@ type AdoptionProjectBadgesProps = {
   currentVersion: string;
 };
 
+// Badges displayed next to project name, highlighting Waffles versions used
 function AdoptionProjectBadges({
   dependencies,
   currentVersion,

@@ -8,7 +8,7 @@ import { Button } from '@datacamp/waffles/button';
 
 import Badges from './adoption-project-badges';
 import Dependencies from './adoption-dependencies';
-import Components from './adoption-components';
+import ComponentsStats from './adoption-components';
 
 import type { AdoptionProjectStats } from '../types';
 
@@ -58,6 +58,7 @@ type AdoptionProjectOverviewProps = {
   currentVersion: string;
 };
 
+// Display project's dependencies and components usage
 function AdoptionProjectOverview({
   project,
   currentVersion,
@@ -95,10 +96,10 @@ function AdoptionProjectOverview({
             />
           </section>
           <section css={sectionStyle}>
-            <Heading size="medium">Components stats</Heading>
+            <Heading size="medium">Components usage</Heading>
             {project.components.old.length === 0 &&
               project.components.new.length === 0 && <Text>N/A</Text>}
-            <Components combinedComponents={project.components} />
+            <ComponentsStats combinedComponents={project.components} />
           </section>
         </div>
       )}

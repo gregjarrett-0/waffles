@@ -3,11 +3,13 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Heading } from '@datacamp/waffles/heading';
 import { Card } from '@datacamp/waffles/card';
 
-import AdoptionComponents from './adoption-components';
+import UsageStats from './adoption-global-usage';
+import ComponentsStats from './adoption-components';
 
 import type { AdoptionProjectStats, AdoptionComponentsStats } from '../types';
 
 const cardStyle = css`
+  margin-top: ${tokens.spacing.medium};
   margin-bottom: ${tokens.spacing.medium};
   padding-bottom: ${tokens.spacing.large};
 `;
@@ -80,17 +82,27 @@ function getGlobalComponentsStats(data: AdoptionProjectStats[]) {
   };
 }
 
-type AdoptionComponentsGlobalProps = {
-  data: AdoptionProjectStats[];
+type AdoptionGlobalProps = {
+  projectsData: AdoptionProjectStats[];
+  usageData: {
+    all: number;
+    new: number;
+    old: number;
+  };
 };
 
-function AdoptionComponentsGlobal({ data }: AdoptionComponentsGlobalProps) {
+// Global Waffles statistic of components and versions used across all DataCamp repos
+function AdoptionGlobal({ projectsData, usageData }: AdoptionGlobalProps) {
   return (
     <Card disableHoverEffect css={cardStyle}>
-      <Heading size="large">Global components stats</Heading>
-      <AdoptionComponents combinedComponents={getGlobalComponentsStats(data)} />
+      <Heading size="large">By version in each project</Heading>
+      <UsageStats usageData={usageData} />
+      <Heading size="large">By component in all projects</Heading>
+      <ComponentsStats
+        combinedComponents={getGlobalComponentsStats(projectsData)}
+      />
     </Card>
   );
 }
 
-export default AdoptionComponentsGlobal;
+export default AdoptionGlobal;

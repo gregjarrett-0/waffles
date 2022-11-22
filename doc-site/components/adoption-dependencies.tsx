@@ -40,6 +40,7 @@ type AdoptionDependenciesProps = {
   currentVersion: string;
 };
 
+// List of dependencies with outdated versions highlighted
 function AdoptionDependencies({
   dependencies,
   currentVersion,

@@ -23,6 +23,7 @@ type AdoptionComponentsListProps = {
   colorScale: string[];
 };
 
+// List of components, color coded in the same way as related pie chart
 function AdoptionComponentsList({
   components,
   colorScale,

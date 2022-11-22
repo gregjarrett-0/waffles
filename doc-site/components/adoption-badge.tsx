@@ -26,6 +26,7 @@ type AdoptionBadgeProps = {
   isNewOnly?: boolean;
 };
 
+// Single badge shown next to project name
 function AdoptionBadge({
   children,
   version,
