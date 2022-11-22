@@ -15,7 +15,6 @@ yarn-error.log*
 .env.production.local
 doc-site/.next
 doc-site/public/downloads
-doc-site/adoption
 workbench/.next
 workbench/pages/stories
 .eslintcache

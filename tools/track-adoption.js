@@ -457,6 +457,8 @@ async function run() {
   console.log(chalk.magentaBright('Sorting stats...'));
   const sortedStats = sortResults(componentsStats);
 
+  console.log(chalk.green.bold(`${sortedStats.length} projects tracked`));
+
   // Write results to file
   if (!fs.existsSync(adoptionTrackerPath)) {
     fs.mkdirSync(adoptionTrackerPath);

@@ -176,7 +176,7 @@ function AdoptionPage() {
           </li>
           <li css={listItemStyle}>
             <Badge version="old">Old Waffles</Badge>
-            <Text css={listDescriptionStyle}>Project is using New Waffles</Text>
+            <Text css={listDescriptionStyle}>Project is using Old Waffles</Text>
           </li>
         </ul>
         <Notification
