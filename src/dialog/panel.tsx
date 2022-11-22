@@ -52,8 +52,8 @@ function Panel({
           css={panelStyle({ isVisible })}
           {...getFloatingProps({
             ref: floating,
-            ...restProps,
           })}
+          {...restProps}
         >
           <CloseButton onClick={onClose} />
           {children}

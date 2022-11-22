@@ -1,11 +1,8 @@
-import { FocusOn } from 'react-focus-on';
 import React from 'react';
 
-import { Portal } from '../portal';
-import { Overlay } from '../overlay';
-import { useAnimateTransition } from '../hooks';
+import { Dialog } from '../dialog';
 
-import Panel from './panel';
+import { drawerStyle } from './styles';
 
 type DrawerProps = {
   /* Determines if the Drawer is open. */
@@ -26,31 +23,16 @@ function DrawerInternal({
   children,
   ...restProps
 }: DrawerProps) {
-  const isAnimating = useAnimateTransition(isOpen, 300);
-
   return (
-    <Portal>
-      {isAnimating && (
-        <>
-          <Overlay isVisible={isOpen} data-testid="drawer-overlay" />
-          <FocusOn
-            onClickOutside={onClose}
-            onEscapeKey={onClose}
-            autoFocus
-            returnFocus
-          >
-            <Panel
-              isVisible={isOpen}
-              onClose={onClose}
-              placement={placement}
-              {...restProps}
-            >
-              {children}
-            </Panel>
-          </FocusOn>
-        </>
-      )}
-    </Portal>
+    <Dialog
+      css={drawerStyle({ isVisible: isOpen, placement })}
+      isOpen={isOpen}
+      onClose={onClose}
+      idPrefix="drawer"
+      {...restProps}
+    >
+      {children}
+    </Dialog>
   );
 }
 
