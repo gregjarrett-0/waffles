@@ -21,13 +21,13 @@ function Triggers() {
         onClick={() =>
           toast({
             title:
-              'Very Long Default Toast Title Which Most Likely Will Span Multiple Lines',
+              'Very Long Info Toast Title Which Most Likely Will Span Multiple Lines',
             description:
-              'Default toast description which spans through multiple lines.',
+              'Info toast description which spans through multiple lines.',
           })
         }
       >
-        Show Default Toast
+        Show Info Toast
       </Button>
       <Button
         onClick={() =>

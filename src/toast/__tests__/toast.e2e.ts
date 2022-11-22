@@ -53,7 +53,7 @@ describe('Toast', () => {
         cy.viewport(width, height);
         cy.loadStory('toast-variants');
         // Force clicks for buttons obscured by toasts
-        cy.findByText('Show Default Toast').click({ force: true });
+        cy.findByText('Show Info Toast').click({ force: true });
         cy.findByText('Show Success Toast').click({ force: true });
         cy.findByText('Show Warning Toast').click({ force: true });
         cy.findByText('Show Error Toast').click({ force: true });

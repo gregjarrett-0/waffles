@@ -11,12 +11,12 @@ function ToastTest() {
         type="button"
         onClick={() =>
           toast({
-            title: 'Default Toast Title',
-            description: 'Default toast description.',
+            title: 'Info Toast Title',
+            description: 'Info toast description.',
           })
         }
       >
-        Show Default Toast
+        Show Info Toast
       </button>
       <button
         type="button"
@@ -64,13 +64,13 @@ function ToastTestOverrideHide() {
       type="button"
       onClick={() =>
         toast({
-          title: 'Default Toast Title',
-          description: 'Default toast description.',
+          title: 'Info Toast Title',
+          description: 'Info toast description.',
           disableAutoHide: true,
         })
       }
     >
-      Show Default Toast
+      Show Info Toast
     </button>
   );
 }
@@ -91,15 +91,15 @@ describe('Toast', () => {
       </ToastProvider>,
     );
 
-    const toastTrigger = getByText('Show Default Toast');
+    const toastTrigger = getByText('Show Info Toast');
     fireEvent.click(toastTrigger);
 
     act(() => {
       jest.advanceTimersByTime(1000);
     });
 
-    const title = getByText('Default Toast Title');
-    const description = getByText('Default toast description.');
+    const title = getByText('Info Toast Title');
+    const description = getByText('Info toast description.');
 
     expect(title).toBeInTheDocument();
     expect(description).toBeInTheDocument();
@@ -112,7 +112,7 @@ describe('Toast', () => {
       </ToastProvider>,
     );
 
-    const toastTrigger = getByText('Show Default Toast');
+    const toastTrigger = getByText('Show Info Toast');
 
     // Show 3 toasts
     fireEvent.click(toastTrigger);
@@ -137,7 +137,7 @@ describe('Toast', () => {
       </ToastProvider>,
     );
 
-    const toastTrigger = getByText('Show Default Toast');
+    const toastTrigger = getByText('Show Info Toast');
     fireEvent.click(toastTrigger);
 
     act(() => {
@@ -145,7 +145,7 @@ describe('Toast', () => {
       jest.advanceTimersByTime(7000);
     });
 
-    const title = queryByText('Default Toast Title');
+    const title = queryByText('Info Toast Title');
     const list = queryByTestId('toasts-list');
 
     expect(title).not.toBeInTheDocument();
@@ -200,7 +200,7 @@ describe('Toast', () => {
       </ToastProvider>,
     );
 
-    const toastTrigger = getByText('Show Default Toast');
+    const toastTrigger = getByText('Show Info Toast');
     fireEvent.click(toastTrigger);
 
     // By default toast would be closed after 6 seconds
@@ -209,7 +209,7 @@ describe('Toast', () => {
       jest.advanceTimersByTime(10000);
     });
 
-    const title = getByText('Show Default Toast');
+    const title = getByText('Show Info Toast');
 
     expect(title).toBeInTheDocument();
   });
@@ -221,7 +221,7 @@ describe('Toast', () => {
       </ToastProvider>,
     );
 
-    const toastTrigger = getByText('Show Default Toast');
+    const toastTrigger = getByText('Show Info Toast');
     fireEvent.click(toastTrigger);
 
     act(() => {
@@ -236,7 +236,7 @@ describe('Toast', () => {
       jest.advanceTimersByTime(1000);
     });
 
-    const title = queryByText('Default Toast Title');
+    const title = queryByText('Info Toast Title');
 
     expect(title).not.toBeInTheDocument();
   });
@@ -248,7 +248,7 @@ describe('Toast', () => {
       </ToastProvider>,
     );
 
-    const toastTrigger = getByText('Show Default Toast');
+    const toastTrigger = getByText('Show Info Toast');
     fireEvent.click(toastTrigger);
 
     act(() => {
@@ -320,14 +320,14 @@ describe('Toast', () => {
   });
 
   describe('render snapshot of', () => {
-    it('default toast', () => {
+    it('info toast', () => {
       const { getByText, getByRole } = render(
         <ToastProvider>
           <ToastTest />
         </ToastProvider>,
       );
 
-      const toastTrigger = getByText('Show Default Toast');
+      const toastTrigger = getByText('Show Info Toast');
       fireEvent.click(toastTrigger);
 
       act(() => {
