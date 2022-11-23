@@ -25,7 +25,7 @@ function Story() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
         </Drawer.Header>
-        <Drawer.Body>
+        <Drawer.Body data-testid="drawer-body">
           <Paragraph>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
