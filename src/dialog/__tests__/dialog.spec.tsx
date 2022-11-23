@@ -94,6 +94,51 @@ describe('Dialog', () => {
     expect(overlay).not.toBeInTheDocument();
   });
 
+  it('when custom close button is provided, appropriate onClose and onClick handlers are fired', async () => {
+    jest.useFakeTimers();
+
+    const handleClick = jest.fn();
+    const handleClose = jest.fn();
+    const { getByTestId } = render(
+      <Dialog
+        isOpen={true}
+        onClose={handleClose}
+        closeButtonOverride={
+          <Dialog.CloseButton
+            data-testid="custom-close-button"
+            onClick={handleClick}
+          />
+        }
+      >
+        <Dialog.Header>Taylor Swift Discography</Dialog.Header>
+        <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
+        <Dialog.Footer>
+          <Dialog.Button onClick={handleClick}>Dismiss</Dialog.Button>
+        </Dialog.Footer>
+      </Dialog>,
+    );
+
+    let closeButton;
+    await waitFor(() => {
+      closeButton = getByTestId('custom-close-button');
+    });
+
+    expect(closeButton).toBeInTheDocument();
+    closeButton && fireEvent.click(closeButton);
+
+    // Component unmount is delayed because of close animation
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
+
+    // Check default `onClose` behavior still works
+    expect(handleClose).toHaveBeenCalledTimes(1);
+    // Check custom close button `onClick` has also been called
+    expect(handleClick).toHaveBeenCalledTimes(1);
+
+    jest.useRealTimers();
+  });
+
   it('when close button at the top is clicked, onClose handler is called', async () => {
     const handleClose = jest.fn();
     const { getByLabelText } = render(

@@ -24,6 +24,8 @@ type DialogProps = {
   /* Defines the Dialog role. */
   /* @default dialog */
   role?: 'dialog' | 'alertdialog';
+  /* Custom close button component. In general use `Dialog.CloseButton` subcomponent. */
+  closeButtonOverride?: JSX.Element;
   /* Content of the Dialog. In general, Dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
   children: React.ReactNode;
   /* [skip docs] */
@@ -34,6 +36,7 @@ function DialogInternal({
   isOpen,
   onClose,
   role = 'dialog',
+  closeButtonOverride,
   children,
   idPrefix = 'dialog',
   ...restProps
@@ -78,6 +81,7 @@ function DialogInternal({
                 role,
                 onClose,
                 isVisible: isOpen,
+                closeButtonOverride,
                 ...restProps,
               }}
             >

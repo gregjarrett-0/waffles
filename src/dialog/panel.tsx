@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import {
   FloatingFocusManager,
   useDismiss,
@@ -15,6 +15,7 @@ type PanelProps = {
   role: NonNullable<React.ComponentProps<typeof Dialog>['role']>;
   isVisible: boolean;
   onClose: () => void;
+  closeButtonOverride?: JSX.Element;
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
@@ -22,6 +23,7 @@ function Panel({
   role,
   isVisible,
   onClose,
+  closeButtonOverride,
   children,
   ...restProps
 }: PanelProps) {
@@ -35,6 +37,21 @@ function Panel({
       bubbles: false,
     }),
   ]);
+
+  function renderCloseButton() {
+    function handleClick() {
+      closeButtonOverride?.props.onClick?.();
+      onClose?.();
+    }
+
+    return closeButtonOverride ? (
+      cloneElement(closeButtonOverride, {
+        onClick: handleClick,
+      })
+    ) : (
+      <CloseButton onClick={onClose} />
+    );
+  }
 
   return (
     <FloatingFocusManager
@@ -55,7 +72,7 @@ function Panel({
           })}
           {...restProps}
         >
-          <CloseButton onClick={onClose} />
+          {renderCloseButton()}
           {children}
         </section>
       </div>
