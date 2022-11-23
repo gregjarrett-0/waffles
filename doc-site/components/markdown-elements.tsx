@@ -136,8 +136,8 @@ function TableCell({ children }: ContentProps) {
 }
 
 const hrStyle = css`
-  border-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.low)};
-  border-width: 1px 0 0 0;
+  border-color: ${hexToRgba(tokens.colors.navy, 0.15)};
+  border-width: ${tokens.borderWidth.thin} 0 0 0;
   margin: ${tokens.spacing.xlarge} 0;
 `;
 
