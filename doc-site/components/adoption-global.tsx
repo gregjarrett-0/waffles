@@ -95,9 +95,11 @@ type AdoptionGlobalProps = {
 function AdoptionGlobal({ projectsData, usageData }: AdoptionGlobalProps) {
   return (
     <Card disableHoverEffect css={cardStyle}>
-      <Heading size="large">By version in each project</Heading>
+      <Heading size="large">
+        Breakdown of Waffles versions used by each project
+      </Heading>
       <UsageStats usageData={usageData} />
-      <Heading size="large">By component in all projects</Heading>
+      <Heading size="large">Component usage in all projects</Heading>
       <ComponentsStats
         combinedComponents={getGlobalComponentsStats(projectsData)}
       />

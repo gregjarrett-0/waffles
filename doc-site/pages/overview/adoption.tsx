@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Tabs } from '@datacamp/waffles/tabs';
-import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Notification } from '@datacamp/waffles/notification';
 import { Heading } from '@datacamp/waffles/heading';
 import { Card } from '@datacamp/waffles/card';
@@ -109,10 +108,6 @@ function AdoptionPage() {
     >
       <section>
         <Heading css={headingStyle}>Global usage</Heading>
-        <Paragraph>
-          Breakdown of Waffles versions and components used across all DataCamp
-          projects.
-        </Paragraph>
         <GlobalStats
           projectsData={allProjectsData}
           usageData={{
