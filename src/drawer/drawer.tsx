@@ -7,6 +7,7 @@ const DrawerNamespace = Object.assign(DrawerInternal, {
   Body: Dialog.Body,
   Footer: Dialog.Footer,
   Button: Dialog.Button,
+  CloseButton: Dialog.CloseButton,
 });
 
 export default DrawerNamespace;

@@ -42,13 +42,10 @@ function Example() {
       </div>
       <Drawer
         placement={placement}
-        aria-labelledby="new-course-drawer-header"
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
       >
-        <Drawer.Header id="new-course-drawer-header">
-          Create New Course
-        </Drawer.Header>
+        <Drawer.Header>Create new course</Drawer.Header>
         <Drawer.Body>
           <form
             css={css`

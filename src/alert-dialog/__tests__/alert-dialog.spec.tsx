@@ -107,7 +107,7 @@ describe('AlertDialogTest', () => {
           />
         }
       >
-        <AlertDialog.Header>Taylor Swift Discography</AlertDialog.Header>
+        <AlertDialog.Header>Taylor Swift discography</AlertDialog.Header>
         <AlertDialog.Body>
           Discover amazing pop songs by Taylor Swift.
         </AlertDialog.Body>

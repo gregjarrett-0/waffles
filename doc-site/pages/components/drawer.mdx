@@ -8,6 +8,7 @@ import Imports from '../../components/imports';
 
 import playgroundConfig from '../../examples/drawer/playground-config';
 import BasicUsage from '../../examples/drawer/basic-usage';
+import CustomClose from '../../examples/drawer/custom-close';
 
 <Layout title="Drawer" description="🚧 This page is under construction">
 
@@ -19,6 +20,10 @@ The same accessibility guidelines apply to `Drawer` as to [Dialog](/components/d
 
 <Example title="Basic usage" path="drawer/basic-usage">
   <BasicUsage />
+</Example>
+
+<Example title="Custom close" path="drawer/custom-close">
+  <CustomClose />
 </Example>
 
 ## Playground
@@ -66,6 +71,10 @@ In addition to all custom props listed below, `Drawer.Button` accepts all props 
 <PropsTable
   metadata={require('!!extract-react-types-loader!../../../src/dialog/button-internal')}
 />
+
+### Drawer.CloseButton
+
+`Drawer.CloseButton` accepts all props regular `HTMLButton` would, except `children`.
 
 ## Imports
 

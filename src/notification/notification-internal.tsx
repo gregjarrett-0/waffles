@@ -61,10 +61,18 @@ function NotificationInternal({
 
   return isAnimating ? (
     <Card
-      {...{ title, description, variant, mode, inverted, closable, action }}
+      {...{
+        title,
+        description,
+        variant,
+        mode,
+        inverted,
+        closable,
+        action,
+        closeButtonOverride,
+      }}
       {...restProps}
       isVisible={isOpen}
-      closeButtonOverride={closeButtonOverride}
       onClose={handleClose}
     />
   ) : null;

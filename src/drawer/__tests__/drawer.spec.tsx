@@ -31,7 +31,7 @@ function DrawerTest({ isOpen, onClose, placement }: DrawerTestProps) {
       placement={placement}
       data-testid="test-drawer"
     >
-      <Drawer.Header>Fabulous Marillion Concert</Drawer.Header>
+      <Drawer.Header>Fabulous Marillion concert</Drawer.Header>
       <Drawer.Body>Write a script for a jesters tear yourself.</Drawer.Body>
       <Drawer.Footer>
         <Drawer.Button onClick={onClose}>Dismiss</Drawer.Button>
@@ -65,7 +65,7 @@ describe('Drawer', () => {
       overlay = getByTestId('drawer-overlay');
     });
     const dialog = getByTestId('test-drawer');
-    const header = getByText('Fabulous Marillion Concert');
+    const header = getByText('Fabulous Marillion concert');
     const body = getByText(/script for a jesters tear/i);
     const closeButton = getByLabelText('Close');
     const confirmButton = getByText('Confirm');
@@ -87,6 +87,52 @@ describe('Drawer', () => {
     expect(body).toBeInTheDocument();
     expect(closeButton).toBeInTheDocument();
     expect(confirmButton).toBeInTheDocument();
+  });
+
+  it('when custom close button is provided, appropriate onClose and onClick handlers are fired', async () => {
+    jest.useFakeTimers();
+
+    const handleClick = jest.fn();
+    const handleClose = jest.fn();
+    const { getByTestId } = render(
+      <Drawer
+        isOpen={true}
+        onClose={handleClose}
+        placement="left"
+        closeButtonOverride={
+          <Drawer.CloseButton
+            data-testid="custom-close-button"
+            onClick={handleClick}
+          />
+        }
+      >
+        <Drawer.Header>Fabulous Marillion concert</Drawer.Header>
+        <Drawer.Body>Write a script for a jesters tear yourself.</Drawer.Body>
+        <Drawer.Footer>
+          <Drawer.Button onClick={handleClose}>Dismiss</Drawer.Button>
+        </Drawer.Footer>
+      </Drawer>,
+    );
+
+    let closeButton;
+    await waitFor(() => {
+      closeButton = getByTestId('custom-close-button');
+    });
+
+    expect(closeButton).toBeInTheDocument();
+    closeButton && fireEvent.click(closeButton);
+
+    // Component unmount is delayed because of close animation
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
+
+    // Check default `onClose` behavior still works
+    expect(handleClose).toHaveBeenCalledTimes(1);
+    // Check custom close button `onClick` has also been called
+    expect(handleClick).toHaveBeenCalledTimes(1);
+
+    jest.useRealTimers();
   });
 
   it("doesn't render drawer when it is closed", () => {

@@ -25,7 +25,7 @@ type DialogTestProps = {
 function DialogTest({ isOpen, onClose }: DialogTestProps) {
   return (
     <Dialog isOpen={isOpen} onClose={onClose}>
-      <Dialog.Header>Taylor Swift Discography</Dialog.Header>
+      <Dialog.Header>Taylor Swift discography</Dialog.Header>
       <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
       <Dialog.Footer>
         <Dialog.Button onClick={onClose}>Dismiss</Dialog.Button>
@@ -59,7 +59,7 @@ describe('Dialog', () => {
       overlay = getByTestId('dialog-overlay');
     });
     const dialog = getByRole('dialog');
-    const header = getByText('Taylor Swift Discography');
+    const header = getByText('Taylor Swift discography');
     const body = getByText(/amazing pop songs/i);
     const closeButton = getByLabelText('Close');
     const confirmButton = getByText('Confirm');
@@ -110,7 +110,7 @@ describe('Dialog', () => {
           />
         }
       >
-        <Dialog.Header>Taylor Swift Discography</Dialog.Header>
+        <Dialog.Header>Taylor Swift discography</Dialog.Header>
         <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
         <Dialog.Footer>
           <Dialog.Button onClick={handleClick}>Dismiss</Dialog.Button>

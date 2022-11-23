@@ -9,6 +9,8 @@ type DrawerProps = {
   isOpen: boolean;
   /* Handler called when the Drawer will close. */
   onClose: () => void;
+  /* Custom close button component. In general use `Drawer.CloseButton` subcomponent. */
+  closeButtonOverride?: JSX.Element;
   /* Side from which the Drawer originates from. */
   /* @default left */
   placement?: 'left' | 'right';
@@ -19,6 +21,7 @@ type DrawerProps = {
 function DrawerInternal({
   isOpen,
   onClose,
+  closeButtonOverride,
   placement = 'left',
   children,
   ...restProps
@@ -26,9 +29,7 @@ function DrawerInternal({
   return (
     <Dialog
       css={drawerStyle({ isVisible: isOpen, placement })}
-      isOpen={isOpen}
-      onClose={onClose}
-      idPrefix="drawer"
+      {...{ isOpen, onClose, closeButtonOverride, idPrefix: 'drawer' }}
       {...restProps}
     >
       {children}
