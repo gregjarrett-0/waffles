@@ -10,6 +10,7 @@ const AlertDialogNamespace = Object.assign(AlertDialogInternal, {
   Body,
   Footer,
   Button: Dialog.Button,
+  CloseButton: Dialog.CloseButton,
 });
 
 export default AlertDialogNamespace;

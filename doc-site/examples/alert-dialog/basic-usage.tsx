@@ -11,7 +11,7 @@ function Example() {
       <Button onClick={() => setIsOpen(true)}>Open Alert Dialog</Button>
       <AlertDialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <AlertDialog.Header>
-          You Are About To Delete An Exercise
+          You are about to delete an exercise
         </AlertDialog.Header>
         <AlertDialog.Body>
           <Paragraph>

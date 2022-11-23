@@ -9,7 +9,11 @@ function Example() {
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Dialog</Button>
-      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <Dialog
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        closeButtonOverride={<Dialog.CloseButton data-testid="test-id" />}
+      >
         <Dialog.Header>Confirm your case study participation</Dialog.Header>
         <Dialog.Body>
           <Paragraph>
@@ -17,20 +21,12 @@ function Example() {
             computer with a webcam. If you fail to submit, you will have to wait
             4 weeks before taking the case study again.
           </Paragraph>
-          <Paragraph variant="secondary">
-            Support is available during regular European working
-            hours&mdash;Monday to Friday, CET 8:00 to 17:00.
-          </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
           <Dialog.Button variant="secondary" onClick={() => setIsOpen(false)}>
             Cancel
           </Dialog.Button>
-          <Dialog.Button
-            autoFocus
-            variant="primary"
-            onClick={() => setIsOpen(false)}
-          >
+          <Dialog.Button onClick={() => setIsOpen(false)}>
             Confirm
           </Dialog.Button>
         </Dialog.Footer>

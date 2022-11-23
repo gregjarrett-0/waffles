@@ -3,16 +3,7 @@ import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Button } from '@datacamp/waffles/button';
 import { AlertDialog } from '@datacamp/waffles/alert-dialog';
 
-import type { PlaygroundConfig } from '../../types';
-
-const initialCode = `
-import { useState } from 'react';
-
-import { AlertDialog } from '@datacamp/waffles/alert-dialog';
-import { Paragraph } from '@datacamp/waffles/paragraph';
-import { Button } from '@datacamp/waffles/button';
-
-function Playground() {
+function Example() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,40 +12,34 @@ function Playground() {
       <AlertDialog
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
+        closeButtonOverride={<AlertDialog.CloseButton data-testid="test-id" />}
       >
         <AlertDialog.Header>
-          Alert dialog title
+          You are about to delete an exercise
         </AlertDialog.Header>
         <AlertDialog.Body>
           <Paragraph>
-            Content of an alert dialog should be rather short.
-            This type of dialog is used to notify the user of urgent
-            information that demands immediate attention.
+            Are you sure you want to proceed with this action? This can not be
+            undone.
           </Paragraph>
         </AlertDialog.Body>
         <AlertDialog.Footer>
           <AlertDialog.Button
-            autoFocus
-            fullWidth
+            variant="secondary"
             onClick={() => setIsOpen(false)}
           >
-            Got It
+            Cancel
+          </AlertDialog.Button>
+          <AlertDialog.Button
+            variant="destructive"
+            onClick={() => setIsOpen(false)}
+          >
+            Delete
           </AlertDialog.Button>
         </AlertDialog.Footer>
       </AlertDialog>
     </>
   );
 }
-`;
 
-const playgroundConfig: PlaygroundConfig = {
-  initialCode,
-  scope: {
-    useState,
-    AlertDialog,
-    Paragraph,
-    Button,
-  },
-};
-
-export default playgroundConfig;
+export default Example;

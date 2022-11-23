@@ -23,7 +23,7 @@ function Playground() {
         onClose={() => setIsOpen(false)}
       >
         <Dialog.Header>
-          Dialog Title
+          Dialog title
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
