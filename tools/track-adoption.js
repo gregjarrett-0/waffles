@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* eslint-disable no-console */
 const chalk = require('chalk');
 const { Octokit } = require('@octokit/rest');
@@ -6,7 +8,7 @@ const path = require('path');
 const fs = require('fs');
 const { getPascalCase } = require('./helpers/formatting');
 
-const octokit = new Octokit({ auth: process.env.TOKEN });
+const octokit = new Octokit({ auth: process.env.CIRCLECI_GITHUB_TOKEN });
 
 // Utils
 
@@ -450,7 +452,7 @@ async function run() {
     ),
   );
   const componentsStats = await getWafflesComponentsStats(
-    wafflesVersionsByRepo,
+    wafflesVersionsByRepo.slice(0, 3), // TODO: Revert later to gather data from all repos - blurbyte
   );
 
   // 4. Sort

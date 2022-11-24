@@ -30,7 +30,7 @@
     "lint:commits": "commitlint --to HEAD --verbose",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "track-adoption": "TOKEN=auth_token node ./tools/track-adoption.js",
+    "track-adoption": "node ./tools/track-adoption.js",
     "release": "release-it --VV --ci",
     "prepare": "is-ci || husky install"
   },
@@ -121,6 +121,7 @@
     "@react-aria/utils": "^3.14.0",
     "nanoid": "^3.3.4",
     "react-focus-on": "^3.6.0",
-    "react-range": "^1.8.14"
+    "react-range": "^1.8.14",
+    "victory": "^36.6.8"
   }
 }
