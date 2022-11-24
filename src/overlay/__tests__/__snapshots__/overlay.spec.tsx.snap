@@ -16,6 +16,7 @@ exports[`Overlay renders snapshot when is not visible 1`] = `
   opacity: 0;
   -webkit-animation: animation-0 200ms ease-out forwards;
   animation: animation-0 200ms ease-out forwards;
+  z-index: 8000;
 }
 
 <div
@@ -40,6 +41,7 @@ exports[`Overlay renders snapshot when is visible 1`] = `
   opacity: 0;
   -webkit-animation: animation-0 200ms ease-out forwards;
   animation: animation-0 200ms ease-out forwards;
+  z-index: 8000;
 }
 
 <div

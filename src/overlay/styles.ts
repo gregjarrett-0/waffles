@@ -16,5 +16,6 @@ export function overlayStyle({ isVisible }: OverlayStyleOptions) {
     opacity: 0;
     animation: ${isVisible ? overlayEnter() : overlayExit()} 200ms ease-out
       forwards;
+    z-index: ${tokens.zIndex.overlay};
   `;
 }
