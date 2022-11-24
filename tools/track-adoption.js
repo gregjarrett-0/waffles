@@ -457,6 +457,12 @@ async function run() {
   console.log(chalk.magentaBright('Sorting stats...'));
   const sortedStats = sortResults(componentsStats);
 
+  // 5. Add timestamp and wrap stats with data object
+  const finalReport = {
+    createdAt: new Date(),
+    data: sortedStats,
+  };
+
   console.log(chalk.green.bold(`${sortedStats.length} projects tracked`));
 
   // Write results to file
@@ -466,7 +472,7 @@ async function run() {
 
   fs.writeFileSync(
     path.join(adoptionTrackerPath, 'adoption-report.json'),
-    JSON.stringify(sortedStats),
+    JSON.stringify(finalReport),
   );
 }
 

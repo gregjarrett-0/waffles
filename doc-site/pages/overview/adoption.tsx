@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Tabs } from '@datacamp/waffles/tabs';
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Notification } from '@datacamp/waffles/notification';
 import { Heading } from '@datacamp/waffles/heading';
 import { Card } from '@datacamp/waffles/card';
@@ -11,12 +12,18 @@ import Layout from '../../components/content-layout';
 import ProjectOverview from '../../components/adoption-project-overview';
 import GlobalStats from '../../components/adoption-global';
 import Badge from '../../components/adoption-badge';
-import allProjectsData from '../../adoption/adoption-report.json';
+import adoptionReport from '../../adoption/adoption-report.json';
 import metadata from '../../../package.json';
 
 import type { AdoptionProjectStats } from '../../types';
 
 const currentVersion = metadata.version;
+const allProjectsData = adoptionReport.data;
+const lastUpdateDate = new Intl.DateTimeFormat('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(new Date(adoptionReport.createdAt));
 
 const newWafflesOnlyProjects = allProjectsData.filter((project) => {
   return (
@@ -54,6 +61,10 @@ const oldAndNewWafflesProjectsCount = newAndOldWafflesProjects.length;
 
 const headingStyle = css`
   margin: ${tokens.spacing.large} 0 ${tokens.spacing.medium};
+`;
+
+const lastUpdateStyle = css`
+  font-style: italic;
 `;
 
 const cardStyle = css`
@@ -108,6 +119,9 @@ function AdoptionPage() {
     >
       <section>
         <Heading css={headingStyle}>Global usage</Heading>
+        <Paragraph css={lastUpdateStyle}>
+          Last updated on {lastUpdateDate}.
+        </Paragraph>
         <GlobalStats
           projectsData={allProjectsData}
           usageData={{
