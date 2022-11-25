@@ -3,8 +3,8 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Heading } from '@datacamp/waffles/heading';
 import { Card } from '@datacamp/waffles/card';
 
-import UsageStats from './adoption-global-usage';
-import ComponentsStats from './adoption-components';
+import GlobalUsage from './adoption-global-usage';
+import ComponentsOverview from './adoption-components-overview';
 
 import type { AdoptionProjectStats, AdoptionComponentsStats } from '../types';
 
@@ -98,9 +98,9 @@ function AdoptionGlobal({ projectsData, usageData }: AdoptionGlobalProps) {
       <Heading size="large">
         Breakdown of Waffles versions used by each project
       </Heading>
-      <UsageStats usageData={usageData} />
+      <GlobalUsage usageData={usageData} />
       <Heading size="large">Component usage in all projects</Heading>
-      <ComponentsStats
+      <ComponentsOverview
         combinedComponents={getGlobalComponentsStats(projectsData)}
       />
     </Card>

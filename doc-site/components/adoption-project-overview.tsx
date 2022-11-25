@@ -6,9 +6,9 @@ import { hexToRgba, mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Button } from '@datacamp/waffles/button';
 
-import Badges from './adoption-project-badges';
+import ProjectBadges from './adoption-project-badges';
 import Dependencies from './adoption-dependencies';
-import ComponentsStats from './adoption-components';
+import ComponentsOverview from './adoption-components-overview';
 
 import type { AdoptionProjectStats } from '../types';
 
@@ -72,7 +72,7 @@ function AdoptionProjectOverview({
           <Heading size="large" css={nameStyle}>
             {project.name}
           </Heading>
-          <Badges
+          <ProjectBadges
             dependencies={project.dependencies}
             currentVersion={currentVersion}
           />
@@ -99,7 +99,7 @@ function AdoptionProjectOverview({
             <Heading size="medium">Components usage</Heading>
             {project.components.old.length === 0 &&
               project.components.new.length === 0 && <Text>N/A</Text>}
-            <ComponentsStats combinedComponents={project.components} />
+            <ComponentsOverview combinedComponents={project.components} />
           </section>
         </div>
       )}

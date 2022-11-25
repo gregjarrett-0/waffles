@@ -40,7 +40,7 @@ type AdoptionDependenciesProps = {
   currentVersion: string;
 };
 
-// List of dependencies with outdated versions highlighted
+// List of dependencies with outdated versions highlighted (for New Waffles only)
 function AdoptionDependencies({
   dependencies,
   currentVersion,

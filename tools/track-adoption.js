@@ -8,6 +8,7 @@ const path = require('path');
 const fs = require('fs');
 const { getPascalCase } = require('./helpers/formatting');
 
+// TODO: To run this script locally private GitHub token must be provided, later down the road could be properly supported by .env - blurbyte
 const octokit = new Octokit({ auth: process.env.CIRCLECI_GITHUB_TOKEN });
 
 // Utils

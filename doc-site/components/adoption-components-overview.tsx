@@ -64,15 +64,17 @@ function transformComponentsData(componentsData: AdoptionComponentsStats[]) {
   });
 }
 
-type AdoptionComponentsProps = {
+type AdoptionComponentsOverviewProps = {
   combinedComponents: {
     new: AdoptionComponentsStats[];
     old: AdoptionComponentsStats[];
   };
 };
 
-// Old and New Waffles components usage pie charts
-function AdoptionComponents({ combinedComponents }: AdoptionComponentsProps) {
+// Old and New Waffles components usage pie charts and lists
+function AdoptionComponentsOverview({
+  combinedComponents,
+}: AdoptionComponentsOverviewProps) {
   return (
     <>
       {combinedComponents.new.length > 0 && (
@@ -109,4 +111,4 @@ function AdoptionComponents({ combinedComponents }: AdoptionComponentsProps) {
   );
 }
 
-export default AdoptionComponents;
+export default AdoptionComponentsOverview;
