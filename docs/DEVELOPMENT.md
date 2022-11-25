@@ -134,8 +134,8 @@ How it works in CI/CD environment:
 
 - New `track_adoption` workflow runs once a week. It's responsible for generating Waffles adoption report and deploying new docs with nicely visualized overview:
   - Regular `build_and_test` job runs to install dependencies required for adoption script.
-  - Simple [track-adoption.js](https://github.com/datacamp/waffles/blob/master/tools/track-adoption.js) script is executed. It gathers all relevant data and writes it to [adoption-report.json](https://github.com/datacamp/waffles/tree/master/doc-site/adoption/adoption-report.json) file.
-  - Whole `adoption-report.json` is afterwards uploaded to _Waffles S3 bucket_. Later this data is consumed by regular `build_test_release` workflow.
+  - Simple [track-adoption.js](https://github.com/datacamp/waffles/blob/master/tools/track-adoption.js) script is executed. It gathers all relevant data and writes it to [doc-site/adoption/adoption-report.json](https://github.com/datacamp/waffles/tree/master/doc-site/adoption/adoption-report.json) file.
+  - Whole `adoption-report.json` is afterwards uploaded to the root of _Waffles S3 bucket_. Later this data is consumed by regular `build_test_release` workflow.
   - New docs website is built, and based on data from `adoption-report.json` new [Adoption](https://waffles-next.datacamp.com/overview/adoption) page is created.
 - A small tweak to regular `build_test_release` workflow was required:
-  - When changes hit `master` branch, before docs got deployed, most up to date `adoption-report.json` is copied from _Waffles S3 bucket_. This way there is no need to run adoption script on every regular release and slow it down.
+  - When changes hit `master` branch, before docs got deployed, most up to date `adoption-report.json` is copied from _Waffles S3 bucket_ to `doc-site/adoption/`. This way there is no need to run adoption script on every regular release and slow it down.
