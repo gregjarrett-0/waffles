@@ -452,7 +452,7 @@ async function run() {
     ),
   );
   const componentsStats = await getWafflesComponentsStats(
-    wafflesVersionsByRepo.slice(0, 3), // TODO: Revert later to gather data from all repos - blurbyte
+    wafflesVersionsByRepo.slice(0, 4), // TODO: Revert later to gather data from all repos - blurbyte
   );
 
   // 4. Sort

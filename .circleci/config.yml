@@ -237,7 +237,11 @@ workflows:
           context: org-global
           requires:
             - build_and_test
-      - build_docs:
+      - persist_adoption_report:
+          context: org-global
           requires:
             - create_adoption_report
+      - build_docs:
           context: org-global
+          requires:
+            - create_adoption_report
