@@ -111,19 +111,23 @@ jobs:
   #               }
   #             ]
   #           }
-  # build_docs:
-  #   docker:
-  #     - image: cimg/node:16.13.0
-  #   steps:
-  #     - attach_workspace:
-  #         at: '.'
-  #     - run:
-  #         name: Build static docs website
-  #         command: yarn doc:build
-  #     - persist_to_workspace:
-  #         root: '.'
-  #         paths:
-  #           - '*'
+  build_docs:
+    docker:
+      - image: cimg/node:16.13.0
+    steps:
+      - attach_workspace:
+          at: '.'
+      - run:
+          name: Build static docs website
+          command: yarn doc:build
+      - run:
+          name: Show content of report
+          command: |
+            cat doc-site/adoption/adoption-report.json
+      - persist_to_workspace:
+          root: '.'
+          paths:
+            - '*'
   # deploy_docs:
   #   docker:
   #     - image: ${STAGING_ECR_URL}/docker-deploy
@@ -168,9 +172,9 @@ jobs:
           key: project-cache-v2-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache
-      - run:
-          name: Create adoption report
-          command: yarn track-adoption
+      # - run:
+      #     name: Create adoption report
+      #     command: yarn track-adoption
       - run:
           name: Build distribution
           command: yarn build
@@ -195,6 +199,27 @@ jobs:
             export AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID}
             export AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY}
             aws s3 sync doc-site/adoption s3://${BUCKET}.new.datacamp.com/ --acl public-read
+  copy_adoption_report:
+    docker:
+      - image: ${STAGING_ECR_URL}/docker-deploy
+        aws_auth:
+          aws_access_key_id: $STAGING_AWS_ACCESS_KEY_ID
+          aws_secret_access_key: $STAGING_AWS_SECRET_ACCESS_KEY
+    environment:
+      BUCKET: waffles-next
+    steps:
+      - attach_workspace:
+          at: '.'
+      - run:
+          name: Sync with S3
+          command: |
+            export AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID}
+            export AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY}
+            aws s3 cp s3://${BUCKET}.new.datacamp.com/adoption-report.json doc-site/adoption
+      - persist_to_workspace:
+          root: '.'
+          paths:
+            - '*'
 
 workflows:
   version: 2
@@ -202,10 +227,18 @@ workflows:
     jobs:
       - track-adoption:
           context: org-global
-      - persist_adoption_report:
+      # - persist_adoption_report:
+      #     context: org-global
+      #     requires:
+      #       - track-adoption
+      - copy_adoption_report:
           context: org-global
           requires:
             - track-adoption
+      - build_docs:
+          context: org-global
+          requires:
+            - copy_adoption_report
       # - build_and_test:
       #     context: org-global
       # - release:
