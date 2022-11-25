@@ -6,6 +6,24 @@ import { hexToRgba, mediaQuery } from '../helpers';
 import { panelEnter, panelExit } from './keyframes';
 import Header from './header';
 
+const variantMap = {
+  info: {
+    color: tokens.colors.blueDark,
+  },
+  success: {
+    color: tokens.colors.green,
+  },
+  warning: {
+    color: tokens.colors.orangeLight,
+  },
+  error: {
+    color: tokens.colors.red,
+  },
+  upgrade: {
+    color: tokens.colors.purple,
+  },
+};
+
 // Center vertically and horizontally dialog panel
 export function panelWrapperStyle() {
   return css`
@@ -62,7 +80,6 @@ type CloseButtonStyleOptions = {
 export function closeButtonStyle({
   hasDecorativeHeader,
 }: CloseButtonStyleOptions) {
-  console.log(hasDecorativeHeader);
   return css`
     position: absolute;
     top: ${hasDecorativeHeader ? tokens.spacing.xsmall : tokens.spacing.small};
@@ -107,6 +124,7 @@ type DecorativeStyleOptions = {
 
 export function avatarStyle({ variant }: DecorativeStyleOptions) {
   return css`
+    position: relative;
     display: flex;
     width: 48px;
     height: 48px;
@@ -115,9 +133,11 @@ export function avatarStyle({ variant }: DecorativeStyleOptions) {
     align-items: center;
     justify-content: center;
     top: 50%;
-    position: relative;
-
     box-shadow: ${tokens.boxShadow.thick};
+
+    svg {
+      color: ${variantMap[variant].color};
+    }
   `;
 }
 
@@ -126,7 +146,7 @@ export function decorativeHeaderStyle({ variant }: DecorativeStyleOptions) {
     justify-content: center;
     display: flex;
     background-color: ${tokens.colors.navyLight};
-    border-bottom: 4px solid ${tokens.colors.green};
+    border-bottom: 4px solid ${variantMap[variant].color};
     height: 44px;
   `;
 }
