@@ -12,6 +12,7 @@ import { DialogProvider } from './dialog-context';
 import Body from './body';
 
 type ChildOptions = {
+  hasDecorativeHeader?: boolean;
   headerId?: string;
   bodyId?: string;
 };
@@ -46,7 +47,7 @@ function DialogInternal({
   const autoFocusRef = createRef<HTMLButtonElement>();
 
   // Determine if `children` contains `Header` and/or `Body` components
-  function childIds() {
+  function childConfig() {
     return Children.toArray(children).reduce(
       (childOptions: ChildOptions, child) => {
         if (isValidElement(child)) {
@@ -54,6 +55,7 @@ function DialogInternal({
             return {
               ...childOptions,
               headerId: `${id}-header`,
+              hasDecorativeHeader: child.props.mode === 'decorative',
             };
           } else if (child.type === Body || child.type === AlertBody) {
             return {
@@ -69,10 +71,12 @@ function DialogInternal({
     );
   }
 
-  const { headerId, bodyId } = childIds();
+  const { headerId, bodyId, hasDecorativeHeader } = childConfig();
 
   return (
-    <DialogProvider {...{ headerId, bodyId, autoFocusRef }}>
+    <DialogProvider
+      {...{ headerId, bodyId, hasDecorativeHeader, autoFocusRef }}
+    >
       <Portal>
         {isAnimating && (
           <Overlay isVisible={isOpen} data-testid={`${idPrefix}-overlay`}>

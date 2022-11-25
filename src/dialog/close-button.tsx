@@ -5,19 +5,21 @@ import { Button } from '../button';
 
 import { closeButtonStyle } from './styles';
 
-type CloseButtonProps = Omit<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  'children'
->;
+type CloseButtonProps = {
+  hasDecorativeHeader?: boolean;
+} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
 
-function CloseButton(props: CloseButtonProps) {
+function CloseButton({
+  hasDecorativeHeader = false,
+  ...restProps
+}: CloseButtonProps) {
   return (
     <Button
-      {...props}
+      {...restProps}
       variant="plain"
       icon={<Cross />}
       aria-label="Close"
-      css={closeButtonStyle()}
+      css={closeButtonStyle({ hasDecorativeHeader })}
     />
   );
 }

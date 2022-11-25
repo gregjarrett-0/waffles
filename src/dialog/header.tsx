@@ -1,22 +1,43 @@
 import React from 'react';
 
+import { Chat } from '../icon';
 import { Heading } from '../heading';
 
-import { headerStyle } from './styles';
+import { avatarStyle, decorativeHeaderStyle, headerStyle } from './styles';
 import { useDialog } from './dialog-context';
 
 type HeaderProps = {
-  /* Title of the modal. */
+  /* */
+  /* @default plain */
+  mode?: 'plain' | 'decorative';
+  /* */
+  /* @default info */
+  variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
+  /* Title of the dialog. */
   children: React.ReactNode;
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
-function Header({ children, ...restProps }: HeaderProps) {
+function Header({
+  mode = 'plain',
+  variant = 'info',
+  children,
+  ...restProps
+}: HeaderProps) {
   const { headerId } = useDialog();
 
   return (
-    <Heading id={headerId} css={headerStyle()} {...restProps}>
-      {children}
-    </Heading>
+    <>
+      {mode === 'decorative' && (
+        <div css={decorativeHeaderStyle({ variant })}>
+          <span css={avatarStyle({ variant })}>
+            <Chat size="large" />
+          </span>
+        </div>
+      )}
+      <Heading id={headerId} css={headerStyle()} {...restProps}>
+        {children}
+      </Heading>
+    </>
   );
 }
 

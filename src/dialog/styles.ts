@@ -4,6 +4,7 @@ import { tokens } from '../tokens';
 import { hexToRgba, mediaQuery } from '../helpers';
 
 import { panelEnter, panelExit } from './keyframes';
+import Header from './header';
 
 // Center vertically and horizontally dialog panel
 export function panelWrapperStyle() {
@@ -54,13 +55,20 @@ export function panelStyle({ isVisible }: PanelStyleOptions) {
   `;
 }
 
-export function closeButtonStyle() {
+type CloseButtonStyleOptions = {
+  hasDecorativeHeader: boolean;
+};
+
+export function closeButtonStyle({
+  hasDecorativeHeader,
+}: CloseButtonStyleOptions) {
+  console.log(hasDecorativeHeader);
   return css`
     position: absolute;
-    top: ${tokens.spacing.small};
+    top: ${hasDecorativeHeader ? tokens.spacing.xsmall : tokens.spacing.small};
     right: ${tokens.spacing.small};
     z-index: ${tokens.zIndex.default};
-    color: ${tokens.colors.navy};
+    color: ${hasDecorativeHeader ? tokens.colors.white : tokens.colors.navy};
   `;
 }
 
@@ -90,6 +98,36 @@ export function bodyStyle({
       isShadowBottomVisible &&
       ','}${isShadowBottomVisible &&
       `inset 0 -12px 12px -12px ${hexToRgba(tokens.colors.navy, 0.3)}`};
+  `;
+}
+
+type DecorativeStyleOptions = {
+  variant: NonNullable<React.ComponentProps<typeof Header>['variant']>;
+};
+
+export function avatarStyle({ variant }: DecorativeStyleOptions) {
+  return css`
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: ${tokens.borderRadius.circle};
+    background-color: ${tokens.colors.white};
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    position: relative;
+
+    box-shadow: ${tokens.boxShadow.thick};
+  `;
+}
+
+export function decorativeHeaderStyle({ variant }: DecorativeStyleOptions) {
+  return css`
+    justify-content: center;
+    display: flex;
+    background-color: ${tokens.colors.navyLight};
+    border-bottom: 4px solid ${tokens.colors.green};
+    height: 44px;
   `;
 }
 

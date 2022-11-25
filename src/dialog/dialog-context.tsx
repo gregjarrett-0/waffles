@@ -4,6 +4,7 @@ import { createContext, useContext } from 'react';
 type DialogContextValue = {
   headerId?: string;
   bodyId?: string;
+  hasDecorativeHeader?: boolean;
   autoFocusRef?: React.RefObject<HTMLButtonElement>;
 };
 
