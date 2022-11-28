@@ -71,7 +71,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   color: #009BD8;
 }
 
-.emotion-4 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -83,7 +83,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   flex-grow: 1;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,14 +98,14 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   max-width: 1200px;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-8 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -124,7 +124,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   line-height: 1.5;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -140,7 +140,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   padding: 4px 0;
 }
 
-.emotion-9 {
+.emotion-10 {
   margin-left: -8px;
   margin-top: 4px;
   -webkit-flex-shrink: 0;
@@ -148,7 +148,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   flex-shrink: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -198,7 +198,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   border-color: transparent;
 }
 
-.emotion-10::after {
+.emotion-11::after {
   content: '';
   display: block;
   position: absolute;
@@ -214,20 +214,20 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-10:hover:not(:disabled) {
+.emotion-11:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-10:active:not(:disabled) {
+.emotion-11:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   opacity: 0.6;
   cursor: default;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,7 +239,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   align-items: center;
 }
 
-.emotion-12 {
+.emotion-13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -292,7 +292,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   margin-left: auto;
 }
 
-.emotion-12::after {
+.emotion-13::after {
   content: '';
   display: block;
   position: absolute;
@@ -308,15 +308,15 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-12:hover:not(:disabled) {
+.emotion-13:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-12:active:not(:disabled) {
+.emotion-13:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-12:disabled {
+.emotion-13:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -327,6 +327,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
 >
   <div
     class="emotion-1"
+    data-testid="notification-icon"
   >
     <div
       class="emotion-2"
@@ -336,6 +337,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
     >
       <svg
         aria-hidden="true"
+        class="emotion-4"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -348,21 +350,21 @@ exports[`Notification renders snapshot of inverted banner notification with all 
     </div>
   </div>
   <div
-    class="emotion-4"
+    class="emotion-5"
   >
     <div
-      class="emotion-5"
+      class="emotion-6"
     >
       <div
-        class="emotion-6"
+        class="emotion-7"
       >
         <h2
-          class="emotion-7"
+          class="emotion-8"
         >
           Banner notification title
         </h2>
         <p
-          class="emotion-8"
+          class="emotion-9"
         >
           Banner notification 
           <strong>
@@ -372,14 +374,14 @@ exports[`Notification renders snapshot of inverted banner notification with all 
         </p>
       </div>
       <div
-        class="emotion-9"
+        class="emotion-10"
       >
         <button
-          class="emotion-10"
+          class="emotion-11"
           type="button"
         >
           <span
-            class="emotion-11"
+            class="emotion-12"
           >
             Action
           </span>
@@ -389,7 +391,7 @@ exports[`Notification renders snapshot of inverted banner notification with all 
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-12"
+    class="emotion-13"
     type="button"
   >
     <svg
@@ -480,7 +482,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   color: #009BD8;
 }
 
-.emotion-5 {
+.emotion-6 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -492,7 +494,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   flex-grow: 1;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -506,14 +508,14 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -532,7 +534,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   line-height: 1.5;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -548,7 +550,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   padding: 4px 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-left: -8px;
   margin-top: 4px;
   -webkit-flex-shrink: 0;
@@ -556,7 +558,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   flex-shrink: 0;
 }
 
-.emotion-11 {
+.emotion-12 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -606,7 +608,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   border-color: transparent;
 }
 
-.emotion-11::after {
+.emotion-12::after {
   content: '';
   display: block;
   position: absolute;
@@ -622,20 +624,20 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-11:disabled {
+.emotion-12:disabled {
   opacity: 0.6;
   cursor: default;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -647,7 +649,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   align-items: center;
 }
 
-.emotion-13 {
+.emotion-14 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -700,7 +702,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   margin-left: auto;
 }
 
-.emotion-13::after {
+.emotion-14::after {
   content: '';
   display: block;
   position: absolute;
@@ -716,15 +718,15 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-13:hover:not(:disabled) {
+.emotion-14:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-13:active:not(:disabled) {
+.emotion-14:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-13:disabled {
+.emotion-14:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -738,6 +740,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   />
   <div
     class="emotion-2"
+    data-testid="notification-icon"
   >
     <div
       class="emotion-3"
@@ -747,6 +750,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
     >
       <svg
         aria-hidden="true"
+        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -759,21 +763,21 @@ exports[`Notification renders snapshot of inverted inline notification with all 
     </div>
   </div>
   <div
-    class="emotion-5"
+    class="emotion-6"
   >
     <div
-      class="emotion-6"
+      class="emotion-7"
     >
       <div
-        class="emotion-7"
+        class="emotion-8"
       >
         <h2
-          class="emotion-8"
+          class="emotion-9"
         >
           Inverted notification title
         </h2>
         <p
-          class="emotion-9"
+          class="emotion-10"
         >
           Inverted notification 
           <strong>
@@ -783,14 +787,14 @@ exports[`Notification renders snapshot of inverted inline notification with all 
         </p>
       </div>
       <div
-        class="emotion-10"
+        class="emotion-11"
       >
         <button
-          class="emotion-11"
+          class="emotion-12"
           type="button"
         >
           <span
-            class="emotion-12"
+            class="emotion-13"
           >
             Action
           </span>
@@ -800,7 +804,7 @@ exports[`Notification renders snapshot of inverted inline notification with all 
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-13"
+    class="emotion-14"
     type="button"
   >
     <svg
@@ -889,7 +893,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   color: #009BD8;
 }
 
-.emotion-4 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -901,7 +905,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   flex-grow: 1;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -916,14 +920,14 @@ exports[`Notification renders snapshot of regular banner notification with all o
   max-width: 1200px;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-8 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -942,7 +946,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   line-height: 1.5;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -958,7 +962,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   padding: 4px 0;
 }
 
-.emotion-9 {
+.emotion-10 {
   margin-left: -8px;
   margin-top: 4px;
   -webkit-flex-shrink: 0;
@@ -966,7 +970,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   flex-shrink: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1016,7 +1020,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   border-color: transparent;
 }
 
-.emotion-10::after {
+.emotion-11::after {
   content: '';
   display: block;
   position: absolute;
@@ -1032,20 +1036,20 @@ exports[`Notification renders snapshot of regular banner notification with all o
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-10:hover:not(:disabled) {
+.emotion-11:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-10:active:not(:disabled) {
+.emotion-11:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-10:disabled {
+.emotion-11:disabled {
   opacity: 0.6;
   cursor: default;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1057,7 +1061,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   align-items: center;
 }
 
-.emotion-12 {
+.emotion-13 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1110,7 +1114,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   margin-left: auto;
 }
 
-.emotion-12::after {
+.emotion-13::after {
   content: '';
   display: block;
   position: absolute;
@@ -1126,15 +1130,15 @@ exports[`Notification renders snapshot of regular banner notification with all o
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-12:hover:not(:disabled) {
+.emotion-13:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-12:active:not(:disabled) {
+.emotion-13:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-12:disabled {
+.emotion-13:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -1145,6 +1149,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
 >
   <div
     class="emotion-1"
+    data-testid="notification-icon"
   >
     <div
       class="emotion-2"
@@ -1154,6 +1159,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
     >
       <svg
         aria-hidden="true"
+        class="emotion-4"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -1166,21 +1172,21 @@ exports[`Notification renders snapshot of regular banner notification with all o
     </div>
   </div>
   <div
-    class="emotion-4"
+    class="emotion-5"
   >
     <div
-      class="emotion-5"
+      class="emotion-6"
     >
       <div
-        class="emotion-6"
+        class="emotion-7"
       >
         <h2
-          class="emotion-7"
+          class="emotion-8"
         >
           Banner notification title
         </h2>
         <p
-          class="emotion-8"
+          class="emotion-9"
         >
           Banner notification 
           <strong>
@@ -1190,14 +1196,14 @@ exports[`Notification renders snapshot of regular banner notification with all o
         </p>
       </div>
       <div
-        class="emotion-9"
+        class="emotion-10"
       >
         <button
-          class="emotion-10"
+          class="emotion-11"
           type="button"
         >
           <span
-            class="emotion-11"
+            class="emotion-12"
           >
             Action
           </span>
@@ -1207,7 +1213,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-12"
+    class="emotion-13"
     type="button"
   >
     <svg
@@ -1298,7 +1304,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   color: #009BD8;
 }
 
-.emotion-5 {
+.emotion-6 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -1310,7 +1316,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   flex-grow: 1;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1324,14 +1330,14 @@ exports[`Notification renders snapshot of regular inline notification with all o
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -1350,7 +1356,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   line-height: 1.5;
 }
 
-.emotion-9 {
+.emotion-10 {
   color: #05192D;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 14px;
@@ -1366,7 +1372,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   padding: 4px 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   margin-left: -8px;
   margin-top: 4px;
   -webkit-flex-shrink: 0;
@@ -1374,7 +1380,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   flex-shrink: 0;
 }
 
-.emotion-11 {
+.emotion-12 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1424,7 +1430,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   border-color: transparent;
 }
 
-.emotion-11::after {
+.emotion-12::after {
   content: '';
   display: block;
   position: absolute;
@@ -1440,20 +1446,20 @@ exports[`Notification renders snapshot of regular inline notification with all o
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-11:disabled {
+.emotion-12:disabled {
   opacity: 0.6;
   cursor: default;
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1465,7 +1471,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   align-items: center;
 }
 
-.emotion-13 {
+.emotion-14 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1518,7 +1524,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   margin-left: auto;
 }
 
-.emotion-13::after {
+.emotion-14::after {
   content: '';
   display: block;
   position: absolute;
@@ -1534,15 +1540,15 @@ exports[`Notification renders snapshot of regular inline notification with all o
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-13:hover:not(:disabled) {
+.emotion-14:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-13:active:not(:disabled) {
+.emotion-14:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-13:disabled {
+.emotion-14:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -1556,6 +1562,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   />
   <div
     class="emotion-2"
+    data-testid="notification-icon"
   >
     <div
       class="emotion-3"
@@ -1565,6 +1572,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
     >
       <svg
         aria-hidden="true"
+        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -1577,21 +1585,21 @@ exports[`Notification renders snapshot of regular inline notification with all o
     </div>
   </div>
   <div
-    class="emotion-5"
+    class="emotion-6"
   >
     <div
-      class="emotion-6"
+      class="emotion-7"
     >
       <div
-        class="emotion-7"
+        class="emotion-8"
       >
         <h2
-          class="emotion-8"
+          class="emotion-9"
         >
           Notification title
         </h2>
         <p
-          class="emotion-9"
+          class="emotion-10"
         >
           Notification 
           <strong>
@@ -1601,14 +1609,14 @@ exports[`Notification renders snapshot of regular inline notification with all o
         </p>
       </div>
       <div
-        class="emotion-10"
+        class="emotion-11"
       >
         <button
-          class="emotion-11"
+          class="emotion-12"
           type="button"
         >
           <span
-            class="emotion-12"
+            class="emotion-13"
           >
             Action
           </span>
@@ -1618,7 +1626,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-13"
+    class="emotion-14"
     type="button"
   >
     <svg
