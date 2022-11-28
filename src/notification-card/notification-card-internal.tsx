@@ -1,7 +1,13 @@
 import React, { cloneElement } from 'react';
 
-import { notificationStyle, decorStyle, contentStyle } from './styles';
-import Icon from './icon';
+import { NotificationIcon } from '../notification-icon';
+
+import {
+  notificationStyle,
+  decorStyle,
+  contentStyle,
+  iconStyle,
+} from './styles';
 import CloseButton from './close-button';
 
 type NotificationCardProps = {
@@ -59,7 +65,10 @@ function NotificationCardInternal(
       css={notificationStyle({ inverted })}
     >
       {!hideLeftDecor && <div css={decorStyle({ variant, inverted })} />}
-      <Icon {...{ variant, inverted, isIconCentered }} />
+      <NotificationIcon
+        css={iconStyle({ isIconCentered })}
+        {...{ variant, inverted }}
+      />
       <div css={contentStyle({ closable, isContentCentered })}>{children}</div>
       {renderCloseButton()}
     </section>

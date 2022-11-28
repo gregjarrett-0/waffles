@@ -1,15 +1,6 @@
 import React from 'react';
 
-import {
-  Attention,
-  AttentionInverted,
-  CheckmarkCircleInverted,
-  CrossCircle,
-  CrossCircleInverted,
-  InfoCircleInverted,
-  Rocket,
-  RocketInverted,
-} from '../icon';
+import { NotificationIcon } from '../notification-icon';
 import { Heading } from '../heading';
 
 import { avatarStyle, decorativeHeaderStyle, headerStyle } from './styles';
@@ -34,21 +25,8 @@ function Header({
 }: HeaderProps) {
   const { headerId } = useDialog();
 
-  // TODO: replace icon rendering with generic 'notification-icon` component?
-  // TODO: handle navyDark background for success and warning icon
   function renderIcon() {
-    switch (variant) {
-      case 'success':
-        return <CheckmarkCircleInverted size="large" />;
-      case 'warning':
-        return <AttentionInverted size="large" />;
-      case 'error':
-        return <CrossCircleInverted size="large" />;
-      case 'upgrade':
-        return <RocketInverted size="large" />;
-      default:
-        return <InfoCircleInverted size="large" />;
-    }
+    return <NotificationIcon variant={variant} size="large" />;
   }
 
   return (
