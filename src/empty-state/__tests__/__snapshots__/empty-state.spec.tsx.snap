@@ -11,7 +11,7 @@ exports[`Dialog renders snapshot 1`] = `
   gap: 16px;
   height: 100%;
   width: 100%;
-  border: 1px dashed rgba(5, 25, 45, 0.1);
+  border: 1px dashed rgba(5, 25, 45, 0.25);
   color: #05192D;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -281,7 +281,7 @@ exports[`Dialog renders snapshot in inverted 1`] = `
   gap: 16px;
   height: 100%;
   width: 100%;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.25);
   color: #FFFFFF;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -551,7 +551,7 @@ exports[`Dialog renders snapshot in vertical orientation 1`] = `
   gap: 16px;
   height: 100%;
   width: 100%;
-  border: 1px dashed rgba(5, 25, 45, 0.1);
+  border: 1px dashed rgba(5, 25, 45, 0.25);
   color: #05192D;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -821,7 +821,7 @@ exports[`Dialog renders snapshot in vertical orientation and inverted 1`] = `
   gap: 16px;
   height: 100%;
   width: 100%;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.25);
   color: #FFFFFF;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
