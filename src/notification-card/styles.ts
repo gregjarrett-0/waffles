@@ -77,7 +77,7 @@ export function iconStyle({ isIconCentered }: IconStyleOptions) {
   return css`
     ${isIconCentered &&
     css`
-      margin-left: auto;
+      /* margin-left: auto; */
     `}
   `;
 }

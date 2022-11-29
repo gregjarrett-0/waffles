@@ -4,6 +4,8 @@ import { tokens } from '../tokens';
 
 import NotificationIcon from './notification-icon';
 
+const ICON_BACKGROUND_WIDTH = 6;
+
 // Mappings between icon's variants, and design tokens
 
 const regularIconVariantMap = {
@@ -40,6 +42,9 @@ const invertedIconVariantMap = {
 export function iconWrapperStyle() {
   return css`
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: ${tokens.zIndex.default};
     width: ${tokens.sizing.small};
     height: ${tokens.sizing.small};
@@ -74,32 +79,35 @@ type IconBackgroundStyleOptions = {
   variant: NonNullable<
     React.ComponentProps<typeof NotificationIcon>['variant']
   >;
+  size: NonNullable<React.ComponentProps<typeof NotificationIcon>['size']>;
   inverted: boolean;
 };
 
 export function iconBackgroundStyle({
   variant,
+  size,
   inverted,
 }: IconBackgroundStyleOptions) {
+  // Calculate icon-size relative background sizing
+  const radius =
+    ICON_BACKGROUND_WIDTH +
+    (size === 'xsmall' ? -2 : size === 'xlarge' ? 2 : 0);
+  const width = radius * 2;
   const variantMap = inverted ? invertedIconVariantMap : regularIconVariantMap;
 
   return css`
-    position: absolute;
-    top: 7px;
-    left: 7px;
-
     // Creative way to get triangle shape for warning
     ${variant === 'warning'
       ? css`
           width: 0;
           height: 0;
-          border-left: 7px solid transparent;
-          border-right: 7px solid transparent;
-          border-bottom: 14px solid ${variantMap[variant].backgroundColor};
+          border-left: ${radius}px solid transparent;
+          border-right: ${radius}px solid transparent;
+          border-bottom: ${width}px solid ${variantMap[variant].backgroundColor};
         `
       : css`
-          width: 14px;
-          height: 14px;
+          width: ${width}px;
+          height: ${width}px;
           border-radius: ${tokens.borderRadius.circle};
           background-color: ${variantMap[variant].backgroundColor};
         `}

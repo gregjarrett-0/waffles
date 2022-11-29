@@ -40,7 +40,7 @@ function NotificationIcon({
 
   return (
     <div css={iconWrapperStyle()} data-testid="notification-icon">
-      <div css={iconBackgroundStyle({ variant, inverted })} />
+      <div css={iconBackgroundStyle({ variant, size, inverted })} />
       <div css={iconStyle({ variant, inverted })}>{renderIcon()}</div>
     </div>
   );

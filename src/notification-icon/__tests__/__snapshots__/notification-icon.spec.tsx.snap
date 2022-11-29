@@ -3,6 +3,18 @@
 exports[`NotificationCard renders snapshot at all sizes of variant error, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -12,11 +24,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size l
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -70,6 +79,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size l
 exports[`NotificationCard renders snapshot at all sizes of variant error, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -79,11 +100,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size m
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -137,6 +155,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size m
 exports[`NotificationCard renders snapshot at all sizes of variant error, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -146,11 +176,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size s
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -204,6 +231,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size s
 exports[`NotificationCard renders snapshot at all sizes of variant error, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -213,11 +252,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size x
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -271,6 +307,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size x
 exports[`NotificationCard renders snapshot at all sizes of variant error, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -280,11 +328,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size x
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -338,6 +383,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant error, size x
 exports[`NotificationCard renders snapshot at all sizes of variant info, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -347,11 +404,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size la
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -405,6 +459,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size la
 exports[`NotificationCard renders snapshot at all sizes of variant info, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -414,11 +480,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size me
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -472,6 +535,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size me
 exports[`NotificationCard renders snapshot at all sizes of variant info, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -481,11 +556,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size sm
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -539,6 +611,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size sm
 exports[`NotificationCard renders snapshot at all sizes of variant info, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -548,11 +632,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size xl
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -606,6 +687,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size xl
 exports[`NotificationCard renders snapshot at all sizes of variant info, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -615,11 +708,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size xs
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -673,6 +763,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant info, size xs
 exports[`NotificationCard renders snapshot at all sizes of variant success, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -682,11 +784,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -740,6 +839,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 exports[`NotificationCard renders snapshot at all sizes of variant success, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -749,11 +860,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -807,6 +915,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 exports[`NotificationCard renders snapshot at all sizes of variant success, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -816,11 +936,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -874,6 +991,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 exports[`NotificationCard renders snapshot at all sizes of variant success, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -883,11 +1012,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -941,6 +1067,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 exports[`NotificationCard renders snapshot at all sizes of variant success, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -950,11 +1088,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -1008,6 +1143,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant success, size
 exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1017,11 +1164,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -1077,6 +1221,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1086,11 +1242,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -1146,6 +1299,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1155,11 +1320,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -1215,6 +1377,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1224,11 +1398,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -1284,6 +1455,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1293,11 +1476,8 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -1353,6 +1533,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant upgrade, size
 exports[`NotificationCard renders snapshot at all sizes of variant warning, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1362,14 +1554,11 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #05192D;
 }
 
 .emotion-2 {
@@ -1423,6 +1612,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 exports[`NotificationCard renders snapshot at all sizes of variant warning, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1432,14 +1633,11 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #05192D;
 }
 
 .emotion-2 {
@@ -1493,6 +1691,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 exports[`NotificationCard renders snapshot at all sizes of variant warning, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1502,14 +1712,11 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #05192D;
 }
 
 .emotion-2 {
@@ -1563,6 +1770,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 exports[`NotificationCard renders snapshot at all sizes of variant warning, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1572,14 +1791,11 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid #05192D;
 }
 
 .emotion-2 {
@@ -1633,6 +1849,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 exports[`NotificationCard renders snapshot at all sizes of variant warning, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1642,14 +1870,11 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 8px solid #05192D;
 }
 
 .emotion-2 {
@@ -1703,6 +1928,18 @@ exports[`NotificationCard renders snapshot at all sizes of variant warning, size
 exports[`renders inverted snapshot at all sizes of inverted variant error, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1712,11 +1949,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -1770,6 +2004,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 exports[`renders inverted snapshot at all sizes of inverted variant error, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1779,11 +2025,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -1837,6 +2080,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 exports[`renders inverted snapshot at all sizes of inverted variant error, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1846,11 +2101,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -1904,6 +2156,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 exports[`renders inverted snapshot at all sizes of inverted variant error, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1913,11 +2177,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -1971,6 +2232,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 exports[`renders inverted snapshot at all sizes of inverted variant error, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1980,11 +2253,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -2038,6 +2308,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant error, size 
 exports[`renders inverted snapshot at all sizes of inverted variant info, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2047,11 +2329,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size l
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -2105,6 +2384,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size l
 exports[`renders inverted snapshot at all sizes of inverted variant info, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2114,11 +2405,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size m
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -2172,6 +2460,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size m
 exports[`renders inverted snapshot at all sizes of inverted variant info, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2181,11 +2481,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size s
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -2239,6 +2536,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size s
 exports[`renders inverted snapshot at all sizes of inverted variant info, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2248,11 +2557,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size x
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -2306,6 +2612,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size x
 exports[`renders inverted snapshot at all sizes of inverted variant info, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2315,11 +2633,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size x
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -2373,6 +2688,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant info, size x
 exports[`renders inverted snapshot at all sizes of inverted variant success, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2382,11 +2709,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -2440,6 +2764,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 exports[`renders inverted snapshot at all sizes of inverted variant success, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2449,11 +2785,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -2507,6 +2840,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 exports[`renders inverted snapshot at all sizes of inverted variant success, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2516,11 +2861,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -2574,6 +2916,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 exports[`renders inverted snapshot at all sizes of inverted variant success, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2583,11 +2937,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -2641,6 +2992,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 exports[`renders inverted snapshot at all sizes of inverted variant success, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2650,11 +3013,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -2708,6 +3068,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant success, siz
 exports[`renders inverted snapshot at all sizes of inverted variant upgrade, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2717,11 +3089,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -2777,6 +3146,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 exports[`renders inverted snapshot at all sizes of inverted variant upgrade, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2786,11 +3167,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -2846,6 +3224,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 exports[`renders inverted snapshot at all sizes of inverted variant upgrade, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2855,11 +3245,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -2915,6 +3302,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 exports[`renders inverted snapshot at all sizes of inverted variant upgrade, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2924,11 +3323,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -2984,6 +3380,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 exports[`renders inverted snapshot at all sizes of inverted variant upgrade, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -2993,11 +3401,8 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -3053,6 +3458,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant upgrade, siz
 exports[`renders inverted snapshot at all sizes of inverted variant warning, size large 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -3062,14 +3479,11 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #05192D;
 }
 
 .emotion-2 {
@@ -3123,6 +3537,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 exports[`renders inverted snapshot at all sizes of inverted variant warning, size medium 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -3132,14 +3558,11 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #05192D;
 }
 
 .emotion-2 {
@@ -3193,6 +3616,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 exports[`renders inverted snapshot at all sizes of inverted variant warning, size small 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -3202,14 +3637,11 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #05192D;
 }
 
 .emotion-2 {
@@ -3263,6 +3695,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 exports[`renders inverted snapshot at all sizes of inverted variant warning, size xlarge 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -3272,14 +3716,11 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid #05192D;
 }
 
 .emotion-2 {
@@ -3333,6 +3774,18 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 exports[`renders inverted snapshot at all sizes of inverted variant warning, size xsmall 1`] = `
 .emotion-0 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -3342,14 +3795,11 @@ exports[`renders inverted snapshot at all sizes of inverted variant warning, siz
 }
 
 .emotion-1 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 8px solid #05192D;
 }
 
 .emotion-2 {

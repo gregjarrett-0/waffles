@@ -32,6 +32,18 @@ exports[`Notification renders snapshot of inverted banner notification with all 
 
 .emotion-1 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -41,11 +53,8 @@ exports[`Notification renders snapshot of inverted banner notification with all 
 }
 
 .emotion-2 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -443,6 +452,18 @@ exports[`Notification renders snapshot of inverted inline notification with all 
 
 .emotion-2 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -452,11 +473,8 @@ exports[`Notification renders snapshot of inverted inline notification with all 
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -854,6 +872,18 @@ exports[`Notification renders snapshot of regular banner notification with all o
 
 .emotion-1 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -863,11 +893,8 @@ exports[`Notification renders snapshot of regular banner notification with all o
 }
 
 .emotion-2 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -1265,6 +1292,18 @@ exports[`Notification renders snapshot of regular inline notification with all o
 
 .emotion-2 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -1274,11 +1313,8 @@ exports[`Notification renders snapshot of regular inline notification with all o
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }

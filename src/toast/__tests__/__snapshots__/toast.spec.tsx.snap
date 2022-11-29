@@ -41,6 +41,18 @@ exports[`Toast render snapshot of error toast 1`] = `
 
 .emotion-2 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -50,11 +62,8 @@ exports[`Toast render snapshot of error toast 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -332,6 +341,18 @@ exports[`Toast render snapshot of info toast 1`] = `
 
 .emotion-2 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -341,11 +362,8 @@ exports[`Toast render snapshot of info toast 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #FFFFFF;
 }
@@ -605,6 +623,18 @@ exports[`Toast render snapshot of success toast 1`] = `
 
 .emotion-2 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -614,11 +644,8 @@ exports[`Toast render snapshot of success toast 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #05192D;
 }
@@ -875,6 +902,18 @@ exports[`Toast render snapshot of warning toast 1`] = `
 
 .emotion-2 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   z-index: 1;
   width: 28px;
   height: 28px;
@@ -884,14 +923,11 @@ exports[`Toast render snapshot of warning toast 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 7px;
-  left: 7px;
   width: 0;
   height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 14px solid #05192D;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #05192D;
 }
 
 .emotion-4 {
