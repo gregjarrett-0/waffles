@@ -16,10 +16,7 @@ const wrapperStyle = css`
     grid-gap: ${tokens.spacing.medium};
   }
 
-  // Add margin-top if a h3 precedes it
-  h3 ~ & {
-    margin-top: ${tokens.spacing.medium};
-  }
+  margin: ${tokens.spacing.medium} 0;
 `;
 
 type BestPracticesProps = {

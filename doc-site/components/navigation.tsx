@@ -50,6 +50,11 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/foundation/design-principles">Design Principles</Item>
             <Item href="/foundation/design-tokens">Design Tokens</Item>
           </SideNav.Category>
+          <SideNav.Category label="Content">
+            <Item href="/content/grammar">Grammar</Item>
+            <Item href="/content/terminology">Terminology</Item>
+            <Item href="/content/course-naming">Course Naming</Item>
+          </SideNav.Category>
           <SideNav.Category label="Components">
             <Item href="/components/alert-dialog">Alert Dialog</Item>
             <Item href="/components/asset">Asset</Item>
