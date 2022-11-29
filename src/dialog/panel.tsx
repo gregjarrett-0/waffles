@@ -27,7 +27,8 @@ function Panel({
   children,
   ...restProps
 }: PanelProps) {
-  const { headerId, bodyId, hasDecorativeHeader, autoFocusRef } = useDialog();
+  const { headerId, bodyId, hasDecorativeHeader, alignCenter, autoFocusRef } =
+    useDialog();
   const { floating, context } = useFloating({
     open: isVisible,
     onOpenChange: onClose, // Handles closing when clicking outside of the Dialog (dismissing)
@@ -70,7 +71,7 @@ function Panel({
           {...(headerId && { 'aria-labelledby': headerId })}
           {...(bodyId && { 'aria-describedby': bodyId })}
           tabIndex={-1}
-          css={panelStyle({ isVisible })}
+          css={panelStyle({ isVisible, alignCenter })}
           {...getFloatingProps({
             ref: floating,
           })}

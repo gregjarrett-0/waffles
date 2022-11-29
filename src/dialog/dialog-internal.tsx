@@ -22,13 +22,15 @@ type DialogProps = {
   isOpen: boolean;
   /* Handler called when the Dialog will close. */
   onClose: () => void;
-  /* Defines the Dialog role. */
-  /* @default dialog */
-  role?: 'dialog' | 'alertdialog';
   /* Custom close button component. In general use `Dialog.CloseButton` subcomponent. */
   closeButtonOverride?: JSX.Element;
+  /* Whether to center align the Dialog content and buttons. */
+  /* @default false */
+  alignCenter?: boolean;
   /* Content of the Dialog. In general, Dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
   children: React.ReactNode;
+  /* [skip docs] */
+  role?: 'dialog' | 'alertdialog';
   /* [skip docs] */
   idPrefix?: string;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
@@ -36,9 +38,10 @@ type DialogProps = {
 function DialogInternal({
   isOpen,
   onClose,
-  role = 'dialog',
   closeButtonOverride,
+  alignCenter = false,
   children,
+  role = 'dialog',
   idPrefix = 'dialog',
   ...restProps
 }: DialogProps) {
@@ -75,7 +78,7 @@ function DialogInternal({
 
   return (
     <DialogProvider
-      {...{ headerId, bodyId, hasDecorativeHeader, autoFocusRef }}
+      {...{ headerId, bodyId, hasDecorativeHeader, alignCenter, autoFocusRef }}
     >
       <Portal>
         {isAnimating && (
@@ -83,8 +86,8 @@ function DialogInternal({
             <Panel
               {...{
                 role,
-                onClose,
                 isVisible: isOpen,
+                onClose,
                 closeButtonOverride,
                 ...restProps,
               }}

@@ -10,7 +10,7 @@ type FooterProps = {
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function Footer({ children, ...restProps }: FooterProps) {
-  const { autoFocusRef } = useDialog();
+  const { alignCenter, autoFocusRef } = useDialog();
 
   // Add a reference to the button with autoFocus (if present), so that it can be focused on open
   function renderChildren() {
@@ -29,7 +29,7 @@ function Footer({ children, ...restProps }: FooterProps) {
   }
 
   return (
-    <footer {...restProps} css={footerStyle()}>
+    <footer {...restProps} css={footerStyle({ alignCenter })}>
       {renderChildren()}
     </footer>
   );

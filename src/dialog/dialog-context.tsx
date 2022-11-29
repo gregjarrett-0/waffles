@@ -5,6 +5,7 @@ type DialogContextValue = {
   headerId?: string;
   bodyId?: string;
   hasDecorativeHeader?: boolean;
+  alignCenter?: boolean;
   autoFocusRef?: React.RefObject<HTMLButtonElement>;
 };
 

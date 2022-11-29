@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '../button';
 
 import { buttonStyle } from './styles';
+import { useDialog } from './dialog-context';
 
 type ButtonProps = {
   /* [skip docs] */
@@ -33,7 +34,9 @@ function ButtonInternal(
   { ...restProps }: ButtonProps,
   ref: React.Ref<HTMLButtonElement>,
 ) {
-  return <Button {...restProps} ref={ref} css={buttonStyle()} />;
+  const { alignCenter } = useDialog();
+
+  return <Button {...restProps} ref={ref} css={buttonStyle({ alignCenter })} />;
 }
 
 export default ButtonInternal;

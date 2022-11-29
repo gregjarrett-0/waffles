@@ -44,7 +44,7 @@ function Header({
           <span css={avatarStyle({ variant })}>{renderIcon()}</span>
         </div>
       )}
-      <Heading id={headerId} css={headerStyle()} {...restProps}>
+      <Heading id={headerId} css={headerStyle({ mode })} {...restProps}>
         {children}
       </Heading>
     </>

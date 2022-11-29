@@ -44,9 +44,10 @@ export function panelWrapperStyle() {
 
 type PanelStyleOptions = {
   isVisible: boolean;
+  alignCenter?: boolean;
 };
 
-export function panelStyle({ isVisible }: PanelStyleOptions) {
+export function panelStyle({ isVisible, alignCenter }: PanelStyleOptions) {
   return css`
     position: relative;
     display: flex;
@@ -66,6 +67,11 @@ export function panelStyle({ isVisible }: PanelStyleOptions) {
     transform: translateY(12px);
     animation: ${isVisible ? panelEnter() : panelExit()} 200ms
       cubic-bezier(0.2, 0.8, 0.6, 1) forwards;
+
+    ${alignCenter &&
+    css`
+      text-align: center;
+    `}
 
     ${mediaQuery.aboveSmall} {
       min-width: 400px;
@@ -151,18 +157,31 @@ export function decorativeHeaderStyle({ variant }: DecorativeStyleOptions) {
   `;
 }
 
-export function headerStyle() {
+type HeaderStyleOptions = {
+  mode: NonNullable<React.ComponentProps<typeof Header>['mode']>;
+};
+
+export function headerStyle({ mode }: HeaderStyleOptions) {
   return css`
-    padding-top: ${tokens.spacing.large};
-    padding-right: 48px;
-    padding-bottom: ${tokens.spacing.medium};
-    padding-left: ${tokens.spacing.large};
     margin: 0;
     flex-shrink: 0;
+
+    ${mode === 'decorative'
+      ? css`
+          padding: 38px ${tokens.spacing.large} ${tokens.spacing.medium};
+        `
+      : css`
+          padding: ${tokens.spacing.large} 48px ${tokens.spacing.medium}
+            ${tokens.spacing.large};
+        `}
   `;
 }
 
-export function footerStyle() {
+type FooterAlignmentStyleOptions = {
+  alignCenter?: boolean;
+};
+
+export function footerStyle({ alignCenter }: FooterAlignmentStyleOptions) {
   return css`
     padding: ${tokens.spacing.medium} ${tokens.spacing.large};
     border-top: ${tokens.borderWidth.thin} solid
@@ -172,15 +191,23 @@ export function footerStyle() {
     align-items: center;
     flex-shrink: 0;
     gap: ${tokens.spacing.small};
+
+    ${alignCenter &&
+    css`
+      justify-content: center;
+    `}
   `;
 }
 
-export function buttonStyle() {
+export function buttonStyle({ alignCenter }: FooterAlignmentStyleOptions) {
   return css`
     flex-shrink: 1;
 
-    &:first-of-type {
-      margin-right: auto;
-    }
+    ${!alignCenter &&
+    css`
+      :first-of-type {
+        margin-right: auto;
+      }
+    `}
   `;
 }
