@@ -8,7 +8,13 @@ type OverlayProps = {
 } & React.HTMLAttributes<HTMLDivElement>;
 
 function Overlay({ isVisible, ...restProps }: OverlayProps) {
-  return <FloatingOverlay {...restProps} css={overlayStyle({ isVisible })} />;
+  return (
+    <FloatingOverlay
+      lockScroll
+      {...restProps}
+      css={overlayStyle({ isVisible })}
+    />
+  );
 }
 
 export default Overlay;
