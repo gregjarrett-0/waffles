@@ -33,7 +33,7 @@ const invertedIconVariantMap = {
   ...regularIconVariantMap,
   upgrade: {
     ...regularIconVariantMap.upgrade,
-    iconColor: tokens.colors.purpleLight,
+    color: tokens.colors.purpleLight,
   },
 };
 
