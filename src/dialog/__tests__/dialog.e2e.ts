@@ -5,6 +5,13 @@ const screenSizes: Record<string, [number, number]> = {
 };
 
 describe('Dialog', () => {
+  it(`center aligned`, () => {
+    cy.loadStory('dialog-center-aligned');
+    cy.findByText('Open').click();
+    cy.findByRole('dialog').should('exist');
+    cy.findByTestId('dialog-overlay').should('exist');
+  });
+
   describe('with decorative header', () => {
     it(`as info variant`, () => {
       cy.loadStory('dialog-decorative-header-variants');

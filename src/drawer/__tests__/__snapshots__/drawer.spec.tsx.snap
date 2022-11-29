@@ -230,14 +230,11 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   font-size: 18px;
   margin-bottom: 8px;
   line-height: 1.25;
-  padding-top: 24px;
-  padding-right: 48px;
-  padding-bottom: 16px;
-  padding-left: 24px;
   margin: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  padding: 24px 48px 16px 24px;
 }
 
 .emotion-3 {
@@ -769,14 +766,11 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   font-size: 18px;
   margin-bottom: 8px;
   line-height: 1.25;
-  padding-top: 24px;
-  padding-right: 48px;
-  padding-bottom: 16px;
-  padding-left: 24px;
   margin: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  padding: 24px 48px 16px 24px;
 }
 
 .emotion-3 {

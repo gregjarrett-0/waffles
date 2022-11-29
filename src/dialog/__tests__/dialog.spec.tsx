@@ -225,6 +225,31 @@ describe('Dialog', () => {
     expect(dialog).toMatchSnapshot();
   });
 
+  it('renders center aligned snapshot', async () => {
+    const { getByRole } = render(
+      <Dialog isOpen={true} onClose={() => {}} alignCenter>
+        <Dialog.Header>Taylor Swift discography</Dialog.Header>
+        <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
+        <Dialog.Footer>
+          <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
+          <Dialog.Button autoFocus>Confirm</Dialog.Button>
+        </Dialog.Footer>
+      </Dialog>,
+    );
+
+    // Let fade in animations finish
+    act(() => {
+      jest.advanceTimersByTime(500);
+    });
+
+    let dialog;
+    await waitFor(() => {
+      dialog = getByRole('dialog');
+    });
+
+    expect(dialog).toMatchSnapshot();
+  });
+
   describe('with decorative header', () => {
     it(`renders custom icon when specified`, async () => {
       const { getByRole, getByText } = render(
