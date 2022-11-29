@@ -13,7 +13,7 @@ type HeaderProps = {
   /* Variant of the dialog, only applicable when `mode="decorative"`. */
   /* @default info */
   variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
-  /* Custom icon override for the decorative header, only applicable when `mode="decorative"`. In general, use `large` Waffles [Icon](/components/icon). */
+  /* Custom icon override for the decorative header, only applicable when `mode="decorative"`. In general, use Waffles [Icon](/components/icon). */
   customIconOverride?: JSX.Element;
   /* Title of the dialog. */
   children: React.ReactNode;
