@@ -32,7 +32,7 @@ export function emptyStateStyle({
 
     border: ${tokens.borderWidth.thin} dashed ${hexToRgba(
       inverted ? tokens.colors.white : tokens.colors.navy,
-      tokens.opacity.low,
+      0.25,
     )};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     flex-direction: ${orientation === 'horizontal' ? 'row' : 'column'};
