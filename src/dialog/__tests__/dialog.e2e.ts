@@ -5,6 +5,43 @@ const screenSizes: Record<string, [number, number]> = {
 };
 
 describe('Dialog', () => {
+  describe('with decorative header', () => {
+    it(`as info variant`, () => {
+      cy.loadStory('dialog-decorative-header-variants');
+      cy.findByText('Open Info Dialog').click();
+      cy.findByRole('dialog').should('exist');
+      cy.findByTestId('dialog-overlay').should('exist');
+    });
+
+    it(`as success variant`, () => {
+      cy.loadStory('dialog-decorative-header-variants');
+      cy.findByText('Open Success Dialog').click();
+      cy.findByRole('dialog').should('exist');
+      cy.findByTestId('dialog-overlay').should('exist');
+    });
+
+    it(`as warning variant`, () => {
+      cy.loadStory('dialog-decorative-header-variants');
+      cy.findByText('Open Warning Dialog').click();
+      cy.findByRole('dialog').should('exist');
+      cy.findByTestId('dialog-overlay').should('exist');
+    });
+
+    it(`as error variant`, () => {
+      cy.loadStory('dialog-decorative-header-variants');
+      cy.findByText('Open Error Dialog').click();
+      cy.findByRole('dialog').should('exist');
+      cy.findByTestId('dialog-overlay').should('exist');
+    });
+
+    it(`as upgrade variant`, () => {
+      cy.loadStory('dialog-decorative-header-variants');
+      cy.findByText('Open Upgrade Dialog').click();
+      cy.findByRole('dialog').should('exist');
+      cy.findByTestId('dialog-overlay').should('exist');
+    });
+  });
+
   describe('when the content is short, it renders correctly', () => {
     Object.keys(screenSizes).forEach((size) => {
       const [width, height] = screenSizes[size];

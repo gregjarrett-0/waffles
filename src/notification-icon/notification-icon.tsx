@@ -32,6 +32,7 @@ function NotificationIcon({
         return <CrossCircleInverted size={size} {...restProps} />;
       case 'upgrade':
         return <RocketInverted size={size} {...restProps} />;
+      case 'info':
       default:
         return <InfoCircleInverted size={size} {...restProps} />;
     }

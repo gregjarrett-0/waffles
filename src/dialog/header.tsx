@@ -28,9 +28,9 @@ function Header({
 }: HeaderProps) {
   const { headerId } = useDialog();
 
-  // Auto-set size
   function renderIcon() {
     return customIconOverride ? (
+      // Auto-set size of custom icon
       cloneElement(customIconOverride, { size: 'large' })
     ) : (
       <NotificationIcon variant={variant} size="large" />

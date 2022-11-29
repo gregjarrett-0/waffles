@@ -2,12 +2,20 @@
 import { render, fireEvent, waitFor, act } from '@testing-library/react';
 
 import { Dialog } from '../index';
+import { ArrowUp } from '../../icon';
 
 const MOCKED_ID = '123abC';
+const variants = ['info', 'success', 'warning', 'error', 'upgrade'] as const;
 
 jest.mock('../../icon', () => {
   return {
     Cross: () => 'CrossIcon',
+    ArrowUp: () => 'ArrowUpIcon',
+    CrossCircleInverted: () => 'CrossCircleInvertedIcon',
+    CheckmarkCircleInverted: () => 'CheckmarkCircleInvertedIcon',
+    AttentionInverted: () => 'AttentionInvertedIcon',
+    RocketInverted: () => 'RocketInvertedIcon',
+    InfoCircleInverted: () => 'InfoCircleInvertedIcon',
   };
 });
 
@@ -215,5 +223,68 @@ describe('Dialog', () => {
     });
 
     expect(dialog).toMatchSnapshot();
+  });
+
+  describe('with decorative header', () => {
+    it(`renders custom icon when specified`, async () => {
+      const { getByRole, getByText } = render(
+        <Dialog isOpen={true} onClose={() => {}}>
+          <Dialog.Header mode="decorative" customIconOverride={<ArrowUp />}>
+            Taylor Swift discography
+          </Dialog.Header>
+          <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
+          <Dialog.Footer>
+            <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
+            <Dialog.Button autoFocus>Confirm</Dialog.Button>
+          </Dialog.Footer>
+        </Dialog>,
+      );
+
+      // Let fade in animations finish
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+
+      let dialog;
+      await waitFor(() => {
+        dialog = getByRole('dialog');
+      });
+
+      // Find mocked icon
+      const icon = getByText('ArrowUpIcon');
+      expect(dialog).toBeInTheDocument();
+      expect(icon).toBeInTheDocument();
+    });
+
+    variants.forEach((variant) => {
+      it(`as ${variant} variant`, async () => {
+        const { getByRole } = render(
+          <Dialog isOpen={true} onClose={() => {}}>
+            <Dialog.Header mode="decorative" variant={variant}>
+              Taylor Swift discography
+            </Dialog.Header>
+            <Dialog.Body>
+              Discover amazing pop songs by Taylor Swift.
+            </Dialog.Body>
+            <Dialog.Footer>
+              <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
+              <Dialog.Button autoFocus>Confirm</Dialog.Button>
+            </Dialog.Footer>
+          </Dialog>,
+        );
+
+        // Let fade in animations finish
+        act(() => {
+          jest.advanceTimersByTime(500);
+        });
+
+        let dialog;
+        await waitFor(() => {
+          dialog = getByRole('dialog');
+        });
+
+        expect(dialog).toMatchSnapshot();
+      });
+    });
   });
 });
