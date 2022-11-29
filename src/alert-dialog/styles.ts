@@ -31,7 +31,6 @@ export function headerStyle() {
 export function footerStyle() {
   return css`
     padding-bottom: ${tokens.spacing.large};
-    border-top: 0;
     justify-content: center;
 
     & button:first-of-type {

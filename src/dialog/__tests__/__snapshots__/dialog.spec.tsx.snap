@@ -189,7 +189,6 @@ exports[`Dialog renders center aligned snapshot 1`] = `
 
 .emotion-4 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -620,7 +619,6 @@ exports[`Dialog renders snapshot 1`] = `
 
 .emotion-4 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1163,7 +1161,6 @@ exports[`Dialog with decorative header as error variant 1`] = `
 
 .emotion-9 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1727,7 +1724,6 @@ exports[`Dialog with decorative header as info variant 1`] = `
 
 .emotion-9 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2291,7 +2287,6 @@ exports[`Dialog with decorative header as success variant 1`] = `
 
 .emotion-9 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2855,7 +2850,6 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
 
 .emotion-9 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3420,7 +3414,6 @@ exports[`Dialog with decorative header as warning variant 1`] = `
 
 .emotion-9 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

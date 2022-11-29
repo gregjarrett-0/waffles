@@ -182,7 +182,6 @@ exports[`AlertDialogTest renders snapshot 1`] = `
 
 .emotion-4 {
   padding: 16px 24px;
-  border-top: 1px solid rgba(5, 25, 45, 0.15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -200,7 +199,6 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   flex-shrink: 0;
   gap: 8px;
   padding-bottom: 24px;
-  border-top: 0;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;

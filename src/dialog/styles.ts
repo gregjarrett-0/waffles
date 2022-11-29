@@ -184,8 +184,6 @@ type FooterAlignmentStyleOptions = {
 export function footerStyle({ alignCenter }: FooterAlignmentStyleOptions) {
   return css`
     padding: ${tokens.spacing.medium} ${tokens.spacing.large};
-    border-top: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.navy, 0.15)};
     display: flex;
     flex-wrap: wrap;
     align-items: center;
