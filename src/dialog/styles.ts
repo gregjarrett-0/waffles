@@ -88,8 +88,8 @@ export function closeButtonStyle({
 }: CloseButtonStyleOptions) {
   return css`
     position: absolute;
-    top: ${hasDecorativeHeader ? tokens.spacing.xsmall : tokens.spacing.small};
-    right: ${tokens.spacing.small};
+    top: 4px;
+    right: 4px;
     z-index: ${tokens.zIndex.default};
     color: ${hasDecorativeHeader ? tokens.colors.white : tokens.colors.navy};
   `;
@@ -153,7 +153,7 @@ export function decorativeHeaderStyle({ variant }: DecorativeStyleOptions) {
     display: flex;
     background-color: ${tokens.colors.navyLight};
     border-bottom: 4px solid ${variantMap[variant].color};
-    height: 44px;
+    height: 48px;
   `;
 }
 

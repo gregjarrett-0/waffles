@@ -119,8 +119,8 @@ exports[`Dialog renders center aligned snapshot 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 4px;
+  right: 4px;
   z-index: 1;
   color: #05192D;
 }
@@ -549,8 +549,8 @@ exports[`Dialog renders snapshot 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 4px;
+  right: 4px;
   z-index: 1;
   color: #05192D;
 }
@@ -997,12 +997,12 @@ exports[`Dialog with decorative header as error variant 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
   position: absolute;
   top: 4px;
-  right: 8px;
+  right: 4px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -1024,7 +1024,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
 }
 
 .emotion-1:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-1:active:not(:disabled) {
@@ -1047,7 +1047,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #FF5400;
-  height: 44px;
+  height: 48px;
 }
 
 .emotion-3 {
@@ -1560,12 +1560,12 @@ exports[`Dialog with decorative header as info variant 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
   position: absolute;
   top: 4px;
-  right: 8px;
+  right: 4px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -1587,7 +1587,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
 }
 
 .emotion-1:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-1:active:not(:disabled) {
@@ -1610,7 +1610,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #009BD8;
-  height: 44px;
+  height: 48px;
 }
 
 .emotion-3 {
@@ -2123,12 +2123,12 @@ exports[`Dialog with decorative header as success variant 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
   position: absolute;
   top: 4px;
-  right: 8px;
+  right: 4px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -2150,7 +2150,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
 }
 
 .emotion-1:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-1:active:not(:disabled) {
@@ -2173,7 +2173,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #03EF62;
-  height: 44px;
+  height: 48px;
 }
 
 .emotion-3 {
@@ -2686,12 +2686,12 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
   position: absolute;
   top: 4px;
-  right: 8px;
+  right: 4px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -2713,7 +2713,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
 }
 
 .emotion-1:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-1:active:not(:disabled) {
@@ -2736,7 +2736,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #7933FF;
-  height: 44px;
+  height: 48px;
 }
 
 .emotion-3 {
@@ -3249,12 +3249,12 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #06BDFC;
   background-color: transparent;
   border-color: transparent;
   position: absolute;
   top: 4px;
-  right: 8px;
+  right: 4px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -3276,7 +3276,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
 }
 
 .emotion-1:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-1:active:not(:disabled) {
@@ -3299,7 +3299,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #FFBC4B;
-  height: 44px;
+  height: 48px;
 }
 
 .emotion-3 {

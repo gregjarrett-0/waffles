@@ -19,6 +19,7 @@ function CloseButton({
       variant="plain"
       icon={<Cross />}
       aria-label="Close"
+      {...(hasDecorativeHeader && { inverted: true })}
       css={closeButtonStyle({ hasDecorativeHeader })}
     />
   );

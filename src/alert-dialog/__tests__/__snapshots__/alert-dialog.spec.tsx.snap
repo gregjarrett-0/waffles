@@ -107,8 +107,8 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 4px;
+  right: 4px;
   z-index: 1;
   color: #05192D;
 }
