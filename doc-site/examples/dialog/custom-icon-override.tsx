@@ -16,12 +16,13 @@ function Example() {
           variant="info"
           customIconOverride={<Chat />}
         >
-          Title of a Dialog
+          Confirm your case study participation
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            To be able to participate in the case study, you will need a
+            computer with a webcam. If you fail to submit, you will have to wait
+            4 weeks before taking the case study again.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>

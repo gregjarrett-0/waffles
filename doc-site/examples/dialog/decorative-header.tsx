@@ -25,12 +25,13 @@ function Example() {
         onClose={() => setIsOpen([false, false, false, false, false])}
       >
         <Dialog.Header mode="decorative" variant="info">
-          Title of a Dialog
+          Confirm your case study participation
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            To be able to participate in the case study, you will need a
+            computer with a webcam. If you fail to submit, you will have to wait
+            4 weeks before taking the case study again.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -59,12 +60,13 @@ function Example() {
         onClose={() => setIsOpen([false, false, false, false, false])}
       >
         <Dialog.Header mode="decorative" variant="success">
-          Title of a Dialog
+          Confirm your case study participation
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            To be able to participate in the case study, you will need a
+            computer with a webcam. If you fail to submit, you will have to wait
+            4 weeks before taking the case study again.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -93,12 +95,13 @@ function Example() {
         onClose={() => setIsOpen([false, false, false, false, false])}
       >
         <Dialog.Header mode="decorative" variant="warning">
-          Title of a Dialog
+          Confirm your case study participation
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            To be able to participate in the case study, you will need a
+            computer with a webcam. If you fail to submit, you will have to wait
+            4 weeks before taking the case study again.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -127,12 +130,13 @@ function Example() {
         onClose={() => setIsOpen([false, false, false, false, false])}
       >
         <Dialog.Header mode="decorative" variant="error">
-          Title of a Dialog
+          Confirm your case study participation
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            To be able to participate in the case study, you will need a
+            computer with a webcam. If you fail to submit, you will have to wait
+            4 weeks before taking the case study again.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -161,12 +165,13 @@ function Example() {
         onClose={() => setIsOpen([false, false, false, false, false])}
       >
         <Dialog.Header mode="decorative" variant="upgrade">
-          Title of a Dialog
+          Confirm your case study participation
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            To be able to participate in the case study, you will need a
+            computer with a webcam. If you fail to submit, you will have to wait
+            4 weeks before taking the case study again.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
