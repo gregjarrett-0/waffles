@@ -19,7 +19,7 @@ const headingStyle = css`
   max-width: 600px;
 `;
 
-type BestPracticesProps = {
+type DesignPrinciplesCardProps = {
   title: string;
   icon: React.ReactNode;
   children?: React.ReactNode;
@@ -31,7 +31,7 @@ function DesignPrinciplesCard({
   icon,
   children,
   isExpended = false,
-}: BestPracticesProps) {
+}: DesignPrinciplesCardProps) {
   return (
     <Card
       css={css`

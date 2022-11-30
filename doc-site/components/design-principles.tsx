@@ -16,11 +16,11 @@ const wrapperStyle = css`
   }
 `;
 
-type BestPracticesProps = {
+type DesignPrinciplesProps = {
   children: React.ReactNode;
 };
 
-function DesignPrinciples({ children }: BestPracticesProps) {
+function DesignPrinciples({ children }: DesignPrinciplesProps) {
   return <div css={wrapperStyle}>{children}</div>;
 }
 
