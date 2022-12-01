@@ -3,8 +3,8 @@ const prettier = require('prettier');
 const prettierConfig = prettier.resolveConfig.sync(__dirname);
 
 // Generate pascal case component name based on SVG icon file name
-function getPascalCase(string) {
-  return string
+function getPascalCase(text) {
+  return text
     .split('-')
     .map((part) => {
       return `${part.charAt(0).toUpperCase()}${part.slice(1)}`;

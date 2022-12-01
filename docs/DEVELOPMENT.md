@@ -124,9 +124,9 @@ The release process is _fully automated_, which makes proper commits messages cr
 
 ## 📊 Adoption tracker
 
-The Waffles adoption overview is available in [Adoption](https://waffles-next.datacamp.com/overview/adoption) section of our docs.
+The Waffles adoption overview is available in the [Adoption](https://waffles-next.datacamp.com/overview/adoption) section of our docs.
 
-Because gathering stats for all _DataCamp Engineering_ repositories which are using any version of **Waffles** takes around 40 minutes it's done as asynchronous cron job once a week. New report is created which is persisted in _Waffles S3 bucket_, and therefore could be easily consumed by regular docs releases. The standalone preview of raw data is available at [waffles-next.datacamp.com/adoption-report.json](https://waffles-next.datacamp.com/adoption-report.json).
+Because gathering stats for all _DataCamp Engineering_ repositories which are using any version of **Waffles** takes around 40 minutes it's done as asynchronous cron job once a week. New report is created and persisted in _Waffles S3 bucket_, and therefore could be easily consumed by regular docs releases. The standalone preview of raw data is available at [waffles-next.datacamp.com/adoption-report.json](https://waffles-next.datacamp.com/adoption-report.json).
 
 To make local development of adoption overview docs easy, there is sample of `adoption-report.json` already committed. It will be replaced during deployment on CI/CD by real data.
 
@@ -135,7 +135,7 @@ How it works in CI/CD environment:
 - New `track_adoption` workflow runs once a week. It's responsible for generating Waffles adoption report and deploying new docs with nicely visualized overview:
   - Regular `build_and_test` job runs to install dependencies required for adoption script.
   - Simple [track-adoption.js](https://github.com/datacamp/waffles/blob/master/tools/track-adoption.js) script is executed. It gathers all relevant data and writes it to [doc-site/adoption/adoption-report.json](https://github.com/datacamp/waffles/tree/master/doc-site/adoption/adoption-report.json) file.
-  - Whole `adoption-report.json` is afterwards uploaded to the root of _Waffles S3 bucket_. Later this data is consumed by regular `build_test_release` workflow.
+  - Whole `adoption-report.json` is uploaded after to the root of _Waffles S3 bucket_. This data is later consumed by regular `build_test_release` workflow.
   - New docs website is built, and based on data from `adoption-report.json` new [Adoption](https://waffles-next.datacamp.com/overview/adoption) page is created.
 - A small tweak to regular `build_test_release` workflow was required:
   - When changes hit `master` branch, before docs got deployed, most up to date `adoption-report.json` is copied from _Waffles S3 bucket_ to `doc-site/adoption/`. This way there is no need to run adoption script on every regular release and slow it down.
