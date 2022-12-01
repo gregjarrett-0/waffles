@@ -188,7 +188,7 @@ exports[`Dialog renders center aligned snapshot 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -197,6 +197,9 @@ exports[`Dialog renders center aligned snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -209,6 +212,14 @@ exports[`Dialog renders center aligned snapshot 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-4 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-5 {
@@ -262,6 +273,7 @@ exports[`Dialog renders center aligned snapshot 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-5::after {
@@ -291,6 +303,12 @@ exports[`Dialog renders center aligned snapshot 1`] = `
 .emotion-5:disabled {
   opacity: 0.6;
   cursor: default;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-5 {
+    width: auto;
+  }
 }
 
 .emotion-6 {
@@ -356,6 +374,7 @@ exports[`Dialog renders center aligned snapshot 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-7::after {
@@ -393,6 +412,12 @@ exports[`Dialog renders center aligned snapshot 1`] = `
 
 .emotion-7:active:focus {
   background-color: #00D649;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-7 {
+    width: auto;
+  }
 }
 
 <section
@@ -618,7 +643,7 @@ exports[`Dialog renders snapshot 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -627,6 +652,9 @@ exports[`Dialog renders snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -635,6 +663,18 @@ exports[`Dialog renders snapshot 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-4 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-5 {
@@ -688,6 +728,7 @@ exports[`Dialog renders snapshot 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-5::after {
@@ -719,8 +760,10 @@ exports[`Dialog renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-5:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-5 {
+    width: auto;
+  }
 }
 
 .emotion-6 {
@@ -786,6 +829,7 @@ exports[`Dialog renders snapshot 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-7::after {
@@ -825,8 +869,10 @@ exports[`Dialog renders snapshot 1`] = `
   background-color: #00D649;
 }
 
-.emotion-7:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-7 {
+    width: auto;
+  }
 }
 
 <section
@@ -1160,7 +1206,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1169,6 +1215,9 @@ exports[`Dialog with decorative header as error variant 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1177,6 +1226,18 @@ exports[`Dialog with decorative header as error variant 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-10 {
@@ -1230,6 +1291,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-10::after {
@@ -1261,8 +1323,10 @@ exports[`Dialog with decorative header as error variant 1`] = `
   cursor: default;
 }
 
-.emotion-10:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-10 {
+    width: auto;
+  }
 }
 
 .emotion-11 {
@@ -1328,6 +1392,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-12::after {
@@ -1367,8 +1432,10 @@ exports[`Dialog with decorative header as error variant 1`] = `
   background-color: #00D649;
 }
 
-.emotion-12:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-12 {
+    width: auto;
+  }
 }
 
 <section
@@ -1723,7 +1790,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1732,6 +1799,9 @@ exports[`Dialog with decorative header as info variant 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1740,6 +1810,18 @@ exports[`Dialog with decorative header as info variant 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-10 {
@@ -1793,6 +1875,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-10::after {
@@ -1824,8 +1907,10 @@ exports[`Dialog with decorative header as info variant 1`] = `
   cursor: default;
 }
 
-.emotion-10:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-10 {
+    width: auto;
+  }
 }
 
 .emotion-11 {
@@ -1891,6 +1976,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-12::after {
@@ -1930,8 +2016,10 @@ exports[`Dialog with decorative header as info variant 1`] = `
   background-color: #00D649;
 }
 
-.emotion-12:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-12 {
+    width: auto;
+  }
 }
 
 <section
@@ -2286,7 +2374,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2295,6 +2383,9 @@ exports[`Dialog with decorative header as success variant 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2303,6 +2394,18 @@ exports[`Dialog with decorative header as success variant 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-10 {
@@ -2356,6 +2459,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-10::after {
@@ -2387,8 +2491,10 @@ exports[`Dialog with decorative header as success variant 1`] = `
   cursor: default;
 }
 
-.emotion-10:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-10 {
+    width: auto;
+  }
 }
 
 .emotion-11 {
@@ -2454,6 +2560,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-12::after {
@@ -2493,8 +2600,10 @@ exports[`Dialog with decorative header as success variant 1`] = `
   background-color: #00D649;
 }
 
-.emotion-12:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-12 {
+    width: auto;
+  }
 }
 
 <section
@@ -2849,7 +2958,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2858,6 +2967,9 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2866,6 +2978,18 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-10 {
@@ -2919,6 +3043,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-10::after {
@@ -2950,8 +3075,10 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   cursor: default;
 }
 
-.emotion-10:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-10 {
+    width: auto;
+  }
 }
 
 .emotion-11 {
@@ -3017,6 +3144,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-12::after {
@@ -3056,8 +3184,10 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   background-color: #00D649;
 }
 
-.emotion-12:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-12 {
+    width: auto;
+  }
 }
 
 <section
@@ -3413,7 +3543,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3422,6 +3552,9 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3430,6 +3563,18 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-9 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-10 {
@@ -3483,6 +3628,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-10::after {
@@ -3514,8 +3660,10 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   cursor: default;
 }
 
-.emotion-10:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-10 {
+    width: auto;
+  }
 }
 
 .emotion-11 {
@@ -3581,6 +3729,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-12::after {
@@ -3620,8 +3769,10 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   background-color: #00D649;
 }
 
-.emotion-12:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-12 {
+    width: auto;
+  }
 }
 
 <section

@@ -177,35 +177,35 @@ export function headerStyle({ mode }: HeaderStyleOptions) {
   `;
 }
 
-type FooterAlignmentStyleOptions = {
+type FooterStyleOptions = {
   alignCenter?: boolean;
 };
 
-export function footerStyle({ alignCenter }: FooterAlignmentStyleOptions) {
+export function footerStyle({ alignCenter }: FooterStyleOptions) {
   return css`
-    padding: ${tokens.spacing.medium} ${tokens.spacing.large};
+    padding: ${tokens.spacing.medium} ${tokens.spacing.large}
+      ${tokens.spacing.large};
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     flex-shrink: 0;
     gap: ${tokens.spacing.small};
+    justify-content: ${alignCenter ? 'center' : 'end'};
 
-    ${alignCenter &&
-    css`
-      justify-content: center;
-    `}
+    ${mediaQuery.aboveSmall} {
+      flex-direction: row;
+    }
   `;
 }
 
-export function buttonStyle({ alignCenter }: FooterAlignmentStyleOptions) {
+export function buttonStyle() {
   return css`
     flex-shrink: 1;
+    width: 100%;
 
-    ${!alignCenter &&
-    css`
-      :first-of-type {
-        margin-right: auto;
-      }
-    `}
+    ${mediaQuery.aboveSmall} {
+      width: auto;
+    }
   `;
 }

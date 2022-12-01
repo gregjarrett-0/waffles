@@ -251,7 +251,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -260,6 +260,9 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -268,6 +271,18 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-4 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-5 {
@@ -321,6 +336,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-5::after {
@@ -352,8 +368,10 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   cursor: default;
 }
 
-.emotion-5:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-5 {
+    width: auto;
+  }
 }
 
 .emotion-6 {
@@ -419,6 +437,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-7::after {
@@ -458,8 +477,10 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   background-color: #00D649;
 }
 
-.emotion-7:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-7 {
+    width: auto;
+  }
 }
 
 <section
@@ -786,7 +807,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px;
+  padding: 16px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -795,6 +816,9 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -803,6 +827,18 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   gap: 8px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
+@media screen and (min-width: 480px) {
+  .emotion-4 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .emotion-5 {
@@ -856,6 +892,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-5::after {
@@ -887,8 +924,10 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   cursor: default;
 }
 
-.emotion-5:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-5 {
+    width: auto;
+  }
 }
 
 .emotion-6 {
@@ -954,6 +993,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  width: 100%;
 }
 
 .emotion-7::after {
@@ -993,8 +1033,10 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   background-color: #00D649;
 }
 
-.emotion-7:first-of-type {
-  margin-right: auto;
+@media screen and (min-width: 480px) {
+  .emotion-7 {
+    width: auto;
+  }
 }
 
 <section
