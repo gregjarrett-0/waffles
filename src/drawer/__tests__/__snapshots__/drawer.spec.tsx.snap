@@ -86,7 +86,6 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   height: 100vh;
   width: calc(100vw - 64px);
   min-width: unset;
-  max-width: 416px;
   z-index: 9000;
   -webkit-transform: translateX(
         -416px
@@ -644,7 +643,6 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   height: 100vh;
   width: calc(100vw - 64px);
   min-width: unset;
-  max-width: 416px;
   z-index: 9000;
   -webkit-transform: translateX(
         416px

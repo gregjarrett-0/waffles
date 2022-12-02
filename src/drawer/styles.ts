@@ -27,7 +27,6 @@ export function drawerStyle({ isVisible, placement }: DrawerStyleOptions) {
     height: 100vh;
     width: calc(100vw - ${tokens.spacing.xxlarge});
     min-width: unset;
-    max-width: ${PANEL_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT}px;
     z-index: ${tokens.zIndex.modal};
 
     // Animation
