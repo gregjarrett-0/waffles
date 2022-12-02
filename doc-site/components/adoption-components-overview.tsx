@@ -81,7 +81,7 @@ function AdoptionComponentsOverview({
         <section css={sectionStyle}>
           <div css={statsLayout}>
             <PieChart
-              label="New"
+              label="Waffles"
               data={transformComponentsData(combinedComponents.new)}
               colorScale={newWafflesColorScale}
             />
@@ -96,7 +96,7 @@ function AdoptionComponentsOverview({
         <section css={sectionStyle}>
           <div css={statsLayout}>
             <PieChart
-              label="Old"
+              label="Old Waffles"
               data={transformComponentsData(combinedComponents.old)}
               colorScale={oldWafflesColorScale}
             />

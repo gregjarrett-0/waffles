@@ -5,6 +5,7 @@ import { Text } from '@datacamp/waffles/text';
 import { Tabs } from '@datacamp/waffles/tabs';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Notification } from '@datacamp/waffles/notification';
+import { Link } from '@datacamp/waffles/link';
 import { Heading } from '@datacamp/waffles/heading';
 import { Card } from '@datacamp/waffles/card';
 
@@ -18,7 +19,9 @@ import metadata from '../../../package.json';
 import type { AdoptionProjectStats } from '../../types';
 
 const currentVersion = metadata.version;
+
 const allProjectsData = adoptionReport.data;
+
 const lastUpdateDate = new Intl.DateTimeFormat('en-GB', {
   year: 'numeric',
   month: 'long',
@@ -115,7 +118,7 @@ function AdoptionPage() {
   return (
     <Layout
       title="Adoption"
-      description="Tracking adoption of New Waffles across all DataCamp projects, with detailed dependencies and components usage statistics for both New and Old Waffles."
+      description="Tracking adoption of Waffles across all DataCamp projects, with detailed dependencies and components usage statistics."
     >
       <section>
         <Heading css={headingStyle}>Global usage</Heading>
@@ -144,10 +147,10 @@ function AdoptionPage() {
           <Tabs.Tab label={`All (${allProjectsCount})`}>
             <TabContent data={allProjectsData} />
           </Tabs.Tab>
-          <Tabs.Tab label={`New (${newWafflesOnlyProjectsCount})`}>
+          <Tabs.Tab label={`Waffles (${newWafflesOnlyProjectsCount})`}>
             <TabContent data={newWafflesOnlyProjects} />
           </Tabs.Tab>
-          <Tabs.Tab label={`Old (${oldWafflesOnlyProjectsCount})`}>
+          <Tabs.Tab label={`Old Waffles (${oldWafflesOnlyProjectsCount})`}>
             <TabContent data={oldWafflesOnlyProjects} />
           </Tabs.Tab>
           <Tabs.Tab label={`Both (${oldAndNewWafflesProjectsCount})`}>
@@ -161,31 +164,41 @@ function AdoptionPage() {
         </Heading>
         <ul css={listStyle}>
           <li css={listItemStyle}>
-            <Badge version="new">New Waffles</Badge>
-            <Text css={listDescriptionStyle}>Project is using New Waffles</Text>
+            <Badge version="new">Waffles</Badge>
+            <Text css={listDescriptionStyle}>
+              Project is using{' '}
+              <Link href="https://github.com/datacamp/waffles">Waffles</Link>,
+              the new design system
+            </Text>
           </li>
           <li css={listItemStyle}>
             <Badge version="new" upgradeStatus="outdated" />
             <Text css={listDescriptionStyle}>
-              New Waffles version is outdated and must be upgraded urgently
+              Waffles version is outdated and must be upgraded urgently
             </Text>
           </li>
           <li css={listItemStyle}>
             <Badge version="new" upgradeStatus="slightlyOutdated" />
             <Text css={listDescriptionStyle}>
-              New Waffles version is slightly outdated and should be upgraded
+              Waffles version is slightly outdated and should be upgraded
             </Text>
           </li>
           <li css={listItemStyle}>
             <Badge version="new" upgradeStatus="upToDate" isNewOnly />
             <Text css={listDescriptionStyle}>
-              Good job! Project is fully migrated to New Waffles and is running
-              on the newest version
+              Good job! Project is fully migrated to Waffles and is running on
+              the newest version
             </Text>
           </li>
           <li css={listItemStyle}>
             <Badge version="old">Old Waffles</Badge>
-            <Text css={listDescriptionStyle}>Project is using Old Waffles</Text>
+            <Text css={listDescriptionStyle}>
+              Project is using{' '}
+              <Link href="https://github.com/datacamp/design-system">
+                Old Waffles
+              </Link>
+              , deprecated design system
+            </Text>
           </li>
         </ul>
         <Notification

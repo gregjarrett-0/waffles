@@ -54,7 +54,7 @@ function AdoptionProjectBadges({
           )}
           isNewOnly={!oldWafflesDependency}
         >
-          New Waffles
+          Waffles
         </Badge>
       )}
       {/* Show orange Old Waffles badge if it's in dependencies */}

@@ -62,11 +62,11 @@ function getPercentages(usageData: UsageData) {
 
   return [
     {
-      name: 'Only New',
+      name: 'Waffles only',
       percentage: newProjectsPercentage,
     },
     {
-      name: 'Only Old',
+      name: 'Old Waffles only',
       percentage: oldProjectsPercentage,
     },
     {

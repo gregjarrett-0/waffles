@@ -27,7 +27,6 @@ function sortByCount(
   return 0;
 }
 
-// Accumulated number of components across all projects in New and Old Waffles
 function getGlobalComponentsStats(data: AdoptionProjectStats[]) {
   const totalNewComponents: AdoptionComponentsStats[] = [];
   const totalOldComponents: AdoptionComponentsStats[] = [];
