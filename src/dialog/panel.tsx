@@ -16,6 +16,7 @@ type PanelProps = {
   isVisible: boolean;
   onClose: () => void;
   closeButtonOverride?: JSX.Element;
+  ariaLabel?: string;
   children: React.ReactNode;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
@@ -24,6 +25,7 @@ function Panel({
   isVisible,
   onClose,
   closeButtonOverride,
+  ariaLabel,
   children,
   ...restProps
 }: PanelProps) {
@@ -69,7 +71,9 @@ function Panel({
           role={role}
           aria-modal
           {...(headerId && { 'aria-labelledby': headerId })}
-          {...(bodyId && { 'aria-describedby': bodyId })}
+          {...(bodyId
+            ? { 'aria-describedby': bodyId }
+            : { 'aria-label': ariaLabel })}
           tabIndex={-1}
           css={panelStyle({ isVisible, alignCenter })}
           {...getFloatingProps({

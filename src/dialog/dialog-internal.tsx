@@ -1,4 +1,10 @@
-import React, { Children, createRef, isValidElement } from 'react';
+import React, {
+  Children,
+  createRef,
+  isValidElement,
+  useEffect,
+  useState,
+} from 'react';
 
 import { Portal } from '../portal';
 import { Overlay } from '../overlay';
@@ -11,12 +17,6 @@ import Header from './header';
 import { DialogProvider } from './dialog-context';
 import Body from './body';
 
-type ChildOptions = {
-  hasDecorativeHeader?: boolean;
-  headerId?: string;
-  bodyId?: string;
-};
-
 type DialogProps = {
   /* Determines if the Dialog is open. */
   isOpen: boolean;
@@ -27,6 +27,8 @@ type DialogProps = {
   /* Whether to center align the Dialog content and buttons. */
   /* @default false */
   alignCenter?: boolean;
+  /* Accessible label for the Dialog, where `Dialog.Body` does not contain descriptive content (e.g. form elements). */
+  'aria-label'?: string;
   /* Content of the Dialog. In general, Dialog's own subcomponents should be used: `Dialog.Header`, `Dialog.Body`, and `Dialog.Footer`. */
   children: React.ReactNode;
   /* [skip docs] */
@@ -41,40 +43,30 @@ function DialogInternal({
   closeButtonOverride,
   alignCenter = false,
   children,
+  'aria-label': ariaLabel,
   role = 'dialog',
   idPrefix = 'dialog',
   ...restProps
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
-  const id = `${idPrefix}-${useId()}`;
   const autoFocusRef = createRef<HTMLButtonElement>();
+  const id = `${idPrefix}-${useId()}`;
+  const [headerId, setHeaderId] = useState<string>();
+  const [bodyId, setBodyId] = useState<string>();
+  const [hasDecorativeHeader, setHasDecorativeHeader] = useState(false);
 
-  // Determine if `children` contains `Header` and/or `Body` components
-  function childConfig() {
-    return Children.toArray(children).reduce(
-      (childOptions: ChildOptions, child) => {
-        if (isValidElement(child)) {
-          if (child.type === Header || child.type === AlertHeader) {
-            return {
-              ...childOptions,
-              headerId: `${id}-header`,
-              hasDecorativeHeader: child.props.mode === 'decorative',
-            };
-          } else if (child.type === Body || child.type === AlertBody) {
-            return {
-              ...childOptions,
-              bodyId: `${id}-body`,
-            };
-          }
+  useEffect(() => {
+    Children.toArray(children).forEach((child) => {
+      if (isValidElement(child)) {
+        if (child.type === Header || child.type === AlertHeader) {
+          setHeaderId(`${id}-header`);
+          setHasDecorativeHeader(child.props.mode === 'decorative');
+        } else if (child.type === Body || child.type === AlertBody) {
+          !ariaLabel && setBodyId(`${id}-body`);
         }
-
-        return childOptions as ChildOptions;
-      },
-      {} as ChildOptions,
-    );
-  }
-
-  const { headerId, bodyId, hasDecorativeHeader } = childConfig();
+      }
+    });
+  });
 
   return (
     <DialogProvider
@@ -89,6 +81,7 @@ function DialogInternal({
                 isVisible: isOpen,
                 onClose,
                 closeButtonOverride,
+                ariaLabel,
                 ...restProps,
               }}
             >
