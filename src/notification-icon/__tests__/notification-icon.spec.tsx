@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { NotificationIcon } from '../index';
 
 const variants = ['info', 'success', 'warning', 'error', 'upgrade'] as const;
-const sizes = ['xsmall', 'small', 'medium', 'large', 'xlarge'] as const;
+const sizes = ['medium', 'large'] as const;
 
 describe('NotificationCard', () => {
   describe('renders snapshot at all sizes of', () => {

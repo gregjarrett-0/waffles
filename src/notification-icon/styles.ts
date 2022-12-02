@@ -4,8 +4,6 @@ import { tokens } from '../tokens';
 
 import NotificationIcon from './notification-icon';
 
-const ICON_BACKGROUND_WIDTH = 6;
-
 // Mappings between icon's variants, and design tokens
 
 const regularIconVariantMap = {
@@ -79,20 +77,10 @@ type BackgroundStyleOptions = {
   variant: NonNullable<
     React.ComponentProps<typeof NotificationIcon>['variant']
   >;
-  size: NonNullable<React.ComponentProps<typeof NotificationIcon>['size']>;
   inverted: boolean;
 };
 
-export function backgroundStyle({
-  variant,
-  size,
-  inverted,
-}: BackgroundStyleOptions) {
-  // Calculate icon-size relative background sizing
-  const radius =
-    ICON_BACKGROUND_WIDTH +
-    (size === 'xsmall' ? -2 : size === 'xlarge' ? 2 : 0);
-  const width = radius * 2;
+export function backgroundStyle({ variant, inverted }: BackgroundStyleOptions) {
   const variantMap = inverted ? invertedIconVariantMap : regularIconVariantMap;
 
   return css`
@@ -101,13 +89,13 @@ export function backgroundStyle({
       ? css`
           width: 0;
           height: 0;
-          border-left: ${radius}px solid transparent;
-          border-right: ${radius}px solid transparent;
-          border-bottom: ${width}px solid ${variantMap[variant].backgroundColor};
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-bottom: 12px solid ${variantMap[variant].backgroundColor};
         `
       : css`
-          width: ${width}px;
-          height: ${width}px;
+          width: 12px;
+          height: 12px;
           border-radius: ${tokens.borderRadius.circle};
           background-color: ${variantMap[variant].backgroundColor};
         `}

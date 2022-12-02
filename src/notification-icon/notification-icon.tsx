@@ -12,7 +12,7 @@ import { backgroundStyle, iconStyle, wrapperStyle } from './styles';
 
 type NotificationIconProps = {
   variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
-  size?: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge';
+  size?: 'medium' | 'large';
   inverted?: boolean;
 } & React.SVGAttributes<SVGElement>;
 
@@ -40,7 +40,7 @@ function NotificationIcon({
 
   return (
     <div css={wrapperStyle()} data-testid="notification-icon">
-      <div css={backgroundStyle({ variant, size, inverted })} />
+      <div css={backgroundStyle({ variant, inverted })} />
       <div css={iconStyle({ variant, inverted })}>{renderIcon()}</div>
     </div>
   );
