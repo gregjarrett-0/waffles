@@ -19,6 +19,17 @@ const badgeStyle = css`
   padding: 0 ${tokens.spacing.xsmall};
 `;
 
+const versionMap = {
+  new: {
+    backgroundColor: hexToRgba(tokens.colors.green, 0.2),
+    borderColor: hexToRgba(tokens.colors.green, 0.8),
+  },
+  old: {
+    backgroundColor: hexToRgba(tokens.colors.orange, 0.2),
+    borderColor: hexToRgba(tokens.colors.orange, 0.8),
+  },
+};
+
 type AdoptionBadgeProps = {
   version: 'new' | 'old';
   children?: React.ReactNode;
@@ -33,15 +44,6 @@ function AdoptionBadge({
   upgradeStatus,
   isNewOnly = false,
 }: AdoptionBadgeProps) {
-  const backgroundColor = hexToRgba(
-    version === 'new' ? tokens.colors.green : tokens.colors.orange,
-    0.2,
-  );
-  const borderColor = hexToRgba(
-    version === 'new' ? tokens.colors.green : tokens.colors.orange,
-    0.8,
-  );
-
   function renderIcon() {
     switch (upgradeStatus) {
       case 'outdated':
@@ -58,7 +60,10 @@ function AdoptionBadge({
         return <ArrowUp aria-label="Should be upgraded" size="xsmall" />;
       default:
         return isNewOnly ? (
-          <Star aria-label="Up to date and New Waffles only" size="xsmall" />
+          <Star
+            aria-label="Up to date, the latest Waffles version"
+            size="xsmall"
+          />
         ) : null;
     }
   }
@@ -69,11 +74,12 @@ function AdoptionBadge({
         ${badgeStyle}
         background: linear-gradient(
         0deg,
-        ${backgroundColor},
-        ${backgroundColor}
+        ${versionMap[version].backgroundColor},
+        ${versionMap[version].backgroundColor}
       ),
       ${tokens.colors.white};
-        border: ${tokens.borderWidth.thin} solid ${borderColor};
+        border: ${tokens.borderWidth.thin} solid
+          ${versionMap[version].borderColor};
       `}
     >
       {children}

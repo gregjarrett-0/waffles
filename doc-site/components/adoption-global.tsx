@@ -9,8 +9,7 @@ import ComponentsOverview from './adoption-components-overview';
 import type { AdoptionProjectStats, AdoptionComponentsStats } from '../types';
 
 const cardStyle = css`
-  margin-top: ${tokens.spacing.medium};
-  margin-bottom: ${tokens.spacing.medium};
+  margin: ${tokens.spacing.medium} 0;
   padding-bottom: ${tokens.spacing.large};
 `;
 
@@ -28,6 +27,7 @@ function sortByCount(
   return 0;
 }
 
+// Accumulated number of components across all projects in New and Old Waffles
 function getGlobalComponentsStats(data: AdoptionProjectStats[]) {
   const totalNewComponents: AdoptionComponentsStats[] = [];
   const totalOldComponents: AdoptionComponentsStats[] = [];
