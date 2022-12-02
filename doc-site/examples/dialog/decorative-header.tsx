@@ -5,24 +5,26 @@ import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Dialog } from '@datacamp/waffles/dialog';
 import { Button } from '@datacamp/waffles/button';
 
+type DialogVariants = 'info' | 'success' | 'warning' | 'error' | 'upgrade';
+
 function Example() {
-  const [isOpen, setIsOpen] = useState([false, false, false, false, false]);
+  const [openDialog, setOpenDialog] = useState<DialogVariants | null>();
 
   return (
     <div
       css={css`
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: ${tokens.spacing.small};
-        flex-wrap: wrap;
       `}
     >
-      <Button
-        variant="secondary"
-        onClick={() => setIsOpen([true, false, false, false, false])}
-      >{`Open Info Dialog`}</Button>
+      {/* Info Dialog */}
+      <Button variant="secondary" onClick={() => setOpenDialog('info')}>
+        Open Info Dialog
+      </Button>
       <Dialog
-        isOpen={isOpen[0]}
-        onClose={() => setIsOpen([false, false, false, false, false])}
+        isOpen={openDialog === 'info'}
+        onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="info">
           Confirm your case study participation
@@ -37,27 +39,27 @@ function Example() {
         <Dialog.Footer>
           <Dialog.Button
             variant="secondary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Cancel
           </Dialog.Button>
           <Dialog.Button
             autoFocus
             variant="primary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Confirm
           </Dialog.Button>
         </Dialog.Footer>
       </Dialog>
 
-      <Button
-        variant="secondary"
-        onClick={() => setIsOpen([false, true, false, false, false])}
-      >{`Open Success Dialog`}</Button>
+      {/* Success Dialog */}
+      <Button variant="secondary" onClick={() => setOpenDialog('success')}>
+        Open Success Dialog
+      </Button>
       <Dialog
-        isOpen={isOpen[1]}
-        onClose={() => setIsOpen([false, false, false, false, false])}
+        isOpen={openDialog === 'success'}
+        onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="success">
           Confirm your case study participation
@@ -72,27 +74,27 @@ function Example() {
         <Dialog.Footer>
           <Dialog.Button
             variant="secondary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Cancel
           </Dialog.Button>
           <Dialog.Button
             autoFocus
             variant="primary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Confirm
           </Dialog.Button>
         </Dialog.Footer>
       </Dialog>
 
-      <Button
-        variant="secondary"
-        onClick={() => setIsOpen([false, false, true, false, false])}
-      >{`Open Warning Dialog`}</Button>
+      {/* Warning Dialog */}
+      <Button variant="secondary" onClick={() => setOpenDialog('warning')}>
+        Open Warning Dialog
+      </Button>
       <Dialog
-        isOpen={isOpen[2]}
-        onClose={() => setIsOpen([false, false, false, false, false])}
+        isOpen={openDialog === 'warning'}
+        onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="warning">
           Confirm your case study participation
@@ -107,27 +109,27 @@ function Example() {
         <Dialog.Footer>
           <Dialog.Button
             variant="secondary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Cancel
           </Dialog.Button>
           <Dialog.Button
             autoFocus
             variant="primary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Confirm
           </Dialog.Button>
         </Dialog.Footer>
       </Dialog>
 
-      <Button
-        variant="secondary"
-        onClick={() => setIsOpen([false, false, false, true, false])}
-      >{`Open Error Dialog`}</Button>
+      {/* Error Dialog */}
+      <Button variant="secondary" onClick={() => setOpenDialog('error')}>
+        Open Error Dialog
+      </Button>
       <Dialog
-        isOpen={isOpen[3]}
-        onClose={() => setIsOpen([false, false, false, false, false])}
+        isOpen={openDialog === 'error'}
+        onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="error">
           Confirm your case study participation
@@ -142,27 +144,27 @@ function Example() {
         <Dialog.Footer>
           <Dialog.Button
             variant="secondary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Cancel
           </Dialog.Button>
           <Dialog.Button
             autoFocus
             variant="primary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Confirm
           </Dialog.Button>
         </Dialog.Footer>
       </Dialog>
 
-      <Button
-        variant="secondary"
-        onClick={() => setIsOpen([false, false, false, false, true])}
-      >{`Open Upgrade Dialog`}</Button>
+      {/* Upgrade Dialog */}
+      <Button variant="secondary" onClick={() => setOpenDialog('upgrade')}>
+        Open Upgrade Dialog
+      </Button>
       <Dialog
-        isOpen={isOpen[4]}
-        onClose={() => setIsOpen([false, false, false, false, false])}
+        isOpen={openDialog === 'upgrade'}
+        onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="upgrade">
           Confirm your case study participation
@@ -177,14 +179,14 @@ function Example() {
         <Dialog.Footer>
           <Dialog.Button
             variant="secondary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Cancel
           </Dialog.Button>
           <Dialog.Button
             autoFocus
             variant="primary"
-            onClick={() => setIsOpen([false, false, false, false, false])}
+            onClick={() => setOpenDialog(null)}
           >
             Confirm
           </Dialog.Button>
