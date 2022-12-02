@@ -11,8 +11,8 @@ type DrawerStyleOptions = {
   placement: NonNullable<React.ComponentProps<typeof Drawer>['placement']>;
 };
 
-const PANEL_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT = 356;
-const PANEL_WIDTH_ABOVE_SMALL_BREAKPOINT = 600;
+const PANEL_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT = 416;
+const PANEL_MAX_WIDTH_ABOVE_SMALL_BREAKPOINT = 600;
 
 export function drawerStyle({ isVisible, placement }: DrawerStyleOptions) {
   const horizontalDirection = placement === 'left' ? -1 : 1;
@@ -22,11 +22,14 @@ export function drawerStyle({ isVisible, placement }: DrawerStyleOptions) {
     top: 0;
     ${placement === 'left' ? 'left' : 'right'}: 0;
     bottom: 0;
-    height: 100vh;
-    z-index: ${tokens.zIndex.modal};
     opacity: 1;
+    border-radius: 0;
+    height: 100vh;
     width: calc(100vw - ${tokens.spacing.xxlarge});
-    max-width: ${PANEL_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT};
+    min-width: unset;
+    max-width: ${PANEL_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT}px;
+    z-index: ${tokens.zIndex.modal};
+
     // Animation
     transform: translateX(
       ${horizontalDirection * PANEL_MAX_WIDTH_BELOW_MEDIUM_BREAKPOINT}px
@@ -45,24 +48,24 @@ export function drawerStyle({ isVisible, placement }: DrawerStyleOptions) {
     ${mediaQuery.aboveSmall} {
       width: min(
         calc(100vw - ${tokens.spacing.xxlarge}),
-        ${PANEL_WIDTH_ABOVE_SMALL_BREAKPOINT}px
+        ${PANEL_MAX_WIDTH_ABOVE_SMALL_BREAKPOINT}px
       );
-
       max-width: min(
         calc(100vw - ${tokens.spacing.xxlarge}),
-        ${PANEL_WIDTH_ABOVE_SMALL_BREAKPOINT}px
+        ${PANEL_MAX_WIDTH_ABOVE_SMALL_BREAKPOINT}px
       );
+
       // Animation
       transform: translateX(
-        ${horizontalDirection * PANEL_WIDTH_ABOVE_SMALL_BREAKPOINT}px
+        ${horizontalDirection * PANEL_MAX_WIDTH_ABOVE_SMALL_BREAKPOINT}px
       );
       animation: ${isVisible
           ? panelEnter({
-              offset: PANEL_WIDTH_ABOVE_SMALL_BREAKPOINT,
+              offset: PANEL_MAX_WIDTH_ABOVE_SMALL_BREAKPOINT,
               slideFrom: placement,
             })
           : panelExit({
-              offset: PANEL_WIDTH_ABOVE_SMALL_BREAKPOINT,
+              offset: PANEL_MAX_WIDTH_ABOVE_SMALL_BREAKPOINT,
               slideFrom: placement,
             })}
         200ms cubic-bezier(0, 0, 0.6, 1) forwards;
