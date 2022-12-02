@@ -6,18 +6,29 @@ import { Heading } from '../heading';
 import { avatarStyle, decorativeHeaderStyle, headerStyle } from './styles';
 import { useDialog } from './dialog-context';
 
-type HeaderProps = {
+type HeaderBaseProps = {
+  /* Title of the dialog. */
+  children: React.ReactNode;
+} & React.HTMLAttributes<HTMLHeadingElement>;
+
+type HeaderDecorativeProps = {
   /* Mode of the dialog. */
   /* @default plain */
-  mode?: 'plain' | 'decorative';
+  mode: 'plain' | 'decorative';
   /* Variant of the dialog, only applicable when `mode="decorative"`. */
   /* @default info */
   variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
   /* Custom icon override for the decorative header, only applicable when `mode="decorative"`. In general, use Waffles [Icon](/components/icon). */
   customIconOverride?: JSX.Element;
-  /* Title of the dialog. */
-  children: React.ReactNode;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+} & HeaderBaseProps;
+
+type HeaderPlainProps = {
+  mode?: never;
+  variant?: never;
+  customIconOverride?: never;
+} & HeaderBaseProps;
+
+type HeaderProps = HeaderPlainProps | HeaderDecorativeProps;
 
 function Header({
   mode = 'plain',
