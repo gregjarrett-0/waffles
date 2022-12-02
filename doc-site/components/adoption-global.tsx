@@ -27,53 +27,42 @@ function sortByCount(
   return 0;
 }
 
-function getGlobalComponentsStats(data: AdoptionProjectStats[]) {
-  const totalNewComponents: AdoptionComponentsStats[] = [];
-  const totalOldComponents: AdoptionComponentsStats[] = [];
+// Iterate through all projects and accumulate number of times each component is used based on Waffles version
+function getComponentsStatsPerVersion(
+  data: AdoptionProjectStats[],
+  version: 'new' | 'old',
+) {
+  const totalComponents: AdoptionComponentsStats[] = [];
 
   data.forEach((project) => {
-    project.components.new.forEach((component) => {
-      const existingComponentIndex = totalNewComponents.findIndex(
+    project.components[version].forEach((component) => {
+      const existingComponentIndex = totalComponents.findIndex(
         (existingComponent) => {
           return existingComponent.name === component.name;
         },
       );
 
       if (existingComponentIndex >= 0) {
-        totalNewComponents[existingComponentIndex] = {
+        totalComponents[existingComponentIndex] = {
           name: component.name,
           count:
-            totalNewComponents[existingComponentIndex].count + component.count,
+            totalComponents[existingComponentIndex].count + component.count,
         };
       } else {
-        totalNewComponents.push({
-          name: component.name,
-          count: component.count,
-        });
-      }
-    });
-
-    project.components.old.forEach((component) => {
-      const existingComponentIndex = totalOldComponents.findIndex(
-        (existingComponent) => {
-          return existingComponent.name === component.name;
-        },
-      );
-
-      if (existingComponentIndex >= 0) {
-        totalOldComponents[existingComponentIndex] = {
-          name: component.name,
-          count:
-            totalOldComponents[existingComponentIndex].count + component.count,
-        };
-      } else {
-        totalOldComponents.push({
+        totalComponents.push({
           name: component.name,
           count: component.count,
         });
       }
     });
   });
+
+  return totalComponents;
+}
+
+function getGlobalComponentsStats(data: AdoptionProjectStats[]) {
+  const totalNewComponents = getComponentsStatsPerVersion(data, 'new');
+  const totalOldComponents = getComponentsStatsPerVersion(data, 'old');
 
   return {
     new: totalNewComponents.sort(sortByCount),
