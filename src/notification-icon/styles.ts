@@ -39,7 +39,7 @@ const invertedIconVariantMap = {
   },
 };
 
-export function iconWrapperStyle() {
+export function wrapperStyle() {
   return css`
     position: relative;
     display: flex;
@@ -75,7 +75,7 @@ export function iconStyle({ variant, inverted }: IconStyleOptions) {
   `;
 }
 
-type IconBackgroundStyleOptions = {
+type BackgroundStyleOptions = {
   variant: NonNullable<
     React.ComponentProps<typeof NotificationIcon>['variant']
   >;
@@ -83,11 +83,11 @@ type IconBackgroundStyleOptions = {
   inverted: boolean;
 };
 
-export function iconBackgroundStyle({
+export function backgroundStyle({
   variant,
   size,
   inverted,
-}: IconBackgroundStyleOptions) {
+}: BackgroundStyleOptions) {
   // Calculate icon-size relative background sizing
   const radius =
     ICON_BACKGROUND_WIDTH +

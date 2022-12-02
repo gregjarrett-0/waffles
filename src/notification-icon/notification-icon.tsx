@@ -8,7 +8,7 @@ import {
   RocketInverted,
 } from '../icon';
 
-import { iconBackgroundStyle, iconStyle, iconWrapperStyle } from './styles';
+import { backgroundStyle, iconStyle, wrapperStyle } from './styles';
 
 type NotificationIconProps = {
   variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
@@ -39,8 +39,8 @@ function NotificationIcon({
   }
 
   return (
-    <div css={iconWrapperStyle()} data-testid="notification-icon">
-      <div css={iconBackgroundStyle({ variant, size, inverted })} />
+    <div css={wrapperStyle()} data-testid="notification-icon">
+      <div css={backgroundStyle({ variant, size, inverted })} />
       <div css={iconStyle({ variant, inverted })}>{renderIcon()}</div>
     </div>
   );
