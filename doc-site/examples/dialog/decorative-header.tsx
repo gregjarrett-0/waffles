@@ -8,7 +8,7 @@ import { Button } from '@datacamp/waffles/button';
 type DialogVariants = 'info' | 'success' | 'warning' | 'error' | 'upgrade';
 
 function Example() {
-  const [openDialog, setOpenDialog] = useState<DialogVariants | null>();
+  const [openDialog, setOpenDialog] = useState<DialogVariants | null>(null);
 
   return (
     <div
@@ -62,13 +62,12 @@ function Example() {
         onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="success">
-          Confirm your case study participation
+          Case study participation confirmation successful
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            To be able to participate in the case study, you will need a
-            computer with a webcam. If you fail to submit, you will have to wait
-            4 weeks before taking the case study again.
+            You have successfully submitted the case study participation
+            confirmation.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -97,13 +96,12 @@ function Example() {
         onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="warning">
-          Confirm your case study participation
+          Confirmation due today
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            To be able to participate in the case study, you will need a
-            computer with a webcam. If you fail to submit, you will have to wait
-            4 weeks before taking the case study again.
+            Your case study participation is due today. If you fail to submit,
+            you will have to wait 4 weeks before taking the case study again.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -132,13 +130,12 @@ function Example() {
         onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="error">
-          Confirm your case study participation
+          Problem confirming participation
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            To be able to participate in the case study, you will need a
-            computer with a webcam. If you fail to submit, you will have to wait
-            4 weeks before taking the case study again.
+            Something went wrong whilst submitting your confirmation of
+            participation, please try again shortly.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -167,13 +164,13 @@ function Example() {
         onClose={() => setOpenDialog(null)}
       >
         <Dialog.Header mode="decorative" variant="upgrade">
-          Confirm your case study participation
+          Upgrade to Premium
         </Dialog.Header>
         <Dialog.Body>
           <Paragraph>
-            To be able to participate in the case study, you will need a
-            computer with a webcam. If you fail to submit, you will have to wait
-            4 weeks before taking the case study again.
+            Upgrade now learn the data skills you need to advance your career
+            and write, run, and share data analysis in the cloud, anywhere, any
+            time.
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
@@ -185,10 +182,10 @@ function Example() {
           </Dialog.Button>
           <Dialog.Button
             autoFocus
-            variant="primary"
+            variant="upgrade"
             onClick={() => setOpenDialog(null)}
           >
-            Confirm
+            Upgrade
           </Dialog.Button>
         </Dialog.Footer>
       </Dialog>
