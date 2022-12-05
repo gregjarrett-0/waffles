@@ -183,8 +183,8 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #05192D;
 }
@@ -252,7 +252,7 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -740,8 +740,8 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #05192D;
 }
@@ -809,7 +809,7 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -119,8 +119,8 @@ exports[`Dialog renders center aligned snapshot 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #05192D;
 }
@@ -188,7 +188,7 @@ exports[`Dialog renders center aligned snapshot 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -574,8 +574,8 @@ exports[`Dialog renders snapshot 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #05192D;
 }
@@ -643,7 +643,7 @@ exports[`Dialog renders snapshot 1`] = `
 }
 
 .emotion-4 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1047,8 +1047,8 @@ exports[`Dialog with decorative header as error variant 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -1093,7 +1093,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #FF5400;
-  height: 48px;
+  height: 52px;
 }
 
 .emotion-3 {
@@ -1105,6 +1105,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  color: #FF5400;
   background-color: #FFFFFF;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1116,10 +1117,6 @@ exports[`Dialog with decorative header as error variant 1`] = `
   justify-content: center;
   top: 50%;
   box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
-}
-
-.emotion-3 svg {
-  color: #FF5400;
 }
 
 .emotion-4 {
@@ -1206,7 +1203,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1631,8 +1628,8 @@ exports[`Dialog with decorative header as info variant 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -1677,7 +1674,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #009BD8;
-  height: 48px;
+  height: 52px;
 }
 
 .emotion-3 {
@@ -1689,6 +1686,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  color: #009BD8;
   background-color: #FFFFFF;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1700,10 +1698,6 @@ exports[`Dialog with decorative header as info variant 1`] = `
   justify-content: center;
   top: 50%;
   box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
-}
-
-.emotion-3 svg {
-  color: #009BD8;
 }
 
 .emotion-4 {
@@ -1790,7 +1784,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2215,8 +2209,8 @@ exports[`Dialog with decorative header as success variant 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -2261,7 +2255,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #03EF62;
-  height: 48px;
+  height: 52px;
 }
 
 .emotion-3 {
@@ -2273,6 +2267,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  color: #03EF62;
   background-color: #FFFFFF;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2284,10 +2279,6 @@ exports[`Dialog with decorative header as success variant 1`] = `
   justify-content: center;
   top: 50%;
   box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
-}
-
-.emotion-3 svg {
-  color: #03EF62;
 }
 
 .emotion-4 {
@@ -2374,7 +2365,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2799,8 +2790,8 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -2845,7 +2836,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #7933FF;
-  height: 48px;
+  height: 52px;
 }
 
 .emotion-3 {
@@ -2857,6 +2848,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  color: #7933FF;
   background-color: #FFFFFF;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2868,10 +2860,6 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   justify-content: center;
   top: 50%;
   box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
-}
-
-.emotion-3 svg {
-  color: #7933FF;
 }
 
 .emotion-4 {
@@ -2958,7 +2946,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3383,8 +3371,8 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   background-color: transparent;
   border-color: transparent;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
   z-index: 1;
   color: #FFFFFF;
 }
@@ -3429,7 +3417,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   display: flex;
   background-color: #213147;
   border-bottom: 4px solid #FFBC4B;
-  height: 48px;
+  height: 52px;
 }
 
 .emotion-3 {
@@ -3441,6 +3429,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  color: #FFBC4B;
   background-color: #FFFFFF;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3452,10 +3441,6 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   justify-content: center;
   top: 50%;
   box-shadow: 0px 3px 5px -1px rgba(5, 25, 45, 0.3);
-}
-
-.emotion-3 svg {
-  color: #FFBC4B;
 }
 
 .emotion-4 {
@@ -3543,7 +3528,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
 }
 
 .emotion-9 {
-  padding: 16px 24px 24px;
+  padding: 16px 24px 24px 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

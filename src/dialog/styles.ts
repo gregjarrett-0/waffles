@@ -88,8 +88,8 @@ export function closeButtonStyle({
 }: CloseButtonStyleOptions) {
   return css`
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: 6px;
+    right: 6px;
     z-index: ${tokens.zIndex.default};
     color: ${hasDecorativeHeader ? tokens.colors.white : tokens.colors.navy};
   `;
@@ -135,15 +135,12 @@ export function avatarStyle({ variant }: DecorativeStyleOptions) {
     width: 48px;
     height: 48px;
     border-radius: ${tokens.borderRadius.circle};
+    color: ${variantMap[variant].color};
     background-color: ${tokens.colors.white};
     align-items: center;
     justify-content: center;
     top: 50%;
     box-shadow: ${tokens.boxShadow.thick};
-
-    svg {
-      color: ${variantMap[variant].color};
-    }
   `;
 }
 
@@ -153,7 +150,7 @@ export function decorativeHeaderStyle({ variant }: DecorativeStyleOptions) {
     display: flex;
     background-color: ${tokens.colors.navyLight};
     border-bottom: 4px solid ${variantMap[variant].color};
-    height: 48px;
+    height: 52px;
   `;
 }
 
@@ -184,7 +181,7 @@ type FooterStyleOptions = {
 export function footerStyle({ alignCenter }: FooterStyleOptions) {
   return css`
     padding: ${tokens.spacing.medium} ${tokens.spacing.large}
-      ${tokens.spacing.large};
+      ${tokens.spacing.large} ${tokens.spacing.large};
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

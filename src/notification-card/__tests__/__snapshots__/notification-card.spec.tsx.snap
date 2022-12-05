@@ -75,7 +75,7 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   color: #FF5400;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -87,7 +87,7 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -140,7 +140,7 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -156,15 +156,15 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -188,7 +188,6 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -201,13 +200,13 @@ exports[`NotificationCard renders snapshot of inverted variant error 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -300,7 +299,7 @@ exports[`NotificationCard renders snapshot of inverted variant info 1`] = `
   color: #009BD8;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -312,7 +311,7 @@ exports[`NotificationCard renders snapshot of inverted variant info 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -365,7 +364,7 @@ exports[`NotificationCard renders snapshot of inverted variant info 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -381,15 +380,15 @@ exports[`NotificationCard renders snapshot of inverted variant info 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -413,7 +412,6 @@ exports[`NotificationCard renders snapshot of inverted variant info 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -426,13 +424,13 @@ exports[`NotificationCard renders snapshot of inverted variant info 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -525,7 +523,7 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   color: #03EF62;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -537,7 +535,7 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -590,7 +588,7 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -606,15 +604,15 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -638,7 +636,6 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -651,13 +648,13 @@ exports[`NotificationCard renders snapshot of inverted variant success 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -750,7 +747,7 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   color: #974DFF;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -762,7 +759,7 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -815,7 +812,7 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -831,15 +828,15 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -863,7 +860,6 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -878,13 +874,13 @@ exports[`NotificationCard renders snapshot of inverted variant upgrade 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -978,7 +974,7 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   color: #FFBC4B;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -990,7 +986,7 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1043,7 +1039,7 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -1059,15 +1055,15 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -1091,7 +1087,6 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -1106,13 +1101,13 @@ exports[`NotificationCard renders snapshot of inverted variant warning 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -1205,7 +1200,7 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   color: #FF5400;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -1217,7 +1212,7 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1270,7 +1265,7 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -1286,15 +1281,15 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -1318,7 +1313,6 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -1331,13 +1325,13 @@ exports[`NotificationCard renders snapshot of variant error 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -1430,7 +1424,7 @@ exports[`NotificationCard renders snapshot of variant info 1`] = `
   color: #009BD8;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -1442,7 +1436,7 @@ exports[`NotificationCard renders snapshot of variant info 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1495,7 +1489,7 @@ exports[`NotificationCard renders snapshot of variant info 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -1511,15 +1505,15 @@ exports[`NotificationCard renders snapshot of variant info 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -1543,7 +1537,6 @@ exports[`NotificationCard renders snapshot of variant info 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -1556,13 +1549,13 @@ exports[`NotificationCard renders snapshot of variant info 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -1655,7 +1648,7 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   color: #03EF62;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -1667,7 +1660,7 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1720,7 +1713,7 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -1736,15 +1729,15 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -1768,7 +1761,6 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -1781,13 +1773,13 @@ exports[`NotificationCard renders snapshot of variant success 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -1880,7 +1872,7 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   color: #7933FF;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -1892,7 +1884,7 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1945,7 +1937,7 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -1961,15 +1953,15 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -1993,7 +1985,6 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -2008,13 +1999,13 @@ exports[`NotificationCard renders snapshot of variant upgrade 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg
@@ -2108,7 +2099,7 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   color: #FFBC4B;
 }
 
-.emotion-6 {
+.emotion-5 {
   padding-right: 8px;
   padding-left: 8px;
   -webkit-align-self: center;
@@ -2120,7 +2111,7 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   flex-grow: 1;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2173,7 +2164,7 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   margin-left: auto;
 }
 
-.emotion-7::after {
+.emotion-6::after {
   content: '';
   display: block;
   position: absolute;
@@ -2189,15 +2180,15 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
   transition: box-shadow 125ms ease-out;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: transparent;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -2221,7 +2212,6 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="emotion-5"
         height="16"
         viewBox="0 0 18 18"
         width="16"
@@ -2236,13 +2226,13 @@ exports[`NotificationCard renders snapshot of variant warning 1`] = `
     </div>
   </div>
   <div
-    class="emotion-6"
+    class="emotion-5"
   >
     Test
   </div>
   <button
     aria-label="Close notification"
-    class="emotion-7"
+    class="emotion-6"
     type="button"
   >
     <svg

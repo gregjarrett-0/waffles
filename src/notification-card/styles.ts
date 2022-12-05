@@ -69,19 +69,6 @@ export function decorStyle({ variant, inverted }: DecorStyleStyleOptions) {
   `;
 }
 
-type IconStyleOptions = {
-  isIconCentered: boolean;
-};
-
-export function iconStyle({ isIconCentered }: IconStyleOptions) {
-  return css`
-    ${isIconCentered &&
-    css`
-      /* margin-left: auto; */
-    `}
-  `;
-}
-
 type ContentStyleOptions = {
   closable: boolean;
   isContentCentered: boolean;
