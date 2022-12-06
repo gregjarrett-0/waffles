@@ -34,16 +34,25 @@ const invertedIconsPreview = css`
   border-top: 0;
 `;
 
-const iconWrapperStyle = css`
-  display: flex;
-  align-items: center;
-  margin: ${tokens.spacing.small};
+type IconStyleOptions = {
+  isLabelVisible: boolean;
+  inverted: boolean;
+};
 
-  // Fix issue where Icon would shrink if label is too long
-  & svg {
-    flex-shrink: 0;
-  }
-`;
+function iconStyle({ isLabelVisible, inverted }: IconStyleOptions) {
+  return css`
+    display: flex;
+    align-items: center;
+    margin: ${tokens.spacing.small};
+    color: ${inverted ? tokens.colors.white : tokens.colors.navy};
+    width: ${isLabelVisible ? '220px' : 'auto'};
+
+    // Fix issue where Icon would shrink if label is too long
+    & svg {
+      flex-shrink: 0;
+    }
+  `;
+}
 
 const labelStyle = css`
   padding-left: ${tokens.spacing.small};
@@ -69,13 +78,7 @@ function IconPreview({
   inverted = false,
 }: IconPreviewType) {
   return (
-    <div
-      css={css`
-        ${iconWrapperStyle}
-        color: ${inverted ? tokens.colors.white : tokens.colors.navy};
-        width: ${isLabelVisible ? '220px' : 'auto'};
-      `}
-    >
+    <div css={iconStyle({ isLabelVisible, inverted })}>
       {icon}
       {isLabelVisible && <Text css={labelStyle}>{name}</Text>}
     </div>

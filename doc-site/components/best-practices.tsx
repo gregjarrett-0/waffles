@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { mediaQuery } from '@datacamp/waffles/helpers';
@@ -36,21 +36,7 @@ function BestPracticesDiscouraged({ children }: BestPracticesProps) {
 }
 
 function BestPractices({ children }: BestPracticesProps) {
-  const singleCard = Children.count(children) === 1;
-
-  return (
-    <div
-      css={css`
-        ${wrapperStyle}
-        ${singleCard &&
-        css`
-          grid-template-columns: 1fr;
-        `}
-      `}
-    >
-      {children}
-    </div>
-  );
+  return <div css={wrapperStyle}>{children}</div>;
 }
 
 BestPractices.Recommended = BestPracticesRecommended;

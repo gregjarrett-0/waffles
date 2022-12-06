@@ -16,16 +16,32 @@ const sectionStyle = css`
   margin-top: ${tokens.spacing.medium};
 `;
 
-const wrapperStyle = css`
-  padding: ${tokens.spacing.medium};
-  padding-bottom: ${tokens.spacing.xlarge};
-  margin-top: ${tokens.spacing.medium};
-  border-width: ${tokens.borderWidth.thin};
-  border-style: solid;
-  border-top-right-radius: ${tokens.borderRadius.medium};
-  border-top-left-radius: ${tokens.borderRadius.medium};
-  overflow: hidden;
-`;
+type WrapperStyleOptions = {
+  minHeight?: number;
+  darkPreview: boolean;
+};
+
+function wrapperStyle({ minHeight, darkPreview }: WrapperStyleOptions) {
+  return css`
+    padding: ${tokens.spacing.medium};
+    padding-bottom: ${tokens.spacing.xlarge};
+    margin-top: ${tokens.spacing.medium};
+    border-width: ${tokens.borderWidth.thin};
+    border-style: solid;
+    border-top-right-radius: ${tokens.borderRadius.medium};
+    border-top-left-radius: ${tokens.borderRadius.medium};
+    overflow: hidden;
+    ${minHeight && `min-height: ${minHeight}px;`}
+    background-color: ${darkPreview ? tokens.colors.navy : tokens.colors.white};
+    border-color: ${darkPreview
+      ? tokens.colors.navy
+      : hexToRgba(tokens.colors.navy, 0.15)};
+    border-bottom-color: ${hexToRgba(
+      darkPreview ? tokens.colors.white : tokens.colors.navy,
+      tokens.opacity.low,
+    )};
+  `;
+}
 
 const buttonContentStyle = css`
   text-align: center;
@@ -71,26 +87,7 @@ function Example({
     <ErrorBoundary>
       <section css={sectionStyle}>
         <Heading size="large">{title}</Heading>
-        <div
-          css={css`
-            ${wrapperStyle};
-            ${minHeight &&
-            css`
-              min-height: ${minHeight}px;
-            `}
-            background-color: ${darkPreview
-              ? tokens.colors.navy
-              : tokens.colors.white};
-            border-color: ${darkPreview
-              ? tokens.colors.navy
-              : hexToRgba(tokens.colors.navy, 0.15)};
-            border-bottom-color: ${darkPreview
-              ? hexToRgba(tokens.colors.white, tokens.opacity.low)
-              : hexToRgba(tokens.colors.navy, tokens.opacity.low)};
-          `}
-        >
-          {children}
-        </div>
+        <div css={wrapperStyle({ minHeight, darkPreview })}>{children}</div>
         {code && isCodePreviewVisible && (
           <CodePreview>
             <Highlight theme={basicTheme}>{code}</Highlight>

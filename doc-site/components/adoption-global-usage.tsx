@@ -40,6 +40,18 @@ const listStyle = css`
   }
 `;
 
+type CountStyleOptions = {
+  colorScale: string[];
+  index: number;
+};
+
+function countStyle({ colorScale, index }: CountStyleOptions) {
+  return css`
+    background-color: ${colorScale[index]};
+    margin-left: ${tokens.spacing.xsmall};
+  `;
+}
+
 const usageColorScale = [
   tokens.colors.green,
   tokens.colors.orange,
@@ -109,10 +121,7 @@ function AdoptionGlobalUsage({ usageData }: AdoptionGlobalUsageProps) {
                 <Text>{stats.name}</Text>
                 <Code
                   size="medium"
-                  css={css`
-                    background-color: ${usageColorScale[index]};
-                    margin-left: ${tokens.spacing.xsmall};
-                  `}
+                  css={countStyle({ colorScale: usageColorScale, index })}
                 >
                   {stats.percentage}%
                 </Code>

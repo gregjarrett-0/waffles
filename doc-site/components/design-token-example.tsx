@@ -75,11 +75,7 @@ function SurfaceExample(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <Table.Cell css={exampleCellStyle}>
       <div css={exampleWrapperStyle}>
-        <span
-          css={css`
-            ${sizeBarStyle};
-          `}
-        />
+        <span css={sizeBarStyle} />
         <div css={surfaceStyle} {...props} />
       </div>
     </Table.Cell>
