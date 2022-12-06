@@ -10,7 +10,7 @@ import { MESSAGES } from './debug-messages';
 
 import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
-type ButtonBaseProps = {
+export type ButtonBaseProps = {
   /* Defines the variant of the Button. */
   /* @default primary */
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive' | 'upgrade';

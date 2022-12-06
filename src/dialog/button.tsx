@@ -1,7 +1,11 @@
 import { forwardRef } from 'react';
 
-import ButtonInternal from './button-internal';
+import ButtonInternal, { ButtonProps } from './button-internal';
 
-const Button = forwardRef(ButtonInternal);
+type ButtonComponent = <T extends React.ElementType = 'button'>(
+  props: ButtonProps<T>,
+) => JSX.Element | null;
+
+const Button: ButtonComponent = forwardRef(ButtonInternal);
 
 export default Button;

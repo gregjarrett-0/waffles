@@ -1,39 +1,60 @@
 import React from 'react';
 
+import { PolymorphicComponentProps, PolymorphicRef } from '../helpers';
+import { ButtonBaseProps } from '../button/button-internal';
 import { Button } from '../button';
 
 import { buttonStyle } from './styles';
 
-type ButtonProps = {
+type DialogButtonProps = {
   /* [skip docs] */
-  variant?: React.ComponentProps<typeof Button>['variant'];
-  /* [skip docs] */
-  size?: React.ComponentProps<typeof Button>['size'];
-  /* [skip docs] */
-  isLoading?: boolean;
+  children: React.ReactNode;
   /* [skip docs] */
   iconLeft?: JSX.Element;
   /* [skip docs] */
   iconRight?: JSX.Element;
-  /* [skip docs] */
-  children: React.ReactNode;
-  /* [skip docs] */
-  inverted?: boolean;
-  /* [skip docs] */
-  fullWidth?: boolean;
   /* Focus this particular Button when Dialog is opened. */
   /* @default false */
   autoFocus?: boolean;
-} & Omit<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  'autoFocus' | 'children'
->;
+} & Omit<ButtonBaseProps, 'fullWidth' | 'inverted'>;
 
-function ButtonInternal(
-  { ...restProps }: ButtonProps,
-  ref: React.Ref<HTMLButtonElement>,
+export type ButtonProps<T extends React.ElementType = 'button'> =
+  PolymorphicComponentProps<T, DialogButtonProps>;
+
+function ButtonInternal<T extends React.ElementType = 'button'>(
+  {
+    as,
+    variant = 'primary',
+    size = 'medium',
+    isLoading = false,
+    disableTitleCase = false,
+    iconLeft,
+    iconRight,
+    autoFocus,
+    children,
+    ...restProps
+  }: ButtonProps<T>,
+  ref?: PolymorphicRef<T>,
 ) {
-  return <Button {...restProps} ref={ref} css={buttonStyle()} />;
+  return (
+    <Button
+      as={as}
+      {...{
+        size,
+        variant,
+        isLoading,
+        disableTitleCase,
+        iconLeft,
+        iconRight,
+        autoFocus,
+        ...restProps,
+      }}
+      ref={ref}
+      css={buttonStyle()}
+    >
+      {children}
+    </Button>
+  );
 }
 
 export default ButtonInternal;
