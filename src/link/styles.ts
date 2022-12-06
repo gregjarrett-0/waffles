@@ -29,8 +29,12 @@ const linkBaseStyle = css`
   box-decoration-break: clone; // Nicely rounded background even between lines
   text-decoration: underline;
   text-decoration-color: transparent;
+  background-color: ${hexToRgba(
+    tokens.colors.white,
+    0.01,
+  )}; // Fix for Safari not always triggering the hover animation
   transition: box-shadow 125ms ease-out, background-color 125ms ease-out,
-    text-decoration-color 200ms ease-out;
+    text-decoration-color 125ms ease-out;
 
   & svg {
     vertical-align: middle;
