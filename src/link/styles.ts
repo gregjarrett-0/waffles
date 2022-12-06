@@ -29,6 +29,7 @@ const linkBaseStyle = css`
   box-decoration-break: clone; // Nicely rounded background even between lines
   text-decoration: underline;
   text-decoration-color: transparent;
+  text-decoration-thickness: 1.25px; // Uniform underline thickness for all sizes
   background-color: ${hexToRgba(
     tokens.colors.white,
     0.01,
