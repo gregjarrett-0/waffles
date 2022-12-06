@@ -49,7 +49,7 @@ function AdoptionBadge({
       case 'outdated':
         return (
           <ArrowUp
-            aria-label="Needs upgrade urgently"
+            aria-label="Needs upgrading urgently"
             size="xsmall"
             css={css`
               color: ${tokens.colors.red};

@@ -203,8 +203,7 @@ function AdoptionPage() {
         </ul>
         <Notification
           title="Limitations"
-          description="Our adoption tracker uses GitHub search API to gather data from all DataCamp repositories. Because of it's limitations components statistics, especially for bigger projects, might be incomplete. Nonetheless, should give pretty good picture how often each component is used in general."
-          variant="warning"
+          description="As our tracker uses the GitHub search API to gather data from all DataCamp repositories, it may hold incomplete information due to the limitations of this API. Nevertheless, it should still provide an idea of how often components are used."
         />
       </section>
     </Layout>
