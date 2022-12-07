@@ -15,12 +15,7 @@ type AlertDialogProps = {
 
 function AlertDialogInternal({ children, ...restProps }: AlertDialogProps) {
   return (
-    <Dialog
-      css={dialogStyle()}
-      role="alertdialog"
-      idPrefix="alert-dialog"
-      {...restProps}
-    >
+    <Dialog css={dialogStyle()} role="alertdialog" {...restProps}>
       {children}
     </Dialog>
   );

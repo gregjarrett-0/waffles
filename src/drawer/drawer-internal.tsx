@@ -36,7 +36,6 @@ function DrawerInternal({
         isOpen,
         onClose,
         closeButtonOverride,
-        idPrefix: 'drawer',
         'aria-label': ariaLabel,
       }}
       {...restProps}

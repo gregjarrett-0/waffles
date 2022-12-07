@@ -77,7 +77,7 @@ describe('Dialog', () => {
 
     let overlay;
     await waitFor(() => {
-      overlay = getByTestId('dialog-overlay');
+      overlay = getByTestId('modal-overlay');
     });
     const dialog = getByRole('dialog');
     const header = getByText('Taylor Swift discography');
@@ -88,17 +88,17 @@ describe('Dialog', () => {
     expect(dialog).toBeInTheDocument();
     expect(dialog).toHaveAttribute(
       'aria-labelledby',
-      `dialog-${MOCKED_ID}-header`,
+      `modal-${MOCKED_ID}-header`,
     );
     expect(dialog).toHaveAttribute(
       'aria-describedby',
-      `dialog-${MOCKED_ID}-body`,
+      `modal-${MOCKED_ID}-body`,
     );
     expect(overlay).toBeInTheDocument();
     expect(header).toBeInTheDocument();
-    expect(header).toHaveAttribute('id', `dialog-${MOCKED_ID}-header`);
+    expect(header).toHaveAttribute('id', `modal-${MOCKED_ID}-header`);
     expect(body).toBeInTheDocument();
-    expect(body).toHaveAttribute('id', `dialog-${MOCKED_ID}-body`);
+    expect(body).toHaveAttribute('id', `modal-${MOCKED_ID}-body`);
     expect(closeButton).toBeInTheDocument();
     expect(confirmButton).toBeInTheDocument();
   });
@@ -108,7 +108,7 @@ describe('Dialog', () => {
       <DialogTest isOpen={false} onClose={() => {}} />,
     );
 
-    const overlay = queryByTestId('dialog-overlay');
+    const overlay = queryByTestId('modal-overlay');
     const dialog = queryByRole('dialog');
 
     expect(dialog).not.toBeInTheDocument();

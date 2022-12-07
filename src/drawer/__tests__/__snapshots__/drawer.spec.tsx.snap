@@ -485,8 +485,8 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
 }
 
 <section
-  aria-describedby="drawer-123abC-body"
-  aria-labelledby="drawer-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   data-testid="test-drawer"
@@ -502,13 +502,13 @@ exports[`Drawer renders snapshot when drawer is placed to the left 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="drawer-123abC-header"
+    id="modal-123abC-header"
   >
     Fabulous Marillion concert
   </h2>
   <div
     class="emotion-3"
-    id="drawer-123abC-body"
+    id="modal-123abC-body"
   >
     Write a script for a jesters tear yourself.
   </div>
@@ -1042,8 +1042,8 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
 }
 
 <section
-  aria-describedby="drawer-123abC-body"
-  aria-labelledby="drawer-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   data-testid="test-drawer"
@@ -1059,13 +1059,13 @@ exports[`Drawer renders snapshot when drawer is placed to the right 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="drawer-123abC-header"
+    id="modal-123abC-header"
   >
     Fabulous Marillion concert
   </h2>
   <div
     class="emotion-3"
-    id="drawer-123abC-body"
+    id="modal-123abC-body"
   >
     Write a script for a jesters tear yourself.
   </div>

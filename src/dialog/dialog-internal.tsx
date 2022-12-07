@@ -36,8 +36,6 @@ type DialogProps = {
   children: React.ReactNode;
   /* [skip docs] */
   role?: 'dialog' | 'alertdialog';
-  /* [skip docs] */
-  idPrefix?: string;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
 function DialogInternal({
@@ -48,13 +46,12 @@ function DialogInternal({
   children,
   'aria-label': ariaLabel,
   role = 'dialog',
-  idPrefix = 'dialog',
   ...restProps
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
   const didMount = useRef(false);
   const autoFocusRef = createRef<HTMLButtonElement>();
-  const id = `${idPrefix}-${useId()}`;
+  const id = `modal-${useId()}`;
   const [headerId, setHeaderId] = useState<string>();
   const [bodyId, setBodyId] = useState<string>();
   const [hasDecorativeHeader, setHasDecorativeHeader] = useState(false);
@@ -86,7 +83,7 @@ function DialogInternal({
     >
       <Portal>
         {isAnimating && (
-          <Overlay isVisible={isOpen} data-testid={`${idPrefix}-overlay`}>
+          <Overlay isVisible={isOpen} data-testid="modal-overlay">
             <Panel
               {...{
                 role,

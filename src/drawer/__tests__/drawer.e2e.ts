@@ -14,7 +14,7 @@ describe('Drawer', () => {
         cy.loadStory('drawer-placement');
         cy.findByText('Open on Left').click();
         cy.findByTestId('left-drawer').should('exist');
-        cy.findByTestId('drawer-overlay').should('exist');
+        cy.findByTestId('modal-overlay').should('exist');
       });
     });
   });
@@ -28,7 +28,7 @@ describe('Drawer', () => {
         cy.loadStory('drawer-placement');
         cy.findByText('Open on Right').click();
         cy.findByTestId('right-drawer').should('exist');
-        cy.findByTestId('drawer-overlay').should('exist');
+        cy.findByTestId('modal-overlay').should('exist');
       });
     });
   });
@@ -42,7 +42,7 @@ describe('Drawer', () => {
         cy.loadStory('drawer-long-content');
         cy.findByText('Open').click();
         cy.findByTestId('drawer').should('exist');
-        cy.findByTestId('drawer-overlay').should('exist');
+        cy.findByTestId('modal-overlay').should('exist');
       });
     });
 
@@ -72,16 +72,16 @@ describe('Drawer', () => {
     cy.findByText('Open on Left').click();
     cy.wait(500);
     cy.findByTestId('left-drawer').findByLabelText('Close').click();
-    cy.findByTestId('drawer-overlay').should('not.exist');
+    cy.findByTestId('modal-overlay').should('not.exist');
   });
 
   it('after clicking on the overlay, it disappears', () => {
     cy.loadStory('drawer-placement');
     cy.findByText('Open on Right').click();
     cy.wait(500);
-    cy.findByTestId('drawer-overlay').click({ force: true });
+    cy.findByTestId('modal-overlay').click({ force: true });
     cy.findByRole('right-drawer').should('not.exist');
-    cy.findByTestId('drawer-overlay').should('not.exist');
+    cy.findByTestId('modal-overlay').should('not.exist');
   });
 
   it('after opening it via keyboard, one of the predefined buttons in the footer is focused', () => {

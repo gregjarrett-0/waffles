@@ -334,8 +334,8 @@ exports[`AlertDialogTest renders snapshot 1`] = `
 }
 
 <section
-  aria-describedby="alert-dialog-123abC-body"
-  aria-labelledby="alert-dialog-title"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="alertdialog"
@@ -350,13 +350,13 @@ exports[`AlertDialogTest renders snapshot 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="alert-dialog-title"
+    id="modal-123abC-header"
   >
     Warning!
   </h2>
   <div
     class="emotion-3"
-    id="alert-dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Oops, something happened.
   </div>

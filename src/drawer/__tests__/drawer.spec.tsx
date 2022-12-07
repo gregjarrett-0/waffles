@@ -62,7 +62,7 @@ describe('Drawer', () => {
 
     let overlay;
     await waitFor(() => {
-      overlay = getByTestId('drawer-overlay');
+      overlay = getByTestId('modal-overlay');
     });
     const dialog = getByTestId('test-drawer');
     const header = getByText('Fabulous Marillion concert');
@@ -73,17 +73,17 @@ describe('Drawer', () => {
     expect(dialog).toBeInTheDocument();
     expect(dialog).toHaveAttribute(
       'aria-labelledby',
-      `drawer-${MOCKED_ID}-header`,
+      `modal-${MOCKED_ID}-header`,
     );
     expect(dialog).toHaveAttribute(
       'aria-describedby',
-      `drawer-${MOCKED_ID}-body`,
+      `modal-${MOCKED_ID}-body`,
     );
     expect(overlay).toBeInTheDocument();
     expect(header).toBeInTheDocument();
-    expect(header).toHaveAttribute('id', `drawer-${MOCKED_ID}-header`);
+    expect(header).toHaveAttribute('id', `modal-${MOCKED_ID}-header`);
     expect(body).toBeInTheDocument();
-    expect(body).toHaveAttribute('id', `drawer-${MOCKED_ID}-body`);
+    expect(body).toHaveAttribute('id', `modal-${MOCKED_ID}-body`);
     expect(body).toBeInTheDocument();
     expect(closeButton).toBeInTheDocument();
     expect(confirmButton).toBeInTheDocument();
@@ -140,7 +140,7 @@ describe('Drawer', () => {
       <DrawerTest isOpen={true} onClose={() => {}} placement="left" />,
     );
 
-    const overlay = queryByTestId('drawer-overlay');
+    const overlay = queryByTestId('modal-overlay');
     const dialog = queryByTestId('test-drawer');
 
     expect(dialog).not.toBeInTheDocument();

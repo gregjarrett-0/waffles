@@ -421,8 +421,8 @@ exports[`Dialog renders center aligned snapshot 1`] = `
 }
 
 <section
-  aria-describedby="dialog-123abC-body"
-  aria-labelledby="dialog-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -437,13 +437,13 @@ exports[`Dialog renders center aligned snapshot 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="dialog-123abC-header"
+    id="modal-123abC-header"
   >
     Taylor Swift discography
   </h2>
   <div
     class="emotion-3"
-    id="dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>
@@ -876,8 +876,8 @@ exports[`Dialog renders snapshot 1`] = `
 }
 
 <section
-  aria-describedby="dialog-123abC-body"
-  aria-labelledby="dialog-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -892,13 +892,13 @@ exports[`Dialog renders snapshot 1`] = `
   </button>
   <h2
     class="emotion-2"
-    id="dialog-123abC-header"
+    id="modal-123abC-header"
   >
     Taylor Swift discography
   </h2>
   <div
     class="emotion-3"
-    id="dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>
@@ -1436,8 +1436,8 @@ exports[`Dialog with decorative header as error variant 1`] = `
 }
 
 <section
-  aria-describedby="dialog-123abC-body"
-  aria-labelledby="dialog-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -1473,13 +1473,13 @@ exports[`Dialog with decorative header as error variant 1`] = `
   </div>
   <h2
     class="emotion-7"
-    id="dialog-123abC-header"
+    id="modal-123abC-header"
   >
     Taylor Swift discography
   </h2>
   <div
     class="emotion-8"
-    id="dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>
@@ -2017,8 +2017,8 @@ exports[`Dialog with decorative header as info variant 1`] = `
 }
 
 <section
-  aria-describedby="dialog-123abC-body"
-  aria-labelledby="dialog-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -2054,13 +2054,13 @@ exports[`Dialog with decorative header as info variant 1`] = `
   </div>
   <h2
     class="emotion-7"
-    id="dialog-123abC-header"
+    id="modal-123abC-header"
   >
     Taylor Swift discography
   </h2>
   <div
     class="emotion-8"
-    id="dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>
@@ -2598,8 +2598,8 @@ exports[`Dialog with decorative header as success variant 1`] = `
 }
 
 <section
-  aria-describedby="dialog-123abC-body"
-  aria-labelledby="dialog-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -2635,13 +2635,13 @@ exports[`Dialog with decorative header as success variant 1`] = `
   </div>
   <h2
     class="emotion-7"
-    id="dialog-123abC-header"
+    id="modal-123abC-header"
   >
     Taylor Swift discography
   </h2>
   <div
     class="emotion-8"
-    id="dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>
@@ -3179,8 +3179,8 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
 }
 
 <section
-  aria-describedby="dialog-123abC-body"
-  aria-labelledby="dialog-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -3216,13 +3216,13 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
   </div>
   <h2
     class="emotion-7"
-    id="dialog-123abC-header"
+    id="modal-123abC-header"
   >
     Taylor Swift discography
   </h2>
   <div
     class="emotion-8"
-    id="dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>
@@ -3761,8 +3761,8 @@ exports[`Dialog with decorative header as warning variant 1`] = `
 }
 
 <section
-  aria-describedby="dialog-123abC-body"
-  aria-labelledby="dialog-123abC-header"
+  aria-describedby="modal-123abC-body"
+  aria-labelledby="modal-123abC-header"
   aria-modal="true"
   class="emotion-0"
   role="dialog"
@@ -3798,13 +3798,13 @@ exports[`Dialog with decorative header as warning variant 1`] = `
   </div>
   <h2
     class="emotion-7"
-    id="dialog-123abC-header"
+    id="modal-123abC-header"
   >
     Taylor Swift discography
   </h2>
   <div
     class="emotion-8"
-    id="dialog-123abC-body"
+    id="modal-123abC-body"
   >
     Discover amazing pop songs by Taylor Swift.
   </div>

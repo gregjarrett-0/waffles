@@ -24,12 +24,8 @@ type AlertDialogTestProps = {
 
 function AlertDialogTest({ isOpen, onClose }: AlertDialogTestProps) {
   return (
-    <AlertDialog
-      isOpen={isOpen}
-      onClose={onClose}
-      aria-labelledby="alert-dialog-title"
-    >
-      <AlertDialog.Header id="alert-dialog-title">Warning!</AlertDialog.Header>
+    <AlertDialog isOpen={isOpen} onClose={onClose}>
+      <AlertDialog.Header>Warning!</AlertDialog.Header>
       <AlertDialog.Body>Oops, something happened.</AlertDialog.Body>
       <AlertDialog.Footer>
         <AlertDialog.Button autoFocus onClick={onClose}>
@@ -61,19 +57,22 @@ describe('AlertDialogTest', () => {
 
     let overlay;
     await waitFor(() => {
-      overlay = getByTestId('alert-dialog-overlay');
+      overlay = getByTestId('modal-overlay');
     });
     const dialog = getByRole('alertdialog');
-    const title = getByText('Warning!');
+    const header = getByText('Warning!');
     const body = getByText(/something happened/i);
     const closeButton = getByLabelText('Close');
     const dismissButton = getByText('Got It!');
 
     expect(dialog).toBeInTheDocument();
-    expect(dialog).toHaveAttribute('aria-labelledby', 'alert-dialog-title');
+    expect(dialog).toHaveAttribute(
+      'aria-labelledby',
+      `modal-${MOCKED_ID}-header`,
+    );
     expect(overlay).toBeInTheDocument();
-    expect(title).toBeInTheDocument();
-    expect(title).toHaveAttribute('id', 'alert-dialog-title');
+    expect(header).toBeInTheDocument();
+    expect(header).toHaveAttribute('id', `modal-${MOCKED_ID}-header`);
     expect(body).toBeInTheDocument();
     expect(closeButton).toBeInTheDocument();
     expect(dismissButton).toBeInTheDocument();
@@ -84,7 +83,7 @@ describe('AlertDialogTest', () => {
       <AlertDialogTest isOpen={false} onClose={() => {}} />,
     );
 
-    const overlay = queryByTestId('dialog-overlay');
+    const overlay = queryByTestId('modal-overlay');
     const dialog = queryByTestId('test-dialog');
 
     expect(dialog).not.toBeInTheDocument();

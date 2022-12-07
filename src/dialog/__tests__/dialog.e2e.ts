@@ -9,7 +9,7 @@ describe('Dialog', () => {
     cy.loadStory('dialog-center-aligned');
     cy.findByText('Open').click();
     cy.findByRole('dialog').should('exist');
-    cy.findByTestId('dialog-overlay').should('exist');
+    cy.findByTestId('modal-overlay').should('exist');
   });
 
   describe('with decorative header', () => {
@@ -17,35 +17,35 @@ describe('Dialog', () => {
       cy.loadStory('dialog-decorative-header-variants');
       cy.findByText('Open Info Dialog').click();
       cy.findByRole('dialog').should('exist');
-      cy.findByTestId('dialog-overlay').should('exist');
+      cy.findByTestId('modal-overlay').should('exist');
     });
 
     it(`as success variant`, () => {
       cy.loadStory('dialog-decorative-header-variants');
       cy.findByText('Open Success Dialog').click();
       cy.findByRole('dialog').should('exist');
-      cy.findByTestId('dialog-overlay').should('exist');
+      cy.findByTestId('modal-overlay').should('exist');
     });
 
     it(`as warning variant`, () => {
       cy.loadStory('dialog-decorative-header-variants');
       cy.findByText('Open Warning Dialog').click();
       cy.findByRole('dialog').should('exist');
-      cy.findByTestId('dialog-overlay').should('exist');
+      cy.findByTestId('modal-overlay').should('exist');
     });
 
     it(`as error variant`, () => {
       cy.loadStory('dialog-decorative-header-variants');
       cy.findByText('Open Error Dialog').click();
       cy.findByRole('dialog').should('exist');
-      cy.findByTestId('dialog-overlay').should('exist');
+      cy.findByTestId('modal-overlay').should('exist');
     });
 
     it(`as upgrade variant`, () => {
       cy.loadStory('dialog-decorative-header-variants');
       cy.findByText('Open Upgrade Dialog').click();
       cy.findByRole('dialog').should('exist');
-      cy.findByTestId('dialog-overlay').should('exist');
+      cy.findByTestId('modal-overlay').should('exist');
     });
   });
 
@@ -58,7 +58,7 @@ describe('Dialog', () => {
         cy.loadStory('dialog-basic');
         cy.findByText('Open').click();
         cy.findByRole('dialog').should('exist');
-        cy.findByTestId('dialog-overlay').should('exist');
+        cy.findByTestId('modal-overlay').should('exist');
       });
     });
   });
@@ -72,7 +72,7 @@ describe('Dialog', () => {
         cy.loadStory('dialog-long-content');
         cy.findByText('Open').click();
         cy.findByRole('dialog').should('exist');
-        cy.findByTestId('dialog-overlay').should('exist');
+        cy.findByTestId('modal-overlay').should('exist');
       });
     });
 
@@ -102,16 +102,16 @@ describe('Dialog', () => {
     cy.findByText('Open').click();
     cy.wait(500);
     cy.findByRole('dialog').findByLabelText('Close').click();
-    cy.findByTestId('dialog-overlay').should('not.exist');
+    cy.findByTestId('modal-overlay').should('not.exist');
   });
 
   it('after clicking on the overlay, it disappears', () => {
     cy.loadStory('dialog-basic');
     cy.findByText('Open').click();
     cy.wait(500);
-    cy.findByTestId('dialog-overlay').click({ force: true });
+    cy.findByTestId('modal-overlay').click({ force: true });
     cy.findByRole('dialog').should('not.exist');
-    cy.findByTestId('dialog-overlay').should('not.exist');
+    cy.findByTestId('modal-overlay').should('not.exist');
   });
 
   it('after opening it via keyboard, one of the predefined buttons in the footer is focused', () => {
