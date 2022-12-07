@@ -174,13 +174,15 @@ function AdoptionPage() {
           <li css={listItemStyle}>
             <Badge version="new" upgradeStatus="outdated" />
             <Text css={listDescriptionStyle}>
-              Waffles version is outdated and must be upgraded urgently
+              Waffles version is incredibly outdated and must be upgraded
+              urgently
             </Text>
           </li>
           <li css={listItemStyle}>
             <Badge version="new" upgradeStatus="slightlyOutdated" />
             <Text css={listDescriptionStyle}>
-              Waffles version is slightly outdated and should be upgraded
+              Waffles is slightly outdated (up to 6 versions behind) and should
+              be upgraded
             </Text>
           </li>
           <li css={listItemStyle}>

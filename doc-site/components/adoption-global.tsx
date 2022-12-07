@@ -87,7 +87,9 @@ function AdoptionGlobal({ projectsData, usageData }: AdoptionGlobalProps) {
         Breakdown of Waffles versions used within each project
       </Heading>
       <GlobalUsage usageData={usageData} />
-      <Heading size="large">Component usage in all projects</Heading>
+      <Heading size="large">
+        Total component occurrences in all projects
+      </Heading>
       <ComponentsOverview
         combinedComponents={getGlobalComponentsStats(projectsData)}
       />
