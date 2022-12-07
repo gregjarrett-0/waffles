@@ -20,11 +20,10 @@ function Playground() {
       <Button onClick={() => setIsOpen(true)}>Open Drawer</Button>
       <Drawer
         placement="left"
-        aria-labelledby="basic-drawer-header"
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
       >
-        <Drawer.Header id="basic-drawer-header">
+        <Drawer.Header>
           Drawer Title
         </Drawer.Header>
         <Drawer.Body>
