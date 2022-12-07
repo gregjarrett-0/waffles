@@ -70,7 +70,7 @@ function Panel({
         <section
           role={role}
           aria-modal
-          {...(headerId && { 'aria-labelledby': headerId })}
+          {...(!ariaLabel && headerId && { 'aria-labelledby': headerId })}
           {...(bodyId
             ? { 'aria-describedby': bodyId }
             : { 'aria-label': ariaLabel })}

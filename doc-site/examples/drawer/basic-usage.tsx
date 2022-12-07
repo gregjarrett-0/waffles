@@ -44,6 +44,7 @@ function Example() {
         placement={placement}
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
+        aria-label="Complete the form to create a new course"
       >
         <Drawer.Header>Create new course</Drawer.Header>
         <Drawer.Body>

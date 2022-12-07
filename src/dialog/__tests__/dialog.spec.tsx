@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
+
 import { render, fireEvent, waitFor, act } from '@testing-library/react';
 
 import { Dialog } from '../index';
@@ -323,41 +324,5 @@ describe('Dialog', () => {
         expect(dialog).toMatchSnapshot();
       });
     });
-  });
-});
-
-describe('Dialog errors', () => {
-  beforeEach(() => {
-    jest.useFakeTimers();
-  });
-
-  afterEach(() => {
-    jest.useRealTimers();
-  });
-
-  it.only('missing header should log a console.error', async () => {
-    const { getByRole } = render(
-      <Dialog isOpen={true} onClose={() => {}}>
-        <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
-        <Dialog.Footer>
-          <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
-          <Dialog.Button autoFocus>Confirm</Dialog.Button>
-        </Dialog.Footer>
-      </Dialog>,
-    );
-
-    // Let fade in animations finish
-    act(() => {
-      jest.advanceTimersByTime(500);
-    });
-
-    let dialog;
-    await waitFor(() => {
-      dialog = getByRole('dialog');
-    });
-
-    expect(dialog).toBeInTheDocument();
-    expect(consoleErrorMock).toHaveBeenCalledTimes(1);
-    expect(consoleWarnMock).not.toBeCalled();
   });
 });

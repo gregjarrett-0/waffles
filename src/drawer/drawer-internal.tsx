@@ -16,6 +16,8 @@ type DrawerProps = {
   placement?: 'left' | 'right';
   /* Content of the Drawer. In general, Drawer's own subcomponents should be used: `Drawer.Header`, `Drawer.Body`, and `Drawer.Footer`. */
   children: React.ReactNode;
+  /* [skip docs] */
+  'aria-label'?: string;
 } & Omit<React.HTMLAttributes<HTMLDivElement>, 'role'>;
 
 function DrawerInternal({
@@ -23,13 +25,20 @@ function DrawerInternal({
   onClose,
   closeButtonOverride,
   placement = 'left',
+  'aria-label': ariaLabel,
   children,
   ...restProps
 }: DrawerProps) {
   return (
     <Dialog
       css={drawerStyle({ isVisible: isOpen, placement })}
-      {...{ isOpen, onClose, closeButtonOverride, idPrefix: 'drawer' }}
+      {...{
+        isOpen,
+        onClose,
+        closeButtonOverride,
+        idPrefix: 'drawer',
+        'aria-label': ariaLabel,
+      }}
       {...restProps}
     >
       {children}
