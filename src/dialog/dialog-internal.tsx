@@ -3,18 +3,21 @@ import React, {
   createRef,
   isValidElement,
   useEffect,
+  useRef,
   useState,
 } from 'react';
 
 import { Portal } from '../portal';
 import { Overlay } from '../overlay';
 import { useAnimateTransition, useId } from '../hooks';
+import { logError } from '../helpers';
 import AlertHeader from '../alert-dialog/header';
 import AlertBody from '../alert-dialog/body';
 
 import Panel from './panel';
 import Header from './header';
 import { DialogProvider } from './dialog-context';
+import { MESSAGES } from './debug-messages';
 import Body from './body';
 
 type DialogProps = {
@@ -49,6 +52,7 @@ function DialogInternal({
   ...restProps
 }: DialogProps) {
   const isAnimating = useAnimateTransition(isOpen, 300);
+  const didMount = useRef(false);
   const autoFocusRef = createRef<HTMLButtonElement>();
   const id = `${idPrefix}-${useId()}`;
   const [headerId, setHeaderId] = useState<string>();
@@ -66,7 +70,15 @@ function DialogInternal({
         }
       }
     });
-  });
+  }, [ariaLabel, children, headerId, id]);
+
+  // Handle avoiding checking for headerId before initial render
+  useEffect(() => {
+    if (didMount.current && !headerId) {
+      logError(MESSAGES.MISSING_HEADER);
+    }
+    didMount.current = true;
+  }, [headerId, id]);
 
   return (
     <DialogProvider

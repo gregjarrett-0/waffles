@@ -7,6 +7,15 @@ import { ArrowUp } from '../../icon';
 const MOCKED_ID = '123abC';
 const variants = ['info', 'success', 'warning', 'error', 'upgrade'] as const;
 
+// TODO: These can probably be moved into a global location for all tests at a later date - ixTec
+const consoleErrorMock = jest.spyOn(console, 'error').mockImplementation();
+const consoleWarnMock = jest.spyOn(console, 'warn').mockImplementation();
+
+afterEach(() => {
+  consoleErrorMock.mockReset();
+  consoleWarnMock.mockReset();
+});
+
 jest.mock('../../icon', () => {
   return {
     Cross: () => 'CrossIcon',
@@ -50,6 +59,9 @@ describe('Dialog', () => {
 
   afterEach(() => {
     jest.useRealTimers();
+    // Ensure no warnings or errors have been logged to the console after each test
+    expect(consoleErrorMock).not.toBeCalled();
+    expect(consoleWarnMock).not.toBeCalled();
   });
 
   it('renders dialog and all subcomponents with all a11y attributes passed', async () => {
@@ -311,5 +323,41 @@ describe('Dialog', () => {
         expect(dialog).toMatchSnapshot();
       });
     });
+  });
+});
+
+describe('Dialog errors', () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it.only('missing header should log a console.error', async () => {
+    const { getByRole } = render(
+      <Dialog isOpen={true} onClose={() => {}}>
+        <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
+        <Dialog.Footer>
+          <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
+          <Dialog.Button autoFocus>Confirm</Dialog.Button>
+        </Dialog.Footer>
+      </Dialog>,
+    );
+
+    // Let fade in animations finish
+    act(() => {
+      jest.advanceTimersByTime(500);
+    });
+
+    let dialog;
+    await waitFor(() => {
+      dialog = getByRole('dialog');
+    });
+
+    expect(dialog).toBeInTheDocument();
+    expect(consoleErrorMock).toHaveBeenCalledTimes(1);
+    expect(consoleWarnMock).not.toBeCalled();
   });
 });
