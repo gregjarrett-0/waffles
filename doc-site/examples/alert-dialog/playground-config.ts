@@ -35,7 +35,6 @@ function Playground() {
         <AlertDialog.Footer>
           <AlertDialog.Button
             autoFocus
-            fullWidth
             onClick={() => setIsOpen(false)}
           >
             Got It
