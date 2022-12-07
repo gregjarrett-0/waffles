@@ -58,7 +58,8 @@ export function panelStyle({ isVisible, alignCenter }: PanelStyleOptions) {
     max-width: 600px;
     background-color: ${tokens.colors.white};
     border-radius: ${tokens.borderRadius.medium};
-    box-shadow: ${tokens.boxShadow.thick};
+    box-shadow: ${tokens.boxShadow.thick},
+      0 0 0 1px ${hexToRgba(tokens.colors.white, 0.2)};
     outline: 0;
     overflow: hidden;
     pointer-events: all;
