@@ -69,7 +69,7 @@ function DialogInternal({
         }
       }
     });
-  }, [ariaLabel, children, headerId, id]);
+  }, [ariaLabel, children, id]);
 
   // Handle avoiding checking for headerId before initial render
   useEffect(() => {

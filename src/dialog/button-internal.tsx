@@ -24,34 +24,14 @@ export type ButtonProps<T extends React.ElementType = 'button'> =
 function ButtonInternal<T extends React.ElementType = 'button'>(
   {
     as,
-    variant = 'primary',
-    size = 'medium',
-    isLoading = false,
-    disableTitleCase = false,
-    iconLeft,
-    iconRight,
-    autoFocus,
+
     children,
     ...restProps
   }: ButtonProps<T>,
   ref?: PolymorphicRef<T>,
 ) {
   return (
-    <Button
-      as={as}
-      {...{
-        size,
-        variant,
-        isLoading,
-        disableTitleCase,
-        iconLeft,
-        iconRight,
-        autoFocus,
-        ...restProps,
-      }}
-      ref={ref}
-      css={buttonStyle()}
-    >
+    <Button as={as} {...restProps} ref={ref} css={buttonStyle()}>
       {children}
     </Button>
   );
