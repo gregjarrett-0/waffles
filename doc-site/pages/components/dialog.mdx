@@ -5,6 +5,8 @@ import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
+import { Code } from '@datacamp/waffles/code';
+import { Notification } from '@datacamp/waffles/notification';
 
 import playgroundConfig from '../../examples/dialog/playground-config';
 import BasicUsage from '../../examples/dialog/basic-usage';
@@ -17,12 +19,22 @@ import CustomClose from '../../examples/dialog/custom-close';
 
 ## Accessibility
 
-`Dialog` must have a `Dialog.Header` child component provided in order to meet modal accessibility requirements via `aria-describedby`.
+`Dialog` must have a `Dialog.Header` child component provided in order to meet modal
+accessibility requirements via `aria-describedby`.
 
 It is recommended to have the initial focus set on the most relevant element&mdash;in most cases confirmation button. To do so, pass `autoFocus` flag to `Dialog.Button` subcomponent used in the dialog's footer.
 If no initial focus is set explicitly close button will be focused by default.
 
-If `Dialog.Body` contains non-descriptive content (e.g. form elements), then `aria-label` should be provided on the main `Dialog` element to provide context of the content.
+<Notification
+  title="Descriptive Content"
+  description={
+    <>
+      If <Code>Dialog.Body</Code> contains non-descriptive content (e.g. form
+      elements), then <Code>aria-label</Code> should be provided on the main{' '}
+      <Code>Dialog</Code> element with context of the content.
+    </>
+  }
+/>
 
 ## Examples
 
