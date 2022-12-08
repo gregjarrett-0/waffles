@@ -29,8 +29,7 @@ function Panel({
   children,
   ...restProps
 }: PanelProps) {
-  const { headerId, bodyId, hasDecorativeHeader, alignCenter, autoFocusRef } =
-    useDialog();
+  const { headerId, bodyId, alignCenter, autoFocusRef } = useDialog();
   const { floating, context } = useFloating({
     open: isVisible,
     onOpenChange: onClose, // Handles closing when clicking outside of the Dialog (dismissing)
@@ -50,13 +49,9 @@ function Panel({
     return closeButtonOverride ? (
       cloneElement(closeButtonOverride, {
         onClick: handleClick,
-        hasDecorativeHeader,
       })
     ) : (
-      <CloseButton
-        onClick={onClose}
-        hasDecorativeHeader={hasDecorativeHeader}
-      />
+      <CloseButton onClick={onClose} />
     );
   }
 

@@ -59,7 +59,7 @@ export function panelStyle({ isVisible, alignCenter }: PanelStyleOptions) {
     background-color: ${tokens.colors.white};
     border-radius: ${tokens.borderRadius.medium};
     box-shadow: ${tokens.boxShadow.thick},
-      0 0 0 1px ${hexToRgba(tokens.colors.white, 0.2)};
+      0 0 0 1px ${hexToRgba(tokens.colors.greyDark, 0.2)};
     outline: 0;
     overflow: hidden;
     pointer-events: all;
@@ -81,7 +81,7 @@ export function panelStyle({ isVisible, alignCenter }: PanelStyleOptions) {
 }
 
 type CloseButtonStyleOptions = {
-  hasDecorativeHeader: boolean;
+  hasDecorativeHeader?: boolean;
 };
 
 export function closeButtonStyle({

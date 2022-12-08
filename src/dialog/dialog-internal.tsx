@@ -11,8 +11,8 @@ import { Portal } from '../portal';
 import { Overlay } from '../overlay';
 import { useAnimateTransition, useId } from '../hooks';
 import { logError } from '../helpers';
-import AlertHeader from '../alert-dialog/header';
-import AlertBody from '../alert-dialog/body';
+import AlertHeader from '../alert-dialog/header'; // TODO: Refactor once modal is a separate component - ixTec
+import AlertBody from '../alert-dialog/body'; // TODO: Refactor once modal is a separate component - ixTec
 
 import Panel from './panel';
 import Header from './header';
@@ -48,10 +48,12 @@ function DialogInternal({
   role = 'dialog',
   ...restProps
 }: DialogProps) {
-  const isAnimating = useAnimateTransition(isOpen, 300);
-  const didMount = useRef(false);
-  const autoFocusRef = createRef<HTMLButtonElement>();
   const id = `modal-${useId()}`;
+  const didMount = useRef(false);
+
+  const isAnimating = useAnimateTransition(isOpen, 300);
+  const autoFocusRef = createRef<HTMLButtonElement>();
+
   const [headerId, setHeaderId] = useState<string>();
   const [bodyId, setBodyId] = useState<string>();
   const [hasDecorativeHeader, setHasDecorativeHeader] = useState(false);

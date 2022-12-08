@@ -12,7 +12,7 @@ type HeaderBaseProps = {
 } & React.HTMLAttributes<HTMLHeadingElement>;
 
 type HeaderDecorativeProps = {
-  /* Mode of the dialog. */
+  /* Mode of the dialog, determining if the dialog has a decorative banner at the top. */
   /* @default plain */
   mode: 'plain' | 'decorative';
   /* Variant of the dialog, only applicable when `mode="decorative"`. */

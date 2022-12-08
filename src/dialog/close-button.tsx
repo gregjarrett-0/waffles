@@ -4,15 +4,16 @@ import { Cross } from '../icon';
 import { Button } from '../button';
 
 import { closeButtonStyle } from './styles';
+import { useDialog } from './dialog-context';
 
-type CloseButtonProps = {
-  hasDecorativeHeader?: boolean;
-} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
+type CloseButtonProps = Omit<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  'children'
+>;
 
-function CloseButton({
-  hasDecorativeHeader = false,
-  ...restProps
-}: CloseButtonProps) {
+function CloseButton({ ...restProps }: CloseButtonProps) {
+  const { hasDecorativeHeader } = useDialog();
+
   return (
     <Button
       {...restProps}

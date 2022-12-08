@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PolymorphicComponentProps, PolymorphicRef } from '../helpers';
-import { ButtonBaseProps } from '../button/button-internal';
+import { ButtonBaseProps } from '../button/button-internal'; // TODO: Refactor alongside typings overhaul, export from within index - ixTec
 import { Button } from '../button';
 
 import { buttonStyle } from './styles';
