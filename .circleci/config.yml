@@ -178,36 +178,36 @@ jobs:
             export AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID}
             export AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY}
             aws s3 sync doc-site/adoption s3://${BUCKET}.new.datacamp.com/ --acl public-read
-      - slack/notify:
-          event: pass
-          channel: 'CHT1GJV0E'
-          custom: |
-            {
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": ":bar_chart: New Waffles adoption report is available!",
-                    "emoji": true
-                  }
-                },
-                {
-                  "type": "actions",
-                  "elements": [
-                    {
-                      "type": "button",
-                      "text": {
-                        "type": "plain_text",
-                        "text": "Check Adoption Report"
-                      },
-                      "url": "https://waffles-next.datacamp.com/overview/adoption",
-                      "action_id": "link"
-                    }
-                  ]
-                }
-              ]
-            }
+      # - slack/notify:
+      #     event: pass
+      #     channel: 'CHT1GJV0E'
+      #     custom: |
+      #       {
+      #         "blocks": [
+      #           {
+      #             "type": "header",
+      #             "text": {
+      #               "type": "plain_text",
+      #               "text": ":bar_chart: New Waffles adoption report is available!",
+      #               "emoji": true
+      #             }
+      #           },
+      #           {
+      #             "type": "actions",
+      #             "elements": [
+      #               {
+      #                 "type": "button",
+      #                 "text": {
+      #                   "type": "plain_text",
+      #                   "text": "Check Adoption Report"
+      #                 },
+      #                 "url": "https://waffles-next.datacamp.com/overview/adoption",
+      #                 "action_id": "link"
+      #               }
+      #             ]
+      #           }
+      #         ]
+      #       }
   copy_adoption_report:
     docker:
       - image: ${STAGING_ECR_URL}/docker-deploy
