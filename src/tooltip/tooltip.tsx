@@ -8,7 +8,7 @@ import {
   useHover,
   useFocus,
   useDismiss,
-} from '@floating-ui/react-dom-interactions';
+} from '@floating-ui/react';
 
 import { tokens } from '../tokens';
 import { Text } from '../text';

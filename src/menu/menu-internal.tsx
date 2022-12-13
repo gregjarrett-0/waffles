@@ -15,7 +15,7 @@ import {
   useDismiss,
   FloatingFocusManager,
   autoUpdate,
-} from '@floating-ui/react-dom-interactions';
+} from '@floating-ui/react';
 
 import { tokens } from '../tokens';
 import { Portal } from '../portal';

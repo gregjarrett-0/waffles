@@ -1,5 +1,5 @@
 import React from 'react';
-import { FloatingOverlay } from '@floating-ui/react-dom-interactions';
+import { FloatingOverlay } from '@floating-ui/react';
 
 import { overlayStyle } from './styles';
 

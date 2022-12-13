@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { createContext, useContext } from 'react';
 
-import type { ReferenceType } from '@floating-ui/react-dom-interactions';
+import type { ReferenceType } from '@floating-ui/react';
 
 type MenuContextValue = {
   listRef: React.MutableRefObject<Array<HTMLButtonElement | null>>;
