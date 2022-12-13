@@ -1,5 +1,72 @@
 
 
+## [1.17.0](https://github.com/datacamp/waffles/compare/v1.16.0...v1.17.0) (2022-12-13)
+
+
+### Bug Fixes
+
+* **link:** update underline animation for Safari ([4b73c44](https://github.com/datacamp/waffles/commit/4b73c449d2de130584edbb3c28b9151ce1feae4c))
+* **notification:** fix incorrect inverted upgrade icon color ([d37c10f](https://github.com/datacamp/waffles/commit/d37c10f3a2313c9b142cef20cfd1fb12d4148c61))
+* **overlay:** enable lockScroll in floating-ui ([1b9ee7f](https://github.com/datacamp/waffles/commit/1b9ee7faade6e561c923a07a2eb571f421e1cc66))
+* **overlay:** fix zindex issue ([d2a3f03](https://github.com/datacamp/waffles/commit/d2a3f035903ac21364cec68fceae866199bcda51))
+
+
+### Core Changes
+
+* **dialog:** add dynamic icon for decorative header based on variant ([d646597](https://github.com/datacamp/waffles/commit/d646597b53d68ef5ffde3badcc6ad113d3d74f80))
+* **dialog:** add new decorative header mode ([e31aaed](https://github.com/datacamp/waffles/commit/e31aaed8c1008f2415cf9329bd0682d5bad2f6e3))
+* **dialog:** add polymorphic typing support for Dialog.Button ([bf46da3](https://github.com/datacamp/waffles/commit/bf46da33483452d0eddb6f64ca4e12afcca70316))
+* **dialog:** add support for custom icon override ([4d3e457](https://github.com/datacamp/waffles/commit/4d3e457b937bd5fb6b1a722798658912ede50425))
+* **empty-state:** increase border opacity ([4fabfb5](https://github.com/datacamp/waffles/commit/4fabfb5cac91305571b4ccda23b7eb63d62d27f6))
+* **icon:** add Minimize icon ([c96fb94](https://github.com/datacamp/waffles/commit/c96fb94d3f772a880531861f3fac04bd130fb874))
+* **icon:** update Rocket and Expand icons ([716a0b9](https://github.com/datacamp/waffles/commit/716a0b98000f1225db054f9333845822f48602cf))
+* **link:** make thickness of underline same for all sizes ([e2e35be](https://github.com/datacamp/waffles/commit/e2e35be1fe677a51e7052ceaa2d992d01457bc6b))
+
+
+### Documentation Changes
+
+* add content course naming page ([153fca1](https://github.com/datacamp/waffles/commit/153fca105554bae73674ff350a26654268fdda74))
+* add content grammar page ([f1154c0](https://github.com/datacamp/waffles/commit/f1154c03be761dfc0ef7c57892d4f06996e18c35))
+* add Content section to side navigation ([438636a](https://github.com/datacamp/waffles/commit/438636a48fec26a1a907fe7881a9e9df86b0b983))
+* add content terminology page ([3bddaf8](https://github.com/datacamp/waffles/commit/3bddaf86bf3ede50d8b9eb71a3ebb3e027c3cb95))
+* add version parsing utilities to helpers ([96f4ff0](https://github.com/datacamp/waffles/commit/96f4ff0a8667aaa3ddab9b3e685e3162aaaf79a5))
+* **adoption:** add dependencies component ([ecb93fb](https://github.com/datacamp/waffles/commit/ecb93fb8cd91ffabc8ef9d673217f72a5e4af2c9))
+* **adoption:** add project overview component ([a97a3e5](https://github.com/datacamp/waffles/commit/a97a3e5939891e350cacdef3c5234150a76b1bb8))
+* **adoption:** add project version badge component ([7119247](https://github.com/datacamp/waffles/commit/711924736c45d561f3876bd01330eb1827b6107b))
+* **adoption:** add timestamp to report ([dcc9315](https://github.com/datacamp/waffles/commit/dcc93151bcf2c053665b78116719937520241b93))
+* **adoption:** create global components stats component ([d09319e](https://github.com/datacamp/waffles/commit/d09319e76aeb27dedb5e5d72d2e8c41fd7835449))
+* **adoption:** implement components stats components ([77f568f](https://github.com/datacamp/waffles/commit/77f568f38964bb71cecb4429bea8a2f39f1f21c5))
+* **adoption:** improve components stats layout ([0278fba](https://github.com/datacamp/waffles/commit/0278fba9b96680bef8ce3d96aeeb28eee4bff92e))
+* **adoption:** improve layout of chart and stats ([2dc1fbd](https://github.com/datacamp/waffles/commit/2dc1fbd0a6ca7ab52aae491278497e746dc76d44))
+* **adoption:** refer to New Waffles as just Waffles ([4bafb41](https://github.com/datacamp/waffles/commit/4bafb414f308a080292c2d9794ee71affda2bb25))
+* **adoption:** show global version breakdown per project ([f64cd87](https://github.com/datacamp/waffles/commit/f64cd8797d83e1df7ba99df532c68c7833c93892))
+* **adoption:** show project status badges next to it's name ([0eb3d34](https://github.com/datacamp/waffles/commit/0eb3d3424ac4e860e2d5499757b5e3cbf0a90067))
+* **alert-dialog:** remove fullWidth prop from playground example ([f485624](https://github.com/datacamp/waffles/commit/f485624853d1810af06a92c193e943d4a03f4626))
+* create basic script to track Waffles dependencies ([f290830](https://github.com/datacamp/waffles/commit/f2908302339da5c5b59c56324d1282924215eb45))
+* **dialog:** add center aligned example ([616cd08](https://github.com/datacamp/waffles/commit/616cd08d63f825a5146ec147b8d220b365d0da35))
+* **dialog:** add decorative header examples ([00281df](https://github.com/datacamp/waffles/commit/00281dfde6a143262aa34f5f6d67092a1fb47cc5))
+* **dialog:** add example with customIconOverride in header ([712a298](https://github.com/datacamp/waffles/commit/712a29811ba32603b7ecfc33a0a97d0bcd2edf91))
+* **dialog:** remove lorem ipsum content from examples ([be5780e](https://github.com/datacamp/waffles/commit/be5780ecf627bb74d767e7f6b0db31f1b853ff66))
+* **dialog:** update accessibilty docs ([f881550](https://github.com/datacamp/waffles/commit/f881550598aed8229c0afa4a1c162cc765d7fb5a))
+* **dialog:** update decorative header variant example ([2262488](https://github.com/datacamp/waffles/commit/22624887c0c1dd04ff4d2e0c473dd9fa903ee62f))
+* **drawer:** update form example with `aria-label` ([64e30f6](https://github.com/datacamp/waffles/commit/64e30f63c61134d5484377d65ecf1e2bb13f8bfe))
+* **drawer:** update playground example ([7ad253a](https://github.com/datacamp/waffles/commit/7ad253a4ff8410a8b2ac897e09a910f422edc78c))
+* **drawer:** update prop tables to reference Dialog ([2a6e9f6](https://github.com/datacamp/waffles/commit/2a6e9f603a80ea333461fa6f7f67b5b8a3788de2))
+* explain how adoption is tracked in internal docs ([c6fd5a2](https://github.com/datacamp/waffles/commit/c6fd5a2cc2ad226fdd945ff502bfead9545c0028))
+* **notification:** update default examples ([a7b734d](https://github.com/datacamp/waffles/commit/a7b734d362886b302331aac03cc99f09b6ee018c))
+* properly report number of components ([4e36536](https://github.com/datacamp/waffles/commit/4e365362e311747c5aaa49b12e9b9107825e8bee))
+* remove aria attributes from header dialog subcomponents ([4f0cf67](https://github.com/datacamp/waffles/commit/4f0cf67c9bfc15f54c23da8c57526a9d787483bc))
+* simplify adoption tracking script ([3b3a3d0](https://github.com/datacamp/waffles/commit/3b3a3d0c3ef5b337e3845a7980bb45dbc73f42de))
+* sort adoption report results ([796ae42](https://github.com/datacamp/waffles/commit/796ae4298a8cac4acea15105569c9e45de60daa7))
+* **toast:** update default examples ([1564ff9](https://github.com/datacamp/waffles/commit/1564ff9f38136707ec860328434fa59bbb124ec7))
+* track components usage across repos ([ffaf9a2](https://github.com/datacamp/waffles/commit/ffaf9a2aaae98cb22c2c89379f61bf3c52630e26))
+* track components usage across repos ([94d4f7b](https://github.com/datacamp/waffles/commit/94d4f7b57c2c40ae444d2eca923dd9c71e77d2ef))
+* update dependencies report data structure ([8086e40](https://github.com/datacamp/waffles/commit/8086e405ea620b46e36f2d24d76d0189146ca854))
+* update Design Principles page ([32257cd](https://github.com/datacamp/waffles/commit/32257cd1a06d6e8928e0c8b98b1e4a2a5558876f))
+* update dialog examples and accessibility remarks ([35caab8](https://github.com/datacamp/waffles/commit/35caab831b9548034741d0c6e7937e5a6f9b860b))
+* update project organization internal docs ([d514583](https://github.com/datacamp/waffles/commit/d51458353476799725b6e7c826478bf75f8f5752))
+* update side nav ([ef298d3](https://github.com/datacamp/waffles/commit/ef298d3419db8a759e40ae0a81042c40e380168b))
+
 ## [1.16.0](https://github.com/datacamp/waffles/compare/v1.15.0...v1.16.0) (2022-11-10)
 
 
