@@ -1,6 +1,7 @@
 import * as ErrorBoundaryExports from '@datacamp/waffles/error-boundary';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
@@ -8,7 +9,33 @@ import Imports from '../../components/imports';
 import BasicUsage from '../../examples/error-boundary/basic-usage';
 import WithCustomError from '../../examples/error-boundary/with-custom-error';
 
-<Layout title="Error Boundary" description="🚧 This page is under construction">
+<Layout title="Error Boundary" description="A component to handle and recover from runtime errors with fallback error message.">
+
+## Usage guidance
+
+Use `ErrorBoundary` to handle JavaScript runtime errors. Try to at least wrap a few major sections of the app with it, although the more localized it is the better.
+
+When logging errors to 3rd party services, such as Sentry, use `onError` callback.
+
+Unfortunately, there are still [some errors](https://reactjs.org/docs/error-boundaries.html#introducing-error-boundaries) that React is unable to hand off to `ErrorBoundary`.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - usually use default fallback to keep things consistent
+    - wrap many sections of the app
+    - for custom error messages provided via `fallback` try to incorporate recovery strategy with `onReset` callback
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use to handle regular data fetch requests errors
+    - use only in the root of the app
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
