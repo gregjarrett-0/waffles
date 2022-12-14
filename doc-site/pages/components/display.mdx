@@ -1,6 +1,7 @@
 import * as DisplayExports from '@datacamp/waffles/display';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,7 +11,23 @@ import playgroundConfig from '../../examples/display/playground-config';
 import BasicUsage from '../../examples/display/basic-usage';
 import Inverted from '../../examples/display/inverted';
 
-<Layout title="Display" description="🚧 This page is under construction">
+<Layout title="Display" description="Display text makes a bold visual statement.">
+
+## Usage guidance
+
+Use `Display` sparingly to create impact when the main goal is visual storytelling, and drawing user attention with typography. It does not have any sematic meaning and shouldn't be used as yet another [Heading](/components/heading/).
+
+In general the `Display` content should be _sentence cased_.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Discouraged>
+
+    - use as main heading on the page&mdash;use [Heading](/components/card) instead
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
