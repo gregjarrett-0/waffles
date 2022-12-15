@@ -1,6 +1,7 @@
 import * as CardExports from '@datacamp/waffles/card';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -13,7 +14,49 @@ import WithDisabledHover from '../../examples/card/with-disabled-hover';
 import AsALink from '../../examples/card/as-a-link';
 import Inverted from '../../examples/card/inverted';
 
-<Layout title="Card" description="🚧 This page is under construction">
+<Layout title="Card" description="Group content and actions about a single subject together to make it easier to scan and read.">
+
+## Usage guidance
+
+`Card` makes it easier to scan for relevant and _actionable_ information. A clear hierarchy of elements such as text, buttons, and images should be preserved. It can also serve as an entry point into deeper levels of detail or navigation.
+
+Multiple `Cards` can be displayed together in a grid or a vertical list, and separated by `tokens.spacing.medium` gutter.
+
+To make a `Card` stand out more or to emphasize its purpose, provide `Card.HeadstoneItem` (single or multiple) via `headstone` prop. It can contain either [Icons](/components/icon) or [Assets](/components/asset).
+
+In rare occasions, when the `Card` is used to just group content without any actions, the hover drop shadow effect can be disabled with `disableHoverEffect` prop.
+
+It's possible to make the whole `Card` act as an action item&mdash;use `as="a"` (or any other link from the routing library of choice).
+
+### Content
+
+The `Card` container itself is the only required element. Every other element is optional. It holds all card elements, and the size is determined by the space occupied by its content.
+
+For `Card` headline in general use [Heading](/components/heading) of the default `xlarge` size.
+
+For supporting text body use [Paragrpah](/components/paragraph).
+
+For call to action use [Button](/components/button), and follow `Button` best practices.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use a heading which makes `Card` purpose very clear
+    - prioritize information, so the most important content comes first
+    - break complicated flows into multiple sections
+    - use only one `primary` call to action (`Button`) per card
+    - usually put a call to action at the bottom of a `Card`
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use too many calls to actions
+    - use "Click Here" as a call to action label&mdash;it doesn't set up proper expectations of what's next
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
