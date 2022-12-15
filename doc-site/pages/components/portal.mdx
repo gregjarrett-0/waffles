@@ -7,7 +7,11 @@ import Imports from '../../components/imports';
 
 import BasicUsage from '../../examples/portal/basic-usage';
 
-<Layout title="Portal" description="🚧 This page is under construction">
+<Layout title="Portal" description="Creates and appends a DOM node to the end of document, and renders children into it.">
+
+## Usage guidance
+
+`Portal` provide a way to render `children` into a DOM node appended at the end of `document.body`, which exists outside of reguler DOM hierarchy of the parent component. Useful for preventing parent styles from clipping or hiding content, e.g. tooltips, dropdowns, and modals.
 
 ## Examples
 
