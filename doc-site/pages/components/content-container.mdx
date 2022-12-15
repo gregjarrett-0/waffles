@@ -1,6 +1,7 @@
 import * as ContentContainerExports from '@datacamp/waffles/content-container';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
 
@@ -16,6 +17,21 @@ The positioning is based on `breakpoints` from [design tokens](/foundation/desig
 - for desktop, and large tablets (for viewport size above `medium` breakpoint), padding is increased to `xlarge` size
 
 You may check a [little demo](https://waffles-grid.surge.sh/) which should help to understand relationship between `ContentContainer`, `SideNavigation`, and grid. If you're curious about implementation details there is also [repository](https://github.com/datacamp-engineering/waffles-demo-grid) with a demo's source code.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use as a direct descendant of `main` section of an app
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use in smaller sections of a page, e.g. inside `Card`
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Props
 
