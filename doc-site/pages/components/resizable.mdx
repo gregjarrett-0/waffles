@@ -1,6 +1,7 @@
 import * as ResizableExports from '@datacamp/waffles/resizable';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -14,7 +15,27 @@ import Nested from '../../examples/resizable/nested';
 import AdvancedUsage from '../../examples/resizable/advanced-usage';
 import Inverted from '../../examples/resizable/inverted';
 
-<Layout title="Resizable" description="🚧 This page is under construction">
+<Layout title="Resizable" description="Resizable layout with horizontal and vertical panels.">
+
+## Usage guidance
+
+`Resizable` allows for multiple elements to be resized by the user. No additional wrappers are required - each child of `Resizable` will be just put in a separate panel. It is also possible to nest multiple `Resizable` components and create even complex layouts that way.
+
+`Resizable` supports two orientations via `layout` prop: `row` and `column`.
+
+By default, panels are split equally, but their initial proportions could be customized by providing an array of `defaultProportions`. Keep in mind, that number of items in that array _must_ be equal to the number of `Resizable` children.
+
+After the user resizes panels to their liking, the easiest way to store new proportions is to persist them e.g. in `localStorage` by using `onResizeEnd` callback.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Discouraged>
+
+    - for usability reasons on mobile devices it is better to use regular static `flex` or `grid` layout
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
