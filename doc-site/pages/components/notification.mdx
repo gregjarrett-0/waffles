@@ -1,6 +1,7 @@
 import * as NotificationExports from '@datacamp/waffles/notification';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -15,7 +16,49 @@ import WithAction from '../../examples/notification/with-action';
 import CustomClose from '../../examples/notification/custom-close';
 import Inverted from '../../examples/notification/inverted';
 
-<Layout title="Notification" description="🚧 This page is under construction">
+<Layout title="Notification" description="A message that communicates important information to the user.">
+
+## Usage guidance
+
+The main purpose of `Notification` is to inform users about various updates or changes to the system status. While `Notification` is an effective method of communication, it is rather disruptive and should be used sparingly.
+
+By default `Notification` doesn't dismiss automatically. To make `Notification` dismissible, and to show a close button, provide `closable` prop.
+
+Custom follow-up actions, which should take the user to a page or flow related to the message itself, can be defined via `action` with `Notification.ActionButton` subcomponent. Clearly describe the action, and limit the label to one or two words.
+
+The `Notification` comes in five different variants: `info`, `success`, `warning`, `error`, and `upgrade`.
+
+### Modes
+
+#### Inline
+
+Show up in the task flow, to notify users of the status of an application. It usually appears at the start of the relevant content area or close to the section needing attention. It should be separated from other content by at least `tokens.spacing.small`.
+
+#### Banner
+
+Consigns an important system-wide message. It should be placed at the top of the page. It expands to fill the full width of the container.
+
+### Content
+
+Because `Notification` provides limited space for content, it _must_ be concise, and short. It should be easily scannable. Whenever possible communicate the main message using just the `title`. For `description` avoid repeating or paraphrasing the `title`, and limit it to 2 or 3 sentences. Although it is preferred to define any actions via `action`, it is also possible to include [Links](/components/link) within the `description` that redirect the user to relevant content.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use relevant Notification `variant` according to the situation
+    - keep it short, use just a `title` if possible
+    - place it as close to relevant content as possible
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use `closable` Notification when it is critical for a user to read or interact with it
+    - has long content&mdash;use `action` to redirect the user to a full page with more details or open a [Dialog](/components/dialog)
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
