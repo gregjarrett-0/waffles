@@ -44,9 +44,6 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/">Welcome</Item>
             <Item href="/overview/setup">Setup</Item>
             <Item href="/overview/roadmap">Roadmap</Item>
-            <Item href="/overview/adoption" isNew>
-              Adoption
-            </Item>
           </SideNav.Category>
           <SideNav.Category label="Foundation">
             <Item href="/foundation/accessibility">Accessibility</Item>
