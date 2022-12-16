@@ -120,10 +120,6 @@ jobs:
       - run:
           name: Build static docs website
           command: yarn doc:build
-      - run:
-          name: Show content of report
-          command: |
-            cat doc-site/adoption/adoption-report.json
       - persist_to_workspace:
           root: '.'
           paths:
@@ -144,98 +140,26 @@ jobs:
           command: |
             export AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID}
             export AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY}
-            aws s3 rm s3://${BUCKET}.new.datacamp.com/ --recursive --exclude "adoption-report.json" --include "*"
+            aws s3 rm s3://${BUCKET}.new.datacamp.com/ --recursive
             aws s3 sync build s3://${BUCKET}.new.datacamp.com/ --acl public-read --exclude "*.js" --exclude "*.svg" --exclude "*.png" --exclude "*.jpg" --exclude "*.woff" --exclude "*.woff2" --cache-control public,max-age=0,must-revalidate
             aws s3 sync build s3://${BUCKET}.new.datacamp.com/ --acl public-read --exclude "*" --include "*.js" --cache-control public,max-age=31536000,immutable
             aws s3 sync build s3://${BUCKET}.new.datacamp.com/ --acl public-read --exclude "*" --include "*.svg" --include "*.png" --include "*.jpg" --include "*.woff" --include "*.woff2" --cache-control public,max-age=31536000,immutable,no-transform
-  create_adoption_report:
-    docker:
-      - image: cimg/node:16.13.0
-    steps:
-      - attach_workspace:
-          at: '.'
-      - run:
-          name: Create adoption report
-          command: yarn track-adoption
-      - persist_to_workspace:
-          root: '.'
-          paths:
-            - '*'
-  persist_adoption_report:
-    docker:
-      - image: ${STAGING_ECR_URL}/docker-deploy
-        aws_auth:
-          aws_access_key_id: $STAGING_AWS_ACCESS_KEY_ID
-          aws_secret_access_key: $STAGING_AWS_SECRET_ACCESS_KEY
-    environment:
-      BUCKET: waffles-next
-    steps:
-      - attach_workspace:
-          at: '.'
-      - run:
-          name: Upload adoption report to S3
-          command: |
-            export AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID}
-            export AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY}
-            aws s3 sync doc-site/adoption s3://${BUCKET}.new.datacamp.com/ --acl public-read
-      # - slack/notify:
-      #     event: pass
-      #     channel: 'CHT1GJV0E'
-      #     custom: |
-      #       {
-      #         "blocks": [
-      #           {
-      #             "type": "header",
-      #             "text": {
-      #               "type": "plain_text",
-      #               "text": ":bar_chart: New Waffles adoption report is available!",
-      #               "emoji": true
-      #             }
-      #           },
-      #           {
-      #             "type": "actions",
-      #             "elements": [
-      #               {
-      #                 "type": "button",
-      #                 "text": {
-      #                   "type": "plain_text",
-      #                   "text": "Check Adoption Report"
-      #                 },
-      #                 "url": "https://waffles-next.datacamp.com/overview/adoption",
-      #                 "action_id": "link"
-      #               }
-      #             ]
-      #           }
-      #         ]
-      #       }
-  copy_adoption_report:
-    docker:
-      - image: ${STAGING_ECR_URL}/docker-deploy
-        aws_auth:
-          aws_access_key_id: $STAGING_AWS_ACCESS_KEY_ID
-          aws_secret_access_key: $STAGING_AWS_SECRET_ACCESS_KEY
-    environment:
-      BUCKET: waffles-next
-    steps:
-      - attach_workspace:
-          at: '.'
-      - run:
-          name: Copy adoption report from S3
-          command: |
-            export AWS_ACCESS_KEY_ID=${PROD_AWS_ACCESS_KEY_ID}
-            export AWS_SECRET_ACCESS_KEY=${PROD_AWS_SECRET_ACCESS_KEY}
-            aws s3 cp s3://${BUCKET}.new.datacamp.com/adoption-report.json doc-site/adoption
-      - persist_to_workspace:
-          root: '.'
-          paths:
-            - '*'
+
 workflows:
   version: 2
   build_test_release:
     jobs:
       - build_and_test:
           context: org-global
-      - release:
+      # - release:
+      #     requires:
+      #       - build_and_test
+      #     context: org-global
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
+      - build_docs:
           requires:
             - build_and_test
           context: org-global
@@ -243,53 +167,6 @@ workflows:
             branches:
               only:
                 - master
-      - copy_adoption_report:
-          requires:
-            - release
-          context: org-global
-          filters:
-            branches:
-              only:
-                - master
-      - build_docs:
-          requires:
-            - copy_adoption_report
-          context: org-global
-          filters:
-            branches:
-              only:
-                - master
-      - deploy_docs:
-          requires:
-            - build_docs
-          context: org-global
-          filters:
-            branches:
-              only:
-                - master
-  track_adoption:
-    triggers:
-      - schedule:
-          cron: '0 6 * * 1'
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - build_and_test:
-          context: org-global
-      - create_adoption_report:
-          context: org-global
-          requires:
-            - build_and_test
-      - persist_adoption_report:
-          context: org-global
-          requires:
-            - create_adoption_report
-      - build_docs:
-          context: org-global
-          requires:
-            - create_adoption_report
       - deploy_docs:
           requires:
             - build_docs
