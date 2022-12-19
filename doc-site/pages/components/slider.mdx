@@ -1,6 +1,7 @@
 import * as SliderExports from '@datacamp/waffles/slider';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -15,7 +16,37 @@ import CustomLabels from '../../examples/slider/custom-labels';
 import Disabled from '../../examples/slider/disabled';
 import Inverted from '../../examples/slider/inverted';
 
-<Layout title="Slider" description="🚧 This page is under construction">
+<Layout title="Slider" description="Allow users to quickly select a value within a predefined range.">
+
+## Usage guidance
+
+When using `Slider` changes are reflected to a user immediately. It's ideal for adjusting settings such as volume. It shows the full range of available choices.
+
+It is controlled by the `value` prop. It **always** must be an array. Depending on the provided `value`:
+
+- for single value, e.g. `[50]`, it shows only one handle
+- for two values, e.g. `[20, 50]`, two handles are displayed, and the user can define a range
+
+This value must fall between `min` and `max`, which default to `0` and `100` respectively. A different scale can be set by changing `min` and `max` props. It can handle negative values too.
+
+By default, the value label is formatted as a plain number, but custom formatting could be applied via `formatLabel`. Alternatively, labels can be hidden with `hideLabels`. Also in rare occasions, when precision is required from the user, it might be a good idea to show inputs instead of regular labels by setting `showInputs` flag.
+
+The minimal distance between values can be adjusted via `step` prop.
+
+### Accessibility
+
+To make `Sldier` accessible for assistive technologies `aria-label` must **always** be provided. It should clearly communicate the purpose of `Sldier` value(s).
+
+### Best practices
+
+<BestPractices>
+  <BestPractices.Discouraged>
+
+    - use for extremely large ranges when `step` is small, e.g. from 1 to 1000 with step 1
+    - use for ranges that are too small, e.g. from 1 to 3
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
