@@ -1,6 +1,7 @@
 import * as ScreenReaderOnlyExports from '@datacamp/waffles/screen-reader-only';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -9,7 +10,30 @@ import Imports from '../../components/imports';
 import playgroundConfig from '../../examples/screen-reader-only/playground-config';
 import BasicUsage from '../../examples/screen-reader-only/basic-usage';
 
-<Layout title="Screen Reader Only" description="🚧 This page is under construction">
+<Layout title="Screen Reader Only" description="Use when content has to be available to assistive technology, but otherwise hidden.">
+
+## Usage guidance
+
+`ScreenReaderOnly` provides a text for assistive technologies, such as screen readers, that is visually hidden. Think of the opposite of the `aria-hidden` attribute.
+
+Keep in mind that many HTML markup elements, such as `button`, already have meaning to assistive technologies. In such cases use with caution to override defaults.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use sparingly, as many markup elements already have meaning to screen readers
+    - use to provide extra context, when regular markup is not enough
+    - add hints, which makes sense when used with screen readers
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use to hide interactive content
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
