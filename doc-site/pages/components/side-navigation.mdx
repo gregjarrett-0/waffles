@@ -1,6 +1,7 @@
 import * as SideNavigationExports from '@datacamp/waffles/side-navigation';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import PropsTable from '../../components/props-table';
 import Imports from '../../components/imports';
@@ -8,9 +9,17 @@ import Imports from '../../components/imports';
 import BasicUsage from '../../examples/side-navigation/basic-usage';
 import AdvancedUsage from '../../examples/side-navigation/advanced-usage';
 
-<Layout title="Side Navigation" description="🚧 This page is under construction">
+<Layout title="Side Navigation" description="Standarizes and creates consistent navigation experience across DataCamp products.">
 
 ## Usage guidance
+
+`SideNavigation` allows users to orient, and navigate to different sections of applications reliably, and should be used for top-level destinations. It automatically switches between desktop and mobile (drawer) mode, depending on the device's width.
+
+Currently, the active destination should be highlighted by setting `isActive` flag on `SideNavigation.Item` subcomponent.
+
+To make the recently added navigation item stand out more use `isNew` prop on `SideNavigation.Item` subcomponent.
+
+### Build
 
 To keep the underlying side navigation structure _semantically correct_ and _accessible_, please follow these rules:
 
@@ -25,6 +34,24 @@ Bear in mind, that _mobile_ side navigation is automatically displayed below `me
 - conditionally show them based on the result of `isAboveMedium` returned by [useMediaQuery](/components/hooks/#usemediaquery) hook
 
 For detailed real-world example check a [little demo](https://waffles-grid.surge.sh/), and [Side Navigation Workshop](https://github.com/datacamp-engineering/side-nav-workshop) apps.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - provide a short, and meaningful label for each `SideNavigation.Item`
+    - navigation items within each level should be relatively equal in importance
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+- use for single tasks, such as viewing a single course
+- show user preferences or settings
+- mix icon and non-icon `SideNavigation.Items` within one `SideNavigation.Category`
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
