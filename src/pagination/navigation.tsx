@@ -3,7 +3,6 @@ import { useMediaQuery } from '../hooks';
 import { Button } from '../button';
 
 import { navigationButtonStyle } from './styles';
-import Pagination from './pagination';
 
 const variantMap = {
   previous: {
@@ -25,9 +24,7 @@ type NavigationProps = {
   currentPage: number;
   inverted: boolean;
   disabled: boolean;
-  clickHandler: NonNullable<
-    React.ComponentProps<typeof Pagination>['onChange']
-  >;
+  clickHandler: (newPage: number) => void;
 };
 
 function Navigation({

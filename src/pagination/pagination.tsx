@@ -20,7 +20,7 @@ type PaginationProps = {
   onChange: (newPage: number) => void;
   /* Accessible label describing the context of the Pagination. */
   'aria-label': string;
-};
+} & React.HTMLAttributes<HTMLDivElement>;
 
 function Pagination({
   totalPages,

@@ -1,16 +1,13 @@
 import { Button } from '../button';
 
 import { pageButtonStyle } from './styles';
-import Pagination from './pagination';
 import { TRUNCATION_SYMBOL } from './constants';
 
 type PageProps = {
-  label: string | number;
+  label: string;
   isActive: boolean;
   inverted: boolean;
-  clickHandler: NonNullable<
-    React.ComponentProps<typeof Pagination>['onChange']
-  >;
+  clickHandler: (newPage: number) => void;
 };
 
 function Page({
@@ -26,7 +23,7 @@ function Page({
       variant="plain"
       inverted={inverted}
       disabled={label === TRUNCATION_SYMBOL}
-      onClick={() => typeof label === 'number' && clickHandler(label)}
+      onClick={() => label !== TRUNCATION_SYMBOL && clickHandler(+label)}
       {...(isActive && { 'aria-current': 'page' })}
       {...restProps}
     >

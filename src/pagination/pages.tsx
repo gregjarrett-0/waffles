@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from '../hooks';
 
 import { pagesWrapperStyle } from './styles';
-import Pagination from './pagination';
 import Page from './page';
 import {
   MOBILE_VISIBLE_PAGES_LIMIT,
@@ -15,9 +14,7 @@ type PagesProps = {
   totalPages: number;
   currentPage: number;
   inverted: boolean;
-  clickHandler: NonNullable<
-    React.ComponentProps<typeof Pagination>['onChange']
-  >;
+  clickHandler: (newPage: number) => void;
 };
 
 function Pages({
@@ -36,17 +33,17 @@ function Pages({
     const visiblePages: string[] = [];
 
     function getMiddleStart(truncateLeft: boolean, truncateRight: boolean) {
-      // Has no truncateLeft
+      // Does not have truncation on left
       if (!truncateLeft) {
         return 2;
       }
 
-      // Has truncateLeft but not truncateRight
+      // Has truncation on left, but not on right
       if (!truncateRight) {
         return totalPages - visiblePageLimit + 3;
       }
 
-      // Has both truncateLeft and truncateRight
+      // Has truncation on both sides
       return isAboveSmall ? currentPage - 1 : currentPage;
     }
 
@@ -54,16 +51,16 @@ function Pages({
       truncateLeft: boolean,
       truncateRight: boolean,
     ): number {
-      // Has no truncateRight
+      // Does not have truncation on right
       if (!truncateRight) {
         return totalPages - 1;
 
-        // Has truncateRight but not truncateLeft
+        // Has truncation on right, but not on left
       } else if (!truncateLeft) {
         return visiblePageLimit - 2;
       }
 
-      // Has both truncateLeft and truncateRight
+      // Has truncation on both sides
       return isAboveSmall ? currentPage + 1 : currentPage;
     }
 
@@ -80,6 +77,7 @@ function Pages({
         totalPages - currentPage >=
           Math.floor(visiblePageLimit / 2) + (visiblePageLimit % 2);
 
+      // Calculate start and end for middle values
       const middleStartValue = getMiddleStart(truncateLeft, truncateRight);
       const middleEndValue = getMiddleEnd(truncateLeft, truncateRight);
 
@@ -88,6 +86,7 @@ function Pages({
         visiblePages.push(TRUNCATION_SYMBOL);
       }
 
+      // Populate middle values
       Array.from(Array(middleEndValue - middleStartValue + 1).keys()).map(
         (value: number) =>
           visiblePages.push((middleStartValue + value).toString()),

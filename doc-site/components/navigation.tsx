@@ -81,6 +81,9 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             <Item href="/components/loader">Loader</Item>
             <Item href="/components/menu">Menu</Item>
             <Item href="/components/notification">Notification</Item>
+            <Item href="/components/pagination" isNew>
+              Pagination
+            </Item>
             <Item href="/components/paragraph">Paragraph</Item>
             <Item href="/components/portal">Portal</Item>
             <Item href="/components/progress">Progress</Item>
