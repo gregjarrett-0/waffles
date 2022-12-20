@@ -14,7 +14,8 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <Pagination
-        aria-label="Basic pagination"
+        inverted
+        aria-label="Inverted pagination"
         totalPages={7}
         currentPage={currentPage}
         onChange={(page: number) => setCurrentPage(page)}
