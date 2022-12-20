@@ -1,6 +1,7 @@
 import * as TabsExports from '@datacamp/waffles/tabs';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -15,7 +16,31 @@ import AsLinks from '../../examples/tabs/as-links';
 import AutoActivate from '../../examples/tabs/auto-activate';
 import Inverted from '../../examples/tabs/inverted';
 
-<Layout title="Tabs" description="🚧 This page is under construction">
+<Layout title="Tabs" description="Organize related content, and let the user to navigate between groups of information, that appear within the same context.">
+
+## Usage guidance
+
+`Tabs` group related content into different categories, helping to reduce cognitive load, and allowing users to navigate between them without leaving the page. They always contain at least two items. Only one tab can be active at the time.
+
+`Tabs` can be used on full-page layouts to further separate related content, and establish hierarchy. They also can be used within components such as [Dialog](/components/dialog) or [Card](/components/card). When used on a full page `Tabs` should always extend to its full width.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - `Tabs.Tab` label should clearly describe the content beneath it, and generally should be just a single word
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use for sequential content, e.g. Chapter 1, Chapter 2
+    - use for primary navigation
+    - use to indicate progress, use [Progress](/components/progress) instead
+    - use to compare information in two groups
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
