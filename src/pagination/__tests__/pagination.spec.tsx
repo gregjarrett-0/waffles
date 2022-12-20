@@ -72,6 +72,25 @@ describe('Pagination', () => {
     expect(pageButtons).toHaveLength(4);
   });
 
+  it('renders navigation with text labels', () => {
+    const { getByLabelText } = render(
+      <Pagination
+        aria-label="Pagination example"
+        totalPages={10}
+        currentPage={1}
+        onChange={() => {
+          return;
+        }}
+        data-testid="pagination"
+      />,
+    );
+
+    const previousButton = getByLabelText('Previous page');
+    const nextButton = getByLabelText('Next page');
+    expect(previousButton.textContent).toBe('Previous');
+    expect(nextButton.textContent).toBe('Next');
+  });
+
   it('renders right truncation correctly', () => {
     const { getAllByTestId } = render(
       <Pagination
@@ -227,6 +246,25 @@ describe('Pagination mobile', () => {
 
     const pageButtons = getAllByTestId('pagination-page');
     expect(pageButtons).toHaveLength(5);
+  });
+
+  it('renders navigation without text labels', () => {
+    const { getByLabelText } = render(
+      <Pagination
+        aria-label="Pagination example"
+        totalPages={10}
+        currentPage={1}
+        onChange={() => {
+          return;
+        }}
+        data-testid="pagination"
+      />,
+    );
+
+    const previousButton = getByLabelText('Previous page');
+    const nextButton = getByLabelText('Next page');
+    expect(previousButton.textContent).not.toBe('Previous');
+    expect(nextButton.textContent).not.toBe('Next');
   });
 
   it('renders right truncation correctly', () => {
