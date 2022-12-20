@@ -2,6 +2,7 @@ import * as ToastExports from '@datacamp/waffles/toast';
 import { Notification } from '@datacamp/waffles/notification';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -14,11 +15,40 @@ import CustomDuration from '../../examples/toast/custom-duration';
 import Persistent from '../../examples/toast/persistent';
 import IndividualPersistent from '../../examples/toast/individual-persistent';
 
-<Layout title="Toast" description="🚧 This page is under construction">
+<Layout title="Toast" description="A non-disruptive, short message that provides quick feedback on the outcome of an action.">
 
 ## Usage guidance
 
-Toasts can be created easily with `toast` function exposed by `useToast` hook. It is also possible to alter default toasts behavior, such as duration after which they hide automatically, by configuring it via `ToastProvider`.
+In general, toast is used to convey general confirmation that isn't critical, e.g. to inform the user that their recent action was successful. Each toast can come in one of the four variants: `info`, `success`, `warning`, and `error`.
+
+Toast dismisses automatically after a short time, but also can be dismissed by the user sooner. It's possible to configure custom timeout via `ToastProvider` globally or for individual toast within `toast` function. To persist toasts by set `disableAutoHide` flag (works for both `ToastProvider` and `toast`).
+
+### Build
+
+First, wrap the whole app with `ToastProvider`. It's only required **once**. Afterward, toasts can be created easily with the helper `toast` function exposed by `useToast` hook.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use for a non-critical single message, that is relevant at the moment
+    - use only if no subsequent action is required
+    - use relevant `variant` according to the situation
+    - use multiple toasts in a row to communicate different messages
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - communicate complex information
+    - communicate a change or persistent condition that needs attention within the context of a page&mdash;use [Notification](/components/notification) instead
+    - go over 4 words for toast `title`
+    - overuse toast `description`
+    - use for items that require action
+    - group multiple actions of the same kind into one toast
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
