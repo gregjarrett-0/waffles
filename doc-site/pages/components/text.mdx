@@ -1,6 +1,7 @@
 import * as TextExports from '@datacamp/waffles/text';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -9,11 +10,28 @@ import Imports from '../../components/imports';
 import playgroundConfig from '../../examples/text/playground-config';
 import BasicUsage from '../../examples/text/basic-usage';
 
-<Layout title="Text" description="🚧 This page is under construction">
+<Layout title="Text" description="Generic typography component. Building block for other text elements.">
 
 ## Usage guidance
 
-In general, when dealing with text, [Paragraph](/components/paragraph) component should be used. This `Text` component is meant to be used mainly as a building block for other components or for short single-line messages.
+In general, when dealing with text, [Paragraph](/components/paragraph) component should be used. This `Text` component is meant to be used mainly as a building block for other components by taking advantage of the `as` prop, or as an inline text wrapper.
+
+It has already basic typography-related styles applied, such as `font-family`, `font-size`, and `font-weight`.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use for short single-line messages
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use for long text bodies
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 

@@ -7,7 +7,7 @@ import { Text } from '@datacamp/waffles/text';
 
 function Playground() {
   return (
-    <Text>Start Your Certification Journey</Text>
+    <Text>Start your Certification journey</Text>
   );
 }
 `;
