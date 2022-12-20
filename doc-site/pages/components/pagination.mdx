@@ -1,6 +1,7 @@
 import * as PaginationExports from '@datacamp/waffles/pagination';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,7 +11,39 @@ import playgroundConfig from '../../examples/pagination/playground-config';
 import BasicUsage from '../../examples/pagination/basic-usage';
 import Inverted from '../../examples/pagination/inverted';
 
-<Layout title="Pagination" description="🚧 This page is under construction">
+<Layout title="Pagination" description="A control for navigating through content split into multiple pages.">
+
+## Usage guidance
+
+`Pagination` allows content to be divided into smaller chunks, across multiple pages, whilst managing the current active page. The updating of the `currentPage` should be handled as part of the `onChange` callback.
+
+Users can navigate through the pages by clicking on the individual page buttons or the previous and next buttons. A maximum of seven pages will be shown at one time, with a maximum five being shown on smaller width devices. If the `totalPages` exceeds this maximum visible value, then truncation is displayed on the left and right as the user navigates.
+
+There is an `inverted` property for cases where the `Pagination` component is used on a darker background.
+
+## Accessibility
+
+An `aria-label` must always be provided with context of the `Pagination` (e.g. "Search results pagination").
+
+Furthermore for the best accessibility, `Pagination` should be used with `aria-live` regions to notify users of dynamic content changes. This means that in most cases, a change of `currentPage` should not trigger a full page reload. If content needs to be fetched as part of this update, then it's recommended to use a [Loader](/components/loader) in the meantime.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use alongside dynamic content changes
+    - provide an accessible `aria-label` with the context of the pagination
+    - use for large or long content that can split up
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use alongside full page reloads for content changes
+    - use for short content that should be kept together
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
