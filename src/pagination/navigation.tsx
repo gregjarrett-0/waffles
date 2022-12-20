@@ -54,6 +54,7 @@ function Navigation({
             ...(variant === 'previous'
               ? { iconLeft: variantMap[variant].icon }
               : { iconRight: variantMap[variant].icon }),
+            'data-testid': 'pagination-navigation',
           }}
         >
           {variantMap[variant].label}
@@ -68,6 +69,7 @@ function Navigation({
             ...(disabled && { disabled, 'aria-disabled': true }),
             icon: variantMap[variant].icon,
             'aria-label': variantMap[variant].ariaLabel,
+            'data-testid': 'pagination-navigation',
           }}
         />
       )}

@@ -1,0 +1,2267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination mobile renders snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  margin: 0;
+}
+
+.emotion-1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-right: 4px;
+}
+
+.emotion-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-1:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1:disabled {
+  color: #65707C;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-2:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-2:disabled {
+  color: #65707C;
+}
+
+.emotion-2,
+.emotion-2:hover:not(:disabled) {
+  background-color: #05192D;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-5::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-5:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-5:disabled {
+  color: #65707C;
+}
+
+.emotion-16 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-left: 4px;
+}
+
+.emotion-16::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-16:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-16:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-16:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-16:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-16:disabled {
+  color: #65707C;
+}
+
+<nav
+  aria-label="Pagination example"
+  data-testid="pagination"
+>
+  <ul
+    class="emotion-0"
+  >
+    <li>
+      <button
+        aria-disabled="true"
+        aria-label="Previous page"
+        class="emotion-1"
+        data-testid="pagination-navigation"
+        disabled=""
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          height="16"
+          viewBox="0 0 18 18"
+          width="16"
+        >
+          <path
+            d="m5.845 8.244 4.947-4.95a1 1 0 1 1 1.415 1.415L7.916 9.003l4.279 4.293a.998.998 0 0 1-.003 1.413 1.001 1.001 0 0 1-1.415-.003L5.791 9.704a.998.998 0 0 1 .054-1.46Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-current="page"
+        class="emotion-2"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          1
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-5"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          2
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-5"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          3
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-hidden="true"
+        class="emotion-5"
+        data-testid="pagination-page"
+        disabled=""
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          …
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-5"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          7
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Next page"
+        class="emotion-16"
+        data-testid="pagination-navigation"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          height="16"
+          viewBox="0 0 18 18"
+          width="16"
+        >
+          <path
+            d="m12.155 9.756-4.947 4.95a1 1 0 1 1-1.415-1.415l4.291-4.294-4.279-4.293a.998.998 0 0 1 .003-1.413 1.001 1.001 0 0 1 1.415.003l4.986 5.002a.998.998 0 0 1-.054 1.46Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination mobile renders snapshot of inverted 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  margin: 0;
+}
+
+.emotion-1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-right: 4px;
+}
+
+.emotion-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-1:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1:disabled {
+  color: #9BA3AB;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-2:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-2:disabled {
+  color: #9BA3AB;
+}
+
+.emotion-2,
+.emotion-2:hover:not(:disabled) {
+  background-color: #F7F7FC;
+  color: #05192D;
+  font-weight: 800;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-5::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-5:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-5:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-5:disabled {
+  color: #9BA3AB;
+}
+
+.emotion-16 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-left: 4px;
+}
+
+.emotion-16::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-16:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-16:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-16:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-16:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-16:disabled {
+  color: #9BA3AB;
+}
+
+<nav
+  aria-label="Inverted pagination example"
+  data-testid="pagination"
+>
+  <ul
+    class="emotion-0"
+  >
+    <li>
+      <button
+        aria-disabled="true"
+        aria-label="Previous page"
+        class="emotion-1"
+        data-testid="pagination-navigation"
+        disabled=""
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          height="16"
+          viewBox="0 0 18 18"
+          width="16"
+        >
+          <path
+            d="m5.845 8.244 4.947-4.95a1 1 0 1 1 1.415 1.415L7.916 9.003l4.279 4.293a.998.998 0 0 1-.003 1.413 1.001 1.001 0 0 1-1.415-.003L5.791 9.704a.998.998 0 0 1 .054-1.46Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-current="page"
+        class="emotion-2"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          1
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-5"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          2
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-5"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          3
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-hidden="true"
+        class="emotion-5"
+        data-testid="pagination-page"
+        disabled=""
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          …
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-5"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-3"
+        >
+          <span
+            class="emotion-4"
+          >
+            Page
+          </span>
+          7
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Next page"
+        class="emotion-16"
+        data-testid="pagination-navigation"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          height="16"
+          viewBox="0 0 18 18"
+          width="16"
+        >
+          <path
+            d="m12.155 9.756-4.947 4.95a1 1 0 1 1-1.415-1.415l4.291-4.294-4.279-4.293a.998.998 0 0 1 .003-1.413 1.001 1.001 0 0 1 1.415.003l4.986 5.002a.998.998 0 0 1-.054 1.46Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination renders snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 4px;
+  margin: 0;
+}
+
+.emotion-1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-right: 4px;
+}
+
+.emotion-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-1:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1:disabled {
+  color: #65707C;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-3:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-3:disabled {
+  color: #65707C;
+}
+
+.emotion-3,
+.emotion-3:hover:not(:disabled) {
+  background-color: #05192D;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.emotion-5 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  color: #05192D;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:disabled {
+  color: #65707C;
+}
+
+.emotion-24 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #0075AD;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-left: 4px;
+}
+
+.emotion-24::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-24:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-24:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-24:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-24:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-24:disabled {
+  color: #65707C;
+}
+
+<nav
+  aria-label="Pagination example"
+  data-testid="pagination"
+>
+  <ul
+    class="emotion-0"
+  >
+    <li>
+      <button
+        aria-disabled="true"
+        aria-label="Previous page"
+        class="emotion-1"
+        data-testid="pagination-navigation"
+        disabled=""
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 18 18"
+            width="16"
+          >
+            <path
+              d="m5.845 8.244 4.947-4.95a1 1 0 1 1 1.415 1.415L7.916 9.003l4.279 4.293a.998.998 0 0 1-.003 1.413 1.001 1.001 0 0 1-1.415-.003L5.791 9.704a.998.998 0 0 1 .054-1.46Z"
+              fill="currentColor"
+            />
+          </svg>
+          Previous
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-current="page"
+        class="emotion-3"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          1
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          2
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          3
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          4
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          5
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          6
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          7
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Next page"
+        class="emotion-24"
+        data-testid="pagination-navigation"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          Next
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 18 18"
+            width="16"
+          >
+            <path
+              d="m12.155 9.756-4.947 4.95a1 1 0 1 1-1.415-1.415l4.291-4.294-4.279-4.293a.998.998 0 0 1 .003-1.413 1.001 1.001 0 0 1 1.415.003l4.986 5.002a.998.998 0 0 1-.054 1.46Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`Pagination renders snapshot of inverted 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 4px;
+  margin: 0;
+}
+
+.emotion-1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-right: 4px;
+}
+
+.emotion-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-1:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-1:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-1:disabled {
+  color: #9BA3AB;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-3::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-3:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-3:disabled {
+  color: #9BA3AB;
+}
+
+.emotion-3,
+.emotion-3:hover:not(:disabled) {
+  background-color: #F7F7FC;
+  color: #05192D;
+  font-weight: 800;
+}
+
+.emotion-5 {
+  position: absolute;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  color: #FFFFFF;
+  font-weight: 400;
+  width: 36px;
+}
+
+.emotion-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-6:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-6:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-6:disabled {
+  color: #9BA3AB;
+}
+
+.emotion-24 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-family: Studio-Feixen-Sans,Arial,sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 125ms ease-out;
+  transition: background-color 125ms ease-out;
+  cursor: pointer;
+  height: 36px;
+  min-width: 36px;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  color: #06BDFC;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0 8px;
+  margin-left: 4px;
+}
+
+.emotion-24::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -4px;
+  border-radius: 6px;
+  pointer-events: none;
+  -webkit-transition: box-shadow 125ms ease-out;
+  transition: box-shadow 125ms ease-out;
+}
+
+.emotion-24:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emotion-24:active:not(:disabled) {
+  background-color: transparent;
+}
+
+.emotion-24:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.emotion-24:hover {
+  background-color: rgba(5, 25, 45, 0.1);
+}
+
+.emotion-24:disabled {
+  color: #9BA3AB;
+}
+
+<nav
+  aria-label="Inverted pagination example"
+  data-testid="pagination"
+>
+  <ul
+    class="emotion-0"
+  >
+    <li>
+      <button
+        aria-disabled="true"
+        aria-label="Previous page"
+        class="emotion-1"
+        data-testid="pagination-navigation"
+        disabled=""
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 18 18"
+            width="16"
+          >
+            <path
+              d="m5.845 8.244 4.947-4.95a1 1 0 1 1 1.415 1.415L7.916 9.003l4.279 4.293a.998.998 0 0 1-.003 1.413 1.001 1.001 0 0 1-1.415-.003L5.791 9.704a.998.998 0 0 1 .054-1.46Z"
+              fill="currentColor"
+            />
+          </svg>
+          Previous
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-current="page"
+        class="emotion-3"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          1
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          2
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          3
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          4
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          5
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          6
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        class="emotion-6"
+        data-testid="pagination-page"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          <span
+            class="emotion-5"
+          >
+            Page
+          </span>
+          7
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Next page"
+        class="emotion-24"
+        data-testid="pagination-navigation"
+        type="button"
+      >
+        <span
+          class="emotion-2"
+        >
+          Next
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 18 18"
+            width="16"
+          >
+            <path
+              d="m12.155 9.756-4.947 4.95a1 1 0 1 1-1.415-1.415l4.291-4.294-4.279-4.293a.998.998 0 0 1 .003-1.413 1.001 1.001 0 0 1 1.415.003l4.986 5.002a.998.998 0 0 1-.054 1.46Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;

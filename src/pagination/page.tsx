@@ -30,6 +30,7 @@ function Page({
         onClick={() => !isTruncation && clickHandler(+label)}
         {...(isActive && { 'aria-current': 'page' })}
         {...(isTruncation && { 'aria-hidden': true })}
+        data-testid="pagination-page"
         {...restProps}
       >
         {!isTruncation && <ScreenReaderOnly>Page</ScreenReaderOnly>}
