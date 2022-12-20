@@ -40,35 +40,38 @@ function Navigation({
     clickHandler(currentPage + variantMap[variant].modifier);
   }
 
-  return isAboveSmall ? (
-    <Button
-      {...{
-        css: navigationButtonStyle({ inverted }),
-        onClick,
-        disabled,
-        inverted,
-        variant: 'plain',
-
-        'aria-label': variantMap[variant].ariaLabel,
-        ...(variant === 'previous'
-          ? { iconLeft: variantMap[variant].icon }
-          : { iconRight: variantMap[variant].icon }),
-      }}
-    >
-      {variantMap[variant].label}
-    </Button>
-  ) : (
-    <Button
-      {...{
-        css: navigationButtonStyle({ inverted }),
-        onClick,
-        disabled,
-        inverted,
-        variant: 'plain',
-        icon: variantMap[variant].icon,
-        'aria-label': variantMap[variant].ariaLabel,
-      }}
-    />
+  return (
+    <li>
+      {isAboveSmall ? (
+        <Button
+          {...{
+            css: navigationButtonStyle({ inverted }),
+            onClick,
+            inverted,
+            variant: 'plain',
+            ...(disabled && { disabled, 'aria-disabled': true }),
+            'aria-label': variantMap[variant].ariaLabel,
+            ...(variant === 'previous'
+              ? { iconLeft: variantMap[variant].icon }
+              : { iconRight: variantMap[variant].icon }),
+          }}
+        >
+          {variantMap[variant].label}
+        </Button>
+      ) : (
+        <Button
+          {...{
+            css: navigationButtonStyle({ inverted }),
+            onClick,
+            inverted,
+            variant: 'plain',
+            ...(disabled && { disabled, 'aria-disabled': true }),
+            icon: variantMap[variant].icon,
+            'aria-label': variantMap[variant].ariaLabel,
+          }}
+        />
+      )}
+    </li>
   );
 }
 

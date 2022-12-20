@@ -1,3 +1,4 @@
+import { useMediaQuery } from '../hooks';
 import { logError } from '../helpers';
 
 import { wrapperStyle } from './styles';
@@ -16,11 +17,11 @@ type PaginationProps = {
   /* Sets the style of the Pagination suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-  /* Handler called every time the page should change. Should be used to update `currentPage` via the `newPage` parameter of the function. */
+  /* Handler called every time the page should change. Should be used to update `currentPage` using the parameter from the function. */
   onChange: (newPage: number) => void;
   /* Accessible label describing the context of the Pagination. */
   'aria-label': string;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'onChange'>;
 
 function Pagination({
   totalPages,
@@ -29,7 +30,9 @@ function Pagination({
   onChange,
   ...restProps
 }: PaginationProps) {
-  // Log console error if currentPage is an invalid value
+  const { isAboveSmall } = useMediaQuery();
+
+  // Log console error if currentPage is invalid
   !isValidPage(currentPage) && logError(MESSAGES.INVALID_ACTIVE_PAGE);
   // Log console error if totalPages is less than 1
   !totalPages && logError(MESSAGES.INVALID_ACTIVE_PAGE);
@@ -64,12 +67,14 @@ function Pagination({
   }
 
   return (
-    <nav css={wrapperStyle()} {...restProps}>
-      {renderNavigationButton('previous')}
-      {totalPages && (
-        <Pages {...{ totalPages, currentPage, inverted, clickHandler }} />
-      )}
-      {renderNavigationButton('next')}
+    <nav {...restProps}>
+      <ul css={wrapperStyle({ isAboveSmall })}>
+        {renderNavigationButton('previous')}
+        {totalPages && (
+          <Pages {...{ totalPages, currentPage, inverted, clickHandler }} />
+        )}
+        {renderNavigationButton('next')}
+      </ul>
     </nav>
   );
 }

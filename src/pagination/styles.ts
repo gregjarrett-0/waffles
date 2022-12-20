@@ -19,11 +19,16 @@ const invertedMap = {
   hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
 };
 
-export function wrapperStyle() {
+type WrapperStyleOptions = {
+  isAboveSmall: boolean;
+};
+
+export function wrapperStyle({ isAboveSmall }: WrapperStyleOptions) {
   return css`
     display: flex;
     flex-direction: row;
-    gap: ${tokens.spacing.small};
+    gap: ${isAboveSmall ? tokens.spacing.xsmall : tokens.spacing.small};
+    margin: 0;
   `;
 }
 
@@ -46,14 +51,6 @@ export function navigationButtonStyle({
     &:disabled {
       color: ${inverted ? invertedMap.disabledColor : regularMap.disabledColor};
     }
-  `;
-}
-
-export function pagesWrapperStyle() {
-  return css`
-    display: flex;
-    flex-direction: row;
-    gap: ${tokens.spacing.xsmall};
   `;
 }
 

@@ -1,3 +1,4 @@
+import { ScreenReaderOnly } from '../screen-reader-only';
 import { Button } from '../button';
 
 import { pageButtonStyle } from './styles';
@@ -17,18 +18,24 @@ function Page({
   clickHandler,
   ...restProps
 }: PageProps) {
+  const isTruncation = label === TRUNCATION_SYMBOL;
+
   return (
-    <Button
-      css={pageButtonStyle({ isActive, inverted })}
-      variant="plain"
-      inverted={inverted}
-      disabled={label === TRUNCATION_SYMBOL}
-      onClick={() => label !== TRUNCATION_SYMBOL && clickHandler(+label)}
-      {...(isActive && { 'aria-current': 'page' })}
-      {...restProps}
-    >
-      {label}
-    </Button>
+    <li>
+      <Button
+        css={pageButtonStyle({ isActive, inverted })}
+        variant="plain"
+        inverted={inverted}
+        disabled={label === TRUNCATION_SYMBOL}
+        onClick={() => !isTruncation && clickHandler(+label)}
+        {...(isActive && { 'aria-current': 'page' })}
+        {...(isTruncation && { 'aria-hidden': true })}
+        {...restProps}
+      >
+        {!isTruncation && <ScreenReaderOnly>Page</ScreenReaderOnly>}
+        {label}
+      </Button>
+    </li>
   );
 }
 

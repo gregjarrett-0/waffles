@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 import { useMediaQuery } from '../hooks';
 
-import { pagesWrapperStyle } from './styles';
 import Page from './page';
 import {
   MOBILE_VISIBLE_PAGES_LIMIT,
@@ -105,7 +104,7 @@ function Pages({
   }, [currentPage, isAboveSmall, totalPages, visiblePageLimit]);
 
   return (
-    <div css={pagesWrapperStyle()}>
+    <>
       {pages.map((pageLabel, index) => {
         return (
           <Page
@@ -117,7 +116,7 @@ function Pages({
           />
         );
       })}
-    </div>
+    </>
   );
 }
 
