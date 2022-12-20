@@ -1,6 +1,7 @@
 import * as ChapeauExports from '@datacamp/waffles/chapeau';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,7 +11,26 @@ import playgroundConfig from '../../examples/chapeau/playground-config';
 import BasicUsage from '../../examples/chapeau/basic-usage';
 import Inverted from '../../examples/chapeau/inverted';
 
-<Layout title="Chapeau" description="🚧 This page is under construction">
+<Layout title="Chapeau" description="A supportive text element is placed above the heading.">
+
+## Usage guidence
+
+`Chapeau` provides extra context for the main [Heading](/components/heading) on the page, and usually describes the whole page category.
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - place above [Heading](/components/heading)
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use outside of heading context
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
