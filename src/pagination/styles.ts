@@ -3,6 +3,8 @@ import { css } from '@emotion/react';
 import { tokens } from '../tokens';
 import { hexToRgba } from '../helpers';
 
+import Navigation from './navigation';
+
 const regularMap = {
   color: tokens.colors.navy,
   activeColor: tokens.colors.white,
@@ -34,13 +36,22 @@ export function wrapperStyle({ isAboveSmall }: WrapperStyleOptions) {
 
 type NavigationButtonStyleOptions = {
   inverted: boolean;
+  variant: NonNullable<React.ComponentProps<typeof Navigation>['variant']>;
 };
 
 export function navigationButtonStyle({
   inverted,
+  variant,
 }: NavigationButtonStyleOptions) {
   return css`
     padding: 0 ${tokens.spacing.small};
+    ${variant === 'previous' &&
+    css`
+      margin-right: ${tokens.spacing.xsmall};
+    `}${variant === 'next' &&
+    css`
+      margin-left: ${tokens.spacing.xsmall};
+    `}
 
     &:hover {
       background-color: ${inverted

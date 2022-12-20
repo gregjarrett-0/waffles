@@ -45,7 +45,7 @@ function Navigation({
       {isAboveSmall ? (
         <Button
           {...{
-            css: navigationButtonStyle({ inverted }),
+            css: navigationButtonStyle({ inverted, variant }),
             onClick,
             inverted,
             variant: 'plain',
@@ -61,7 +61,7 @@ function Navigation({
       ) : (
         <Button
           {...{
-            css: navigationButtonStyle({ inverted }),
+            css: navigationButtonStyle({ inverted, variant }),
             onClick,
             inverted,
             variant: 'plain',
