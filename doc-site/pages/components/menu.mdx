@@ -14,19 +14,19 @@ import AdvancedUsage from '../../examples/menu/advanced-usage';
 import Placement from '../../examples/menu/placement';
 import Inverted from '../../examples/menu/inverted';
 
-<Layout title="Menu" description="Menu provides a way to display list of choices on a temporary dropdown.">
+<Layout title="Menu" description="Menu provides a way to display a list of choices on a temporary dropdown.">
 
 ## Usage guidance
 
 `Menu` allows users to make a selection from multiple options, features or settings, e.g. a set of account actions in the top application bar.
 
-It appears when the user interacts with a trigger, most commonly [Button](/components/button), although other elements can be used. Dropdown is placed next to the element that opened it. If it is in position to be cut off the screen's or browser's edge, the `Menu` can instead appear at the opposite `placement`.
+It appears when the user interacts with a trigger, most commonly a [Button](/components/button), although other elements can be used. Dropdown is placed next to the element that opened it. If it is in position to be cut off the screen's or browser's edge, the `Menu` can instead appear at the opposite `placement`.
 
-It's option is defined with `Menu.Item` subcomponent. It can incude label text, description, left icon, right icon, active state, destructive variant, and small notification icon. Display item as `disabled`, when it can be used under certain conditions, instead of completely hiding it.
+Content is defined using the `Menu.Item` subcomponent. When an item can be used conditionally, but not currently, it should have the `disabled` prop instead of being hidden or removed.
 
-`Menu.Category` should be used to separate various `Menu.Items` into groups. It's divider can be hidden by providing `noDivider` prop.
+`Menu.Category` should be used to separate various `Menu.Items` into groups. Its divider can be hidden by providing the `noDivider` prop.
 
-### Build
+### Structure
 
 To keep the underlying menu structure _semantically correct_ and _accessible_ via keyboard, please follow these rules:
 

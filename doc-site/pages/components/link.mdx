@@ -24,14 +24,13 @@ A `Link` is primarily used for navigation, and it usually appears _within_ or _d
 
 By default `Link` inherits its font size and weight from the surrounding text. On rare occasions, when a `Link` is used as standalone action, and not a part of a bigger text body, **always** set its `size`.
 
-Third-party navigation components, such as [react-router](https://github.com/remix-run/react-router) `Link`, can be passed via `as` prop.
+Third-party navigation components, such as [react-router](https://github.com/remix-run/react-router) `Link`, can be passed via the `as` prop.
 
 ## Best practices
 
 <BestPractices>
   <BestPractices.Recommended>
 
-    - for actions that don't appear within or directly following a sentence, use `plain` [Button](/components/button)
     - open a new tab (with `target="blank"`) only when necessary
     - add clarity to the external Link through a clear label, rather than an icon
     - label should clearly describe Link purpose
@@ -40,6 +39,7 @@ Third-party navigation components, such as [react-router](https://github.com/rem
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
 
+    - for actions that don't appear within or directly following a sentence, use `plain` [Button](/components/button)
     - overuse icons, as they can add unnecessary visual clutter to the sentence
     - use Link for actions other than navigation&mdash;if a component that doesn't have URL is required, use [Button](/components/button)
 

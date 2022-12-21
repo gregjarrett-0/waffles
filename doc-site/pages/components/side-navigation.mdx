@@ -9,17 +9,17 @@ import Imports from '../../components/imports';
 import BasicUsage from '../../examples/side-navigation/basic-usage';
 import AdvancedUsage from '../../examples/side-navigation/advanced-usage';
 
-<Layout title="Side Navigation" description="Standarizes and creates consistent navigation experience across DataCamp products.">
+<Layout title="Side Navigation" description="Standardizes and creates consistent navigation experience across DataCamp products.">
 
 ## Usage guidance
 
-`SideNavigation` allows users to orient, and navigate to different sections of applications reliably, and should be used for top-level destinations. It automatically switches between desktop and mobile (drawer) mode, depending on the device's width.
+`SideNavigation` allows users to orient, and navigate to different sections of applications reliably. Should be used for top-level destinations. It automatically switches between desktop and mobile (drawer) mode, depending on the device's width.
 
-Currently, the active destination should be highlighted by setting `isActive` flag on `SideNavigation.Item` subcomponent.
+Currently, the active destination should be highlighted by setting the `isActive` flag on the `SideNavigation.Item` subcomponent.
 
-To make the recently added navigation item stand out more use `isNew` prop on `SideNavigation.Item` subcomponent.
+To make the recently added navigation item stand out more use the `isNew` prop on the `SideNavigation.Item` subcomponent.
 
-### Build
+### Structure
 
 To keep the underlying side navigation structure _semantically correct_ and _accessible_, please follow these rules:
 

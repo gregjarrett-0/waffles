@@ -1,4 +1,6 @@
 import * as ErrorBoundaryExports from '@datacamp/waffles/error-boundary';
+import { Notification } from '@datacamp/waffles/notification';
+import { Link } from '@datacamp/waffles/link';
 
 import Layout from '../../components/content-layout';
 import BestPractices from '../../components/best-practices';
@@ -9,15 +11,30 @@ import Imports from '../../components/imports';
 import BasicUsage from '../../examples/error-boundary/basic-usage';
 import WithCustomError from '../../examples/error-boundary/with-custom-error';
 
-<Layout title="Error Boundary" description="A component to handle and recover from runtime errors with fallback error message.">
+<Layout title="Error Boundary" description="A component to handle and recover from runtime errors with a fallback error message.">
 
 ## Usage guidance
 
 Use `ErrorBoundary` to handle JavaScript runtime errors. Try to at least wrap a few major sections of the app with it, although the more localized it is the better.
 
-When logging errors to 3rd party services, such as Sentry, use `onError` callback.
+When logging errors to 3rd party services, such as Sentry, use the `onError` callback.
 
-Unfortunately, there are still [some errors](https://reactjs.org/docs/error-boundaries.html#introducing-error-boundaries) that React is unable to hand off to `ErrorBoundary`.
+<Notification
+  title="Server errors and event handlers"
+  description={
+    <>
+      Unfortunately, there are still{' '}
+      <Link
+        href="https://reactjs.org/docs/error-boundaries.html#introducing-error-boundaries"
+        target="_blank"
+      >
+        some errors
+      </Link>{' '}
+      that React is unable to hand off to <em>ErrorBoundary</em>.
+    </>
+  }
+  variant="warning"
+/>
 
 ## Best practices
 
@@ -26,7 +43,7 @@ Unfortunately, there are still [some errors](https://reactjs.org/docs/error-boun
 
     - usually use default fallback to keep things consistent
     - wrap many sections of the app
-    - for custom error messages provided via `fallback` try to incorporate recovery strategy with `onReset` callback
+    - for custom error messages provided via `fallback`, try to incorporate recovery strategy with `onReset` callback
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>

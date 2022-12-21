@@ -22,9 +22,9 @@ import Inverted from '../../examples/notification/inverted';
 
 The main purpose of `Notification` is to inform users about various updates or changes to the system status. While `Notification` is an effective method of communication, it is rather disruptive and should be used sparingly.
 
-By default `Notification` doesn't dismiss automatically. To make `Notification` dismissible, and to show a close button, provide `closable` prop.
+By default `Notification` doesn't dismiss automatically. To make `Notification` dismissible, and to show a close button, provide the `closable` prop.
 
-Custom follow-up actions, which should take the user to a page or flow related to the message itself, can be defined via `action` with `Notification.ActionButton` subcomponent. Clearly describe the action, and limit the label to one or two words.
+Custom follow-up actions, which should take the user to a page or flow related to the message itself, can be defined via `action` with the `Notification.ActionButton` subcomponent. Clearly describe the action, and limit the label to one or two words.
 
 The `Notification` comes in five different variants: `info`, `success`, `warning`, `error`, and `upgrade`.
 
@@ -32,11 +32,11 @@ The `Notification` comes in five different variants: `info`, `success`, `warning
 
 #### Inline
 
-Show up in the task flow, to notify users of the status of an application. It usually appears at the start of the relevant content area or close to the section needing attention. It should be separated from other content by at least `tokens.spacing.small`.
+Notifies users of the status of an application. It usually appears at the start of the relevant content area or close to the section needing attention. It should be separated from other content by at least `tokens.spacing.small`.
 
 #### Banner
 
-Consigns an important system-wide message. It should be placed at the top of the page. It expands to fill the full width of the container.
+Communicates an important system-wide message. It should be placed at the top of the page. It expands to fill the full width of the container.
 
 ### Content
 

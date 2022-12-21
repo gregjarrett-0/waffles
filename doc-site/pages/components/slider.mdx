@@ -20,18 +20,18 @@ import Inverted from '../../examples/slider/inverted';
 
 ## Usage guidance
 
-When using `Slider` changes are reflected to a user immediately. It's ideal for adjusting settings such as volume. It shows the full range of available choices.
+When using `Slider`, changes are reflected to a user immediately. It's ideal for adjusting settings such as volume. It shows the full range of available choices.
 
-It is controlled by the `value` prop. It **always** must be an array. Depending on the provided `value`:
+It is controlled by the `value` prop. It must **always** be an array. Depending on the provided `value`:
 
 - for single value, e.g. `[50]`, it shows only one handle
 - for two values, e.g. `[20, 50]`, two handles are displayed, and the user can define a range
 
-This value must fall between `min` and `max`, which default to `0` and `100` respectively. A different scale can be set by changing `min` and `max` props. It can handle negative values too.
+This value must fall between `min` and `max`, which default to `0` and `100` respectively. A different scale can be set by changing `min` and `max` props. It can also handle negative values.
 
-By default, the value label is formatted as a plain number, but custom formatting could be applied via `formatLabel`. Alternatively, labels can be hidden with `hideLabels`. Also in rare occasions, when precision is required from the user, it might be a good idea to show inputs instead of regular labels by setting `showInputs` flag.
+By default, the value label is formatted as a plain number, but custom formatting can be applied via `formatLabel`. Alternatively, labels can be hidden with `hideLabels`. Also in rare occasions, when precision is required from the user, it might be a good idea to show inputs instead of regular labels by setting `showInputs` flag.
 
-The minimal distance between values can be adjusted via `step` prop.
+The minimal distance between values can be adjusted via the `step` prop.
 
 ### Accessibility
 

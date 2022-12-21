@@ -21,9 +21,9 @@ import IndividualPersistent from '../../examples/toast/individual-persistent';
 
 In general, toast is used to convey general confirmation that isn't critical, e.g. to inform the user that their recent action was successful. Each toast can come in one of the four variants: `info`, `success`, `warning`, and `error`.
 
-Toast dismisses automatically after a short time, but also can be dismissed by the user sooner. It's possible to configure custom timeout via `ToastProvider` globally or for individual toast within `toast` function. To persist toasts by set `disableAutoHide` flag (works for both `ToastProvider` and `toast`).
+Toast dismisses automatically after a short time, but also can be dismissed by the user sooner. It's possible to configure a custom timeout via `ToastProvider` globally or for individual toast within `toast` function. To persist toasts by setting the `disableAutoHide` flag (works for both `ToastProvider` and `toast`).
 
-### Build
+### Structure
 
 First, wrap the whole app with `ToastProvider`. It's only required **once**. Afterward, toasts can be created easily with the helper `toast` function exposed by `useToast` hook.
 
@@ -32,7 +32,7 @@ First, wrap the whole app with `ToastProvider`. It's only required **once**. Aft
 <BestPractices>
   <BestPractices.Recommended>
 
-    - use for a non-critical single message, that is relevant at the moment
+    - use for a single non-critical message, that is relevant in the moment
     - use only if no subsequent action is required
     - use relevant `variant` according to the situation
     - use multiple toasts in a row to communicate different messages
@@ -42,7 +42,7 @@ First, wrap the whole app with `ToastProvider`. It's only required **once**. Aft
 
     - communicate complex information
     - communicate a change or persistent condition that needs attention within the context of a page&mdash;use [Notification](/components/notification) instead
-    - go over 4 words for toast `title`
+    - use over 4 words for toast `title`
     - overuse toast `description`
     - use for items that require action
     - group multiple actions of the same kind into one toast
@@ -53,7 +53,7 @@ First, wrap the whole app with `ToastProvider`. It's only required **once**. Aft
 ## Examples
 
 <Notification
-  title="Multiple ToastProviders In Examples"
+  title="Multiple ToastProviders in examples"
   description={
     <>
       To show various toast features, a unique <em>ToastProvider</em> has been

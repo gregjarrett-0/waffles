@@ -22,28 +22,28 @@ import Inverted from '../../examples/card/inverted';
 
 Multiple `Cards` can be displayed together in a grid or a vertical list, and separated by `tokens.spacing.medium` gutter.
 
-To make a `Card` stand out more or to emphasize its purpose, provide `Card.HeadstoneItem` (single or multiple) via `headstone` prop. It can contain either [Icons](/components/icon) or [Assets](/components/asset).
+To make a `Card` stand out more or to emphasize its purpose, provide `Card.HeadstoneItem` (single or multiple) via the `headstone` prop. It can contain either [Icons](/components/icon) or [Assets](/components/asset).
 
-In rare occasions, when the `Card` is used to just group content without any actions, the hover drop shadow effect can be disabled with `disableHoverEffect` prop.
+In rare occasions, when the `Card` is used to group content without any actions, the hover drop shadow effect can be disabled with the `disableHoverEffect` prop.
 
 It's possible to make the whole `Card` act as an action item&mdash;use `as="a"` (or any other link from the routing library of choice).
 
 ### Content
 
-The `Card` container itself is the only required element. Every other element is optional. It holds all card elements, and the size is determined by the space occupied by its content.
+The `Card` container itself is the only required element. Every other element is optional. It holds all `Card` elements, and the size is determined by the space occupied by its content.
 
 For `Card` headline in general use [Heading](/components/heading) of the default `xlarge` size.
 
-For supporting text body use [Paragrpah](/components/paragraph).
+For supporting text body use [Paragraph](/components/paragraph).
 
-For call to action use [Button](/components/button), and follow `Button` best practices.
+For a call to action use [Button](/components/button), and follow the best practices.
 
 ## Best practices
 
 <BestPractices>
   <BestPractices.Recommended>
 
-    - use a heading which makes Card purpose very clear
+    - use a heading which makes Card's purpose very clear
     - prioritize information, so the most important content comes first
     - break complicated flows into multiple sections
     - use only one primary call to action per card
