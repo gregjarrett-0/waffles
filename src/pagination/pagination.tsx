@@ -1,6 +1,7 @@
 import { useMediaQuery } from '../hooks';
 import { logError } from '../helpers';
 
+import { isValidPage } from './utils';
 import { wrapperStyle } from './styles';
 import Pages from './pages';
 import Navigation from './navigation';
@@ -32,31 +33,29 @@ function Pagination({
 }: PaginationProps) {
   const { isAboveSmall } = useMediaQuery();
 
-  // Log console error if currentPage is invalid
-  !isValidPage(currentPage) && logError(MESSAGES.INVALID_ACTIVE_PAGE);
   // Log console error if totalPages is less than 1
   !totalPages && logError(MESSAGES.INVALID_ACTIVE_PAGE);
+  // Log console error if currentPage is invalid
+  !isValidPage(currentPage, totalPages) &&
+    logError(MESSAGES.INVALID_ACTIVE_PAGE);
 
-  // Confirm whether provided page is valid, given the totalPages
-  function isValidPage(page: number) {
-    return page >= 1 && page <= totalPages;
-  }
+  // Confirm whether provided page is valid, given the totalPage
 
   function clickHandler(newPage: number) {
-    if (isValidPage(newPage)) {
+    if (isValidPage(newPage, totalPages)) {
       onChange(newPage);
     }
   }
 
-  function renderNavigationButton(variant: NavigationVariant) {
+  function renderNavigationButton(navigationVariant: NavigationVariant) {
     const disabled =
-      (variant === 'previous' && currentPage === 1) ||
-      (variant === 'next' && currentPage === totalPages);
+      (navigationVariant === 'previous' && currentPage === 1) ||
+      (navigationVariant === 'next' && currentPage === totalPages);
 
     return (
       <Navigation
         {...{
-          variant,
+          navigationVariant,
           currentPage,
           inverted,
           disabled,

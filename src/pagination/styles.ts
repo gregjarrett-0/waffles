@@ -36,7 +36,9 @@ export function wrapperStyle({ isAboveSmall }: WrapperStyleOptions) {
 
 type NavigationButtonStyleOptions = {
   inverted: boolean;
-  variant: NonNullable<React.ComponentProps<typeof Navigation>['variant']>;
+  variant: NonNullable<
+    React.ComponentProps<typeof Navigation>['navigationVariant']
+  >;
 };
 
 export function navigationButtonStyle({

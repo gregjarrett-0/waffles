@@ -9,18 +9,18 @@ const variantMap = {
     label: 'Previous',
     ariaLabel: 'Previous page',
     icon: <ChevronLeft />,
-    modifier: -1,
+    modifier: -1, // Amount to modify the currentPage by
   },
   next: {
     label: 'Next',
     ariaLabel: 'Next page',
     icon: <ChevronRight />,
-    modifier: 1,
+    modifier: 1, // Amount to modify the currentPage by
   },
 };
 
 type NavigationProps = {
-  variant: 'previous' | 'next';
+  navigationVariant: 'previous' | 'next';
   currentPage: number;
   inverted: boolean;
   disabled: boolean;
@@ -28,7 +28,7 @@ type NavigationProps = {
 };
 
 function Navigation({
-  variant,
+  navigationVariant,
   currentPage,
   inverted,
   disabled,
@@ -37,7 +37,7 @@ function Navigation({
   const { isAboveSmall } = useMediaQuery();
 
   function onClick() {
-    clickHandler(currentPage + variantMap[variant].modifier);
+    clickHandler(currentPage + variantMap[navigationVariant].modifier);
   }
 
   return (
@@ -45,30 +45,36 @@ function Navigation({
       {isAboveSmall ? (
         <Button
           {...{
-            css: navigationButtonStyle({ inverted, variant }),
+            css: navigationButtonStyle({
+              inverted,
+              variant: navigationVariant,
+            }),
             onClick,
             inverted,
             variant: 'plain',
             ...(disabled && { disabled, 'aria-disabled': true }),
-            'aria-label': variantMap[variant].ariaLabel,
-            ...(variant === 'previous'
-              ? { iconLeft: variantMap[variant].icon }
-              : { iconRight: variantMap[variant].icon }),
+            'aria-label': variantMap[navigationVariant].ariaLabel,
+            ...(navigationVariant === 'previous'
+              ? { iconLeft: variantMap[navigationVariant].icon }
+              : { iconRight: variantMap[navigationVariant].icon }),
             'data-testid': 'pagination-navigation',
           }}
         >
-          {variantMap[variant].label}
+          {variantMap[navigationVariant].label}
         </Button>
       ) : (
         <Button
           {...{
-            css: navigationButtonStyle({ inverted, variant }),
+            css: navigationButtonStyle({
+              inverted,
+              variant: navigationVariant,
+            }),
             onClick,
             inverted,
             variant: 'plain',
             ...(disabled && { disabled, 'aria-disabled': true }),
-            icon: variantMap[variant].icon,
-            'aria-label': variantMap[variant].ariaLabel,
+            icon: variantMap[navigationVariant].icon,
+            'aria-label': variantMap[navigationVariant].ariaLabel,
             'data-testid': 'pagination-navigation',
           }}
         />
