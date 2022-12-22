@@ -55,7 +55,7 @@ export function navigationButtonStyle({
       margin-left: ${tokens.spacing.xsmall};
     `}
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: ${inverted
         ? invertedMap.hoverBackgroundColor
         : regularMap.hoverBackgroundColor};
@@ -81,7 +81,7 @@ export function pageButtonStyle({
     font-weight: ${tokens.fontWeights.regular};
     width: ${tokens.sizing.medium};
 
-    &:hover:not(:disabled) {
+    &:hover {
       background-color: ${inverted
         ? invertedMap.hoverBackgroundColor
         : regularMap.hoverBackgroundColor};

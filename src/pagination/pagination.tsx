@@ -39,8 +39,6 @@ function Pagination({
   !isValidPage(currentPage, totalPages) &&
     logError(MESSAGES.INVALID_ACTIVE_PAGE);
 
-  // Confirm whether provided page is valid, given the totalPage
-
   function clickHandler(newPage: number) {
     if (isValidPage(newPage, totalPages)) {
       onChange(newPage);

@@ -92,7 +92,7 @@ exports[`Pagination mobile renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -182,7 +182,7 @@ exports[`Pagination mobile renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-2:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -304,7 +304,7 @@ exports[`Pagination mobile renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-5:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -391,7 +391,7 @@ exports[`Pagination mobile renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-16:hover {
+.emotion-16:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -632,7 +632,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -722,7 +722,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-2:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -844,7 +844,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-5:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -931,7 +931,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-16:hover {
+.emotion-16:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1174,7 +1174,7 @@ exports[`Pagination renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1276,7 +1276,7 @@ exports[`Pagination renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-3:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1386,7 +1386,7 @@ exports[`Pagination renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-6:hover:not(:disabled) {
+.emotion-6:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1475,7 +1475,7 @@ exports[`Pagination renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-24:hover {
+.emotion-24:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1767,7 +1767,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1869,7 +1869,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-3:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1979,7 +1979,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-6:hover:not(:disabled) {
+.emotion-6:hover {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -2068,7 +2068,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-24:hover {
+.emotion-24:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
