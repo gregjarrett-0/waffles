@@ -96,10 +96,6 @@ exports[`Pagination mobile renders snapshot 1`] = `
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-1:disabled {
-  color: #65707C;
-}
-
 .emotion-2 {
   position: relative;
   display: -webkit-inline-box;
@@ -395,10 +391,6 @@ exports[`Pagination mobile renders snapshot 1`] = `
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-16:disabled {
-  color: #65707C;
-}
-
 <nav
   aria-label="Pagination example"
   data-testid="pagination"
@@ -634,10 +626,6 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
 
 .emotion-1:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
-}
-
-.emotion-1:disabled {
-  color: #9BA3AB;
 }
 
 .emotion-2 {
@@ -935,10 +923,6 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-16:disabled {
-  color: #9BA3AB;
-}
-
 <nav
   aria-label="Inverted pagination example"
   data-testid="pagination"
@@ -1176,10 +1160,6 @@ exports[`Pagination renders snapshot 1`] = `
 
 .emotion-1:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
-}
-
-.emotion-1:disabled {
-  color: #65707C;
 }
 
 .emotion-2 {
@@ -1477,10 +1457,6 @@ exports[`Pagination renders snapshot 1`] = `
 
 .emotion-24:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
-}
-
-.emotion-24:disabled {
-  color: #65707C;
 }
 
 <nav
@@ -1771,10 +1747,6 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   background-color: rgba(5, 25, 45, 0.1);
 }
 
-.emotion-1:disabled {
-  color: #9BA3AB;
-}
-
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2070,10 +2042,6 @@ exports[`Pagination renders snapshot of inverted 1`] = `
 
 .emotion-24:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
-}
-
-.emotion-24:disabled {
-  color: #9BA3AB;
 }
 
 <nav

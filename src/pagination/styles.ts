@@ -36,21 +36,21 @@ export function wrapperStyle({ isAboveSmall }: WrapperStyleOptions) {
 
 type NavigationButtonStyleOptions = {
   inverted: boolean;
-  variant: NonNullable<
+  navigationVariant: NonNullable<
     React.ComponentProps<typeof Navigation>['navigationVariant']
   >;
 };
 
 export function navigationButtonStyle({
   inverted,
-  variant,
+  navigationVariant,
 }: NavigationButtonStyleOptions) {
   return css`
     padding: 0 ${tokens.spacing.small};
-    ${variant === 'previous' &&
+    ${navigationVariant === 'previous' &&
     css`
       margin-right: ${tokens.spacing.xsmall};
-    `}${variant === 'next' &&
+    `}${navigationVariant === 'next' &&
     css`
       margin-left: ${tokens.spacing.xsmall};
     `}
@@ -59,10 +59,6 @@ export function navigationButtonStyle({
       background-color: ${inverted
         ? invertedMap.hoverBackgroundColor
         : regularMap.hoverBackgroundColor};
-    }
-
-    &:disabled {
-      color: ${inverted ? invertedMap.disabledColor : regularMap.disabledColor};
     }
   `;
 }

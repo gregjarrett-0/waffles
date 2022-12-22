@@ -47,7 +47,7 @@ function Navigation({
           {...{
             css: navigationButtonStyle({
               inverted,
-              variant: navigationVariant,
+              navigationVariant,
             }),
             onClick,
             inverted,
@@ -67,7 +67,7 @@ function Navigation({
           {...{
             css: navigationButtonStyle({
               inverted,
-              variant: navigationVariant,
+              navigationVariant,
             }),
             onClick,
             inverted,
