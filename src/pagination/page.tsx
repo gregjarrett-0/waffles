@@ -1,3 +1,5 @@
+import React, { forwardRef } from 'react';
+
 import { ScreenReaderOnly } from '../screen-reader-only';
 import { Button } from '../button';
 
@@ -11,27 +13,23 @@ type PageProps = {
   clickHandler: (newPage: number) => void;
 };
 
-function Page({
-  label,
-  isActive,
-  inverted,
-  clickHandler,
-  ...restProps
-}: PageProps) {
+function PageInternal(
+  { label, isActive, inverted, clickHandler, ...restProps }: PageProps,
+  ref?: React.Ref<HTMLButtonElement>,
+) {
   const isTruncation = label === TRUNCATION_SYMBOL;
 
   return (
-    <li>
+    <li {...restProps}>
       <Button
         css={pageButtonStyle({ isActive, inverted })}
         variant="plain"
         inverted={inverted}
         disabled={label === TRUNCATION_SYMBOL}
         onClick={() => !isTruncation && clickHandler(+label)}
-        {...(isActive && { 'aria-current': 'page' })}
+        {...(isActive && { 'aria-current': 'page', ref: ref })}
         {...(isTruncation && { 'aria-hidden': true })}
         data-testid="pagination-page"
-        {...restProps}
       >
         {!isTruncation && <ScreenReaderOnly>Page</ScreenReaderOnly>}
         {label}
@@ -39,5 +37,7 @@ function Page({
     </li>
   );
 }
+
+const Page = forwardRef(PageInternal);
 
 export default Page;

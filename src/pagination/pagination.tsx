@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react';
+
 import { useMediaQuery } from '../hooks';
 import { logError } from '../helpers';
 
@@ -32,6 +34,16 @@ function Pagination({
   ...restProps
 }: PaginationProps) {
   const { isAboveSmall } = useMediaQuery();
+  const activePageRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    // Handle maintaining focus on page change
+    if (activePageRef.current) {
+      setTimeout(() => {
+        activePageRef.current?.focus();
+      }, 50);
+    }
+  }, [activePageRef, currentPage]);
 
   // Log console error if totalPages is less than 1
   !totalPages && logError(MESSAGES.INVALID_ACTIVE_PAGE);
@@ -68,7 +80,15 @@ function Pagination({
       <ul css={wrapperStyle({ isAboveSmall })}>
         {renderNavigationButton('previous')}
         {totalPages && (
-          <Pages {...{ totalPages, currentPage, inverted, clickHandler }} />
+          <Pages
+            {...{
+              totalPages,
+              currentPage,
+              inverted,
+              clickHandler,
+              activePageRef,
+            }}
+          />
         )}
         {renderNavigationButton('next')}
       </ul>

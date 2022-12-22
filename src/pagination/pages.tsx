@@ -13,6 +13,7 @@ type PagesProps = {
   totalPages: number;
   currentPage: number;
   inverted: boolean;
+  activePageRef: React.RefObject<HTMLButtonElement>;
   clickHandler: (newPage: number) => void;
 };
 
@@ -20,6 +21,7 @@ function Pages({
   totalPages,
   currentPage,
   inverted,
+  activePageRef,
   clickHandler,
 }: PagesProps) {
   const { isAboveSmall } = useMediaQuery();
@@ -112,6 +114,7 @@ function Pages({
             label={pageLabel}
             isActive={pageLabel === currentPage.toString()}
             inverted={inverted}
+            ref={activePageRef}
             clickHandler={clickHandler}
           />
         );
