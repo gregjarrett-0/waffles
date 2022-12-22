@@ -17,7 +17,7 @@ type PaginationProps = {
   /* Sets the style of the Pagination suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-  /* Handler called every time the page should change. Should be used to update `currentPage` using the parameter from the function. */
+  /* Handler called every time the page should change. */
   onChange: (newPage: number) => void;
   /* Accessible label describing the context of the Pagination. */
   'aria-label': string;
