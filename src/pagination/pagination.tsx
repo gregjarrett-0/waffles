@@ -1,3 +1,5 @@
+import { useFocusRing } from '@react-aria/focus';
+
 import { useMediaQuery } from '../hooks';
 import { logError } from '../helpers';
 
@@ -32,6 +34,8 @@ function Pagination({
   ...restProps
 }: PaginationProps) {
   const { isAboveSmall } = useMediaQuery();
+  // Used to recognize when something within the component has a visible focus
+  const { isFocusVisible, focusProps } = useFocusRing({ within: true });
 
   // Log console error if totalPages is less than 1
   !totalPages && logError(MESSAGES.INVALID_TOTAL_PAGES);
@@ -65,7 +69,7 @@ function Pagination({
 
   return (
     <nav {...restProps}>
-      <ul css={wrapperStyle({ isAboveSmall })}>
+      <ul css={wrapperStyle({ isAboveSmall })} {...focusProps}>
         {renderNavigationButton('previous')}
         {totalPages && (
           <Pages
@@ -73,6 +77,7 @@ function Pagination({
               totalPages,
               currentPage,
               inverted,
+              isFocusVisible,
               onClick: handleChange,
             }}
           />

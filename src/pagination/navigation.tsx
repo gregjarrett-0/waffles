@@ -40,9 +40,19 @@ function Navigation({
     onClick(currentPage + variantMap[navigationVariant].modifier);
   }
 
-  function renderButton(children: React.ReactNode, { ...props }) {
-    const { ...restProps } = props;
-    return (
+  function iconProps() {
+    return isAboveSmall
+      ? {
+          ...(navigationVariant === 'previous'
+            ? { iconLeft: variantMap[navigationVariant].icon }
+            : { iconRight: variantMap[navigationVariant].icon }),
+          children: variantMap[navigationVariant].label,
+        }
+      : { icon: variantMap[navigationVariant].icon };
+  }
+
+  return (
+    <li>
       <Button
         {...{
           css: navigationButtonStyle({
@@ -55,23 +65,9 @@ function Navigation({
           variant: 'plain',
           'aria-label': variantMap[navigationVariant].ariaLabel,
           'data-testid': 'pagination-navigation',
-          ...restProps,
+          ...iconProps(),
         }}
-      >
-        {children}
-      </Button>
-    );
-  }
-
-  return (
-    <li>
-      {isAboveSmall
-        ? renderButton(variantMap[navigationVariant].label, {
-            ...(navigationVariant === 'previous'
-              ? { iconLeft: variantMap[navigationVariant].icon }
-              : { iconRight: variantMap[navigationVariant].icon }),
-          })
-        : renderButton(undefined, { icon: variantMap[navigationVariant].icon })}
+      />
     </li>
   );
 }

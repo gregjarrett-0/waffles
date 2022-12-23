@@ -5,7 +5,7 @@ import { useMediaQuery } from '../hooks';
 import Page from './page';
 import {
   TRUNCATION_SYMBOL,
-  VISIBLE_PAGES_LIMIT_BELOW_MEDIUM_BREAKPOINT,
+  VISIBLE_PAGES_LIMIT_BELOW_SMALL_BREAKPOINT,
   VISIBLE_PAGES_LIMIT_ABOVE_SMALL_BREAKPOINT,
 } from './constants';
 
@@ -13,14 +13,21 @@ type PagesProps = {
   totalPages: number;
   currentPage: number;
   inverted: boolean;
+  isFocusVisible: boolean;
   onClick: (newPage: number) => void;
 };
 
-function Pages({ totalPages, currentPage, inverted, onClick }: PagesProps) {
+function Pages({
+  totalPages,
+  currentPage,
+  inverted,
+  isFocusVisible,
+  onClick,
+}: PagesProps) {
   const { isAboveSmall } = useMediaQuery();
   const visiblePageLimit = isAboveSmall
     ? VISIBLE_PAGES_LIMIT_ABOVE_SMALL_BREAKPOINT
-    : VISIBLE_PAGES_LIMIT_BELOW_MEDIUM_BREAKPOINT;
+    : VISIBLE_PAGES_LIMIT_BELOW_SMALL_BREAKPOINT;
   const [pages, setPages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -106,6 +113,7 @@ function Pages({ totalPages, currentPage, inverted, onClick }: PagesProps) {
             label={pageLabel}
             isActive={pageLabel === currentPage.toString()}
             inverted={inverted}
+            isFocusVisible={isFocusVisible}
             onClick={onClick}
           />
         );

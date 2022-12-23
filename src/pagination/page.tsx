@@ -10,21 +10,29 @@ type PageProps = {
   label: string;
   isActive: boolean;
   inverted: boolean;
+  isFocusVisible: boolean;
   onClick: (newPage: number) => void;
 };
 
-function Page({ label, isActive, inverted, onClick, ...restProps }: PageProps) {
+function Page({
+  label,
+  isActive,
+  inverted,
+  isFocusVisible,
+  onClick,
+  ...restProps
+}: PageProps) {
   const pageRef = useRef<HTMLButtonElement>(null);
   const isTruncation = label === TRUNCATION_SYMBOL;
 
   useEffect(() => {
-    // Handle maintaining focus on page change
-    if (isActive && pageRef.current) {
+    // Handle maintaining focus on page change when navigating with a keyboard
+    if (isActive && pageRef.current && isFocusVisible) {
       setTimeout(() => {
         pageRef.current?.focus();
       }, 50);
     }
-  }, [pageRef, isActive]);
+  }, [pageRef, isActive, isFocusVisible]);
 
   return (
     <li {...restProps}>
