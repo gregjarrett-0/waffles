@@ -5,6 +5,7 @@ import { Pagination } from '../index';
 import { tokens } from '../../tokens';
 
 const wrapperStyle = css`
+  background-color: ${tokens.colors.navy};
   padding: ${tokens.spacing.medium};
 `;
 

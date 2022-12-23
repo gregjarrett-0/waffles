@@ -77,7 +77,7 @@ export function pageButtonStyle({
     font-weight: ${tokens.fontWeights.regular};
     width: ${tokens.sizing.medium};
 
-    &:hover {
+    &:hover:not(:disabled) {
       background-color: ${inverted
         ? invertedMap.hoverBackgroundColor
         : regularMap.hoverBackgroundColor};

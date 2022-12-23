@@ -162,7 +162,7 @@ describe('Pagination', () => {
 
     expect(pagination).toHaveAttribute('aria-label', 'Pagination example');
     expect(firstPage).toHaveAttribute('aria-current', 'page');
-    expect(previousButton).toHaveAttribute('aria-disabled', 'true');
+    expect(previousButton).toBeDisabled();
   });
 
   it('click on page button is handled correctly', () => {

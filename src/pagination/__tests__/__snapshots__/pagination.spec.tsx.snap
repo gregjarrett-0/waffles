@@ -178,7 +178,7 @@ exports[`Pagination mobile renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -300,7 +300,7 @@ exports[`Pagination mobile renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-5:hover {
+.emotion-5:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -400,7 +400,6 @@ exports[`Pagination mobile renders snapshot 1`] = `
   >
     <li>
       <button
-        aria-disabled="true"
         aria-label="Previous page"
         class="emotion-1"
         data-testid="pagination-navigation"
@@ -710,7 +709,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -832,7 +831,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-5:hover {
+.emotion-5:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -932,7 +931,6 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
   >
     <li>
       <button
-        aria-disabled="true"
         aria-label="Previous page"
         class="emotion-1"
         data-testid="pagination-navigation"
@@ -1256,7 +1254,7 @@ exports[`Pagination renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-3:hover {
+.emotion-3:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1366,7 +1364,7 @@ exports[`Pagination renders snapshot 1`] = `
   cursor: default;
 }
 
-.emotion-6:hover {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1468,7 +1466,6 @@ exports[`Pagination renders snapshot 1`] = `
   >
     <li>
       <button
-        aria-disabled="true"
         aria-label="Previous page"
         class="emotion-1"
         data-testid="pagination-navigation"
@@ -1841,7 +1838,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-3:hover {
+.emotion-3:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -1951,7 +1948,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   cursor: default;
 }
 
-.emotion-6:hover {
+.emotion-6:hover:not(:disabled) {
   background-color: rgba(5, 25, 45, 0.1);
 }
 
@@ -2053,7 +2050,6 @@ exports[`Pagination renders snapshot of inverted 1`] = `
   >
     <li>
       <button
-        aria-disabled="true"
         aria-label="Previous page"
         class="emotion-1"
         data-testid="pagination-navigation"
