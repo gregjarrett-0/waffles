@@ -30,7 +30,7 @@ function Example() {
     <DarkMode>
       <Heading>Naïve dark mode</Heading>
       <Paragraph>
-        Notice how none of the components has <Code>inverted</Code> prop set
+        Notice how none of the components have <Code>inverted</Code> prop set
         explicitly.
       </Paragraph>
       <Paragraph>

@@ -10,7 +10,7 @@ function Example() {
     <FormField
       label="Provide HEX color"
       requiredIndicator="none"
-      {...(!isHexColor(value) && { error: 'Incorrect value' })}
+      {...(!isHexColor(value) && { error: 'Not in HEX notation' })}
     >
       <Input value={value} onChange={(event) => setValue(event.target.value)} />
     </FormField>
