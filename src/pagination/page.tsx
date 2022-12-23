@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { ScreenReaderOnly } from '../screen-reader-only';
 import { Button } from '../button';
@@ -10,14 +10,21 @@ type PageProps = {
   label: string;
   isActive: boolean;
   inverted: boolean;
-  clickHandler: (newPage: number) => void;
+  onClick: (newPage: number) => void;
 };
 
-function PageInternal(
-  { label, isActive, inverted, clickHandler, ...restProps }: PageProps,
-  ref?: React.Ref<HTMLButtonElement>,
-) {
+function Page({ label, isActive, inverted, onClick, ...restProps }: PageProps) {
+  const pageRef = useRef<HTMLButtonElement>(null);
   const isTruncation = label === TRUNCATION_SYMBOL;
+
+  useEffect(() => {
+    // Handle maintaining focus on page change
+    if (isActive && pageRef.current) {
+      setTimeout(() => {
+        pageRef.current?.focus();
+      }, 50);
+    }
+  }, [pageRef, isActive]);
 
   return (
     <li {...restProps}>
@@ -26,8 +33,8 @@ function PageInternal(
         variant="plain"
         inverted={inverted}
         disabled={label === TRUNCATION_SYMBOL}
-        onClick={() => !isTruncation && clickHandler(+label)}
-        {...(isActive && { 'aria-current': 'page', ref: ref })}
+        onClick={() => !isTruncation && onClick(+label)}
+        {...(isActive && { 'aria-current': 'page', ref: pageRef })}
         {...(isTruncation && { 'aria-hidden': true })}
         data-testid="pagination-page"
       >
@@ -37,7 +44,5 @@ function PageInternal(
     </li>
   );
 }
-
-const Page = forwardRef(PageInternal);
 
 export default Page;

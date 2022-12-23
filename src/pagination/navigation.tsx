@@ -9,13 +9,13 @@ const variantMap = {
     label: 'Previous',
     ariaLabel: 'Previous page',
     icon: <ChevronLeft />,
-    modifier: -1, // Amount to modify the currentPage by
+    modifier: -1, // Amount to decrement the currentPage by
   },
   next: {
     label: 'Next',
     ariaLabel: 'Next page',
     icon: <ChevronRight />,
-    modifier: 1, // Amount to modify the currentPage by
+    modifier: 1, // Amount to increment the currentPage by
   },
 };
 
@@ -24,7 +24,7 @@ type NavigationProps = {
   currentPage: number;
   inverted: boolean;
   disabled: boolean;
-  clickHandler: (newPage: number) => void;
+  onClick: (newPage: number) => void;
 };
 
 function Navigation({
@@ -32,53 +32,46 @@ function Navigation({
   currentPage,
   inverted,
   disabled,
-  clickHandler,
+  onClick,
 }: NavigationProps) {
   const { isAboveSmall } = useMediaQuery();
 
-  function onClick() {
-    clickHandler(currentPage + variantMap[navigationVariant].modifier);
+  function handleClick() {
+    onClick(currentPage + variantMap[navigationVariant].modifier);
+  }
+
+  function renderButton(children: React.ReactNode, { ...props }) {
+    const { ...restProps } = props;
+    return (
+      <Button
+        {...{
+          css: navigationButtonStyle({
+            inverted,
+            navigationVariant,
+          }),
+          onClick: handleClick,
+          inverted,
+          disabled,
+          variant: 'plain',
+          'aria-label': variantMap[navigationVariant].ariaLabel,
+          'data-testid': 'pagination-navigation',
+          ...restProps,
+        }}
+      >
+        {children}
+      </Button>
+    );
   }
 
   return (
     <li>
-      {isAboveSmall ? (
-        <Button
-          {...{
-            css: navigationButtonStyle({
-              inverted,
-              navigationVariant,
-            }),
-            onClick,
-            inverted,
-            variant: 'plain',
-            ...(disabled && { disabled, 'aria-disabled': true }),
-            'aria-label': variantMap[navigationVariant].ariaLabel,
+      {isAboveSmall
+        ? renderButton(variantMap[navigationVariant].label, {
             ...(navigationVariant === 'previous'
               ? { iconLeft: variantMap[navigationVariant].icon }
               : { iconRight: variantMap[navigationVariant].icon }),
-            'data-testid': 'pagination-navigation',
-          }}
-        >
-          {variantMap[navigationVariant].label}
-        </Button>
-      ) : (
-        <Button
-          {...{
-            css: navigationButtonStyle({
-              inverted,
-              navigationVariant,
-            }),
-            onClick,
-            inverted,
-            variant: 'plain',
-            ...(disabled && { disabled, 'aria-disabled': true }),
-            icon: variantMap[navigationVariant].icon,
-            'aria-label': variantMap[navigationVariant].ariaLabel,
-            'data-testid': 'pagination-navigation',
-          }}
-        />
-      )}
+          })
+        : renderButton(undefined, { icon: variantMap[navigationVariant].icon })}
     </li>
   );
 }

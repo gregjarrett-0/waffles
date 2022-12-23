@@ -4,34 +4,28 @@ import { useMediaQuery } from '../hooks';
 
 import Page from './page';
 import {
-  MOBILE_VISIBLE_PAGES_LIMIT,
   TRUNCATION_SYMBOL,
-  VISIBLE_PAGES_LIMIT,
+  VISIBLE_PAGES_LIMIT_BELOW_MEDIUM_BREAKPOINT,
+  VISIBLE_PAGES_LIMIT_ABOVE_SMALL_BREAKPOINT,
 } from './constants';
 
 type PagesProps = {
   totalPages: number;
   currentPage: number;
   inverted: boolean;
-  activePageRef: React.RefObject<HTMLButtonElement>;
-  clickHandler: (newPage: number) => void;
+  onClick: (newPage: number) => void;
 };
 
-function Pages({
-  totalPages,
-  currentPage,
-  inverted,
-  activePageRef,
-  clickHandler,
-}: PagesProps) {
+function Pages({ totalPages, currentPage, inverted, onClick }: PagesProps) {
   const { isAboveSmall } = useMediaQuery();
   const visiblePageLimit = isAboveSmall
-    ? VISIBLE_PAGES_LIMIT
-    : MOBILE_VISIBLE_PAGES_LIMIT;
+    ? VISIBLE_PAGES_LIMIT_ABOVE_SMALL_BREAKPOINT
+    : VISIBLE_PAGES_LIMIT_BELOW_MEDIUM_BREAKPOINT;
   const [pages, setPages] = useState<string[]>([]);
 
   useEffect(() => {
-    const visiblePages: string[] = [];
+    // Always add page one, since there will always be at least one page.
+    const visiblePages = ['1'];
 
     function getMiddleStart(truncateLeft: boolean, truncateRight: boolean) {
       // Does not have truncation on left
@@ -55,18 +49,16 @@ function Pages({
       // Does not have truncation on right
       if (!truncateRight) {
         return totalPages - 1;
+      }
 
-        // Has truncation on right, but not on left
-      } else if (!truncateLeft) {
+      // Has truncation on right, but not on left
+      if (!truncateLeft) {
         return visiblePageLimit - 2;
       }
 
       // Has truncation on both sides
       return isAboveSmall ? currentPage + 1 : currentPage;
     }
-
-    // Always add page one, since there will always be at least one page.
-    visiblePages.push('1');
 
     if (totalPages > 1) {
       // If the totalPages exceeds the visiblePageLimit, then calculate whether to truncate the left, right or both.
@@ -114,8 +106,7 @@ function Pages({
             label={pageLabel}
             isActive={pageLabel === currentPage.toString()}
             inverted={inverted}
-            ref={activePageRef}
-            clickHandler={clickHandler}
+            onClick={onClick}
           />
         );
       })}
