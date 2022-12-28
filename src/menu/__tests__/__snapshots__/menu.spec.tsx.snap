@@ -423,7 +423,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   aria-orientation="vertical"
   class="emotion-0"
   role="menu"
-  tabindex="0"
+  tabindex="-1"
 >
   <div
     aria-labelledby="menu-category-123abC"
@@ -993,7 +993,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   aria-orientation="vertical"
   class="emotion-0"
   role="menu"
-  tabindex="0"
+  tabindex="-1"
 >
   <div
     aria-labelledby="menu-category-123abC"

@@ -4,7 +4,7 @@ import {
   useDismiss,
   useFloating,
   useInteractions,
-} from '@floating-ui/react';
+} from '@floating-ui/react-dom-interactions';
 
 import { panelWrapperStyle, panelStyle } from './styles';
 import { useDialog } from './dialog-context';
