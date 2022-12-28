@@ -1,5 +1,17 @@
 
 
+## [1.17.1](https://github.com/datacamp/waffles/compare/v1.17.0...v1.17.1) (2022-12-28)
+
+
+### Bug Fixes
+
+* downgrade `floating-ui` dependency ([4e1245e](https://github.com/datacamp/waffles/commit/4e1245e595881cf3d2494075520b5e8bb3837aa5))
+
+
+### Documentation Changes
+
+* remove adoption page and nav link ([ca63e51](https://github.com/datacamp/waffles/commit/ca63e516153962317cc22337a00f173eab587d98))
+
 ## [1.17.0](https://github.com/datacamp/waffles/compare/v1.16.0...v1.17.0) (2022-12-13)
 
 
