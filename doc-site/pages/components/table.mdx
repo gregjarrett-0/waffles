@@ -19,7 +19,7 @@ import Inverted from '../../examples/table/inverted';
 
 ## Usage guidance
 
-`Table` helps greatly with comparing, and analyzing data. It help users make informed decsisions. It should be used to present information with a clear, repeating structure.
+`Table` helps greatly with comparing, and analyzing data. It help users make informed decisions. It should be used to present information with a clear, repeating structure.
 
 `Table` which is based on native HTML `table` and it's subcomponents provide a lot of structural information for screen reader users. People who rely on assistive technologies can easily navigate `Table` and identify relationships between data cells and columns. For that reason all of the `Table` components and subcomponents implement HTML `table` elements such as: `table`, `th` or `tr`.
 
@@ -27,10 +27,10 @@ import Inverted from '../../examples/table/inverted';
 
 Using the `Table` in a project involves putting together following components and subcomponents:
 
-- `Table` is _responsive_ container, and `aria-label` must be provided to properly support scrolling the content with keybaord.
+- `Table` is _responsive_ container, and `aria-label` must be provided to properly support scrolling the content with keyboard.
 - `Table.Head` and `Table.Body` are section elements which should contain only `Table.Row` subcomponents.
 - `Table.Row` is a single table row, and should wrap various cell subcomponents.
-- `Table.HeadCell` is used to label columns. Optionally provides sorting functionality. To customize column width it's possible to provide it via CSS `max-width`, `min-width`, or `width` (in this case percantages are recommended).
+- `Table.HeadCell` is used to label columns. Optionally provides sorting functionality. To customize column width it's possible to provide it via CSS `max-width`, `min-width`, or `width` (in this case percentages are recommended).
 - `Table.Cell` is regular data cell.
 
 There are also a few more advanced subcomponents which could be used in niche situations:
