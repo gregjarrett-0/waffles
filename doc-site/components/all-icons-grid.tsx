@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import * as allIcons from '@datacamp/waffles/icon';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
-import { Button } from '@datacamp/waffles/button';
 
 import groupedIcons from '../helpers/grouped-icons';
-
-import PreviewControls from './preview-controls';
-
-const { Visible, Hidden } = allIcons;
 
 const regularIconsPreview = css`
   display: flex;
@@ -32,20 +27,21 @@ const invertedIconsPreview = css`
   background-color: ${tokens.colors.navy};
   border: ${tokens.borderWidth.thin} solid transparent;
   border-top: 0;
+  border-bottom-right-radius: ${tokens.borderRadius.medium};
+  border-bottom-left-radius: ${tokens.borderRadius.medium};
 `;
 
 type IconStyleOptions = {
-  isLabelVisible: boolean;
   inverted: boolean;
 };
 
-function iconStyle({ isLabelVisible, inverted }: IconStyleOptions) {
+function iconStyle({ inverted }: IconStyleOptions) {
   return css`
     display: flex;
     align-items: center;
     margin: ${tokens.spacing.small};
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
-    width: ${isLabelVisible ? '220px' : 'auto'};
+    width: 220px;
 
     // Fix issue where Icon would shrink if label is too long
     & svg {
@@ -59,11 +55,6 @@ const labelStyle = css`
   color: inherit;
 `;
 
-const buttonContentStyle = css`
-  width: 88px;
-  text-align: center;
-`;
-
 type IconPreviewType = {
   name: string;
   icon: React.ReactNode;
@@ -71,16 +62,11 @@ type IconPreviewType = {
   inverted?: boolean;
 };
 
-function IconPreview({
-  name,
-  icon,
-  isLabelVisible = true,
-  inverted = false,
-}: IconPreviewType) {
+function IconPreview({ name, icon, inverted = false }: IconPreviewType) {
   return (
-    <div css={iconStyle({ isLabelVisible, inverted })}>
+    <div css={iconStyle({ inverted })}>
       {icon}
-      {isLabelVisible && <Text css={labelStyle}>{name}</Text>}
+      <Text css={labelStyle}>{name}</Text>
     </div>
   );
 }
@@ -88,49 +74,22 @@ function IconPreview({
 function AllIconsGrid() {
   const { regular, inverted } = groupedIcons(allIcons);
 
-  const [allLabelsVisible, setLabelsVisibility] = useState(false);
-
   return (
     <ErrorBoundary>
       <div css={regularIconsPreview}>
         {Object.entries(regular).map((iconData) => {
           const [name, Icon] = iconData;
-          return (
-            <IconPreview
-              key={name}
-              name={name}
-              icon={<Icon />}
-              isLabelVisible={allLabelsVisible}
-            />
-          );
+          return <IconPreview key={name} name={name} icon={<Icon />} />;
         })}
       </div>
       <div css={invertedIconsPreview}>
         {Object.entries(inverted).map((iconData) => {
           const [name, Icon] = iconData;
           return (
-            <IconPreview
-              key={name}
-              name={name}
-              icon={<Icon />}
-              isLabelVisible={allLabelsVisible}
-              inverted
-            />
+            <IconPreview key={name} name={name} icon={<Icon />} inverted />
           );
         })}
       </div>
-      <PreviewControls>
-        <Button
-          variant="plain"
-          size="small"
-          iconLeft={allLabelsVisible ? <Hidden /> : <Visible />}
-          onClick={() => setLabelsVisibility(!allLabelsVisible)}
-        >
-          <div css={buttonContentStyle}>
-            {allLabelsVisible ? 'Hide' : 'Show'} Names
-          </div>
-        </Button>
-      </PreviewControls>
     </ErrorBoundary>
   );
 }
