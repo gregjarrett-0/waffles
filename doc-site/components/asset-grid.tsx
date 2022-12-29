@@ -12,7 +12,7 @@ import PreviewControls from './preview-controls';
 function assetPreviewStyle(maxColumnCount: number, hasDarkBackground: boolean) {
   return css`
     display: grid;
-    grid-template-columns: repeat(${maxColumnCount - 2}, 1fr);
+    grid-template-columns: repeat(${maxColumnCount - 2}, minmax(0, 1fr));
     gap: ${tokens.spacing.large};
     align-items: center;
     padding: ${tokens.spacing.medium};

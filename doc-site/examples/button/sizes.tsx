@@ -8,6 +8,7 @@ function Example() {
       css={css`
         display: flex;
         gap: ${tokens.spacing.small};
+        flex-wrap: wrap;
       `}
     >
       <Button size="large">Large Size</Button>

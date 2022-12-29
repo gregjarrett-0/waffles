@@ -28,18 +28,19 @@ const brandWrapperStyle = css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: ${tokens.spacing.xsmall};
-  height: 150px;
+  margin: ${tokens.spacing.small};
+  max-height: 150px;
 `;
 
 const labelStyle = css`
   display: block;
   flex: 1;
   color: inherit;
-  padding-top: ${tokens.spacing.small};
+  padding: ${tokens.spacing.small};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-height: ${tokens.sizing.small};
 `;
 
 type BrandPreviewType = {
@@ -66,13 +67,7 @@ function BrandGrid({ brandType }: BrandGridProps) {
       <section css={wrapperStyle}>
         <div css={brandPreview}>
           {Object.entries(getBrandGroup(brandType)).map(([name, Brand]) => {
-            return (
-              <BrandPreview
-                key={name}
-                name={name}
-                brand={<Brand height="100px" />}
-              />
-            );
+            return <BrandPreview key={name} name={name} brand={<Brand />} />;
           })}
         </div>
       </section>

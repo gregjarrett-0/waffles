@@ -10,6 +10,7 @@ function Example() {
           display: flex;
           gap: ${tokens.spacing.small};
           margin-bottom: ${tokens.spacing.small};
+          flex-wrap: wrap;
         `}
       >
         <Badge variant="green" size="large">
@@ -26,6 +27,7 @@ function Example() {
         css={css`
           display: flex;
           gap: ${tokens.spacing.small};
+          flex-wrap: wrap;
         `}
       >
         <Badge variant="green" size="large">

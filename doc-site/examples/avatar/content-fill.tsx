@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Avatar } from '@datacamp/waffles/avatar';
 import { AvatarPlaceholderColored } from '@datacamp/waffles/asset';
@@ -7,8 +8,14 @@ import { AvatarPlaceholderColored } from '@datacamp/waffles/asset';
 const wrapperStyle = css`
   display: flex;
   gap: ${tokens.spacing.small};
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: ${tokens.spacing.medium};
+
+  ${mediaQuery.aboveSmall} {
+    justify-content: flex-start;
+  }
 `;
 
 function Example() {

@@ -9,6 +9,7 @@ function Example() {
       css={css`
         display: flex;
         gap: ${tokens.spacing.small};
+        flex-wrap: wrap;
       `}
     >
       <Button icon={<Trash />} aria-label="Icon only" variant="destructive" />
