@@ -22,12 +22,7 @@ export type ButtonProps<T extends React.ElementType = 'button'> =
   PolymorphicComponentProps<T, DialogButtonProps>;
 
 function ButtonInternal<T extends React.ElementType = 'button'>(
-  {
-    as,
-
-    children,
-    ...restProps
-  }: ButtonProps<T>,
+  { as, children, ...restProps }: ButtonProps<T>,
   ref?: PolymorphicRef<T>,
 ) {
   return (
