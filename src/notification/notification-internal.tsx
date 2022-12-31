@@ -22,7 +22,7 @@ type NotificationBaseProps = {
   onClose?: () => void;
   /* Custom Notification action. Use `Notification.ActionButton` subcomponent. Must be a single element. */
   action?: JSX.Element;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'title'>;
 
 type NotificationClosable = {
   /* Shows a close button, and the Notification can be dismissed by a user. */

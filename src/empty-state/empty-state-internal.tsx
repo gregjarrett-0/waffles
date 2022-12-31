@@ -26,7 +26,7 @@ type EmptyStateBaseProps = {
   /* Sets the color of all internal child elements to be suitable for dark backgrounds. */
   /* @default false */
   inverted?: boolean;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'title'>;
 
 // Additional type to handle restricting `isCentered` to only be usable when it the orientation is vertical
 type EmptyStateDirectionCenteredProps =

@@ -27,7 +27,7 @@ type CardProps = {
   onClose: () => void;
   closeButtonOverride?: JSX.Element;
   action?: JSX.Element;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'title'>;
 
 function Card({
   isVisible,
