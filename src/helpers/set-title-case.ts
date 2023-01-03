@@ -38,6 +38,20 @@ export const TITLE_CASE_STOP_WORDS = [
   'of',
 ];
 
+function hasUppercase(text: string) {
+  for (let index = 0; index < text.length; index += 1) {
+    const letter = text[index];
+    if (
+      letter === letter.toUpperCase() &&
+      // Avoid false positives for non-alphabetical characters:
+      letter !== letter.toLowerCase()
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
 /**
  * Convert string content into Title Case
  *
@@ -48,20 +62,21 @@ function setTitleCase(content: string) {
   return content.length === 0
     ? content
     : content
-        .toLowerCase()
         .trim()
         .split(' ')
         .reduce((output, word, index) => {
-          // Always capitalize the first letter of the first word, or if it's not included in our stop words
-          if (TITLE_CASE_STOP_WORDS.includes(word) && index) {
-            return output.concat(' ', word);
-          } else {
-            return output.concat(
-              !index ? '' : ' ',
-              word[0].toUpperCase(),
-              word.substring(1),
-            );
+          const lowercaseWord = word.toLowerCase();
+
+          // Always capitalize the first letter of the first word or if it’s not already capitalised and not included in our stop words
+          if (TITLE_CASE_STOP_WORDS.includes(lowercaseWord) && index) {
+            return output.concat(' ', lowercaseWord);
           }
+
+          const wordToAppend = hasUppercase(word)
+            ? word
+            : `${lowercaseWord[0].toUpperCase()}${lowercaseWord.substring(1)}`;
+
+          return output.concat(!index ? '' : ' ', wordToAppend);
         }, '');
 }
 

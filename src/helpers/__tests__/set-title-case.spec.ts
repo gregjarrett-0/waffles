@@ -23,4 +23,12 @@ describe('setTitleCase', () => {
   it('should work with an empty string', () => {
     expect(setTitleCase('')).toMatch('');
   });
+
+  it('should leave already-capitalized words that are not stop words intact', () => {
+    const input =
+      'An iPhone app by DataCamp to learn SQL while eating Chick-fil-A and drinking A Coca-Cola';
+    const output =
+      'An iPhone App by DataCamp to Learn SQL While Eating Chick-fil-A and Drinking a Coca-Cola';
+    expect(setTitleCase(input)).toBe(output);
+  });
 });
