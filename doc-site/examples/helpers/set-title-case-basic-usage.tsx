@@ -1,11 +1,18 @@
-import { Text } from '@datacamp/waffles/text';
 import { setTitleCase } from '@datacamp/waffles/helpers';
+import { Paragraph } from '@datacamp/waffles/Paragraph';
 
 function Example() {
   return (
-    <Text>
-      {setTitleCase('design a promo strategy for the insurance company')}
-    </Text>
+    <>
+      <Paragraph>
+        {setTitleCase('design a promo strategy for the insurance company')}
+      </Paragraph>
+      <Paragraph>
+        {setTitleCase(
+          'Download DataCamp for Mobile today. Available on iPhone and Android',
+        )}
+      </Paragraph>
+    </>
   );
 }
 

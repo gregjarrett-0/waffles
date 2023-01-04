@@ -38,9 +38,11 @@ export const TITLE_CASE_STOP_WORDS = [
   'of',
 ];
 
-function hasUppercase(text: string) {
-  for (let index = 0; index < text.length; index += 1) {
+/** @returns `true` if `text` contains one or more uppercase characters */
+function includesUppercase(text: string) {
+  for (let index = 0; index < text.length; index++) {
     const letter = text[index];
+
     if (
       letter === letter.toUpperCase() &&
       // Avoid false positives for non-alphabetical characters:
@@ -53,7 +55,9 @@ function hasUppercase(text: string) {
 }
 
 /**
- * Convert string content into Title Case
+ * Convert string content into Title Case. Words that contain uppercase characters
+ * (such as “iPhone”, “GitHub”, “SQL”, etc.) will be left unchanged, provided that
+ * they’re not included in the list of stop words.
  *
  * @param content string, the content to be converted into Title Case
  * @returns content in Title Case
@@ -72,7 +76,7 @@ function setTitleCase(content: string) {
             return output.concat(' ', lowercaseWord);
           }
 
-          const wordToAppend = hasUppercase(word)
+          const wordToAppend = includesUppercase(word)
             ? word
             : `${lowercaseWord[0].toUpperCase()}${lowercaseWord.substring(1)}`;
 
