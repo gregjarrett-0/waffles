@@ -1,6 +1,7 @@
 import * as DialogExports from '@datacamp/waffles/dialog';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -15,15 +16,24 @@ import DecorativeHeader from '../../examples/dialog/decorative-header';
 import CustomIconOverride from '../../examples/dialog/custom-icon-override';
 import CustomClose from '../../examples/dialog/custom-close';
 
-<Layout title="Dialog" description="🚧 This page is under construction">
+<Layout title="Dialog" description="Displays popup content that requires user interaction, on top of an overlay.">
+
+## Usage guidance
+
+Due to their inherently disruptive nature, `Dialogs` should be used sparingly on a page and saved for situations where it's required for the user to acknowledge or review an action or situation before returning to the active task. The content of a `Dialog` should be both clear and concise.
+
+A `Dialog` will block further interactions with the page (including scrolling) until it is closed. This can happen by the user clicking the included close button, or performing one of the actions within the footer.
+
+An optional decorative header can be provided, by specifying `mode='decorative'` on the `Dialog.Header`. Additionally, a `variant` can also be specified (in the same manner as [Notification](/components/notification)) to change the decorative header styling. This will change the icon present as well, but a custom icon can be provided via `customIconOverride` too.
+
+The `Dialog` can also be center aligned using `alignCenter`.
 
 ## Accessibility
 
-`Dialog` must have a `Dialog.Header` child component provided in order to meet modal
-accessibility requirements via `aria-describedby`.
+`Dialog` must have a `Dialog.Header` child component provided in order to meet modal accessibility requirements via `aria-describedby`.
 
-It is recommended to have the initial focus set on the most relevant element&mdash;in most cases confirmation button. To do so, pass `autoFocus` flag to `Dialog.Button` subcomponent used in the dialog's footer.
-If no initial focus is set explicitly close button will be focused by default.
+It is recommended to have the initial focus set on the most relevant element&mdash;in most cases the confirmation button. To do so, pass the `autoFocus` prop to a `Dialog.Button` subcomponent used in the `Dialog.Footer`.
+If no initial focus is explicitly set, then the close button will be focused by default.
 
 <Notification
   title="Descriptive Content"
@@ -35,6 +45,24 @@ If no initial focus is set explicitly close button will be focused by default.
     </>
   }
 />
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use infrequently, where user acknowledgement / confirmation from the user is important
+    - use for capturing the users attention
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use the incorrect decorative variant
+    - use for an action that should not interrupt the user
+    - use more than three actions within the footer
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
