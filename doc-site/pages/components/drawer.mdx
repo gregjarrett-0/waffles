@@ -1,6 +1,7 @@
 import * as DrawerExports from '@datacamp/waffles/drawer';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,11 +11,35 @@ import playgroundConfig from '../../examples/drawer/playground-config';
 import BasicUsage from '../../examples/drawer/basic-usage';
 import CustomClose from '../../examples/drawer/custom-close';
 
-<Layout title="Drawer" description="🚧 This page is under construction">
+<Layout title="Drawer" description="A container for content that slides in from the side and is anchored to the edge of the screen.">
+
+## Usage guidance
+
+A `Drawer` appears from a specific side provided via the `placement` property. This value should ideally be chosen based on the relative positioning of the trigger. It should be opened through interaction with another component, updating the value of `isOpen` as a result.
+
+An open `Drawer` will block further interactions with the page (including scrolling) until it is closed. This can happen by the user clicking the included close button, or performing one of the actions within the footer.
+
+A close button is provided by the `Drawer` and whilst it should always be visible, it can be overridden via the `closeButtonOverride` prop.
 
 ## Accessibility
 
-The same accessibility guidelines apply to `Drawer` as to [Dialog](/components/dialog/#accessibility).
+The same accessibility guidelines apply to `Drawer` as they do to [Dialog](/components/dialog/#accessibility).
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use where the a link to the relative positioning of the trigger should be maintained
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use where the positioning of additional content is irrelevant&mdash;use Waffles [Dialog](/components/dialog) instead
+    - use more than three actions within the `Drawer.Footer`
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
