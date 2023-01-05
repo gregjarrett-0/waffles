@@ -1,6 +1,7 @@
 import * as AlertDialogExports from '@datacamp/waffles/alert-dialog';
 
 import Layout from '../../components/content-layout';
+import BestPractices from '../../components/best-practices';
 import Example from '../../components/example';
 import Playground from '../../components/playground';
 import PropsTable from '../../components/props-table';
@@ -10,11 +11,37 @@ import playgroundConfig from '../../examples/alert-dialog/playground-config';
 import BasicUsage from '../../examples/alert-dialog/basic-usage';
 import CustomClose from '../../examples/alert-dialog/custom-close';
 
-<Layout title="Alert Dialog" description="🚧 This page is under construction">
+<Layout title="Alert Dialog" description="A modal used to confirm destructive or irreversible actions.">
+
+## Usage guidance
+
+`AlertDialogs` should be used sparingly on a page and saved for situations where it's required for the user to review a potentially destructive action. They should be used to interrupt a user and communicate what will happen if they continue. It is recommended to provide an alterative course of action (e.g. cancelling), alongside the next step or confirmation action.
+
+A close button is provided by the `AlertDialog` and whilst it should always be visible, it can be overridden via the `closeButtonOverride` prop.
+
+The content and actions of an `AlertDialog` will always be center-aligned.
 
 ## Accessibility
 
 The same accessibility guidelines apply to `Alert Dialog` as to [Dialog](/components/dialog/#accessibility).
+
+## Best practices
+
+<BestPractices>
+  <BestPractices.Recommended>
+
+    - use for destructive or irreversible actions
+    - use infrequently, so as not to interrupt the user too often
+
+  </BestPractices.Recommended>
+  <BestPractices.Discouraged>
+
+    - use for an action that should not interrupt the user
+    - use for generic action confirmation&mdash;use Waffles [Dialog](/components/dialog) instead
+    - use more than three actions within the `AlertDialog.Footer`
+
+  </BestPractices.Discouraged>
+</BestPractices>
 
 ## Examples
 
