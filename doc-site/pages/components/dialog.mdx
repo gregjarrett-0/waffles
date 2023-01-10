@@ -24,7 +24,7 @@ Due to their inherently disruptive nature, `Dialogs` should be used sparingly on
 
 A `Dialog` will block further interactions with the page (including scrolling) until it is closed. This can happen by the user clicking the included close button, or performing one of the actions within the footer.
 
-An optional decorative header can be provided, by specifying `mode='decorative'` on the `Dialog.Header`. Additionally, a `variant` can also be specified (in the same manner as [Notification](/components/notification)) to change the decorative header styling. This will change the icon present as well, but a custom icon can be provided via `customIconOverride` too.
+An optional decorative header can be provided, by specifying `mode="decorative"` on the `Dialog.Header`. Additionally, a `variant` can also be specified (in the same manner as [Notification](/components/notification)) to change the decorative header styling. This will change the icon present as well, but a custom icon can be provided via `customIconOverride` too.
 
 A close button is provided by the `Dialog` and whilst it should always be visible, it can be overridden via the `closeButtonOverride` prop.
 
@@ -38,7 +38,7 @@ It is recommended to have the initial focus set on the most relevant element&mda
 If no initial focus is explicitly set, then the close button will be focused by default.
 
 <Notification
-  title="Descriptive Content"
+  title="Descriptive content"
   description={
     <>
       If <Code>Dialog.Body</Code> contains non-descriptive content (e.g. form
