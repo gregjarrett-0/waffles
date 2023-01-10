@@ -118,6 +118,22 @@ describe('Dialog', () => {
     cy.loadStory('dialog-basic');
     cy.findByText('Open').type('{enter}');
     cy.findByText('Confirm').should('exist');
+    cy.findByText('Confirm').closest('button').should('have.focus');
+  });
+
+  it('after parent rerender, focus should persist', () => {
+    cy.loadStory('dialog-focus');
+
+    // Testing for focus behavior in the floating-ui dependency
+    cy.findByText('Updated content').should('not.exist');
+    // Focus on update button
+    cy.findByText('Update Content').closest('button').focus();
+    cy.findByText('Update Content').closest('button').should('have.focus');
+    cy.findByText('Update Content').type('{enter}');
+
+    cy.findByText('Updated content').should('exist');
+    // Check focus has persisted
+    cy.findByText('Update Content').closest('button').should('have.focus');
   });
 });
 
