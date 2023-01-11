@@ -37,7 +37,11 @@ const invertedIconVariantMap = {
   },
 };
 
-export function wrapperStyle() {
+type WrapperStyleOptions = {
+  isCentered?: boolean;
+};
+
+export function wrapperStyle({ isCentered }: WrapperStyleOptions) {
   return css`
     position: relative;
     display: flex;
@@ -47,6 +51,11 @@ export function wrapperStyle() {
     width: ${tokens.sizing.small};
     height: ${tokens.sizing.small};
     flex-shrink: 0;
+
+    ${isCentered &&
+    css`
+      margin-left: auto;
+    `}
   `;
 }
 

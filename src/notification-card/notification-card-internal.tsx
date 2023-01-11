@@ -58,7 +58,13 @@ function NotificationCardInternal(
       css={notificationStyle({ inverted })}
     >
       {!hideLeftDecor && <div css={decorStyle({ variant, inverted })} />}
-      <NotificationIcon {...{ variant, inverted }} />
+      <NotificationIcon
+        {...{
+          variant,
+          inverted,
+          isCentered: isContentCentered && closable,
+        }}
+      />
       <div css={contentStyle({ closable, isContentCentered })}>{children}</div>
       {renderCloseButton()}
     </section>

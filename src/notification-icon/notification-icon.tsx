@@ -13,12 +13,14 @@ import { backgroundStyle, iconStyle, wrapperStyle } from './styles';
 type NotificationIconProps = {
   variant?: 'info' | 'success' | 'warning' | 'error' | 'upgrade';
   size?: 'medium' | 'large';
+  isCentered?: boolean;
   inverted?: boolean;
 } & React.SVGAttributes<SVGElement>;
 
 function NotificationIcon({
   variant = 'info',
   size = 'medium',
+  isCentered = false,
   inverted = false,
   ...restProps
 }: NotificationIconProps) {
@@ -39,7 +41,7 @@ function NotificationIcon({
   }
 
   return (
-    <div css={wrapperStyle()} data-testid="notification-icon">
+    <div css={wrapperStyle({ isCentered })} data-testid="notification-icon">
       <div css={backgroundStyle({ variant, inverted })} />
       <div css={iconStyle({ variant, inverted })}>{renderIcon()}</div>
     </div>
