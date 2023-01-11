@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { useState } from 'react';
 
 import { Dialog } from '../index';
@@ -7,12 +8,7 @@ function Story() {
   const [showUpdatedContent, setShowUpdatedContent] = useState(false);
 
   return (
-    <Dialog
-      isOpen={true}
-      onClose={() => {
-        return;
-      }}
-    >
+    <Dialog isOpen={true} onClose={() => {}}>
       <Dialog.Header>Taylor Swift discography</Dialog.Header>
       <Dialog.Body>
         <Paragraph>
@@ -23,13 +19,7 @@ function Story() {
         <Dialog.Button onClick={() => setShowUpdatedContent(true)}>
           Update Content
         </Dialog.Button>
-        <Dialog.Button
-          onClick={() => {
-            return;
-          }}
-        >
-          Confirm
-        </Dialog.Button>
+        <Dialog.Button onClick={() => {}}>Confirm</Dialog.Button>
       </Dialog.Footer>
     </Dialog>
   );
