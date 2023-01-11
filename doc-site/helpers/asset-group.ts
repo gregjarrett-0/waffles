@@ -1,7 +1,14 @@
 import * as allAssets from '@datacamp/waffles/asset';
 
 // Group names based on the suffix for Asset components
-const assetGroupNames = ['3d', 'Alpa', 'Assignment', 'Logo', 'Logomark'];
+const assetGroupNames = [
+  '3d',
+  'Alpa',
+  'AlpaLoop',
+  'Assignment',
+  'Logo',
+  'Logomark',
+];
 
 type AssetGroup = Record<
   string,
