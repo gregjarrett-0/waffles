@@ -57,7 +57,7 @@ const tokens = {
     transparentNavy: 'rgba(5, 25, 45, 0.15)',
     transparentNavySubtle: 'rgba(5, 25, 45, 0.1)',
     transparentWhite: 'rgba(255, 255, 255, 0.15)',
-    transparentWhiteSubtle: 'rgba(255, 255, 255, 0.15)',
+    transparentWhiteSubtle: 'rgba(255, 255, 255, 0.1)',
     brandFacebook: '#1778F2',
     brandTwitter: '#00ACEE',
     brandGoogle: '#DB4437',
