@@ -112,7 +112,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
           </SideNav.Category>
         </SideNav.Nav>
         <Text as="small" css={copyrightStyle}>
-          © 2022 DataCamp, Inc.
+          © 2023 DataCamp, Inc.
         </Text>
       </SideNav>
     </ErrorBoundary>
