@@ -94,9 +94,7 @@ function Navigation({ isOpen, onClose }: NavigationProps) {
             </Item>
             <Item href="/components/select">Select</Item>
             <Item href="/components/side-navigation">Side Navigation</Item>
-            <Item href="/components/skill-tag" isNew>
-              Skill Tag
-            </Item>
+            <Item href="/components/skill-tag">Skill Tag</Item>
             <Item href="/components/slider">Slider</Item>
             <Item href="/components/switch">Switch</Item>
             <Item href="/components/table">Table</Item>
