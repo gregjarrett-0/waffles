@@ -18,7 +18,7 @@ const invertedMap = {
   activeColor: tokens.colors.navy,
   disabledColor: tokens.colors.navySubtleTextOnDark,
   activeBackgroundColor: tokens.colors.greySubtle,
-  hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+  hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
 };
 
 type WrapperStyleOptions = {

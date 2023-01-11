@@ -624,7 +624,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
 }
 
 .emotion-1:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-2 {
@@ -710,7 +710,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-2:disabled {
@@ -832,7 +832,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
 }
 
 .emotion-5:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-5:disabled {
@@ -919,7 +919,7 @@ exports[`Pagination mobile renders snapshot of inverted 1`] = `
 }
 
 .emotion-16:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 <nav
@@ -1741,7 +1741,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
 }
 
 .emotion-1:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-2 {
@@ -1839,7 +1839,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
 }
 
 .emotion-3:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-3:disabled {
@@ -1949,7 +1949,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
 }
 
 .emotion-6:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .emotion-6:disabled {
@@ -2038,7 +2038,7 @@ exports[`Pagination renders snapshot of inverted 1`] = `
 }
 
 .emotion-24:hover:not(:disabled) {
-  background-color: rgba(5, 25, 45, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 <nav
