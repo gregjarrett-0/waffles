@@ -11,7 +11,7 @@ exports[`Progress renders snapshot of a progress 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 8px;
-  color: #65707C;
+  color: #5D6A77;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 12px;
   line-height: 1;
@@ -104,7 +104,7 @@ exports[`Progress renders snapshot of a progress in steps mode 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 8px;
-  color: #65707C;
+  color: #5D6A77;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 12px;
   line-height: 1;
@@ -276,7 +276,7 @@ exports[`Progress renders snapshot of a progress with custom label 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 8px;
-  color: #65707C;
+  color: #5D6A77;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 12px;
   line-height: 1;
@@ -365,7 +365,7 @@ exports[`Progress renders snapshot of a progress with no label 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 8px;
-  color: #65707C;
+  color: #5D6A77;
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-size: 12px;
   line-height: 1;

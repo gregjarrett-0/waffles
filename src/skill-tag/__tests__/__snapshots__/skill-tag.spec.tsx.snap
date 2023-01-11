@@ -764,7 +764,7 @@ exports[`Skill Tag renders snapshot of variant secondary and size advanced 1`] =
   border-radius: 50%;
   width: 6px;
   height: 6px;
-  background-color: #65707C;
+  background-color: #5D6A77;
 }
 
 .emotion-5 {
@@ -775,7 +775,7 @@ exports[`Skill Tag renders snapshot of variant secondary and size advanced 1`] =
   line-height: 1;
   margin: 0;
   padding: 0;
-  color: #65707C;
+  color: #5D6A77;
   line-height: 1.5;
 }
 
@@ -850,7 +850,7 @@ exports[`Skill Tag renders snapshot of variant secondary and size beginner 1`] =
   border-radius: 50%;
   width: 6px;
   height: 6px;
-  background-color: #65707C;
+  background-color: #5D6A77;
 }
 
 .emotion-3 {
@@ -861,7 +861,7 @@ exports[`Skill Tag renders snapshot of variant secondary and size beginner 1`] =
   line-height: 1;
   margin: 0;
   padding: 0;
-  color: #65707C;
+  color: #5D6A77;
   line-height: 1.5;
 }
 
@@ -928,7 +928,7 @@ exports[`Skill Tag renders snapshot of variant secondary and size intermediate 1
   border-radius: 50%;
   width: 6px;
   height: 6px;
-  background-color: #65707C;
+  background-color: #5D6A77;
 }
 
 .emotion-4 {
@@ -939,7 +939,7 @@ exports[`Skill Tag renders snapshot of variant secondary and size intermediate 1
   line-height: 1;
   margin: 0;
   padding: 0;
-  color: #65707C;
+  color: #5D6A77;
   line-height: 1.5;
 }
 

@@ -595,7 +595,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   line-height: 1;
   margin: 0;
   padding: 0;
-  color: #65707C;
+  color: #5D6A77;
   font-size: 10px;
   font-weight: 800;
   line-height: 1.25;
@@ -711,7 +711,7 @@ exports[`Menu renders snapshot with categories, active style, icons, alert dot, 
   padding: 0;
   display: block;
   text-align: left;
-  color: #65707C;
+  color: #5D6A77;
   font-size: 12px;
   line-height: 1.5;
   margin-top: 2px;

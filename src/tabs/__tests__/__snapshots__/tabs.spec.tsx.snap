@@ -59,7 +59,7 @@ exports[`Tabs renders snapshot 1`] = `
   user-select: none;
   -webkit-transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
   transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-2:last-of-type {
@@ -125,7 +125,7 @@ exports[`Tabs renders snapshot 1`] = `
   user-select: none;
   -webkit-transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
   transition: border-color 125ms ease-out,box-shadow 125ms ease-out;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-5:last-of-type {

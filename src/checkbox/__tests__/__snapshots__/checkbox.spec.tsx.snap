@@ -167,7 +167,7 @@ exports[`Checkbox renders snapshot of disabled 1`] = `
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
 }
 
 .emotion-2::after {
@@ -275,7 +275,7 @@ exports[`Checkbox renders snapshot of focused 1`] = `
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
 }
 
 .emotion-2::after {
@@ -505,7 +505,7 @@ exports[`Checkbox renders snapshot of inverted 1`] = `
   background-color: #213147;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
 }
 
 .emotion-2::after {
@@ -612,7 +612,7 @@ exports[`Checkbox renders snapshot with error 1`] = `
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
   border-color: #DD3400;
   box-shadow: 0 0 0 1px #DD3400;
 }
@@ -721,7 +721,7 @@ exports[`Checkbox renders snapshot with input only 1`] = `
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
 }
 
 .emotion-2::after {
@@ -803,7 +803,7 @@ exports[`Checkbox renders snapshot with label and input 1`] = `
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
 }
 
 .emotion-2::after {
@@ -910,7 +910,7 @@ exports[`Checkbox renders snapshot without label 1`] = `
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
 }
 
 .emotion-2::after {

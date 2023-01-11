@@ -55,7 +55,7 @@ exports[`Switch renders basic snapshot 1`] = `
   border-radius: 12px;
   -webkit-transition: background-color 75ms ease-out;
   transition: background-color 75ms ease-out;
-  background-color: #848C92;
+  background-color: #848492;
 }
 
 .emotion-2::after {
@@ -193,7 +193,7 @@ exports[`Switch renders snapshot of disabled state 1`] = `
   border-radius: 12px;
   -webkit-transition: background-color 75ms ease-out;
   transition: background-color 75ms ease-out;
-  background-color: #848C92;
+  background-color: #848492;
 }
 
 .emotion-2::after {
@@ -332,7 +332,7 @@ exports[`Switch renders snapshot of focused state 1`] = `
   border-radius: 12px;
   -webkit-transition: background-color 75ms ease-out;
   transition: background-color 75ms ease-out;
-  background-color: #848C92;
+  background-color: #848492;
 }
 
 .emotion-2::after {
@@ -474,7 +474,7 @@ exports[`Switch renders snapshot of inverted 1`] = `
   border-radius: 12px;
   -webkit-transition: background-color 75ms ease-out;
   transition: background-color 75ms ease-out;
-  background-color: #848C92;
+  background-color: #848492;
 }
 
 .emotion-2::after {
@@ -589,7 +589,7 @@ exports[`Switch renders snapshot of switch without label 1`] = `
   border-radius: 12px;
   -webkit-transition: background-color 75ms ease-out;
   transition: background-color 75ms ease-out;
-  background-color: #848C92;
+  background-color: #848492;
 }
 
 .emotion-1::after {
@@ -872,7 +872,7 @@ exports[`Switch renders snapshot with error 1`] = `
   border-radius: 12px;
   -webkit-transition: background-color 75ms ease-out;
   transition: background-color 75ms ease-out;
-  background-color: #848C92;
+  background-color: #848492;
   background-color: #DD3400;
 }
 

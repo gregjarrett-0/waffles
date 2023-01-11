@@ -651,7 +651,7 @@ exports[`Table renders snapshot of table with checkboxes column 1`] = `
   background-color: #FFFFFF;
   border-width: 1px;
   border-style: solid;
-  border-color: #848C92;
+  border-color: #848492;
 }
 
 .emotion-26::after {
