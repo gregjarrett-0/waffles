@@ -1040,7 +1040,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 12px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -1129,7 +1129,7 @@ exports[`Notification renders snapshot of regular banner notification with all o
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 12px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
   color: #05192D;
@@ -1458,7 +1458,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 12px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -1547,7 +1547,7 @@ exports[`Notification renders snapshot of regular inline notification with all o
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 12px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
   color: #05192D;

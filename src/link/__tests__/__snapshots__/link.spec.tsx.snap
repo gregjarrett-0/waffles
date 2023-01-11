@@ -63,7 +63,7 @@ exports[`Link renders snapshot of focused state 1`] = `
   background-color: rgba(255, 255, 255, 0.01);
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
-  color: #0075AD;
+  color: #0065D1;
   font-size: inherit;
   line-height: inherit;
   box-shadow: 0 0 0 2px #009BD8;
@@ -106,7 +106,7 @@ exports[`Link renders snapshot with icons of  inherit size 1`] = `
   background-color: rgba(255, 255, 255, 0.01);
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
-  color: #0075AD;
+  color: #0065D1;
   font-size: inherit;
   line-height: inherit;
 }
@@ -121,7 +121,7 @@ exports[`Link renders snapshot with icons of  inherit size 1`] = `
 }
 
 .emotion-0:hover {
-  text-decoration-color: #0075AD;
+  text-decoration-color: #0065D1;
   box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
 }
 
@@ -183,7 +183,7 @@ exports[`Link renders snapshot with icons of  large size 1`] = `
   background-color: rgba(255, 255, 255, 0.01);
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
-  color: #0075AD;
+  color: #0065D1;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -198,7 +198,7 @@ exports[`Link renders snapshot with icons of  large size 1`] = `
 }
 
 .emotion-0:hover {
-  text-decoration-color: #0075AD;
+  text-decoration-color: #0065D1;
   box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
 }
 
@@ -260,7 +260,7 @@ exports[`Link renders snapshot with icons of  medium size 1`] = `
   background-color: rgba(255, 255, 255, 0.01);
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
-  color: #0075AD;
+  color: #0065D1;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -275,7 +275,7 @@ exports[`Link renders snapshot with icons of  medium size 1`] = `
 }
 
 .emotion-0:hover {
-  text-decoration-color: #0075AD;
+  text-decoration-color: #0065D1;
   box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
 }
 
@@ -337,7 +337,7 @@ exports[`Link renders snapshot with icons of  small size 1`] = `
   background-color: rgba(255, 255, 255, 0.01);
   -webkit-transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
   transition: box-shadow 125ms ease-out,background-color 125ms ease-out,text-decoration-color 125ms ease-out;
-  color: #0075AD;
+  color: #0065D1;
   font-size: 12px;
   line-height: 1.5;
 }
@@ -352,7 +352,7 @@ exports[`Link renders snapshot with icons of  small size 1`] = `
 }
 
 .emotion-0:hover {
-  text-decoration-color: #0075AD;
+  text-decoration-color: #0065D1;
   box-shadow: 0 0 0 2px rgba(5, 25, 45, 0.1);
 }
 

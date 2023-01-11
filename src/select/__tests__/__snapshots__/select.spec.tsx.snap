@@ -34,7 +34,7 @@ exports[`Select renders snapshot of disabled 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -142,7 +142,7 @@ exports[`Select renders snapshot of inverted 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -249,7 +249,7 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -262,7 +262,7 @@ exports[`Select renders snapshot of placeholder, when value is set to empty stri
   background-color: #FFFFFF;
   padding-left: 12px;
   padding-right: 36px;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-1:disabled {
@@ -362,7 +362,7 @@ exports[`Select renders snapshot of required with error 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -375,7 +375,7 @@ exports[`Select renders snapshot of required with error 1`] = `
   background-color: #FFFFFF;
   padding-left: 12px;
   padding-right: 36px;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-1:disabled {
@@ -476,7 +476,7 @@ exports[`Select renders snapshot of size large 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -583,7 +583,7 @@ exports[`Select renders snapshot of size medium 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -690,7 +690,7 @@ exports[`Select renders snapshot of size small 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;

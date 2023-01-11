@@ -96,7 +96,7 @@ exports[`Slider renders snapshot of disabled 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  color: #65707C;
+  color: #5D6A77;
   font-size: 12px;
 }
 
@@ -452,7 +452,7 @@ exports[`Slider renders snapshot with error 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -493,22 +493,22 @@ exports[`Slider renders snapshot with error 1`] = `
 
 .emotion-2::-webkit-input-placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-2::-moz-placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-2:-ms-input-placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-2::placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-3 {
@@ -586,7 +586,7 @@ exports[`Slider renders snapshot with error 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  color: #65707C;
+  color: #5D6A77;
   font-size: 12px;
 }
 
@@ -724,7 +724,7 @@ exports[`Slider renders snapshot with inputs instead of labels 1`] = `
   font-family: Studio-Feixen-Sans,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  border: 1px solid #848C92;
+  border: 1px solid #848492;
   border-radius: 4px;
   outline: 0;
   -webkit-appearance: none;
@@ -763,22 +763,22 @@ exports[`Slider renders snapshot with inputs instead of labels 1`] = `
 
 .emotion-2::-webkit-input-placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-2::-moz-placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-2:-ms-input-placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-2::placeholder {
   opacity: 1;
-  color: #65707C;
+  color: #5D6A77;
 }
 
 .emotion-5 {
@@ -856,7 +856,7 @@ exports[`Slider renders snapshot with inputs instead of labels 1`] = `
   line-height: 1;
   margin: 0;
   padding: 0;
-  color: #65707C;
+  color: #5D6A77;
   font-size: 12px;
 }
 

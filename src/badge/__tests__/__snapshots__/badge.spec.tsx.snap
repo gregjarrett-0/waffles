@@ -299,7 +299,7 @@ exports[`Badge renders snapshot of variant grey and size large 1`] = `
   padding-right: 4px;
   letter-spacing: 0.5px;
   color: #05192D;
-  background-color: #D9D9E2;
+  background-color: #E1E1E8;
   font-size: 14px;
   height: 20px;
 }
@@ -345,7 +345,7 @@ exports[`Badge renders snapshot of variant grey and size medium 1`] = `
   padding-right: 4px;
   letter-spacing: 0.5px;
   color: #05192D;
-  background-color: #D9D9E2;
+  background-color: #E1E1E8;
   font-size: 12px;
   height: 18px;
 }
@@ -391,7 +391,7 @@ exports[`Badge renders snapshot of variant grey and size small 1`] = `
   padding-right: 4px;
   letter-spacing: 0.5px;
   color: #05192D;
-  background-color: #D9D9E2;
+  background-color: #E1E1E8;
   font-size: 10px;
   height: 14px;
 }
@@ -437,7 +437,7 @@ exports[`Badge renders snapshot of variant greySubtle and size large 1`] = `
   padding-right: 4px;
   letter-spacing: 0.5px;
   color: #626D79;
-  background-color: #EFEFEF;
+  background-color: #EFEFF5;
   font-size: 14px;
   height: 20px;
 }
@@ -483,7 +483,7 @@ exports[`Badge renders snapshot of variant greySubtle and size medium 1`] = `
   padding-right: 4px;
   letter-spacing: 0.5px;
   color: #626D79;
-  background-color: #EFEFEF;
+  background-color: #EFEFF5;
   font-size: 12px;
   height: 18px;
 }
@@ -529,7 +529,7 @@ exports[`Badge renders snapshot of variant greySubtle and size small 1`] = `
   padding-right: 4px;
   letter-spacing: 0.5px;
   color: #626D79;
-  background-color: #EFEFEF;
+  background-color: #EFEFF5;
   font-size: 10px;
   height: 14px;
 }

@@ -151,7 +151,7 @@ exports[`Button renders snapshot of disabled medium variant plain 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -3008,7 +3008,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size la
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -3100,7 +3100,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size la
   display: block;
   stroke: #000820;
   overflow: visible;
-  stroke: #0075AD;
+  stroke: #0065D1;
 }
 
 .emotion-7 {
@@ -3249,7 +3249,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size me
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -3341,7 +3341,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size me
   display: block;
   stroke: #000820;
   overflow: visible;
-  stroke: #0075AD;
+  stroke: #0065D1;
 }
 
 .emotion-7 {
@@ -3490,7 +3490,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size sm
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 12px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -3582,7 +3582,7 @@ exports[`Button renders snapshot of isLoading variants variant plain and size sm
   display: block;
   stroke: #000820;
   overflow: visible;
-  stroke: #0075AD;
+  stroke: #0065D1;
 }
 
 .emotion-7 {
@@ -6170,7 +6170,7 @@ exports[`Button renders snapshot of variant plain and size large 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -6274,7 +6274,7 @@ exports[`Button renders snapshot of variant plain and size medium 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 14px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
@@ -6378,7 +6378,7 @@ exports[`Button renders snapshot of variant plain and size small 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   font-size: 12px;
-  color: #0075AD;
+  color: #0065D1;
   background-color: transparent;
   border-color: transparent;
 }
