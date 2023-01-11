@@ -161,7 +161,7 @@ workflows:
                 - master
       - build_docs:
           requires:
-            - build_and_test
+            - release
           context: org-global
           filters:
             branches:
