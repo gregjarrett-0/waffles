@@ -13,81 +13,69 @@ const wrapperStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      {
-        <>
-          {/* Inline */}
+      {/* Inline */}
 
-          {/* Plain (no action or close button) */}
-          <Notification
-            title="Notification title"
-            description="Notification description."
-          />
+      {/* Plain (no action or close button) */}
+      <Notification
+        title="Notification title"
+        description="Notification description."
+      />
 
-          {/* Closable */}
-          <Notification
-            title="Notification title"
-            description="Notification description."
-            closable
-          />
+      {/* Closable */}
+      <Notification
+        title="Notification title"
+        description="Notification description."
+        closable
+      />
 
-          {/* w/ ActionButton */}
-          <Notification
-            title="Notification title"
-            description="Notification description."
-            action={
-              <Notification.ActionButton>Action</Notification.ActionButton>
-            }
-          />
+      {/* w/ ActionButton */}
+      <Notification
+        title="Notification title"
+        description="Notification description."
+        action={<Notification.ActionButton>Action</Notification.ActionButton>}
+      />
 
-          {/* Closable w/ ActionButton */}
-          <Notification
-            title="Notification title"
-            description="Notification description."
-            action={
-              <Notification.ActionButton>Action</Notification.ActionButton>
-            }
-            closable
-          />
+      {/* Closable w/ ActionButton */}
+      <Notification
+        title="Notification title"
+        description="Notification description."
+        action={<Notification.ActionButton>Action</Notification.ActionButton>}
+        closable
+      />
 
-          {/* Banner */}
+      {/* Banner */}
 
-          {/* Plain (no action or close button) */}
-          <Notification
-            title="Banner notification title"
-            description="Banner notification description."
-            mode="banner"
-          />
+      {/* Plain (no action or close button) */}
+      <Notification
+        title="Banner notification title"
+        description="Banner notification description."
+        mode="banner"
+      />
 
-          {/* Closable */}
-          <Notification
-            title="Banner notification title"
-            description="Banner notification description."
-            mode="banner"
-            closable
-          />
+      {/* Closable */}
+      <Notification
+        title="Banner notification title"
+        description="Banner notification description."
+        mode="banner"
+        closable
+      />
 
-          {/* w/ ActionButton */}
-          <Notification
-            title="Banner notification title"
-            description="Banner notification description."
-            mode="banner"
-            action={
-              <Notification.ActionButton>Action</Notification.ActionButton>
-            }
-          />
+      {/* w/ ActionButton */}
+      <Notification
+        title="Banner notification title"
+        description="Banner notification description."
+        mode="banner"
+        action={<Notification.ActionButton>Action</Notification.ActionButton>}
+      />
 
-          {/* Closable w/ ActionButton */}
-          <Notification
-            title="Banner notification title"
-            description="Banner notification description."
-            mode="banner"
-            action={
-              <Notification.ActionButton>Action</Notification.ActionButton>
-            }
-            closable
-          />
-        </>
-      }
+      {/* Closable w/ ActionButton */}
+      <Notification
+        title="Banner notification title"
+        description="Banner notification description."
+        mode="banner"
+        action={<Notification.ActionButton>Action</Notification.ActionButton>}
+        closable
+      />
     </div>
   );
 }
