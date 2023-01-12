@@ -1,5 +1,5 @@
+import { Paragraph } from '@datacamp/waffles/paragraph';
 import { setTitleCase } from '@datacamp/waffles/helpers';
-import { Paragraph } from '@datacamp/waffles/Paragraph';
 
 function Example() {
   return (
