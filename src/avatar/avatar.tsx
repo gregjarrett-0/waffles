@@ -28,7 +28,7 @@ type AvatarProps = {
     | 'purple'
     | 'pink'
     | 'grey'
-    | 'greySubtle';
+    | 'greyLight';
   /* Content of the Avatar component. In general, pass Waffles [Asset](/components/asset), [Icon](/components/icon), regular image or a string containing only one character. Must be a single element or string. */
   content: JSX.Element | string;
   /* Whether the content should fill the whole avatar space or be restricted to the default Avatar sizing values.  */
