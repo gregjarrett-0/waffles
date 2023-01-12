@@ -16,7 +16,7 @@ type BadgeProps = {
     | 'purple'
     | 'pink'
     | 'grey'
-    | 'greySubtle';
+    | 'greyLight';
   /* The text content of the Badge. */
   children: React.ReactNode;
   /* Defines the size of the Badge. In general, default size should be used. */

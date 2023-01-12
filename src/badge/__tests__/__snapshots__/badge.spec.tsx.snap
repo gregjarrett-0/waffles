@@ -414,7 +414,7 @@ exports[`Badge renders snapshot of variant grey and size small 1`] = `
 </span>
 `;
 
-exports[`Badge renders snapshot of variant greySubtle and size large 1`] = `
+exports[`Badge renders snapshot of variant greyLight and size large 1`] = `
 .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -460,7 +460,7 @@ exports[`Badge renders snapshot of variant greySubtle and size large 1`] = `
 </span>
 `;
 
-exports[`Badge renders snapshot of variant greySubtle and size medium 1`] = `
+exports[`Badge renders snapshot of variant greyLight and size medium 1`] = `
 .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -506,7 +506,7 @@ exports[`Badge renders snapshot of variant greySubtle and size medium 1`] = `
 </span>
 `;
 
-exports[`Badge renders snapshot of variant greySubtle and size small 1`] = `
+exports[`Badge renders snapshot of variant greyLight and size small 1`] = `
 .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

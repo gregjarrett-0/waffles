@@ -21,7 +21,7 @@ function Example() {
       <Badge variant="purple">Label</Badge>
       <Badge variant="pink">Label</Badge>
       <Badge variant="grey">Label</Badge>
-      <Badge variant="greySubtle">Label</Badge>
+      <Badge variant="greyLight">Label</Badge>
     </div>
   );
 }
