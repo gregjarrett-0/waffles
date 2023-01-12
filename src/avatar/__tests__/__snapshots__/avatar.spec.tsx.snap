@@ -2040,7 +2040,7 @@ exports[`Avatar renders snapshot of variant grey and size xxsmall 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size huge 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size huge 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;
@@ -2125,7 +2125,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size huge 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size large 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size large 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;
@@ -2210,7 +2210,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size large 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size medium 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size medium 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;
@@ -2295,7 +2295,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size medium 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size small 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size small 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;
@@ -2380,7 +2380,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size small 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size xlarge 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size xlarge 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;
@@ -2465,7 +2465,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size xlarge 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size xsmall 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size xsmall 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;
@@ -2550,7 +2550,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size xsmall 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size xxlarge 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size xxlarge 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;
@@ -2635,7 +2635,7 @@ exports[`Avatar renders snapshot of variant greySubtle and size xxlarge 1`] = `
 </div>
 `;
 
-exports[`Avatar renders snapshot of variant greySubtle and size xxsmall 1`] = `
+exports[`Avatar renders snapshot of variant greyLight and size xxsmall 1`] = `
 .emotion-0 {
   background: #EFEFF5;
   color: #626D79;

@@ -29,7 +29,7 @@ const variants = [
   'purple',
   'pink',
   'grey',
-  'greySubtle',
+  'greyLight',
 ] as const;
 
 function Story() {

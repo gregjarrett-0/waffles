@@ -90,7 +90,7 @@ const variantMap = {
     color: tokens.colors.navy,
     backgroundColor: tokens.colors.greyMedium,
   },
-  greySubtle: {
+  greyLight: {
     color: '#626D79',
     backgroundColor: tokens.colors.greyLight,
   },

@@ -38,7 +38,7 @@ function Example() {
         <Avatar variant="purple" content="D" />
         <Avatar variant="pink" content="D" />
         <Avatar variant="grey" content="D" />
-        <Avatar variant="greySubtle" content="D" />
+        <Avatar variant="greyLight" content="D" />
       </div>
 
       <Heading size="medium">Icon content</Heading>
@@ -58,7 +58,7 @@ function Example() {
         <Avatar variant="purple" content={<Document />} />
         <Avatar variant="pink" content={<Apply />} />
         <Avatar variant="grey" content={<Random />} />
-        <Avatar variant="greySubtle" content={<BarChart />} />
+        <Avatar variant="greyLight" content={<BarChart />} />
       </div>
     </>
   );
