@@ -14,7 +14,7 @@ const variants = [
   'purple',
   'pink',
   'grey',
-  'greySubtle',
+  'greyLight',
 ] as const;
 
 describe('Badge', () => {
