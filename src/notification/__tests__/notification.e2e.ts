@@ -26,14 +26,20 @@ describe('Notification', () => {
     cy.findByText('Basic notification title').should('not.exist');
   });
 
-  describe('render all variants in inline and banner mode', () => {
+  describe('render inline and banner mode', () => {
     Object.keys(screenSizes).forEach((size) => {
       const [width, height] = screenSizes[size];
 
-      it(`on ${size} screen device`, () => {
+      it(`in all variants, on ${size} screen device `, () => {
         cy.viewport(width, height);
         cy.loadStory('notification-variants');
         cy.get('section').should('have.length', 20);
+      });
+
+      it(`in all configurations, on ${size} screen device `, () => {
+        cy.viewport(width, height);
+        cy.loadStory('notification-configuration');
+        cy.get('section').should('have.length', 8);
       });
     });
   });
