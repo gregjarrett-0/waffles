@@ -1,5 +1,59 @@
 
 
+## [1.19.0](https://github.com/datacamp/waffles/compare/v1.17.1...v1.19.0) (2023-01-12)
+
+
+### Bug Fixes
+
+* **asset:** use proper Docker logomark ([fd0e4af](https://github.com/datacamp/waffles/commit/fd0e4af2ff868a29c65e681f2311b0d0ea340edd))
+* **ci:** bump npm package version ([e9fbfb8](https://github.com/datacamp/waffles/commit/e9fbfb8e13479b285f9aed3ddd30c7c938293441))
+* **EmptyState,Notification:** title prop type ([d454887](https://github.com/datacamp/waffles/commit/d4548877dfb19ab3afb09462df6669a36b1b4de6))
+* **notification:** fix alignment for `mode="banner"` ([af06479](https://github.com/datacamp/waffles/commit/af06479e9d9dde9b0eef6ae58cb264077bb61a6b))
+* **pagination:** fix incorrect `inverted` hover color ([3d4b537](https://github.com/datacamp/waffles/commit/3d4b537c58cf59afa9834040a4e369c7a9f0a50e))
+* **setTitleCase:** don’t lowercase the C in DataCamp & similar ([43c54c5](https://github.com/datacamp/waffles/commit/43c54c5d7c975fc756369caf31dd092ab90dd052))
+* **setTitleCase:** pr review Christian ([aa9acca](https://github.com/datacamp/waffles/commit/aa9accaac14b8bcf209d2c5ef50ba146ff83c078))
+
+
+### Core Changes
+
+* **asset:** add new `DockerLogo` and `DockerLogomark` components ([68e0742](https://github.com/datacamp/waffles/commit/68e074206e0315825ffd56e97e71c67c3404ac20))
+* **pagination:** add new pagination component ([d0410ae](https://github.com/datacamp/waffles/commit/d0410aea6d18a7872098004a320e9c7b86dfe480))
+
+
+### Documentation Changes
+
+* **alert-dialog:** add basic usage guidance ([e107beb](https://github.com/datacamp/waffles/commit/e107bebdad0a98ff33b998641fb36a3431989d09))
+* **asset:** fix alpa loop assets being duplicated in 'other' section ([8011bf8](https://github.com/datacamp/waffles/commit/8011bf8e64ff8970b924e0548b947d17dfa2525a))
+* **card:** add guidelines ([7125b2e](https://github.com/datacamp/waffles/commit/7125b2e9103b03bdb279086d25d8faaaa354c134))
+* **chapeau:** add guidelines ([188c2f9](https://github.com/datacamp/waffles/commit/188c2f9cd9b2def3c895ae95fb18ec09b6609046))
+* **content-container:** add best practices ([3771bc9](https://github.com/datacamp/waffles/commit/3771bc9ca2ee577856891617da06e889adb4be6e))
+* **dialog:** add basic usage guidance ([3891be4](https://github.com/datacamp/waffles/commit/3891be41bb4505060c86b0383ec4b5fa56bd3d0a))
+* **display:** add guidelines ([9b56da9](https://github.com/datacamp/waffles/commit/9b56da9594c93815821c563ba5cd044b1ac07315))
+* **drawer:** add basic usage guidance ([cfc6d0a](https://github.com/datacamp/waffles/commit/cfc6d0ac4f9040ab3ef1cd5129a629758570076f))
+* **error-boundary:** add guidelines ([2470698](https://github.com/datacamp/waffles/commit/2470698877f26e55c49fe0efff6e9bdbbdb0ac5d))
+* fix minor typos ([36bab5a](https://github.com/datacamp/waffles/commit/36bab5a157839a8466e2071a8d3c1be4e672f69b))
+* **helpers:** add description ([02f37c2](https://github.com/datacamp/waffles/commit/02f37c2a3f53e7bbfc353297884d51896cddaa8c))
+* **helpers:** add missing examples ([eb02137](https://github.com/datacamp/waffles/commit/eb02137ccc75069820d4698a4405cc6ca05d99cb))
+* **helpers:** update setTitleCase docs ([5ca5520](https://github.com/datacamp/waffles/commit/5ca5520c00863e89064c2e426c5974a6619fb218))
+* **icon:** always show icon names ([69106b0](https://github.com/datacamp/waffles/commit/69106b0ad7b2d6f130313a2fb9cc4961fc18d043))
+* **link:** add guidelines ([a85f4c0](https://github.com/datacamp/waffles/commit/a85f4c0644a6608e2d7dc24f8745d46faf857d1a))
+* **menu:** add guidelines ([e950a97](https://github.com/datacamp/waffles/commit/e950a9703649879e60bb81586f23744000ae269e))
+* **notification:** add guidelines ([679c1fa](https://github.com/datacamp/waffles/commit/679c1fafe21c798e8842de95894f2b5b17c2b273))
+* **pagination:** add basic documentation for component ([2e3b423](https://github.com/datacamp/waffles/commit/2e3b423d46fd6301cc73d56e7268917b886492a0))
+* **pagination:** add examples ([c9d761c](https://github.com/datacamp/waffles/commit/c9d761c0e16fdf3638cefbb2820d0218feafe130))
+* **pagination:** small improvements ([45c5316](https://github.com/datacamp/waffles/commit/45c53165d4b3e60a3a0c6bf5607a54d0a8ad817c))
+* **portal:** add guidelines ([d68659e](https://github.com/datacamp/waffles/commit/d68659e3366163222d9c9ef55dfb591e96f62b1f))
+* rename guidelines to guidance ([9ae3909](https://github.com/datacamp/waffles/commit/9ae390968b5594266437f0d6e4d516bed94d53a3))
+* **resizable:** add guidelines ([8a1ad4f](https://github.com/datacamp/waffles/commit/8a1ad4f8725575bdf8d7a5290eade7da55e4e326))
+* **roadmap:** update priorities and component list ([c93037e](https://github.com/datacamp/waffles/commit/c93037e1672635c6137a0662ed8420da25d8e059))
+* **screen-reader-only:** add guidelines ([df84f29](https://github.com/datacamp/waffles/commit/df84f29a57e175ae6bf5dd03a5757d0986765b73))
+* **side-navigation:** add guidelines ([da0a1d6](https://github.com/datacamp/waffles/commit/da0a1d69ab7ac955153f81a833896a3cdae92109))
+* **slider:** add guidelines ([cc158d9](https://github.com/datacamp/waffles/commit/cc158d9b6f16d1f41b6cd19a68f4176abc65eab7))
+* **tabs:** add guidelines ([f123e2b](https://github.com/datacamp/waffles/commit/f123e2b270cc57a186fc8dea2d25ed9361d580a3))
+* **text:** add guidelines ([24a6741](https://github.com/datacamp/waffles/commit/24a6741643da058b8c93b55fd9d9ec5ab27b9c9c))
+* **toast:** add guidelines ([92484af](https://github.com/datacamp/waffles/commit/92484afb5a317a8b6f07608f724c6f2f1d5b87f5))
+* update example wrapping and spacing ([d4a7180](https://github.com/datacamp/waffles/commit/d4a718019bc3154fa2f774ad9f8527baa33dfcde))
+
 ## [1.17.1](https://github.com/datacamp/waffles/compare/v1.17.0...v1.17.1) (2022-12-28)
 
 
