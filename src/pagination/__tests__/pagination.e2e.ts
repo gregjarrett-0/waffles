@@ -81,7 +81,7 @@ describe('Pagination', () => {
 
   it('when active page changes, focus is updated', () => {
     cy.loadStory('pagination-truncation');
-    cy.wait(500);
+    cy.wait(1000);
     cy.get('main')
       .findByTestId('pagination-truncation-both')
       .findAllByTestId('pagination-page')
@@ -93,7 +93,7 @@ describe('Pagination', () => {
       .eq(4)
       .focus()
       .click();
-    cy.wait(200);
+    cy.wait(1000);
 
     // Confirm focus has shifted back to middle value after pages shift
     cy.get('main')
