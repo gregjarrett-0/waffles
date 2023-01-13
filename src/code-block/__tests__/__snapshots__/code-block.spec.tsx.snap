@@ -12,7 +12,7 @@ exports[`CodeBlock renders snapshot of focused state 1`] = `
   font-size: 12px;
   line-height: 1.5;
   color: #05192D;
-  background-color: #EFEBE4;
+  background-color: #EFEFF5;
   padding: 8px;
   margin: 0;
   tab-size: 4;
@@ -138,7 +138,7 @@ exports[`CodeBlock renders snapshot of size large 1`] = `
   font-size: 14px;
   line-height: 1.5;
   color: #05192D;
-  background-color: #EFEBE4;
+  background-color: #EFEFF5;
   padding: 8px;
   margin: 0;
   tab-size: 4;
@@ -169,7 +169,7 @@ exports[`CodeBlock renders snapshot of size medium 1`] = `
   font-size: 12px;
   line-height: 1.5;
   color: #05192D;
-  background-color: #EFEBE4;
+  background-color: #EFEFF5;
   padding: 8px;
   margin: 0;
   tab-size: 4;
@@ -200,7 +200,7 @@ exports[`CodeBlock renders snapshot of size small 1`] = `
   font-size: 10px;
   line-height: 1.5;
   color: #05192D;
-  background-color: #EFEBE4;
+  background-color: #EFEFF5;
   padding: 8px;
   margin: 0;
   tab-size: 4;
