@@ -9,6 +9,7 @@ import Imports from '../../components/imports';
 
 import playgroundConfig from '../../examples/badge/playground-config';
 import Variants from '../../examples/badge/variants';
+import DarkVariants from '../../examples/badge/variants-dark';
 import Sizes from '../../examples/badge/sizes';
 
 <Layout title="Badge" description="Small descriptive tag for indicating the status of an element or action.">
@@ -19,7 +20,7 @@ A `Badge` holds a very small amount of information and should be positioned in c
 
 The content of a `Badge` will always be shown as uppercase and is available in three different sizes: `small`, `medium` and `large`. In most cases, the default value should be used.
 
-The colors of a `Badge` should never be overwritten, as they are chosen for suitable accessibility and brand requirements.
+`Badge` is available in a variety of colors, via the `variant` prop. The `white` and `greyLight` variants should only be used on dark backgrounds, such as `navy`. These colors of a `Badge` should never be overwritten, as they are chosen for suitable accessibility and brand requirements.
 
 They should **never** be interactive and instead a [Button](/components/button) should be used if interaction is desired.
 
@@ -31,6 +32,7 @@ They should **never** be interactive and instead a [Button](/components/button) 
     - use to give a status update&mdash;such as "NEW"
     - use text that is both succinct and unambiguous
     - use at most two short words as Badge content
+    - use the correct `variant` for the background color
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
@@ -39,6 +41,7 @@ They should **never** be interactive and instead a [Button](/components/button) 
     - use too many different colored Badges together
     - use a different `size` to surrounding text
     - content should not contain anything besides text
+    - use `white` or `greyLight` variants on a light background
 
   </BestPractices.Discouraged>
 </BestPractices>
@@ -47,6 +50,14 @@ They should **never** be interactive and instead a [Button](/components/button) 
 
 <Example title="Variants" path="badge/variants">
   <Variants />
+</Example>
+
+<Example
+  title="Dark background only variants"
+  path="badge/variants-dark"
+  darkPreview
+>
+  <DarkVariants />
 </Example>
 
 <Example title="Sizes" path="badge/sizes">
