@@ -43,6 +43,6 @@ export function codeStyle({ size, inverted }: CodeStyleOptions) {
     color: ${inverted ? tokens.colors.white : tokens.colors.navy};
     background-color: ${inverted
       ? hexToRgba(tokens.colors.white, 0.3)
-      : tokens.colors.beige};
+      : tokens.colors.greyLight};
   `;
 }
