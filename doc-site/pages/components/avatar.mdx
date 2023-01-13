@@ -9,6 +9,7 @@ import Imports from '../../components/imports';
 
 import playgroundConfig from '../../examples/avatar/playground-config';
 import Variants from '../../examples/avatar/variants';
+import DarkVariants from '../../examples/avatar/variants-dark';
 import Sizes from '../../examples/avatar/sizes';
 import BasicUsage from '../../examples/avatar/basic-usage';
 import ContentFill from '../../examples/avatar/content-fill';
@@ -19,7 +20,9 @@ import ContentFill from '../../examples/avatar/content-fill';
 
 Use `Avatars` to help identify a user, entity or group within a page, alongside additional information about what the `Avatar` represents. Visual-based `content` should be prioritized over text.
 
-If an `Avatar` is used with an image of a user or individual, it should fallback to a placeholder image (for example the `AvatarPlaceholderColored` [Asset](http://localhost:3000/components/asset/#other-assets)) or the initial of the name when this image is unavailable. For smaller `size` variants, text-based `content` should always be used where an image is harder to identify.
+If an `Avatar` is used with an image of a user or individual, it should fallback to a placeholder image (for example the `AvatarPlaceholderColored` [Asset](/components/asset/#other-assets)) or the initial of the name when this image is unavailable. For smaller `size` variants, text-based `content` should always be used where an image is harder to identify.
+
+`Avatar` is available in a variety of colors, via the `variant` prop. The `white` and `greyLight` variants should only be used on dark backgrounds, such as `navy`. These colors of a `Avatar` should never be overwritten, as they are chosen for suitable accessibility and brand requirements.
 
 Similarly, for smaller `Avatars` (below and including `small`) where an [Asset](/components/asset) is used for `content`, a relevant [Icon](/components/icon) should be used instead.
 
@@ -31,6 +34,7 @@ Similarly, for smaller `Avatars` (below and including `small`) where an [Asset](
     - choose an appropriate content type for the specific Avatar size
     - prioritize visual-based `content`, where available
     - use `contentFill` when you have content that does not have a transparent background
+    - use the correct `variant` for the background color
 
   </BestPractices.Recommended>
   <BestPractices.Discouraged>
@@ -38,6 +42,7 @@ Similarly, for smaller `Avatars` (below and including `small`) where an [Asset](
     - use images or assets for very small Avatars&mdash;use a single character or an [Icon](/components/icon) instead
     - use text for `content`, where a visual element is available&mdash;except for smaller sizes
     - use `contentFill` when using an [Icon](/components/icon) as content
+    - use `white` or `greyLight` variants on a light background
 
   </BestPractices.Discouraged>
 </BestPractices>
@@ -50,6 +55,14 @@ Similarly, for smaller `Avatars` (below and including `small`) where an [Asset](
 
 <Example title="Variants" path="avatar/variants">
   <Variants />
+</Example>
+
+<Example
+  title="Dark background-only variants"
+  path="avatar/variants-dark"
+  darkPreview
+>
+  <DarkVariants />
 </Example>
 
 <Example title="Sizes" path="avatar/sizes">

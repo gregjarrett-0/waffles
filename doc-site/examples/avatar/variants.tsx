@@ -3,8 +3,6 @@ import { tokens } from '@datacamp/waffles/tokens';
 import {
   Apply,
   Assess,
-  BarChart,
-  DataCampBrand,
   Document,
   Forbidden,
   Learn,
@@ -30,7 +28,6 @@ function Example() {
       <div css={wrapperStyle}>
         <Avatar variant="green" content="D" />
         <Avatar variant="navy" content="D" />
-        <Avatar variant="white" content="D" />
         <Avatar variant="red" content="D" />
         <Avatar variant="orange" content="D" />
         <Avatar variant="yellow" content="D" />
@@ -38,7 +35,6 @@ function Example() {
         <Avatar variant="purple" content="D" />
         <Avatar variant="pink" content="D" />
         <Avatar variant="grey" content="D" />
-        <Avatar variant="greyLight" content="D" />
       </div>
 
       <Heading size="medium">Icon content</Heading>
@@ -50,7 +46,6 @@ function Example() {
       >
         <Avatar variant="green" content={<Learn />} />
         <Avatar variant="navy" content={<PythonBrand />} />
-        <Avatar variant="white" content={<DataCampBrand />} />
         <Avatar variant="red" content={<Forbidden />} />
         <Avatar variant="orange" content={<Practice />} />
         <Avatar variant="yellow" content={<Star />} />
@@ -58,7 +53,6 @@ function Example() {
         <Avatar variant="purple" content={<Document />} />
         <Avatar variant="pink" content={<Apply />} />
         <Avatar variant="grey" content={<Random />} />
-        <Avatar variant="greyLight" content={<BarChart />} />
       </div>
     </>
   );
