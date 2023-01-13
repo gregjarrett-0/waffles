@@ -13,7 +13,6 @@ function Example() {
     >
       <Badge variant="green">Label</Badge>
       <Badge variant="navy">Label</Badge>
-      <Badge variant="white">Label</Badge>
       <Badge variant="red">Label</Badge>
       <Badge variant="orange">Label</Badge>
       <Badge variant="yellow">Label</Badge>
@@ -21,7 +20,6 @@ function Example() {
       <Badge variant="purple">Label</Badge>
       <Badge variant="pink">Label</Badge>
       <Badge variant="grey">Label</Badge>
-      <Badge variant="greyLight">Label</Badge>
     </div>
   );
 }
