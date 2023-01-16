@@ -30,7 +30,7 @@ const sizeBarStyle = css`
 const surfaceStyle = css`
   width: 100px;
   height: 100px;
-  background-color: ${tokens.colors.beige};
+  background-color: ${tokens.colors.greySubtle};
   transform: translateX(-30px) rotate(-45deg);
   position: absolute;
 `;
