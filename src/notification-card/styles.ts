@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
 
 import NotificationCard from './notification-card';
 
@@ -15,7 +14,9 @@ export function notificationStyle({ inverted }: NotificationStyleStyleOptions) {
     display: flex;
     background-color: ${inverted ? tokens.colors.navy : tokens.colors.white};
     border: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
+      ${inverted
+        ? tokens.colors.transparentWhite
+        : tokens.colors.transparentNavy};
     border-radius: ${tokens.borderRadius.medium};
     padding: 12px;
   `;

@@ -44,7 +44,7 @@ function Story() {
         <Paragraph
           css={css`
             ${paragraphStyle}
-            background-color: ${hexToRgba(tokens.colors.navy, 0.1)};
+            background-color: ${tokens.colors.transparentNavySubtle};
             height: 100%;
           `}
         >

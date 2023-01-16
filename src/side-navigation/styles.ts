@@ -93,7 +93,7 @@ export function animatedSidebarStyle({
     height: 100vh;
     background-color: ${tokens.colors.navy};
     border-right: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.white, 0.15)};
+      ${tokens.colors.transparentWhite};
     overflow: hidden;
   `;
 }
@@ -194,7 +194,7 @@ const itemBaseStyle = css`
   ${mediaQuery.aboveMedium} {
     &:where(a, button):hover {
       opacity: 1;
-      background-color: ${hexToRgba(tokens.colors.white, tokens.opacity.low)};
+      background-color: ${tokens.colors.transparentWhiteSubtle};
     }
   }
 `;
@@ -303,8 +303,7 @@ export function closeButtonStyle({ isVisible }: ButtonStyleOptions) {
     border-radius: ${tokens.borderRadius.circle};
     box-shadow: ${tokens.boxShadow.thick};
     background-color: ${tokens.colors.navy};
-    border: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.white, 0.15)};
+    border: ${tokens.borderWidth.thin} solid ${tokens.colors.transparentWhite};
     color: ${tokens.colors.white};
     cursor: pointer;
     // Animation

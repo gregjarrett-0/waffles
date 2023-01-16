@@ -32,7 +32,9 @@ export function dropdownStyle({ x, y, inverted }: DropdownStyleOptions) {
       ? tokens.colors.navyLight
       : tokens.colors.white};
     border: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
+      ${inverted
+        ? tokens.colors.transparentWhite
+        : tokens.colors.transparentNavy};
   `;
 }
 
@@ -67,7 +69,7 @@ const itemBaseStyle = css`
 const regularVariantMap = {
   primary: {
     color: tokens.colors.navy,
-    hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+    hoverBackgroundColor: tokens.colors.transparentNavySubtle,
     activeBackgroundColor: tokens.colors.greySubtle,
   },
   destructive: {
@@ -83,7 +85,7 @@ const regularVariantMap = {
 const invertedVariantMap = {
   primary: {
     color: tokens.colors.white,
-    hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    hoverBackgroundColor: tokens.colors.transparentWhiteSubtle,
     activeBackgroundColor: hexToRgba(tokens.colors.white, 0.05),
   },
   destructive: {
@@ -206,7 +208,7 @@ export function categoryDividerStyle({
   return css`
     height: 1px;
     background-color: ${inverted
-      ? hexToRgba(tokens.colors.white, 0.15)
+      ? tokens.colors.transparentWhite
       : hexToRgba(tokens.colors.navy, 0.2)};
     margin-top: ${tokens.spacing.small};
     margin-bottom: ${tokens.spacing.small};

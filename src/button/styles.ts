@@ -39,13 +39,13 @@ const regularVariantMap = {
   secondary: {
     color: tokens.colors.navy,
     backgroundColor: 'transparent',
-    hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+    hoverBackgroundColor: tokens.colors.transparentNavySubtle,
     borderColor: hexToRgba(tokens.colors.navy, tokens.opacity.high),
   },
   plain: {
     color: tokens.colors.blueDarkText,
     backgroundColor: 'transparent',
-    hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+    hoverBackgroundColor: tokens.colors.transparentNavySubtle,
     borderColor: 'transparent',
   },
   destructive: {
@@ -76,13 +76,13 @@ const invertedVariantMap = {
   secondary: {
     color: tokens.colors.white,
     backgroundColor: 'transparent',
-    hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    hoverBackgroundColor: tokens.colors.transparentWhiteSubtle,
     borderColor: hexToRgba(tokens.colors.white, tokens.opacity.high),
   },
   plain: {
     color: tokens.colors.blue,
     backgroundColor: 'transparent',
-    hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+    hoverBackgroundColor: tokens.colors.transparentWhiteSubtle,
     borderColor: 'transparent',
   },
   destructive: {

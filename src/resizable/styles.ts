@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
 
 import Resizable from './resizable';
 import { DIVIDER_HITBOX_SIZE, DIVIDER_SEPARATOR_SIZE } from './constants';
@@ -91,7 +90,9 @@ export function dividerSeparatorStyle({
     ${separatorSize};
     ${layout === 'column' ? 'height' : 'width'}: 100%;
     background-color: ${showSeparator
-      ? hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)
+      ? inverted
+        ? tokens.colors.transparentWhite
+        : tokens.colors.transparentNavy
       : 'transparent'};
     transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
   `;

@@ -128,10 +128,9 @@ export function tableStyle({
   isShadowLeftVisible,
   isShadowRightVisible,
 }: TableStyleOptions) {
-  const borderColor = hexToRgba(
-    inverted ? tokens.colors.white : tokens.colors.navy,
-    0.15,
-  );
+  const borderColor = inverted
+    ? tokens.colors.transparentWhite
+    : tokens.colors.transparentNavy;
 
   return css`
     border-collapse: separate;

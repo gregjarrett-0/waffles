@@ -56,10 +56,9 @@ export function linkStyle({
 }: LinkStyleOptions) {
   const mainColor = inverted ? tokens.colors.blue : tokens.colors.blueDarkText;
 
-  const highlightColor = hexToRgba(
-    inverted ? tokens.colors.white : tokens.colors.navy,
-    tokens.opacity.low,
-  );
+  const highlightColor = inverted
+    ? tokens.colors.transparentWhiteSubtle
+    : tokens.colors.transparentNavySubtle;
 
   return css`
     ${linkBaseStyle}

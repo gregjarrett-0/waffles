@@ -1,20 +1,19 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
 
 const HANDLE_DOT_RADIUS = 12;
 
 const regularVariantMap = {
   regularFilledColor: tokens.colors.blueDark,
   errorFilledColor: tokens.colors.redDark,
-  backgroundColor: hexToRgba(tokens.colors.navy, 0.15),
+  backgroundColor: tokens.colors.transparentNavy,
 };
 
 const invertedVariantMap = {
   regularFilledColor: tokens.colors.blue,
   errorFilledColor: tokens.colors.redDark,
-  backgroundColor: hexToRgba(tokens.colors.white, 0.15),
+  backgroundColor: tokens.colors.transparentWhite,
 };
 
 export function getFilledColor(inverted: boolean, hasError: boolean) {
