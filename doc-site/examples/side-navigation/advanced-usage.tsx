@@ -29,7 +29,7 @@ const layoutStyle = css`
 `;
 
 const contentStyle = css`
-  background-color: ${tokens.colors.beige};
+  background-color: ${tokens.colors.greyLight};
   padding: ${tokens.spacing.medium};
 `;
 
