@@ -4,7 +4,7 @@ import { Progress } from '../index';
 import { tokens } from '../../tokens';
 
 const wrapperStyle = css`
-  background-color: ${tokens.colors.beigeLight};
+  background-color: ${tokens.colors.greyLight};
   padding: ${tokens.spacing.medium};
 `;
 
