@@ -18,7 +18,7 @@ function Playground() {
         width: '100%',
         height: '200px',
         borderRadius: tokens.borderRadius.medium,
-        backgroundColor: tokens.colors.beigeLight,
+        backgroundColor: tokens.colors.grey,
       }}
     >
       <Resizable defaultProportions={[60, 40]} showDividers>

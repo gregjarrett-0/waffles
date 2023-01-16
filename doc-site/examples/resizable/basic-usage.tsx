@@ -11,7 +11,7 @@ const wrapperStyle = css`
 const paragraphStyle = css`
   padding: ${tokens.spacing.medium};
   border-radius: ${tokens.borderRadius.medium};
-  background-color: ${tokens.colors.beigeLight};
+  background-color: ${tokens.colors.greyLight};
   height: 100%;
 `;
 

@@ -63,7 +63,7 @@ function Example() {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: ${tokens.colors.beigeLight};
+          background-color: ${tokens.colors.greyLight};
           border-radius: ${tokens.borderRadius.medium};
           padding: ${tokens.spacing.medium};
           height: 150px;
