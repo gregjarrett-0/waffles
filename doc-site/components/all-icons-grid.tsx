@@ -3,7 +3,6 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import * as allIcons from '@datacamp/waffles/icon';
-import { hexToRgba } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 
 import groupedIcons from '../helpers/grouped-icons';
@@ -13,8 +12,7 @@ const regularIconsPreview = css`
   flex-wrap: wrap;
   padding: ${tokens.spacing.small};
   background-color: ${tokens.colors.white};
-  border: ${tokens.borderWidth.thin} solid
-    ${hexToRgba(tokens.colors.navy, 0.15)};
+  border: ${tokens.borderWidth.thin} solid ${tokens.colors.transparentNavy};
   border-bottom: 0;
   border-top-left-radius: ${tokens.borderRadius.medium};
   border-top-right-radius: ${tokens.borderRadius.medium};

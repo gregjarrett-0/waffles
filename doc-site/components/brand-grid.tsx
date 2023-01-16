@@ -4,7 +4,6 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Download } from '@datacamp/waffles/icon';
-import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
 import PreviewControls from './preview-controls';
@@ -17,8 +16,7 @@ const wrapperStyle = css`
 const brandPreview = css`
   padding: ${tokens.spacing.medium};
   background-color: ${tokens.colors.white};
-  border: ${tokens.borderWidth.thin} solid
-    ${hexToRgba(tokens.colors.navy, 0.15)};
+  border: ${tokens.borderWidth.thin} solid ${tokens.colors.transparentNavy};
   border-top-right-radius: ${tokens.borderRadius.medium};
   border-top-left-radius: ${tokens.borderRadius.medium};
 `;

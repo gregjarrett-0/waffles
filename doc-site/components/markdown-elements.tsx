@@ -7,7 +7,6 @@ import { tokens } from '@datacamp/waffles/tokens';
 import { Table as TableBase } from '@datacamp/waffles/table';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link as LinkBase } from '@datacamp/waffles/link';
-import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { CodeBlock as CodeBlockBase } from '@datacamp/waffles/code-block';
 import { Code as CodeBase } from '@datacamp/waffles/code';
@@ -136,7 +135,7 @@ function TableCell({ children }: ContentProps) {
 }
 
 const hrStyle = css`
-  border-color: ${hexToRgba(tokens.colors.navy, 0.15)};
+  border-color: ${tokens.colors.transparentNavy};
   border-width: ${tokens.borderWidth.thin} 0 0 0;
   margin: ${tokens.spacing.xlarge} 0;
 `;

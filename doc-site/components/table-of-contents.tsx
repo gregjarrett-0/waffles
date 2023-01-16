@@ -44,7 +44,7 @@ function listItemStyle({ isActive }: ListItemStyleOptions) {
     padding: 0 ${tokens.spacing.small};
     border-left: ${isActive
       ? `2px solid ${tokens.colors.navy}`
-      : `2px solid ${hexToRgba(tokens.colors.navy, tokens.opacity.low)}`};
+      : `2px solid ${tokens.colors.transparentNavySubtle}`};
   `;
 }
 

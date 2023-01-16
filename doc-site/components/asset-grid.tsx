@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
 import { Download } from '@datacamp/waffles/icon';
-import { mediaQuery, hexToRgba } from '@datacamp/waffles/helpers';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Button } from '@datacamp/waffles/button';
 
 import PreviewControls from './preview-controls';
@@ -19,9 +19,8 @@ function assetPreviewStyle(maxColumnCount: number, hasDarkBackground: boolean) {
     background-color: ${hasDarkBackground
       ? tokens.colors.navy
       : tokens.colors.white};
-    border: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.navy, 0.15)};
-    border-bottom-color: ${hexToRgba(tokens.colors.navy, tokens.opacity.low)};
+    border: ${tokens.borderWidth.thin} solid ${tokens.colors.transparentNavy};
+    border-bottom-color: ${tokens.colors.transparentNavySubtle};
     border-top-right-radius: ${tokens.borderRadius.medium};
     border-top-left-radius: ${tokens.borderRadius.medium};
 
