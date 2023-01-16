@@ -3,7 +3,7 @@ import { tokens } from '@datacamp/waffles/tokens';
 const theme = {
   plain: {
     backgroundColor: 'transparent',
-    color: tokens.colors.beige,
+    color: tokens.colors.greySubtle,
     fontFamily: tokens.fontFamilies.mono,
     fontSize: tokens.fontSizes.medium,
     margin: 0,
@@ -36,7 +36,7 @@ const theme = {
     },
     {
       style: {
-        color: tokens.colors.beigeLight,
+        color: tokens.colors.greyLight,
       },
       types: ['punctuation', 'operator'],
     },

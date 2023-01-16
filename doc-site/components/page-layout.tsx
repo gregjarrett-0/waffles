@@ -19,7 +19,7 @@ const layoutStyle = css`
 `;
 
 const mainStyle = css`
-  background-color: ${tokens.colors.beigeLight};
+  background-color: ${tokens.colors.greySubtle};
   width: 100%;
 `;
 
