@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Text } from '@datacamp/waffles/text';
-import { hexToRgba, mediaQuery } from '@datacamp/waffles/helpers';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Button } from '@datacamp/waffles/button';
 
@@ -17,7 +17,7 @@ const wrapperStyle = css`
 
   &:not(:last-of-type) {
     border-bottom: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.navy, 0.15)};
+      ${tokens.colors.transparentNavy};
   }
 `;
 

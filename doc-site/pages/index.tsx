@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Paragraph } from '@datacamp/waffles/paragraph';
 import { Link } from '@datacamp/waffles/link';
-import { mediaQuery, hexToRgba } from '@datacamp/waffles/helpers';
+import { mediaQuery } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { ContentContainer } from '@datacamp/waffles/content-container';
@@ -18,7 +18,7 @@ const heroStyle = css`
   background-position: 75% 75%;
   background-size: cover;
   border-bottom: ${tokens.borderWidth.thin} solid
-    ${hexToRgba(tokens.colors.navy, 0.15)};
+    ${tokens.colors.transparentNavy};
 
   ${mediaQuery.aboveMedium} {
     background-position: right bottom;

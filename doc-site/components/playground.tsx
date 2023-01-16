@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Back } from '@datacamp/waffles/icon';
-import { hexToRgba } from '@datacamp/waffles/helpers';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
 import presetTypescript from '@babel/preset-typescript';
@@ -25,8 +24,7 @@ function compilerStyle({ minHeight }: CompilerStyleOptions) {
     padding-bottom: ${tokens.spacing.xlarge};
     margin-top: ${tokens.spacing.small};
     background-color: ${tokens.colors.white};
-    border: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(tokens.colors.navy, 0.15)};
+    border: ${tokens.borderWidth.thin} solid ${tokens.colors.transparentNavy};
     border-bottom: 0;
     border-top-left-radius: ${tokens.borderRadius.medium};
     border-top-right-radius: ${tokens.borderRadius.medium};

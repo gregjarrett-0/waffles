@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
 import { Code } from '@datacamp/waffles/icon';
-import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { ErrorBoundary } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
@@ -35,11 +34,10 @@ function wrapperStyle({ minHeight, darkPreview }: WrapperStyleOptions) {
     background-color: ${darkPreview ? tokens.colors.navy : tokens.colors.white};
     border-color: ${darkPreview
       ? tokens.colors.navy
-      : hexToRgba(tokens.colors.navy, 0.15)};
-    border-bottom-color: ${hexToRgba(
-      darkPreview ? tokens.colors.white : tokens.colors.navy,
-      tokens.opacity.low,
-    )};
+      : tokens.colors.transparentNavy};
+    border-bottom-color: ${darkPreview
+      ? tokens.colors.transparentWhiteSubtle
+      : tokens.colors.transparentNavySubtle};
   `;
 }
 
