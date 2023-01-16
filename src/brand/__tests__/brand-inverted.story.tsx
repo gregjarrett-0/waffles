@@ -9,7 +9,7 @@ const wrapperStyle = css`
   flex-wrap: wrap;
   padding: ${tokens.spacing.small};
   background-color: ${tokens.colors.navy};
-  border: ${tokens.borderWidth.thin} solid ${tokens.colors.beigeMedium};
+  border: ${tokens.borderWidth.thin} solid ${tokens.colors.greyMedium};
   border-radius: ${tokens.borderRadius.medium};
 `;
 

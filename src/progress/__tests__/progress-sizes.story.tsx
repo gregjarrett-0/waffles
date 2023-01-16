@@ -7,7 +7,7 @@ const wrapperStyle = css`
   display: flex;
   flex-direction: column;
   gap: ${tokens.spacing.medium};
-  background-color: ${tokens.colors.beigeLight};
+  background-color: ${tokens.colors.greyLight};
   padding: ${tokens.spacing.medium};
 `;
 

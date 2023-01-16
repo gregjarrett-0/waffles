@@ -31,7 +31,7 @@ function Story() {
       <div
         css={css`
           ${wrapperStyle}
-          background-color: ${tokens.colors.beigeLight};
+          background-color: ${tokens.colors.greyLight};
         `}
       >
         {sizes.map((size) => {

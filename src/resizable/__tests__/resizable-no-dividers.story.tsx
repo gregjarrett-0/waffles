@@ -8,7 +8,7 @@ import { hexToRgba } from '../../helpers';
 const wrapperStyle = css`
   width: 100%;
   height: 100vh;
-  background-color: ${tokens.colors.beigeLight};
+  background-color: ${tokens.colors.greyLight};
 `;
 
 const paragraphStyle = css`
