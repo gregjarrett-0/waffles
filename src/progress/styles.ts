@@ -96,7 +96,7 @@ export function progressStyle({
   return css`
     background-color: ${inverted
       ? hexToRgba(tokens.colors.white, 0.2)
-      : hexToRgba(tokens.colors.navy, 0.15)};
+      : tokens.colors.transparentNavy};
     border: none;
     border-radius: ${tokens.borderRadius.medium};
     clip-path: url(#${clipId});

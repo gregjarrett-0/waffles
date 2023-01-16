@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
 
 type CardStyleOptions = {
   isFocusVisible: boolean;
@@ -28,7 +27,9 @@ export function cardStyle({
       ? tokens.colors.navyLight
       : tokens.colors.white};
     border: ${tokens.borderWidth.thin} solid
-      ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
+      ${inverted
+        ? tokens.colors.transparentWhite
+        : tokens.colors.transparentNavy};
     border-radius: ${tokens.borderRadius.medium};
     transition: box-shadow 600ms cubic-bezier(0.1, 0.8, 0.2, 1),
       transform 600ms cubic-bezier(0.1, 0.8, 0.2, 1);

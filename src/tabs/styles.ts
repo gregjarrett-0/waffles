@@ -44,7 +44,9 @@ export function tabsWrapper({ inverted }: TabsWrapperStyleOptions) {
     padding-left: 0;
     padding-right: ${tokens.spacing.xxlarge};
     border-bottom: ${tokens.borderWidth.medium} solid
-      ${hexToRgba(inverted ? tokens.colors.white : tokens.colors.navy, 0.15)};
+      ${inverted
+        ? tokens.colors.transparentWhite
+        : tokens.colors.transparentNavy};
   `;
 }
 

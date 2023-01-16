@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 
 import { tokens } from '../tokens';
-import { hexToRgba } from '../helpers';
 
 import Navigation from './navigation';
 
@@ -10,7 +9,7 @@ const regularMap = {
   activeColor: tokens.colors.white,
   disabledColor: tokens.colors.navySubtleTextOnLight,
   activeBackgroundColor: tokens.colors.navy,
-  hoverBackgroundColor: hexToRgba(tokens.colors.navy, tokens.opacity.low),
+  hoverBackgroundColor: tokens.colors.transparentNavySubtle,
 };
 
 const invertedMap = {
@@ -18,7 +17,7 @@ const invertedMap = {
   activeColor: tokens.colors.navy,
   disabledColor: tokens.colors.navySubtleTextOnDark,
   activeBackgroundColor: tokens.colors.greySubtle,
-  hoverBackgroundColor: hexToRgba(tokens.colors.white, tokens.opacity.low),
+  hoverBackgroundColor: tokens.colors.transparentWhiteSubtle,
 };
 
 type WrapperStyleOptions = {
