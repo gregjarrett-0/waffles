@@ -12,7 +12,7 @@ import type { PolymorphicRef, PolymorphicComponentProps } from '../helpers';
 
 export type ButtonBaseProps = {
   /* Defines the variant of the Button. */
-  /* @default primary */
+  /* @default secondary */
   variant?: 'primary' | 'secondary' | 'plain' | 'destructive' | 'upgrade';
   /* Defines the size of the Button. In most cases, the default size should be used. */
   /* @default medium */
@@ -58,7 +58,7 @@ export type ButtonProps<T extends React.ElementType = 'button'> =
 function ButtonInternal<T extends React.ElementType = 'button'>(
   {
     as,
-    variant = 'primary',
+    variant = 'secondary',
     size = 'medium',
     isLoading = false,
     inverted = false,
