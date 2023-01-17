@@ -35,7 +35,9 @@ function DrawerTest({ isOpen, onClose, placement }: DrawerTestProps) {
       <Drawer.Body>Write a script for a jesters tear yourself.</Drawer.Body>
       <Drawer.Footer>
         <Drawer.Button onClick={onClose}>Dismiss</Drawer.Button>
-        <Drawer.Button autoFocus>Confirm</Drawer.Button>
+        <Drawer.Button variant="primary" autoFocus>
+          Confirm
+        </Drawer.Button>
       </Drawer.Footer>
     </Drawer>
   );
@@ -109,7 +111,9 @@ describe('Drawer', () => {
         <Drawer.Header>Fabulous Marillion concert</Drawer.Header>
         <Drawer.Body>Write a script for a jesters tear yourself.</Drawer.Body>
         <Drawer.Footer>
-          <Drawer.Button onClick={handleClose}>Dismiss</Drawer.Button>
+          <Drawer.Button variant="primary" onClick={handleClose}>
+            Dismiss
+          </Drawer.Button>
         </Drawer.Footer>
       </Drawer>,
     );

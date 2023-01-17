@@ -36,7 +36,7 @@ describe('Dialog', () => {
             Mus mauris vitae ultricies
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Button</Button>
+        <Button variant="primary">Button</Button>
       </EmptyState>,
     );
 
@@ -62,7 +62,7 @@ describe('Dialog', () => {
             Mus mauris vitae ultricies
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Button</Button>
+        <Button variant="primary">Button</Button>
       </EmptyState>,
     );
 
@@ -84,7 +84,7 @@ describe('Dialog', () => {
             Mus mauris vitae ultricies
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Button</Button>
+        <Button variant="primary">Button</Button>
       </EmptyState>,
     );
 
@@ -111,7 +111,7 @@ describe('Dialog', () => {
             Mus mauris vitae ultricies
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Button</Button>
+        <Button variant="primary">Button</Button>
       </EmptyState>,
     );
 

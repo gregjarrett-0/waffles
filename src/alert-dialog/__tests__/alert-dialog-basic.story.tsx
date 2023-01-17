@@ -30,7 +30,11 @@ function Story() {
           </Paragraph>
         </AlertDialog.Body>
         <AlertDialog.Footer>
-          <AlertDialog.Button autoFocus onClick={() => setIsOpen(false)}>
+          <AlertDialog.Button
+            variant="primary"
+            autoFocus
+            onClick={() => setIsOpen(false)}
+          >
             Got It
           </AlertDialog.Button>
         </AlertDialog.Footer>

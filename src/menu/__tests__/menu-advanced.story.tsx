@@ -29,7 +29,6 @@ function MenuTriggerInternal(
     <Button
       {...props}
       ref={ref}
-      variant="secondary"
       iconRight={isOpen ? <ChevronUp /> : <ChevronDown />}
     >
       {isOpen ? 'Close' : 'Open'} Menu
@@ -70,7 +69,7 @@ function Story() {
           />
         </Menu.Category>
         <Menu.Category>
-          <Menu.Button>View Workspace</Menu.Button>
+          <Menu.Button variant="primary">View Workspace</Menu.Button>
         </Menu.Category>
       </Menu>
     </div>

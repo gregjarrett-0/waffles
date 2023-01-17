@@ -15,7 +15,9 @@ function Story() {
 
   return (
     <article css={mainContent}>
-      <Button onClick={() => setIsOpen(true)}>Open</Button>
+      <Button variant="primary" onClick={() => setIsOpen(true)}>
+        Open
+      </Button>
       <Drawer
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
@@ -65,10 +67,12 @@ function Story() {
           </Paragraph>
         </Drawer.Body>
         <Drawer.Footer>
-          <Drawer.Button variant="secondary" onClick={() => setIsOpen(false)}>
-            Cancel
-          </Drawer.Button>
-          <Drawer.Button autoFocus onClick={() => setIsOpen(false)}>
+          <Drawer.Button onClick={() => setIsOpen(false)}>Cancel</Drawer.Button>
+          <Drawer.Button
+            variant="primary"
+            autoFocus
+            onClick={() => setIsOpen(false)}
+          >
             Confirm
           </Drawer.Button>
         </Drawer.Footer>

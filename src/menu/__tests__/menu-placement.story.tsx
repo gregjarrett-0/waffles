@@ -94,10 +94,7 @@ function Story() {
           margin-left: 300px;
         `}
       >
-        <Menu
-          trigger={<Button variant="secondary">Open Menu</Button>}
-          placement={placement}
-        >
+        <Menu trigger={<Button>Open Menu</Button>} placement={placement}>
           <Menu.Item label="Edit" iconLeft={<Code />} />
           <Menu.Item label="Rename" iconLeft={<Edit />} />
           <Menu.Item label="Duplicate" iconLeft={<Copy />} />

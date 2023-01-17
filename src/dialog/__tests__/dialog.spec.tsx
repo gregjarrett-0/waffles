@@ -47,7 +47,9 @@ function DialogTest({ isOpen, onClose }: DialogTestProps) {
       <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
       <Dialog.Footer>
         <Dialog.Button onClick={onClose}>Dismiss</Dialog.Button>
-        <Dialog.Button autoFocus>Confirm</Dialog.Button>
+        <Dialog.Button variant="primary" autoFocus>
+          Confirm
+        </Dialog.Button>
       </Dialog.Footer>
     </Dialog>
   );
@@ -134,7 +136,9 @@ describe('Dialog', () => {
         <Dialog.Header>Taylor Swift discography</Dialog.Header>
         <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button onClick={handleClick}>Dismiss</Dialog.Button>
+          <Dialog.Button variant="primary" onClick={handleClick}>
+            Dismiss
+          </Dialog.Button>
         </Dialog.Footer>
       </Dialog>,
     );
@@ -245,7 +249,9 @@ describe('Dialog', () => {
         <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
         <Dialog.Footer>
           <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
-          <Dialog.Button autoFocus>Confirm</Dialog.Button>
+          <Dialog.Button variant="primary" autoFocus>
+            Confirm
+          </Dialog.Button>
         </Dialog.Footer>
       </Dialog>,
     );
@@ -273,7 +279,9 @@ describe('Dialog', () => {
           <Dialog.Body>Discover amazing pop songs by Taylor Swift.</Dialog.Body>
           <Dialog.Footer>
             <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
-            <Dialog.Button autoFocus>Confirm</Dialog.Button>
+            <Dialog.Button variant="primary" autoFocus>
+              Confirm
+            </Dialog.Button>
           </Dialog.Footer>
         </Dialog>,
       );
@@ -306,7 +314,9 @@ describe('Dialog', () => {
             </Dialog.Body>
             <Dialog.Footer>
               <Dialog.Button onClick={() => {}}>Dismiss</Dialog.Button>
-              <Dialog.Button autoFocus>Confirm</Dialog.Button>
+              <Dialog.Button variant="primary" autoFocus>
+                Confirm
+              </Dialog.Button>
             </Dialog.Footer>
           </Dialog>,
         );

@@ -21,7 +21,7 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <div css={sectionStyle}>
-        <Menu trigger={<Button variant="secondary">Open Menu</Button>}>
+        <Menu trigger={<Button>Open Menu</Button>}>
           <Menu.Category noDivider>
             <Menu.Item label="Edit" iconLeft={<Code />} disabled />
             <Menu.Item
@@ -52,10 +52,7 @@ function Story() {
           background-color: ${tokens.colors.navy};
         `}
       >
-        <Menu
-          trigger={<Button variant="secondary">Open Inverted Menu</Button>}
-          inverted
-        >
+        <Menu trigger={<Button>Open Inverted Menu</Button>} inverted>
           <Menu.Category noDivider>
             <Menu.Item label="Edit" iconLeft={<Code />} disabled />
             <Menu.Item

@@ -572,8 +572,8 @@ exports[`Button renders snapshot of focused state 1`] = `
   flex-direction: column;
   font-size: 14px;
   color: #05192D;
-  background-color: #03EF62;
-  border-color: transparent;
+  background-color: transparent;
+  border-color: rgba(5, 25, 45, 0.6);
 }
 
 .emotion-0::after {
@@ -593,11 +593,11 @@ exports[`Button renders snapshot of focused state 1`] = `
 }
 
 .emotion-0:hover:not(:disabled) {
-  background-color: #00D649;
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-0:active:not(:disabled) {
-  background-color: #03EF62;
+  background-color: transparent;
 }
 
 .emotion-0:disabled {
@@ -610,7 +610,7 @@ exports[`Button renders snapshot of focused state 1`] = `
 }
 
 .emotion-0:active:focus {
-  background-color: #00D649;
+  background-color: rgba(5, 25, 45, 0.1);
 }
 
 .emotion-1 {
