@@ -42,10 +42,8 @@ function TestDrawer({ isOpen, onClose, placement }: TestDrawerProps) {
         </Paragraph>
       </Drawer.Body>
       <Drawer.Footer>
-        <Drawer.Button variant="secondary" onClick={onClose}>
-          Cancel
-        </Drawer.Button>
-        <Drawer.Button autoFocus onClick={onClose}>
+        <Drawer.Button onClick={onClose}>Cancel</Drawer.Button>
+        <Drawer.Button variant="primary" autoFocus onClick={onClose}>
           Confirm
         </Drawer.Button>
       </Drawer.Footer>

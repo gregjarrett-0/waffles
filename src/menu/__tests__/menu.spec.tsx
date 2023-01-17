@@ -259,7 +259,7 @@ describe('Menu', () => {
       <Menu trigger={<MenuTrigger />}>
         <Menu.Item label="Taylor Swift" />
         <Menu.Item label="Ariana Grande" />
-        <Menu.Button>See More</Menu.Button>
+        <Menu.Button variant="primary">See More</Menu.Button>
       </Menu>,
     );
 
@@ -277,7 +277,9 @@ describe('Menu', () => {
       <Menu trigger={<MenuTrigger />}>
         <Menu.Item label="Taylor Swift" />
         <Menu.Item label="Ariana Grande" />
-        <Menu.Button data-trackid="track-see-more">See More</Menu.Button>
+        <Menu.Button variant="primary" data-trackid="track-see-more">
+          See More
+        </Menu.Button>
       </Menu>,
     );
 
@@ -344,7 +346,7 @@ describe('Menu', () => {
           </Menu.Category>
           <Menu.Category>
             <Menu.Item label="Remove Singers" variant="destructive" />
-            <Menu.Button>Log Out</Menu.Button>
+            <Menu.Button variant="primary">Log Out</Menu.Button>
           </Menu.Category>
         </Menu>,
       );
@@ -375,7 +377,7 @@ describe('Menu', () => {
           </Menu.Category>
           <Menu.Category>
             <Menu.Item label="Remove Singers" variant="destructive" />
-            <Menu.Button>Log Out</Menu.Button>
+            <Menu.Button variant="primary">Log Out</Menu.Button>
           </Menu.Category>
         </Menu>,
       );

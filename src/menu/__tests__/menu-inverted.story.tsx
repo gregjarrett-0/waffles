@@ -14,7 +14,7 @@ const wrapperStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Menu inverted trigger={<Button variant="secondary">Open Menu</Button>}>
+      <Menu inverted trigger={<Button>Open Menu</Button>}>
         <Menu.Category noDivider>
           <Menu.Item label="Editor" description="Can edit the workspace." />
           <Menu.Item
@@ -42,7 +42,7 @@ function Story() {
           />
         </Menu.Category>
         <Menu.Category>
-          <Menu.Button>View Workspace</Menu.Button>
+          <Menu.Button variant="primary">View Workspace</Menu.Button>
         </Menu.Category>
       </Menu>
     </div>

@@ -28,7 +28,7 @@ function AlertDialogTest({ isOpen, onClose }: AlertDialogTestProps) {
       <AlertDialog.Header>Warning!</AlertDialog.Header>
       <AlertDialog.Body>Oops, something happened.</AlertDialog.Body>
       <AlertDialog.Footer>
-        <AlertDialog.Button autoFocus onClick={onClose}>
+        <AlertDialog.Button variant="primary" autoFocus onClick={onClose}>
           Got It!
         </AlertDialog.Button>
       </AlertDialog.Footer>
@@ -111,7 +111,9 @@ describe('AlertDialogTest', () => {
           Discover amazing pop songs by Taylor Swift.
         </AlertDialog.Body>
         <AlertDialog.Footer>
-          <AlertDialog.Button onClick={handleClick}>Dismiss</AlertDialog.Button>
+          <AlertDialog.Button variant="primary" onClick={handleClick}>
+            Dismiss
+          </AlertDialog.Button>
         </AlertDialog.Footer>
       </AlertDialog>,
     );

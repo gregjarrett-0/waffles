@@ -12,7 +12,7 @@ const wrapperStyle = css`
 function Story() {
   return (
     <div css={wrapperStyle}>
-      <Menu trigger={<Button variant="secondary">Open Menu</Button>}>
+      <Menu trigger={<Button>Open Menu</Button>}>
         <Menu.Category noDivider>
           <Menu.Item label="Edit" iconLeft={<Code />} />
           <Menu.Item label="Rename" iconLeft={<Edit />} />

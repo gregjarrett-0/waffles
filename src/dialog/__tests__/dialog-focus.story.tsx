@@ -19,7 +19,9 @@ function Story() {
         <Dialog.Button onClick={() => setShowUpdatedContent(true)}>
           Update Content
         </Dialog.Button>
-        <Dialog.Button onClick={() => {}}>Confirm</Dialog.Button>
+        <Dialog.Button variant="primary" onClick={() => {}}>
+          Dismiss
+        </Dialog.Button>
       </Dialog.Footer>
     </Dialog>
   );
