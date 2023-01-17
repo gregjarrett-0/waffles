@@ -15,9 +15,7 @@ function Story() {
 
   return (
     <article css={mainContent}>
-      <Button variant="primary" onClick={() => setIsOpen(true)}>
-        Open
-      </Button>
+      <Button onClick={() => setIsOpen(true)}>Open</Button>
       <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <Dialog.Header>Title of a Dialog</Dialog.Header>
         <Dialog.Body>
