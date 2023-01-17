@@ -12,10 +12,7 @@ function Example() {
 
   return (
     <>
-      <Menu
-        trigger={<Button variant="secondary">Edit</Button>}
-        placement={placement}
-      >
+      <Menu trigger={<Button>Edit</Button>} placement={placement}>
         <Menu.Category noDivider>
           <Menu.Item label="Cut" />
           <Menu.Item label="Copy" />

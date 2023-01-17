@@ -11,8 +11,10 @@ function Example() {
         gap: ${tokens.spacing.small};
       `}
     >
-      <Button icon={<Trash />} aria-label="Remove item" variant="destructive" />
-      <Button iconLeft={<AddCircle />}>Add Item</Button>
+      <Button variant="destructive" icon={<Trash />} aria-label="Remove item" />
+      <Button variant="primary" iconLeft={<AddCircle />}>
+        Add Item
+      </Button>
     </div>
   );
 }

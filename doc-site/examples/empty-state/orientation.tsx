@@ -35,7 +35,7 @@ function Example() {
             Meet new colleagues and learn from each other
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Create Group</Button>
+        <Button variant="primary">Create Group</Button>
       </EmptyState>
       <EmptyState
         title="Orientation: Vertical"
@@ -58,7 +58,7 @@ function Example() {
             Meet new colleagues and learn from each other
           </EmptyState.ListItem>
         </EmptyState.List>
-        <Button>Create Group</Button>
+        <Button variant="primary">Create Group</Button>
       </EmptyState>
     </div>
   );

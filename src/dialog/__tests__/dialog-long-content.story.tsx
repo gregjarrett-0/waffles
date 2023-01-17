@@ -63,10 +63,12 @@ function Story() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button variant="secondary" onClick={() => setIsOpen(false)}>
-            Cancel
-          </Dialog.Button>
-          <Dialog.Button autoFocus onClick={() => setIsOpen(false)}>
+          <Dialog.Button onClick={() => setIsOpen(false)}>Cancel</Dialog.Button>
+          <Dialog.Button
+            variant="primary"
+            autoFocus
+            onClick={() => setIsOpen(false)}
+          >
             Confirm
           </Dialog.Button>
         </Dialog.Footer>

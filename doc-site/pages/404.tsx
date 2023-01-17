@@ -23,9 +23,7 @@ export default function PageNotFound() {
           Unfortunately, we couldn&apos;t find the page you are looking for.
         </Paragraph>
         <Link href="/" passHref>
-          <Button variant="secondary" as="a">
-            Go to home page
-          </Button>
+          <Button as="a">Go to home page</Button>
         </Link>
       </ContentContainer>
     </>

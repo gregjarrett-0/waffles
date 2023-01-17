@@ -34,6 +34,7 @@ function Playground() {
         </AlertDialog.Body>
         <AlertDialog.Footer>
           <AlertDialog.Button
+            variant="primary"
             autoFocus
             onClick={() => setIsOpen(false)}
           >

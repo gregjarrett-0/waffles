@@ -9,9 +9,7 @@ function Example() {
   return (
     <Menu
       inverted
-      trigger={
-        <Button variant="secondary" icon={<More />} aria-label="More options" />
-      }
+      trigger={<Button icon={<More />} aria-label="More options" />}
       placement={isAboveSmall ? 'right' : 'bottomLeft'}
     >
       <Menu.Category noDivider>

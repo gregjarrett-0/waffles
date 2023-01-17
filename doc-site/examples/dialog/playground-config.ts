@@ -31,11 +31,10 @@ function Playground() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button variant="secondary" onClick={() => setIsOpen(false)}>
+          <Dialog.Button onClick={() => setIsOpen(false)}>
             Cancel
           </Dialog.Button>
           <Dialog.Button
-            variant="secondary"
             onClick={() => setIsOpen(false)}
           >
             Secondary Action

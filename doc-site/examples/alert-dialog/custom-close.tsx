@@ -24,10 +24,7 @@ function Example() {
           </Paragraph>
         </AlertDialog.Body>
         <AlertDialog.Footer>
-          <AlertDialog.Button
-            variant="secondary"
-            onClick={() => setIsOpen(false)}
-          >
+          <AlertDialog.Button onClick={() => setIsOpen(false)}>
             Cancel
           </AlertDialog.Button>
           <AlertDialog.Button

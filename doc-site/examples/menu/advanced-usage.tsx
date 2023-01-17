@@ -23,7 +23,6 @@ function MenuTriggerInternal(
     <Button
       {...props}
       ref={ref}
-      variant="secondary"
       iconRight={isOpen ? <ChevronUp /> : <ChevronDown />}
     >
       Roles

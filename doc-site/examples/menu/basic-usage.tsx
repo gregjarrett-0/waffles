@@ -14,7 +14,7 @@ function Example() {
 
   return (
     <Menu
-      trigger={<Button variant="secondary">Workspace</Button>}
+      trigger={<Button>Workspace</Button>}
       placement={isAboveSmall ? 'right' : 'bottomLeft'}
     >
       <Menu.Category noDivider>

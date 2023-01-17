@@ -26,9 +26,7 @@ function Example() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button variant="secondary" onClick={() => setIsOpen(false)}>
-            Cancel
-          </Dialog.Button>
+          <Dialog.Button onClick={() => setIsOpen(false)}>Cancel</Dialog.Button>
           <Dialog.Button
             autoFocus
             variant="primary"

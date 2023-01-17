@@ -32,7 +32,7 @@ function Playground() {
           </Paragraph>
         </Drawer.Body>
         <Drawer.Footer>
-          <Drawer.Button variant="secondary" onClick={() => setIsOpen(false)}>
+          <Drawer.Button onClick={() => setIsOpen(false)}>
             Cancel
           </Drawer.Button>
           <Drawer.Button

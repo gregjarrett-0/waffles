@@ -11,7 +11,7 @@ function Example() {
         Level up your data science skills by creating visualizations using
         Matplotlib and manipulating DataFrames with pandas.
       </Paragraph>
-      <Button>Check course</Button>
+      <Button variant="primary">Check course</Button>
     </Card>
   );
 }
