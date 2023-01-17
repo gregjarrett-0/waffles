@@ -15,9 +15,7 @@ function Story() {
 
   return (
     <article css={mainContent}>
-      <Button variant="primary" onClick={() => setIsOpen(true)}>
-        Open
-      </Button>
+      <Button onClick={() => setIsOpen(true)}>Open</Button>
       <Drawer
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
