@@ -15,7 +15,6 @@ function ToastTriggers() {
       `}
     >
       <Button
-        variant="secondary"
         onClick={() =>
           toast({
             title: 'New Python Workspace',
@@ -26,7 +25,6 @@ function ToastTriggers() {
         Info Toast
       </Button>
       <Button
-        variant="secondary"
         onClick={() =>
           toast({
             title: 'Message Sent',
@@ -37,7 +35,6 @@ function ToastTriggers() {
         Success Toast
       </Button>
       <Button
-        variant="secondary"
         onClick={() =>
           toast({
             title: 'Changes Will Affect Your Datasets',
@@ -48,7 +45,6 @@ function ToastTriggers() {
         Warning Toast
       </Button>
       <Button
-        variant="secondary"
         onClick={() =>
           toast({
             title: 'Connection Error',

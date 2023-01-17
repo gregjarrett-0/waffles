@@ -102,7 +102,13 @@ function Example() {
             padding-bottom: 0;
           `}
         >
-          <Button as="a" href="#getting-started" fullWidth>
+          <Button
+            variant="primary"
+            as="a"
+            href="#getting-started"
+            fullWidth
+            inverted
+          >
             Getting Started
           </Button>
         </div>

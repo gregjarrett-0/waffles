@@ -77,6 +77,7 @@ function Example() {
         css={css`
           width: 150px;
         `}
+        variant="primary"
         onClick={updateContent}
         disabled={status === 'loading'}
       >

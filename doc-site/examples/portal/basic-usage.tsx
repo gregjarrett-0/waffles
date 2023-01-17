@@ -29,7 +29,9 @@ function Example() {
           <div css={contentStyle}>
             <Heading>The Portal</Heading>
             <Paragraph>Completely new dimension.</Paragraph>
-            <Button onClick={() => setIsOpen(false)}>Close Portal</Button>
+            <Button variant="primary" onClick={() => setIsOpen(false)}>
+              Close Portal
+            </Button>
           </div>
         )}
       </Portal>

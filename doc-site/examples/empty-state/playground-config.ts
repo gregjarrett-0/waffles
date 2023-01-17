@@ -33,7 +33,7 @@ function Playground() {
           Third item
         </EmptyState.ListItem>
       </EmptyState.List>
-      <Button>Button</Button>
+      <Button variant="primary">Button</Button>
     </EmptyState>
   );
 }

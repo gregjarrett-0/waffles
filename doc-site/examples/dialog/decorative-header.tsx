@@ -19,9 +19,7 @@ function Example() {
       `}
     >
       {/* Info Dialog */}
-      <Button variant="secondary" onClick={() => setOpenDialog('info')}>
-        Open Info Dialog
-      </Button>
+      <Button onClick={() => setOpenDialog('info')}>Open Info Dialog</Button>
       <Dialog
         isOpen={openDialog === 'info'}
         onClose={() => setOpenDialog(null)}
@@ -37,10 +35,7 @@ function Example() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button
-            variant="secondary"
-            onClick={() => setOpenDialog(null)}
-          >
+          <Dialog.Button onClick={() => setOpenDialog(null)}>
             Cancel
           </Dialog.Button>
           <Dialog.Button
@@ -54,7 +49,7 @@ function Example() {
       </Dialog>
 
       {/* Success Dialog */}
-      <Button variant="secondary" onClick={() => setOpenDialog('success')}>
+      <Button onClick={() => setOpenDialog('success')}>
         Open Success Dialog
       </Button>
       <Dialog
@@ -71,10 +66,7 @@ function Example() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button
-            variant="secondary"
-            onClick={() => setOpenDialog(null)}
-          >
+          <Dialog.Button onClick={() => setOpenDialog(null)}>
             Cancel
           </Dialog.Button>
           <Dialog.Button
@@ -88,7 +80,7 @@ function Example() {
       </Dialog>
 
       {/* Warning Dialog */}
-      <Button variant="secondary" onClick={() => setOpenDialog('warning')}>
+      <Button onClick={() => setOpenDialog('warning')}>
         Open Warning Dialog
       </Button>
       <Dialog
@@ -105,10 +97,7 @@ function Example() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button
-            variant="secondary"
-            onClick={() => setOpenDialog(null)}
-          >
+          <Dialog.Button onClick={() => setOpenDialog(null)}>
             Cancel
           </Dialog.Button>
           <Dialog.Button
@@ -122,9 +111,7 @@ function Example() {
       </Dialog>
 
       {/* Error Dialog */}
-      <Button variant="secondary" onClick={() => setOpenDialog('error')}>
-        Open Error Dialog
-      </Button>
+      <Button onClick={() => setOpenDialog('error')}>Open Error Dialog</Button>
       <Dialog
         isOpen={openDialog === 'error'}
         onClose={() => setOpenDialog(null)}
@@ -139,10 +126,7 @@ function Example() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button
-            variant="secondary"
-            onClick={() => setOpenDialog(null)}
-          >
+          <Dialog.Button onClick={() => setOpenDialog(null)}>
             Cancel
           </Dialog.Button>
           <Dialog.Button
@@ -156,7 +140,7 @@ function Example() {
       </Dialog>
 
       {/* Upgrade Dialog */}
-      <Button variant="secondary" onClick={() => setOpenDialog('upgrade')}>
+      <Button onClick={() => setOpenDialog('upgrade')}>
         Open Upgrade Dialog
       </Button>
       <Dialog
@@ -174,10 +158,7 @@ function Example() {
           </Paragraph>
         </Dialog.Body>
         <Dialog.Footer>
-          <Dialog.Button
-            variant="secondary"
-            onClick={() => setOpenDialog(null)}
-          >
+          <Dialog.Button onClick={() => setOpenDialog(null)}>
             Cancel
           </Dialog.Button>
           <Dialog.Button

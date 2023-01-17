@@ -27,7 +27,9 @@ function Example() {
           Ask for advice when you’re feeling stuck
         </EmptyState.ListItem>
       </EmptyState.List>
-      <Button inverted>Create Group</Button>
+      <Button variant="primary" inverted>
+        Create Group
+      </Button>
     </EmptyState>
   );
 }

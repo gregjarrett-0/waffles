@@ -7,9 +7,8 @@ import { Heading } from '@datacamp/waffles/heading';
 import { ErrorBoundary, useError } from '@datacamp/waffles/error-boundary';
 import { Button } from '@datacamp/waffles/button';
 
-function ThrowErrorComponent() {
+function ThrowError() {
   throw new Error('Very serious error!');
-  return <div>Very serious error!</div>;
 }
 
 function CustomError() {
@@ -40,9 +39,7 @@ function CustomError() {
           {error.message}
         </Paragraph>
       )}
-      <Button variant="secondary" onClick={onReset}>
-        Retry
-      </Button>
+      <Button onClick={onReset}>Retry</Button>
     </section>
   );
 }
@@ -56,7 +53,7 @@ function Example() {
       onReset={() => setHasError(false)}
     >
       <Button onClick={() => setHasError(true)}>Crash &amp; Burn</Button>
-      {hasError ? <ThrowErrorComponent /> : null}
+      {hasError ? ThrowError() : null}
     </ErrorBoundary>
   );
 }

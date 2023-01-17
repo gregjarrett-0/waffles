@@ -13,9 +13,7 @@ function Story() {
   return (
     <div css={wrapperStyle}>
       <Tooltip inverted content="Inverted Tooltip" placement="right">
-        <Button variant="secondary" inverted>
-          Tooltip Trigger
-        </Button>
+        <Button inverted>Tooltip Trigger</Button>
       </Tooltip>
     </div>
   );

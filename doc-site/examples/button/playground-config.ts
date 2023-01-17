@@ -9,7 +9,7 @@ import { AddCircle, ChevronRight } from '@datacamp/waffles/icon';
 
 function Playground() {
   return (
-    <Button variant="primary" size="medium">Hello</Button>
+    <Button variant="secondary" size="medium">Hello</Button>
   );
 }
 `;

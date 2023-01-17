@@ -21,9 +21,7 @@ function Example() {
           </Paragraph>
         </Drawer.Body>
         <Drawer.Footer>
-          <Drawer.Button variant="secondary" onClick={() => setIsOpen(false)}>
-            Cancel
-          </Drawer.Button>
+          <Drawer.Button onClick={() => setIsOpen(false)}>Cancel</Drawer.Button>
           <Drawer.Button variant="primary" onClick={() => setIsOpen(false)}>
             Confirm
           </Drawer.Button>

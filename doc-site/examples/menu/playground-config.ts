@@ -13,7 +13,7 @@ function Playground() {
   return (
     <Menu
       trigger={
-        <Button variant="secondary">Open Menu</Button>
+        <Button>Open Menu</Button>
       }
     >
       <Menu.Category noDivider>

@@ -62,7 +62,9 @@ function Example() {
           <option value="university">University</option>
         </Select>
       </FormField>
-      <Button type="submit">Submit</Button>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
     </form>
   );
 }
