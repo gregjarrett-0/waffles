@@ -92,9 +92,9 @@ function BestPracticesCard({ children, variant }: BestPracticesCardProps) {
       <Heading size="large" css={headingStyle}>
         <span css={iconStyle({ isRecommended })}>
           {isRecommended ? (
-            <CheckmarkCircleSolid size={'medium'} />
+            <CheckmarkCircleSolid size="medium" />
           ) : (
-            <CrossCircleSolid size={'medium'} />
+            <CrossCircleSolid size="medium" />
           )}
         </span>
         <Chapeau>{isRecommended ? 'Do' : "Don't"}</Chapeau>
