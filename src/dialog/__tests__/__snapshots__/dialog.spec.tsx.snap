@@ -1466,7 +1466,7 @@ exports[`Dialog with decorative header as error variant 1`] = `
         <div
           class="emotion-6"
         >
-          CrossCircleInvertedIcon
+          CrossCircleSolidIcon
         </div>
       </div>
     </span>
@@ -2047,7 +2047,7 @@ exports[`Dialog with decorative header as info variant 1`] = `
         <div
           class="emotion-6"
         >
-          InfoCircleInvertedIcon
+          InfoCircleSolidIcon
         </div>
       </div>
     </span>
@@ -2628,7 +2628,7 @@ exports[`Dialog with decorative header as success variant 1`] = `
         <div
           class="emotion-6"
         >
-          CheckmarkCircleInvertedIcon
+          CheckmarkCircleSolidIcon
         </div>
       </div>
     </span>
@@ -3209,7 +3209,7 @@ exports[`Dialog with decorative header as upgrade variant 1`] = `
         <div
           class="emotion-6"
         >
-          RocketInvertedIcon
+          RocketSolidIcon
         </div>
       </div>
     </span>
@@ -3791,7 +3791,7 @@ exports[`Dialog with decorative header as warning variant 1`] = `
         <div
           class="emotion-6"
         >
-          AttentionInvertedIcon
+          AttentionSolidIcon
         </div>
       </div>
     </span>
