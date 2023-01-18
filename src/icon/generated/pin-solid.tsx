@@ -2,9 +2,9 @@
 
 import Icon from '../icon-internal';
 
-type PinInvertedProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
+type PinSolidProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
-function PinInverted({ size, ...restProps }: PinInvertedProps) {
+function PinSolid({ size, ...restProps }: PinSolidProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -15,4 +15,4 @@ function PinInverted({ size, ...restProps }: PinInvertedProps) {
   );
 }
 
-export default PinInverted;
+export default PinSolid;

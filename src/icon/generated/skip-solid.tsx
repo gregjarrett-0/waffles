@@ -2,9 +2,9 @@
 
 import Icon from '../icon-internal';
 
-type SkipInvertedProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
+type SkipSolidProps = Omit<React.ComponentProps<typeof Icon>, 'children'>;
 
-function SkipInverted({ size, ...restProps }: SkipInvertedProps) {
+function SkipSolid({ size, ...restProps }: SkipSolidProps) {
   return (
     <Icon viewBox="0 0 18 18" size={size} {...restProps}>
       <path
@@ -15,4 +15,4 @@ function SkipInverted({ size, ...restProps }: SkipInvertedProps) {
   );
 }
 
-export default SkipInverted;
+export default SkipSolid;
