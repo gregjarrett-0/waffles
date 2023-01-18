@@ -5,19 +5,19 @@ type IconModule = Record<
 
 type GroupedIcons = {
   regular: IconModule;
-  inverted: IconModule;
+  solid: IconModule;
 };
 
-// Split icons into regular and inverted based on their names
+// Split icons into regular and solid based on their names
 function groupedIcons(allIcons: IconModule): GroupedIcons {
   return Object.entries(allIcons).reduce((groupedIcons, entry) => {
     const [name, Icon] = entry;
 
-    if (name.toLowerCase().includes('inverted')) {
+    if (name.toLowerCase().includes('solid')) {
       return {
         ...groupedIcons,
-        inverted: {
-          ...groupedIcons.inverted,
+        solid: {
+          ...groupedIcons.solid,
           [name]: Icon,
         },
       };
