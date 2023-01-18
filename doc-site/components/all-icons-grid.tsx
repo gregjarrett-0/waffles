@@ -18,7 +18,7 @@ const regularIconsPreview = css`
   border-top-right-radius: ${tokens.borderRadius.medium};
 `;
 
-const invertedIconsPreview = css`
+const solidIconsPreview = css`
   display: flex;
   flex-wrap: wrap;
   padding: ${tokens.spacing.small};
@@ -70,7 +70,7 @@ function IconPreview({ name, icon, inverted = false }: IconPreviewType) {
 }
 
 function AllIconsGrid() {
-  const { regular, inverted } = groupedIcons(allIcons);
+  const { regular, solid } = groupedIcons(allIcons);
 
   return (
     <ErrorBoundary>
@@ -80,8 +80,8 @@ function AllIconsGrid() {
           return <IconPreview key={name} name={name} icon={<Icon />} />;
         })}
       </div>
-      <div css={invertedIconsPreview}>
-        {Object.entries(inverted).map((iconData) => {
+      <div css={solidIconsPreview}>
+        {Object.entries(solid).map((iconData) => {
           const [name, Icon] = iconData;
           return (
             <IconPreview key={name} name={name} icon={<Icon />} inverted />
