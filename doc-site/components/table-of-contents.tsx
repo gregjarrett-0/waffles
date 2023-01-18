@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Button } from '@datacamp/waffles/button';
 
