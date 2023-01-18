@@ -1,11 +1,11 @@
 import React from 'react';
 
 import {
-  AttentionInverted,
-  CheckmarkCircleInverted,
-  CrossCircleInverted,
-  InfoCircleInverted,
-  RocketInverted,
+  AttentionSolid,
+  CheckmarkCircleSolid,
+  CrossCircleSolid,
+  InfoCircleSolid,
+  RocketSolid,
 } from '../icon';
 
 import { backgroundStyle, iconStyle, wrapperStyle } from './styles';
@@ -27,16 +27,16 @@ function NotificationIcon({
   function renderIcon() {
     switch (variant) {
       case 'success':
-        return <CheckmarkCircleInverted size={size} {...restProps} />;
+        return <CheckmarkCircleSolid size={size} {...restProps} />;
       case 'warning':
-        return <AttentionInverted size={size} {...restProps} />;
+        return <AttentionSolid size={size} {...restProps} />;
       case 'error':
-        return <CrossCircleInverted size={size} {...restProps} />;
+        return <CrossCircleSolid size={size} {...restProps} />;
       case 'upgrade':
-        return <RocketInverted size={size} {...restProps} />;
+        return <RocketSolid size={size} {...restProps} />;
       case 'info':
       default:
-        return <InfoCircleInverted size={size} {...restProps} />;
+        return <InfoCircleSolid size={size} {...restProps} />;
     }
   }
 
