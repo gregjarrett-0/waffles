@@ -1,10 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { tokens } from '@datacamp/waffles/tokens';
-import {
-  CheckmarkCircleInverted,
-  CrossCircleInverted,
-} from '@datacamp/waffles/icon';
+import { CheckmarkCircleSolid, CrossCircleSolid } from '@datacamp/waffles/icon';
 import { hexToRgba } from '@datacamp/waffles/helpers';
 import { Heading } from '@datacamp/waffles/heading';
 import { Chapeau } from '@datacamp/waffles/chapeau';
@@ -95,9 +92,9 @@ function BestPracticesCard({ children, variant }: BestPracticesCardProps) {
       <Heading size="large" css={headingStyle}>
         <span css={iconStyle({ isRecommended })}>
           {isRecommended ? (
-            <CheckmarkCircleInverted size={'medium'} />
+            <CheckmarkCircleSolid size={'medium'} />
           ) : (
-            <CrossCircleInverted size={'medium'} />
+            <CrossCircleSolid size={'medium'} />
           )}
         </span>
         <Chapeau>{isRecommended ? 'Do' : "Don't"}</Chapeau>
