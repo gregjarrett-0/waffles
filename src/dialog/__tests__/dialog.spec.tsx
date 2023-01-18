@@ -21,11 +21,11 @@ jest.mock('../../icon', () => {
   return {
     Cross: () => 'CrossIcon',
     ArrowUp: () => 'ArrowUpIcon',
-    CrossCircleInverted: () => 'CrossCircleInvertedIcon',
-    CheckmarkCircleInverted: () => 'CheckmarkCircleInvertedIcon',
-    AttentionInverted: () => 'AttentionInvertedIcon',
-    RocketInverted: () => 'RocketInvertedIcon',
-    InfoCircleInverted: () => 'InfoCircleInvertedIcon',
+    CrossCircleSolid: () => 'CrossCircleSolidIcon',
+    CheckmarkCircleSolid: () => 'CheckmarkCircleSolidIcon',
+    AttentionSolid: () => 'AttentionSolidIcon',
+    RocketSolid: () => 'RocketSolidIcon',
+    InfoCircleSolid: () => 'InfoCircleSolidIcon',
   };
 });
 
