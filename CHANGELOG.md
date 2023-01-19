@@ -1,5 +1,38 @@
 
 
+## [2.0.0](https://github.com/datacamp/waffles/compare/v1.19.0...v2.0.0) (2023-01-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **button:** change default `variant` to `secondary`
+* **icon:** rename `*Inverted` icons to `*Solid`
+* **badge:** rename `greySubtle` variant to `greyLight`
+* **avatar:** rename `greySubtle` variant to `greyLight`
+* **tokens:** update some greys, `blueDarkText` and `navySubtleTextOnLight` color tokens
+
+### Core Changes
+
+* **avatar:** rename `greySubtle` variant to `greyLight` ([7f2755e](https://github.com/datacamp/waffles/commit/7f2755e3904877af80a8b91c8389a1d10822e536))
+* **badge:** rename `greySubtle` variant to `greyLight` ([42b19f3](https://github.com/datacamp/waffles/commit/42b19f3a5612bdf72149ad84bee0d74267c7ecb7))
+* **button:** change default `variant` to `secondary` ([54e319e](https://github.com/datacamp/waffles/commit/54e319ea6f5b32651b81a222010ba88a14a606dd))
+* **code:** change background-color to `greyLight` ([7c4ce97](https://github.com/datacamp/waffles/commit/7c4ce970ac4162a6521e7283dff81bca1f4aca67))
+* **icon:** rename `*Inverted` icons to `*Solid` ([e9c8f77](https://github.com/datacamp/waffles/commit/e9c8f77454dd0522fccb157d4be09cd063766e72))
+* **tokens:** add new utility transparent tokens ([42ada68](https://github.com/datacamp/waffles/commit/42ada68dd7608c4818be9962a59dfff875ee5022))
+* **tokens:** update some greys, `blueDarkText` and `navySubtleTextOnLight` color tokens ([b67d3b2](https://github.com/datacamp/waffles/commit/b67d3b264147ce5a0da17b16c5530e1304e914ff))
+
+
+### Documentation Changes
+
+* add guidance on border and hover colors ([37db460](https://github.com/datacamp/waffles/commit/37db46096fb6a4f613ecb70182c854a2a5d43e20))
+* **avatar:** update to reflect variant usage ([4216b46](https://github.com/datacamp/waffles/commit/4216b46662ab9e0ab024dc0b2984bd78d7301092))
+* **badge:** update to reflect variant usage ([209fcf5](https://github.com/datacamp/waffles/commit/209fcf57a8534acff3ffffda02ac808b1e07ee70))
+* **icon:** group solid icons ([06195a0](https://github.com/datacamp/waffles/commit/06195a04cb0f11acedfb68c96b53604e3ed0840c))
+* **icon:** update usage guidance ([31d4cfc](https://github.com/datacamp/waffles/commit/31d4cfcd3121400faf87a03a11b49c1ce63fa038))
+* **tokens:** update guidelines on background colors ([cfd9658](https://github.com/datacamp/waffles/commit/cfd965842849a10476789c351139c3895b3b2745))
+* update button variants for examples ([447ed4f](https://github.com/datacamp/waffles/commit/447ed4f272692982b7bc00f967f12237e109a933))
+* update icons in best practices cards ([ec23e31](https://github.com/datacamp/waffles/commit/ec23e3181e9c708f46c1f46ae40b2fc9b417bca5))
+
 ## [1.19.0](https://github.com/datacamp/waffles/compare/v1.17.1...v1.19.0) (2023-01-12)
 
 
